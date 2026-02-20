@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ChevronRight, Calendar, User, ArrowRight } from "lucide-react";
+import { Suspense } from "react";
+import { Newspaper } from "lucide-react";
+import BlogClient, { type BlogPost, type BlogCategory } from "./BlogClient";
 
 const BASE_URL = "https://www.formbyguide.co.uk";
 
@@ -24,7 +25,15 @@ export const metadata: Metadata = {
   },
 };
 
-const POSTS = [
+const CATEGORIES: BlogCategory[] = [
+  { slug: "family",   label: "Family",   color: "#2E6B3E", description: "Half term plans, days out and activities that work with kids." },
+  { slug: "seasonal", label: "Seasonal", color: "#1C4A5A", description: "When to visit, what to expect, and seasonal tips." },
+  { slug: "food",     label: "Food",     color: "#8B3A3A", description: "Honest restaurant reviews and places to eat in Formby." },
+  { slug: "wildlife", label: "Wildlife", color: "#8B6040", description: "Red squirrels, birdwatching and Sefton Coast nature." },
+  { slug: "walks",    label: "Walks",    color: "#1A5C3A", description: "Pinewoods trails, coastal walks and what to bring." },
+];
+
+const POSTS: BlogPost[] = [
   {
     slug: "things-to-do-formby-half-term",
     title: "Things to Do in Formby During Half Term — Family Guide",
@@ -32,8 +41,8 @@ const POSTS = [
     author: "Clare",
     date: "February 20, 2026",
     readTime: "8 min read",
-    category: "Family",
-    image: "linear-gradient(135deg, #1C3220 0%, #2E6B3E 100%)",
+    categorySlug: "family",
+    gradient: "linear-gradient(135deg, #1C3220 0%, #2E6B3E 100%)",
   },
   {
     slug: "formby-beach-weather-guide",
@@ -42,8 +51,8 @@ const POSTS = [
     author: "Clare",
     date: "February 18, 2026",
     readTime: "6 min read",
-    category: "Seasonal",
-    image: "linear-gradient(135deg, #1C4A5A 0%, #2E7A9A 100%)",
+    categorySlug: "seasonal",
+    gradient: "linear-gradient(135deg, #1C4A5A 0%, #2E7A9A 100%)",
   },
   {
     slug: "where-to-eat-formby-with-kids",
@@ -52,8 +61,8 @@ const POSTS = [
     author: "Clare",
     date: "February 15, 2026",
     readTime: "7 min read",
-    category: "Food",
-    image: "linear-gradient(135deg, #5C1A1A 0%, #8B3A3A 100%)",
+    categorySlug: "food",
+    gradient: "linear-gradient(135deg, #5C1A1A 0%, #8B3A3A 100%)",
   },
   {
     slug: "red-squirrels-formby-spotting-guide",
@@ -62,8 +71,8 @@ const POSTS = [
     author: "Clare",
     date: "February 12, 2026",
     readTime: "5 min read",
-    category: "Wildlife",
-    image: "linear-gradient(135deg, #8B6040 0%, #A8764A 100%)",
+    categorySlug: "wildlife",
+    gradient: "linear-gradient(135deg, #8B6040 0%, #A8764A 100%)",
   },
   {
     slug: "formby-pinewoods-walking-guide",
@@ -72,8 +81,8 @@ const POSTS = [
     author: "Clare",
     date: "February 10, 2026",
     readTime: "6 min read",
-    category: "Walks",
-    image: "linear-gradient(135deg, #1A5C3A 0%, #2E8B5A 100%)",
+    categorySlug: "walks",
+    gradient: "linear-gradient(135deg, #1A5C3A 0%, #2E8B5A 100%)",
   },
 ];
 
@@ -81,71 +90,58 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-[#F7F9F6]">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[#1C3220] to-[#2E6B3E] text-white py-16 md:py-24">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-2 text-[#C9A96E] text-sm font-medium mb-4">
-              <Link href="/" className="hover:text-white transition">FormbyGuide</Link>
-              <ChevronRight className="w-4 h-4" />
-              <span>Blog</span>
-            </div>
-            <h1 className="font-display text-4xl md:text-5xl font-bold mb-4 leading-tight">
-              Local Stories & Guides
-            </h1>
-            <p className="text-xl text-white/80 leading-relaxed">
-              Written by locals, for people who want to make the most of Formby. Real tips, honest reviews, and things worth knowing.
-            </p>
+      <section className="relative h-64 md:h-80 bg-[#1C3220] overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1C3220]/60 via-[#1C3220]/40 to-[#1C3220]/90" />
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#C9A96E]/10 rounded-full -translate-y-24 translate-x-24 blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#2E6B3E]/20 rounded-full translate-y-16 -translate-x-16 blur-3xl" />
+        </div>
+
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+          <div className="flex items-center gap-2 text-[#C9A96E] mb-3">
+            <Newspaper className="w-5 h-5" />
+            <span className="text-sm font-semibold tracking-widest uppercase">FormbyGuide Blog</span>
           </div>
+          <h1 className="font-display text-3xl md:text-5xl font-bold text-white leading-tight mb-3">
+            Local guides, tips &amp;&nbsp;
+            <br className="hidden sm:block" />
+            Formby stories.
+          </h1>
+          <p className="text-white/70 text-sm md:text-base max-w-md">
+            Written by locals who live here. Real tips, honest reviews, and things worth knowing about Formby.
+          </p>
         </div>
       </section>
 
-      <div className="container mx-auto px-4 max-w-6xl py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {POSTS.map((post) => (
-            <Link
-              key={post.slug}
-              href={`/blog/${post.slug}`}
-              className="group flex flex-col bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-gray-200 hover:shadow-md transition-all"
-            >
-              {/* Hero gradient */}
-              <div
-                className="h-40 w-full"
-                style={{ background: post.image }}
-              />
+      {/* Interactive content (search + tabs + grid) */}
+      <Suspense fallback={
+        <div className="flex justify-center py-20">
+          <div className="w-8 h-8 border-2 border-[#C9A96E] border-t-transparent rounded-full animate-spin" />
+        </div>
+      }>
+        <BlogClient posts={POSTS} categories={CATEGORIES} />
+      </Suspense>
 
-              <div className="p-6 flex flex-col flex-1">
-                <div className="mb-2">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#2E6B3E] bg-[#E8EDE6] px-2.5 py-1 rounded-full">
-                    {post.category}
-                  </span>
-                </div>
-
-                <h2 className="font-display font-bold text-[#1C3220] text-lg leading-snug group-hover:text-[#2E6B3E] transition-colors mb-2 line-clamp-2">
-                  {post.title}
-                </h2>
-
-                <p className="text-gray-600 text-sm line-clamp-2 flex-1 mb-4">
-                  {post.excerpt}
-                </p>
-
-                <div className="flex items-center gap-3 text-xs text-gray-400 mb-4 pb-4 border-t border-gray-100 pt-4">
-                  <div className="flex items-center gap-1">
-                    <User className="w-3 h-3" />
-                    {post.author}
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Calendar className="w-3 h-3" />
-                    {post.date}
-                  </div>
-                  <span className="ml-auto text-gray-300">{post.readTime}</span>
-                </div>
-
-                <span className="text-[#2E6B3E] text-sm font-bold group-hover:translate-x-0.5 transition-transform flex items-center gap-1">
-                  Read article <ArrowRight className="w-3.5 h-3.5" />
-                </span>
-              </div>
-            </Link>
-          ))}
+      {/* Coming soon footer */}
+      <div className="max-w-6xl mx-auto px-4 pb-16 text-center border-t border-gray-100 pt-12">
+        <span className="text-3xl">✍️</span>
+        <h3 className="font-display text-xl font-bold text-[#1C3220] mt-3 mb-2">More posts coming soon</h3>
+        <p className="text-gray-500 text-sm max-w-sm mx-auto">
+          We&rsquo;re adding new local guides every week. From the best spots for families to seasonal tips and honest restaurant reviews.
+        </p>
+        <div className="flex justify-center gap-4 mt-5">
+          <a
+            href="/things-to-do"
+            className="text-sm font-semibold text-[#1C3220] border border-[#1C3220]/20 px-5 py-2.5 rounded-full hover:bg-[#1C3220] hover:text-white transition-all"
+          >
+            Things to do
+          </a>
+          <a
+            href="/"
+            className="text-sm font-semibold text-[#C9A96E] border border-[#C9A96E]/30 px-5 py-2.5 rounded-full hover:bg-[#C9A96E] hover:text-white transition-all"
+          >
+            Explore the guide
+          </a>
         </div>
       </div>
     </div>
