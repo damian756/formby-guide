@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "FormbyGuide.co.uk — Your Complete Guide to Formby",
     description: "Discover the best restaurants, beaches, walks and things to do in Formby.",
     url: "https://www.formbyguide.co.uk",
-    images: [{ url: "https://www.formbyguide.co.uk/formby-squirrel-hero.png" }],
+    images: [{ url: "https://www.formbyguide.co.uk/formby-squirrel-hero.webp" }],
   },
 };
 
@@ -42,7 +42,7 @@ export default function HomePage() {
           {/* LEFT: Squirrel hero image */}
           <div className="relative w-full h-64 sm:h-80 md:h-auto md:flex-none md:w-[58%] overflow-hidden">
             <Image
-              src="/formby-squirrel-hero.png"
+              src="/formby-squirrel-hero.webp"
               alt="Red squirrel at the Formby Red Squirrel Reserve, National Trust"
               fill
               priority
