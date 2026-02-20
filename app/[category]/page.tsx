@@ -1,205 +1,228 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ChevronRight, MapPin, Phone, Globe, Star } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { getCategoryBySlug, isValidCategory, CATEGORIES } from "@/lib/config";
 import { prisma } from "@/lib/prisma";
+import CategoryBrowser, { type BrowserBusiness } from "@/components/CategoryBrowser";
+import type { MapPin } from "@/components/CategoryMap";
 
 type Props = {
   params: Promise<{ category: string }>;
+  searchParams: Promise<{ sort?: string; area?: string }>;
 };
 
-const THEMES: Record<string, { gradient: string; emoji: string; tagline: string }> = {
-  "nature-walks":  { gradient: "from-[#1C3220] to-[#2E6B3E]", emoji: "🌲", tagline: "Trails, woodland and coastal walks in Formby" },
-  "beaches":       { gradient: "from-[#1C4A5A] to-[#2E7A9A]", emoji: "🏖️", tagline: "Formby Beach and the Sefton Coast" },
-  "restaurants":   { gradient: "from-[#5C1A1A] to-[#8B3A3A]", emoji: "🍽️", tagline: "The best places to eat in Formby" },
-  "cafes":         { gradient: "from-[#5C3A1A] to-[#8B6040]", emoji: "☕", tagline: "Coffee, cake and somewhere to sit in Formby" },
-  "pubs":          { gradient: "from-[#1A2E5C] to-[#2A4A8B]", emoji: "🍺", tagline: "Pubs and bars in Formby village" },
-  "activities":    { gradient: "from-[#1A5C3A] to-[#2E8B5A]", emoji: "🏄", tagline: "Things to do and activities in Formby" },
-  "accommodation": { gradient: "from-[#3A1A5C] to-[#5A2E8B]", emoji: "🛏️", tagline: "Where to stay in Formby" },
-  "shopping":      { gradient: "from-[#5C1A3A] to-[#8B3A6A]", emoji: "🛍️", tagline: "Shops and independents in Formby village" },
+const THEMES: Record<string, { gradient: string; accent: string; emoji: string; tagline: string }> = {
+  "nature-walks":  { gradient: "from-[#1C3220] to-[#2E6B3E]", accent: "#2E6B3E", emoji: "🌲", tagline: "Trails, woodland and coastal walks in Formby" },
+  "beaches":       { gradient: "from-[#1C4A5A] to-[#2E7A9A]", accent: "#1C4A5A", emoji: "🏖️", tagline: "Formby Beach and the Sefton Coast" },
+  "restaurants":   { gradient: "from-[#5C1A1A] to-[#8B3A3A]", accent: "#8B3A3A", emoji: "🍽️", tagline: "The best places to eat in Formby" },
+  "cafes":         { gradient: "from-[#5C3A1A] to-[#8B6040]", accent: "#8B6040", emoji: "☕", tagline: "Coffee, cake and somewhere to sit in Formby" },
+  "pubs":          { gradient: "from-[#1A2E5C] to-[#2A4A8B]", accent: "#2A4A8B", emoji: "🍺", tagline: "Pubs and bars in Formby village" },
+  "activities":    { gradient: "from-[#1A5C3A] to-[#2E8B5A]", accent: "#1A5C3A", emoji: "🏄", tagline: "Things to do and activities in Formby" },
+  "accommodation": { gradient: "from-[#3A1A5C] to-[#5A2E8B]", accent: "#5A2E8B", emoji: "🛏️", tagline: "Where to stay in Formby" },
+  "shopping":      { gradient: "from-[#5C1A3A] to-[#8B3A6A]", accent: "#8B3A6A", emoji: "🛍️", tagline: "Shops and independents in Formby village" },
 };
 
-const BASE_URL = "https://www.formbyguide.co.uk";
+const CAT_ORDER = [
+  "restaurants", "cafes", "pubs", "activities",
+  "accommodation", "shopping", "nature-walks", "beaches",
+];
+
+const AREAS: { key: string; label: string; test: (addr: string, pc: string) => boolean }[] = [
+  { key: "formby",     label: "Formby",     test: (a, pc) => pc.startsWith("L37") || a.includes("Formby") || (!pc.startsWith("L23") && !pc.startsWith("L38") && !a.includes("Crosby") && !a.includes("Hightown")) },
+  { key: "freshfield", label: "Freshfield", test: (a) => a.includes("Freshfield") },
+  { key: "hightown",   label: "Hightown",   test: (a, pc) => pc.startsWith("L38") || a.includes("Hightown") },
+  { key: "crosby",     label: "Crosby",     test: (a, pc) => pc.startsWith("L23") || a.includes("Crosby") },
+];
+
+function matchesArea(address: string, postcode: string, areaKey: string): boolean {
+  const def = AREAS.find((a) => a.key === areaKey);
+  if (!def) return true;
+  return def.test(address, postcode);
+}
 
 export async function generateStaticParams() {
   return CATEGORIES.map((c) => ({ category: c.slug }));
 }
 
+const BASE_URL = "https://www.formbyguide.co.uk";
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category } = await params;
   const cat = getCategoryBySlug(category);
-  if (!cat) return { title: "Not Found" };
+  if (!cat) return { title: "Category" };
   const theme = THEMES[category];
   const title = `${cat.name} in Formby`;
-  const description = theme?.tagline ?? cat.description;
+  const description = `${theme?.tagline || cat.description} — browse all listings with Google ratings and contact details on FormbyGuide.co.uk`;
+  const url = `${BASE_URL}/${category}`;
   return {
-    title,
-    description,
-    alternates: { canonical: `${BASE_URL}/${category}` },
-    openGraph: { title, description, url: `${BASE_URL}/${category}`, type: "website", siteName: "FormbyGuide.co.uk" },
+    title, description,
+    alternates: { canonical: url },
+    openGraph: { title, description, url, type: "website", siteName: "FormbyGuide.co.uk" },
+    twitter: { card: "summary", title, description },
   };
 }
 
-export default async function CategoryPage({ params }: Props) {
+export default async function CategoryPage({ params, searchParams }: Props) {
   const { category } = await params;
+  const { sort, area } = await searchParams;
   if (!isValidCategory(category)) notFound();
 
   const cat = getCategoryBySlug(category)!;
-  const theme = THEMES[category] ?? THEMES.restaurants;
+  const theme = THEMES[category] || THEMES.restaurants;
 
-  const categoryRecord = await prisma.category.findFirst({ where: { slug: category } });
+  let businesses: BrowserBusiness[] = [];
 
-  type BusinessRow = {
-    slug: string;
-    name: string;
-    shortDescription: string | null;
-    address: string;
-    postcode: string;
-    phone: string | null;
-    website: string | null;
-    rating: number | null;
-    reviewCount: number | null;
-    priceRange: string | null;
-    listingTier: string;
-    featured: boolean;
-  };
+  try {
+    const categoryRecord = await prisma.category.findFirst({ where: { slug: category } });
+    if (categoryRecord) {
+      const catId = categoryRecord.id;
 
-  let businesses: BusinessRow[] = [];
+      if (sort === "alpha") {
+        businesses = await prisma.$queryRaw<BrowserBusiness[]>`
+          SELECT slug, name, "shortDescription", description, "listingTier", address, postcode,
+                 rating, "reviewCount", "priceRange", lat, lng
+          FROM "Business"
+          WHERE "categoryId" = ${catId} OR ${catId} = ANY("secondaryCategoryIds")
+          ORDER BY name ASC
+        `;
+      } else if (sort === "google") {
+        businesses = await prisma.$queryRaw<BrowserBusiness[]>`
+          SELECT slug, name, "shortDescription", description, "listingTier", address, postcode,
+                 rating, "reviewCount", "priceRange", lat, lng
+          FROM "Business"
+          WHERE "categoryId" = ${catId} OR ${catId} = ANY("secondaryCategoryIds")
+          ORDER BY
+            CASE "listingTier" WHEN 'premium' THEN 1 WHEN 'featured' THEN 2 WHEN 'standard' THEN 3 ELSE 4 END ASC,
+            COALESCE(rating, 0) DESC, COALESCE("reviewCount", 0) DESC, name ASC
+        `;
+      } else {
+        businesses = await prisma.$queryRaw<BrowserBusiness[]>`
+          SELECT slug, name, "shortDescription", description, "listingTier", address, postcode,
+                 rating, "reviewCount", "priceRange", lat, lng
+          FROM "Business"
+          WHERE "categoryId" = ${catId} OR ${catId} = ANY("secondaryCategoryIds")
+          ORDER BY
+            CASE "listingTier" WHEN 'premium' THEN 1 WHEN 'featured' THEN 2 WHEN 'standard' THEN 3 ELSE 4 END ASC,
+            (COALESCE(rating, 0) * LOG(COALESCE("reviewCount", 0) + 1)) DESC, name ASC
+        `;
+      }
+    }
+  } catch { /* DB unavailable */ }
 
-  if (categoryRecord) {
-    businesses = await prisma.business.findMany({
-      where: { categoryId: categoryRecord.id },
-      select: {
-        slug: true,
-        name: true,
-        shortDescription: true,
-        address: true,
-        postcode: true,
-        phone: true,
-        website: true,
-        rating: true,
-        reviewCount: true,
-        priceRange: true,
-        listingTier: true,
-        featured: true,
-      },
-      orderBy: [
-        { featured: "desc" },
-        { listingTier: "asc" },
-        { name: "asc" },
-      ],
-    }) as BusinessRow[];
-  }
+  const filteredBusinesses = area
+    ? businesses.filter((b) => matchesArea(b.address, b.postcode, area))
+    : businesses;
+
+  const mapPins: MapPin[] = filteredBusinesses
+    .filter((b) => b.lat != null && b.lng != null)
+    .map((b) => ({
+      slug: b.slug, name: b.name, lat: b.lat!, lng: b.lng!,
+      rating: b.rating, reviewCount: b.reviewCount, priceRange: b.priceRange,
+      listingTier: b.listingTier, address: b.address, category,
+    }));
+
+  const activeSort = sort || "default";
+  const sortOptions = [
+    { key: "default", label: "Best Match" },
+    { key: "alpha",   label: "A – Z" },
+    { key: "google",  label: "⭐ Google Rating" },
+  ];
 
   return (
-    <>
+    <div className="min-h-screen bg-[#F7F9F6]">
+
       {/* Hero */}
-      <section className={`bg-gradient-to-br ${theme.gradient} text-white py-16 md:py-20`}>
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="flex items-center gap-2 text-white/60 text-sm mb-4">
-            <Link href="/" className="hover:text-white transition">FormbyGuide</Link>
-            <ChevronRight className="w-4 h-4" />
-            <span className="text-white">{cat.name}</span>
+      <div className={`relative overflow-hidden bg-gradient-to-br ${theme.gradient}`}>
+        <div className="relative container mx-auto px-4 max-w-6xl py-12 md:py-16">
+          <nav className="flex items-center gap-1.5 text-white/50 text-sm mb-6">
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <ChevronRight className="w-3.5 h-3.5" />
+            <span className="text-white font-medium">{cat.name}</span>
+          </nav>
+
+          <div className="flex items-end justify-between gap-6">
+            <div>
+              <div className="text-5xl mb-4 drop-shadow-md">{theme.emoji}</div>
+              <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
+                {cat.name}
+                <span className="text-white/50 font-normal"> in Formby</span>
+              </h1>
+              <p className="text-white/90 text-lg drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)]">{theme.tagline}</p>
+            </div>
+            <div className="hidden md:block text-right">
+              <div className="font-display text-5xl font-bold text-white/20">{filteredBusinesses.length}</div>
+              <div className="text-white/40 text-sm uppercase tracking-widest">listings</div>
+            </div>
           </div>
-          <div className="text-5xl mb-3">{theme.emoji}</div>
-          <h1 className="font-display text-4xl md:text-5xl font-bold mb-3">{cat.name} in Formby</h1>
-          <p className="text-white/80 text-lg max-w-xl">{theme.tagline}</p>
         </div>
-      </section>
 
-      <div className="container mx-auto px-4 max-w-7xl py-10">
+        {/* Wave */}
+        <div className="relative h-8 overflow-hidden">
+          <svg viewBox="0 0 1440 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute bottom-0 w-full" preserveAspectRatio="none">
+            <path d="M0 32L360 16C720 0 1080 0 1440 16V32H0Z" fill="#F7F9F6" />
+          </svg>
+        </div>
+      </div>
 
-        {businesses.length === 0 ? (
-          <div className="text-center py-20">
-            <div className="text-5xl mb-4">{theme.emoji}</div>
-            <h2 className="font-display text-2xl font-bold text-[#1C3220] mb-2">Listings coming soon</h2>
-            <p className="text-[#1C3220]/60 mb-8 max-w-md mx-auto">
-              We&apos;re building out the {cat.name.toLowerCase()} listings for Formby. Got a business to suggest?
+      <div className="container mx-auto px-4 max-w-6xl py-6">
+
+        {/* Category strip */}
+        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm px-4 py-3 mb-5">
+          <div className="flex flex-wrap gap-2 justify-center">
+            {CAT_ORDER.map((slug) => {
+              const t = THEMES[slug];
+              const c = getCategoryBySlug(slug);
+              if (!t || !c) return null;
+              const isActive = slug === category;
+              return (
+                <Link
+                  key={slug}
+                  href={`/${slug}`}
+                  className={`flex items-center gap-1.5 whitespace-nowrap px-3.5 py-1.5 rounded-full text-sm font-semibold transition-all border ${
+                    isActive
+                      ? "text-white border-transparent shadow-sm"
+                      : "text-gray-500 border-gray-200 hover:border-gray-300 hover:text-gray-800 hover:bg-gray-50"
+                  }`}
+                  style={isActive ? { backgroundColor: theme.accent, borderColor: theme.accent } : {}}
+                >
+                  <span className="text-sm leading-none">{t.emoji}</span>
+                  {c.name}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+
+        <CategoryBrowser
+          businesses={filteredBusinesses}
+          mapPins={mapPins}
+          accentColor={theme.accent}
+          themeGradient={theme.gradient}
+          emoji={theme.emoji}
+          category={category}
+          activeArea={area}
+          activeSort={activeSort}
+          sortOptions={sortOptions}
+          areas={AREAS.map(({ key, label }) => ({ key, label }))}
+          currentSort={sort}
+          currentArea={area}
+        />
+
+        {/* Bottom CTA */}
+        <div className="mt-14 rounded-2xl overflow-hidden">
+          <div className={`bg-gradient-to-br ${theme.gradient} p-8 md:p-10 text-center`}>
+            <div className="text-4xl mb-3">{theme.emoji}</div>
+            <h3 className="font-display text-2xl font-bold text-white mb-2">Own a business in Formby?</h3>
+            <p className="text-white/70 text-sm mb-6 max-w-sm mx-auto">
+              List for free and get discovered by visitors planning their trip to Formby.
             </p>
-            <Link
-              href="/claim-listing"
-              className="inline-block bg-[#2E6B3E] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1C3220] transition-colors"
-            >
-              Add Your Business
+            <Link href="/claim-listing" className="inline-block bg-[#C9A96E] hover:bg-[#E8C87A] text-white px-7 py-3 rounded-full font-bold text-sm transition-all hover:shadow-lg">
+              Add Your Business →
             </Link>
           </div>
-        ) : (
-          <>
-            <p className="text-sm text-[#1C3220]/50 mb-6">{businesses.length} listing{businesses.length !== 1 ? "s" : ""}</p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {businesses.map((b) => (
-                <Link
-                  key={b.slug}
-                  href={`/${category}/${b.slug}`}
-                  className="group bg-white rounded-xl border border-[#1C3220]/8 overflow-hidden card-hover hover:border-[#2E6B3E]/30 transition-all"
-                >
-                  {/* Tier badge */}
-                  {b.listingTier !== "free" && (
-                    <div className="bg-[#C9A96E] text-white text-xs font-semibold px-3 py-1 text-center uppercase tracking-wider">
-                      {b.listingTier}
-                    </div>
-                  )}
-
-                  <div className="p-5">
-                    <div className="flex items-start justify-between gap-2 mb-2">
-                      <h2 className="font-display font-bold text-[#1C3220] text-lg leading-tight group-hover:text-[#2E6B3E] transition-colors">
-                        {b.name}
-                      </h2>
-                      {b.priceRange && (
-                        <span className="text-xs text-[#1C3220]/50 bg-[#E8EDE6] px-2 py-1 rounded shrink-0">{b.priceRange}</span>
-                      )}
-                    </div>
-
-                    {b.rating && (
-                      <div className="flex items-center gap-1.5 mb-2">
-                        <Star className="w-3.5 h-3.5 text-[#C9A96E] fill-[#C9A96E]" />
-                        <span className="text-sm font-semibold text-[#1C3220]">{b.rating.toFixed(1)}</span>
-                        {b.reviewCount && (
-                          <span className="text-xs text-[#1C3220]/40">({b.reviewCount.toLocaleString()} reviews)</span>
-                        )}
-                      </div>
-                    )}
-
-                    {b.shortDescription && (
-                      <p className="text-sm text-[#1C3220]/60 leading-relaxed mb-3 line-clamp-2">{b.shortDescription}</p>
-                    )}
-
-                    <div className="flex items-start gap-1.5 text-xs text-[#1C3220]/50">
-                      <MapPin className="w-3 h-3 shrink-0 mt-0.5" />
-                      <span>{b.address}{b.postcode ? `, ${b.postcode}` : ""}</span>
-                    </div>
-
-                    {(b.phone || b.website) && (
-                      <div className="flex gap-3 mt-3 pt-3 border-t border-[#1C3220]/6">
-                        {b.phone && (
-                          <span className="flex items-center gap-1 text-xs text-[#1C3220]/50">
-                            <Phone className="w-3 h-3" />{b.phone}
-                          </span>
-                        )}
-                        {b.website && (
-                          <span className="flex items-center gap-1 text-xs text-[#2E6B3E]">
-                            <Globe className="w-3 h-3" />Website
-                          </span>
-                        )}
-                      </div>
-                    )}
-                  </div>
-                </Link>
-              ))}
-            </div>
-
-            {/* Add listing CTA */}
-            <div className="mt-12 bg-[#E8EDE6] rounded-2xl p-8 text-center">
-              <h2 className="font-display text-2xl font-bold text-[#1C3220] mb-2">Own a {cat.name.toLowerCase().replace(/s$/, "")} in Formby?</h2>
-              <p className="text-[#1C3220]/60 mb-6">Get listed on FormbyGuide and reach visitors planning their trip.</p>
-              <Link href="/claim-listing" className="inline-block bg-[#2E6B3E] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1C3220] transition-colors">
-                List Your Business — Free
-              </Link>
-            </div>
-          </>
-        )}
+        </div>
       </div>
-    </>
+    </div>
   );
 }

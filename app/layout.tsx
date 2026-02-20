@@ -3,6 +3,7 @@ import { Playfair_Display, Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Link from "next/link";
+import NavMenu from "./components/NavMenu";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -110,27 +111,7 @@ function Navigation() {
             <span className="hidden sm:block text-xs text-gray-400 font-light tracking-widest uppercase mt-0.5">.co.uk</span>
           </Link>
 
-          <div className="hidden md:flex items-center gap-6 text-sm font-medium">
-            {[
-              ["Things To Do", "/things-to-do"],
-              ["Formby Beach", "/formby-beach"],
-              ["Red Squirrels", "/red-squirrels-formby"],
-              ["Pinewoods", "/formby-pinewoods"],
-              ["Restaurants", "/restaurants"],
-              ["About Formby", "/about-formby"],
-            ].map(([label, href]) => (
-              <Link key={href} href={href} className="text-[#1C3220]/70 hover:text-[#2E6B3E] transition-colors">
-                {label}
-              </Link>
-            ))}
-          </div>
-
-          <Link
-            href="/claim-listing"
-            className="hidden sm:block text-sm font-medium bg-[#2E6B3E] text-white px-4 py-2 rounded-lg hover:bg-[#1C3220] transition-colors"
-          >
-            List Your Business
-          </Link>
+          <NavMenu />
         </div>
       </div>
     </nav>
