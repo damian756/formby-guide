@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Link from "next/link";
 
@@ -83,6 +84,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Privacy-friendly analytics by Plausible */}
+        <Script src="https://plausible.io/js/pa-59ucrRXhBPaiBnJvRw2AI.js" strategy="afterInteractive" />
+        <Script id="plausible-init" strategy="afterInteractive">{`window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()`}</Script>
+      </head>
       <body className={`${playfair.variable} ${inter.variable} font-sans antialiased bg-[#F7F9F6]`}>
         <Navigation />
         <main>{children}</main>

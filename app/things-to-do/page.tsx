@@ -121,20 +121,6 @@ const THINGS = [
       "Mostly independent — more interesting than a high street",
     ],
   },
-  {
-    id: "open-2026",
-    emoji: "⛳",
-    title: "Base for The Open 2026",
-    tag: "Golf · July 2026",
-    highlight: "5 miles from Royal Birkdale",
-    href: "/the-open-2026",
-    desc: "If you&apos;re coming to The Open Championship at Royal Birkdale in July 2026, Formby is a quieter alternative to staying in Southport itself. It&apos;s about 5 miles from the course, the accommodation is generally good quality, and you avoid the worst of the central Southport congestion. Worth considering if Southport hotels are full or too expensive.",
-    practical: [
-      "Royal Birkdale is approx 5 miles north via A565",
-      "Train option: Formby station to Southport, then short cab to Birkdale",
-      "Book accommodation early — Southport and surrounds fill quickly",
-    ],
-  },
 ];
 
 export default function ThingsToDoPage() {
