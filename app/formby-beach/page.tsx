@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { MapPin, Car, Clock, Dog, Waves, ChevronRight, AlertCircle, Coffee } from "lucide-react";
+import { MapPin, Car, Clock, Dog, Waves, ChevronRight, AlertCircle, Coffee, Info, Shield } from "lucide-react";
 
 const BASE_URL = "https://www.formbyguide.co.uk";
 
@@ -23,33 +23,36 @@ export default function FormbyBeachPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#1C3220] text-white py-16 md:py-24">
-        <div className="container mx-auto px-4 max-w-7xl">
+      <section className="bg-gradient-to-br from-[#1C4A5A] to-[#2E7A9A] text-white py-16 md:py-24">
+        <div className="container mx-auto px-4 max-w-6xl">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2 text-[#C9A96E] text-sm font-medium mb-4">
+            <div className="flex items-center gap-2 text-blue-200 text-sm font-medium mb-4">
               <Link href="/" className="hover:text-white transition">FormbyGuide</Link>
               <ChevronRight className="w-4 h-4" />
               <span>Formby Beach</span>
             </div>
-            <div className="text-5xl mb-4">🏖️</div>
+            <div className="text-6xl mb-4">🏖️</div>
             <h1 className="font-display text-4xl md:text-5xl font-bold mb-4 leading-tight">
               Formby Beach
             </h1>
             <p className="text-xl text-white/80 leading-relaxed mb-8">
-              Wide open sand, dramatic dunes, pinewoods at your back and the Irish Sea in front. One of the best beaches in the North West — and you don&apos;t have to fight anyone for space if you get the timing right.
+              Wide open sand, dramatic dunes, and the Irish Sea with no crowds. One of the best beaches in the North West — and you don&apos;t have to fight for space.
             </p>
 
-            {/* The answers people actually search for */}
+            {/* Quick facts grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {[
-                { label: "Postcode", value: "L37 1YH" },
-                { label: "NT Car Park", value: "From £6 (app)" },
-                { label: "Dogs", value: "Welcome" },
-                { label: "Nearest café", value: "NT Café on site" },
-              ].map((f) => (
-                <div key={f.label} className="bg-white/10 rounded-lg p-3">
-                  <div className="text-xs text-white/50 mb-0.5">{f.label}</div>
-                  <div className="text-sm font-semibold text-white">{f.value}</div>
+                { icon: MapPin, label: "Postcode", value: "L37 1YH" },
+                { icon: Car, label: "Parking", value: "From £6" },
+                { icon: Dog, label: "Dogs", value: "Welcome" },
+                { icon: Coffee, label: "Café", value: "On site" },
+              ].map(({ icon: Icon, label, value }) => (
+                <div key={label} className="bg-white/10 backdrop-blur rounded-lg p-3 border border-white/10">
+                  <div className="flex items-start gap-2 mb-1">
+                    <Icon className="w-4 h-4 text-blue-200 flex-shrink-0 mt-0.5" />
+                    <div className="text-xs text-white/60">{label}</div>
+                  </div>
+                  <div className="text-sm font-bold text-white ml-6">{value}</div>
                 </div>
               ))}
             </div>
@@ -58,19 +61,18 @@ export default function FormbyBeachPage() {
       </section>
 
       {/* Quick nav */}
-      <section className="bg-[#E8EDE6] border-b border-[#1C3220]/10">
-        <div className="container mx-auto px-4 max-w-7xl py-3">
-          <div className="flex flex-wrap gap-x-6 gap-y-2">
+      <section className="bg-[#E8EDE6] border-b border-[#1C3220]/10 sticky top-16 z-40">
+        <div className="container mx-auto px-4 max-w-6xl py-3">
+          <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
             {[
-              { href: "#parking", label: "Parking & Postcode", icon: Car },
-              { href: "#beach", label: "The Beach", icon: Waves },
-              { href: "#dogs", label: "Dogs", icon: Dog },
-              { href: "#dunes", label: "Dunes & Formby Point", icon: MapPin },
-              { href: "#facilities", label: "Facilities", icon: Coffee },
-              { href: "#tides", label: "Tides & Safety", icon: Clock },
-            ].map(({ href, label, icon: Icon }) => (
-              <a key={href} href={href} className="flex items-center gap-1.5 text-sm text-[#1C3220]/70 hover:text-[#2E6B3E] transition-colors py-1">
-                <Icon className="w-3.5 h-3.5" />
+              { href: "#practical", label: "Practical Info" },
+              { href: "#conditions", label: "What to Expect" },
+              { href: "#dogs", label: "Dogs" },
+              { href: "#dunes", label: "Dunes & Point" },
+              { href: "#facilities", label: "Facilities" },
+              { href: "#safety", label: "Safety" },
+            ].map(({ href, label }) => (
+              <a key={href} href={href} className="text-[#1C3220]/70 hover:text-[#2E6B3E] transition-colors font-medium">
                 {label}
               </a>
             ))}
@@ -78,178 +80,208 @@ export default function FormbyBeachPage() {
         </div>
       </section>
 
-      <div className="container mx-auto px-4 max-w-4xl py-12">
+      <div className="container mx-auto px-4 max-w-6xl py-12">
 
-        {/* Intro */}
-        <div className="prose prose-lg max-w-none mb-12">
-          <p className="text-xl text-[#1C3220]/80 leading-relaxed">
-            Formby Beach is managed by the National Trust and sits at the end of Victoria Road on the western edge of Formby village. Behind the beach is a wide stretch of pinewoods — the same woodland where the red squirrels live. In front of it is miles of sand and the Irish Sea. It&apos;s a proper beach, not a resort, which is both the best and the most accurate way to describe it.
-          </p>
-          <p className="text-[#1C3220]/70 leading-relaxed">
-            On a sunny Saturday in summer it gets busy — the car park fills, the paths are full, and you have to walk a bit to get space. On a Tuesday morning in October it&apos;s almost empty and completely brilliant. Both are valid. Know what you&apos;re walking into.
+        {/* Intro prose */}
+        <div className="max-w-3xl mb-12 prose prose-lg">
+          <p className="text-lg text-[#1C3220]/80 leading-relaxed">
+            Formby Beach is a <strong>proper beach</strong> — not a promenade, not a resort. Wide open sand, dramatic dunes, pinewoods at your back, and the Irish Sea in front. On a sunny Saturday in summer it gets busy. On a Tuesday morning in October it&apos;s almost empty. Both are valid. Know what you&apos;re walking into.
           </p>
         </div>
 
-        {/* Parking — leads with the literal answer */}
-        <section id="parking" className="mb-12 scroll-mt-20">
-          <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-2">Parking & getting there</h2>
-          <p className="text-sm text-[#1C3220]/50 mb-6">Postcode for sat nav: <strong className="text-[#2E6B3E] text-base">L37 1YH</strong></p>
+        {/* Practical Info Section */}
+        <section id="practical" className="mb-16 scroll-mt-20">
+          <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">Practical Information</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Parking */}
+            <div className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm">
+              <div className="flex items-start gap-3 mb-4">
+                <Car className="w-6 h-6 text-[#2E6B3E] flex-shrink-0 mt-0.5" />
+                <div>
+                  <h3 className="font-semibold text-[#1C3220] text-lg">Parking & Getting There</h3>
+                  <p className="text-sm text-[#1C3220]/60">L37 1YH</p>
+                </div>
+              </div>
+              <ul className="space-y-2 text-sm">
+                <li className="flex gap-2">
+                  <span className="text-[#2E6B3E] font-bold">•</span>
+                  <span className="text-[#1C3220]/70"><strong>NT Members:</strong> Free parking, book via app</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-[#2E6B3E] font-bold">•</span>
+                  <span className="text-[#1C3220]/70"><strong>Non-members:</strong> From £6/day via NT app</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-[#2E6B3E] font-bold">•</span>
+                  <span className="text-[#1C3220]/70">Train from Formby station: 20-min walk</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-[#2E6B3E] font-bold">•</span>
+                  <span className="text-[#1C3220]/70">Book BEFORE you leave — no signal on site</span>
+                </li>
+              </ul>
+            </div>
 
-          <div className="overflow-x-auto mb-6">
-            <table className="w-full text-sm border-collapse">
-              <thead>
-                <tr className="bg-[#1C3220] text-white">
-                  <th className="text-left p-3 rounded-tl-lg">Parking option</th>
-                  <th className="text-left p-3">Cost</th>
-                  <th className="text-left p-3 rounded-tr-lg">Notes</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  { option: "Victoria Road NT car park (members)", cost: "Free", notes: "NT membership required. Book a slot in peak times." },
-                  { option: "Victoria Road NT car park (non-members)", cost: "From £6/day", notes: "Book via the NT app before leaving — no signal on site." },
-                  { option: "Train + walk", cost: "Varies", notes: "Formby station (Merseyrail). 20-min walk to NT car park via Victoria Road." },
-                  { option: "Street parking nearby", cost: "Free (limited)", notes: "Very limited. Not reliable on weekends." },
-                ].map((r, i) => (
-                  <tr key={i} className={i % 2 === 0 ? "bg-[#E8EDE6]/50" : "bg-white"}>
-                    <td className="p-3 font-medium text-[#1C3220]">{r.option}</td>
-                    <td className="p-3 text-[#2E6B3E] font-semibold">{r.cost}</td>
-                    <td className="p-3 text-[#1C3220]/60">{r.notes}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          <div className="bg-[#2E6B3E]/10 border border-[#2E6B3E]/20 rounded-xl p-4 flex gap-3">
-            <AlertCircle className="w-5 h-5 text-[#2E6B3E] shrink-0 mt-0.5" />
-            <p className="text-sm text-[#1C3220]/70">
-              <strong className="text-[#1C3220]">Important:</strong> The mobile signal at the NT car park is poor. Download the National Trust app and book your parking slot at home before you drive. On busy days the car park fills up and you&apos;ll be turned away.
-            </p>
+            {/* Distances */}
+            <div className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm">
+              <div className="flex items-start gap-3 mb-4">
+                <MapPin className="w-6 h-6 text-[#2E6B3E] flex-shrink-0 mt-0.5" />
+                <div>
+                  <h3 className="font-semibold text-[#1C3220] text-lg">How Far Away?</h3>
+                  <p className="text-sm text-[#1C3220]/60">From nearby cities</p>
+                </div>
+              </div>
+              <ul className="space-y-2 text-sm">
+                <li className="flex justify-between"><span className="text-[#1C3220]/70">Liverpool city centre</span> <span className="font-semibold text-[#2E6B3E]">20–25 mins</span></li>
+                <li className="flex justify-between"><span className="text-[#1C3220]/70">Southport</span> <span className="font-semibold text-[#2E6B3E]">10 mins</span></li>
+                <li className="flex justify-between"><span className="text-[#1C3220]/70">Manchester</span> <span className="font-semibold text-[#2E6B3E]">45–60 mins</span></li>
+                <li className="flex justify-between"><span className="text-[#1C3220]/70">Preston</span> <span className="font-semibold text-[#2E6B3E]">35 mins</span></li>
+              </ul>
+            </div>
           </div>
         </section>
 
-        {/* The beach itself */}
-        <section id="beach" className="mb-12 scroll-mt-20">
-          <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-4">What the beach is actually like</h2>
-          <p className="text-[#1C3220]/70 leading-relaxed mb-4">
-            Formby Beach is wide, sandy, and backed by significant sand dunes with the pinewoods behind them. It&apos;s a proper beach — not a promenade, not a resort, not a funfair. There&apos;s no ice cream van at the water&apos;s edge and no amusements. What there is: space, sand, sea, and quiet (relative to most beaches this close to Liverpool and Manchester).
-          </p>
-          <p className="text-[#1C3220]/70 leading-relaxed mb-4">
-            The walk from the car park through the pines to the beach takes about 15 minutes. It&apos;s flat the whole way and a decent pushchair can manage it on dry days, though the sandy path near the beach gets soft. The beach itself is wide — at low tide there&apos;s a lot of sand. The sea is the Irish Sea, so don&apos;t expect Mediterranean temperatures, but it&apos;s swimmable in summer.
-          </p>
-          <p className="text-[#1C3220]/70 leading-relaxed mb-6">
-            The best conditions: sunny, not too windy, low to mid tide. Sunset visits are genuinely spectacular — the light across the dunes and the sea is the kind of thing people drive a long way for.
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-4">
+        {/* What to Expect */}
+        <section id="conditions" className="mb-16 scroll-mt-20">
+          <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">What the Beach Is Actually Like</h2>
+          <div className="grid md:grid-cols-3 gap-6">
             {[
-              { icon: "☀️", title: "Best in summer", desc: "Pack a windbreak — it can be breezy even on sunny days. The dunes provide shelter if you find the right spot." },
-              { icon: "🌅", title: "Sunsets", desc: "West-facing beach. Sunset on a clear evening is exceptional. Worth timing a visit around it." },
-              { icon: "❄️", title: "Winter visits", desc: "Honestly brilliant in winter. Empty, dramatic, bracing. Walk through the pines and the whole place feels like it&apos;s yours." },
-            ].map((b) => (
-              <div key={b.title} className="bg-white rounded-xl p-5 border border-[#1C3220]/8 text-center">
-                <div className="text-3xl mb-2">{b.icon}</div>
-                <h3 className="font-semibold text-[#1C3220] mb-1">{b.title}</h3>
-                <p className="text-sm text-[#1C3220]/60">{b.desc}</p>
+              {
+                emoji: "📏",
+                title: "The Beach Itself",
+                desc: "Wide sandy beach backed by significant dunes. Pinewoods behind the dunes. Walk through pines takes ~15 mins. Flat paths. Pushchair-friendly on dry days. Sandy path near beach gets soft after rain.",
+              },
+              {
+                emoji: "🌊",
+                title: "The Sea",
+                desc: "Irish Sea — don't expect Mediterranean temps. Swimmable in summer. Significant tidal range. Low tide = lots of sand. High tide = less beach. Check tide times before you go.",
+              },
+              {
+                emoji: "🌅",
+                title: "Best Times",
+                desc: "Sunny + not too windy + low to mid tide = perfect. West-facing, so sunsets are exceptional. Winter visits are brilliant if you like it quiet and dramatic.",
+              },
+            ].map(({ emoji, title, desc }) => (
+              <div key={title} className="bg-gradient-to-br from-[#E8EDE6] to-white rounded-2xl border border-gray-200 p-6">
+                <div className="text-4xl mb-3">{emoji}</div>
+                <h3 className="font-semibold text-[#1C3220] text-lg mb-2">{title}</h3>
+                <p className="text-sm text-[#1C3220]/70 leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* Dogs */}
-        <section id="dogs" className="mb-12 scroll-mt-20">
-          <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-4">Dogs at Formby Beach</h2>
-          <p className="text-[#1C3220]/70 leading-relaxed mb-4">
-            Dogs are welcome at Formby Beach year-round — no seasonal restrictions. This makes it one of the better dog beaches on the Sefton Coast. Most of the beach is open to dogs. The exception is the red squirrel reserve area within the pinewoods, where dogs must be on leads.
-          </p>
-          <div className="bg-[#E8EDE6] rounded-xl p-5 space-y-2 text-sm">
-            <div className="flex gap-3"><span className="text-[#2E6B3E]">✓</span><span><strong className="text-[#1C3220]">Dogs on the beach:</strong> welcome, no restrictions</span></div>
-            <div className="flex gap-3"><span className="text-[#2E6B3E]">✓</span><span><strong className="text-[#1C3220]">Dogs in the pinewoods (general paths):</strong> welcome</span></div>
-            <div className="flex gap-3"><span className="text-orange-500">!</span><span><strong className="text-[#1C3220]">Dogs in the squirrel reserve:</strong> must be on a lead at all times</span></div>
-            <div className="flex gap-3"><span className="text-[#2E6B3E]">✓</span><span><strong className="text-[#1C3220]">Water:</strong> bring your own — the beach itself has no dog water points</span></div>
+        <section id="dogs" className="mb-16 scroll-mt-20">
+          <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">Dogs at Formby Beach</h2>
+          <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl border border-blue-200 p-6">
+            <div className="flex items-start gap-4">
+              <Dog className="w-8 h-8 text-blue-600 flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="text-lg text-blue-900 mb-4 leading-relaxed">
+                  Dogs are <strong>welcome year-round</strong> — no seasonal restrictions. This makes Formby one of the better dog beaches on the Sefton Coast.
+                </p>
+                <div className="grid sm:grid-cols-2 gap-4 text-sm">
+                  <div><span className="font-bold text-green-600">✓ On the beach:</span> <span className="text-blue-800">No restrictions</span></div>
+                  <div><span className="font-bold text-green-600">✓ In pinewoods:</span> <span className="text-blue-800">Welcome</span></div>
+                  <div><span className="font-bold text-amber-600">! In squirrel reserve:</span> <span className="text-blue-800">Must be on leads</span></div>
+                  <div><span className="font-bold text-blue-600">💧 Water:</span> <span className="text-blue-800">Bring your own</span></div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* Dunes & Formby Point */}
-        <section id="dunes" className="mb-12 scroll-mt-20">
-          <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-4">Sand dunes & Formby Point</h2>
-          <p className="text-[#1C3220]/70 leading-relaxed mb-4">
-            The sand dunes at Formby are significant — some are over 10 metres high. They&apos;re also part of an active conservation effort, which means you&apos;ll see fenced-off sections and signs asking you not to climb certain dunes. It&apos;s not jobsworth bureaucracy — the dunes are genuinely fragile and the NT is trying to stop the coastal erosion that&apos;s been steadily eating into the pinewoods for decades.
-          </p>
-          <p className="text-[#1C3220]/70 leading-relaxed mb-4">
-            <strong className="text-[#1C3220]">Formby Point</strong> is the headland at the southern end of the beach — the most westerly point of the Formby coastline. It&apos;s a decent walk from the main car park (about 1.5 miles along the beach) but the views back along the coast are worth it. At low tide you can sometimes see the prehistoric footprints and animal tracks left in the ancient sediment — over 5,000 years old, occasionally exposed as the sand shifts.
-          </p>
-          <div className="bg-[#2E6B3E]/10 border border-[#2E6B3E]/20 rounded-xl p-4">
-            <p className="text-sm text-[#1C3220]/70">
-              <strong className="text-[#1C3220]">Prehistoric footprints:</strong> These appear occasionally on the beach and in the tidal zone when the sand conditions are right. There&apos;s no guarantee you&apos;ll see them — they&apos;re exposed and then covered again by tides over days or weeks. If you do spot them, please don&apos;t disturb them and let the NT know.
-            </p>
+        <section id="dunes" className="mb-16 scroll-mt-20">
+          <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">Sand Dunes & Formby Point</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-white rounded-2xl border border-gray-100 p-6">
+              <h3 className="font-semibold text-[#1C3220] text-lg mb-3">The Dunes</h3>
+              <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-3">
+                Sand dunes over 10 metres high. Part of active conservation effort. You&apos;ll see fenced-off sections — not jobsworth bureaucracy. The dunes are genuinely fragile and the NT is fighting coastal erosion that&apos;s been eating into the pinewoods for decades.
+              </p>
+              <p className="text-xs text-[#1C3220]/50 italic">Please don&apos;t climb restricted areas.</p>
+            </div>
+            <div className="bg-white rounded-2xl border border-gray-100 p-6">
+              <h3 className="font-semibold text-[#1C3220] text-lg mb-3">Formby Point</h3>
+              <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-3">
+                Headland at the south end of the beach. ~1.5 mile walk from main car park. Views back along the coast are worth it. At low tide, sometimes see prehistoric footprints — over 5,000 years old. They appear and disappear with the sand.
+              </p>
+              <p className="text-xs text-[#1C3220]/50 italic">Let the NT know if you spot them — don&apos;t disturb.</p>
+            </div>
           </div>
         </section>
 
         {/* Facilities */}
-        <section id="facilities" className="mb-12 scroll-mt-20">
-          <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-4">Facilities</h2>
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm border-collapse">
-              <tbody>
-                {[
-                  { facility: "Toilets", detail: "At the NT car park / visitor point. Clean, maintained." },
-                  { facility: "Café", detail: "NT café at the visitor point. Coffee, cake, soup, light bites. Not cheap but decent quality. Outdoor seating." },
-                  { facility: "Picnic area", detail: "Grassy area near the car park. Bring your own food if you want to eat out." },
-                  { facility: "Baby changing", detail: "Available at the NT facilities." },
-                  { facility: "Accessibility", detail: "The main paths are manageable for pushchairs on dry days. The beach itself and dune paths are uneven — check the NT website for current accessible route info." },
-                  { facility: "Lifeguard", detail: "No lifeguard service. Swim with care and be aware of the tide." },
-                  { facility: "EV charging", detail: "Not currently available at the NT car park." },
-                ].map((r, i) => (
-                  <tr key={i} className={i % 2 === 0 ? "bg-[#E8EDE6]/50" : "bg-white"}>
-                    <td className="p-3 font-semibold text-[#1C3220] w-40">{r.facility}</td>
-                    <td className="p-3 text-[#1C3220]/60">{r.detail}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        {/* Tides & safety */}
-        <section id="tides" className="mb-12 scroll-mt-20">
-          <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-4">Tides & safety</h2>
-          <p className="text-[#1C3220]/70 leading-relaxed mb-4">
-            Formby Beach is on the Irish Sea, which has a significant tidal range. At low tide there&apos;s a wide expanse of sand. At high tide the sea comes in to the base of the dunes and there&apos;s much less beach. Worth checking the tides before you go if beach access matters to you.
-          </p>
-          <div className="space-y-3">
+        <section id="facilities" className="mb-16 scroll-mt-20">
+          <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">Facilities</h2>
+          <div className="grid md:grid-cols-3 gap-6">
             {[
-              { icon: "🌊", point: "Rip currents", detail: "Present at times. If you&apos;re swimming, don&apos;t go out far and don&apos;t swim alone. There is no lifeguard service." },
-              { icon: "🐚", point: "Best for walking: low to mid tide", detail: "You get the most beach to walk on and the sand is firmer. Easier on the legs than soft sand near the dune base." },
-              { icon: "📱", point: "Tide times", detail: "Check BBC Weather, Tide Times UK, or the Met Office for Formby/Southport tide predictions before you go." },
-              { icon: "⚠️", point: "Don&apos;t walk out too far at low tide", detail: "The tide comes in quickly along this stretch of coast. Be aware of where you are relative to the waterline." },
-            ].map((s) => (
-              <div key={s.point} className="flex gap-3 bg-white rounded-xl p-4 border border-[#1C3220]/8">
-                <span className="text-xl shrink-0">{s.icon}</span>
-                <div>
-                  <span className="font-semibold text-[#1C3220] text-sm">{s.point}: </span>
-                  <span className="text-sm text-[#1C3220]/60">{s.detail}</span>
+              { icon: Coffee, title: "Café", desc: "NT café at visitor point. Coffee, cake, soup, light bites. Outdoor seating. Not cheap but decent." },
+              { icon: MapPin, title: "Toilets", desc: "At the NT car park/visitor point. Clean and well-maintained. Baby changing available." },
+              { icon: Info, title: "Accessibility", desc: "Main paths manageable for pushchairs on dry days. Beach and dune paths are uneven. Check NT website for current details." },
+            ].map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="bg-white rounded-2xl border border-gray-100 p-6">
+                <div className="flex items-start gap-3 mb-3">
+                  <Icon className="w-6 h-6 text-[#2E6B3E] flex-shrink-0 mt-0.5" />
+                  <h3 className="font-semibold text-[#1C3220] text-lg">{title}</h3>
                 </div>
+                <p className="text-sm text-[#1C3220]/70 leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Internal links */}
-        <section className="bg-[#1C3220] rounded-2xl p-8 text-white">
-          <h2 className="font-display text-2xl font-bold mb-4">More to explore in Formby</h2>
-          <div className="grid sm:grid-cols-3 gap-4">
-            {[
-              { label: "Red Squirrels", href: "/red-squirrels-formby", desc: "See them in the pines behind the beach." },
-              { label: "Formby Pinewoods", href: "/formby-pinewoods", desc: "Walk the ancient woodland trails." },
-              { label: "Things To Do", href: "/things-to-do", desc: "More ideas for your visit to Formby." },
-            ].map((l) => (
-              <Link key={l.href} href={l.href} className="group bg-white/10 hover:bg-white/20 rounded-xl p-4 transition-all">
-                <div className="font-semibold text-white group-hover:text-[#C9A96E] transition-colors mb-1">{l.label} →</div>
-                <div className="text-sm text-white/60">{l.desc}</div>
-              </Link>
-            ))}
+        {/* Safety & Tides */}
+        <section id="safety" className="mb-16 scroll-mt-20">
+          <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">Safety & Tides</h2>
+          <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl border border-amber-200 p-6">
+            <div className="flex items-start gap-3 mb-4">
+              <Shield className="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5" />
+              <div className="flex-1">
+                <h3 className="font-semibold text-amber-900 text-lg mb-4">Important Information</h3>
+                <ul className="space-y-3 text-sm text-amber-900">
+                  <li className="flex gap-2">
+                    <span className="font-bold">⚠️</span>
+                    <span><strong>No lifeguard service.</strong> Swim with care and be aware of the tide.</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="font-bold">🌊</span>
+                    <span><strong>Rip currents present at times.</strong> Don&apos;t go out far and don&apos;t swim alone.</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="font-bold">📱</span>
+                    <span><strong>Check tide times before you go.</strong> BBC Weather, Tide Times UK, or Met Office for Formby/Southport predictions.</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="font-bold">⏱️</span>
+                    <span><strong>Tide comes in quickly here.</strong> Be aware of where you are relative to the waterline.</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="font-bold">✅</span>
+                    <span><strong>Best for walking:</strong> Low to mid tide gives most beach and firmer sand.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Links */}
+        <section className="mt-16 pt-12 border-t border-[#1C3220]/10">
+          <h3 className="font-display text-2xl font-bold text-[#1C3220] mb-6">Explore More Formby</h3>
+          <div className="grid sm:grid-cols-2 gap-4">
+            <Link href="/red-squirrels-formby" className="group bg-white rounded-xl border border-gray-100 p-6 hover:border-[#2E6B3E]/30 hover:shadow-sm transition">
+              <div className="text-3xl mb-2">🐿️</div>
+              <h4 className="font-semibold text-[#1C3220] group-hover:text-[#2E6B3E] transition">Red Squirrels</h4>
+              <p className="text-sm text-[#1C3220]/60">One of the best places in England to see them in the wild.</p>
+            </Link>
+            <Link href="/formby-pinewoods" className="group bg-white rounded-xl border border-gray-100 p-6 hover:border-[#2E6B3E]/30 hover:shadow-sm transition">
+              <div className="text-3xl mb-2">🌲</div>
+              <h4 className="font-semibold text-[#1C3220] group-hover:text-[#2E6B3E] transition">Pinewoods Walks</h4>
+              <p className="text-sm text-[#1C3220]/60">Ancient woodland and coastal paths.</p>
+            </Link>
           </div>
         </section>
 
