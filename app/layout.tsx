@@ -149,6 +149,12 @@ function Footer() {
             <a href="https://churchtownmedia.co.uk" className="text-xs text-[#C9A96E] hover:text-[#E8C87A] transition">
               Built by Churchtown Media ↗
             </a>
+            <div className="mt-4 pt-4 border-t border-white/10">
+              <p className="text-white/40 text-xs mb-2 uppercase tracking-wider">Also by Churchtown Media</p>
+              <a href="https://www.southportguide.co.uk" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-white/70 hover:text-[#C9A96E] transition">
+                SouthportGuide.co.uk ↗
+              </a>
+            </div>
           </div>
 
           <div>
@@ -178,7 +184,6 @@ function Footer() {
                 ["List Your Business", "/claim-listing"],
                 ["Advertise With Us", "/advertise"],
                 ["Business Dashboard", "/dashboard"],
-                ["The Open 2026", "/the-open-2026"],
                 ["Contact", "/contact"],
                 ["Privacy", "/privacy"],
                 ["Terms", "/terms"],
@@ -187,6 +192,11 @@ function Footer() {
                   <Link href={href} className="text-white/60 hover:text-[#C9A96E] transition">{label}</Link>
                 </li>
               ))}
+              <li>
+                <a href="https://www.southportguide.co.uk/the-open-2026" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-[#C9A96E] transition">
+                  The Open 2026 ↗
+                </a>
+              </li>
             </ul>
           </div>
         </div>

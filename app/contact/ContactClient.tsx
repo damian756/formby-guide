@@ -7,7 +7,6 @@ import { Send, CheckCircle, AlertCircle, MapPin, Clock } from "lucide-react";
 const SUBJECTS = [
   "Claim my listing",
   "Advertise / Featured listing",
-  "The Open 2026",
   "Report an issue",
   "General enquiry",
 ];
