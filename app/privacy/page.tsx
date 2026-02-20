@@ -55,8 +55,8 @@ export default function PrivacyPage() {
             </p>
             <p className="text-gray-600 leading-relaxed">
               <strong>Contact:</strong>{" "}
-              <a href="mailto:privacy@formbyguide.co.uk" className="text-[#2E6B3E] hover:underline">
-                privacy@formbyguide.co.uk
+              <a href="mailto:hello@churchtownmedia.co.uk" className="text-[#2E6B3E] hover:underline">
+                hello@churchtownmedia.co.uk
               </a>
             </p>
           </section>
@@ -195,8 +195,8 @@ export default function PrivacyPage() {
             </div>
             <p className="text-gray-600 text-sm mt-4">
               To exercise any of these rights, email{" "}
-              <a href="mailto:privacy@formbyguide.co.uk" className="text-[#2E6B3E] hover:underline">
-                privacy@formbyguide.co.uk
+              <a href="mailto:hello@churchtownmedia.co.uk" className="text-[#2E6B3E] hover:underline">
+                hello@churchtownmedia.co.uk
               </a>. You may also lodge a complaint with the{" "}
               <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" className="text-[#2E6B3E] hover:underline">
                 Information Commissioner&apos;s Office (ICO)
