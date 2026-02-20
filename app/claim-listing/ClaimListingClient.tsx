@@ -37,23 +37,25 @@ export default function ClaimListingClient() {
   return (
     <div className="min-h-screen bg-[#F7F9F6]">
       {/* Hero */}
-      <div className="bg-[#1C3220] relative overflow-hidden">
+      <section className="bg-[#1C3220] relative overflow-hidden">
         <div className="h-1 bg-gradient-to-r from-transparent via-[#C9A96E] to-transparent" />
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[#C9A96E]/8 rounded-full -translate-y-16 translate-x-16 blur-3xl" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#C9A96E]/5 rounded-full -translate-y-24 translate-x-24 blur-3xl" />
         </div>
-        <div className="relative container mx-auto px-4 max-w-5xl py-12">
-          <h1 className="font-display text-4xl font-bold text-white mb-2">Claim Your Listing</h1>
-          <p className="text-white/60">Update your details, manage your info, and get more visibility with Formby visitors.</p>
+        <div className="relative container mx-auto px-4 max-w-6xl py-16 md:py-24">
+          <div className="max-w-3xl">
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">Claim Your Listing</h1>
+            <p className="text-xl text-white/70 leading-relaxed">Update your details, manage your info, and get more visibility with Formby visitors.</p>
+          </div>
         </div>
-        <div className="relative h-6 overflow-hidden">
-          <svg viewBox="0 0 1440 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute bottom-0 w-full" preserveAspectRatio="none">
-            <path d="M0 24L720 8L1440 24V24H0Z" fill="#F7F9F6"/>
+        <div className="relative h-8 overflow-hidden">
+          <svg viewBox="0 0 1440 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute bottom-0 w-full" preserveAspectRatio="none">
+            <path d="M0 32L720 12L1440 32V32H0Z" fill="#F7F9F6"/>
           </svg>
         </div>
-      </div>
+      </section>
 
-      <div className="container mx-auto px-4 max-w-5xl py-12">
+      <div className="container mx-auto px-4 max-w-6xl py-12">
         <div className="grid md:grid-cols-5 gap-8">
 
           {/* Sidebar */}

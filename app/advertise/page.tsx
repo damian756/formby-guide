@@ -67,8 +67,8 @@ export default function AdvertisePage() {
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#C9A96E]/5 rounded-full -translate-y-24 translate-x-24 blur-3xl" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#2E6B3E]/20 rounded-full translate-y-16 -translate-x-16 blur-3xl" />
         </div>
-        <div className="relative container mx-auto px-4 max-w-5xl py-16 md:py-24">
-          <div className="max-w-2xl">
+        <div className="relative container mx-auto px-4 max-w-6xl py-16 md:py-24">
+          <div className="max-w-3xl">
             <p className="text-[#C9A96E] text-xs font-bold uppercase tracking-widest mb-4">For businesses</p>
             <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
               Reach visitors<br />planning Formby
@@ -94,7 +94,7 @@ export default function AdvertisePage() {
       </section>
 
       {/* Stats */}
-      <section className="container mx-auto px-4 max-w-5xl py-16">
+      <section className="container mx-auto px-4 max-w-6xl py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {STATS.map(({ icon: Icon, label, value, sub }) => (
             <div key={label} className="bg-white rounded-2xl border border-[#1C3220]/8 p-6">
@@ -141,7 +141,7 @@ export default function AdvertisePage() {
       </section>
 
       {/* Pricing */}
-      <section className="container mx-auto px-4 max-w-5xl py-16">
+      <section className="container mx-auto px-4 max-w-6xl py-16">
         <div className="max-w-xl mb-10">
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-3">Listing options</h2>
           <p className="text-[#1C3220]/60">Start free. Upgrade when you&apos;re ready.</p>
