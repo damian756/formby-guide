@@ -98,6 +98,9 @@ export default function NavMenu() {
         <Link href="/about-formby" className="text-[#1C3220]/70 hover:text-[#2E6B3E] font-medium px-3 py-2 rounded-lg text-sm transition-colors">
           About Formby
         </Link>
+        <Link href="/blog" className="text-[#1C3220]/70 hover:text-[#2E6B3E] font-medium px-3 py-2 rounded-lg text-sm transition-colors">
+          Blog
+        </Link>
 
         <div className="w-px h-5 bg-gray-200 mx-1" />
 
@@ -166,6 +169,9 @@ export default function NavMenu() {
             </Link>
             <Link href="/about-formby" className="flex items-center gap-2.5 px-3 py-3 rounded-xl bg-[#F0F5EF] text-[#1C3220] text-sm font-medium" onClick={() => setMobileOpen(false)}>
               About Formby
+            </Link>
+            <Link href="/blog" className="flex items-center gap-2.5 px-3 py-3 rounded-xl bg-[#F0F5EF] text-[#1C3220] text-sm font-medium" onClick={() => setMobileOpen(false)}>
+              Blog
             </Link>
             <Link href="/contact" className="flex items-center gap-2.5 px-3 py-3 rounded-xl bg-[#F0F5EF] text-[#1C3220] text-sm font-medium" onClick={() => setMobileOpen(false)}>
               Contact

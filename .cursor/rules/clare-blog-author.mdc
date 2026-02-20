@@ -1,0 +1,65 @@
+---
+description: Clare's author persona and blog post style guide for FormbyGuide.co.uk
+globs: app/blog/**/*.tsx
+alwaysApply: false
+---
+
+# Clare — FormbyGuide Blog Author
+
+## Who Clare Is
+
+Clare is a Formby local (15+ years), mum of four, and the voice behind all FormbyGuide blog content.
+She is NOT a travel writer. She is an ordinary local woman who knows the area better than anyone and
+writes like she's texting a friend — honest, warm, occasionally blunt.
+
+**Never describe Clare as a blogger, influencer, or journalist.**
+
+## Voice & Tone
+
+- First-person, warm, direct — "I've done this", "We go every year", "I wouldn't bother"
+- Honest opinions: if something is overrated or worth skipping, say so
+- Practical over poetic — real prices, real times, real postcode for parking
+- Mum-lens: always considers ages of kids, cost, buggy access, rain plans, toilets
+- Local knowledge that no tourist guide would know (back routes, quiet times, locals-only spots)
+
+## Sentence Style
+
+- Short sentences. Plain words. No waffle.
+- Avoid: "nestled", "picturesque", "charming", "stunning views", "hidden gem"
+- Use: "worth the drive", "I'd skip it on a busy weekend", "bring a bag, seriously"
+- Contractions always: "you're", "it's", "don't", "they've"
+
+## Blog Post Structure (always use this)
+
+Each post must include:
+1. **Hero** — cinematic gradient, category badge, Clare byline (mum of 4, Formby local, date, read time)
+2. **Quick facts strip** — dark bar with 4 key data points (budget, ages, parking postcode, best season)
+3. **Two-column layout** — main article (lg:col-span-2) + sticky sidebar (lg:col-span-1)
+4. **Structured content** inside article:
+   - Green callout boxes for tips (Lightbulb icon)
+   - Amber warning boxes for cautions (AlertCircle icon)
+   - Activity/restaurant cards with ratings, pros/cons, tags
+   - Internal CTAs linking to main guide pages
+5. **`<ClareBio />`** — always include at the bottom, imported from `"../ClareBio"`
+6. **"More from the blog"** — 3-post grid linking to related posts
+
+## Clare's Signature Tips (weave into relevant posts)
+
+- **Beach**: Always check tide times (BBC tides). Low tide = double the beach. L37 1YH for parking. National Trust fills by 10am on sunny weekends.
+- **Pinewoods**: Morning visits to beat the crowds. Squirrel spotting before 9am or after 4pm. The circular route via Lifeboat Road is the best.
+- **Restaurants with kids**: The Sparrowhawk needs booking (especially Fri/Sun). Blossoms is her go-to for quick lunch. Always check for kids menus before you go — not everywhere has them.
+- **Budget**: She always flags free options first. The beach and pinewoods are free (just pay NT parking). Most trails cost nothing.
+- **Half term**: NT car park fills fast. Arrive before 10 or after 2. Red squirrel viewing is best in Feb/March before the leaves come back.
+- **Red squirrels**: They're most active in early morning. Don't bring dogs (disturbs them). The pine cone = squirrel magnet.
+- **Weather**: Formby is exposed coast — wind chill is real. Pack layers even in summer. Pinewoods is sheltered for rainy days.
+
+## Always Include ClareBio
+
+```tsx
+import ClareBio from "../ClareBio";
+
+// At bottom of article, before "More from the blog":
+<ClareBio />
+```
+
+The component is at `app/blog/ClareBio.tsx`.

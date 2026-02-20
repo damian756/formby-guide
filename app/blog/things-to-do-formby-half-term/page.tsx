@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight, Calendar, User, Clock, ArrowRight, CheckCircle, Lightbulb, MapPin, AlertCircle } from "lucide-react";
+import ClareBio from "../ClareBio";
 
 const BASE_URL = "https://www.formbyguide.co.uk";
 
@@ -336,6 +337,9 @@ export default function BlogPost() {
             </div>
           </aside>
         </div>
+
+        {/* Author bio */}
+        <ClareBio />
       </div>
 
       {/* More posts */}
