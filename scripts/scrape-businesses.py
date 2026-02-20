@@ -1,8 +1,14 @@
 #!/usr/bin/env python3
 """
-Scrape Formby businesses using Google Places API.
-Formby is a small town (~3km across) so a single-centre search
-covers the whole area without a grid search.
+Scrape Formby Guide businesses using Google Places API.
+
+Uses multiple search points to cover:
+  - Formby village & inland (4km radius)
+  - Hightown village & beach (2km radius)
+  - Crosby Beach / Another Place / Iron Men (2km radius)
+
+This covers the full Sefton Coast between Formby and Crosby without
+overlapping into Southport to the north or Liverpool to the south.
 
 Usage:
   1. Set GOOGLE_PLACES_API_KEY in .env.local
@@ -26,88 +32,85 @@ if not API_KEY:
     print("Get a key at: https://console.cloud.google.com/apis/credentials")
     exit(1)
 
-# Formby village centre coordinates
-CENTER_LAT = 53.5545
-CENTER_LNG = -3.0716
-# 2.5km covers all of Formby village without pulling in Ainsdale or Hightown
-SEARCH_RADIUS_M = 2500
+# Search points: (label, lat, lng, radius_metres)
+# Covers Formby village → Hightown → Crosby Beach without overlapping
+# Southport (11.2km north) or Liverpool suburbs (>9km south)
+SEARCH_POINTS = [
+    ("Formby village & inland", 53.5545, -3.0716, 4000),
+    ("Hightown village & beach", 53.5195, -3.0680, 2000),
+    ("Crosby Beach / Another Place", 53.4847, -3.0620, 2000),
+]
 
 # Google Places type -> Formby Guide category slug
 CATEGORY_MAP = {
     # Restaurants
-    'restaurant':       'restaurants',
-    'meal_takeaway':    'restaurants',
-    'meal_delivery':    'restaurants',
-    'food':             'restaurants',
+    'restaurant':           'restaurants',
+    'meal_takeaway':        'restaurants',
+    'meal_delivery':        'restaurants',
+    'food':                 'restaurants',
 
     # Cafes
-    'cafe':             'cafes',
-    'bakery':           'cafes',
+    'cafe':                 'cafes',
+    'bakery':               'cafes',
 
     # Pubs & Bars
-    'bar':              'pubs',
-    'night_club':       'pubs',
-    'liquor_store':     'pubs',
+    'bar':                  'pubs',
+    'night_club':           'pubs',
+    'liquor_store':         'pubs',
 
     # Accommodation
-    'lodging':          'accommodation',
-    'hotel':            'accommodation',
-    'bed_and_breakfast':'accommodation',
-    'guest_house':      'accommodation',
-    'motel':            'accommodation',
-    'resort_hotel':     'accommodation',
-    'campground':       'accommodation',
-    'rv_park':          'accommodation',
+    'lodging':              'accommodation',
+    'hotel':                'accommodation',
+    'bed_and_breakfast':    'accommodation',
+    'guest_house':          'accommodation',
+    'motel':                'accommodation',
+    'resort_hotel':         'accommodation',
+    'campground':           'accommodation',
 
     # Activities
-    'bowling_alley':    'activities',
-    'amusement_park':   'activities',
-    'movie_theater':    'activities',
-    'stadium':          'activities',
-    'gym':              'activities',
-    'sports_complex':   'activities',
+    'bowling_alley':        'activities',
+    'amusement_park':       'activities',
+    'movie_theater':        'activities',
+    'gym':                  'activities',
+    'tourist_attraction':   'activities',
+    'museum':               'activities',
+    'art_gallery':          'activities',
 
-    # Nature & Walks (caught mostly by keyword, not type)
-    'park':             'nature-walks',
-    'natural_feature':  'nature-walks',
-    'campground':       'nature-walks',
+    # Nature & Walks
+    'park':                 'nature-walks',
+    'natural_feature':      'nature-walks',
 
     # Beaches
-    'beach':            'beaches',
+    'beach':                'beaches',
 
     # Shopping
-    'store':            'shopping',
-    'shopping_mall':    'shopping',
-    'clothing_store':   'shopping',
-    'book_store':       'shopping',
-    'shoe_store':       'shopping',
-    'jewelry_store':    'shopping',
-    'florist':          'shopping',
-    'gift_shop':        'shopping',
-    'home_goods_store': 'shopping',
-    'furniture_store':  'shopping',
-    'electronics_store':'shopping',
-    'pet_store':        'shopping',
-    'toy_store':        'shopping',
+    'store':                'shopping',
+    'clothing_store':       'shopping',
+    'book_store':           'shopping',
+    'shoe_store':           'shopping',
+    'jewelry_store':        'shopping',
+    'florist':              'shopping',
+    'gift_shop':            'shopping',
+    'home_goods_store':     'shopping',
+    'pet_store':            'shopping',
+    'toy_store':            'shopping',
     'sporting_goods_store': 'shopping',
-    'department_store': 'shopping',
-    'supermarket':      'shopping',
-    'convenience_store':'shopping',
-    'hair_care':        'shopping',
-    'beauty_salon':     'shopping',
-    'spa':              'shopping',
+    'department_store':     'shopping',
+    'supermarket':          'shopping',
+    'convenience_store':    'shopping',
+    'hair_care':            'shopping',
+    'beauty_salon':         'shopping',
+    'spa':                  'shopping',
 }
 
-# All types to search — ordered by priority
+# Types to search at every point
 SEARCH_TYPES = [
-    # High value
     'restaurant',
     'cafe',
     'bar',
     'lodging',
     'meal_takeaway',
     'bakery',
-    # Shopping
     'store',
     'clothing_store',
     'book_store',
@@ -118,14 +121,13 @@ SEARCH_TYPES = [
     'spa',
     'pet_store',
     'sporting_goods_store',
-    # Activities / leisure
     'gym',
     'bowling_alley',
-    'movie_theater',
-    # Nature
+    'tourist_attraction',
+    'museum',
+    'art_gallery',
     'park',
     'beach',
-    # Accommodation extras
     'bed_and_breakfast',
     'guest_house',
 ]
@@ -151,64 +153,69 @@ def search_places(lat, lng, place_type, radius):
         if status == 'ZERO_RESULTS':
             break
         if status not in ('OK', 'ZERO_RESULTS'):
-            print(f"    [{place_type}] API status: {status}")
+            print(f"    API status: {status}")
             break
 
         batch = data.get('results', [])
         results.extend(batch)
 
         next_page_token = data.get('next_page_token')
-        if not next_page_token or page >= 3:  # Max 60 results (3 pages of 20)
+        if not next_page_token or page >= 3:
             break
 
         page += 1
-        time.sleep(2)  # Required delay before using next_page_token
+        time.sleep(2)
         params = {'pagetoken': next_page_token, 'key': API_KEY}
 
     return results
 
 
 def main():
-    print("Formby Business Scraper — Google Places API")
+    print("Formby Guide Business Scraper")
     print("=" * 60)
-    print(f"Centre:        {CENTER_LAT}, {CENTER_LNG}")
-    print(f"Search radius: {SEARCH_RADIUS_M}m")
-    print(f"Types:         {len(SEARCH_TYPES)}")
+    for label, lat, lng, radius in SEARCH_POINTS:
+        print(f"  {label}: {lat}, {lng} @ {radius}m")
+    print(f"  Types: {len(SEARCH_TYPES)}")
     print("=" * 60)
 
     all_businesses = {}  # Deduplicate by place_id
-    api_calls = 0
+    total_api_calls = 0
 
-    for idx, place_type in enumerate(SEARCH_TYPES, 1):
-        print(f"\n[{idx}/{len(SEARCH_TYPES)}] {place_type}...", end=" ", flush=True)
+    for point_idx, (label, lat, lng, radius) in enumerate(SEARCH_POINTS, 1):
+        print(f"\n── Point {point_idx}/{len(SEARCH_POINTS)}: {label} ──")
 
-        places = search_places(CENTER_LAT, CENTER_LNG, place_type, SEARCH_RADIUS_M)
-        api_calls += max(1, len(places) // 20)
+        point_new = 0
+        for idx, place_type in enumerate(SEARCH_TYPES, 1):
+            print(f"  [{idx}/{len(SEARCH_TYPES)}] {place_type}...", end=" ", flush=True)
 
-        new_count = 0
-        for place in places:
-            place_id = place.get('place_id')
-            if not place_id or place_id in all_businesses:
-                continue
+            places = search_places(lat, lng, place_type, radius)
+            total_api_calls += max(1, len(places) // 20)
 
-            category_slug = CATEGORY_MAP.get(place_type, 'activities')
-            all_businesses[place_id] = {
-                'name':        place.get('name', ''),
-                'category':    category_slug,
-                'address':     place.get('vicinity', ''),
-                'postcode':    '',
-                'lat':         place.get('geometry', {}).get('location', {}).get('lat', ''),
-                'lng':         place.get('geometry', {}).get('location', {}).get('lng', ''),
-                'phone':       '',
-                'website':     '',
-                'price_range': str(place.get('price_level', '')),
-            }
-            new_count += 1
+            new_count = 0
+            for place in places:
+                place_id = place.get('place_id')
+                if not place_id or place_id in all_businesses:
+                    continue
 
-        print(f"+{new_count} new | total: {len(all_businesses)}")
+                category_slug = CATEGORY_MAP.get(place_type, 'activities')
+                all_businesses[place_id] = {
+                    'name':        place.get('name', ''),
+                    'category':    category_slug,
+                    'address':     place.get('vicinity', ''),
+                    'postcode':    '',
+                    'lat':         place.get('geometry', {}).get('location', {}).get('lat', ''),
+                    'lng':         place.get('geometry', {}).get('location', {}).get('lng', ''),
+                    'phone':       '',
+                    'website':     '',
+                    'price_range': str(place.get('price_level', '')),
+                }
+                new_count += 1
 
-        # Be polite to the API
-        time.sleep(0.3)
+            print(f"+{new_count} | running total: {len(all_businesses)}")
+            point_new += new_count
+            time.sleep(0.3)
+
+        print(f"  → Point {point_idx} added {point_new} new businesses")
 
     # Write CSV
     output_file = 'businesses.csv'
@@ -223,14 +230,14 @@ def main():
     print(f"\n{'=' * 60}")
     print(f"COMPLETE")
     print(f"  Unique businesses found: {len(all_businesses)}")
-    print(f"  Approximate API calls:   {api_calls}")
-    print(f"  Estimated cost:          ${api_calls * 0.032:.2f}")
+    print(f"  Approximate API calls:   {total_api_calls}")
+    print(f"  Estimated cost:          ${total_api_calls * 0.032:.2f}")
     print(f"  Saved to:                {output_file}")
     print(f"\nNext steps:")
-    print(f"  npm run import-businesses   (import CSV into DB)")
-    print(f"  python scripts/enrich-businesses.py  (fetch full details)")
-    print(f"  python scripts/cleanup-businesses.py (remove non-visitor biz)")
-    print(f"  npm run generate-descriptions        (write SEO descriptions)")
+    print(f"  npm run import-businesses          (import CSV into DB)")
+    print(f"  python scripts/enrich-businesses.py       (fetch full details)")
+    print(f"  python scripts/cleanup-businesses.py      (remove non-visitor biz)")
+    print(f"  npm run generate-descriptions             (write SEO descriptions)")
 
 
 if __name__ == '__main__':
