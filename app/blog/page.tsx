@@ -12,6 +12,15 @@ export const metadata: Metadata = {
     title: "Blog — Local Guides, Tips & Stories from Formby",
     description: "Local insights and guides for Formby. Seasonal tips, local knowledge, and things worth knowing.",
     url: `${BASE_URL}/blog`,
+    type: "website",
+    siteName: "FormbyGuide.co.uk",
+    locale: "en_GB",
+    images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "FormbyGuide.co.uk" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog — Local Guides, Tips & Stories from Formby",
+    description: "Local insights and guides for Formby. Seasonal tips, local knowledge, and things worth knowing.",
   },
 };
 

@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     type: "article",
     siteName: "FormbyGuide.co.uk",
     locale: "en_GB",
+    images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "FormbyGuide.co.uk" }],
   },
   twitter: { card: "summary_large_image", title: "Things to Do in Formby During Half Term", description: "Honest half term guide for Formby families." },
 };
@@ -24,6 +25,26 @@ export const metadata: Metadata = {
 export default function BlogPost() {
   return (
     <div className="min-h-screen bg-[#F7F9F6]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "Things to Do in Formby During Half Term — Family Guide",
+            description: "Planning half term in Formby with the kids? A local mum of four shares what actually works — and what to skip. Real tips for families visiting Formby.",
+            url: "https://www.formbyguide.co.uk/blog/things-to-do-formby-half-term",
+            author: { "@type": "Person", name: "Clare" },
+            publisher: {
+              "@type": "Organization",
+              name: "FormbyGuide.co.uk",
+              url: "https://www.formbyguide.co.uk",
+            },
+            datePublished: "2026-02-20",
+            inLanguage: "en-GB",
+          }),
+        }}
+      />
 
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-100">

@@ -40,6 +40,38 @@ const CATEGORIES = [
 export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "WebSite",
+                "@id": "https://www.formbyguide.co.uk/#website",
+                url: "https://www.formbyguide.co.uk",
+                name: "FormbyGuide.co.uk",
+                description: "Your local guide to Formby — beach, pinewoods, red squirrels, restaurants and things to do on the Sefton Coast.",
+                publisher: { "@id": "https://www.formbyguide.co.uk/#organization" },
+                inLanguage: "en-GB",
+              },
+              {
+                "@type": "Organization",
+                "@id": "https://www.formbyguide.co.uk/#organization",
+                name: "FormbyGuide.co.uk",
+                url: "https://www.formbyguide.co.uk",
+                logo: {
+                  "@type": "ImageObject",
+                  url: "https://www.formbyguide.co.uk/og-default.png",
+                  width: 1200,
+                  height: 630,
+                },
+                sameAs: [],
+              },
+            ],
+          }),
+        }}
+      />
 
       {/* ══════════════════════════════════════════
           HERO — SPLIT LAYOUT (image left, nav right)

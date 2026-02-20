@@ -12,6 +12,15 @@ export const metadata: Metadata = {
     title: "Advertise on FormbyGuide.co.uk",
     description: "Reach visitors planning a day out in Formby. Free listings and featured placement available for local businesses.",
     url: `${BASE_URL}/advertise`,
+    type: "website",
+    siteName: "FormbyGuide.co.uk",
+    locale: "en_GB",
+    images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "FormbyGuide.co.uk" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Advertise on FormbyGuide.co.uk",
+    description: "Reach visitors planning a day out in Formby. Free listings and featured placement available for local businesses.",
   },
 };
 

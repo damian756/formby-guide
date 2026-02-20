@@ -1,10 +1,27 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Shield } from "lucide-react";
 
-export const metadata = {
+const BASE_URL = "https://www.formbyguide.co.uk";
+
+export const metadata: Metadata = {
   title: "Privacy Policy | FormbyGuide.co.uk",
   description: "Privacy Policy for FormbyGuide.co.uk — how we collect, use and protect your personal data in accordance with UK GDPR.",
-  alternates: { canonical: "https://www.formbyguide.co.uk/privacy" },
+  alternates: { canonical: `${BASE_URL}/privacy` },
+  openGraph: {
+    title: "Privacy Policy | FormbyGuide.co.uk",
+    description: "Privacy Policy for FormbyGuide.co.uk — how we collect, use and protect your personal data in accordance with UK GDPR.",
+    url: `${BASE_URL}/privacy`,
+    type: "website",
+    siteName: "FormbyGuide.co.uk",
+    locale: "en_GB",
+    images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "FormbyGuide.co.uk" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy | FormbyGuide.co.uk",
+    description: "Privacy Policy for FormbyGuide.co.uk — how we collect, use and protect your personal data in accordance with UK GDPR.",
+  },
 };
 
 export default function PrivacyPage() {

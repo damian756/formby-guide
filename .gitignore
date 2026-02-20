@@ -49,3 +49,11 @@ enrich-progress.json
 __pycache__/
 *.py[cod]
 *$py.class
+
+.vercel
+check-data.mjs
+check-fsa.mjs
+fix-vercel-env.mjs
+fsa-log.txt
+fsa-progress.json
+enrich-progress.json

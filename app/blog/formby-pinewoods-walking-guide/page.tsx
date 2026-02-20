@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     type: "article",
     siteName: "FormbyGuide.co.uk",
     locale: "en_GB",
+    images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "FormbyGuide.co.uk" }],
   },
   twitter: { card: "summary_large_image", title: "Walking in Formby Pinewoods", description: "Trails, tips and what to bring." },
 };
@@ -60,6 +61,26 @@ const TRAILS = [
 export default function BlogPost() {
   return (
     <div className="min-h-screen bg-[#F7F9F6]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "Walking in Formby Pinewoods — Trail Guide, Tips & What to Bring",
+            description: "Everything you need to walk the Formby Pinewoods. Trail options, terrain advice, what to wear, what to bring, and the local knowledge that makes the difference.",
+            url: "https://www.formbyguide.co.uk/blog/formby-pinewoods-walking-guide",
+            author: { "@type": "Person", name: "Clare" },
+            publisher: {
+              "@type": "Organization",
+              name: "FormbyGuide.co.uk",
+              url: "https://www.formbyguide.co.uk",
+            },
+            datePublished: "2026-02-20",
+            inLanguage: "en-GB",
+          }),
+        }}
+      />
 
       <div className="bg-white border-b border-gray-100">
         <div className="container mx-auto px-4 max-w-5xl py-3">

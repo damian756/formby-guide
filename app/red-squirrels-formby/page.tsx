@@ -16,6 +16,16 @@ export const metadata: Metadata = {
     description:
       "One of the best places in England to see them in the wild. Go early, wear layers, bring binoculars — here's everything you need to know.",
     url: `${BASE_URL}/red-squirrels-formby`,
+    type: "website",
+    siteName: "FormbyGuide.co.uk",
+    locale: "en_GB",
+    images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "FormbyGuide.co.uk" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Red Squirrels in Formby — Where to See Them & What to Expect",
+    description:
+      "One of the best places in England to see them in the wild. Go early, wear layers, bring binoculars — here's everything you need to know.",
   },
 };
 

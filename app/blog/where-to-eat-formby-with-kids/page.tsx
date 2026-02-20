@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     type: "article",
     siteName: "FormbyGuide.co.uk",
     locale: "en_GB",
+    images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "FormbyGuide.co.uk" }],
   },
   twitter: { card: "summary_large_image", title: "Best Restaurants in Formby for Families", description: "Where to actually eat in Formby with kids." },
 };
@@ -63,6 +64,26 @@ const RESTAURANTS = [
 export default function BlogPost() {
   return (
     <div className="min-h-screen bg-[#F7F9F6]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "Best Restaurants in Formby for Families — Honest Review",
+            description: "A local mum of four reviews where to eat in Formby with kids. Honest assessments of family-friendly restaurants, cafes and pubs — not a sponsored round-up.",
+            url: "https://www.formbyguide.co.uk/blog/where-to-eat-formby-with-kids",
+            author: { "@type": "Person", name: "Clare" },
+            publisher: {
+              "@type": "Organization",
+              name: "FormbyGuide.co.uk",
+              url: "https://www.formbyguide.co.uk",
+            },
+            datePublished: "2026-02-20",
+            inLanguage: "en-GB",
+          }),
+        }}
+      />
 
       <div className="bg-white border-b border-gray-100">
         <div className="container mx-auto px-4 max-w-5xl py-3">

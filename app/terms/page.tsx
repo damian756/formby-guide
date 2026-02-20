@@ -1,10 +1,27 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, FileText } from "lucide-react";
 
-export const metadata = {
+const BASE_URL = "https://www.formbyguide.co.uk";
+
+export const metadata: Metadata = {
   title: "Terms & Conditions | FormbyGuide.co.uk",
   description: "Terms and Conditions for use of FormbyGuide.co.uk, including business listing terms.",
-  alternates: { canonical: "https://www.formbyguide.co.uk/terms" },
+  alternates: { canonical: `${BASE_URL}/terms` },
+  openGraph: {
+    title: "Terms & Conditions | FormbyGuide.co.uk",
+    description: "Terms and Conditions for use of FormbyGuide.co.uk, including business listing terms.",
+    url: `${BASE_URL}/terms`,
+    type: "website",
+    siteName: "FormbyGuide.co.uk",
+    locale: "en_GB",
+    images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "FormbyGuide.co.uk" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms & Conditions | FormbyGuide.co.uk",
+    description: "Terms and Conditions for use of FormbyGuide.co.uk, including business listing terms.",
+  },
 };
 
 export default function TermsPage() {

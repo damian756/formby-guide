@@ -16,6 +16,16 @@ export const metadata: Metadata = {
     description:
       "Where is Formby, what&apos;s it like, and why do people visit? A practical, honest guide to the village from someone who lives there.",
     url: `${BASE_URL}/about-formby`,
+    type: "website",
+    siteName: "FormbyGuide.co.uk",
+    locale: "en_GB",
+    images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "FormbyGuide.co.uk" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Formby — Where Is It, What's There & Why Visit",
+    description:
+      "Where is Formby, what&apos;s it like, and why do people visit? A practical, honest guide to the village from someone who lives there.",
   },
 };
 

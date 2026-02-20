@@ -16,6 +16,16 @@ export const metadata: Metadata = {
     description:
       "Postcode, parking prices, dog rules, tide info and what to actually expect. Everything for planning your visit to Formby Beach.",
     url: `${BASE_URL}/formby-beach`,
+    type: "website",
+    siteName: "FormbyGuide.co.uk",
+    locale: "en_GB",
+    images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "FormbyGuide.co.uk" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Formby Beach — Parking, Postcode, Dogs & Everything Else",
+    description:
+      "Postcode, parking prices, dog rules, tide info and what to actually expect. Everything for planning your visit to Formby Beach.",
   },
 };
 

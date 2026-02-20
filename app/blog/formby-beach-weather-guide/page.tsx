@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     type: "article",
     siteName: "FormbyGuide.co.uk",
     locale: "en_GB",
+    images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "FormbyGuide.co.uk" }],
   },
   twitter: { card: "summary_large_image", title: "Formby Beach Weather Guide", description: "When to visit Formby Beach and what to expect." },
 };
@@ -83,6 +84,26 @@ const SEASONS = [
 export default function BlogPost() {
   return (
     <div className="min-h-screen bg-[#F7F9F6]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "Formby Beach Weather Guide — Best Time to Visit",
+            description: "When is the best time to visit Formby Beach? A local's honest seasonal breakdown — including the months to avoid and exactly what to bring in each season.",
+            url: "https://www.formbyguide.co.uk/blog/formby-beach-weather-guide",
+            author: { "@type": "Person", name: "Clare" },
+            publisher: {
+              "@type": "Organization",
+              name: "FormbyGuide.co.uk",
+              url: "https://www.formbyguide.co.uk",
+            },
+            datePublished: "2026-02-20",
+            inLanguage: "en-GB",
+          }),
+        }}
+      />
 
       <div className="bg-white border-b border-gray-100">
         <div className="container mx-auto px-4 max-w-5xl py-3">

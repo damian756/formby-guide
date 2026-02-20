@@ -11,6 +11,15 @@ export const metadata: Metadata = {
     title: "Claim Your Business Listing | FormbyGuide.co.uk",
     description: "Claim your free Formby business listing. Update your details, opening hours, and upgrade for featured placement.",
     url: `${BASE_URL}/claim-listing`,
+    type: "website",
+    siteName: "FormbyGuide.co.uk",
+    locale: "en_GB",
+    images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "FormbyGuide.co.uk" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Claim Your Business Listing | FormbyGuide.co.uk",
+    description: "Claim your free Formby business listing. Update your details, opening hours, and upgrade for featured placement.",
   },
 };
 

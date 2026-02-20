@@ -16,6 +16,16 @@ export const metadata: Metadata = {
     description:
       "Ancient woodland running to the sea. Red squirrels in the canopy, brilliant walks, and light through the pines that's genuinely special.",
     url: `${BASE_URL}/formby-pinewoods`,
+    type: "website",
+    siteName: "FormbyGuide.co.uk",
+    locale: "en_GB",
+    images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "FormbyGuide.co.uk" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Formby Pinewoods — Walks, Wildlife & What to Expect",
+    description:
+      "Ancient woodland running to the sea. Red squirrels in the canopy, brilliant walks, and light through the pines that's genuinely special.",
   },
 };
 
