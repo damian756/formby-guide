@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronRight, Calendar, Clock, ArrowRight, CheckCircle, AlertCircle, X } from "lucide-react";
 import ClareBio from "../ClareBio";
 
@@ -75,12 +76,16 @@ export default function BlogPost() {
             <p className="text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
               Yes, they genuinely live here. Yes, they&apos;re extraordinary. But turn up at 2pm on a busy Saturday and you&apos;ll see nothing. Here&apos;s what visitors don&apos;t know — and what locals do.
             </p>
-            <div className="flex items-center gap-5 text-sm text-white/60 flex-wrap">
+            <div className="flex items-center gap-3 text-sm text-white/60 flex-wrap">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center font-bold text-sm">C</div>
+                <div className="w-8 h-8 rounded-full overflow-hidden ring-1 ring-white/20">
+                  <Image src="/clare.png" alt="Clare" width={32} height={32} className="object-cover w-full h-full" />
+                </div>
                 <span>Clare — Formby local</span>
               </div>
+              <span className="text-white/30">·</span>
               <div className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" /><span>February 12, 2026</span></div>
+              <span className="text-white/30">·</span>
               <div className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5" /><span>5 min read</span></div>
             </div>
           </div>

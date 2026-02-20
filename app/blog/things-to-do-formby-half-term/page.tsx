@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronRight, Calendar, User, Clock, ArrowRight, CheckCircle, Lightbulb, MapPin, AlertCircle } from "lucide-react";
 import ClareBio from "../ClareBio";
 
@@ -77,13 +78,16 @@ export default function BlogPost() {
             <p className="text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
               Four kids. Five days. Limited budget. Here&apos;s what I&apos;ve learned after years of half term survival in Formby — and the things I&apos;d skip next time.
             </p>
-            <div className="flex items-center gap-5 text-sm text-white/60 flex-wrap">
+            <div className="flex items-center gap-3 text-sm text-white/60 flex-wrap">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-[#C9A96E]/20 flex items-center justify-center text-[#C9A96E] font-bold text-sm">C</div>
+                <div className="w-8 h-8 rounded-full overflow-hidden ring-1 ring-white/20">
+                  <Image src="/clare.png" alt="Clare" width={32} height={32} className="object-cover w-full h-full" />
+                </div>
                 <span>Clare — Formby local, mum of 4</span>
               </div>
-              <span>·</span>
+              <span className="text-white/30">·</span>
               <div className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" /><span>February 20, 2026</span></div>
+              <span className="text-white/30">·</span>
               <div className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5" /><span>8 min read</span></div>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronRight, Calendar, Clock, ArrowRight, Sun, CloudRain, Wind, Thermometer, AlertCircle, CheckCircle, MapPin } from "lucide-react";
 import ClareBio from "../ClareBio";
 
@@ -134,12 +135,16 @@ export default function BlogPost() {
             <p className="text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
               Ten years living here. I&apos;ve walked that beach in every season, every weather condition. Here&apos;s the honest breakdown — including the months where staying home with a cuppa is the smarter call.
             </p>
-            <div className="flex items-center gap-5 text-sm text-white/60 flex-wrap">
+            <div className="flex items-center gap-3 text-sm text-white/60 flex-wrap">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white font-bold text-sm">C</div>
+                <div className="w-8 h-8 rounded-full overflow-hidden ring-1 ring-white/20">
+                  <Image src="/clare.png" alt="Clare" width={32} height={32} className="object-cover w-full h-full" />
+                </div>
                 <span>Clare — 10 years in Formby</span>
               </div>
+              <span className="text-white/30">·</span>
               <div className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" /><span>February 18, 2026</span></div>
+              <span className="text-white/30">·</span>
               <div className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5" /><span>6 min read</span></div>
             </div>
           </div>
