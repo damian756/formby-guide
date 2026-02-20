@@ -86,6 +86,16 @@ export default async function CategoryPage({ params, searchParams }: Props) {
           WHERE "categoryId" = ${catId} OR ${catId} = ANY("secondaryCategoryIds")
           ORDER BY name ASC
         `;
+      } else if (sort === "hygiene") {
+        businesses = await prisma.$queryRaw<BrowserBusiness[]>`
+          SELECT slug, name, "shortDescription", description, "listingTier", address, postcode,
+                 rating, "reviewCount", "priceRange", lat, lng
+          FROM "Business"
+          WHERE "categoryId" = ${catId} OR ${catId} = ANY("secondaryCategoryIds")
+          ORDER BY
+            CASE WHEN "hygieneRating" ~ '^[0-9]+$' THEN CAST("hygieneRating" AS INTEGER) ELSE -1 END DESC,
+            (COALESCE(rating, 0) * LOG(COALESCE("reviewCount", 0) + 1)) DESC, name ASC
+        `;
       } else if (sort === "google") {
         businesses = await prisma.$queryRaw<BrowserBusiness[]>`
           SELECT slug, name, "shortDescription", description, "listingTier", address, postcode,
@@ -123,10 +133,12 @@ export default async function CategoryPage({ params, searchParams }: Props) {
     }));
 
   const activeSort = sort || "default";
+  const isFoodCat = ["restaurants", "cafes", "pubs"].includes(category);
   const sortOptions = [
     { key: "default", label: "Best Match" },
     { key: "alpha",   label: "A – Z" },
     { key: "google",  label: "⭐ Google Rating" },
+    ...(isFoodCat ? [{ key: "hygiene", label: "🛡️ Food Safety Rating" }] : []),
   ];
 
   return (
