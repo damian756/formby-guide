@@ -1,8 +1,9 @@
 import { MetadataRoute } from "next";
+import { prisma } from "@/lib/prisma";
 
 const BASE_URL = "https://www.formbyguide.co.uk";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPages = [
     { url: BASE_URL, priority: 1.0, changeFrequency: "weekly" as const },
     { url: `${BASE_URL}/formby-beach`, priority: 0.9, changeFrequency: "monthly" as const },
@@ -31,10 +32,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/terms`, priority: 0.3, changeFrequency: "yearly" as const },
   ];
 
-  return staticPages.map(({ url, priority, changeFrequency }) => ({
-    url,
-    lastModified: new Date(),
-    changeFrequency,
-    priority,
-  }));
+  let businessPages: MetadataRoute.Sitemap = [];
+
+  try {
+    const businesses = await prisma.business.findMany({
+      select: { slug: true, updatedAt: true, category: { select: { slug: true } } },
+    });
+
+    businessPages = businesses.map((b) => ({
+      url: `${BASE_URL}/${b.category.slug}/${b.slug}`,
+      lastModified: b.updatedAt,
+      changeFrequency: "weekly" as const,
+      priority: 0.6,
+    }));
+  } catch {
+    // DB unavailable — return static pages only
+  }
+
+  return [
+    ...staticPages.map(({ url, priority, changeFrequency }) => ({
+      url,
+      lastModified: new Date(),
+      changeFrequency,
+      priority,
+    })),
+    ...businessPages,
+  ];
 }

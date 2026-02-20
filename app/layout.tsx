@@ -171,7 +171,7 @@ function Footer() {
               {[
                 ["List Your Business", "/claim-listing"],
                 ["Advertise With Us", "/advertise"],
-                ["Business Dashboard", "/dashboard"],
+                ["Claim Listing", "/claim-listing"],
                 ["Contact", "/contact"],
                 ["Privacy", "/privacy"],
                 ["Terms", "/terms"],
