@@ -1,12 +1,13 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function ClareBio() {
   return (
     <div className="bg-gradient-to-br from-[#F0F5EF] to-white rounded-2xl border border-[#2E6B3E]/15 p-6 mt-10">
       <div className="flex items-start gap-4">
         {/* Avatar */}
-        <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-[#2E6B3E] to-[#1C3220] flex items-center justify-center text-white text-2xl font-bold shadow-md">
-          C
+        <div className="flex-shrink-0 w-16 h-16 rounded-full overflow-hidden shadow-md ring-2 ring-[#2E6B3E]/20">
+          <Image src="/clare.png" alt="Clare" width={64} height={64} className="object-cover w-full h-full" />
         </div>
 
         <div className="flex-1 min-w-0">
