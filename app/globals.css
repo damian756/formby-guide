@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+:root {
+  --background: #F7F9F6;
+  --foreground: #1C3220;
+  --font-inter: "Inter", sans-serif;
+  --font-playfair: "Playfair Display", serif;
+
+  /* Brand palette — Formby: forest green, sand, sky */
+  --forest:  #1C3220;
+  --green:   #2E6B3E;
+  --sand:    #C9A96E;
+  --sky:     #4A90A4;
+  --cream:   #F7F9F6;
+  --mist:    #E8EDE6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-playfair);
+}
+
+body {
+  background: var(--cream);
+  color: var(--forest);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+.sand-hover:hover { color: var(--sand); }
+
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(28, 50, 32, 0.1);
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #c9a96e44; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--sand); }
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

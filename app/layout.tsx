@@ -1,0 +1,194 @@
+import type { Metadata } from "next";
+import { Playfair_Display, Inter } from "next/font/google";
+import "./globals.css";
+import Link from "next/link";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const BASE_URL = "https://www.formbyguide.co.uk";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
+
+  title: {
+    default: "FormbyGuide.co.uk — Your Complete Guide to Formby",
+    template: "%s | FormbyGuide.co.uk",
+  },
+  description:
+    "Discover the best restaurants, beaches, walks and things to do in Formby. Your local guide to the National Trust pinewoods, red squirrels and the Sefton Coast.",
+  keywords:
+    "Formby, things to do Formby, Formby beach, red squirrels Formby, National Trust Formby, Formby pinewoods, restaurants Formby, Formby guide",
+  authors: [{ name: "Churchtown Media", url: "https://churchtownmedia.co.uk" }],
+  creator: "Churchtown Media",
+  publisher: "FormbyGuide.co.uk",
+
+  alternates: {
+    canonical: BASE_URL,
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    url: BASE_URL,
+    siteName: "FormbyGuide.co.uk",
+    title: "FormbyGuide.co.uk — Your Complete Guide to Formby",
+    description:
+      "Discover the best restaurants, beaches, walks and things to do in Formby. Red squirrels, pinewoods and the Sefton Coast.",
+    images: [
+      {
+        url: `${BASE_URL}/og-default.png`,
+        width: 1200,
+        height: 630,
+        alt: "FormbyGuide.co.uk — Discover Formby",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "FormbyGuide.co.uk — Your Complete Guide to Formby",
+    description: "Discover the best restaurants, beaches, walks and things to do in Formby.",
+    images: [`${BASE_URL}/og-default.png`],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large", "max-snippet": -1 },
+  },
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return (
+    <html lang="en">
+      <body className={`${playfair.variable} ${inter.variable} font-sans antialiased bg-[#F7F9F6]`}>
+        <Navigation />
+        <main>{children}</main>
+        <Footer />
+      </body>
+    </html>
+  );
+}
+
+function Navigation() {
+  return (
+    <nav className="relative bg-white/95 backdrop-blur-sm border-b border-[#1C3220]/10 sticky top-0 z-50 shadow-sm">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="flex items-center justify-between h-16">
+          <Link href="/" className="flex items-center gap-2 flex-shrink-0 group">
+            <span className="font-display text-xl font-bold text-[#1C3220] group-hover:text-[#2E6B3E] transition-colors">
+              Formby<span className="text-[#2E6B3E]">Guide</span>
+            </span>
+            <span className="hidden sm:block text-xs text-gray-400 font-light tracking-widest uppercase mt-0.5">.co.uk</span>
+          </Link>
+
+          <div className="hidden md:flex items-center gap-6 text-sm font-medium">
+            {[
+              ["Things To Do", "/things-to-do"],
+              ["Formby Beach", "/formby-beach"],
+              ["Red Squirrels", "/red-squirrels-formby"],
+              ["Pinewoods", "/formby-pinewoods"],
+              ["Restaurants", "/restaurants"],
+              ["About Formby", "/about-formby"],
+            ].map(([label, href]) => (
+              <Link key={href} href={href} className="text-[#1C3220]/70 hover:text-[#2E6B3E] transition-colors">
+                {label}
+              </Link>
+            ))}
+          </div>
+
+          <Link
+            href="/claim-listing"
+            className="hidden sm:block text-sm font-medium bg-[#2E6B3E] text-white px-4 py-2 rounded-lg hover:bg-[#1C3220] transition-colors"
+          >
+            List Your Business
+          </Link>
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="bg-[#1C3220] text-white/80">
+      <div className="h-1 bg-gradient-to-r from-[#C9A96E] via-[#E8C87A] to-[#C9A96E]" />
+
+      <div className="container mx-auto px-4 py-14 max-w-7xl">
+        <div className="grid md:grid-cols-4 gap-10 mb-12">
+          <div className="md:col-span-2">
+            <div className="font-display text-2xl font-bold text-white mb-3">
+              Formby<span className="text-[#C9A96E]">Guide</span>
+              <span className="text-white/40 text-sm font-normal ml-1">.co.uk</span>
+            </div>
+            <p className="text-sm leading-relaxed text-white/60 mb-4 max-w-xs">
+              Your local guide to Formby — beach, pinewoods, red squirrels, and the best places to eat and explore on the Sefton Coast.
+            </p>
+            <a href="https://churchtownmedia.co.uk" className="text-xs text-[#C9A96E] hover:text-[#E8C87A] transition">
+              Built by Churchtown Media ↗
+            </a>
+          </div>
+
+          <div>
+            <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Explore</h3>
+            <ul className="space-y-2.5 text-sm">
+              {[
+                ["Things To Do", "/things-to-do"],
+                ["Formby Beach", "/formby-beach"],
+                ["Red Squirrels", "/red-squirrels-formby"],
+                ["Pinewoods", "/formby-pinewoods"],
+                ["About Formby", "/about-formby"],
+                ["Restaurants", "/restaurants"],
+                ["Pubs & Bars", "/pubs"],
+                ["Cafes", "/cafes"],
+              ].map(([label, href]) => (
+                <li key={href}>
+                  <Link href={href} className="text-white/60 hover:text-[#C9A96E] transition">{label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">For Business</h3>
+            <ul className="space-y-2.5 text-sm">
+              {[
+                ["List Your Business", "/claim-listing"],
+                ["Advertise With Us", "/advertise"],
+                ["Business Dashboard", "/dashboard"],
+                ["The Open 2026", "/the-open-2026"],
+                ["Contact", "/contact"],
+                ["Privacy", "/privacy"],
+                ["Terms", "/terms"],
+              ].map(([label, href]) => (
+                <li key={href}>
+                  <Link href={href} className="text-white/60 hover:text-[#C9A96E] transition">{label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40">
+          <p>&copy; 2026 FormbyGuide.co.uk — All rights reserved.</p>
+          <div className="flex gap-5">
+            <Link href="/privacy" className="hover:text-white/70 transition">Privacy</Link>
+            <Link href="/terms" className="hover:text-white/70 transition">Terms</Link>
+            <Link href="/contact" className="hover:text-white/70 transition">Contact</Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
