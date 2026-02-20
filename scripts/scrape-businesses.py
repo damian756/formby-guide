@@ -182,7 +182,7 @@ def main():
     total_api_calls = 0
 
     for point_idx, (label, lat, lng, radius) in enumerate(SEARCH_POINTS, 1):
-        print(f"\n── Point {point_idx}/{len(SEARCH_POINTS)}: {label} ──")
+        print(f"\n-- Point {point_idx}/{len(SEARCH_POINTS)}: {label} --")
 
         point_new = 0
         for idx, place_type in enumerate(SEARCH_TYPES, 1):
@@ -215,7 +215,7 @@ def main():
             point_new += new_count
             time.sleep(0.3)
 
-        print(f"  → Point {point_idx} added {point_new} new businesses")
+        print(f"  >> Point {point_idx} added {point_new} new businesses")
 
     # Write CSV
     output_file = 'businesses.csv'
