@@ -86,11 +86,14 @@ export default function NavMenu() {
 
         <div className="w-px h-5 bg-gray-200 mx-1" />
 
+        <Link href="/formby-beach" className="text-[#1C3220]/70 hover:text-[#2E6B3E] font-medium px-3 py-2 rounded-lg text-sm transition-colors">
+          Formby Beach
+        </Link>
+        <Link href="/red-squirrels-formby" className="text-[#1C3220]/70 hover:text-[#2E6B3E] font-medium px-3 py-2 rounded-lg text-sm transition-colors">
+          Red Squirrels
+        </Link>
         <Link href="/formby-pinewoods" className="text-[#1C3220]/70 hover:text-[#2E6B3E] font-medium px-3 py-2 rounded-lg text-sm transition-colors">
           Pinewoods
-        </Link>
-        <Link href="/blog" className="text-[#1C3220]/70 hover:text-[#2E6B3E] font-medium px-3 py-2 rounded-lg text-sm transition-colors">
-          Blog
         </Link>
         <Link href="/about-formby" className="text-[#1C3220]/70 hover:text-[#2E6B3E] font-medium px-3 py-2 rounded-lg text-sm transition-colors">
           About Formby
@@ -152,6 +155,15 @@ export default function NavMenu() {
           </div>
 
           <div className="border-t border-gray-100 pt-4 mb-4 space-y-1">
+            <Link href="/formby-beach" className="flex items-center gap-2.5 px-3 py-3 rounded-xl bg-[#F0F5EF] text-[#1C3220] text-sm font-medium" onClick={() => setMobileOpen(false)}>
+              Formby Beach
+            </Link>
+            <Link href="/red-squirrels-formby" className="flex items-center gap-2.5 px-3 py-3 rounded-xl bg-[#F0F5EF] text-[#1C3220] text-sm font-medium" onClick={() => setMobileOpen(false)}>
+              Red Squirrels
+            </Link>
+            <Link href="/formby-pinewoods" className="flex items-center gap-2.5 px-3 py-3 rounded-xl bg-[#F0F5EF] text-[#1C3220] text-sm font-medium" onClick={() => setMobileOpen(false)}>
+              Pinewoods
+            </Link>
             <Link href="/about-formby" className="flex items-center gap-2.5 px-3 py-3 rounded-xl bg-[#F0F5EF] text-[#1C3220] text-sm font-medium" onClick={() => setMobileOpen(false)}>
               About Formby
             </Link>
