@@ -24,6 +24,7 @@ export type BrowserBusiness = {
   priceRange: string | null;
   lat: number | null;
   lng: number | null;
+  hygieneRating: string | null;
 };
 
 type SortOption = { key: string; label: string };
@@ -298,6 +299,12 @@ export default function CategoryBrowser({
                             ({b.reviewCount >= 1000 ? `${(b.reviewCount / 1000).toFixed(1)}k` : b.reviewCount})
                           </span>
                         )}
+                      </span>
+                    ) : null}
+
+                    {b.hygieneRating ? (
+                      <span className="flex items-center gap-1 bg-green-50 border border-green-200 text-green-700 text-xs font-bold px-2.5 py-1 rounded-full">
+                        🛡️ FSA {b.hygieneRating}
                       </span>
                     ) : null}
 

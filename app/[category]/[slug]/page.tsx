@@ -598,6 +598,25 @@ export default async function BusinessPage({ params }: Props) {
               </div>
             </div>
           </div>
+
+          {/* Map section */}
+          {mapSrc && (
+            <div className="mt-12">
+              <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100">
+                <div className="h-96 w-full">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    allowFullScreen
+                    referrerPolicy="no-referrer-when-downgrade"
+                    src={mapSrc}
+                  />
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </>

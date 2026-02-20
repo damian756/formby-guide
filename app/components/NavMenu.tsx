@@ -10,9 +10,6 @@ import {
 
 const NATURE_LINKS = [
   { href: "/things-to-do",           label: "Things To Do — Full Guide", icon: Compass,  color: "text-[#2E6B3E]" },
-  { href: "/formby-beach",           label: "Formby Beach",              icon: Waves,    color: "text-sky-500" },
-  { href: "/red-squirrels-formby",   label: "Red Squirrels",             icon: Squirrel, color: "text-amber-600" },
-  { href: "/formby-pinewoods",       label: "Pinewoods",                 icon: Trees,    color: "text-[#2E6B3E]" },
 ];
 
 const BUSINESS_CATEGORIES = [
@@ -89,11 +86,8 @@ export default function NavMenu() {
 
         <div className="w-px h-5 bg-gray-200 mx-1" />
 
-        <Link href="/formby-beach" className="text-[#1C3220]/70 hover:text-[#2E6B3E] font-medium px-3 py-2 rounded-lg text-sm transition-colors">
-          Formby Beach
-        </Link>
-        <Link href="/red-squirrels-formby" className="text-[#1C3220]/70 hover:text-[#2E6B3E] font-medium px-3 py-2 rounded-lg text-sm transition-colors">
-          Red Squirrels
+        <Link href="/formby-pinewoods" className="text-[#1C3220]/70 hover:text-[#2E6B3E] font-medium px-3 py-2 rounded-lg text-sm transition-colors">
+          Pinewoods
         </Link>
         <Link href="/about-formby" className="text-[#1C3220]/70 hover:text-[#2E6B3E] font-medium px-3 py-2 rounded-lg text-sm transition-colors">
           About Formby
