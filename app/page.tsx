@@ -4,15 +4,25 @@ import { TreePine, Waves, Utensils, Coffee, Beer, ShoppingBag, Bed, Bike, Chevro
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "FormbyGuide.co.uk — Your Complete Guide to Formby",
+  title: "FormbyGuide.co.uk — Your Local Guide to Formby",
   description:
-    "Discover the best restaurants, beaches, walks and things to do in Formby. Your local guide to the National Trust pinewoods, red squirrels and the Sefton Coast.",
+    "Your definitive guide to Formby — beach, pinewoods, red squirrels, restaurants and things to do on the Sefton Coast. Written by locals, for visitors and residents.",
+  keywords: "Formby, Formby Beach, Formby pinewoods, red squirrels Formby, things to do Formby, restaurants Formby, Sefton Coast",
   alternates: { canonical: "https://www.formbyguide.co.uk" },
   openGraph: {
-    title: "FormbyGuide.co.uk — Your Complete Guide to Formby",
-    description: "Discover the best restaurants, beaches, walks and things to do in Formby.",
+    title: "FormbyGuide.co.uk — Your Local Guide to Formby",
+    description: "Your definitive guide to Formby — beach, pinewoods, red squirrels and the best places to eat on the Sefton Coast.",
     url: "https://www.formbyguide.co.uk",
-    images: [{ url: "https://www.formbyguide.co.uk/formby-squirrel-hero.webp" }],
+    type: "website",
+    siteName: "FormbyGuide.co.uk",
+    locale: "en_GB",
+    images: [{ url: "https://www.formbyguide.co.uk/formby-squirrel-hero.webp", width: 1200, height: 630, alt: "Red squirrel at Formby National Trust Reserve" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FormbyGuide.co.uk — Your Local Guide to Formby",
+    description: "Beach, pinewoods, red squirrels and the best places to eat in Formby.",
+    images: ["https://www.formbyguide.co.uk/formby-squirrel-hero.webp"],
   },
 };
 
@@ -291,6 +301,64 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════
+          BLOG — LATEST POSTS
+      ══════════════════════════════════════════ */}
+      <section className="container mx-auto px-4 max-w-7xl py-14">
+        <div className="flex items-end justify-between mb-8">
+          <div>
+            <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-1">Local guides & stories</h2>
+            <p className="text-[#1C3220]/50 text-sm">Written by locals, for visitors and residents.</p>
+          </div>
+          <Link href="/blog" className="text-sm font-medium text-[#2E6B3E] hover:text-[#1C3220] transition-colors hidden sm:block">
+            All posts →
+          </Link>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {[
+            {
+              title: "Half Term in Formby — What Actually Works",
+              excerpt: "Four kids, five days, limited budget. Honest tips from someone who&apos;s done it many times.",
+              cat: "Family",
+              gradient: "from-[#1C3220] to-[#2E6B3E]",
+              slug: "things-to-do-formby-half-term",
+            },
+            {
+              title: "How to Actually See Red Squirrels",
+              excerpt: "Yes, they live here. But turn up at 2pm on a Saturday and you&apos;ll see nothing. Here&apos;s what locals know.",
+              cat: "Wildlife",
+              gradient: "from-[#6B4020] to-[#A8764A]",
+              slug: "red-squirrels-formby-spotting-guide",
+            },
+            {
+              title: "Walking the Formby Pinewoods",
+              excerpt: "Trail options, what to wear, and the terrain mistake most visitors make on their first visit.",
+              cat: "Walks",
+              gradient: "from-[#1A5C3A] to-[#2E8B5A]",
+              slug: "formby-pinewoods-walking-guide",
+            },
+          ].map((post) => (
+            <Link
+              key={post.slug}
+              href={`/blog/${post.slug}`}
+              className="group flex flex-col bg-white rounded-2xl overflow-hidden border border-[#1C3220]/8 card-hover hover:border-[#2E6B3E]/30 transition-all"
+            >
+              <div className={`h-32 w-full bg-gradient-to-br ${post.gradient}`} />
+              <div className="p-5 flex flex-col flex-1">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[#2E6B3E] mb-2">{post.cat}</span>
+                <h3 className="font-display font-bold text-[#1C3220] text-sm leading-snug group-hover:text-[#2E6B3E] transition-colors mb-2 flex-1">
+                  {post.title}
+                </h3>
+                <p className="text-xs text-[#1C3220]/50 leading-relaxed line-clamp-2">{post.excerpt}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+        <div className="mt-5 sm:hidden text-center">
+          <Link href="/blog" className="text-sm text-[#2E6B3E] font-medium">Read all posts →</Link>
         </div>
       </section>
 

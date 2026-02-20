@@ -1,219 +1,311 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ChevronRight, Calendar, User, Clock, ArrowRight } from "lucide-react";
+import { ChevronRight, Calendar, Clock, ArrowRight, CheckCircle, AlertCircle, MapPin, TreePine } from "lucide-react";
 
 const BASE_URL = "https://www.formbyguide.co.uk";
 
 export const metadata: Metadata = {
-  title: "Walking in Formby Pinewoods — Trails, Tips & What to Bring | FormbyGuide",
-  description: "The Pinewoods are gorgeous, but come unprepared and you'll be miserable. Here's everything a local has learned about walking the Pinewoods.",
+  title: "Walking in Formby Pinewoods — Trail Guide, Tips & What to Bring | FormbyGuide",
+  description: "Everything you need to walk the Formby Pinewoods. Trail options, terrain advice, what to wear, what to bring, and the local knowledge that makes the difference.",
+  keywords: "Formby Pinewoods walking, Formby Pinewoods trails, walking Formby, National Trust Formby walk, Formby woodland walk",
   alternates: { canonical: `${BASE_URL}/blog/formby-pinewoods-walking-guide` },
   openGraph: {
-    title: "Walking in Formby Pinewoods — Trails, Tips & What to Bring",
-    description: "Complete guide to walking Formby Pinewoods from a local.",
+    title: "Walking in Formby Pinewoods — Trail Guide & Local Tips",
+    description: "Complete guide to walking Formby Pinewoods from a local who goes every week.",
     url: `${BASE_URL}/blog/formby-pinewoods-walking-guide`,
+    type: "article",
+    siteName: "FormbyGuide.co.uk",
+    locale: "en_GB",
   },
+  twitter: { card: "summary_large_image", title: "Walking in Formby Pinewoods", description: "Trails, tips and what to bring." },
 };
+
+const TRAILS = [
+  {
+    name: "The Squirrel Trail",
+    duration: "45–60 min",
+    difficulty: "Easy",
+    distance: "~2km",
+    color: "border-green-200 bg-green-50",
+    badge: "Best for families",
+    badgeColor: "bg-[#2E6B3E] text-white",
+    desc: "The main circular trail through the core pinewood. Well-marked, mostly flat, designed to pass through areas of high squirrel activity. Perfect for families and first-time visitors.",
+    highlights: ["Designated squirrel spotting areas", "Interpretation boards throughout", "Mostly firm underfoot"],
+  },
+  {
+    name: "The Coast & Pines Route",
+    duration: "2–2.5 hours",
+    difficulty: "Moderate",
+    distance: "~5km",
+    color: "border-blue-200 bg-blue-50",
+    badge: "Best views",
+    badgeColor: "bg-blue-600 text-white",
+    desc: "Extends the Squirrel Trail through the dune system to the beach and back. Sandy terrain through the dunes requires more effort. Rewarded with sea views and a proper walk.",
+    highlights: ["Beach access included", "Dune system walk", "Sea views on clear days", "Combines woodland and coast"],
+  },
+  {
+    name: "The Extended Pinewood Loop",
+    duration: "3+ hours",
+    difficulty: "Moderate",
+    distance: "~8km",
+    color: "border-amber-200 bg-amber-50",
+    badge: "Best for walkers",
+    badgeColor: "bg-amber-600 text-white",
+    desc: "Uses the full extent of the trail network. Takes in quieter sections of the woodland that most visitors never reach. Download the map offline — signal can be patchy in the deeper woodland.",
+    highlights: ["Quieter, less visited sections", "Most varied terrain", "Best for photography", "Proper navigation needed"],
+  },
+];
 
 export default function BlogPost() {
   return (
     <div className="min-h-screen bg-[#F7F9F6]">
-      {/* Breadcrumb */}
-      <div className="border-b border-gray-200 bg-white">
-        <div className="container mx-auto px-4 max-w-5xl py-4">
-          <nav className="text-sm text-gray-400 flex items-center gap-1 flex-wrap">
+
+      <div className="bg-white border-b border-gray-100">
+        <div className="container mx-auto px-4 max-w-5xl py-3">
+          <nav className="text-sm text-gray-400 flex items-center gap-1.5 flex-wrap">
             <Link href="/" className="hover:text-[#2E6B3E] transition">Home</Link>
             <ChevronRight className="w-3 h-3" />
             <Link href="/blog" className="hover:text-[#2E6B3E] transition">Blog</Link>
             <ChevronRight className="w-3 h-3" />
-            <span className="text-[#1C3220] font-medium">Walking in Formby Pinewoods</span>
+            <span className="text-[#1C3220] font-medium">Pinewoods Walking Guide</span>
           </nav>
         </div>
       </div>
 
-      {/* Hero section */}
-      <section
-        className="bg-gradient-to-br from-[#1A5C3A] to-[#2E8B5A] text-white py-16 md:py-24"
-      >
-        <div className="container mx-auto px-4 max-w-5xl">
+      {/* Hero */}
+      <section className="bg-gradient-to-br from-[#1A5C3A] via-[#1C3220] to-[#2E6B3E] text-white relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#C9A96E]/10 rounded-full -translate-y-24 translate-x-24 blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full translate-y-16 -translate-x-16 blur-3xl" />
+        </div>
+        <div className="relative container mx-auto px-4 max-w-5xl py-16 md:py-24">
           <div className="max-w-3xl">
-            <span className="text-[#C9A96E] text-xs font-bold uppercase tracking-wider">Walks</span>
-            <h1 className="font-display text-4xl md:text-5xl font-bold mb-4 leading-tight mt-2">
-              Walking in Formby Pinewoods
+            <div className="inline-block bg-white/10 border border-white/20 text-white/80 text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-5">
+              Walks · Formby Pinewoods
+            </div>
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight">
+              Walking the Formby<br />
+              <span className="text-[#C9A96E]">Pinewoods</span>
             </h1>
-            <p className="text-lg text-white/80 mb-6 leading-relaxed">
-              Complete guide to trails, tips, and what to actually bring. The Pinewoods are gorgeous, but come unprepared and you'll be miserable.
+            <p className="text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
+              The Pinewoods are genuinely one of the best things about living here. Ancient coastal woodland, red squirrels, dune systems and sea views — all within walking distance of Formby station. Here&apos;s how to make the most of it.
             </p>
-
-            <div className="flex items-center gap-4 text-sm text-white/70 flex-wrap">
+            <div className="flex items-center gap-5 text-sm text-white/60 flex-wrap">
               <div className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                By Clare
+                <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center font-bold text-sm">C</div>
+                <span>Clare — walks here weekly</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                February 10, 2026
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                6 min read
-              </div>
+              <div className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" /><span>February 10, 2026</span></div>
+              <div className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5" /><span>6 min read</span></div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Content */}
-      <article className="container mx-auto px-4 max-w-3xl py-16">
-        <div className="prose prose-lg max-w-none text-[#1C3220]">
-          <p>
-            Formby Pinewoods are genuinely one of the best things about living here. Miles of woodland, relatively quiet (especially weekday mornings), and it feels like actual proper forest even though you're basically ten minutes from Liverpool.
-          </p>
-
-          <p>
-            But here's the thing: if you don't know what you're doing, the Pinewoods can be a bit miserable. The terrain isn't gentle forest paths. It's sandy and uneven. You need decent shoes. You need to know what to bring. And you need to actually plan a route, not just wander and hope.
-          </p>
-
-          <p>
-            Here's what I've learned from about a hundred walks there.
-          </p>
-
-          <h2>The Basic Facts</h2>
-
-          <p>
-            The Pinewoods are managed by the National Trust. There are designated trails. There's a car park with facilities. There's a visitor centre that's actually good.
-          </p>
-
-          <p>
-            It's not vast, but it's substantial enough that you can lose a few hours without it feeling rushed. And it's genuinely beautiful. Proper woodland. Quiet. The kind of place that reminds you that nature exists even though you're essentially in a suburb.
-          </p>
-
-          <h2>What to Wear</h2>
-
-          <p>
-            This is crucial. Not gym shoes. Proper walking shoes or boots. The terrain is sandy and uneven. Your fancy trainers will be destroyed and you'll probably twist an ankle.
-          </p>
-
-          <p>
-            Wear trousers or long socks. Not because of the walking, but because of the bugs. Midges, sand flies, all sorts of tiny things that live in the Pinewoods and will bite your legs if they get the chance.
-          </p>
-
-          <p>
-            Layer up, even in summer. It's cooler under the trees. And you'll warm up quickly if you're walking at pace.
-          </p>
-
-          <h2>What to Bring</h2>
-
-          <p>
-            Water. So much water. More than you think you need. The woodland isn't particularly hot, but you're walking, and sand is basically asking your body to dehydrate.
-          </p>
-
-          <p>
-            A small backpack. You probably don't need much, but having space for water, a jacket, and maybe a snack means you're prepared for almost anything.
-          </p>
-
-          <p>
-            A map or phone with the trails downloaded. Don't rely on your phone signal. There are trails, but they're not always super obvious, especially if you're trying to cut across instead of following the main paths.
-          </p>
-
-          <p>
-            Bug spray if you're bothered by insects. Not essential, but useful if you're sensitive to bites.
-          </p>
-
-          <h2>The Trails</h2>
-
-          <p>
-            There are designated trails of various lengths. The shortest is about 30 minutes. The longest is a few hours. There are also connecting trails that let you build your own route.
-          </p>
-
-          <p>
-            For families with littler kids, the shorter trails are absolutely fine. You're not trying to complete a marathon. You're trying to enjoy a walk in genuinely nice woodland.
-          </p>
-
-          <p>
-            For a decent morning walk, I'd do about 90 minutes. It gives you time to actually slow down, maybe see some wildlife, and still get back for lunch.
-          </p>
-
-          <h2>When to Go</h2>
-
-          <p>
-            Spring and autumn are genuinely the best. The light is lovely, it's not too hot, everything's growing or changing or dying in that beautiful autumn way.
-          </p>
-
-          <p>
-            Summer is busier and can be a bit close under the trees. Winter is fine if you're properly dressed, but it's grey and the daylight runs out early.
-          </p>
-
-          <p>
-            Midweek is quieter. If you can do a walk on a Wednesday morning, do it. Saturday afternoons are rammed with people and their dogs and it loses something of that peaceful woodland feeling.
-          </p>
-
-          <h2>Wildlife and Squirrels</h2>
-
-          <p>
-            You might see red squirrels. You might not. Go early, be quiet, manage your expectations. Other wildlife: deer, rabbits, various birds. It's genuinely good for wildlife watching if you're patient.
-          </p>
-
-          <p>
-            There are dog walkers, which is fine. The Pinewoods are well-used. But it's managed and it's not chaotic.
-          </p>
-
-          <h2>The Bottom Line</h2>
-
-          <p>
-            Walking in Formby Pinewoods is genuinely one of the best things to do locally. It's free (car park is £2 or something minimal if you're not a National Trust member). It's beautiful. And it's the kind of walk that reminds you why it's nice to live near actual woodland.
-          </p>
-
-          <p>
-            Just bring proper shoes. Seriously. Your feet will thank you.
-          </p>
-
-          <hr className="my-12" />
-
-          <div className="bg-[#E8EDE6] rounded-2xl p-8 not-prose">
-            <p className="font-semibold text-[#1C3220] mb-3">Explore Formby Pinewoods</p>
-            <p className="text-sm text-[#1C3220]/70 mb-4">
-              Get the full guide with facilities, parking info, and practical details.
-            </p>
-            <Link
-              href="/formby-pinewoods"
-              className="inline-flex items-center gap-2 bg-[#2E6B3E] hover:bg-[#1C3220] text-white px-4 py-2.5 rounded-full font-semibold text-sm transition"
-            >
-              Pinewoods Guide <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
+      {/* Facts strip */}
+      <div className="bg-[#1C3220] border-b border-white/10">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
+            {[
+              { label: "Managed by", value: "National Trust" },
+              { label: "Parking", value: "L37 1YH" },
+              { label: "Shortest trail", value: "45 minutes" },
+              { label: "Entry", value: "Free (NT members) / £" },
+            ].map(({ label, value }) => (
+              <div key={label} className="px-5 py-4 text-center">
+                <div className="text-[#C9A96E] font-bold text-sm">{value}</div>
+                <div className="text-white/40 text-xs uppercase tracking-wider mt-0.5">{label}</div>
+              </div>
+            ))}
           </div>
         </div>
-      </article>
+      </div>
 
-      {/* More blog posts */}
+      <div className="container mx-auto px-4 max-w-5xl py-16">
+        <div className="grid lg:grid-cols-3 gap-12">
+
+          <article className="lg:col-span-2">
+            <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 prose-p:leading-relaxed prose-strong:text-[#1C3220] max-w-none mb-10">
+              <p className="lead text-xl text-gray-600 leading-relaxed">
+                Formby Pinewoods is remarkable. A coastal plantation of Scots and Corsican pine that creates its own microclimate — warmer, quieter, and genuinely otherworldly compared to the exposed beach just metres away.
+              </p>
+              <p>
+                I walk here at least once a week. Here&apos;s what I&apos;ve learned that the trail maps don&apos;t tell you.
+              </p>
+            </div>
+
+            {/* Terrain warning */}
+            <div className="not-prose bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-10">
+              <div className="flex items-start gap-3">
+                <AlertCircle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-bold text-amber-900 mb-1">What the brochure doesn&apos;t tell you about the terrain</p>
+                  <p className="text-amber-800 text-sm leading-relaxed">
+                    The Pinewoods are sandy. Not &quot;a bit sandy&quot; — genuinely sandy. Trainers get filled with sand within ten minutes on the dune sections. Bring proper walking shoes or wellies. Your favourite white Nikes will not thank you.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 max-w-none">
+              <h2>The Three Trail Options</h2>
+            </div>
+
+            {/* Trail cards */}
+            <div className="not-prose space-y-5 my-6 mb-12">
+              {TRAILS.map((t) => (
+                <div key={t.name} className={`rounded-2xl border overflow-hidden ${t.color}`}>
+                  <div className="px-6 pt-5 pb-4">
+                    <div className="flex items-start justify-between gap-3 flex-wrap mb-3">
+                      <div className="flex items-center gap-3">
+                        <TreePine className="w-6 h-6 text-[#2E6B3E]" />
+                        <div>
+                          <h3 className="font-display text-lg font-bold text-[#1C3220]">{t.name}</h3>
+                          <div className="flex items-center gap-3 mt-0.5">
+                            <span className="text-xs text-gray-500">{t.distance}</span>
+                            <span className="text-xs text-gray-400">·</span>
+                            <span className="text-xs text-gray-500">{t.duration}</span>
+                            <span className="text-xs text-gray-400">·</span>
+                            <span className="text-xs text-gray-500">{t.difficulty}</span>
+                          </div>
+                        </div>
+                      </div>
+                      <span className={`text-xs font-bold px-3 py-1.5 rounded-full ${t.badgeColor}`}>{t.badge}</span>
+                    </div>
+                    <p className="text-gray-700 text-sm leading-relaxed mb-3">{t.desc}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {t.highlights.map(h => (
+                        <span key={h} className="flex items-center gap-1 text-xs bg-white/60 text-[#1C3220] px-2.5 py-1 rounded-full">
+                          <CheckCircle className="w-3 h-3 text-[#2E6B3E]" />{h}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* What to bring */}
+            <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 max-w-none">
+              <h2>What to Bring — The Full List</h2>
+            </div>
+
+            <div className="not-prose grid md:grid-cols-2 gap-4 my-6 mb-12">
+              {[
+                { category: "Essential", color: "bg-[#E8EDE6] border-[#2E6B3E]/20", items: ["Walking shoes or wellies (not trainers)", "Water — more than you think", "Snacks if going over 90 mins", "A layering jacket"], },
+                { category: "Strongly recommended", color: "bg-blue-50 border-blue-200", items: ["Binoculars for squirrel spotting", "Downloaded offline map (signal patchy)", "Insect repellent May–September", "Change of socks — just trust me"], },
+                { category: "With kids", color: "bg-amber-50 border-amber-200", items: ["Snacks and more snacks", "Small backpack they can carry themselves", "Wellies are non-negotiable", "Something to identify wildlife"], },
+                { category: "Leave at home", color: "bg-red-50 border-red-200", items: ["White or light-coloured trainers", "Sandals or flip-flops", "Expectations of staying clean", "Noise (bluetooth speakers etc)"], },
+              ].map(({ category, color, items }) => (
+                <div key={category} className={`rounded-2xl border p-5 ${color}`}>
+                  <p className="font-bold text-[#1C3220] text-sm mb-3">{category}</p>
+                  <ul className="space-y-1.5">
+                    {items.map(item => (
+                      <li key={item} className="text-sm text-gray-700 flex items-start gap-2">
+                        <CheckCircle className="w-3.5 h-3.5 text-[#2E6B3E] shrink-0 mt-0.5" />{item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            {/* Best time callout */}
+            <div className="not-prose bg-[#1C3220] text-white rounded-2xl p-7 mb-10">
+              <h3 className="font-display text-xl font-bold mb-4">When to Go</h3>
+              <div className="grid md:grid-cols-2 gap-5">
+                {[
+                  { label: "Best time of day", val: "Early morning (before 9:30am). Still, quiet, best wildlife activity, beautiful light." },
+                  { label: "Best season", val: "Spring and autumn. Spring for new growth and active squirrels. Autumn for colour and foraging wildlife." },
+                  { label: "Best day of week", val: "Wednesday or Thursday morning. Quietest by far. Weekends can be genuinely busy." },
+                  { label: "Avoid", val: "Saturday afternoons in summer. August bank holidays. Any time after heavy rain (boggy and slippery in places)." },
+                ].map(({ label, val }) => (
+                  <div key={label} className="bg-white/10 rounded-xl p-4">
+                    <p className="text-[#C9A96E] text-xs font-bold uppercase tracking-wider mb-1">{label}</p>
+                    <p className="text-white/80 text-sm">{val}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="not-prose bg-[#E8EDE6] rounded-2xl p-8">
+              <p className="font-display font-bold text-[#1C3220] text-lg mb-2">Full Formby Pinewoods Guide</p>
+              <p className="text-[#1C3220]/70 text-sm mb-5">Parking, facilities, opening times and everything else you need to plan your visit.</p>
+              <div className="flex flex-wrap gap-3">
+                <Link href="/formby-pinewoods" className="inline-flex items-center gap-2 bg-[#2E6B3E] hover:bg-[#1C3220] text-white px-5 py-3 rounded-full font-semibold text-sm transition">
+                  Pinewoods Guide <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+                <Link href="/blog/red-squirrels-formby-spotting-guide" className="inline-flex items-center gap-2 bg-white border border-[#2E6B3E] text-[#2E6B3E] hover:bg-[#E8EDE6] px-5 py-3 rounded-full font-semibold text-sm transition">
+                  Red Squirrel Spotting Tips
+                </Link>
+              </div>
+            </div>
+          </article>
+
+          {/* Sidebar */}
+          <aside className="lg:col-span-1 space-y-6">
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sticky top-6">
+              <h3 className="font-display font-bold text-[#1C3220] text-base mb-4">Getting There</h3>
+              <div className="space-y-4">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">By car</p>
+                  <p className="text-sm text-gray-700 flex items-start gap-1.5">
+                    <MapPin className="w-3.5 h-3.5 text-[#2E6B3E] mt-0.5 shrink-0" />
+                    National Trust Car Park, Victoria Road, Formby, L37 1YH
+                  </p>
+                </div>
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">By train</p>
+                  <p className="text-sm text-gray-700">Formby station (Merseyrail Northern Line). 20-minute walk to NT car park via Victoria Road.</p>
+                </div>
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">Parking fee</p>
+                  <p className="text-sm text-gray-700">Free for NT members. Non-members pay at machine. Typically £3–5 per day.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl border border-gray-100 p-5">
+              <p className="font-bold text-[#1C3220] text-sm mb-3">Also in the Pinewoods</p>
+              <div className="space-y-2">
+                {[
+                  { label: "Red Squirrel Spotting Guide", href: "/blog/red-squirrels-formby-spotting-guide" },
+                  { label: "Full Red Squirrels Guide", href: "/red-squirrels-formby" },
+                  { label: "Formby Beach Guide", href: "/formby-beach" },
+                ].map(({ label, href }) => (
+                  <Link key={href} href={href} className="flex items-center gap-2 text-sm text-[#2E6B3E] hover:text-[#1C3220] font-medium py-1 group">
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />{label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-[#E8EDE6] border border-[#2E6B3E]/20 rounded-2xl p-5">
+              <p className="font-bold text-[#1C3220] text-sm mb-2">🐿️ Squirrel spotting from the Pinewoods?</p>
+              <p className="text-[#1C3220]/70 text-xs leading-relaxed mb-3">
+                Read our separate guide on exactly when and where to spot red squirrels — including the timing mistakes most visitors make.
+              </p>
+              <Link href="/blog/red-squirrels-formby-spotting-guide" className="text-[#2E6B3E] font-bold text-xs hover:underline flex items-center gap-1">
+                Red squirrel guide <ArrowRight className="w-3 h-3" />
+              </Link>
+            </div>
+          </aside>
+        </div>
+      </div>
+
       <section className="bg-white border-t border-gray-100 py-16">
         <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">More from the blog</h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-2">More from the blog</h2>
+          <p className="text-gray-500 mb-8">More local guides from someone who lives here.</p>
+          <div className="grid md:grid-cols-3 gap-5">
             {[
-              {
-                title: "How to Actually See Red Squirrels",
-                slug: "red-squirrels-formby-spotting-guide",
-                excerpt: "Yes, they're here. Local tips for spotting them.",
-              },
-              {
-                title: "Things to Do in Formby During Half Term",
-                slug: "things-to-do-formby-half-term",
-                excerpt: "Planning half term with kids? Here's what works.",
-              },
-            ].map((related) => (
-              <Link
-                key={related.slug}
-                href={`/blog/${related.slug}`}
-                className="group flex flex-col bg-gray-50 rounded-2xl border border-gray-100 hover:border-gray-200 hover:shadow-sm transition-all p-6"
-              >
-                <h3 className="font-display font-bold text-[#1C3220] text-lg group-hover:text-[#2E6B3E] transition-colors mb-2">
-                  {related.title}
-                </h3>
-                <p className="text-gray-600 text-sm mb-4 flex-1">{related.excerpt}</p>
-                <span className="text-[#2E6B3E] text-sm font-bold group-hover:translate-x-0.5 transition-transform flex items-center gap-1">
-                  Read article <ArrowRight className="w-3.5 h-3.5" />
-                </span>
+              { title: "How to See Red Squirrels", slug: "red-squirrels-formby-spotting-guide", cat: "Wildlife" },
+              { title: "Formby Beach Weather Guide", slug: "formby-beach-weather-guide", cat: "Seasonal" },
+              { title: "Half Term in Formby", slug: "things-to-do-formby-half-term", cat: "Family" },
+            ].map((p) => (
+              <Link key={p.slug} href={`/blog/${p.slug}`} className="group bg-[#F7F9F6] rounded-2xl border border-gray-100 hover:border-[#2E6B3E]/30 hover:shadow-sm transition-all p-5">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[#2E6B3E]">{p.cat}</span>
+                <h3 className="font-display font-bold text-[#1C3220] text-base mt-1 group-hover:text-[#2E6B3E] transition-colors">{p.title}</h3>
               </Link>
             ))}
           </div>

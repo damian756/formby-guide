@@ -153,6 +153,7 @@ function Footer() {
                 ["Red Squirrels", "/red-squirrels-formby"],
                 ["Pinewoods", "/formby-pinewoods"],
                 ["About Formby", "/about-formby"],
+                ["Blog", "/blog"],
                 ["Restaurants", "/restaurants"],
                 ["Pubs & Bars", "/pubs"],
                 ["Cafes", "/cafes"],
