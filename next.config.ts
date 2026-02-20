@@ -33,16 +33,17 @@ const nextConfig: NextConfig = {
     ];
   },
 
-  async redirects() {
-    return [
-      {
-        source: "/(.*)",
-        has: [{ type: "host", value: "formby-guide.vercel.app" }],
-        destination: "https://www.formbyguide.co.uk/:path*",
-        permanent: true,
-      },
-    ];
-  },
+  // Redirect Vercel preview → custom domain (enable once SSL is live)
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: "/(.*)",
+  //       has: [{ type: "host", value: "formby-guide.vercel.app" }],
+  //       destination: "https://www.formbyguide.co.uk/:path*",
+  //       permanent: true,
+  //     },
+  //   ];
+  // },
 };
 
 export default nextConfig;
