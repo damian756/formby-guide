@@ -89,6 +89,9 @@ export default function NavMenu() {
         <Link href="/formby-pinewoods" className="text-[#1C3220]/70 hover:text-[#2E6B3E] font-medium px-3 py-2 rounded-lg text-sm transition-colors">
           Pinewoods
         </Link>
+        <Link href="/blog" className="text-[#1C3220]/70 hover:text-[#2E6B3E] font-medium px-3 py-2 rounded-lg text-sm transition-colors">
+          Blog
+        </Link>
         <Link href="/about-formby" className="text-[#1C3220]/70 hover:text-[#2E6B3E] font-medium px-3 py-2 rounded-lg text-sm transition-colors">
           About Formby
         </Link>
