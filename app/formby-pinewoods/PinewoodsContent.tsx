@@ -9,7 +9,6 @@ import { MapPin, Clock, Dog, Compass, Binoculars, Info } from "lucide-react";
 
 const GALLERY = [
   { src: "/pinewoods-woods.webp",         alt: "Sunlit Formby pinewoods with walker on path" },
-  { src: "/pinewoods-pine-cone.webp",     alt: "Pine cone held up in Formby pinewoods" },
   { src: "/pinewoods-cycling-sign.webp",  alt: "National Trust cycling trails sign in Formby pinewoods" },
   { src: "/pinewoods-woods-tall.webp",    alt: "Looking up at tall pines and mixed woodland in Formby" },
   { src: "/pinewoods-sandfield-farm.webp",alt: "Sandfield Farm heritage sign in the Formby pinewoods" },
@@ -55,22 +54,11 @@ export default function PinewoodsContent() {
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">What Makes the Pinewoods Worth Visiting</h2>
           <div className="grid md:grid-cols-2 gap-6">
 
-            {/* The Trees — photo card */}
-            <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden">
-              <button onClick={() => open(1)} className="relative h-44 w-full block cursor-zoom-in group" aria-label="View full image">
-                <Image
-                  src="/pinewoods-pine-cone.webp"
-                  alt="Pine cone held up in Formby pinewoods"
-                  fill
-                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </button>
-              <div className="p-6">
-                <div className="text-3xl mb-2">🌲</div>
-                <h3 className="font-semibold text-[#1C3220] text-lg mb-2">The Trees Themselves</h3>
-                <p className="text-sm text-[#1C3220]/70 leading-relaxed">Mature Scots pine and Corsican pine, some over 100 years old. Light through the canopy on a morning walk is genuinely beautiful. Photographers rate this highly.</p>
-              </div>
+            {/* The Trees */}
+            <div className="bg-white rounded-2xl border border-gray-100 p-6">
+              <div className="text-4xl mb-3">🌲</div>
+              <h3 className="font-semibold text-[#1C3220] text-lg mb-2">The Trees Themselves</h3>
+              <p className="text-sm text-[#1C3220]/70 leading-relaxed">Mature Scots pine and Corsican pine, some over 100 years old. Light through the canopy on a morning walk is genuinely beautiful. Photographers rate this highly.</p>
             </div>
 
             {/* Red Squirrels */}
@@ -173,8 +161,8 @@ export default function PinewoodsContent() {
 
           {/* Cycling sign */}
           <button
-            onClick={() => open(2)}
-            className="relative w-full h-56 md:h-72 overflow-hidden rounded-2xl block cursor-zoom-in group"
+          onClick={() => open(1)}
+          className="relative w-full h-56 md:h-72 overflow-hidden rounded-2xl block cursor-zoom-in group"
             aria-label="View full image"
           >
             <Image
@@ -212,7 +200,7 @@ export default function PinewoodsContent() {
 
         {/* Photo break — tall trees */}
         <button
-          onClick={() => open(3)}
+          onClick={() => open(2)}
           className="relative -mx-4 sm:-mx-6 lg:-mx-8 mb-16 h-64 md:h-80 overflow-hidden rounded-2xl w-[calc(100%+2rem)] sm:w-[calc(100%+3rem)] lg:w-[calc(100%+4rem)] block cursor-zoom-in group"
           aria-label="View full image"
         >
@@ -231,7 +219,7 @@ export default function PinewoodsContent() {
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">A Bit of History</h2>
           <div className="rounded-2xl border border-gray-100 overflow-hidden">
             <div className="grid md:grid-cols-2">
-              <button onClick={() => open(4)} className="relative h-64 md:h-auto min-h-[260px] block cursor-zoom-in group" aria-label="View full image">
+              <button onClick={() => open(3)} className="relative h-64 md:h-auto min-h-[260px] block cursor-zoom-in group" aria-label="View full image">
                 <Image
                   src="/pinewoods-sandfield-farm.webp"
                   alt="Sandfield Farm heritage sign in the Formby pinewoods"
@@ -258,8 +246,8 @@ export default function PinewoodsContent() {
 
           {/* Map photo */}
           <button
-            onClick={() => open(5)}
-            className="relative w-full h-56 md:h-72 overflow-hidden rounded-2xl block cursor-zoom-in group mb-6"
+          onClick={() => open(4)}
+          className="relative w-full h-56 md:h-72 overflow-hidden rounded-2xl block cursor-zoom-in group mb-6"
             aria-label="View full image"
           >
             <Image
