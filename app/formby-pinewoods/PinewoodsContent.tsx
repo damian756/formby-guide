@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-import { MapPin, Clock, Dog, Compass, Binoculars, Info } from "lucide-react";
 
 const GALLERY = [
   { src: "/pinewoods-woods.webp",         alt: "Sunlit Formby pinewoods with walker on path" },
@@ -13,6 +12,78 @@ const GALLERY = [
   { src: "/pinewoods-woods-tall.jpg",     alt: "Looking up at tall pines and mixed woodland in Formby" },
   { src: "/pinewoods-sandfield-farm.webp",alt: "Sandfield Farm heritage sign in the Formby pinewoods" },
   { src: "/pinewoods-map.webp",           alt: "National Trust Formby site map and information board" },
+];
+
+const WHY_VISIT = [
+  {
+    title: "The Trees Themselves",
+    desc: "Mature Scots pine and Corsican pine, some over 100 years old. Light through the canopy on a morning walk is genuinely beautiful. Photographers rate this highly.",
+    image: "/squirrels-canopy.webp",
+    imagePos: "object-center",
+  },
+  {
+    title: "Red Squirrels",
+    desc: "Primary habitat for Formby's red squirrel colony. They live in the canopy and come down to forage. Trails through denser pine sections have the most reliable sightings.",
+    image: "/blog-card-wildlife.webp",
+    imagePos: "object-center",
+  },
+  {
+    title: "Access to the Beach",
+    desc: "Follow main paths west and you emerge onto dunes and Formby Beach. Takes ~15 minutes. The transition from woodland to open sea is genuinely dramatic.",
+    image: "/squirrels-beach-pines.webp",
+    imagePos: "object-center",
+  },
+  {
+    title: "Birdlife",
+    desc: "Crossbills, goldcrests, coal tits, woodpeckers, waders and sea birds depending on season. Birders rate Formby highly for the woodland/coastal combination.",
+    image: "/pinewoods-card-birds.webp",
+    imagePos: "object-center",
+  },
+  {
+    title: "Wildflowers & Plants",
+    desc: "Spring brings wood anemones, bluebells and woodland plants in sheltered sections. Dune slacks have their own distinct plant communities.",
+    image: "/pinewoods-card-wildflowers.webp",
+    imagePos: "object-center",
+  },
+  {
+    title: "Sunsets",
+    desc: "The path through the pines to the beach in late afternoon with light filtering through the trees. The kind of walk people come back to repeatedly.",
+    image: "/pinewoods-card-sunset.webp",
+    imagePos: "object-center",
+  },
+];
+
+const TRAILS = [
+  {
+    emoji: "🚶",
+    name: "Squirrel Trail (short)",
+    time: "30–45 minutes",
+    level: "Easy",
+    desc: "The dedicated red squirrel trail looping through the densest section. Flat throughout. Starts from main car park. Best for families or anyone wanting a manageable walk without committing to the beach.",
+    tip: "Go early morning for best squirrel sightings.",
+    image: "/blog-card-walks.webp",
+    imagePos: "object-center",
+  },
+  {
+    emoji: "🏖️",
+    name: "Pinewoods to Beach",
+    time: "1.5–2 hours return",
+    level: "Easy",
+    desc: "Walk from car park through pinewoods, emerging via dunes onto Formby Beach. Walk along sand, return through pines. Full experience of the site in one go. Flat all the way.",
+    tip: "Trainers fine on dry days. Wellies better after rain.",
+    image: "/squirrels-beach-pines.webp",
+    imagePos: "object-center",
+  },
+  {
+    emoji: "🌊",
+    name: "Full Sefton Coastal Path",
+    time: "2.5–3.5 hours",
+    level: "Easy–Moderate",
+    desc: "Walk north through pines to Ainsdale or south toward Hightown. Flat, exposed in places, excellent for serious walkers. Can be done as linear walk with train back from Ainsdale.",
+    tip: "Check Sefton Coast landscape website for current path conditions.",
+    image: "/ttd-card-coastal-path.webp",
+    imagePos: "object-[center_40%]",
+  },
 ];
 
 export default function PinewoodsContent() {
@@ -49,53 +120,28 @@ export default function PinewoodsContent() {
           </p>
         </div>
 
-        {/* Why Visit */}
+        {/* Why Visit — image cards 3-col */}
         <section id="why" className="mb-16 scroll-mt-20">
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">What Makes the Pinewoods Worth Visiting</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-
-            {/* The Trees */}
-            <div className="bg-white rounded-2xl border border-gray-100 p-6">
-              <div className="text-4xl mb-3">🌲</div>
-              <h3 className="font-semibold text-[#1C3220] text-lg mb-2">The Trees Themselves</h3>
-              <p className="text-sm text-[#1C3220]/70 leading-relaxed">Mature Scots pine and Corsican pine, some over 100 years old. Light through the canopy on a morning walk is genuinely beautiful. Photographers rate this highly.</p>
-            </div>
-
-            {/* Red Squirrels */}
-            <div className="bg-white rounded-2xl border border-gray-100 p-6">
-              <div className="text-4xl mb-3">🐿️</div>
-              <h3 className="font-semibold text-[#1C3220] text-lg mb-2">Red Squirrels</h3>
-              <p className="text-sm text-[#1C3220]/70 leading-relaxed">Primary habitat for Formby&apos;s red squirrel colony. They live in the canopy and come down to forage. Trails through denser pine sections have the most reliable sightings.</p>
-            </div>
-
-            {/* Beach Access */}
-            <div className="bg-white rounded-2xl border border-gray-100 p-6">
-              <div className="text-4xl mb-3">🏖️</div>
-              <h3 className="font-semibold text-[#1C3220] text-lg mb-2">Access to the Beach</h3>
-              <p className="text-sm text-[#1C3220]/70 leading-relaxed">Follow main paths west and you emerge onto dunes and Formby Beach. Takes ~15 minutes. The transition from woodland to open sea is genuinely dramatic.</p>
-            </div>
-
-            {/* Birdlife */}
-            <div className="bg-white rounded-2xl border border-gray-100 p-6">
-              <div className="text-4xl mb-3">🦅</div>
-              <h3 className="font-semibold text-[#1C3220] text-lg mb-2">Birdlife</h3>
-              <p className="text-sm text-[#1C3220]/70 leading-relaxed">Crossbills, goldcrests, coal tits, woodpeckers, waders and sea birds depending on season. Birders rate Formby highly for the woodland/coastal combination.</p>
-            </div>
-
-            {/* Wildflowers */}
-            <div className="bg-white rounded-2xl border border-gray-100 p-6">
-              <div className="text-4xl mb-3">🌿</div>
-              <h3 className="font-semibold text-[#1C3220] text-lg mb-2">Wildflowers & Plants</h3>
-              <p className="text-sm text-[#1C3220]/70 leading-relaxed">Spring brings wood anemones, bluebells and woodland plants in sheltered sections. Dune slacks have their own distinct plant communities.</p>
-            </div>
-
-            {/* Sunsets */}
-            <div className="bg-white rounded-2xl border border-gray-100 p-6">
-              <div className="text-4xl mb-3">🌅</div>
-              <h3 className="font-semibold text-[#1C3220] text-lg mb-2">Sunsets</h3>
-              <p className="text-sm text-[#1C3220]/70 leading-relaxed">The path through the pines to the beach in late afternoon with light filtering through the trees. The kind of walk people come back to repeatedly.</p>
-            </div>
-
+          <div className="grid md:grid-cols-3 gap-5">
+            {WHY_VISIT.map((item) => (
+              <div key={item.title} className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
+                <div className="relative h-44 overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className={`object-cover ${item.imagePos} transition-transform duration-500 group-hover:scale-105`}
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                  <p className="absolute bottom-2 left-3 text-white font-display font-bold text-base drop-shadow">{item.title}</p>
+                </div>
+                <div className="p-4">
+                  <p className="text-sm text-[#1C3220]/70 leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -115,54 +161,38 @@ export default function PinewoodsContent() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
         </button>
 
-        {/* Walks & Trails */}
+        {/* Walks & Trails — with image thumbnails */}
         <section id="walks" className="mb-16 scroll-mt-20">
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">Walks & Trails</h2>
           <div className="space-y-4 mb-8">
-            {[
-              {
-                emoji: "🚶",
-                name: "Squirrel Trail (short)",
-                time: "30–45 minutes",
-                level: "Easy",
-                desc: "The dedicated red squirrel trail looping through the densest section. Flat throughout. Starts from main car park. Best for families or anyone wanting a manageable walk without committing to the beach.",
-                tip: "Go early morning for best squirrel sightings.",
-              },
-              {
-                emoji: "🏖️",
-                name: "Pinewoods to Beach",
-                time: "1.5–2 hours return",
-                level: "Easy",
-                desc: "Walk from car park through pinewoods, emerging via dunes onto Formby Beach. Walk along sand, return through pines. Full experience of the site in one go. Flat all the way.",
-                tip: "Trainers fine on dry days. Wellies better after rain.",
-              },
-              {
-                emoji: "🌊",
-                name: "Full Sefton Coastal Path",
-                time: "2.5–3.5 hours",
-                level: "Easy–Moderate",
-                desc: "Walk north through pines to Ainsdale or south toward Hightown. Flat, exposed in places, excellent for serious walkers. Can be done as linear walk with train back from Ainsdale.",
-                tip: "Check Sefton Coast landscape website for current path conditions.",
-              },
-            ].map(({ emoji, name, time, level, desc, tip }) => (
-              <div key={name} className="bg-white rounded-2xl border border-gray-100 p-6">
-                <div className="flex items-start gap-4 mb-3">
-                  <div className="text-4xl">{emoji}</div>
-                  <div>
-                    <h3 className="font-semibold text-[#1C3220] text-lg">{name}</h3>
-                    <p className="text-sm text-[#1C3220]/60">{time} • {level}</p>
-                  </div>
+            {TRAILS.map(({ name, time, level, desc, tip, image, imagePos }) => (
+              <div key={name} className="bg-white rounded-2xl border border-gray-100 overflow-hidden flex flex-col sm:flex-row">
+                <div className="relative w-full sm:w-48 h-40 sm:h-auto flex-none overflow-hidden">
+                  <Image
+                    src={image}
+                    alt={name}
+                    fill
+                    className={`object-cover ${imagePos}`}
+                    sizes="(max-width: 640px) 100vw, 192px"
+                  />
                 </div>
-                <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-3">{desc}</p>
-                <p className="text-xs text-[#2E6B3E] font-medium">💡 {tip}</p>
+                <div className="p-5 flex flex-col flex-1">
+                  <div className="flex items-start justify-between mb-2">
+                    <h3 className="font-semibold text-[#1C3220] text-lg">{name}</h3>
+                    <span className="text-xs font-medium text-[#2E6B3E] bg-[#E8EDE6] px-2.5 py-1 rounded-full ml-2 whitespace-nowrap">{level}</span>
+                  </div>
+                  <p className="text-sm text-[#1C3220]/60 mb-2">⏱️ {time}</p>
+                  <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-3 flex-1">{desc}</p>
+                  <p className="text-xs text-[#2E6B3E] font-medium">💡 {tip}</p>
+                </div>
               </div>
             ))}
           </div>
 
           {/* Cycling sign */}
           <button
-          onClick={() => open(1)}
-          className="relative w-full h-56 md:h-72 overflow-hidden rounded-2xl block cursor-zoom-in group"
+            onClick={() => open(1)}
+            className="relative w-full h-56 md:h-72 overflow-hidden rounded-2xl block cursor-zoom-in group"
             aria-label="View full image"
           >
             <Image
@@ -181,19 +211,27 @@ export default function PinewoodsContent() {
         <section id="wildlife" className="mb-16 scroll-mt-20">
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">Wildlife & Habitat</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 p-6">
-              <h3 className="font-semibold text-[#1C3220] text-lg mb-3">🐿️ Red Squirrels</h3>
-              <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-3">
-                The pinewoods are the primary habitat for Formby&apos;s red squirrel colony. They suit this woodland precisely and the National Trust actively manages the reserve to keep the population stable.
-              </p>
-              <p className="text-xs text-[#1C3220]/50 italic">One of the most significant red squirrel populations on the North West coast.</p>
+            <div className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
+              <div className="relative h-48 overflow-hidden">
+                <Image src="/blog-card-wildlife.webp" alt="Red squirrel in Formby pinewoods" fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <p className="absolute bottom-3 left-4 text-white font-bold drop-shadow">🐿️ Red Squirrels</p>
+              </div>
+              <div className="p-5">
+                <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-2">The pinewoods are the primary habitat for Formby&apos;s red squirrel colony. They suit this woodland precisely and the National Trust actively manages the reserve to keep the population stable.</p>
+                <p className="text-xs text-[#1C3220]/50 italic">One of the most significant red squirrel populations on the North West coast.</p>
+              </div>
             </div>
-            <div className="bg-gradient-to-br from-blue-50 to-sky-50 rounded-2xl border border-blue-200 p-6">
-              <h3 className="font-semibold text-[#1C3220] text-lg mb-3">🦅 Birdlife</h3>
-              <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-3">
-                Crossbills, goldcrests, coal tits, woodpeckers, various waders and sea birds depending on season. The woodland-to-coast transition makes Formby particularly good for birders.
-              </p>
-              <p className="text-xs text-[#1C3220]/50 italic">Check season guides for best birdwatching times.</p>
+            <div className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
+              <div className="relative h-48 overflow-hidden">
+                <Image src="/pinewoods-card-birds.webp" alt="Crossbill birds in Formby pinewoods" fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <p className="absolute bottom-3 left-4 text-white font-bold drop-shadow">🦅 Birdlife</p>
+              </div>
+              <div className="p-5">
+                <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-2">Crossbills, goldcrests, coal tits, woodpeckers, various waders and sea birds depending on season. The woodland-to-coast transition makes Formby particularly good for birders.</p>
+                <p className="text-xs text-[#1C3220]/50 italic">Check season guides for best birdwatching times.</p>
+              </div>
             </div>
           </div>
         </section>
@@ -243,11 +281,9 @@ export default function PinewoodsContent() {
         {/* Plan Your Visit */}
         <section id="plan" className="mb-16 scroll-mt-20">
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">Plan Your Visit</h2>
-
-          {/* Map photo */}
           <button
-          onClick={() => open(4)}
-          className="relative w-full h-64 md:h-80 overflow-hidden rounded-2xl block cursor-zoom-in group mb-6"
+            onClick={() => open(4)}
+            className="relative w-full h-64 md:h-80 overflow-hidden rounded-2xl block cursor-zoom-in group mb-6"
             aria-label="View full image"
           >
             <Image
@@ -259,14 +295,13 @@ export default function PinewoodsContent() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
           </button>
-
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { label: "Address",      value: "Victoria Road, Formby, L37 1YH" },
-              { label: "Opening",      value: "Year-round, dawn to dusk" },
-              { label: "Parking",      value: "NT car park. Book via app before leaving. £6 non-members." },
-              { label: "Dogs",         value: "Welcome throughout. Leads required in squirrel reserve (signed)." },
-              { label: "Pushchairs",   value: "Main paths manageable on dry days. Sandy sections near dunes are difficult." },
+              { label: "Address",        value: "Victoria Road, Formby, L37 1YH" },
+              { label: "Opening",        value: "Year-round, dawn to dusk" },
+              { label: "Parking",        value: "NT car park. Book via app before leaving. £6 non-members." },
+              { label: "Dogs",           value: "Welcome throughout. Leads required in squirrel reserve (signed)." },
+              { label: "Pushchairs",     value: "Main paths manageable on dry days. Sandy sections near dunes are difficult." },
               { label: "Café & Toilets", value: "NT café at visitor point. Toilets & baby changing available." },
             ].map(({ label, value }) => (
               <div key={label} className="bg-[#E8EDE6] rounded-xl p-4 border border-[#1C3220]/10">
@@ -277,19 +312,25 @@ export default function PinewoodsContent() {
           </div>
         </section>
 
-        {/* Related Links */}
+        {/* Related Links — image cards */}
         <section className="mt-16 pt-12 border-t border-[#1C3220]/10">
           <h3 className="font-display text-2xl font-bold text-[#1C3220] mb-6">Explore More Formby</h3>
           <div className="grid sm:grid-cols-2 gap-4">
-            <Link href="/red-squirrels-formby" className="group bg-white rounded-xl border border-gray-100 p-6 hover:border-[#2E6B3E]/30 hover:shadow-sm transition">
-              <div className="text-3xl mb-2">🐿️</div>
-              <h4 className="font-semibold text-[#1C3220] group-hover:text-[#2E6B3E] transition">Red Squirrels</h4>
-              <p className="text-sm text-[#1C3220]/60">One of the best places in England to see them.</p>
+            <Link href="/red-squirrels-formby" className="group relative h-48 rounded-2xl overflow-hidden block">
+              <Image src="/squirrels-hero.webp" alt="Red squirrels in Formby" fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 50vw" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              <div className="absolute bottom-4 left-4">
+                <p className="text-white font-display font-bold text-lg">Red Squirrels</p>
+                <p className="text-white/70 text-sm">One of the best places in England to see them.</p>
+              </div>
             </Link>
-            <Link href="/formby-beach" className="group bg-white rounded-xl border border-gray-100 p-6 hover:border-[#2E6B3E]/30 hover:shadow-sm transition">
-              <div className="text-3xl mb-2">🏖️</div>
-              <h4 className="font-semibold text-[#1C3220] group-hover:text-[#2E6B3E] transition">Formby Beach</h4>
-              <p className="text-sm text-[#1C3220]/60">Wide sand, dramatic dunes, and the Irish Sea.</p>
+            <Link href="/formby-beach" className="group relative h-48 rounded-2xl overflow-hidden block">
+              <Image src="/ttd-card-beach.webp" alt="Formby Beach" fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 50vw" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              <div className="absolute bottom-4 left-4">
+                <p className="text-white font-display font-bold text-lg">Formby Beach</p>
+                <p className="text-white/70 text-sm">Wide sand, dramatic dunes, and the Irish Sea.</p>
+              </div>
             </Link>
           </div>
         </section>
