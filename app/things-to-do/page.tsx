@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "FormbyGuide.co.uk",
     locale: "en_GB",
-    images: [{ url: `${BASE_URL}/things-to-do-hero.webp`, width: 1200, height: 630, alt: "Things to do in Formby — beach, pinewoods and red squirrels" }],
+    images: [{ url: `${BASE_URL}/things-to-do-hero2.webp`, width: 1200, height: 630, alt: "Things to do in Formby — beach, pinewoods and red squirrels" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -140,7 +140,7 @@ export default function ThingsToDoPage() {
       {/* Hero */}
       <section className="relative text-white py-16 md:py-24 overflow-hidden min-h-[420px] flex items-center">
         <Image
-          src="/things-to-do-hero.webp"
+          src="/things-to-do-hero2.webp"
           alt="Things to do in Formby — beach, pinewoods and red squirrels"
           fill
           priority
