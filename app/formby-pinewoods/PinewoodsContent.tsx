@@ -10,7 +10,7 @@ import { MapPin, Clock, Dog, Compass, Binoculars, Info } from "lucide-react";
 const GALLERY = [
   { src: "/pinewoods-woods.webp",         alt: "Sunlit Formby pinewoods with walker on path" },
   { src: "/pinewoods-cycling-sign.webp",  alt: "National Trust cycling trails sign in Formby pinewoods" },
-  { src: "/pinewoods-woods-tall.webp",    alt: "Looking up at tall pines and mixed woodland in Formby" },
+  { src: "/pinewoods-woods-tall.jpg",     alt: "Looking up at tall pines and mixed woodland in Formby" },
   { src: "/pinewoods-sandfield-farm.webp",alt: "Sandfield Farm heritage sign in the Formby pinewoods" },
   { src: "/pinewoods-map.webp",           alt: "National Trust Formby site map and information board" },
 ];
