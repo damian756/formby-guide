@@ -111,8 +111,8 @@ export default function FormbyBeachContent() {
           <div className="grid md:grid-cols-3 gap-6">
             {/* The Beach Itself */}
             <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-              <button onClick={() => open(1)} className="relative h-40 w-full block cursor-zoom-in group" aria-label="View full image">
-                <Image src="/formby-beach-shell-close.jpg" alt="Shell on Formby Beach sand" fill className="object-cover object-top transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 33vw" />
+              <button onClick={() => open(1)} className="relative h-52 w-full block cursor-zoom-in group" aria-label="View full image">
+                <Image src="/formby-beach-shell-close.jpg" alt="Shell on Formby Beach sand" fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 33vw" />
               </button>
               <div className="p-6">
                 <h3 className="font-semibold text-[#1C3220] text-lg mb-2">The Beach Itself</h3>
@@ -121,7 +121,7 @@ export default function FormbyBeachContent() {
             </div>
             {/* The Sea */}
             <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-              <button onClick={() => open(2)} className="relative h-40 w-full block cursor-zoom-in group" aria-label="View full image">
+              <button onClick={() => open(2)} className="relative h-52 w-full block cursor-zoom-in group" aria-label="View full image">
                 <Image src="/formby-beach-sea.jpg" alt="Families walking along Formby Beach at the water's edge with waves and sand dunes" fill className="object-cover object-[center_60%] transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 33vw" />
               </button>
               <div className="p-6">
@@ -131,7 +131,7 @@ export default function FormbyBeachContent() {
             </div>
             {/* Best Times */}
             <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-              <button onClick={() => open(3)} className="relative h-40 w-full block cursor-zoom-in group" aria-label="View full image">
+              <button onClick={() => open(3)} className="relative h-52 w-full block cursor-zoom-in group" aria-label="View full image">
                 <Image src="/formby-beach-sign.jpg" alt="National Trust Blundell Path sign at Formby Beach showing safety information and tide warnings" fill className="object-cover object-top transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 33vw" />
               </button>
               <div className="p-6">
