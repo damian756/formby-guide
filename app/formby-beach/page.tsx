@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Car, Clock, Dog, Waves, ChevronRight, AlertCircle, Coffee, Info, Shield } from "lucide-react";
 
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "FormbyGuide.co.uk",
     locale: "en_GB",
-    images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "FormbyGuide.co.uk" }],
+    images: [{ url: `${BASE_URL}/formby-beach-hero.jpg`, width: 1200, height: 630, alt: "Formby Beach — sand dunes and the Irish Sea" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -33,19 +34,27 @@ export default function FormbyBeachPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[#1C4A5A] to-[#2E7A9A] text-white py-16 md:py-24">
-        <div className="container mx-auto px-4 max-w-6xl">
+      <section className="relative text-white py-16 md:py-24 overflow-hidden min-h-[420px] flex items-center">
+        <Image
+          src="/formby-beach-hero.jpg"
+          alt="Formby Beach — sand dunes and the Irish Sea"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/20" />
+        <div className="relative container mx-auto px-4 max-w-6xl">
           <div className="max-w-3xl">
             <div className="flex items-center gap-2 text-blue-200 text-sm font-medium mb-4">
               <Link href="/" className="hover:text-white transition">FormbyGuide</Link>
               <ChevronRight className="w-4 h-4" />
               <span>Formby Beach</span>
             </div>
-            <div className="text-6xl mb-4">🏖️</div>
-            <h1 className="font-display text-4xl md:text-5xl font-bold mb-4 leading-tight">
+            <h1 className="font-display text-4xl md:text-5xl font-bold mb-4 leading-tight drop-shadow-lg">
               Formby Beach
             </h1>
-            <p className="text-xl text-white/80 leading-relaxed mb-8">
+            <p className="text-xl text-white/90 leading-relaxed mb-8 drop-shadow">
               Wide open sand, dramatic dunes, and the Irish Sea with no crowds. One of the best beaches in the North West — and you don&apos;t have to fight for space.
             </p>
 
@@ -57,7 +66,7 @@ export default function FormbyBeachPage() {
                 { icon: Dog, label: "Dogs", value: "Welcome" },
                 { icon: Coffee, label: "Café", value: "On site" },
               ].map(({ icon: Icon, label, value }) => (
-                <div key={label} className="bg-white/10 backdrop-blur rounded-lg p-3 border border-white/10">
+                <div key={label} className="bg-black/30 backdrop-blur rounded-lg p-3 border border-white/20">
                   <div className="flex items-start gap-2 mb-1">
                     <Icon className="w-4 h-4 text-blue-200 flex-shrink-0 mt-0.5" />
                     <div className="text-xs text-white/60">{label}</div>
