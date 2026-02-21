@@ -233,15 +233,16 @@ export default function FormbyBeachPage() {
           </div>
         </section>
 
-        {/* Photo break — dog on beach */}
-        <div className="relative -mx-4 sm:-mx-6 lg:-mx-8 mb-16 h-64 md:h-80 overflow-hidden rounded-2xl bg-[#d6c4a0]">
+        {/* Photo break — dunes */}
+        <div className="relative -mx-4 sm:-mx-6 lg:-mx-8 mb-16 h-64 md:h-80 overflow-hidden rounded-2xl">
           <Image
-            src="/dog-on-formby-beach.jpg"
-            alt="Dog running on Formby Beach with the Irish Sea in the background"
+            src="/formby-beach-dunes.jpg"
+            alt="Looking through Formby sand dunes to the Irish Sea"
             fill
-            className="object-contain"
+            className="object-cover object-center"
             sizes="100vw"
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
         </div>
 
         {/* Dunes & Formby Point */}
