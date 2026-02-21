@@ -198,7 +198,6 @@ export default function ThingsToDoPage() {
                   <span className="absolute bottom-3 left-3 text-xs bg-[#2E6B3E] text-white px-2.5 py-1 rounded-full font-semibold">
                     {t.tag}
                   </span>
-                  <span className="absolute top-3 right-3 text-2xl">{t.emoji}</span>
                 </div>
                 {/* Content */}
                 <div className="p-5 flex flex-col flex-1">
@@ -248,8 +247,7 @@ export default function ThingsToDoPage() {
                 </div>
                 {/* Content */}
                 <div className="p-4 flex flex-col flex-1 min-w-0">
-                  <div className="flex items-center gap-2 mb-1.5">
-                    <span className="text-xl">{t.emoji}</span>
+                  <div className="mb-1.5">
                     <span className="text-[10px] text-[#1C3220]/50 font-semibold uppercase tracking-wider">{t.tag}</span>
                   </div>
                   <h2 className="font-display text-base font-bold text-[#1C3220] mb-1.5">{t.title}</h2>
