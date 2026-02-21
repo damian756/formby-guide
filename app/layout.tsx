@@ -145,6 +145,11 @@ function Footer() {
                   </a>
                 </li>
                 <li>
+                  <a href="https://www.formbyguide.co.uk" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-white/70 hover:text-[#C9A96E] transition">
+                    FormbyGuide.co.uk ↗
+                  </a>
+                </li>
+                <li>
                   <a href="https://www.seftonlinks.com" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-white/70 hover:text-[#C9A96E] transition">
                     SeftonLinks.com ↗
                   </a>
