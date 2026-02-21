@@ -3,6 +3,7 @@
 import { useState, useMemo, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { Search, X } from "lucide-react";
 
 export type BlogPost = {
@@ -14,6 +15,7 @@ export type BlogPost = {
   readTime: string;
   categorySlug: string;
   gradient: string;
+  image?: string;
 };
 
 export type BlogCategory = {
@@ -186,6 +188,15 @@ export default function BlogClient({ posts, categories }: Props) {
                     className="relative h-48 overflow-hidden flex-none"
                     style={{ background: post.gradient }}
                   >
+                    {post.image && (
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        fill
+                        className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                      />
+                    )}
                     {cat && (
                       <span
                         className="absolute top-3 left-3 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow"

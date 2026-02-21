@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
+import Image from "next/image";
 import { Newspaper } from "lucide-react";
 import BlogClient, { type BlogPost, type BlogCategory } from "./BlogClient";
 
@@ -43,6 +44,7 @@ const POSTS: BlogPost[] = [
     readTime: "8 min read",
     categorySlug: "family",
     gradient: "linear-gradient(135deg, #1C3220 0%, #2E6B3E 100%)",
+    image: "/blog-card-family.webp",
   },
   {
     slug: "formby-beach-weather-guide",
@@ -53,6 +55,7 @@ const POSTS: BlogPost[] = [
     readTime: "6 min read",
     categorySlug: "seasonal",
     gradient: "linear-gradient(135deg, #1C4A5A 0%, #2E7A9A 100%)",
+    image: "/blog-card-seasonal.webp",
   },
   {
     slug: "where-to-eat-formby-with-kids",
@@ -63,6 +66,7 @@ const POSTS: BlogPost[] = [
     readTime: "7 min read",
     categorySlug: "food",
     gradient: "linear-gradient(135deg, #5C1A1A 0%, #8B3A3A 100%)",
+    image: "/blog-card-food.webp",
   },
   {
     slug: "red-squirrels-formby-spotting-guide",
@@ -73,6 +77,7 @@ const POSTS: BlogPost[] = [
     readTime: "5 min read",
     categorySlug: "wildlife",
     gradient: "linear-gradient(135deg, #8B6040 0%, #A8764A 100%)",
+    image: "/blog-card-wildlife.webp",
   },
   {
     slug: "formby-pinewoods-walking-guide",
@@ -83,6 +88,7 @@ const POSTS: BlogPost[] = [
     readTime: "6 min read",
     categorySlug: "walks",
     gradient: "linear-gradient(135deg, #1A5C3A 0%, #2E8B5A 100%)",
+    image: "/blog-card-walks.webp",
   },
 ];
 
@@ -91,11 +97,15 @@ export default function BlogPage() {
     <div className="min-h-screen bg-[#F7F9F6]">
       {/* Hero */}
       <section className="relative h-64 md:h-80 bg-[#1C3220] overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1C3220]/60 via-[#1C3220]/40 to-[#1C3220]/90" />
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-[#C9A96E]/10 rounded-full -translate-y-24 translate-x-24 blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#2E6B3E]/20 rounded-full translate-y-16 -translate-x-16 blur-3xl" />
-        </div>
+        <Image
+          src="/blog-hero.webp"
+          alt="Formby pinewoods — local guides and stories"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1C3220]/50 via-[#1C3220]/40 to-[#1C3220]/85" />
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
           <div className="flex items-center gap-2 text-[#C9A96E] mb-3">
