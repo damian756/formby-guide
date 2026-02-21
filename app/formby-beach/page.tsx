@@ -186,11 +186,15 @@ export default function FormbyBeachPage() {
                 <p className="text-sm text-[#1C3220]/70 leading-relaxed">Wide sandy beach backed by significant dunes. Pinewoods behind the dunes. Walk through pines takes ~15 mins. Flat paths. Pushchair-friendly on dry days. Sandy path near beach gets soft after rain.</p>
               </div>
             </div>
-            {/* The Sea */}
-            <div className="bg-gradient-to-br from-[#E8EDE6] to-white rounded-2xl border border-gray-200 p-6">
-              <div className="text-4xl mb-3">🌊</div>
-              <h3 className="font-semibold text-[#1C3220] text-lg mb-2">The Sea</h3>
-              <p className="text-sm text-[#1C3220]/70 leading-relaxed">Irish Sea — don&apos;t expect Mediterranean temps. Swimmable in summer. Significant tidal range. Low tide = lots of sand. High tide = less beach. Check tide times before you go.</p>
+            {/* The Sea — photo card */}
+            <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
+              <div className="relative h-40">
+                <Image src="/formby-beach-sea.jpg" alt="Families walking along Formby Beach at the water's edge with waves and sand dunes" fill className="object-cover object-top" sizes="(max-width: 768px) 100vw, 33vw" />
+              </div>
+              <div className="p-6">
+                <h3 className="font-semibold text-[#1C3220] text-lg mb-2">The Sea</h3>
+                <p className="text-sm text-[#1C3220]/70 leading-relaxed">Irish Sea — don&apos;t expect Mediterranean temps. Swimmable in summer. Significant tidal range. Low tide = lots of sand. High tide = less beach. Check tide times before you go.</p>
+              </div>
             </div>
             {/* Best Times */}
             <div className="bg-gradient-to-br from-[#E8EDE6] to-white rounded-2xl border border-gray-200 p-6">
