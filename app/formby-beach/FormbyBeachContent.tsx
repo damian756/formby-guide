@@ -112,7 +112,7 @@ export default function FormbyBeachContent() {
             {/* The Beach Itself */}
             <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
               <button onClick={() => open(1)} className="relative h-40 w-full block cursor-zoom-in group" aria-label="View full image">
-                <Image src="/formby-beach-shell-close.jpg" alt="Shell on Formby Beach sand" fill className="object-cover object-bottom transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 33vw" />
+                <Image src="/formby-beach-shell-close.jpg" alt="Shell on Formby Beach sand" fill className="object-cover object-top transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 33vw" />
               </button>
               <div className="p-6">
                 <h3 className="font-semibold text-[#1C3220] text-lg mb-2">The Beach Itself</h3>
