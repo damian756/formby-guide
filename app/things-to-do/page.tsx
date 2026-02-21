@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 
 const BASE_URL = "https://www.formbyguide.co.uk";
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "FormbyGuide.co.uk",
     locale: "en_GB",
-    images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "FormbyGuide.co.uk" }],
+    images: [{ url: `${BASE_URL}/things-to-do-hero.webp`, width: 1200, height: 630, alt: "Things to do in Formby — beach, pinewoods and red squirrels" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -137,8 +138,17 @@ export default function ThingsToDoPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#1C3220] text-white py-16 md:py-24">
-        <div className="container mx-auto px-4 max-w-7xl">
+      <section className="relative text-white py-16 md:py-24 overflow-hidden min-h-[420px] flex items-center">
+        <Image
+          src="/things-to-do-hero.webp"
+          alt="Things to do in Formby — beach, pinewoods and red squirrels"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/20" />
+        <div className="relative container mx-auto px-4 max-w-7xl">
           <div className="max-w-3xl">
             <div className="flex items-center gap-2 text-[#C9A96E] text-sm font-medium mb-4">
               <Link href="/" className="hover:text-white transition">FormbyGuide</Link>
