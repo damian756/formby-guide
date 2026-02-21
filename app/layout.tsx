@@ -203,6 +203,15 @@ function Footer() {
           </div>
         </div>
 
+        <div className="border-t border-white/10 pt-6 pb-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/35">
+          <span>Part of the <a href="https://seftoncoast.network" target="_blank" rel="noopener" className="hover:text-white/60 transition">Sefton Coast Network</a></span>
+          <div className="flex gap-5">
+            <a href="https://www.southportguide.co.uk" target="_blank" rel="noopener" className="hover:text-white/60 transition">SouthportGuide</a>
+            <a href="https://www.seftonlinks.com" target="_blank" rel="noopener" className="hover:text-white/60 transition">SeftonLinks</a>
+            <a href="https://seftoncoast.network" target="_blank" rel="noopener" className="hover:text-white/60 transition">SeftonCoast.network</a>
+          </div>
+        </div>
+
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40">
           <p>&copy; 2026 FormbyGuide.co.uk — All rights reserved.</p>
           <div className="flex gap-5">
