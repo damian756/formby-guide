@@ -138,16 +138,16 @@ export default function ThingsToDoPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative text-white py-16 md:py-24 overflow-hidden min-h-[420px] flex items-center">
+      <section className="relative text-white py-16 md:py-24 overflow-hidden min-h-[420px] flex items-center bg-[#1C3220]">
         <Image
           src="/things-to-do-hero2.webp"
           alt="Things to do in Formby — beach, pinewoods and red squirrels"
           fill
           priority
-          className="object-cover object-center"
+          className="object-contain object-center"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
         <div className="relative container mx-auto px-4 max-w-7xl">
           <div className="max-w-3xl">
             <div className="flex items-center gap-2 text-[#C9A96E] text-sm font-medium mb-4">
