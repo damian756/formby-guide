@@ -8,7 +8,7 @@ import "yet-another-react-lightbox/styles.css";
 import { MapPin, Clock, Dog, Compass, Binoculars, Info } from "lucide-react";
 
 const GALLERY = [
-  { src: "/pinewoods-woods.jpg",          alt: "Sunlit Formby pinewoods with walker on path" },
+  { src: "/pinewoods-woods.webp",         alt: "Sunlit Formby pinewoods with walker on path" },
   { src: "/pinewoods-pine-cone.webp",     alt: "Pine cone held up in Formby pinewoods" },
   { src: "/pinewoods-cycling-sign.webp",  alt: "National Trust cycling trails sign in Formby pinewoods" },
   { src: "/pinewoods-woods-tall.webp",    alt: "Looking up at tall pines and mixed woodland in Formby" },
@@ -118,7 +118,7 @@ export default function PinewoodsContent() {
           aria-label="View full image"
         >
           <Image
-            src="/pinewoods-woods.jpg"
+            src="/pinewoods-woods.webp"
             alt="Sunlit Formby pinewoods with walker on path"
             fill
             className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
