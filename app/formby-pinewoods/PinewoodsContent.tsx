@@ -247,14 +247,14 @@ export default function PinewoodsContent() {
           {/* Map photo */}
           <button
           onClick={() => open(4)}
-          className="relative w-full h-56 md:h-72 overflow-hidden rounded-2xl block cursor-zoom-in group mb-6"
+          className="relative w-full h-64 md:h-80 overflow-hidden rounded-2xl block cursor-zoom-in group mb-6"
             aria-label="View full image"
           >
             <Image
               src="/pinewoods-map.webp"
               alt="National Trust Formby site map and information board"
               fill
-              className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+              className="object-cover object-[center_65%] transition-transform duration-500 group-hover:scale-105"
               sizes="100vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
