@@ -140,13 +140,11 @@ function Footer() {
               <p className="text-white/40 text-xs mb-2 uppercase tracking-wider">Sefton Coast Network</p>
               <ul className="space-y-1.5">
                 <li>
-                  <a href="https://www.southportguide.co.uk" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-white/70 hover:text-[#C9A96E] transition">
-                    SouthportGuide.co.uk ↗
-                  </a>
+                  <span className="text-sm font-semibold text-white/40">FormbyGuide.co.uk</span>
                 </li>
                 <li>
-                  <a href="https://www.formbyguide.co.uk" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-white/70 hover:text-[#C9A96E] transition">
-                    FormbyGuide.co.uk ↗
+                  <a href="https://www.southportguide.co.uk" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-white/70 hover:text-[#C9A96E] transition">
+                    SouthportGuide.co.uk ↗
                   </a>
                 </li>
                 <li>
