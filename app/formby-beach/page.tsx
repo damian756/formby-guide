@@ -160,51 +160,73 @@ export default function FormbyBeachPage() {
           </div>
         </section>
 
+        {/* Photo break */}
+        <div className="relative -mx-4 sm:-mx-6 lg:-mx-8 mb-16 h-64 md:h-80 overflow-hidden rounded-2xl">
+          <Image
+            src="/formby-beach-shell.jpg"
+            alt="Formby Beach — shell and sand dunes with the Irish Sea behind"
+            fill
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+        </div>
+
         {/* What to Expect */}
         <section id="conditions" className="mb-16 scroll-mt-20">
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">What the Beach Is Actually Like</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                emoji: "📏",
-                title: "The Beach Itself",
-                desc: "Wide sandy beach backed by significant dunes. Pinewoods behind the dunes. Walk through pines takes ~15 mins. Flat paths. Pushchair-friendly on dry days. Sandy path near beach gets soft after rain.",
-              },
-              {
-                emoji: "🌊",
-                title: "The Sea",
-                desc: "Irish Sea — don't expect Mediterranean temps. Swimmable in summer. Significant tidal range. Low tide = lots of sand. High tide = less beach. Check tide times before you go.",
-              },
-              {
-                emoji: "🌅",
-                title: "Best Times",
-                desc: "Sunny + not too windy + low to mid tide = perfect. West-facing, so sunsets are exceptional. Winter visits are brilliant if you like it quiet and dramatic.",
-              },
-            ].map(({ emoji, title, desc }) => (
-              <div key={title} className="bg-gradient-to-br from-[#E8EDE6] to-white rounded-2xl border border-gray-200 p-6">
-                <div className="text-4xl mb-3">{emoji}</div>
-                <h3 className="font-semibold text-[#1C3220] text-lg mb-2">{title}</h3>
-                <p className="text-sm text-[#1C3220]/70 leading-relaxed">{desc}</p>
+            {/* Beach Itself — photo card */}
+            <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
+              <div className="relative h-40">
+                <Image src="/formby-beach-shell-close.jpg" alt="Shell on Formby Beach sand" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
               </div>
-            ))}
+              <div className="p-6">
+                <h3 className="font-semibold text-[#1C3220] text-lg mb-2">The Beach Itself</h3>
+                <p className="text-sm text-[#1C3220]/70 leading-relaxed">Wide sandy beach backed by significant dunes. Pinewoods behind the dunes. Walk through pines takes ~15 mins. Flat paths. Pushchair-friendly on dry days. Sandy path near beach gets soft after rain.</p>
+              </div>
+            </div>
+            {/* The Sea */}
+            <div className="bg-gradient-to-br from-[#E8EDE6] to-white rounded-2xl border border-gray-200 p-6">
+              <div className="text-4xl mb-3">🌊</div>
+              <h3 className="font-semibold text-[#1C3220] text-lg mb-2">The Sea</h3>
+              <p className="text-sm text-[#1C3220]/70 leading-relaxed">Irish Sea — don&apos;t expect Mediterranean temps. Swimmable in summer. Significant tidal range. Low tide = lots of sand. High tide = less beach. Check tide times before you go.</p>
+            </div>
+            {/* Best Times */}
+            <div className="bg-gradient-to-br from-[#E8EDE6] to-white rounded-2xl border border-gray-200 p-6">
+              <div className="text-4xl mb-3">🌅</div>
+              <h3 className="font-semibold text-[#1C3220] text-lg mb-2">Best Times</h3>
+              <p className="text-sm text-[#1C3220]/70 leading-relaxed">Sunny + not too windy + low to mid tide = perfect. West-facing, so sunsets are exceptional. Winter visits are brilliant if you like it quiet and dramatic.</p>
+            </div>
           </div>
         </section>
 
         {/* Dogs */}
         <section id="dogs" className="mb-16 scroll-mt-20">
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">Dogs at Formby Beach</h2>
-          <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl border border-blue-200 p-6">
-            <div className="flex items-start gap-4">
-              <Dog className="w-8 h-8 text-blue-600 flex-shrink-0 mt-0.5" />
-              <div>
-                <p className="text-lg text-blue-900 mb-4 leading-relaxed">
+          <div className="rounded-2xl border border-blue-200 overflow-hidden">
+            <div className="grid md:grid-cols-2">
+              {/* Photo */}
+              <div className="relative h-64 md:h-auto min-h-[260px]">
+                <Image
+                  src="/formby-beach-paws.jpg"
+                  alt="Dog paws on Formby Beach sand"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+              {/* Info */}
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 flex flex-col justify-center">
+                <Dog className="w-8 h-8 text-blue-600 mb-4" />
+                <p className="text-lg text-blue-900 mb-6 leading-relaxed">
                   Dogs are <strong>welcome year-round</strong> — no seasonal restrictions. This makes Formby one of the better dog beaches on the Sefton Coast.
                 </p>
-                <div className="grid sm:grid-cols-2 gap-4 text-sm">
-                  <div><span className="font-bold text-green-600">✓ On the beach:</span> <span className="text-blue-800">No restrictions</span></div>
-                  <div><span className="font-bold text-green-600">✓ In pinewoods:</span> <span className="text-blue-800">Welcome</span></div>
-                  <div><span className="font-bold text-amber-600">! In squirrel reserve:</span> <span className="text-blue-800">Must be on leads</span></div>
-                  <div><span className="font-bold text-blue-600">💧 Water:</span> <span className="text-blue-800">Bring your own</span></div>
+                <div className="grid grid-cols-1 gap-3 text-sm">
+                  <div className="flex items-center gap-2"><span className="font-bold text-green-600">✓</span> <span className="text-blue-800"><strong>On the beach:</strong> No restrictions</span></div>
+                  <div className="flex items-center gap-2"><span className="font-bold text-green-600">✓</span> <span className="text-blue-800"><strong>In pinewoods:</strong> Welcome</span></div>
+                  <div className="flex items-center gap-2"><span className="font-bold text-amber-600">!</span> <span className="text-blue-800"><strong>In squirrel reserve:</strong> Must be on leads</span></div>
+                  <div className="flex items-center gap-2"><span className="text-blue-600">💧</span> <span className="text-blue-800"><strong>Water:</strong> Bring your own</span></div>
                 </div>
               </div>
             </div>
