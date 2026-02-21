@@ -196,11 +196,15 @@ export default function FormbyBeachPage() {
                 <p className="text-sm text-[#1C3220]/70 leading-relaxed">Irish Sea — don&apos;t expect Mediterranean temps. Swimmable in summer. Significant tidal range. Low tide = lots of sand. High tide = less beach. Check tide times before you go.</p>
               </div>
             </div>
-            {/* Best Times */}
-            <div className="bg-gradient-to-br from-[#E8EDE6] to-white rounded-2xl border border-gray-200 p-6">
-              <div className="text-4xl mb-3">🌅</div>
-              <h3 className="font-semibold text-[#1C3220] text-lg mb-2">Best Times</h3>
-              <p className="text-sm text-[#1C3220]/70 leading-relaxed">Sunny + not too windy + low to mid tide = perfect. West-facing, so sunsets are exceptional. Winter visits are brilliant if you like it quiet and dramatic.</p>
+            {/* Best Times — photo card */}
+            <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
+              <div className="relative h-40">
+                <Image src="/formby-beach-sign.jpg" alt="National Trust Blundell Path sign at Formby Beach showing safety information and tide warnings" fill className="object-cover object-center" sizes="(max-width: 768px) 100vw, 33vw" />
+              </div>
+              <div className="p-6">
+                <h3 className="font-semibold text-[#1C3220] text-lg mb-2">Best Times</h3>
+                <p className="text-sm text-[#1C3220]/70 leading-relaxed">Sunny + not too windy + low to mid tide = perfect. West-facing, so sunsets are exceptional. Winter visits are brilliant if you like it quiet and dramatic.</p>
+              </div>
             </div>
           </div>
         </section>
