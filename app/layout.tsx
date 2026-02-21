@@ -137,10 +137,19 @@ function Footer() {
               Built by Churchtown Media ↗
             </a>
             <div className="mt-4 pt-4 border-t border-white/10">
-              <p className="text-white/40 text-xs mb-2 uppercase tracking-wider">Also by Churchtown Media</p>
-              <a href="https://www.southportguide.co.uk" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-white/70 hover:text-[#C9A96E] transition">
-                SouthportGuide.co.uk ↗
-              </a>
+              <p className="text-white/40 text-xs mb-2 uppercase tracking-wider">Sefton Coast Network</p>
+              <ul className="space-y-1.5">
+                <li>
+                  <a href="https://www.southportguide.co.uk" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-white/70 hover:text-[#C9A96E] transition">
+                    SouthportGuide.co.uk ↗
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.seftonlinks.com" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-white/70 hover:text-[#C9A96E] transition">
+                    SeftonLinks.com ↗
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
 
