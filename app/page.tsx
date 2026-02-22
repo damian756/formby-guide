@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "FormbyGuide.co.uk",
     locale: "en_GB",
-    images: [{ url: "https://www.formbyguide.co.uk/formby-squirrel-hero.webp", width: 1200, height: 630, alt: "Red squirrel at Formby National Trust Reserve" }],
+    images: [{ url: "https://www.formbyguide.co.uk/formby-beach-hero.jpg", width: 1200, height: 630, alt: "Formby Beach — sand dunes and the Irish Sea" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "FormbyGuide.co.uk — Your Local Guide to Formby",
     description: "Beach, pinewoods, red squirrels and the best places to eat in Formby.",
-    images: ["https://www.formbyguide.co.uk/formby-squirrel-hero.webp"],
+    images: ["https://www.formbyguide.co.uk/formby-beach-hero.jpg"],
   },
 };
 
@@ -81,11 +81,11 @@ export default function HomePage() {
 
         <div className="flex flex-col md:flex-row md:min-h-[580px]">
 
-          {/* LEFT: Squirrel hero image */}
+          {/* LEFT: Hero image */}
           <div className="relative w-full h-64 sm:h-80 md:h-auto md:flex-none md:w-[58%] overflow-hidden">
             <Image
-              src="/formby-squirrel-hero.webp"
-              alt="Red squirrel at the Formby Red Squirrel Reserve, National Trust"
+              src="/formby-beach-hero.jpg"
+              alt="Formby Beach — sand dunes and the Irish Sea"
               fill
               priority
               sizes="(max-width: 768px) 100vw, 58vw"
@@ -412,7 +412,7 @@ export default function HomePage() {
             {[
               { src: "/formby-beach-hero.jpg",       alt: "Formby Beach" },
               { src: "/pinewoods-deep-woodland.webp", alt: "Formby pinewoods" },
-              { src: "/squirrels-hero.webp",          alt: "Red squirrel at Formby" },
+              { src: "/squirrel-walk.webp",          alt: "Squirrel trail in Formby pinewoods" },
               { src: "/natterjack-pond.webp",         alt: "Natterjack toad pond" },
               { src: "/beach-horses-ainsdale.webp",   alt: "Horses on Ainsdale Beach" },
               { src: "/pinewoods-acorn.webp",         alt: "Acorn on the woodland floor" },
