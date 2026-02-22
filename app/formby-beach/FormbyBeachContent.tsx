@@ -44,34 +44,40 @@ export default function FormbyBeachContent() {
         </div>
       </section>
 
-      {/* Intro — full-bleed hero strip */}
-      <div className="relative w-full h-72 md:h-96 overflow-hidden">
-        <Image
-          src="/formby-beach-hero.jpg"
-          alt="Formby Beach — wide sand, dunes and the Irish Sea"
-          fill
-          priority
-          className="object-cover object-center"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 container mx-auto px-4 max-w-6xl pb-6">
-          <p className="text-white/90 text-base md:text-lg leading-relaxed max-w-2xl mb-4">
-            Formby Beach is a <strong>proper beach</strong> — wide open sand, dramatic dunes, pinewoods behind you and the Irish Sea in front. No promenade, no amusements, no crowds most of the time.
+      {/* Intro — 2-column block */}
+      <div className="grid md:grid-cols-2 min-h-[340px]">
+        {/* Left — green text panel */}
+        <div className="bg-[#1C3220] flex flex-col justify-center px-8 py-12 md:px-12">
+          <p className="text-white/90 text-lg leading-relaxed mb-5">
+            Formby Beach is a <strong className="text-white">proper beach</strong> — wide open sand, dramatic dunes, pinewoods behind you and the Irish Sea in front. No promenade, no amusements.
           </p>
-          <div className="flex flex-wrap gap-2">
+          <p className="text-white/65 text-sm leading-relaxed mb-8">
+            Busy on a sunny Saturday in summer, almost empty on a Tuesday in October. Both are valid. Just know what you&apos;re walking into.
+          </p>
+          <div className="grid grid-cols-2 gap-3">
             {[
-              { icon: "📍", label: "L37 1YH" },
-              { icon: "🅿️", label: "From £6 via NT app" },
-              { icon: "🐕", label: "Dogs welcome year-round" },
-              { icon: "☕", label: "NT café on site" },
-              { icon: "🌊", label: "No lifeguard — check tides" },
-            ].map(({ icon, label }) => (
-              <span key={label} className="inline-flex items-center gap-1.5 bg-white/15 backdrop-blur-sm border border-white/20 text-white text-xs font-medium px-3 py-1.5 rounded-full">
-                {icon} {label}
-              </span>
+              { icon: "📍", label: "Postcode", val: "L37 1YH" },
+              { icon: "🅿️", label: "Parking", val: "From £6" },
+              { icon: "🐕", label: "Dogs", val: "Year-round" },
+              { icon: "☕", label: "Café", val: "On site" },
+            ].map(({ icon, label, val }) => (
+              <div key={label} className="bg-white/8 rounded-xl px-4 py-3 border border-white/10">
+                <div className="text-xs text-white/45 mb-0.5">{icon} {label}</div>
+                <div className="text-sm font-semibold text-white">{val}</div>
+              </div>
             ))}
           </div>
+        </div>
+
+        {/* Right — beach panorama */}
+        <div className="relative h-64 md:h-auto overflow-hidden">
+          <Image
+            src="/formby-beach-sea.jpg"
+            alt="Families walking along Formby Beach at the water's edge with waves and sand dunes"
+            fill
+            className="object-cover object-[center_60%]"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
         </div>
       </div>
 
