@@ -72,11 +72,6 @@ const CATEGORIES: GalleryCategory[] = [
     id: "wildlife",
     label: "Wildlife & Nature",
     images: [
-      { src: "/squirrels-hero.webp",          alt: "Red squirrel in Formby pinewoods",                                   caption: "Red squirrel — Formby's most famous resident" },
-      { src: "/squirrels-canopy.webp",        alt: "Looking up at pine canopy in Formby pinewoods — red squirrel habitat", caption: "The canopy where the squirrels live" },
-      { src: "/squirrels-beach-pines.webp",   alt: "The transition from Formby pinewoods to beach and dunes",           caption: "Walking from the pines to the sea" },
-      { src: "/pinewoods-card-birds.webp",    alt: "Birdlife in Formby pinewoods",                                      caption: "Formby is excellent for woodland and coastal birds" },
-      { src: "/blog-card-wildlife.webp",      alt: "Wildlife in Formby pinewoods",                                      caption: "Wildlife spotting in the pines" },
       { src: "/natterjack-pond.webp",         alt: "Natterjack toad conservation pond in Formby dune slacks",           caption: "Conservation pond for natterjack toads — Britain's rarest amphibian" },
       { src: "/natterjack-post.webp",         alt: "Natterjack toad information post at Formby",                        caption: "NT information boards explain the conservation work" },
       { src: "/pinewoods-pine-cone.webp",     alt: "Pine cone on the Formby pinewoods floor",                          caption: "Pine cones — the squirrel's favourite food source" },
