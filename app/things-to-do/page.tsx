@@ -38,7 +38,7 @@ const FEATURED = [
     title: "See the red squirrels",
     desc: "Formby is one of the last reliable places in England to see red squirrels in the wild. Go early morning — September to February is peak season, but you've got a decent chance year-round. Even my teenagers stop complaining the minute they spot one.",
     href: "/red-squirrels-formby",
-    image: "/blog-card-wildlife.webp",
+    image: "/squirrels-hero.webp",
     imagePosition: "object-center",
     practical: ["Postcode: L37 1YH", "Book parking via NT app before you leave", "Go early morning for best sightings", "Dogs welcome on leads"],
   },
@@ -49,7 +49,7 @@ const FEATURED = [
     title: "Formby Beach",
     desc: "A proper beach. Wide open sand, dramatic dunes, and the Irish Sea with no theme park attached. Walk through the pinewoods to get there — about 15 minutes from the car park. The moment you come over the dunes is genuinely great.",
     href: "/formby-beach",
-    image: "/ttd-card-beach.webp",
+    image: "/beach-dunes-new.webp",
     imagePosition: "object-center",
     practical: ["Same car park as the squirrel reserve (L37 1YH)", "Dogs welcome year-round, no seasonal restrictions", "No lifeguard — check tides before you go", "Best at low to mid tide for walking"],
   },
@@ -60,7 +60,7 @@ const FEATURED = [
     title: "Walk the pinewoods",
     desc: "Worth the visit even if you don't see a squirrel. Mature Scots and Corsican pines, quiet paths, the sound of the sea getting closer as you walk west. Short woodland loop (30 mins) or all the way to the beach and back (1.5–2 hrs). Flat the whole way.",
     href: "/formby-pinewoods",
-    image: "/blog-card-walks.webp",
+    image: "/pinewoods-hero.webp",
     imagePosition: "object-center",
     practical: ["Starts from NT car park, Victoria Road", "Flat terrain, manageable for most", "Wellies recommended after rain", "Continue to the beach for the full experience"],
   },
@@ -74,7 +74,7 @@ const SECONDARY = [
     title: "Eat in the village",
     desc: "Formby has a genuinely good restaurant scene for a town this size. Emily's is popular and relaxed, Left Bank Brasserie is a proper treat (book ahead for weekends), Don Luigi does solid Italian, and The Sparrowhawk is reliable for a post-walk lunch.",
     href: "/restaurants",
-    image: "/blog-card-food.webp",
+    image: "/about-village-street.webp",
     imagePosition: "object-center",
     practical: ["Book ahead for weekends — the good ones fill up", "Village centre: ~10 mins from NT beach", "Chapel Lane has most of the independents"],
   },
@@ -85,7 +85,7 @@ const SECONDARY = [
     title: "Cycle the Sefton Coast",
     desc: "The Trans Pennine Trail runs along the coast and is cycle-friendly. Southport to Formby without touching a main road — flat, largely traffic-free, and genuinely pretty. Good for families with older children who can manage a few miles.",
     href: "/activities",
-    image: "/ttd-card-cycling.webp",
+    image: "/ainsdale-beach.webp",
     imagePosition: "object-center",
     practical: ["Formby to Southport: approx 8 miles each way", "Coastal sections can be sandy — wide tyres better"],
   },
@@ -96,8 +96,8 @@ const SECONDARY = [
     title: "Walk the Sefton Coastal Path",
     desc: "The Sefton Coastal Path runs from Waterloo (Liverpool) to Southport — Formby sits roughly in the middle. The stretch between Formby and Ainsdale is particularly good. Flat, exposed, sea views the whole way.",
     href: "/nature-walks",
-    image: "/ttd-card-coastal-path.webp",
-    imagePosition: "object-[center_40%]",
+    image: "/squirrels-beach-pines.webp",
+    imagePosition: "object-center",
     practical: ["Park in Formby, walk north to Ainsdale or south to Hightown", "Ainsdale has a station — good for a one-way walk"],
   },
   {
@@ -107,7 +107,7 @@ const SECONDARY = [
     title: "Browse the village shops",
     desc: "A decent run of independent shops along Chapel Lane and the surrounding streets. Not a shopping destination in itself but a pleasant browse after lunch. There are good charity shops too if you're a bargain hunter.",
     href: "/shopping",
-    image: "/ttd-card-shopping.webp",
+    image: "/pinewoods-flowers.webp",
     imagePosition: "object-center",
     practical: ["Chapel Lane and Three Tuns Lane", "Parking in the village centre"],
   },
@@ -124,23 +124,15 @@ const SECONDARY = [
   },
 ];
 
-const QUICK_FACTS = [
-  { label: "Postcode", value: "L37 1YH" },
-  { label: "Parking", value: "From £6 (NT app)" },
-  { label: "NT Members", value: "Free parking" },
-  { label: "Dogs", value: "Welcome everywhere" },
-  { label: "Opening", value: "Dawn to dusk, year-round" },
-  { label: "From Liverpool", value: "~25 min by car" },
-];
 
 export default function ThingsToDoPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative text-white py-20 md:py-28 overflow-hidden min-h-[440px] flex items-center bg-[#1C3220]">
+      <section className="relative text-white py-16 md:py-24 overflow-hidden min-h-[420px] flex items-center">
         <Image
-          src="/things-to-do-hero2.webp"
-          alt="Things to do in Formby — beach, pinewoods and red squirrels"
+          src="/squirrels-beach-pines.webp"
+          alt="The transition from Formby pinewoods to beach and dunes"
           fill
           priority
           className="object-cover object-center"
@@ -154,42 +146,54 @@ export default function ThingsToDoPage() {
               <ChevronRight className="w-4 h-4" />
               <span>Things To Do</span>
             </div>
-            <h1 className="font-display text-4xl md:text-5xl font-bold mb-4 leading-tight">
+            <h1 className="font-display text-4xl md:text-5xl font-bold mb-4 leading-tight drop-shadow-lg">
               Things to do in Formby
             </h1>
-            <p className="text-lg text-white/80 leading-relaxed mb-6">
+            <p className="text-xl text-white/90 leading-relaxed mb-8 drop-shadow">
               Red squirrels, a brilliant beach, ancient pinewoods, and a village with good restaurants. Here&apos;s what&apos;s actually worth your time — from someone who lives here.
             </p>
-            <div className="flex flex-wrap gap-3">
-              {[...FEATURED, ...SECONDARY].map((t) => (
-                <a key={t.id} href={`#${t.id}`} className="text-xs bg-white/15 hover:bg-white/25 text-white px-3 py-1.5 rounded-full transition-colors">
-                  {t.emoji} {t.title}
-                </a>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {[
+                { label: "Postcode",       value: "L37 1YH" },
+                { label: "Parking",        value: "From £6" },
+                { label: "Dogs",           value: "Welcome" },
+                { label: "From Liverpool", value: "~25 mins" },
+              ].map(({ label, value }) => (
+                <div key={label} className="bg-black/30 backdrop-blur rounded-lg p-3 border border-white/20">
+                  <div className="text-xs text-white/60 mb-1">{label}</div>
+                  <div className="text-sm font-bold text-white">{value}</div>
+                </div>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Quick facts bar */}
-      <section className="bg-[#1C3220] border-t border-white/10">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 divide-x divide-white/10">
-            {QUICK_FACTS.map((f) => (
-              <div key={f.label} className="px-4 py-3 text-center">
-                <div className="text-[10px] text-white/50 uppercase tracking-wider mb-0.5">{f.label}</div>
-                <div className="text-sm font-semibold text-white">{f.value}</div>
-              </div>
-            ))}
+      {/* Intro band */}
+      <div className="bg-[#1C3220]">
+        <div className="h-0.5 bg-gradient-to-r from-transparent via-[#C9A96E] to-transparent" />
+        <div className="container mx-auto px-4 max-w-6xl py-10">
+          <div className="md:flex md:items-end md:gap-16">
+            <div className="mb-8 md:mb-0 md:flex-1">
+              <p className="font-display text-2xl md:text-3xl text-white font-semibold leading-snug">
+                Small village, <span className="text-[#C9A96E]">genuinely full day out</span> — the NT site alone is worth the drive from Liverpool or Manchester.
+              </p>
+              <p className="text-white/55 text-sm leading-relaxed mt-4 max-w-xl">
+                Add the village restaurants and a walk through the pines and you won&apos;t be stuck for things to do.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {[...FEATURED, ...SECONDARY].map((t) => (
+                <a key={t.id} href={`#${t.id}`} className="text-xs bg-white/10 hover:bg-white/20 border border-white/15 text-white/80 hover:text-white px-3 py-1.5 rounded-full transition-colors">
+                  {t.emoji} {t.title}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
-      </section>
+      </div>
 
       <div className="container mx-auto px-4 max-w-6xl py-14">
-
-        <p className="text-lg text-[#1C3220]/75 leading-relaxed mb-12 max-w-3xl">
-          Formby is small but punches well above its weight for a day out. The National Trust site alone is worth the drive from Liverpool or Manchester — add the village restaurants and a walk through the pines and you&apos;ve got a genuinely full day.
-        </p>
 
         {/* Featured three */}
         <div className="grid md:grid-cols-3 gap-6 mb-16">
