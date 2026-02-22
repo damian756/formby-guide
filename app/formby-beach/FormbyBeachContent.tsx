@@ -143,38 +143,70 @@ export default function FormbyBeachContent() {
 
         {/* What to Expect */}
         <section id="conditions" className="mb-16 scroll-mt-20">
-          <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">What the Beach Is Actually Like</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {/* The Beach Itself */}
-            <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-              <button onClick={() => open(1)} className="relative h-52 w-full block cursor-zoom-in group" aria-label="View full image">
-                <Image src="/formby-beach-shell-close.jpg" alt="Shell on Formby Beach sand" fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 33vw" />
-              </button>
-              <div className="p-6">
-                <h3 className="font-semibold text-[#1C3220] text-lg mb-2">The Beach Itself</h3>
-                <p className="text-sm text-[#1C3220]/70 leading-relaxed">Wide sandy beach backed by significant dunes. Pinewoods behind the dunes. Walk through pines takes ~15 mins. Flat paths. Pushchair-friendly on dry days. Sandy path near beach gets soft after rain.</p>
+          <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-6">What the Beach Is Actually Like</h2>
+          <div className="grid lg:grid-cols-3 gap-4">
+
+            {/* Feature — left, spans 2 cols, full height */}
+            <button
+              onClick={() => open(2)}
+              className="lg:col-span-2 relative rounded-2xl overflow-hidden cursor-zoom-in group h-72 lg:h-auto lg:min-h-[440px] block w-full text-left"
+              aria-label="View full image"
+            >
+              <Image
+                src="/formby-beach-sea.jpg"
+                alt="Families walking along Formby Beach at the water's edge with waves and sand dunes"
+                fill
+                className="object-cover object-[center_60%] transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 1024px) 100vw, 66vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="font-display font-bold text-white text-xl mb-2">The Beach Itself</h3>
+                <p className="text-white/80 text-sm leading-relaxed max-w-lg">Wide sandy beach backed by significant dunes. Pinewoods behind the dunes — walk through takes ~15 mins. Flat paths, pushchair-friendly on dry days. West-facing, so sunsets are exceptional.</p>
               </div>
-            </div>
-            {/* The Sea */}
-            <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-              <button onClick={() => open(2)} className="relative h-52 w-full block cursor-zoom-in group" aria-label="View full image">
-                <Image src="/formby-beach-sea.jpg" alt="Families walking along Formby Beach at the water's edge with waves and sand dunes" fill className="object-cover object-[center_60%] transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 33vw" />
+            </button>
+
+            {/* Right column — two stacked cards */}
+            <div className="flex flex-col gap-4">
+              <button
+                onClick={() => open(1)}
+                className="relative flex-1 rounded-2xl overflow-hidden cursor-zoom-in group min-h-[200px] block w-full text-left"
+                aria-label="View full image"
+              >
+                <Image
+                  src="/formby-beach-shell-close.jpg"
+                  alt="Shell on Formby Beach sand"
+                  fill
+                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <h3 className="font-display font-bold text-white text-base mb-1">The Sea</h3>
+                  <p className="text-white/75 text-xs leading-relaxed">Irish Sea — don&apos;t expect Mediterranean temps. Significant tidal range. Low tide = plenty of sand. Check tides before you go.</p>
+                </div>
               </button>
-              <div className="p-6">
-                <h3 className="font-semibold text-[#1C3220] text-lg mb-2">The Sea</h3>
-                <p className="text-sm text-[#1C3220]/70 leading-relaxed">Irish Sea — don&apos;t expect Mediterranean temps. Swimmable in summer. Significant tidal range. Low tide = lots of sand. High tide = less beach. Check tide times before you go.</p>
-              </div>
-            </div>
-            {/* Best Times */}
-            <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-              <button onClick={() => open(3)} className="relative h-52 w-full block cursor-zoom-in group" aria-label="View full image">
-                <Image src="/beach-birds.webp" alt="Crows on Formby Beach sand" fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 33vw" />
+
+              <button
+                onClick={() => open(3)}
+                className="relative flex-1 rounded-2xl overflow-hidden cursor-zoom-in group min-h-[200px] block w-full text-left"
+                aria-label="View full image"
+              >
+                <Image
+                  src="/beach-birds.webp"
+                  alt="Crows on Formby Beach sand"
+                  fill
+                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <h3 className="font-display font-bold text-white text-base mb-1">Best Times</h3>
+                  <p className="text-white/75 text-xs leading-relaxed">Low tide + not too windy = perfect. Winter is brilliant if you like it quiet and dramatic. Sunsets here are genuinely special.</p>
+                </div>
               </button>
-              <div className="p-6">
-                <h3 className="font-semibold text-[#1C3220] text-lg mb-2">Best Times</h3>
-                <p className="text-sm text-[#1C3220]/70 leading-relaxed">Sunny + not too windy + low to mid tide = perfect. West-facing, so sunsets are exceptional. Winter visits are brilliant if you like it quiet and dramatic.</p>
-              </div>
             </div>
+
           </div>
         </section>
 
