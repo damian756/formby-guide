@@ -54,15 +54,14 @@ export default function FormbyBeachContent() {
         </div>
 
         {/* NT sign — scene setter */}
-        <div className="relative w-full h-52 overflow-hidden rounded-2xl mb-12">
+        <div className="relative w-full h-52 overflow-hidden rounded-2xl mb-12 bg-[#1C3220]">
           <Image
             src="/nt-formby-sign.webp"
             alt="National Trust Formby sign at the entrance"
             fill
-            className="object-cover object-center"
+            className="object-contain"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
         </div>
 
         {/* Practical Info */}
@@ -70,8 +69,8 @@ export default function FormbyBeachContent() {
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">Practical Information</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm">
-              <div className="relative h-36 overflow-hidden">
-                <Image src="/beach-car-park-sign.webp" alt="Formby Beach National Trust car park sign" fill className="object-cover object-center" sizes="(max-width: 768px) 100vw, 50vw" />
+              <div className="relative h-36 overflow-hidden bg-[#2a2015]">
+                <Image src="/beach-car-park-sign.webp" alt="Formby Beach National Trust car park sign" fill className="object-contain" sizes="(max-width: 768px) 100vw, 50vw" />
               </div>
               <div className="p-6">
                 <div className="flex items-start gap-3 mb-4">
@@ -89,20 +88,25 @@ export default function FormbyBeachContent() {
                 </ul>
               </div>
             </div>
-            <div className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm">
-              <div className="flex items-start gap-3 mb-4">
-                <MapPin className="w-6 h-6 text-[#2E6B3E] flex-shrink-0 mt-0.5" />
-                <div>
-                  <h3 className="font-semibold text-[#1C3220] text-lg">How Far Away?</h3>
-                  <p className="text-sm text-[#1C3220]/60">From nearby cities</p>
-                </div>
+            <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm">
+              <div className="relative h-36 overflow-hidden">
+                <Image src="/beach-how-far-map.webp" alt="Map showing Formby's location on the Sefton Coast between Liverpool and Southport" fill className="object-cover object-center" sizes="(max-width: 768px) 100vw, 50vw" />
               </div>
-              <ul className="space-y-2 text-sm">
-                <li className="flex justify-between"><span className="text-[#1C3220]/70">Liverpool city centre</span> <span className="font-semibold text-[#2E6B3E]">20–25 mins</span></li>
-                <li className="flex justify-between"><span className="text-[#1C3220]/70">Southport</span> <span className="font-semibold text-[#2E6B3E]">10 mins</span></li>
-                <li className="flex justify-between"><span className="text-[#1C3220]/70">Manchester</span> <span className="font-semibold text-[#2E6B3E]">45–60 mins</span></li>
-                <li className="flex justify-between"><span className="text-[#1C3220]/70">Preston</span> <span className="font-semibold text-[#2E6B3E]">35 mins</span></li>
-              </ul>
+              <div className="p-6">
+                <div className="flex items-start gap-3 mb-4">
+                  <MapPin className="w-6 h-6 text-[#2E6B3E] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-semibold text-[#1C3220] text-lg">How Far Away?</h3>
+                    <p className="text-sm text-[#1C3220]/60">From nearby cities</p>
+                  </div>
+                </div>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex justify-between"><span className="text-[#1C3220]/70">Liverpool city centre</span> <span className="font-semibold text-[#2E6B3E]">20–25 mins</span></li>
+                  <li className="flex justify-between"><span className="text-[#1C3220]/70">Southport</span> <span className="font-semibold text-[#2E6B3E]">10 mins</span></li>
+                  <li className="flex justify-between"><span className="text-[#1C3220]/70">Manchester</span> <span className="font-semibold text-[#2E6B3E]">45–60 mins</span></li>
+                  <li className="flex justify-between"><span className="text-[#1C3220]/70">Preston</span> <span className="font-semibold text-[#2E6B3E]">35 mins</span></li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
