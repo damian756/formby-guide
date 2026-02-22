@@ -129,7 +129,7 @@ function Footer() {
       <div className="h-1 bg-gradient-to-r from-[#C9A96E] via-[#E8C87A] to-[#C9A96E]" />
 
       <div className="container mx-auto px-4 py-14 max-w-7xl">
-        <div className="grid md:grid-cols-4 gap-10 mb-12">
+        <div className="grid md:grid-cols-5 gap-10 mb-12">
           <div className="md:col-span-2">
             <div className="font-display text-2xl font-bold text-white mb-3">
               Formby<span className="text-[#C9A96E]">Guide</span>
@@ -162,19 +162,31 @@ function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Explore</h3>
+            <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Places</h3>
             <ul className="space-y-2.5 text-sm">
               {[
-                ["Things To Do", "/things-to-do"],
                 ["Formby Beach", "/formby-beach"],
                 ["Red Squirrels", "/red-squirrels-formby"],
                 ["Pinewoods", "/formby-pinewoods"],
+                ["Things To Do", "/things-to-do"],
                 ["About Formby", "/about-formby"],
-                ["Blog", "/blog"],
-                ["Gallery", "/gallery"],
+              ].map(([label, href]) => (
+                <li key={href}>
+                  <Link href={href} className="text-white/60 hover:text-[#C9A96E] transition">{label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Directory</h3>
+            <ul className="space-y-2.5 text-sm">
+              {[
                 ["Restaurants", "/restaurants"],
                 ["Pubs & Bars", "/pubs"],
                 ["Cafes", "/cafes"],
+                ["Blog", "/blog"],
+                ["Gallery", "/gallery"],
               ].map(([label, href]) => (
                 <li key={href}>
                   <Link href={href} className="text-white/60 hover:text-[#C9A96E] transition">{label}</Link>

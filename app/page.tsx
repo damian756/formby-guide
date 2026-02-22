@@ -395,6 +395,58 @@ export default function HomePage() {
       </section>
 
       {/* ══════════════════════════════════════════
+          GALLERY STRIP
+      ══════════════════════════════════════════ */}
+      <section className="bg-[#E8EDE6]">
+        <div className="container mx-auto px-4 max-w-7xl py-14">
+          <div className="flex items-end justify-between mb-6">
+            <div>
+              <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-1">Photos from Formby</h2>
+              <p className="text-[#1C3220]/50 text-sm">Real shots — no stock, no AI. All taken locally.</p>
+            </div>
+            <Link href="/gallery" className="text-sm font-medium text-[#2E6B3E] hover:text-[#1C3220] transition-colors hidden sm:block">
+              Full gallery →
+            </Link>
+          </div>
+          <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-2">
+            {[
+              { src: "/formby-beach-hero.jpg",       alt: "Formby Beach" },
+              { src: "/pinewoods-deep-woodland.webp", alt: "Formby pinewoods" },
+              { src: "/squirrels-hero.webp",          alt: "Red squirrel at Formby" },
+              { src: "/natterjack-pond.webp",         alt: "Natterjack toad pond" },
+              { src: "/beach-horses-ainsdale.webp",   alt: "Horses on Ainsdale Beach" },
+              { src: "/pinewoods-acorn.webp",         alt: "Acorn on the woodland floor" },
+              { src: "/beach-dunes-new.webp",         alt: "Formby sand dunes" },
+              { src: "/pinewoods-fungus-moss.webp",   alt: "Fungi in the pinewoods" },
+              { src: "/beach-birds.webp",             alt: "Birds on Formby Beach" },
+              { src: "/pinewoods-tall-tree.webp",     alt: "Scots pine" },
+              { src: "/nt-formby-sign.webp",          alt: "National Trust Formby" },
+              { src: "/beach-dunes-skull.webp",       alt: "Wild dunes" },
+            ].map((img) => (
+              <Link
+                key={img.src}
+                href="/gallery"
+                className="group relative aspect-square overflow-hidden rounded-xl block"
+                aria-label={img.alt}
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 640px) 33vw, (max-width: 1024px) 25vw, 16vw"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-xl" />
+              </Link>
+            ))}
+          </div>
+          <div className="mt-5 text-center sm:hidden">
+            <Link href="/gallery" className="text-sm text-[#2E6B3E] font-medium">Browse the full gallery →</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════
           LIST YOUR BUSINESS CTA
       ══════════════════════════════════════════ */}
       <section className="container mx-auto px-4 max-w-7xl py-14">

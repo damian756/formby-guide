@@ -52,8 +52,6 @@ const CATEGORIES: GalleryCategory[] = [
       { src: "/pinewoods-fungus.webp",        alt: "Fungus growing on a tree in Formby pinewoods",                       caption: "The variety of fungi here is an indicator of ancient woodland" },
       { src: "/pinewoods-fungus-moss-2.webp", alt: "Fungi and moss close-up in Formby pinewoods",                       caption: "Woodland floor detail" },
       { src: "/pinewoods-acorn.webp",         alt: "Acorn close-up on the Formby pinewoods floor",                      caption: "Oak and pine side by side in the mixed woodland sections" },
-      { src: "/pinewoods-card-sunset.webp",   alt: "Sunset light through Formby pinewoods",                             caption: "Late afternoon light filtering through the pines" },
-      { src: "/pinewoods-card-wildflowers.webp", alt: "Wildflowers in Formby pinewoods",                                caption: "Woodland wildflowers" },
     ],
   },
   {
