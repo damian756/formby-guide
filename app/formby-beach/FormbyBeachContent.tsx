@@ -44,40 +44,33 @@ export default function FormbyBeachContent() {
         </div>
       </section>
 
-      {/* Intro — 2-column block */}
-      <div className="grid md:grid-cols-2 min-h-[340px]">
-        {/* Left — green text panel */}
-        <div className="bg-[#1C3220] flex flex-col justify-center px-8 py-12 md:px-12">
-          <p className="text-white/90 text-lg leading-relaxed mb-5">
-            Formby Beach is a <strong className="text-white">proper beach</strong> — wide open sand, dramatic dunes, pinewoods behind you and the Irish Sea in front. No promenade, no amusements.
-          </p>
-          <p className="text-white/65 text-sm leading-relaxed mb-8">
-            Busy on a sunny Saturday in summer, almost empty on a Tuesday in October. Both are valid. Just know what you&apos;re walking into.
-          </p>
-          <div className="grid grid-cols-2 gap-3">
-            {[
-              { icon: "📍", label: "Postcode", val: "L37 1YH" },
-              { icon: "🅿️", label: "Parking", val: "From £6" },
-              { icon: "🐕", label: "Dogs", val: "Year-round" },
-              { icon: "☕", label: "Café", val: "On site" },
-            ].map(({ icon, label, val }) => (
-              <div key={label} className="bg-white/8 rounded-xl px-4 py-3 border border-white/10">
-                <div className="text-xs text-white/45 mb-0.5">{icon} {label}</div>
-                <div className="text-sm font-semibold text-white">{val}</div>
-              </div>
-            ))}
+      {/* Intro */}
+      <div className="bg-[#1C3220]">
+        <div className="h-0.5 bg-gradient-to-r from-transparent via-[#C9A96E] to-transparent" />
+        <div className="container mx-auto px-4 max-w-6xl py-10">
+          <div className="md:flex md:items-end md:gap-16">
+            <div className="mb-8 md:mb-0 md:flex-1">
+              <p className="font-display text-2xl md:text-3xl text-white font-semibold leading-snug">
+                A <span className="text-[#C9A96E]">proper beach</span> — wide open sand, dramatic dunes, pinewoods behind you and the Irish Sea in front.
+              </p>
+              <p className="text-white/55 text-sm leading-relaxed mt-4 max-w-xl">
+                Busy on a sunny Saturday in summer. Almost empty on a Tuesday in October. Both are valid. No promenade, no amusements — just beach.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3 md:flex-none">
+              {[
+                { icon: "📍", label: "Postcode", val: "L37 1YH" },
+                { icon: "🅿️", label: "Parking", val: "From £6" },
+                { icon: "🐕", label: "Dogs", val: "Year-round" },
+                { icon: "☕", label: "Café", val: "On site" },
+              ].map(({ icon, label, val }) => (
+                <div key={label} className="bg-white/8 rounded-xl px-4 py-3 border border-white/10 min-w-[110px]">
+                  <div className="text-[10px] text-white/40 uppercase tracking-wider mb-1">{icon} {label}</div>
+                  <div className="text-sm font-bold text-white">{val}</div>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-
-        {/* Right — beach panorama */}
-        <div className="relative h-64 md:h-auto overflow-hidden">
-          <Image
-            src="/formby-beach-sea.jpg"
-            alt="Families walking along Formby Beach at the water's edge with waves and sand dunes"
-            fill
-            className="object-cover object-[center_60%]"
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
         </div>
       </div>
 
