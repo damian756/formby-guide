@@ -59,6 +59,36 @@ export default function AboutFormbyPage() {
         </div>
       </section>
 
+      {/* Intro band */}
+      <div className="bg-[#1C3220]">
+        <div className="h-0.5 bg-gradient-to-r from-transparent via-[#C9A96E] to-transparent" />
+        <div className="container mx-auto px-4 max-w-6xl py-10">
+          <div className="md:flex md:items-end md:gap-16">
+            <div className="mb-8 md:mb-0 md:flex-1">
+              <p className="font-display text-2xl md:text-3xl text-white font-semibold leading-snug">
+                A <span className="text-[#C9A96E]">quiet, affluent village</span> on the Sefton Coast — 20 minutes from Liverpool, with one of England&apos;s last red squirrel colonies on its doorstep.
+              </p>
+              <p className="text-white/55 text-sm leading-relaxed mt-4 max-w-xl">
+                Not a tourist town. No pier, no amusements. What there is: good restaurants, ancient pinewoods, a National Trust beach, and the kind of place you&apos;ll want to come back to.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3 md:flex-none">
+              {[
+                { icon: "📍", label: "Postcode",  val: "L37" },
+                { icon: "🚆", label: "From Liverpool", val: "~30 mins" },
+                { icon: "👥", label: "Population", val: "~25,000" },
+                { icon: "🐿️", label: "Known for",  val: "Red squirrels" },
+              ].map(({ icon, label, val }) => (
+                <div key={label} className="bg-white/8 rounded-xl px-4 py-3 border border-white/10 min-w-[110px]">
+                  <div className="text-[10px] text-white/40 uppercase tracking-wider mb-1">{icon} {label}</div>
+                  <div className="text-sm font-bold text-white">{val}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="container mx-auto px-4 max-w-4xl py-12">
 
         {/* Where is Formby */}
@@ -212,22 +242,22 @@ export default function AboutFormbyPage() {
           </p>
         </section>
 
-        {/* Start exploring — image cards */}
+        {/* Explore More */}
         <section className="mt-16 pt-12 border-t border-[#1C3220]/10">
-          <h2 className="font-display text-2xl font-bold text-[#1C3220] mb-6">Start exploring Formby</h2>
-          <div className="grid sm:grid-cols-2 gap-4">
+          <h2 className="font-display text-2xl font-bold text-[#1C3220] mb-6">Explore More Formby</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { label: "Red Squirrels", href: "/red-squirrels-formby", desc: "Where to see them and what to expect.", image: "/squirrels-hero.webp" },
-              { label: "Formby Beach",  href: "/formby-beach",         desc: "Parking, postcode, dogs and more.",   image: "/ttd-card-beach.webp" },
-              { label: "Things To Do",  href: "/things-to-do",         desc: "The full guide to a day in Formby.", image: "/ttd-card-coastal-path.webp" },
-              { label: "Restaurants",   href: "/restaurants",           desc: "Where to eat in the village.",       image: "/blog-card-walks.webp" },
+              { label: "Red Squirrels", href: "/red-squirrels-formby", desc: "Where to see them and what to expect.",     image: "/squirrels-hero.webp" },
+              { label: "Formby Beach",  href: "/formby-beach",         desc: "Parking, postcode, dogs and more.",         image: "/formby-beach-hero.jpg" },
+              { label: "Pinewoods",     href: "/formby-pinewoods",     desc: "Ancient woodland walks to the sea.",        image: "/pinewoods-deep-woodland.webp" },
+              { label: "Things To Do",  href: "/things-to-do",         desc: "The full guide to a day in Formby.",        image: "/ttd-card-coastal-path.webp" },
             ].map((l) => (
-              <Link key={l.href} href={l.href} className="group relative h-40 rounded-2xl overflow-hidden block">
-                <Image src={l.image} alt={l.label} fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 50vw" />
+              <Link key={l.href} href={l.href} className="group relative h-48 rounded-2xl overflow-hidden block">
+                <Image src={l.image} alt={l.label} fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                <div className="absolute bottom-4 left-4">
+                <div className="absolute bottom-4 left-4 right-4">
                   <p className="text-white font-display font-bold text-base">{l.label} →</p>
-                  <p className="text-white/70 text-xs">{l.desc}</p>
+                  <p className="text-white/70 text-xs mt-0.5">{l.desc}</p>
                 </div>
               </Link>
             ))}

@@ -325,26 +325,25 @@ export default function PinewoodsContent() {
           </div>
         </section>
 
-        {/* Related Links — image cards */}
+        {/* Explore More */}
         <section className="mt-16 pt-12 border-t border-[#1C3220]/10">
           <h3 className="font-display text-2xl font-bold text-[#1C3220] mb-6">Explore More Formby</h3>
-          <div className="grid sm:grid-cols-2 gap-4">
-            <Link href="/red-squirrels-formby" className="group relative h-48 rounded-2xl overflow-hidden block">
-              <Image src="/squirrels-hero.webp" alt="Red squirrels in Formby" fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 50vw" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-4 left-4">
-                <p className="text-white font-display font-bold text-lg">Red Squirrels</p>
-                <p className="text-white/70 text-sm">One of the best places in England to see them.</p>
-              </div>
-            </Link>
-            <Link href="/formby-beach" className="group relative h-48 rounded-2xl overflow-hidden block">
-              <Image src="/ttd-card-beach.webp" alt="Formby Beach" fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 50vw" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-4 left-4">
-                <p className="text-white font-display font-bold text-lg">Formby Beach</p>
-                <p className="text-white/70 text-sm">Wide sand, dramatic dunes, and the Irish Sea.</p>
-              </div>
-            </Link>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { href: "/red-squirrels-formby", label: "Red Squirrels",  desc: "One of the best places in England to see them.",   image: "/squirrels-hero.webp" },
+              { href: "/formby-beach",          label: "Formby Beach",   desc: "Wide sand, dramatic dunes, and the Irish Sea.",    image: "/formby-beach-hero.jpg" },
+              { href: "/things-to-do",          label: "Things To Do",   desc: "The full guide to a day out in Formby.",           image: "/ttd-card-coastal-path.webp" },
+              { href: "/about-formby",          label: "About Formby",   desc: "Where it is, what it's like, and why visit.",      image: "/about-formby-hero.webp" },
+            ].map((l) => (
+              <Link key={l.href} href={l.href} className="group relative h-48 rounded-2xl overflow-hidden block">
+                <Image src={l.image} alt={l.label} fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="text-white font-display font-bold text-base">{l.label} →</p>
+                  <p className="text-white/70 text-xs mt-0.5">{l.desc}</p>
+                </div>
+              </Link>
+            ))}
           </div>
         </section>
 

@@ -79,6 +79,36 @@ export default function RedSquirrelsPage() {
         </div>
       </section>
 
+      {/* Intro band */}
+      <div className="bg-[#1C3220]">
+        <div className="h-0.5 bg-gradient-to-r from-transparent via-[#C9A96E] to-transparent" />
+        <div className="container mx-auto px-4 max-w-6xl py-10">
+          <div className="md:flex md:items-end md:gap-16">
+            <div className="mb-8 md:mb-0 md:flex-1">
+              <p className="font-display text-2xl md:text-3xl text-white font-semibold leading-snug">
+                One of the <span className="text-[#C9A96E]">last reliable places</span> in England to see red squirrels in the wild.
+              </p>
+              <p className="text-white/55 text-sm leading-relaxed mt-4 max-w-xl">
+                They&apos;re not tame and nobody feeds them on cue — but show up at the right time, move quietly, and you&apos;ve got a decent chance. On a good autumn morning we&apos;ve counted half a dozen from a single trail.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3 md:flex-none">
+              {[
+                { icon: "📍", label: "Postcode", val: "L37 1YH" },
+                { icon: "📅", label: "Best months", val: "Sept – Feb" },
+                { icon: "🐕", label: "Dogs", val: "On leads" },
+                { icon: "🅿️", label: "Parking", val: "From £6" },
+              ].map(({ icon, label, val }) => (
+                <div key={label} className="bg-white/8 rounded-xl px-4 py-3 border border-white/10 min-w-[110px]">
+                  <div className="text-[10px] text-white/40 uppercase tracking-wider mb-1">{icon} {label}</div>
+                  <div className="text-sm font-bold text-white">{val}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Quick nav */}
       <section className="bg-[#E8EDE6] border-b border-[#1C3220]/10 sticky top-16 z-40">
         <div className="container mx-auto px-4 max-w-6xl py-3">
@@ -99,13 +129,6 @@ export default function RedSquirrelsPage() {
       </section>
 
       <div className="container mx-auto px-4 max-w-6xl py-12">
-
-        {/* Intro */}
-        <div className="max-w-3xl mb-12">
-          <p className="text-lg text-[#1C3220]/80 leading-relaxed">
-            Formby is one of only a handful of places left in England where you can genuinely say &ldquo;we&apos;re going to see red squirrels&rdquo; and mean it. The National Trust pinewoods are home to one of the largest remaining colonies in the north of England. They&apos;re not tame, nobody feeds them on cue — but if you show up at the right time and move quietly, you&apos;ve got a decent chance. On a good autumn morning we&apos;ve counted half a dozen from a single trail.
-          </p>
-        </div>
 
         {/* Best Time */}
         <section id="when" className="mb-16 scroll-mt-20">
@@ -284,26 +307,25 @@ export default function RedSquirrelsPage() {
           </div>
         </section>
 
-        {/* Related Links — with images */}
+        {/* Explore More */}
         <section className="mt-16 pt-12 border-t border-[#1C3220]/10">
           <h3 className="font-display text-2xl font-bold text-[#1C3220] mb-6">Explore More Formby</h3>
-          <div className="grid sm:grid-cols-2 gap-4">
-            <Link href="/formby-beach" className="group relative h-48 rounded-2xl overflow-hidden block">
-              <Image src="/ttd-card-beach.webp" alt="Formby Beach" fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 50vw" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-4 left-4">
-                <p className="text-white font-display font-bold text-lg">Formby Beach</p>
-                <p className="text-white/70 text-sm">Wide sand, dramatic dunes, and the Irish Sea.</p>
-              </div>
-            </Link>
-            <Link href="/formby-pinewoods" className="group relative h-48 rounded-2xl overflow-hidden block">
-              <Image src="/blog-card-walks.webp" alt="Formby Pinewoods" fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 50vw" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-4 left-4">
-                <p className="text-white font-display font-bold text-lg">Pinewoods Walks</p>
-                <p className="text-white/70 text-sm">Ancient woodland paths to the sea.</p>
-              </div>
-            </Link>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { href: "/formby-beach",     label: "Formby Beach",    desc: "Wide sand, dramatic dunes, and the Irish Sea.",        image: "/formby-beach-hero.jpg" },
+              { href: "/formby-pinewoods", label: "Pinewoods Walks", desc: "Ancient woodland paths running to the sea.",           image: "/pinewoods-deep-woodland.webp" },
+              { href: "/things-to-do",     label: "Things To Do",    desc: "The full guide to a day out in Formby.",               image: "/ttd-card-coastal-path.webp" },
+              { href: "/about-formby",     label: "About Formby",    desc: "Where it is, what it's like, and why visit.",          image: "/about-formby-hero.webp" },
+            ].map((l) => (
+              <Link key={l.href} href={l.href} className="group relative h-48 rounded-2xl overflow-hidden block">
+                <Image src={l.image} alt={l.label} fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="text-white font-display font-bold text-base">{l.label} →</p>
+                  <p className="text-white/70 text-xs mt-0.5">{l.desc}</p>
+                </div>
+              </Link>
+            ))}
           </div>
         </section>
 

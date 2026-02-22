@@ -78,6 +78,36 @@ export default function PinewoodsPage() {
         </div>
       </section>
 
+      {/* Intro band */}
+      <div className="bg-[#1C3220]">
+        <div className="h-0.5 bg-gradient-to-r from-transparent via-[#C9A96E] to-transparent" />
+        <div className="container mx-auto px-4 max-w-6xl py-10">
+          <div className="md:flex md:items-end md:gap-16">
+            <div className="mb-8 md:mb-0 md:flex-1">
+              <p className="font-display text-2xl md:text-3xl text-white font-semibold leading-snug">
+                Ancient coastal woodland — <span className="text-[#C9A96E]">red squirrels overhead</span>, walks through the pines, the sea at the end.
+              </p>
+              <p className="text-white/55 text-sm leading-relaxed mt-4 max-w-xl">
+                Walk from the car park through ancient pines to Formby Beach in under 20 minutes. Or spend a morning on the squirrel trails. Flat throughout, manageable for all ages.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3 md:flex-none">
+              {[
+                { icon: "📍", label: "Postcode",  val: "L37 1YH" },
+                { icon: "⏱️", label: "Walk time", val: "30 min – 3 hrs" },
+                { icon: "🐕", label: "Dogs",      val: "Welcome" },
+                { icon: "🅿️", label: "Parking",   val: "From £6" },
+              ].map(({ icon, label, val }) => (
+                <div key={label} className="bg-white/8 rounded-xl px-4 py-3 border border-white/10 min-w-[110px]">
+                  <div className="text-[10px] text-white/40 uppercase tracking-wider mb-1">{icon} {label}</div>
+                  <div className="text-sm font-bold text-white">{val}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
       <PinewoodsContent />
     </>
   );
