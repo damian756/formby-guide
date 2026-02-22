@@ -312,14 +312,14 @@ export default function PinewoodsContent() {
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">Plan Your Visit</h2>
           <button
             onClick={() => open(4)}
-            className="relative w-full h-64 md:h-80 overflow-hidden rounded-2xl block cursor-zoom-in group mb-6 bg-[#1C3220]"
+            className="relative w-full h-80 md:h-96 overflow-hidden rounded-2xl block cursor-zoom-in group mb-6"
             aria-label="View full image"
           >
             <Image
               src="/pinewoods-map-sign.webp"
               alt="National Trust Formby site map and information board"
               fill
-              className="object-contain transition-transform duration-500 group-hover:scale-105"
+              className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
               sizes="100vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
