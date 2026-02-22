@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Calendar, Clock, ArrowRight, CheckCircle, AlertCircle, MapPin, TreePine } from "lucide-react";
-import Image from "next/image";
 import ClareBio from "../ClareBio";
 
 const BASE_URL = "https://www.formbyguide.co.uk";
