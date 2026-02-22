@@ -73,7 +73,7 @@ export default function FormbyBeachContent() {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm">
               <div className="relative h-48 overflow-hidden">
-                <Image src="/beach-car-park-sign.webp" alt="Formby Beach National Trust car park sign" fill className="object-cover object-center" sizes="(max-width: 768px) 100vw, 50vw" />
+                <Image src="/beach-car-park-sign.webp" alt="Formby Beach National Trust car park sign" fill className="object-cover object-center scale-95" sizes="(max-width: 768px) 100vw, 50vw" />
               </div>
               <div className="p-6">
                 <div className="flex items-start gap-3 mb-4">
@@ -92,7 +92,7 @@ export default function FormbyBeachContent() {
               </div>
             </div>
             <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm">
-              <div className="relative h-36 overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
                 <Image src="/beach-how-far-map.webp" alt="Map showing Formby's location on the Sefton Coast between Liverpool and Southport" fill className="object-cover object-center" sizes="(max-width: 768px) 100vw, 50vw" />
               </div>
               <div className="p-6">
