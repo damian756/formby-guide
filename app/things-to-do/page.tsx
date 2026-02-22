@@ -173,8 +173,8 @@ export default function ThingsToDoPage() {
       <div className="bg-[#1C3220]">
         <div className="h-0.5 bg-gradient-to-r from-transparent via-[#C9A96E] to-transparent" />
         <div className="container mx-auto px-4 max-w-6xl py-10">
-          <div className="md:flex md:items-end md:gap-16 md:flex-nowrap">
-            <div className="mb-6 md:mb-0 md:flex-1 md:min-w-0">
+          <div className="md:flex md:items-end md:gap-16">
+            <div className="mb-8 md:mb-0 md:flex-1">
               <p className="font-display text-2xl md:text-3xl text-white font-semibold leading-snug">
                 Small village, <span className="text-[#C9A96E]">genuinely full day out</span> — the NT site alone is worth the drive from Liverpool or Manchester.
               </p>
@@ -182,16 +182,35 @@ export default function ThingsToDoPage() {
                 Add the village restaurants and a walk through the pines and you won&apos;t be stuck for things to do.
               </p>
             </div>
-            <div className="flex flex-wrap gap-2 md:flex-shrink-0">
-              {[...FEATURED, ...SECONDARY].map((t) => (
-                <a key={t.id} href={`#${t.id}`} className="text-xs bg-white/10 hover:bg-white/20 border border-white/15 text-white/80 hover:text-white px-3 py-1.5 rounded-full transition-colors whitespace-nowrap">
-                  {t.emoji} {t.title}
-                </a>
+            <div className="flex flex-wrap gap-3 md:flex-none">
+              {[
+                { icon: "📍", label: "Postcode", val: "L37 1YH" },
+                { icon: "🅿️", label: "Parking", val: "From £6" },
+                { icon: "🐕", label: "Dogs", val: "Welcome" },
+                { icon: "🚗", label: "From Liverpool", val: "~25 mins" },
+              ].map(({ icon, label, val }) => (
+                <div key={label} className="bg-white/8 rounded-xl px-4 py-3 border border-white/10 min-w-[110px]">
+                  <div className="text-[10px] text-white/40 uppercase tracking-wider mb-1">{icon} {label}</div>
+                  <div className="text-sm font-bold text-white">{val}</div>
+                </div>
               ))}
             </div>
           </div>
         </div>
       </div>
+
+      {/* Quick nav — jump links */}
+      <section className="bg-[#E8EDE6] border-b border-[#1C3220]/10 sticky top-16 z-40">
+        <div className="container mx-auto px-4 max-w-6xl py-3">
+          <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+            {[...FEATURED, ...SECONDARY].map((t) => (
+              <a key={t.id} href={`#${t.id}`} className="text-[#1C3220]/70 hover:text-[#2E6B3E] transition-colors font-medium">
+                {t.emoji} {t.title}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <div className="container mx-auto px-4 max-w-6xl py-14">
 
