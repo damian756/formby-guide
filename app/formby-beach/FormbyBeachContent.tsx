@@ -46,23 +46,25 @@ export default function FormbyBeachContent() {
 
       <div className="container mx-auto px-4 max-w-6xl py-12">
 
-        {/* Intro prose */}
-        <div className="max-w-3xl mb-8 prose prose-lg">
-          <p className="text-lg text-[#1C3220]/80 leading-relaxed">
-            Formby Beach is a <strong>proper beach</strong> — not a promenade, not a resort. Wide open sand, dramatic dunes, pinewoods at your back, and the Irish Sea in front. On a sunny Saturday in summer it gets busy. On a Tuesday morning in October it&apos;s almost empty. Both are valid. Know what you&apos;re walking into.
-          </p>
-        </div>
-
-        {/* NT sign — scene setter */}
-        <div className="relative w-full h-72 md:h-80 overflow-hidden rounded-2xl mb-12">
-          <Image
-            src="/nt-formby-sign.webp"
-            alt="National Trust Formby sign at the entrance"
-            fill
-            className="object-cover object-center"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+        {/* Intro — image + text side by side */}
+        <div className="grid md:grid-cols-2 gap-8 items-center mb-14">
+          <div className="relative aspect-square overflow-hidden rounded-2xl">
+            <Image
+              src="/nt-formby-sign.webp"
+              alt="National Trust Formby sign at the entrance"
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+          <div className="prose prose-lg">
+            <p className="text-lg text-[#1C3220]/80 leading-relaxed">
+              Formby Beach is a <strong>proper beach</strong> — not a promenade, not a resort. Wide open sand, dramatic dunes, pinewoods at your back, and the Irish Sea in front.
+            </p>
+            <p className="text-lg text-[#1C3220]/80 leading-relaxed mt-4">
+              On a sunny Saturday in summer it gets busy. On a Tuesday morning in October it&apos;s almost empty. Both are valid. Know what you&apos;re walking into.
+            </p>
+          </div>
         </div>
 
         {/* Practical Info */}
