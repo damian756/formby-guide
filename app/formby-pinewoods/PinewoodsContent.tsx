@@ -265,22 +265,6 @@ export default function PinewoodsContent() {
           </div>
         </section>
 
-        {/* Photo break — tall pine */}
-        <button
-          onClick={() => open(2)}
-          className="relative -mx-4 sm:-mx-6 lg:-mx-8 mb-16 h-64 md:h-80 overflow-hidden rounded-2xl w-[calc(100%+2rem)] sm:w-[calc(100%+3rem)] lg:w-[calc(100%+4rem)] block cursor-zoom-in group"
-          aria-label="View full image"
-        >
-          <Image
-            src="/pinewoods-tall-tree.webp"
-            alt="Tall Scots pine in Formby pinewoods"
-            fill
-            className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-        </button>
-
         {/* History */}
         <section id="history" className="mb-16 scroll-mt-20">
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">A Bit of History</h2>
