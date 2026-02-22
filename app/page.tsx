@@ -84,8 +84,8 @@ export default function HomePage() {
           {/* LEFT: Hero image */}
           <div className="relative w-full h-64 sm:h-80 md:h-auto md:flex-none md:w-[58%] overflow-hidden">
             <Image
-              src="/formby-beach-hero.jpg"
-              alt="Formby Beach — sand dunes and the Irish Sea"
+              src="/formby-squirrel-hero.webp"
+              alt="Red squirrel at the Formby Red Squirrel Reserve, National Trust"
               fill
               priority
               sizes="(max-width: 768px) 100vw, 58vw"
