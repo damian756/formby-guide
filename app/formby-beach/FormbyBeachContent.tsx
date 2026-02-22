@@ -53,16 +53,16 @@ export default function FormbyBeachContent() {
               src="/nt-formby-sign.webp"
               alt="National Trust Formby sign at the entrance"
               fill
-              className="object-cover object-center"
+              className="object-cover object-center scale-95"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
-          <div className="prose prose-lg">
-            <p className="text-lg text-[#1C3220]/80 leading-relaxed">
-              Formby Beach is a <strong>proper beach</strong> — not a promenade, not a resort. Wide open sand, dramatic dunes, pinewoods at your back, and the Irish Sea in front.
+          <div>
+            <p className="text-[#1C3220]/80 leading-relaxed">
+              Formby Beach is a <strong>proper beach</strong> — wide sand, dunes, pinewoods behind you, the Irish Sea ahead. No promenade, no amusements.
             </p>
-            <p className="text-lg text-[#1C3220]/80 leading-relaxed mt-4">
-              On a sunny Saturday in summer it gets busy. On a Tuesday morning in October it&apos;s almost empty. Both are valid. Know what you&apos;re walking into.
+            <p className="text-[#1C3220]/80 leading-relaxed mt-4">
+              Busy on a sunny Saturday; almost empty on a Tuesday in October. Both work. Just know what you&apos;re walking into.
             </p>
           </div>
         </div>
@@ -285,20 +285,25 @@ export default function FormbyBeachContent() {
           </div>
         </section>
 
-        {/* Related Links */}
+        {/* Related Links — image cards like about-formby */}
         <section className="mt-16 pt-12 border-t border-[#1C3220]/10">
           <h3 className="font-display text-2xl font-bold text-[#1C3220] mb-6">Explore More Formby</h3>
           <div className="grid sm:grid-cols-2 gap-4">
-            <Link href="/red-squirrels-formby" className="group bg-white rounded-xl border border-gray-100 p-6 hover:border-[#2E6B3E]/30 hover:shadow-sm transition">
-              <div className="text-3xl mb-2">🐿️</div>
-              <h4 className="font-semibold text-[#1C3220] group-hover:text-[#2E6B3E] transition">Red Squirrels</h4>
-              <p className="text-sm text-[#1C3220]/60">One of the best places in England to see them in the wild.</p>
-            </Link>
-            <Link href="/formby-pinewoods" className="group bg-white rounded-xl border border-gray-100 p-6 hover:border-[#2E6B3E]/30 hover:shadow-sm transition">
-              <div className="text-3xl mb-2">🌲</div>
-              <h4 className="font-semibold text-[#1C3220] group-hover:text-[#2E6B3E] transition">Pinewoods Walks</h4>
-              <p className="text-sm text-[#1C3220]/60">Ancient woodland and coastal paths.</p>
-            </Link>
+            {[
+              { label: "Red Squirrels", href: "/red-squirrels-formby", desc: "One of the best places in England to see them in the wild.", image: "/squirrels-hero.webp" },
+              { label: "Pinewoods Walks", href: "/formby-pinewoods", desc: "Ancient woodland and coastal paths.", image: "/ttd-card-coastal-path.webp" },
+              { label: "Things To Do", href: "/things-to-do", desc: "The full guide to a day in Formby.", image: "/ttd-card-beach.webp" },
+              { label: "About Formby", href: "/about-formby", desc: "Where it is, what it&apos;s like, and why visit.", image: "/about-formby-hero.webp" },
+            ].map((l) => (
+              <Link key={l.href} href={l.href} className="group relative h-40 rounded-2xl overflow-hidden block">
+                <Image src={l.image} alt={l.label} fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 50vw" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute bottom-4 left-4">
+                  <p className="text-white font-display font-bold text-base">{l.label} →</p>
+                  <p className="text-white/70 text-xs">{l.desc}</p>
+                </div>
+              </Link>
+            ))}
           </div>
         </section>
 
