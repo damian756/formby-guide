@@ -227,20 +227,12 @@ export default function BlogPost() {
             {/* The honest take */}
             <div className="not-prose bg-[#1C3220] text-white rounded-2xl p-7 mb-10">
               <h3 className="font-display text-xl font-bold mb-4">The Money Reality</h3>
-              <p className="text-white/75 leading-relaxed mb-4">
+              <p className="text-white/75 leading-relaxed mb-3">
                 Four kids eating out is expensive. Two mains, four kids&apos; meals, four drinks, and possibly four puddings — you&apos;re easily at £70–90 for a sit-down meal. That&apos;s real money.
               </p>
-              <div className="grid md:grid-cols-2 gap-4 mt-5">
-                {[
-                  { label: "Save money", tip: "Go for lunch not dinner. Most places are cheaper at lunch and quieter too." },
-                  { label: "Worth the splurge", tip: "The Sparrowhawk. Quality is high enough that it doesn't feel like wasted money." },
-                ].map(({ label, tip }) => (
-                  <div key={label} className="bg-white/10 rounded-xl p-4">
-                    <p className="text-[#C9A96E] font-bold text-xs uppercase tracking-wider mb-2">{label}</p>
-                    <p className="text-white/75 text-sm">{tip}</p>
-                  </div>
-                ))}
-              </div>
+              <p className="text-white/75 leading-relaxed">
+                <strong className="text-white">To save money:</strong> Go for lunch not dinner. Most places are cheaper at lunch, quieter, and often quicker to get seated. <strong className="text-white">Worth the splurge:</strong> The Sparrowhawk. Quality is high enough that it doesn&apos;t feel like wasted money.
+              </p>
             </div>
 
             <div className="not-prose bg-[#E8EDE6] rounded-2xl p-8">

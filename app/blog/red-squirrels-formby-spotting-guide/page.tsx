@@ -137,46 +137,24 @@ export default function BlogPost() {
               </div>
             </div>
 
-            <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 max-w-none">
+            <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 max-w-none mb-10">
               <h2>Timing: The Single Biggest Factor</h2>
-            </div>
-
-            {/* Time grid */}
-            <div className="not-prose grid md:grid-cols-3 gap-4 my-6 mb-10">
-              {[
-                { time: "6:30–9:00am", verdict: "Best", color: "bg-green-50 border-green-200", textColor: "text-green-800", badge: "bg-green-600 text-white", desc: "Peak activity. Squirrels feeding, moving, visible. Quiet woodland. Best odds by far." },
-                { time: "9:00am–12pm", verdict: "OK", color: "bg-amber-50 border-amber-200", textColor: "text-amber-800", badge: "bg-amber-500 text-white", desc: "Activity drops off. Still possible, especially on cooler days. Worth the visit but don't expect guaranteed sightings." },
-                { time: "12pm–4pm", verdict: "Poor", color: "bg-red-50 border-red-200", textColor: "text-red-800", badge: "bg-red-500 text-white", desc: "Too warm, too busy, too loud. Squirrels have retreated. You'll likely see grey squirrels and dog walkers, not reds." },
-              ].map(({ time, verdict, color, textColor, badge, desc }) => (
-                <div key={time} className={`rounded-2xl border p-5 ${color}`}>
-                  <div className="flex items-center justify-between mb-3">
-                    <p className={`font-bold text-sm ${textColor}`}>{time}</p>
-                    <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${badge}`}>{verdict}</span>
-                  </div>
-                  <p className="text-gray-700 text-sm">{desc}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 max-w-none">
+              <p>
+                <strong>Before 9am is ideal.</strong> Red squirrels are most active at dawn and in the first couple of hours of daylight — feeding, moving, visible at eye level. By mid-morning the activity drops off sharply as they retreat into the canopy.
+              </p>
+              <p>
+                Between 9am and noon you might still get lucky, especially on cooler days when they stay active longer. After 12pm? Honestly, don&apos;t bother. The woodland gets busier with people and dogs, the squirrels disappear upward, and you&apos;ll spend an hour seeing nothing and feeling disappointed.
+              </p>
+              <p>
+                If you can only visit at midday, set your expectations accordingly — and come back early another time.
+              </p>
               <h2>Season Matters Too</h2>
-            </div>
-
-            <div className="not-prose grid md:grid-cols-2 gap-4 my-6 mb-10">
-              {[
-                { season: "🌱 Spring (Mar–May)", quality: "Excellent", desc: "Squirrels very active — feeding, building nests, raising young. High visibility before full leaf canopy." },
-                { season: "☀️ Summer (Jun–Aug)", quality: "Fair", desc: "They're there but less visible in the dense canopy. Try early morning near the feeder areas." },
-                { season: "🍂 Autumn (Sep–Nov)", quality: "Excellent", desc: "Foraging for winter. Very active, often at ground level. Best photography opportunities." },
-                { season: "❄️ Winter (Dec–Feb)", quality: "Good", desc: "Less active but not hibernating. Easier to spot in leafless trees. Cold mornings are surprisingly productive." },
-              ].map(({ season, quality, desc }) => (
-                <div key={season} className="bg-white rounded-2xl border border-gray-100 p-5">
-                  <div className="flex items-center justify-between mb-2">
-                    <p className="font-bold text-[#1C3220] text-sm">{season}</p>
-                    <span className="text-[10px] font-bold text-[#2E6B3E] bg-[#E8EDE6] px-2 py-1 rounded-full">{quality}</span>
-                  </div>
-                  <p className="text-gray-600 text-sm">{desc}</p>
-                </div>
-              ))}
+              <p>
+                <strong>Spring (March–May)</strong> and <strong>autumn (September–November)</strong> are your best bets. Spring is brilliant because the squirrels are very active — feeding, building nests, raising young — and the leaf canopy hasn&apos;t fully come in yet so they&apos;re much easier to spot. Autumn is when they&apos;re foraging for winter and you often catch them at ground level, which makes for great photographs.
+              </p>
+              <p>
+                Summer is hit and miss. They&apos;re still there, but the dense canopy hides them and the woodland is busier. Winter visits are more productive than people expect — less leaf cover means you can actually see into the trees, and cold mornings can be surprisingly active.
+              </p>
             </div>
 
             <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 max-w-none">

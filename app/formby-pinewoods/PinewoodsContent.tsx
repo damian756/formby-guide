@@ -7,11 +7,11 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
 const GALLERY = [
-  { src: "/pinewoods-woods.webp",         alt: "Sunlit Formby pinewoods with walker on path" },
-  { src: "/pinewoods-cycling-sign.webp",  alt: "National Trust cycling trails sign in Formby pinewoods" },
-  { src: "/pinewoods-woods-tall.jpg",     alt: "Looking up at tall pines and mixed woodland in Formby" },
+  { src: "/pinewoods-deep-woodland.webp", alt: "Deep inside Formby pinewoods — ancient coastal pine woodland" },
+  { src: "/pinewoods-trail-sign.webp",    alt: "No horses signpost on Formby pinewoods trail" },
+  { src: "/pinewoods-tall-tree.webp",     alt: "Tall Scots pine in Formby pinewoods" },
   { src: "/pinewoods-sandfield-farm.webp",alt: "Sandfield Farm heritage sign in the Formby pinewoods" },
-  { src: "/pinewoods-map.webp",           alt: "National Trust Formby site map and information board" },
+  { src: "/pinewoods-map-sign.webp",      alt: "National Trust Formby site map and information board" },
 ];
 
 const WHY_VISIT = [
@@ -42,7 +42,7 @@ const WHY_VISIT = [
   {
     title: "Wildflowers & Plants",
     desc: "Spring brings wood anemones, bluebells and woodland plants in sheltered sections. Dune slacks have their own distinct plant communities.",
-    image: "/pinewoods-card-wildflowers.webp",
+    image: "/pinewoods-flowers.webp",
     imagePos: "object-center",
   },
   {
@@ -81,8 +81,8 @@ const TRAILS = [
     level: "Easy–Moderate",
     desc: "Walk north through pines to Ainsdale or south toward Hightown. Flat, exposed in places, excellent for serious walkers. Can be done as linear walk with train back from Ainsdale.",
     tip: "Check Sefton Coast landscape website for current path conditions.",
-    image: "/ttd-card-coastal-path.webp",
-    imagePos: "object-[center_40%]",
+    image: "/ainsdale-beach.webp",
+    imagePos: "object-center",
   },
 ];
 
@@ -145,15 +145,15 @@ export default function PinewoodsContent() {
           </div>
         </section>
 
-        {/* Photo break — sunlit woods */}
+        {/* Photo break — deep woodland */}
         <button
           onClick={() => open(0)}
           className="relative -mx-4 sm:-mx-6 lg:-mx-8 mb-16 h-64 md:h-80 overflow-hidden rounded-2xl w-[calc(100%+2rem)] sm:w-[calc(100%+3rem)] lg:w-[calc(100%+4rem)] block cursor-zoom-in group"
           aria-label="View full image"
         >
           <Image
-            src="/pinewoods-woods.webp"
-            alt="Sunlit Formby pinewoods with walker on path"
+            src="/pinewoods-deep-woodland.webp"
+            alt="Deep inside Formby pinewoods — ancient coastal pine woodland"
             fill
             className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
             sizes="100vw"
@@ -189,21 +189,21 @@ export default function PinewoodsContent() {
             ))}
           </div>
 
-          {/* Cycling sign */}
+          {/* Trail sign */}
           <button
             onClick={() => open(1)}
             className="relative w-full h-56 md:h-72 overflow-hidden rounded-2xl block cursor-zoom-in group"
             aria-label="View full image"
           >
             <Image
-              src="/pinewoods-cycling-sign.webp"
-              alt="National Trust cycling trails sign in Formby pinewoods"
+              src="/pinewoods-trail-sign.webp"
+              alt="Trail signpost in Formby pinewoods"
               fill
               className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
               sizes="100vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-            <p className="absolute bottom-4 left-4 text-white text-sm font-medium drop-shadow">Cycling trails are marked with yellow bike stamps — look out for them on the trees</p>
+            <p className="absolute bottom-4 left-4 text-white text-sm font-medium drop-shadow">The trails are well signed — follow the markers and you won&apos;t get lost</p>
           </button>
         </section>
 
@@ -233,18 +233,47 @@ export default function PinewoodsContent() {
                 <p className="text-xs text-[#1C3220]/50 italic">Check season guides for best birdwatching times.</p>
               </div>
             </div>
+            <div className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-md transition-shadow md:col-span-2">
+              <div className="grid md:grid-cols-2">
+                <div className="relative h-48 md:h-full overflow-hidden">
+                  <Image src="/pinewoods-fungus-moss.webp" alt="Fungi and moss growing on a fallen log in Formby pinewoods" fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent md:bg-none" />
+                  <p className="absolute bottom-3 left-4 text-white font-bold drop-shadow md:hidden">🍄 Fungi & Lichen</p>
+                </div>
+                <div className="p-5 flex flex-col justify-center">
+                  <p className="font-bold text-[#1C3220] mb-2">🍄 Fungi & Lichen</p>
+                  <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-2">Ancient woodland indicator species — the variety of fungi and lichen here tells you something about how long this woodland has been established. Best seen in autumn after rain, on fallen logs and the pine floor. Completely underrated.</p>
+                  <p className="text-xs text-[#1C3220]/50 italic">October and November are peak fungus season.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Natterjack toad callout */}
+          <div className="mt-8 rounded-2xl border border-[#2E6B3E]/20 bg-[#E8EDE6] overflow-hidden">
+            <div className="grid md:grid-cols-3">
+              <div className="relative h-52 md:h-auto overflow-hidden">
+                <Image src="/natterjack-pond.webp" alt="Natterjack toad conservation pond in Formby dune slacks" fill className="object-cover object-center" sizes="(max-width: 768px) 100vw, 33vw" />
+              </div>
+              <div className="md:col-span-2 p-6 flex flex-col justify-center">
+                <p className="text-xs font-bold uppercase tracking-wider text-[#2E6B3E] mb-2">Conservation</p>
+                <h3 className="font-display font-bold text-[#1C3220] text-lg mb-2">Natterjack Toads — Formby&apos;s Other Resident</h3>
+                <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-4">Most people walk straight past the conservation ponds in the dune slacks without knowing what they are. Those ponds were built for natterjack toads — the rarest amphibian in Britain, and Formby is one of their last strongholds. In April and May you can hear the males calling at night from a surprisingly long distance.</p>
+                <a href="/blog/natterjack-toads-formby" className="text-[#2E6B3E] font-semibold text-sm hover:underline">Read the full natterjack toad guide →</a>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Photo break — tall trees */}
+        {/* Photo break — tall pine */}
         <button
           onClick={() => open(2)}
           className="relative -mx-4 sm:-mx-6 lg:-mx-8 mb-16 h-64 md:h-80 overflow-hidden rounded-2xl w-[calc(100%+2rem)] sm:w-[calc(100%+3rem)] lg:w-[calc(100%+4rem)] block cursor-zoom-in group"
           aria-label="View full image"
         >
           <Image
-            src="/pinewoods-woods-tall.jpg"
-            alt="Looking up at tall pines and mixed woodland in Formby"
+            src="/pinewoods-tall-tree.webp"
+            alt="Tall Scots pine in Formby pinewoods"
             fill
             className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
             sizes="100vw"
@@ -287,8 +316,8 @@ export default function PinewoodsContent() {
             aria-label="View full image"
           >
             <Image
-              src="/pinewoods-map.webp"
-              alt="National Trust Formby site map and information board"
+            src="/pinewoods-map-sign.webp"
+            alt="National Trust Formby site map and information board"
               fill
               className="object-cover object-[center_65%] transition-transform duration-500 group-hover:scale-105"
               sizes="100vw"

@@ -27,11 +27,12 @@ export const metadata: Metadata = {
 };
 
 const CATEGORIES: BlogCategory[] = [
-  { slug: "family",   label: "Family",   color: "#2E6B3E", description: "Half term plans, days out and activities that work with kids." },
-  { slug: "seasonal", label: "Seasonal", color: "#1C4A5A", description: "When to visit, what to expect, and seasonal tips." },
-  { slug: "food",     label: "Food",     color: "#8B3A3A", description: "Honest restaurant reviews and places to eat in Formby." },
-  { slug: "wildlife", label: "Wildlife", color: "#8B6040", description: "Red squirrels, birdwatching and Sefton Coast nature." },
-  { slug: "walks",    label: "Walks",    color: "#1A5C3A", description: "Pinewoods trails, coastal walks and what to bring." },
+  { slug: "family",       label: "Family",       color: "#2E6B3E", description: "Half term plans, days out and activities that work with kids." },
+  { slug: "seasonal",     label: "Seasonal",     color: "#1C4A5A", description: "When to visit, what to expect, and seasonal tips." },
+  { slug: "food",         label: "Food",         color: "#8B3A3A", description: "Honest restaurant reviews and places to eat in Formby." },
+  { slug: "wildlife",     label: "Wildlife",     color: "#8B6040", description: "Red squirrels, birdwatching and Sefton Coast nature." },
+  { slug: "walks",        label: "Walks",        color: "#1A5C3A", description: "Pinewoods trails, coastal walks and what to bring." },
+  { slug: "conservation", label: "Conservation", color: "#4A6B1C", description: "The wildlife and habitat work that makes Formby special." },
 ];
 
 const POSTS: BlogPost[] = [
@@ -89,6 +90,17 @@ const POSTS: BlogPost[] = [
     categorySlug: "walks",
     gradient: "linear-gradient(135deg, #1A5C3A 0%, #2E8B5A 100%)",
     image: "/blog-card-walks.webp",
+  },
+  {
+    slug: "natterjack-toads-formby",
+    title: "Natterjack Toads at Formby — Britain's Rarest Amphibian",
+    excerpt: "I had no idea these existed until five years ago. Turns out I'd been walking past a nationally important breeding site every week.",
+    author: "Clare",
+    date: "February 22, 2026",
+    readTime: "5 min read",
+    categorySlug: "conservation",
+    gradient: "linear-gradient(135deg, #1C3220 0%, #4A6B1C 100%)",
+    image: "/natterjack-pond.webp",
   },
 ];
 

@@ -4,6 +4,8 @@ import Script from "next/script";
 import "./globals.css";
 import Link from "next/link";
 import NavMenu from "./components/NavMenu";
+import { CookieProvider } from "./components/CookieProvider";
+import CookieBanner from "./components/CookieBanner";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -91,9 +93,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Script id="plausible-init" strategy="afterInteractive">{`window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()`}</Script>
       </head>
       <body className={`${playfair.variable} ${inter.variable} font-sans antialiased bg-[#F7F9F6]`}>
-        <Navigation />
-        <main>{children}</main>
-        <Footer />
+        <CookieProvider>
+          <Navigation />
+          <main>{children}</main>
+          <Footer />
+          <CookieBanner />
+        </CookieProvider>
       </body>
     </html>
   );
@@ -166,6 +171,7 @@ function Footer() {
                 ["Pinewoods", "/formby-pinewoods"],
                 ["About Formby", "/about-formby"],
                 ["Blog", "/blog"],
+                ["Gallery", "/gallery"],
                 ["Restaurants", "/restaurants"],
                 ["Pubs & Bars", "/pubs"],
                 ["Cafes", "/cafes"],

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Calendar, Clock, ArrowRight, CheckCircle, AlertCircle, MapPin, TreePine } from "lucide-react";
+import Image from "next/image";
 import ClareBio from "../ClareBio";
 
 const BASE_URL = "https://www.formbyguide.co.uk";
@@ -152,13 +153,20 @@ export default function BlogPost() {
         <div className="grid lg:grid-cols-3 gap-12">
 
           <article className="lg:col-span-2">
-            <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 prose-p:leading-relaxed prose-strong:text-[#1C3220] max-w-none mb-10">
+            <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 prose-p:leading-relaxed prose-strong:text-[#1C3220] max-w-none mb-8">
               <p className="lead text-xl text-gray-600 leading-relaxed">
                 Formby Pinewoods is remarkable. A coastal plantation of Scots and Corsican pine that creates its own microclimate — warmer, quieter, and genuinely otherworldly compared to the exposed beach just metres away.
               </p>
               <p>
                 I walk here at least once a week. Here&apos;s what I&apos;ve learned that the trail maps don&apos;t tell you.
               </p>
+            </div>
+
+            {/* NT sign photo */}
+            <div className="not-prose relative w-full h-56 overflow-hidden rounded-2xl mb-10">
+              <Image src="/nt-sign.webp" alt="National Trust Formby sign at the car park entrance" fill className="object-cover object-center" sizes="(max-width: 1024px) 100vw, 66vw" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+              <p className="absolute bottom-3 left-4 text-white/80 text-xs drop-shadow">Victoria Road, L37 1YH — the main NT car park entrance</p>
             </div>
 
             {/* Terrain warning */}
@@ -212,6 +220,13 @@ export default function BlogPost() {
               ))}
             </div>
 
+            {/* Trail sign photo */}
+            <div className="not-prose relative w-full h-52 overflow-hidden rounded-2xl mb-10">
+              <Image src="/pinewoods-trail-sign.webp" alt="Trail signpost in Formby pinewoods" fill className="object-cover object-center" sizes="(max-width: 1024px) 100vw, 66vw" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+              <p className="absolute bottom-3 left-4 text-white/80 text-xs drop-shadow">The trails are well signed — you won&apos;t need a map for the shorter loops</p>
+            </div>
+
             {/* What to bring */}
             <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 max-w-none">
               <h2>What to Bring — The Full List</h2>
@@ -235,6 +250,13 @@ export default function BlogPost() {
                   </ul>
                 </div>
               ))}
+            </div>
+
+            {/* Fungus photo */}
+            <div className="not-prose relative w-full h-52 overflow-hidden rounded-2xl mb-10">
+              <Image src="/pinewoods-fungus.webp" alt="Fungus growing on a fallen log in Formby pinewoods" fill className="object-cover object-center" sizes="(max-width: 1024px) 100vw, 66vw" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+              <p className="absolute bottom-3 left-4 text-white/80 text-xs drop-shadow">Autumn is brilliant for fungi — look out for them on fallen logs and at the base of the pines</p>
             </div>
 
             {/* Best time callout */}
@@ -271,7 +293,13 @@ export default function BlogPost() {
 
           {/* Sidebar */}
           <aside className="lg:col-span-1 space-y-6">
-            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sticky top-6">
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden sticky top-6">
+              <div className="relative h-36 overflow-hidden">
+                <Image src="/pinewoods-no-parking.webp" alt="No parking sign in Formby pinewoods" fill className="object-cover object-center" sizes="33vw" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                <p className="absolute bottom-2 left-3 text-white text-xs drop-shadow">Don&apos;t park on Victoria Road — use the NT car park</p>
+              </div>
+              <div className="p-6">
               <h3 className="font-display font-bold text-[#1C3220] text-base mb-4">Getting There</h3>
               <div className="space-y-4">
                 <div>
@@ -289,6 +317,7 @@ export default function BlogPost() {
                   <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">Parking fee</p>
                   <p className="text-sm text-gray-700">Free for NT members. Non-members pay at machine. Typically £3–5 per day.</p>
                 </div>
+              </div>
               </div>
             </div>
 

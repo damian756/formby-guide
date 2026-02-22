@@ -11,9 +11,10 @@ const GALLERY = [
   { src: "/formby-beach-shell.jpg",       alt: "Formby Beach — shell and sand dunes with the Irish Sea behind" },
   { src: "/formby-beach-shell-close.jpg", alt: "Shell on Formby Beach sand" },
   { src: "/formby-beach-sea.jpg",         alt: "Families walking along Formby Beach at the water's edge with waves and sand dunes" },
-  { src: "/formby-beach-sign.jpg",        alt: "National Trust Blundell Path sign at Formby Beach showing safety information and tide warnings" },
+  { src: "/beach-birds.webp",             alt: "Crows on Formby Beach sand" },
   { src: "/formby-beach-paws.jpg",        alt: "Dog paws on Formby Beach sand" },
-  { src: "/formby-beach-dunes.jpg",       alt: "Looking through Formby sand dunes to the Irish Sea" },
+  { src: "/beach-dunes-new.webp",         alt: "Formby sand dunes looking toward the Irish Sea" },
+  { src: "/beach-dunes-skull.webp",       alt: "Animal skull on Formby Beach dunes" },
 ];
 
 export default function FormbyBeachContent() {
@@ -46,30 +47,47 @@ export default function FormbyBeachContent() {
       <div className="container mx-auto px-4 max-w-6xl py-12">
 
         {/* Intro prose */}
-        <div className="max-w-3xl mb-12 prose prose-lg">
+        <div className="max-w-3xl mb-8 prose prose-lg">
           <p className="text-lg text-[#1C3220]/80 leading-relaxed">
             Formby Beach is a <strong>proper beach</strong> — not a promenade, not a resort. Wide open sand, dramatic dunes, pinewoods at your back, and the Irish Sea in front. On a sunny Saturday in summer it gets busy. On a Tuesday morning in October it&apos;s almost empty. Both are valid. Know what you&apos;re walking into.
           </p>
+        </div>
+
+        {/* NT sign — scene setter */}
+        <div className="relative w-full h-52 overflow-hidden rounded-2xl mb-12">
+          <Image
+            src="/nt-formby-sign.webp"
+            alt="National Trust Formby sign at the entrance"
+            fill
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
         </div>
 
         {/* Practical Info */}
         <section id="practical" className="mb-16 scroll-mt-20">
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">Practical Information</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm">
-              <div className="flex items-start gap-3 mb-4">
-                <Car className="w-6 h-6 text-[#2E6B3E] flex-shrink-0 mt-0.5" />
-                <div>
-                  <h3 className="font-semibold text-[#1C3220] text-lg">Parking & Getting There</h3>
-                  <p className="text-sm text-[#1C3220]/60">L37 1YH</p>
-                </div>
+            <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm">
+              <div className="relative h-36 overflow-hidden">
+                <Image src="/beach-car-park-sign.webp" alt="Formby Beach National Trust car park sign" fill className="object-cover object-center" sizes="(max-width: 768px) 100vw, 50vw" />
               </div>
-              <ul className="space-y-2 text-sm">
-                <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">•</span><span className="text-[#1C3220]/70"><strong>NT Members:</strong> Free parking, book via app</span></li>
-                <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">•</span><span className="text-[#1C3220]/70"><strong>Non-members:</strong> From £6/day via NT app</span></li>
-                <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">•</span><span className="text-[#1C3220]/70">Train from Formby station: 20-min walk</span></li>
-                <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">•</span><span className="text-[#1C3220]/70">Book BEFORE you leave — no signal on site</span></li>
-              </ul>
+              <div className="p-6">
+                <div className="flex items-start gap-3 mb-4">
+                  <Car className="w-6 h-6 text-[#2E6B3E] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-semibold text-[#1C3220] text-lg">Parking & Getting There</h3>
+                    <p className="text-sm text-[#1C3220]/60">L37 1YH</p>
+                  </div>
+                </div>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">•</span><span className="text-[#1C3220]/70"><strong>NT Members:</strong> Free parking, book via app</span></li>
+                  <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">•</span><span className="text-[#1C3220]/70"><strong>Non-members:</strong> From £6/day via NT app</span></li>
+                  <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">•</span><span className="text-[#1C3220]/70">Train from Formby station: 20-min walk</span></li>
+                  <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">•</span><span className="text-[#1C3220]/70">Book BEFORE you leave — no signal on site</span></li>
+                </ul>
+              </div>
             </div>
             <div className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm">
               <div className="flex items-start gap-3 mb-4">
@@ -103,6 +121,7 @@ export default function FormbyBeachContent() {
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+          <p className="absolute bottom-4 left-4 text-white/80 text-sm drop-shadow">Formby Beach at low tide — plenty of space</p>
         </button>
 
         {/* What to Expect */}
@@ -132,7 +151,7 @@ export default function FormbyBeachContent() {
             {/* Best Times */}
             <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
               <button onClick={() => open(3)} className="relative h-52 w-full block cursor-zoom-in group" aria-label="View full image">
-                <Image src="/formby-beach-sign.jpg" alt="National Trust Blundell Path sign at Formby Beach showing safety information and tide warnings" fill className="object-cover object-top transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 33vw" />
+                <Image src="/beach-birds.webp" alt="Crows on Formby Beach sand" fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 33vw" />
               </button>
               <div className="p-6">
                 <h3 className="font-semibold text-[#1C3220] text-lg mb-2">Best Times</h3>
@@ -179,8 +198,8 @@ export default function FormbyBeachContent() {
           aria-label="View full image"
         >
           <Image
-            src="/formby-beach-dunes.jpg"
-            alt="Looking through Formby sand dunes to the Irish Sea"
+            src="/beach-dunes-new.webp"
+            alt="Formby sand dunes looking toward the Irish Sea"
             fill
             className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
             sizes="100vw"
@@ -192,19 +211,29 @@ export default function FormbyBeachContent() {
         <section id="dunes" className="mb-16 scroll-mt-20">
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">Sand Dunes & Formby Point</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white rounded-2xl border border-gray-100 p-6">
-              <h3 className="font-semibold text-[#1C3220] text-lg mb-3">The Dunes</h3>
-              <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-3">
-                Sand dunes over 10 metres high. Part of active conservation effort. You&apos;ll see fenced-off sections — not jobsworth bureaucracy. The dunes are genuinely fragile and the NT is fighting coastal erosion that&apos;s been eating into the pinewoods for decades.
-              </p>
-              <p className="text-xs text-[#1C3220]/50 italic">Please don&apos;t climb restricted areas.</p>
+            <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden">
+              <button onClick={() => open(6)} className="relative h-48 w-full block cursor-zoom-in group" aria-label="View full image">
+                <Image src="/beach-dunes-skull.webp" alt="Animal skull on Formby Beach sand dunes" fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
+              </button>
+              <div className="p-6">
+                <h3 className="font-semibold text-[#1C3220] text-lg mb-3">The Dunes</h3>
+                <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-3">
+                  Sand dunes over 10 metres high. Part of active conservation effort. You&apos;ll see fenced-off sections — not jobsworth bureaucracy. The dunes are genuinely fragile and the NT is fighting coastal erosion that&apos;s been eating into the pinewoods for decades.
+                </p>
+                <p className="text-xs text-[#1C3220]/50 italic">Please don&apos;t climb restricted areas.</p>
+              </div>
             </div>
-            <div className="bg-white rounded-2xl border border-gray-100 p-6">
-              <h3 className="font-semibold text-[#1C3220] text-lg mb-3">Formby Point</h3>
-              <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-3">
-                Headland at the south end of the beach. ~1.5 mile walk from main car park. Views back along the coast are worth it. At low tide, sometimes see prehistoric footprints — over 5,000 years old. They appear and disappear with the sand.
-              </p>
-              <p className="text-xs text-[#1C3220]/50 italic">Let the NT know if you spot them — don&apos;t disturb.</p>
+            <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
+                <Image src="/beach-dunes-spring-bud.webp" alt="Spring vegetation growing on Formby sand dunes" fill className="object-cover object-center" sizes="(max-width: 768px) 100vw, 50vw" />
+              </div>
+              <div className="p-6">
+                <h3 className="font-semibold text-[#1C3220] text-lg mb-3">Formby Point</h3>
+                <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-3">
+                  Headland at the south end of the beach. ~1.5 mile walk from main car park. Views back along the coast are worth it. At low tide, sometimes see prehistoric footprints — over 5,000 years old. They appear and disappear with the sand.
+                </p>
+                <p className="text-xs text-[#1C3220]/50 italic">Let the NT know if you spot them — don&apos;t disturb.</p>
+              </div>
             </div>
           </div>
         </section>

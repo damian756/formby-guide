@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronRight, Calendar, Clock, ArrowRight, Sun, CloudRain, Wind, Thermometer, AlertCircle, CheckCircle, MapPin } from "lucide-react";
+import { ChevronRight, Calendar, Clock, ArrowRight, Sun, CloudRain, Wind, Thermometer, MapPin } from "lucide-react";
 import ClareBio from "../ClareBio";
 
 const BASE_URL = "https://www.formbyguide.co.uk";
@@ -23,64 +23,6 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", title: "Formby Beach Weather Guide", description: "When to visit Formby Beach and what to expect." },
 };
 
-const SEASONS = [
-  {
-    name: "Spring",
-    months: "March – May",
-    icon: "🌱",
-    verdict: "Windy but beautiful",
-    rating: 3,
-    color: "border-green-200",
-    bg: "bg-green-50",
-    textColor: "text-green-800",
-    pros: ["Fewer crowds", "Golden morning light", "Firm, walkable sand", "Squirrels active"],
-    cons: ["Almost always windy", "Cold evenings", "Unpredictable showers"],
-    bestFor: "Early morning walks, photography, dog walking",
-    avoid: "Afternoon in April — wind peaks mid-day",
-  },
-  {
-    name: "Summer",
-    months: "June – August",
-    icon: "☀️",
-    verdict: "Best weather, busiest crowds",
-    rating: 5,
-    color: "border-amber-200",
-    bg: "bg-amber-50",
-    textColor: "text-amber-800",
-    pros: ["Warmest temperatures", "Calmer wind", "Long daylight hours", "Vibrant atmosphere"],
-    cons: ["Packed weekends", "Car park queues", "August school holidays chaos"],
-    bestFor: "Families, swimming (if brave), picnics",
-    avoid: "Saturday afternoons in August — genuinely rammed",
-  },
-  {
-    name: "Autumn",
-    months: "September – November",
-    icon: "🍂",
-    verdict: "The local's secret season",
-    rating: 4,
-    color: "border-orange-200",
-    bg: "bg-orange-50",
-    textColor: "text-orange-800",
-    pros: ["September = post-crowd magic", "Beautiful low light", "Quiet beach", "Crisp clean air"],
-    cons: ["October gets unpredictable", "November is usually grey", "Shorter days"],
-    bestFor: "Quiet walks, photography, locals",
-    avoid: "Wet November weekdays if you want to feel warm",
-  },
-  {
-    name: "Winter",
-    months: "December – February",
-    icon: "🌊",
-    verdict: "Dramatic but demanding",
-    rating: 2,
-    color: "border-blue-200",
-    bg: "bg-blue-50",
-    textColor: "text-blue-800",
-    pros: ["Completely empty beach", "Dramatic skies", "Special clear-day quality", "No queues anywhere"],
-    cons: ["Very cold wind", "Short daylight", "Proper kit required", "Grey most days"],
-    bestFor: "Hardy walkers, clear sunny days only",
-    avoid: "Any day when the forecast says wind >20mph — it's miserable",
-  },
-];
 
 export default function BlogPost() {
   return (
@@ -184,65 +126,31 @@ export default function BlogPost() {
               </p>
             </div>
 
-            {/* Season cards */}
-            <div className="not-prose space-y-6 mb-12">
-              {SEASONS.map((s) => (
-                <div key={s.name} className={`rounded-2xl border ${s.color} overflow-hidden`}>
-                  <div className={`${s.bg} px-6 py-5`}>
-                    <div className="flex items-center justify-between gap-4 flex-wrap">
-                      <div className="flex items-center gap-3">
-                        <span className="text-3xl">{s.icon}</span>
-                        <div>
-                          <h3 className={`font-display text-xl font-bold ${s.textColor}`}>{s.name}</h3>
-                          <p className="text-gray-500 text-sm">{s.months}</p>
-                        </div>
-                      </div>
-                      <div className="text-right">
-                        <div className="flex items-center gap-1 justify-end mb-1">
-                          {Array.from({ length: 5 }).map((_, i) => (
-                            <div key={i} className={`w-2.5 h-2.5 rounded-full ${i < s.rating ? "bg-[#2E6B3E]" : "bg-gray-200"}`} />
-                          ))}
-                        </div>
-                        <p className={`text-sm font-semibold ${s.textColor}`}>{s.verdict}</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="bg-white px-6 py-5">
-                    <div className="grid md:grid-cols-2 gap-5 mb-4">
-                      <div>
-                        <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">What&apos;s good</p>
-                        <ul className="space-y-1.5">
-                          {s.pros.map(p => (
-                            <li key={p} className="flex items-start gap-2 text-sm text-gray-700">
-                              <CheckCircle className="w-3.5 h-3.5 text-[#2E6B3E] shrink-0 mt-0.5" />{p}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div>
-                        <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Watch out for</p>
-                        <ul className="space-y-1.5">
-                          {s.cons.map(c => (
-                            <li key={c} className="flex items-start gap-2 text-sm text-gray-700">
-                              <AlertCircle className="w-3.5 h-3.5 text-amber-500 shrink-0 mt-0.5" />{c}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="grid md:grid-cols-2 gap-3 pt-4 border-t border-gray-100">
-                      <div className="bg-[#E8EDE6] rounded-xl px-3 py-2.5">
-                        <p className="text-[10px] uppercase tracking-wider text-[#2E6B3E] font-bold mb-0.5">Best for</p>
-                        <p className="text-sm text-[#1C3220] font-medium">{s.bestFor}</p>
-                      </div>
-                      <div className="bg-red-50 rounded-xl px-3 py-2.5">
-                        <p className="text-[10px] uppercase tracking-wider text-red-500 font-bold mb-0.5">Avoid</p>
-                        <p className="text-sm text-gray-700">{s.avoid}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
+            <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 max-w-none mb-12">
+              <h3>🌱 Spring (March – May) — windy but beautiful</h3>
+              <p>
+                Spring is underrated. The crowds haven&apos;t arrived yet, the light in the morning is genuinely gorgeous, and the sand is firm and walkable. The squirrels in the pinewoods are active if you fancy combining beach with woodland. The catch is wind — Formby is an exposed west-facing beach and spring wind can be proper cold. Pack layers, go in the morning before it picks up, and you&apos;ll have a brilliant time.
+              </p>
+              <p>Afternoon visits in April in particular can be punishing. The wind peaks mid-day and the beach empties fast for a reason.</p>
+
+              <h3>☀️ Summer (June – August) — best weather, biggest crowds</h3>
+              <p>
+                This is peak Formby. The warmest temperatures, calmer wind, and long daylight hours make it genuinely lovely. Families, dogs, picnics — the beach is at its most alive. But it&apos;s also at its busiest. The National Trust car park fills early on sunny weekends and August bank holidays are genuinely hectic. If you&apos;re coming in summer, either arrive before 9:30am or after 2pm. The beach itself is big enough that it never feels completely rammed — it&apos;s the car park that causes the stress.
+              </p>
+              <p>Swimming is possible. Irish Sea temperatures in summer are cold but doable. Kids don&apos;t seem to notice.</p>
+
+              <h3>🍂 Autumn (September – November) — the local&apos;s favourite</h3>
+              <p>
+                September is the best-kept secret on Formby Beach. School&apos;s back. The summer visitors are gone. The weather is still warm enough to not need a heavy coat. The light is extraordinary — low sun on the sand in September morning light is something else. This is when locals actually go.
+              </p>
+              <p>
+                October is more unpredictable, and November usually grey. But a clear autumn day at Formby is hard to beat.
+              </p>
+
+              <h3>🌊 Winter (December – February) — dramatic but demanding</h3>
+              <p>
+                I won&apos;t pretend winter beach visits are for everyone. It&apos;s cold, it&apos;s often grey, and the wind off the Irish Sea is serious. But there&apos;s something about a completely empty Formby Beach on a clear January morning that&apos;s genuinely special. If you like dramatic skies and having miles of beach entirely to yourself, winter delivers. Proper kit is non-negotiable — windproof jacket, warm layers, decent boots. Check the forecast before you go and skip any day with wind over 20mph. It&apos;s miserable.
+              </p>
             </div>
 
             {/* Key insight */}

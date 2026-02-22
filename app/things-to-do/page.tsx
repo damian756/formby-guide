@@ -111,6 +111,17 @@ const SECONDARY = [
     imagePosition: "object-center",
     practical: ["Chapel Lane and Three Tuns Lane", "Parking in the village centre"],
   },
+  {
+    id: "horse-riding",
+    emoji: "🐴",
+    tag: "Activities · Outdoors",
+    title: "Horse riding on the beach",
+    desc: "Horses on Formby and Ainsdale beach are a proper sight — and you can join them. A couple of local stables offer beach and coastal rides, and the wide flat sands make it one of the better horse riding experiences on the north-west coast. You don't need previous experience for the shorter rides.",
+    href: "/activities",
+    image: "/beach-horses-ainsdale.webp",
+    imagePosition: "object-center",
+    practical: ["Book in advance — rides fill up quickly in summer", "Ainsdale beach end is most commonly used", "Suitable for beginners on guided rides"],
+  },
 ];
 
 const QUICK_FACTS = [
