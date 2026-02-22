@@ -173,8 +173,8 @@ export default function ThingsToDoPage() {
       <div className="bg-[#1C3220]">
         <div className="h-0.5 bg-gradient-to-r from-transparent via-[#C9A96E] to-transparent" />
         <div className="container mx-auto px-4 max-w-6xl py-10">
-          <div className="md:flex md:items-end md:gap-16">
-            <div className="mb-8 md:mb-0 md:flex-1">
+          <div className="md:flex md:items-end md:gap-16 md:flex-nowrap">
+            <div className="mb-6 md:mb-0 md:flex-1 md:min-w-0">
               <p className="font-display text-2xl md:text-3xl text-white font-semibold leading-snug">
                 Small village, <span className="text-[#C9A96E]">genuinely full day out</span> — the NT site alone is worth the drive from Liverpool or Manchester.
               </p>
@@ -182,9 +182,9 @@ export default function ThingsToDoPage() {
                 Add the village restaurants and a walk through the pines and you won&apos;t be stuck for things to do.
               </p>
             </div>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 md:flex-shrink-0">
               {[...FEATURED, ...SECONDARY].map((t) => (
-                <a key={t.id} href={`#${t.id}`} className="text-xs bg-white/10 hover:bg-white/20 border border-white/15 text-white/80 hover:text-white px-3 py-1.5 rounded-full transition-colors">
+                <a key={t.id} href={`#${t.id}`} className="text-xs bg-white/10 hover:bg-white/20 border border-white/15 text-white/80 hover:text-white px-3 py-1.5 rounded-full transition-colors whitespace-nowrap">
                   {t.emoji} {t.title}
                 </a>
               ))}
@@ -300,6 +300,28 @@ export default function ThingsToDoPage() {
                 <h3 className="font-semibold text-[#1C3220] mb-2 text-sm">{faq.q}</h3>
                 <p className="text-sm text-[#1C3220]/60 leading-relaxed">{faq.a}</p>
               </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Explore More */}
+        <section className="mt-16 pt-12 border-t border-[#1C3220]/10 mb-16">
+          <h3 className="font-display text-2xl font-bold text-[#1C3220] mb-6">Explore More Formby</h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { href: "/red-squirrels-formby", label: "Red Squirrels",  desc: "One of the best places in England to see them.",   image: "/squirrels-hero.webp" },
+              { href: "/formby-beach",          label: "Formby Beach",   desc: "Wide sand, dramatic dunes, and the Irish Sea.",    image: "/formby-beach-hero.jpg" },
+              { href: "/formby-pinewoods",      label: "Pinewoods",      desc: "Ancient woodland walks to the sea.",              image: "/pinewoods-deep-woodland.webp" },
+              { href: "/about-formby",          label: "About Formby",   desc: "Where it is, what it's like, and why visit.",     image: "/about-formby-hero.webp" },
+            ].map((l) => (
+              <Link key={l.href} href={l.href} className="group relative h-48 rounded-2xl overflow-hidden block">
+                <Image src={l.image} alt={l.label} fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="text-white font-display font-bold text-base">{l.label} →</p>
+                  <p className="text-white/70 text-xs mt-0.5">{l.desc}</p>
+                </div>
+              </Link>
             ))}
           </div>
         </section>
