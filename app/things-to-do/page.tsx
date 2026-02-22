@@ -220,7 +220,7 @@ export default function ThingsToDoPage() {
             <section key={t.id} id={t.id} className="scroll-mt-20 group">
               <div className="bg-white rounded-2xl border border-[#1C3220]/8 overflow-hidden h-full flex flex-col hover:shadow-lg transition-shadow">
                 {/* Image */}
-                <div className="relative h-52 overflow-hidden flex-none">
+                <div className="relative h-64 overflow-hidden flex-none">
                   <Image
                     src={t.image}
                     alt={t.title}
@@ -268,23 +268,22 @@ export default function ThingsToDoPage() {
         <div className="grid md:grid-cols-2 gap-6 mb-16">
           {SECONDARY.map((t) => (
             <section key={t.id} id={t.id} className="scroll-mt-20 group">
-              <div className="bg-white rounded-2xl border border-[#1C3220]/8 overflow-hidden flex hover:shadow-lg transition-shadow">
+              <div className="bg-white rounded-2xl border border-[#1C3220]/8 overflow-hidden flex flex-col hover:shadow-lg transition-shadow">
                 {/* Image */}
-                <div className="relative w-36 sm:w-48 flex-none overflow-hidden">
+                <div className="relative h-56 overflow-hidden flex-none">
                   <Image
                     src={t.image}
                     alt={t.title}
                     fill
                     className={`object-cover ${t.imagePosition} transition-transform duration-500 group-hover:scale-105`}
-                    sizes="(max-width: 768px) 144px, 192px"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  <span className="absolute bottom-3 left-3 text-xs bg-[#2E6B3E] text-white px-2.5 py-1 rounded-full font-semibold">{t.tag}</span>
                 </div>
                 {/* Content */}
-                <div className="p-4 flex flex-col flex-1 min-w-0">
-                  <div className="mb-1.5">
-                    <span className="text-[10px] text-[#1C3220]/50 font-semibold uppercase tracking-wider">{t.tag}</span>
-                  </div>
-                  <h2 className="font-display text-base font-bold text-[#1C3220] mb-1.5">{t.title}</h2>
+                <div className="p-5 flex flex-col flex-1">
+                  <h2 className="font-display text-lg font-bold text-[#1C3220] mb-2">{t.title}</h2>
                   <p className="text-xs text-[#1C3220]/60 leading-relaxed mb-3 flex-1">{t.desc}</p>
                   <ul className="space-y-0.5 mb-3">
                     {t.practical.map((p) => (
