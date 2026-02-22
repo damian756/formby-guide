@@ -71,7 +71,7 @@ const TRAILS = [
     level: "Easy",
     desc: "Walk from car park through pinewoods, emerging via dunes onto Formby Beach. Walk along sand, return through pines. Full experience of the site in one go. Flat all the way.",
     tip: "Trainers fine on dry days. Wellies better after rain.",
-    image: "/squirrels-beach-pines.webp",
+    image: "/beach-horses-ainsdale.webp",
     imagePos: "object-center",
   },
   {
@@ -312,14 +312,14 @@ export default function PinewoodsContent() {
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">Plan Your Visit</h2>
           <button
             onClick={() => open(4)}
-            className="relative w-full h-64 md:h-80 overflow-hidden rounded-2xl block cursor-zoom-in group mb-6"
+            className="relative w-full h-64 md:h-80 overflow-hidden rounded-2xl block cursor-zoom-in group mb-6 bg-[#1C3220]"
             aria-label="View full image"
           >
             <Image
-            src="/pinewoods-map-sign.webp"
-            alt="National Trust Formby site map and information board"
+              src="/pinewoods-map-sign.webp"
+              alt="National Trust Formby site map and information board"
               fill
-              className="object-cover object-[center_65%] transition-transform duration-500 group-hover:scale-105"
+              className="object-contain transition-transform duration-500 group-hover:scale-105"
               sizes="100vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />

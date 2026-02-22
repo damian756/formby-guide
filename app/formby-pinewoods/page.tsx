@@ -37,8 +37,8 @@ export default function PinewoodsPage() {
       {/* Hero */}
       <section className="relative text-white py-16 md:py-24 overflow-hidden min-h-[420px] flex items-center">
         <Image
-          src="/pinewoods-hero.webp"
-          alt="Path through Formby pinewoods — coastal pine woodland"
+          src="/pinewoods-acorn.webp"
+          alt="Acorn on the Formby pinewoods floor — ancient coastal woodland"
           fill
           priority
           className="object-cover object-center"
