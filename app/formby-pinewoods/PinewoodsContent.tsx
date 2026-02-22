@@ -61,7 +61,7 @@ const TRAILS = [
     level: "Easy",
     desc: "The dedicated red squirrel trail looping through the densest section. Flat throughout. Starts from main car park. Best for families or anyone wanting a manageable walk without committing to the beach.",
     tip: "Go early morning for best squirrel sightings.",
-    image: "/blog-card-walks.webp",
+    image: "/squirrel-walk.webp",
     imagePos: "object-center",
   },
   {

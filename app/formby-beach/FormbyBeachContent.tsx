@@ -44,28 +44,38 @@ export default function FormbyBeachContent() {
         </div>
       </section>
 
-      <div className="container mx-auto px-4 max-w-6xl py-12">
-
-        {/* Intro — image + text side by side */}
-        <div className="grid md:grid-cols-2 gap-8 items-center mb-14">
-          <div className="relative aspect-square overflow-hidden rounded-2xl">
-            <Image
-              src="/nt-formby-sign.webp"
-              alt="National Trust Formby sign at the entrance"
-              fill
-              className="object-cover object-center scale-95"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </div>
-          <div>
-            <p className="text-[#1C3220]/80 leading-relaxed">
-              Formby Beach is a <strong>proper beach</strong> — wide sand, dunes, pinewoods behind you, the Irish Sea ahead. No promenade, no amusements.
-            </p>
-            <p className="text-[#1C3220]/80 leading-relaxed mt-4">
-              Busy on a sunny Saturday; almost empty on a Tuesday in October. Both work. Just know what you&apos;re walking into.
-            </p>
+      {/* Intro — full-bleed hero strip */}
+      <div className="relative w-full h-72 md:h-96 overflow-hidden">
+        <Image
+          src="/formby-beach-hero.jpg"
+          alt="Formby Beach — wide sand, dunes and the Irish Sea"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 container mx-auto px-4 max-w-6xl pb-6">
+          <p className="text-white/90 text-base md:text-lg leading-relaxed max-w-2xl mb-4">
+            Formby Beach is a <strong>proper beach</strong> — wide open sand, dramatic dunes, pinewoods behind you and the Irish Sea in front. No promenade, no amusements, no crowds most of the time.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {[
+              { icon: "📍", label: "L37 1YH" },
+              { icon: "🅿️", label: "From £6 via NT app" },
+              { icon: "🐕", label: "Dogs welcome year-round" },
+              { icon: "☕", label: "NT café on site" },
+              { icon: "🌊", label: "No lifeguard — check tides" },
+            ].map(({ icon, label }) => (
+              <span key={label} className="inline-flex items-center gap-1.5 bg-white/15 backdrop-blur-sm border border-white/20 text-white text-xs font-medium px-3 py-1.5 rounded-full">
+                {icon} {label}
+              </span>
+            ))}
           </div>
         </div>
+      </div>
+
+      <div className="container mx-auto px-4 max-w-6xl py-12">
 
         {/* Practical Info */}
         <section id="practical" className="mb-16 scroll-mt-20">
