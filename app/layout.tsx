@@ -234,6 +234,16 @@ function Footer() {
           </div>
         </div>
 
+        <div className="border-t border-white/10 pt-5 pb-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm">
+          <p className="text-white/50">
+            Run a business in Formby?{" "}
+            <span className="text-[#C9A96E] font-semibold">Partner with the Sefton Coast Network</span>
+          </p>
+          <a href="mailto:hello@seftoncoast.network" className="text-[#C9A96E] hover:text-white transition font-medium text-sm">
+            hello@seftoncoast.network →
+          </a>
+        </div>
+
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40">
           <p>&copy; 2026 FormbyGuide.co.uk — All rights reserved.</p>
           <div className="flex gap-5">
