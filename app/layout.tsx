@@ -157,6 +157,11 @@ function Footer() {
                     SeftonLinks.com ↗
                   </a>
                 </li>
+                <li>
+                  <a href="https://seftoncoastwildlife.co.uk" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-white/70 hover:text-[#C9A96E] transition">
+                    Sefton Coast Wildlife ↗
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -224,6 +229,7 @@ function Footer() {
           <div className="flex gap-5">
             <a href="https://www.southportguide.co.uk" target="_blank" rel="noopener" className="hover:text-white/60 transition">SouthportGuide</a>
             <a href="https://www.seftonlinks.com" target="_blank" rel="noopener" className="hover:text-white/60 transition">SeftonLinks</a>
+            <a href="https://seftoncoastwildlife.co.uk" target="_blank" rel="noopener" className="hover:text-white/60 transition">Sefton Coast Wildlife</a>
             <a href="https://seftoncoast.network" target="_blank" rel="noopener" className="hover:text-white/60 transition">SeftonCoast.network</a>
           </div>
         </div>
