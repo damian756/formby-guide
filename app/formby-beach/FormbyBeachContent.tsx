@@ -284,6 +284,16 @@ export default function FormbyBeachContent() {
               </div>
             </div>
           </div>
+          <p className="mt-6 text-sm text-[#1C3220]/70 leading-relaxed">
+            The dune system supports a range of coastal species — ringed plover, little tern, natterjack toad, and several SAC-qualifying plants.{" "}
+            <a
+              href="https://www.seftoncoastwildlife.co.uk/nature/sefton-coast"
+              className="font-medium text-[#2E6B3E] underline underline-offset-2 hover:text-[#1C3220] transition-colors"
+            >
+              Sefton Coast Wildlife covers the dune and coastal species
+            </a>{" "}
+            you&apos;re likely to encounter along the shoreline and point.
+          </p>
         </section>
 
         {/* Facilities */}

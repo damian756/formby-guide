@@ -360,8 +360,22 @@ export default function RedSquirrelsPage() {
           </div>
         </section>
 
+        {/* Wildlife cross-link */}
+        <section className="mb-16 pt-10 border-t border-[#1C3220]/10">
+          <p className="text-sm text-[#1C3220]/70 leading-relaxed">
+            Curious about the biology? The{" "}
+            <a
+              href="https://www.seftoncoastwildlife.co.uk/mammals/red-squirrel"
+              className="font-medium text-[#2E6B3E] underline underline-offset-2 hover:text-[#1C3220] transition-colors"
+            >
+              Sefton Coast Wildlife red squirrel species profile
+            </a>{" "}
+            covers habitat, diet, conservation status, and why the Formby population has survived where others haven&apos;t — including why grey squirrels struggle in pure pine.
+          </p>
+        </section>
+
         {/* Explore More */}
-        <section className="mt-16 pt-12 border-t border-[#1C3220]/10">
+        <section className="mt-4 pt-12 border-t border-[#1C3220]/10">
           <h3 className="font-display text-2xl font-bold text-[#1C3220] mb-6">Explore More Formby</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[

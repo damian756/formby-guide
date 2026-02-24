@@ -231,6 +231,12 @@ export default function PinewoodsContent() {
               <div className="p-5">
                 <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-2">Crossbills, goldcrests, coal tits, woodpeckers, various waders and sea birds depending on season. The woodland-to-coast transition makes Formby particularly good for birders.</p>
                 <p className="text-xs text-[#1C3220]/50 italic">Check season guides for best birdwatching times.</p>
+                <a
+                  href="https://www.seftoncoastwildlife.co.uk/birds"
+                  className="inline-block mt-3 text-xs font-medium text-[#2E6B3E] underline underline-offset-2 hover:text-[#1C3220] transition-colors"
+                >
+                  Species profiles for Formby&apos;s woodland birds →
+                </a>
               </div>
             </div>
             <div className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-md transition-shadow md:col-span-2">
