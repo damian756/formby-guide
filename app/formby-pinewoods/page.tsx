@@ -31,9 +31,62 @@ export const metadata: Metadata = {
   },
 };
 
+const pinewoodsJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TouristAttraction",
+      "@id": `${BASE_URL}/formby-pinewoods#attraction`,
+      name: "Formby Pinewoods",
+      description: "Coastal pine woodland managed by the National Trust — walks, red squirrels, birdwatching, and direct access to Formby Beach.",
+      url: `${BASE_URL}/formby-pinewoods`,
+      geo: { "@type": "GeoCoordinates", latitude: 53.5553, longitude: -3.0886 },
+      address: {
+        "@type": "PostalAddress",
+        postalCode: "L37 1YH",
+        addressLocality: "Formby",
+        addressRegion: "Merseyside",
+        addressCountry: "GB",
+      },
+      touristType: ["Walkers", "Wildlife spotters", "Families", "Dog walkers"],
+      amenityFeature: [
+        { "@type": "LocationFeatureSpecification", name: "Dogs allowed", value: true },
+        { "@type": "LocationFeatureSpecification", name: "Car park", value: true },
+        { "@type": "LocationFeatureSpecification", name: "Marked trails", value: true },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Are Formby pinewoods the same as the National Trust Formby estate?",
+          acceptedAnswer: { "@type": "Answer", text: "Yes — the pinewoods are managed by the National Trust as part of the wider Formby estate. The same car park (postcode L37 1YH) serves the beach, pinewoods, and red squirrel reserve." },
+        },
+        {
+          "@type": "Question",
+          name: "How long does a walk through Formby pinewoods take?",
+          acceptedAnswer: { "@type": "Answer", text: "The main circular trail through the pinewoods takes around 45 minutes to an hour at a relaxed pace. You can extend it by continuing through the dunes to the beach." },
+        },
+        {
+          "@type": "Question",
+          name: "Are dogs allowed in Formby pinewoods?",
+          acceptedAnswer: { "@type": "Answer", text: "Yes, dogs are welcome in the pinewoods. Keep them on leads in the red squirrel reserve areas." },
+        },
+        {
+          "@type": "Question",
+          name: "Is there parking at Formby pinewoods?",
+          acceptedAnswer: { "@type": "Answer", text: "Yes — the National Trust car park at L37 1YH serves the pinewoods, beach, and squirrel reserve. NT members park free; non-members pay approximately £6–£8 via the NT app." },
+        },
+      ],
+    },
+  ],
+};
+
 export default function PinewoodsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pinewoodsJsonLd) }} />
       {/* Hero */}
       <section className="relative text-white py-16 md:py-24 overflow-hidden min-h-[420px] flex items-center">
         <Image

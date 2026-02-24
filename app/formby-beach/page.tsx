@@ -31,9 +31,68 @@ export const metadata: Metadata = {
   },
 };
 
+const beachJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TouristAttraction",
+      "@id": `${BASE_URL}/formby-beach#attraction`,
+      name: "Formby Beach",
+      description: "A National Trust managed beach on the Sefton Coast — sand dunes, Formby Point, and the Irish Sea. Postcode L37 1YH.",
+      url: `${BASE_URL}/formby-beach`,
+      geo: { "@type": "GeoCoordinates", latitude: 53.5553, longitude: -3.0886 },
+      address: {
+        "@type": "PostalAddress",
+        postalCode: "L37 1YH",
+        addressLocality: "Formby",
+        addressRegion: "Merseyside",
+        addressCountry: "GB",
+      },
+      touristType: ["Families", "Dog walkers", "Wildlife spotters", "Day trippers"],
+      amenityFeature: [
+        { "@type": "LocationFeatureSpecification", name: "Car park", value: true },
+        { "@type": "LocationFeatureSpecification", name: "Toilets", value: true },
+        { "@type": "LocationFeatureSpecification", name: "Café", value: true },
+        { "@type": "LocationFeatureSpecification", name: "Dogs allowed", value: true },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What is the postcode for Formby Beach?",
+          acceptedAnswer: { "@type": "Answer", text: "Formby Beach postcode is L37 1YH. Use this for the National Trust car park sat nav." },
+        },
+        {
+          "@type": "Question",
+          name: "How much does parking cost at Formby Beach?",
+          acceptedAnswer: { "@type": "Answer", text: "National Trust car park. NT members park free; non-members pay approximately £6–£8 via the NT app. Download it before you arrive — signal in the car park is unreliable." },
+        },
+        {
+          "@type": "Question",
+          name: "Are dogs allowed at Formby Beach?",
+          acceptedAnswer: { "@type": "Answer", text: "Yes, dogs are welcome at Formby Beach year-round. Some sections near the tern nesting areas have seasonal restrictions from April to August — follow the signage on the day." },
+        },
+        {
+          "@type": "Question",
+          name: "What time does the Formby Beach car park open?",
+          acceptedAnswer: { "@type": "Answer", text: "The National Trust car park opens from around 8am. It fills up quickly on sunny weekends — aim to arrive before 10am in summer." },
+        },
+        {
+          "@type": "Question",
+          name: "Are there toilets at Formby Beach?",
+          acceptedAnswer: { "@type": "Answer", text: "Yes, there are public toilets at the National Trust car park. The NT café is also close by." },
+        },
+      ],
+    },
+  ],
+};
+
 export default function FormbyBeachPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(beachJsonLd) }} />
       {/* Hero */}
       <section className="relative text-white py-16 md:py-24 overflow-hidden min-h-[420px] flex items-center">
         <Image

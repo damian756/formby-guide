@@ -30,9 +30,62 @@ export const metadata: Metadata = {
   },
 };
 
+const squirrelsJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TouristAttraction",
+      "@id": `${BASE_URL}/red-squirrels-formby#attraction`,
+      name: "Formby Red Squirrel Reserve",
+      description: "National Trust managed red squirrel reserve in the Formby pinewoods — one of the best places in England to see red squirrels in the wild.",
+      url: `${BASE_URL}/red-squirrels-formby`,
+      geo: { "@type": "GeoCoordinates", latitude: 53.5553, longitude: -3.0886 },
+      address: {
+        "@type": "PostalAddress",
+        postalCode: "L37 1YH",
+        addressLocality: "Formby",
+        addressRegion: "Merseyside",
+        addressCountry: "GB",
+      },
+      touristType: ["Wildlife spotters", "Families", "Photographers", "Nature lovers"],
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "When is the best time to see red squirrels at Formby?",
+          acceptedAnswer: { "@type": "Answer", text: "September to February is peak time, especially early morning. Go before 10am for the best chance — they're most active in the first couple of hours after dawn." },
+        },
+        {
+          "@type": "Question",
+          name: "Where exactly are the red squirrels at Formby?",
+          acceptedAnswer: { "@type": "Answer", text: "The red squirrel reserve is within the National Trust Formby estate. Park at the main NT car park (postcode L37 1YH) and follow the red squirrel trail signs from the car park." },
+        },
+        {
+          "@type": "Question",
+          name: "Do I need to pay to see the red squirrels at Formby?",
+          acceptedAnswer: { "@type": "Answer", text: "The car park charges apply — free for NT members, around £6–£8 for non-members. The squirrel reserve itself is free to walk through once you're parked." },
+        },
+        {
+          "@type": "Question",
+          name: "Are binoculars useful at the Formby red squirrel reserve?",
+          acceptedAnswer: { "@type": "Answer", text: "Binoculars help but aren't essential — the squirrels often come quite close to the trail. A telephoto lens is useful if you want decent photographs." },
+        },
+        {
+          "@type": "Question",
+          name: "Are dogs allowed at the Formby red squirrel reserve?",
+          acceptedAnswer: { "@type": "Answer", text: "Dogs are allowed but must be kept on leads throughout the squirrel reserve area." },
+        },
+      ],
+    },
+  ],
+};
+
 export default function RedSquirrelsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(squirrelsJsonLd) }} />
       {/* Hero */}
       <section className="relative text-white py-20 md:py-28 overflow-hidden min-h-[480px] flex items-center bg-amber-900">
         <Image
