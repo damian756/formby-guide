@@ -57,3 +57,6 @@ fix-vercel-env.mjs
 fsa-log.txt
 fsa-progress.json
 enrich-progress.json
+
+# Cursor AI
+.cursor/
