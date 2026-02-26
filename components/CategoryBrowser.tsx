@@ -4,7 +4,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { Star, MapPin, Search, X, LayoutGrid, Map, SlidersHorizontal } from "lucide-react";
-import { MapSkeleton, type MapPin as MapPinType } from "./CategoryMap";
+import { MapSkeleton, type MapPin as MapPinType } from "./CategoryMapTypes";
 
 const CategoryMap = dynamic(() => import("./CategoryMap"), {
   ssr: false,

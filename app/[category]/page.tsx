@@ -2,10 +2,10 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ChevronRight } from "lucide-react";
-import { getCategoryBySlug, isValidCategory, CATEGORIES } from "@/lib/config";
+import { getCategoryBySlug, isValidCategory } from "@/lib/config";
 import { prisma } from "@/lib/prisma";
 import CategoryBrowser, { type BrowserBusiness } from "@/components/CategoryBrowser";
-import type { MapPin } from "@/components/CategoryMap";
+import type { MapPin } from "@/components/CategoryMapTypes";
 
 type Props = {
   params: Promise<{ category: string }>;
@@ -41,9 +41,7 @@ function matchesArea(address: string, postcode: string, areaKey: string): boolea
   return def.test(address, postcode);
 }
 
-export async function generateStaticParams() {
-  return CATEGORIES.map((c) => ({ category: c.slug }));
-}
+export const dynamic = "force-dynamic";
 
 const BASE_URL = "https://www.formbyguide.co.uk";
 
@@ -125,7 +123,7 @@ export default async function CategoryPage({ params, searchParams }: Props) {
   } catch { /* DB unavailable */ }
 
   const filteredBusinesses = area
-    ? businesses.filter((b) => matchesArea(b.address, b.postcode, area))
+    ? businesses.filter((b) => matchesArea(b.address ?? "", b.postcode ?? "", area))
     : businesses;
 
   const mapPins: MapPin[] = filteredBusinesses
