@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Link from "next/link";
 import NavMenu from "./components/NavMenu";
@@ -88,9 +89,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <head>
-        {/* Privacy-friendly analytics by Plausible */}
-        <Script src="https://plausible.io/js/pa-59ucrRXhBPaiBnJvRw2AI.js" strategy="afterInteractive" />
-        <Script id="plausible-init" strategy="afterInteractive">{`window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()`}</Script>
         <Script id="crisp-chat" strategy="afterInteractive">{`
           window.$crisp=[];window.CRISP_WEBSITE_ID="923512e8-2a2f-4ea8-95d4-78bc7809b34d";(function(){var d=document;var s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
         `}</Script>
@@ -102,6 +100,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <Footer />
           <CookieBanner />
         </CookieProvider>
+        <Analytics />
       </body>
     </html>
   );
