@@ -6,6 +6,7 @@ import Link from "next/link";
 import NavMenu from "./components/NavMenu";
 import { CookieProvider } from "./components/CookieProvider";
 import CookieBanner from "./components/CookieBanner";
+import { Analytics } from "@vercel/analytics/next";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -102,6 +103,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <Footer />
           <CookieBanner />
         </CookieProvider>
+        <Analytics />
       </body>
     </html>
   );

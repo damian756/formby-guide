@@ -47,7 +47,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       select: { slug: true, updatedAt: true, category: { select: { slug: true } } },
     });
 
-    businessPages = businesses.map((b) => ({
+    businessPages = businesses.map((b: { slug: string; updatedAt: Date; category: { slug: string } }) => ({
       url: `${BASE_URL}/${b.category.slug}/${b.slug}`,
       lastModified: b.updatedAt,
       changeFrequency: "weekly" as const,
