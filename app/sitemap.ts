@@ -1,14 +1,13 @@
 import { MetadataRoute } from "next";
 import { prisma } from "@/lib/prisma";
+import { GUIDES, getGuideUrl } from "@/lib/guides-config";
 
 const BASE_URL = "https://www.formbyguide.co.uk";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPages = [
     { url: BASE_URL, priority: 1.0, changeFrequency: "weekly" as const },
-    { url: `${BASE_URL}/formby-beach`, priority: 0.9, changeFrequency: "monthly" as const },
-    { url: `${BASE_URL}/red-squirrels-formby`, priority: 0.9, changeFrequency: "monthly" as const },
-    { url: `${BASE_URL}/formby-pinewoods`, priority: 0.9, changeFrequency: "monthly" as const },
+    { url: `${BASE_URL}/guides`, priority: 0.9, changeFrequency: "weekly" as const },
     { url: `${BASE_URL}/things-to-do`, priority: 0.9, changeFrequency: "monthly" as const },
     { url: `${BASE_URL}/about-formby`, priority: 0.7, changeFrequency: "monthly" as const },
     { url: `${BASE_URL}/blog`, priority: 0.8, changeFrequency: "weekly" as const },
@@ -33,6 +32,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/terms`, priority: 0.3, changeFrequency: "yearly" as const },
   ];
 
+  // Dynamic guide pages from guides-config — covers all 8 guides including the
+  // 3 existing top-level pages (resolved via getGuideUrl) and the 5 new ones
+  const guidePages = GUIDES.filter((g) => g.status === "published").map((g) => ({
+    url: `${BASE_URL}${getGuideUrl(g)}`,
+    priority: g.seoPriority,
+    changeFrequency: "monthly" as const,
+  }));
+
   let businessPages: MetadataRoute.Sitemap = [];
 
   try {
@@ -52,6 +59,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     ...staticPages.map(({ url, priority, changeFrequency }) => ({
+      url,
+      lastModified: new Date(),
+      changeFrequency,
+      priority,
+    })),
+    ...guidePages.map(({ url, priority, changeFrequency }) => ({
       url,
       lastModified: new Date(),
       changeFrequency,

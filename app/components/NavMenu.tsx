@@ -5,11 +5,15 @@ import Link from "next/link";
 import {
   Menu, X, ChevronDown,
   Utensils, Beer, Coffee, ShoppingBag, Dumbbell, BedDouble,
-  Trees, Waves, Squirrel, Compass,
+  Waves, Squirrel, Compass, TreePine, BookOpen,
 } from "lucide-react";
 
 const NATURE_LINKS = [
+  { href: "/guides",                  label: "All Guides",              icon: BookOpen,  color: "text-[#C9A96E]" },
   { href: "/things-to-do",           label: "Things To Do — Full Guide", icon: Compass,  color: "text-[#2E6B3E]" },
+  { href: "/formby-beach",           label: "Formby Beach",             icon: Waves,     color: "text-sky-500" },
+  { href: "/red-squirrels-formby",   label: "Red Squirrels",            icon: Squirrel,  color: "text-amber-600" },
+  { href: "/formby-pinewoods",       label: "Pinewoods",                icon: TreePine,  color: "text-[#2E6B3E]" },
 ];
 
 const BUSINESS_CATEGORIES = [
@@ -51,7 +55,7 @@ export default function NavMenu() {
           {/* Mega dropdown */}
           <div className={`absolute top-full left-0 mt-1 bg-white rounded-2xl shadow-2xl border border-gray-100 p-4 w-72 z-50 transition-all duration-200 ${exploreOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"}`}>
 
-            {/* Nature & content pages */}
+            {/* Guides & content pages */}
             <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-2 px-2">Explore Formby</p>
             <div className="grid grid-cols-1 gap-0.5 mb-3">
               {NATURE_LINKS.map(({ href, label, icon: Icon, color }) => (
@@ -89,14 +93,15 @@ export default function NavMenu() {
 
         <div className="w-px h-5 bg-gray-200 mx-1" />
 
+        <Link href="/guides" className="flex items-center gap-1.5 text-[#1C3220] hover:text-[#2E6B3E] font-medium px-3 py-2 rounded-lg text-sm transition-colors">
+          <BookOpen className="w-3.5 h-3.5" />
+          Guides
+        </Link>
         <Link href="/formby-beach" className="text-[#1C3220]/70 hover:text-[#2E6B3E] font-medium px-3 py-2 rounded-lg text-sm transition-colors">
           Formby Beach
         </Link>
         <Link href="/red-squirrels-formby" className="text-[#1C3220]/70 hover:text-[#2E6B3E] font-medium px-3 py-2 rounded-lg text-sm transition-colors">
           Red Squirrels
-        </Link>
-        <Link href="/formby-pinewoods" className="text-[#1C3220]/70 hover:text-[#2E6B3E] font-medium px-3 py-2 rounded-lg text-sm transition-colors">
-          Pinewoods
         </Link>
         <Link href="/about-formby" className="text-[#1C3220]/70 hover:text-[#2E6B3E] font-medium px-3 py-2 rounded-lg text-sm transition-colors">
           About Formby
@@ -161,6 +166,9 @@ export default function NavMenu() {
           </div>
 
           <div className="border-t border-gray-100 pt-4 mb-4 space-y-1">
+            <Link href="/guides" className="flex items-center gap-2.5 px-3 py-3 rounded-xl bg-[#F0F5EF] text-[#1C3220] text-sm font-medium" onClick={() => setMobileOpen(false)}>
+              <BookOpen className="w-4 h-4 text-[#C9A96E]" /> All Guides
+            </Link>
             <Link href="/formby-beach" className="flex items-center gap-2.5 px-3 py-3 rounded-xl bg-[#F0F5EF] text-[#1C3220] text-sm font-medium" onClick={() => setMobileOpen(false)}>
               Formby Beach
             </Link>

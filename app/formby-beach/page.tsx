@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Car, Dog, Coffee, ChevronRight } from "lucide-react";
 import FormbyBeachContent from "./FormbyBeachContent";
+import GuideLayout from "@/app/components/GuideLayout";
+import { getGuide } from "@/lib/guides-config";
 
 const BASE_URL = "https://www.formbyguide.co.uk";
 
@@ -90,8 +92,10 @@ const beachJsonLd = {
 };
 
 export default function FormbyBeachPage() {
+  const guide = getGuide("formby-beach");
   return (
-    <>
+    <GuideLayout guide={guide}>
+      <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(beachJsonLd) }} />
       {/* Hero */}
       <section className="relative text-white py-16 md:py-24 overflow-hidden min-h-[420px] flex items-center">
@@ -140,6 +144,7 @@ export default function FormbyBeachPage() {
       </section>
 
       <FormbyBeachContent />
-    </>
+      </>
+    </GuideLayout>
   );
 }

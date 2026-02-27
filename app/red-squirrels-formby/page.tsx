@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { MapPin, Clock, Dog, Camera, ChevronRight } from "lucide-react";
+import GuideLayout from "@/app/components/GuideLayout";
+import { getGuide } from "@/lib/guides-config";
 
 const BASE_URL = "https://www.formbyguide.co.uk";
 
@@ -83,8 +85,10 @@ const squirrelsJsonLd = {
 };
 
 export default function RedSquirrelsPage() {
+  const guide = getGuide("red-squirrels-formby");
   return (
-    <>
+    <GuideLayout guide={guide}>
+      <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(squirrelsJsonLd) }} />
       {/* Hero */}
       <section className="relative text-white py-20 md:py-28 overflow-hidden min-h-[480px] flex items-center bg-amber-900">
@@ -397,6 +401,7 @@ export default function RedSquirrelsPage() {
         </section>
 
       </div>
-    </>
+      </>
+    </GuideLayout>
   );
 }

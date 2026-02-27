@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Clock, Dog, Compass, ChevronRight } from "lucide-react";
 import PinewoodsContent from "./PinewoodsContent";
+import GuideLayout from "@/app/components/GuideLayout";
+import { getGuide } from "@/lib/guides-config";
 
 const BASE_URL = "https://www.formbyguide.co.uk";
 
@@ -84,8 +86,10 @@ const pinewoodsJsonLd = {
 };
 
 export default function PinewoodsPage() {
+  const guide = getGuide("formby-pinewoods");
   return (
-    <>
+    <GuideLayout guide={guide}>
+      <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pinewoodsJsonLd) }} />
       {/* Hero */}
       <section className="relative text-white py-16 md:py-24 overflow-hidden min-h-[420px] flex items-center">
@@ -162,6 +166,7 @@ export default function PinewoodsPage() {
       </div>
 
       <PinewoodsContent />
-    </>
+      </>
+    </GuideLayout>
   );
 }
