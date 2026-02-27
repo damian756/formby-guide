@@ -178,7 +178,7 @@ export const GUIDES: Guide[] = [
     excerpt:
       "Formby village is 10 minutes from the beach and most visitors never go. Chapel Lane has independent shops, proper restaurants, and Emily's. The complete guide.",
     category: "areas",
-    heroImage: "/about-formby-village.webp",
+    heroImage: "/about-village-street.webp",
     seoPriority: 0.85,
     datePublished: "2026-02-27",
     dateUpdated: "2026-02-27",
