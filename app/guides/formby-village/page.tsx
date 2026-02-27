@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "FormbyGuide.co.uk",
     locale: "en_GB",
-    images: [{ url: `${BASE_URL}/about-formby-village.webp`, width: 1200, height: 630, alt: "Formby village — Chapel Lane" }],
+    images: [{ url: `${BASE_URL}/about-village-street.webp`, width: 1200, height: 630, alt: "Formby village — Chapel Lane" }],
   },
 };
 
@@ -92,7 +92,7 @@ export default function FormbyVillagePage() {
         {/* Hero */}
         <section className="relative text-white py-20 md:py-28 overflow-hidden min-h-[480px] flex items-center bg-[#1C3220]">
           <Image
-            src="/about-formby-village.webp"
+            src="/about-village-street.webp"
             alt="Formby village — Chapel Lane and the village centre"
             fill
             priority
