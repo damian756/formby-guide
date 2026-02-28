@@ -88,6 +88,29 @@ export default function NavMenu() {
                 ))}
               </div>
             </div>
+
+            {/* Cross-links to Southport collections */}
+            <div className="border-t border-gray-100 mt-2 pt-2">
+              <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-1.5 px-2">Near Southport too?</p>
+              <div className="grid grid-cols-1 gap-0.5">
+                {[
+                  { href: "https://www.southportguide.co.uk/collections/dog-friendly-pubs-southport",        label: "Dog-friendly pubs",      emoji: "🐾" },
+                  { href: "https://www.southportguide.co.uk/collections/lord-street-restaurants-southport",  label: "Lord Street restaurants", emoji: "🍽️" },
+                  { href: "https://www.southportguide.co.uk/collections/hotels-near-royal-birkdale",         label: "Hotels near Birkdale",    emoji: "⛳" },
+                ].map(({ href, label, emoji }) => (
+                  <a
+                    key={href}
+                    href={href}
+                    className="flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-[#F0F5EF] text-[#1C3220]/70 text-sm transition-colors group"
+                    onClick={() => setExploreOpen(false)}
+                  >
+                    <span className="text-base leading-none flex-shrink-0">{emoji}</span>
+                    <span className="font-medium group-hover:text-[#2E6B3E] transition-colors">{label}</span>
+                    <span className="ml-auto text-[10px] text-gray-400 flex-shrink-0">SouthportGuide ↗</span>
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
@@ -163,6 +186,19 @@ export default function NavMenu() {
                 </Link>
               ))}
             </div>
+          </div>
+
+          <div className="border-t border-gray-100 pt-4 mb-4 space-y-1">
+            <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-2">Near Southport too?</p>
+            {[
+              { href: "https://www.southportguide.co.uk/collections/dog-friendly-pubs-southport",        label: "🐾 Dog-friendly pubs — Southport" },
+              { href: "https://www.southportguide.co.uk/collections/lord-street-restaurants-southport",  label: "🍽️ Lord Street restaurants" },
+              { href: "https://www.southportguide.co.uk/collections/hotels-near-royal-birkdale",         label: "⛳ Hotels near Royal Birkdale" },
+            ].map(({ href, label }) => (
+              <a key={href} href={href} className="flex items-center gap-2.5 px-3 py-3 rounded-xl bg-[#F0F5EF] text-[#1C3220]/80 text-sm font-medium">
+                {label} <span className="ml-auto text-[10px] text-gray-400">↗</span>
+              </a>
+            ))}
           </div>
 
           <div className="border-t border-gray-100 pt-4 mb-4 space-y-1">
