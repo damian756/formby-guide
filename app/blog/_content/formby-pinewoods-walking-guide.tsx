@@ -3,23 +3,6 @@ import Image from "next/image";
 import { ChevronRight, Calendar, Clock, ArrowRight, CheckCircle, AlertCircle, MapPin, TreePine } from "lucide-react";
 import ClareBio from "../ClareBio";
 
-export const metadata: Metadata = {
-  title: "Walking in Formby Pinewoods — Trail Guide, Tips & What to Bring | FormbyGuide",
-  description: "Everything you need to walk the Formby Pinewoods. Trail options, terrain advice, what to wear, what to bring, and the local knowledge that makes the difference.",
-  keywords: "Formby Pinewoods walking, Formby Pinewoods trails, walking Formby, National Trust Formby walk, Formby woodland walk",
-  alternates: { canonical: `${BASE_URL}/blog/formby-pinewoods-walking-guide` },
-  openGraph: {
-    title: "Walking in Formby Pinewoods — Trail Guide & Local Tips",
-    description: "Complete guide to walking Formby Pinewoods from a local who goes every week.",
-    url: `${BASE_URL}/blog/formby-pinewoods-walking-guide`,
-    type: "article",
-    siteName: "FormbyGuide.co.uk",
-    locale: "en_GB",
-    images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "FormbyGuide.co.uk" }],
-  },
-  twitter: { card: "summary_large_image", title: "Walking in Formby Pinewoods", description: "Trails, tips and what to bring." },
-};
-
 const TRAILS = [
   {
     name: "The Squirrel Trail",
@@ -56,7 +39,7 @@ const TRAILS = [
   },
 ];
 
-export default function BlogPost() {
+export default function PostContent() {
   return (
     <div className="min-h-screen bg-[#F7F9F6]">
       <script
