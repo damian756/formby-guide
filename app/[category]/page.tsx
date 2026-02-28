@@ -83,7 +83,8 @@ export default async function CategoryPage({ params, searchParams }: Props) {
       if (sort === "alpha") {
         businesses = await prisma.$queryRaw<BrowserBusiness[]>`
           SELECT slug, name, "shortDescription", description, "listingTier", address, postcode,
-                 rating, "reviewCount", "priceRange", lat, lng, "hygieneRating"
+                 rating, "reviewCount", "priceRange", lat, lng, "hygieneRating",
+                 images[1] AS "firstImage"
           FROM "Business"
           WHERE "categoryId" = ${catId} OR ${catId} = ANY("secondaryCategoryIds")
           ORDER BY name ASC
@@ -91,7 +92,8 @@ export default async function CategoryPage({ params, searchParams }: Props) {
       } else if (sort === "hygiene") {
         businesses = await prisma.$queryRaw<BrowserBusiness[]>`
           SELECT slug, name, "shortDescription", description, "listingTier", address, postcode,
-                 rating, "reviewCount", "priceRange", lat, lng, "hygieneRating"
+                 rating, "reviewCount", "priceRange", lat, lng, "hygieneRating",
+                 images[1] AS "firstImage"
           FROM "Business"
           WHERE "categoryId" = ${catId} OR ${catId} = ANY("secondaryCategoryIds")
           ORDER BY
@@ -101,7 +103,8 @@ export default async function CategoryPage({ params, searchParams }: Props) {
       } else if (sort === "google") {
         businesses = await prisma.$queryRaw<BrowserBusiness[]>`
           SELECT slug, name, "shortDescription", description, "listingTier", address, postcode,
-                 rating, "reviewCount", "priceRange", lat, lng, "hygieneRating"
+                 rating, "reviewCount", "priceRange", lat, lng, "hygieneRating",
+                 images[1] AS "firstImage"
           FROM "Business"
           WHERE "categoryId" = ${catId} OR ${catId} = ANY("secondaryCategoryIds")
           ORDER BY
@@ -111,7 +114,8 @@ export default async function CategoryPage({ params, searchParams }: Props) {
       } else {
         businesses = await prisma.$queryRaw<BrowserBusiness[]>`
           SELECT slug, name, "shortDescription", description, "listingTier", address, postcode,
-                 rating, "reviewCount", "priceRange", lat, lng, "hygieneRating"
+                 rating, "reviewCount", "priceRange", lat, lng, "hygieneRating",
+                 images[1] AS "firstImage"
           FROM "Business"
           WHERE "categoryId" = ${catId} OR ${catId} = ANY("secondaryCategoryIds")
           ORDER BY

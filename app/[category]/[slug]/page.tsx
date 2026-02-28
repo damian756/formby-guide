@@ -170,23 +170,7 @@ export default async function BusinessPage({ params }: Props) {
   const mapsKey = process.env.GOOGLE_PLACES_API_KEY;
   const isFoodCategory = FOOD_CATS.has(category);
 
-  // Fetch a Google Places photo if no images stored
-  let placesPhoto: string | null = null;
-  if (!business.images?.[0] && business.placeId && mapsKey) {
-    try {
-      const detailsRes = await fetch(
-        `https://maps.googleapis.com/maps/api/place/details/json?place_id=${business.placeId}&fields=photos&key=${mapsKey}`,
-        { next: { revalidate: 86400 } }
-      );
-      if (detailsRes.ok) {
-        const details = await detailsRes.json() as { result?: { photos?: Array<{ photo_reference: string }> } };
-        const ref = details.result?.photos?.[0]?.photo_reference;
-        if (ref) {
-          placesPhoto = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=${ref}&key=${mapsKey}`;
-        }
-      }
-    } catch { /* silently skip */ }
-  }
+  const heroImage = business.images?.[0] ?? null;
 
   // "Last updated" label
   const updatedLabel = (() => {
@@ -298,15 +282,9 @@ export default async function BusinessPage({ params }: Props) {
               {/* Hero card */}
               <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100">
                 <div className="h-52 bg-gradient-to-br from-[#1C3220] to-[#2E6B3E] flex items-center justify-center relative overflow-hidden">
-                  {business.images?.[0] ? (
+                  {heroImage ? (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={business.images[0]} alt={business.name} className="w-full h-full object-cover" />
-                  ) : placesPhoto ? (
-                    <>
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={placesPhoto} alt={business.name} className="w-full h-full object-cover" />
-                      <span className="absolute bottom-2 right-2 text-white/50 text-[10px]">Photo © Google</span>
-                    </>
+                    <img src={heroImage} alt={business.name} className="w-full h-full object-cover" />
                   ) : (
                     <>
                       <div className="absolute inset-0 bg-gradient-to-br from-[#1C3220] to-[#2E6B3E]" />
