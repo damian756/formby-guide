@@ -35,7 +35,7 @@ const CATEGORIES: BlogCategory[] = [
   { slug: "conservation", label: "Conservation", color: "#4A6B1C", description: "The wildlife and habitat work that makes Formby special." },
 ];
 
-const POSTS: BlogPost[] = [
+export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "things-to-do-formby-half-term",
     title: "Things to Do in Formby During Half Term — Family Guide",
@@ -141,7 +141,7 @@ export default function BlogPage() {
           <div className="w-8 h-8 border-2 border-[#C9A96E] border-t-transparent rounded-full animate-spin" />
         </div>
       }>
-        <BlogClient posts={POSTS} categories={CATEGORIES} />
+        <BlogClient posts={BLOG_POSTS} categories={CATEGORIES} />
       </Suspense>
 
       {/* Coming soon footer */}
