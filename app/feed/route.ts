@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { BLOG_POSTS } from "@/app/blog/page";
+import { BLOG_POSTS } from "@/lib/blog-posts";
 
 const BASE_URL = "https://www.formbyguide.co.uk";
 
