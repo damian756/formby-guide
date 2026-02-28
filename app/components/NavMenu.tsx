@@ -50,10 +50,10 @@ export default function NavMenu() {
           </Link>
 
           {/* Invisible bridge — keeps hover active when moving from trigger to dropdown */}
-          <div className="absolute top-full left-0 w-72 h-4 z-40" />
+          <div className="absolute top-full left-0 w-80 h-4 z-40" />
 
           {/* Mega dropdown */}
-          <div className={`absolute top-full left-0 mt-1 bg-white rounded-2xl shadow-2xl border border-gray-100 p-4 w-72 z-50 transition-all duration-200 ${exploreOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"}`}>
+          <div className={`absolute top-full left-0 mt-1 bg-white rounded-2xl shadow-2xl border border-gray-100 p-4 w-80 z-50 transition-all duration-200 ${exploreOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"}`}>
 
             {/* Guides & content pages */}
             <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-2 px-2">Explore Formby</p>
@@ -74,40 +74,17 @@ export default function NavMenu() {
             {/* Business categories */}
             <div className="border-t border-gray-100 pt-3">
               <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-2 px-2">Browse by category</p>
-              <div className="grid grid-cols-1 gap-0.5">
+              <div className="grid grid-cols-2 gap-0.5">
                 {BUSINESS_CATEGORIES.map(({ slug, label, icon: Icon, color }) => (
                   <Link
                     key={slug}
                     href={`/${slug}`}
-                    className="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#F0F5EF] text-[#1C3220] text-sm transition-colors group"
+                    className="flex items-center gap-2 px-2.5 py-2 rounded-xl hover:bg-[#F0F5EF] text-[#1C3220] text-xs transition-colors group"
                     onClick={() => setExploreOpen(false)}
                   >
-                    <Icon className={`w-4 h-4 flex-shrink-0 ${color} group-hover:scale-110 transition-transform`} />
-                    <span className="font-medium group-hover:text-[#2E6B3E] transition-colors">{label}</span>
+                    <Icon className={`w-3.5 h-3.5 flex-shrink-0 ${color}`} />
+                    <span className="font-medium group-hover:text-[#2E6B3E] transition-colors truncate">{label}</span>
                   </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* Cross-links to Southport collections */}
-            <div className="border-t border-gray-100 mt-2 pt-2">
-              <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-1.5 px-2">Near Southport too?</p>
-              <div className="grid grid-cols-1 gap-0.5">
-                {[
-                  { href: "https://www.southportguide.co.uk/collections/dog-friendly-pubs-southport",        label: "Dog-friendly pubs",      emoji: "🐾" },
-                  { href: "https://www.southportguide.co.uk/collections/lord-street-restaurants-southport",  label: "Lord Street restaurants", emoji: "🍽️" },
-                  { href: "https://www.southportguide.co.uk/collections/hotels-near-royal-birkdale",         label: "Hotels near Birkdale",    emoji: "⛳" },
-                ].map(({ href, label, emoji }) => (
-                  <a
-                    key={href}
-                    href={href}
-                    className="flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-[#F0F5EF] text-[#1C3220]/70 text-sm transition-colors group"
-                    onClick={() => setExploreOpen(false)}
-                  >
-                    <span className="text-base leading-none flex-shrink-0">{emoji}</span>
-                    <span className="font-medium group-hover:text-[#2E6B3E] transition-colors">{label}</span>
-                    <span className="ml-auto text-[10px] text-gray-400 flex-shrink-0">SouthportGuide ↗</span>
-                  </a>
                 ))}
               </div>
             </div>
@@ -120,14 +97,8 @@ export default function NavMenu() {
           <BookOpen className="w-3.5 h-3.5" />
           Guides
         </Link>
-        <Link href="/formby-beach" className="text-[#1C3220]/70 hover:text-[#2E6B3E] font-medium px-3 py-2 rounded-lg text-sm transition-colors">
-          Formby Beach
-        </Link>
-        <Link href="/red-squirrels-formby" className="text-[#1C3220]/70 hover:text-[#2E6B3E] font-medium px-3 py-2 rounded-lg text-sm transition-colors">
-          Red Squirrels
-        </Link>
         <Link href="/about-formby" className="text-[#1C3220]/70 hover:text-[#2E6B3E] font-medium px-3 py-2 rounded-lg text-sm transition-colors">
-          About Formby
+          About
         </Link>
         <Link href="/blog" className="text-[#1C3220]/70 hover:text-[#2E6B3E] font-medium px-3 py-2 rounded-lg text-sm transition-colors">
           Blog
