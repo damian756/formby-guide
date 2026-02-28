@@ -1,30 +1,9 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Calendar, Clock, ArrowRight, Sun, CloudRain, Wind, Thermometer, MapPin } from "lucide-react";
 import ClareBio from "../ClareBio";
 
-const BASE_URL = "https://www.formbyguide.co.uk";
-
-export const metadata: Metadata = {
-  title: "Formby Beach Weather Guide — Best Time to Visit | FormbyGuide",
-  description: "When is the best time to visit Formby Beach? A local's honest seasonal breakdown — including the months to avoid and exactly what to bring in each season.",
-  keywords: "Formby Beach weather, best time to visit Formby Beach, Formby Beach conditions, Formby Beach seasons, when to visit Formby",
-  alternates: { canonical: `${BASE_URL}/blog/formby-beach-weather-guide` },
-  openGraph: {
-    title: "Formby Beach Weather Guide — Best Time to Visit",
-    description: "Honest seasonal guide to Formby Beach from a local who's been there in every weather condition.",
-    url: `${BASE_URL}/blog/formby-beach-weather-guide`,
-    type: "article",
-    siteName: "FormbyGuide.co.uk",
-    locale: "en_GB",
-    images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "FormbyGuide.co.uk" }],
-  },
-  twitter: { card: "summary_large_image", title: "Formby Beach Weather Guide", description: "When to visit Formby Beach and what to expect." },
-};
-
-
-export default function BlogPost() {
+export default function PostContent() {
   return (
     <div className="min-h-screen bg-[#F7F9F6]">
       <script
@@ -36,19 +15,9 @@ export default function BlogPost() {
             headline: "Formby Beach Weather Guide — Best Time to Visit",
             description: "When is the best time to visit Formby Beach? A local's honest seasonal breakdown — including the months to avoid and exactly what to bring in each season.",
             url: "https://www.formbyguide.co.uk/blog/formby-beach-weather-guide",
-            author: {
-              "@type": "Person",
-              "@id": "https://www.formbyguide.co.uk/about#clare",
-              name: "Clare",
-              url: "https://www.formbyguide.co.uk/about",
-            },
-            publisher: {
-              "@type": "Organization",
-              "@id": "https://www.churchtownmedia.co.uk/#organization",
-              name: "Churchtown Media",
-              url: "https://www.churchtownmedia.co.uk",
-            },
-            datePublished: "2026-02-20",
+            author: { "@type": "Person", "@id": "https://www.formbyguide.co.uk/about#clare", name: "Clare", url: "https://www.formbyguide.co.uk/about" },
+            publisher: { "@type": "Organization", "@id": "https://www.churchtownmedia.co.uk/#organization", name: "Churchtown Media", url: "https://www.churchtownmedia.co.uk" },
+            datePublished: "2026-02-18",
             inLanguage: "en-GB",
           }),
         }}
@@ -66,7 +35,6 @@ export default function BlogPost() {
         </div>
       </div>
 
-      {/* Hero */}
       <section className="bg-gradient-to-br from-[#1C4A5A] via-[#2E7A9A] to-[#1A5C6A] text-white relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-24 translate-x-24 blur-3xl" />
@@ -81,7 +49,7 @@ export default function BlogPost() {
               <span className="text-[#C9A96E]">Actually Worth Visiting?</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
-              Ten years living here. I&apos;ve walked that beach in every season, every weather condition. Here&apos;s the honest breakdown — including the months where staying home with a cuppa is the smarter call.
+              Ten years living here. I&apos;ve walked that beach in every season, every weather condition. Here&apos;s the honest breakdown.
             </p>
             <div className="flex items-center gap-3 text-sm text-white/60 flex-wrap">
               <div className="flex items-center gap-2">
@@ -99,7 +67,6 @@ export default function BlogPost() {
         </div>
       </section>
 
-      {/* Weather icons strip */}
       <div className="bg-[#1C4A5A] border-b border-white/10">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid grid-cols-4 divide-x divide-white/10">
@@ -121,56 +88,35 @@ export default function BlogPost() {
 
       <div className="container mx-auto px-4 max-w-5xl py-16">
         <div className="grid lg:grid-cols-3 gap-12">
-
           <article className="lg:col-span-2">
             <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 prose-p:leading-relaxed prose-strong:text-[#1C3220] max-w-none mb-10">
               <p className="lead text-xl text-gray-600 leading-relaxed">
-                Formby Beach is genuinely beautiful. It&apos;s also unpredictable. The north-west coast does what it wants, and if you arrive expecting a calm, Mediterranean-style beach day, February on the Sefton coast is going to be a shock.
+                Formby Beach is genuinely beautiful. It&apos;s also unpredictable. Here&apos;s what every season actually looks like.
               </p>
-              <p>
-                Here&apos;s what every season actually looks like — with honest assessments rather than tourist-board spin.
-              </p>
-            </div>
-
-            <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 max-w-none mb-12">
               <h3>🌱 Spring (March – May) — windy but beautiful</h3>
-              <p>
-                Spring is underrated. The crowds haven&apos;t arrived yet, the light in the morning is genuinely gorgeous, and the sand is firm and walkable. The squirrels in the pinewoods are active if you fancy combining beach with woodland. The catch is wind — Formby is an exposed west-facing beach and spring wind can be proper cold. Pack layers, go in the morning before it picks up, and you&apos;ll have a brilliant time.
-              </p>
+              <p>Spring is underrated. The crowds haven&apos;t arrived yet, the light in the morning is genuinely gorgeous, and the sand is firm and walkable. Pack layers, go in the morning before it picks up, and you&apos;ll have a brilliant time.</p>
               <p>Afternoon visits in April in particular can be punishing. The wind peaks mid-day and the beach empties fast for a reason.</p>
 
               <h3>☀️ Summer (June – August) — best weather, biggest crowds</h3>
-              <p>
-                This is peak Formby. The warmest temperatures, calmer wind, and long daylight hours make it genuinely lovely. Families, dogs, picnics — the beach is at its most alive. But it&apos;s also at its busiest. The National Trust car park fills early on sunny weekends and August bank holidays are genuinely hectic. If you&apos;re coming in summer, either arrive before 9:30am or after 2pm. The beach itself is big enough that it never feels completely rammed — it&apos;s the car park that causes the stress.
-              </p>
+              <p>This is peak Formby. The warmest temperatures, calmer wind, and long daylight hours make it genuinely lovely. But it&apos;s also at its busiest. The National Trust car park fills early on sunny weekends. If you&apos;re coming in summer, either arrive before 9:30am or after 2pm.</p>
               <p>Swimming is possible. Irish Sea temperatures in summer are cold but doable. Kids don&apos;t seem to notice.</p>
 
               <h3>🍂 Autumn (September – November) — the local&apos;s favourite</h3>
-              <p>
-                September is the best-kept secret on Formby Beach. School&apos;s back. The summer visitors are gone. The weather is still warm enough to not need a heavy coat. The light is extraordinary — low sun on the sand in September morning light is something else. This is when locals actually go.
-              </p>
-              <p>
-                October is more unpredictable, and November usually grey. But a clear autumn day at Formby is hard to beat.
-              </p>
+              <p>September is the best-kept secret on Formby Beach. School&apos;s back. The summer visitors are gone. The weather is still warm enough to not need a heavy coat. The light is extraordinary — low sun on the sand in September morning light is something else. This is when locals actually go.</p>
+              <p>October is more unpredictable, and November usually grey. But a clear autumn day at Formby is hard to beat.</p>
 
               <h3>🌊 Winter (December – February) — dramatic but demanding</h3>
-              <p>
-                I won&apos;t pretend winter beach visits are for everyone. It&apos;s cold, it&apos;s often grey, and the wind off the Irish Sea is serious. But there&apos;s something about a completely empty Formby Beach on a clear January morning that&apos;s genuinely special. If you like dramatic skies and having miles of beach entirely to yourself, winter delivers. Proper kit is non-negotiable — windproof jacket, warm layers, decent boots. Check the forecast before you go and skip any day with wind over 20mph. It&apos;s miserable.
-              </p>
+              <p>There&apos;s something about a completely empty Formby Beach on a clear January morning that&apos;s genuinely special. If you like dramatic skies and having miles of beach entirely to yourself, winter delivers. Proper kit is non-negotiable. Check the forecast before you go and skip any day with wind over 20mph.</p>
             </div>
 
-            {/* Key insight */}
             <div className="not-prose bg-[#1C3220] text-white rounded-2xl p-7 mb-10">
               <h3 className="font-display text-xl font-bold mb-4">The Local&apos;s Secret: September Morning</h3>
               <p className="text-white/75 leading-relaxed mb-4">
-                If you can only visit Formby Beach once, go on a clear morning in September. Kids are back at school. The summer crowd is gone. The light is extraordinary. The sand is yours. And the weather is still warm enough that you don&apos;t need a heavy coat.
+                If you can only visit Formby Beach once, go on a clear morning in September. Kids are back at school. The summer crowd is gone. The light is extraordinary. The sand is yours.
               </p>
-              <p className="text-white/75 leading-relaxed">
-                That is Formby Beach at its absolute best.
-              </p>
+              <p className="text-white/75 leading-relaxed">That is Formby Beach at its absolute best.</p>
             </div>
 
-            {/* What to bring matrix */}
             <div className="not-prose mb-10">
               <h3 className="font-display text-xl font-bold text-[#1C3220] mb-5">What to Bring — by Season</h3>
               <div className="overflow-x-auto">
@@ -214,7 +160,6 @@ export default function BlogPost() {
             </div>
           </article>
 
-          {/* Sidebar */}
           <aside className="lg:col-span-1 space-y-6">
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sticky top-6">
               <h3 className="font-display font-bold text-[#1C3220] text-base mb-4">Quick Visit Planner</h3>
@@ -241,17 +186,12 @@ export default function BlogPost() {
                 </div>
               </div>
             </div>
-
             <div className="bg-[#1C4A5A]/10 border border-[#1C4A5A]/20 rounded-2xl p-5">
               <p className="font-bold text-[#1C4A5A] text-sm mb-2">Tide timing tip</p>
-              <p className="text-gray-700 text-xs leading-relaxed">
-                Low tide gives you twice the beach. Check the BBC tide table before you visit — a 2-hour shift can make a huge difference to your experience.
-              </p>
+              <p className="text-gray-700 text-xs leading-relaxed">Low tide gives you twice the beach. Check the BBC tide table before you visit — a 2-hour shift can make a huge difference.</p>
             </div>
           </aside>
         </div>
-
-        {/* Author bio */}
         <ClareBio />
       </div>
 
@@ -276,4 +216,3 @@ export default function BlogPost() {
     </div>
   );
 }
-

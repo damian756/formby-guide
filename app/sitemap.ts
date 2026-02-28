@@ -1,6 +1,8 @@
 import { MetadataRoute } from "next";
 import { prisma } from "@/lib/prisma";
 import { GUIDES, getGuideUrl } from "@/lib/guides-config";
+import { COLLECTIONS } from "@/lib/collections-config";
+import { BLOG_POSTS } from "@/lib/blog-posts";
 
 const BASE_URL = "https://www.formbyguide.co.uk";
 
@@ -11,11 +13,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/things-to-do`, priority: 0.9, changeFrequency: "monthly" as const },
     { url: `${BASE_URL}/about-formby`, priority: 0.7, changeFrequency: "monthly" as const },
     { url: `${BASE_URL}/blog`, priority: 0.8, changeFrequency: "weekly" as const },
-    { url: `${BASE_URL}/blog/things-to-do-formby-half-term`, priority: 0.7, changeFrequency: "weekly" as const },
-    { url: `${BASE_URL}/blog/formby-beach-weather-guide`, priority: 0.7, changeFrequency: "weekly" as const },
-    { url: `${BASE_URL}/blog/where-to-eat-formby-with-kids`, priority: 0.7, changeFrequency: "weekly" as const },
-    { url: `${BASE_URL}/blog/red-squirrels-formby-spotting-guide`, priority: 0.7, changeFrequency: "weekly" as const },
-    { url: `${BASE_URL}/blog/formby-pinewoods-walking-guide`, priority: 0.7, changeFrequency: "weekly" as const },
+    ...BLOG_POSTS.map((p) => ({ url: `${BASE_URL}/blog/${p.slug}`, priority: 0.7, changeFrequency: "weekly" as const })),
     { url: `${BASE_URL}/restaurants`, priority: 0.8, changeFrequency: "weekly" as const },
     { url: `${BASE_URL}/cafes`, priority: 0.8, changeFrequency: "weekly" as const },
     { url: `${BASE_URL}/pubs`, priority: 0.8, changeFrequency: "weekly" as const },
@@ -24,6 +22,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/activities`, priority: 0.7, changeFrequency: "monthly" as const },
     { url: `${BASE_URL}/accommodation`, priority: 0.7, changeFrequency: "weekly" as const },
     { url: `${BASE_URL}/shopping`, priority: 0.7, changeFrequency: "monthly" as const },
+    { url: `${BASE_URL}/the-open-2026/accommodation`, priority: 0.8, changeFrequency: "weekly" as const },
+    { url: `${BASE_URL}/the-open-2026/restaurants`, priority: 0.8, changeFrequency: "weekly" as const },
     { url: `${BASE_URL}/about`, priority: 0.5, changeFrequency: "monthly" as const },
     { url: `${BASE_URL}/claim-listing`, priority: 0.5, changeFrequency: "monthly" as const },
     { url: `${BASE_URL}/advertise`, priority: 0.5, changeFrequency: "monthly" as const },
@@ -57,6 +57,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // DB unavailable — return static pages only
   }
 
+  // ── Collection pages ──────────────────────────────────────────────────────────
+  const collectionPages: MetadataRoute.Sitemap = [
+    { url: `${BASE_URL}/collections`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.8 },
+    ...COLLECTIONS.map((c) => ({
+      url: `${BASE_URL}/collections/${c.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: c.priority,
+    })),
+  ];
+
   return [
     ...staticPages.map(({ url, priority, changeFrequency }) => ({
       url,
@@ -70,6 +81,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency,
       priority,
     })),
+    ...collectionPages,
     ...businessPages,
   ];
 }

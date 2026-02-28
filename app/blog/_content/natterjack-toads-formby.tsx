@@ -1,29 +1,9 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Calendar, Clock, ArrowRight, AlertCircle } from "lucide-react";
 import ClareBio from "../ClareBio";
 
-const BASE_URL = "https://www.formbyguide.co.uk";
-
-export const metadata: Metadata = {
-  title: "Natterjack Toads at Formby — Britain's Rarest Amphibian | FormbyGuide",
-  description: "Most people walk straight past the conservation ponds at Formby without knowing what they're for. Here's the full story on natterjack toads — Britain's rarest amphibian — and how to find them.",
-  keywords: "natterjack toads Formby, natterjack toad conservation, Formby wildlife, Sefton Coast natterjack, natterjack toad UK, rare amphibian Formby",
-  alternates: { canonical: `${BASE_URL}/blog/natterjack-toads-formby` },
-  openGraph: {
-    title: "Natterjack Toads at Formby — Britain's Rarest Amphibian",
-    description: "The conservation ponds between Formby's pinewoods and the beach aren't decorative. They're home to one of Britain's most endangered amphibians.",
-    url: `${BASE_URL}/blog/natterjack-toads-formby`,
-    type: "article",
-    siteName: "FormbyGuide.co.uk",
-    locale: "en_GB",
-    images: [{ url: `${BASE_URL}/natterjack-pond.webp`, width: 1200, height: 630, alt: "Natterjack toad conservation pond in Formby dune slacks" }],
-  },
-  twitter: { card: "summary_large_image", title: "Natterjack Toads at Formby", description: "Britain's rarest amphibian lives at Formby — and most visitors walk straight past them." },
-};
-
-export default function BlogPost() {
+export default function PostContent() {
   return (
     <div className="min-h-screen bg-[#F7F9F6]">
       <script
@@ -341,3 +321,4 @@ export default function BlogPost() {
     </div>
   );
 }
+

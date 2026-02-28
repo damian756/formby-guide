@@ -1,29 +1,9 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronRight, Calendar, User, Clock, ArrowRight, CheckCircle, Lightbulb, MapPin, AlertCircle } from "lucide-react";
+import { ChevronRight, Calendar, Clock, ArrowRight, CheckCircle, Lightbulb, AlertCircle } from "lucide-react";
 import ClareBio from "../ClareBio";
 
-const BASE_URL = "https://www.formbyguide.co.uk";
-
-export const metadata: Metadata = {
-  title: "Things to Do in Formby During Half Term — Family Guide | FormbyGuide",
-  description: "Planning half term in Formby with the kids? A local mum of four shares what actually works — and what to skip. Real tips for families visiting Formby.",
-  keywords: "things to do Formby half term, Formby family activities, Formby kids, Formby half term 2026, family day out Formby",
-  alternates: { canonical: `${BASE_URL}/blog/things-to-do-formby-half-term` },
-  openGraph: {
-    title: "Things to Do in Formby During Half Term — Family Guide",
-    description: "Half term in Formby with kids. Honest local tips from a mum of four.",
-    url: `${BASE_URL}/blog/things-to-do-formby-half-term`,
-    type: "article",
-    siteName: "FormbyGuide.co.uk",
-    locale: "en_GB",
-    images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "FormbyGuide.co.uk" }],
-  },
-  twitter: { card: "summary_large_image", title: "Things to Do in Formby During Half Term", description: "Honest half term guide for Formby families." },
-};
-
-export default function BlogPost() {
+export default function PostContent() {
   return (
     <div className="min-h-screen bg-[#F7F9F6]">
       <script
@@ -35,25 +15,14 @@ export default function BlogPost() {
             headline: "Things to Do in Formby During Half Term — Family Guide",
             description: "Planning half term in Formby with the kids? A local mum of four shares what actually works — and what to skip. Real tips for families visiting Formby.",
             url: "https://www.formbyguide.co.uk/blog/things-to-do-formby-half-term",
-            author: {
-              "@type": "Person",
-              "@id": "https://www.formbyguide.co.uk/about#clare",
-              name: "Clare",
-              url: "https://www.formbyguide.co.uk/about",
-            },
-            publisher: {
-              "@type": "Organization",
-              "@id": "https://www.churchtownmedia.co.uk/#organization",
-              name: "Churchtown Media",
-              url: "https://www.churchtownmedia.co.uk",
-            },
+            author: { "@type": "Person", "@id": "https://www.formbyguide.co.uk/about#clare", name: "Clare", url: "https://www.formbyguide.co.uk/about" },
+            publisher: { "@type": "Organization", "@id": "https://www.churchtownmedia.co.uk/#organization", name: "Churchtown Media", url: "https://www.churchtownmedia.co.uk" },
             datePublished: "2026-02-20",
             inLanguage: "en-GB",
           }),
         }}
       />
 
-      {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-100">
         <div className="container mx-auto px-4 max-w-5xl py-3">
           <nav className="text-sm text-gray-400 flex items-center gap-1.5 flex-wrap">
@@ -66,7 +35,6 @@ export default function BlogPost() {
         </div>
       </div>
 
-      {/* Hero */}
       <section className="bg-gradient-to-br from-[#1C3220] via-[#2E6B3E] to-[#1C4A2A] text-white relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#C9A96E]/10 rounded-full -translate-y-24 translate-x-24 blur-3xl" />
@@ -100,7 +68,6 @@ export default function BlogPost() {
         </div>
       </section>
 
-      {/* Quick facts strip */}
       <div className="bg-[#1C3220] border-b border-white/10">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
@@ -119,25 +86,18 @@ export default function BlogPost() {
         </div>
       </div>
 
-      {/* Article */}
       <div className="container mx-auto px-4 max-w-5xl py-16">
         <div className="grid lg:grid-cols-3 gap-12">
-
-          {/* Main content */}
           <article className="lg:col-span-2">
             <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 prose-p:leading-relaxed prose-strong:text-[#1C3220] prose-a:text-[#2E6B3E] max-w-none">
-
               <p className="lead text-xl text-gray-600 leading-relaxed">
                 Half term doesn&apos;t need to be perfect. It doesn&apos;t need to be Instagram-worthy. It needs to be survivable — and ideally, a few moments your kids will actually remember fondly in 20 years.
               </p>
-
               <p>
                 After doing this several times with four kids ranging from a toddler to a teenager, I&apos;ve landed on a formula. Mix outdoor adventure with low-effort indoor backup. Have one &quot;proper&quot; day out and let the rest breathe. And stop trying to entertain them every single hour.
               </p>
-
             </div>
 
-            {/* Callout: Clare's honest take */}
             <div className="not-prose my-10 bg-[#E8EDE6] rounded-2xl p-7 border-l-4 border-[#2E6B3E]">
               <div className="flex items-start gap-3">
                 <Lightbulb className="w-5 h-5 text-[#2E6B3E] flex-shrink-0 mt-0.5" />
@@ -152,32 +112,13 @@ export default function BlogPost() {
 
             <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 max-w-none">
               <h2>Day 1–2: Start With Indoor Options</h2>
-              <p>
-                Days one and two, everyone&apos;s still full of energy and optimism. Take the pressure off yourself. You don&apos;t need a spectacular outing on day one — save that energy.
-              </p>
+              <p>Days one and two, everyone&apos;s still full of energy and optimism. Take the pressure off yourself. You don&apos;t need a spectacular outing on day one — save that energy.</p>
             </div>
 
-            {/* Activity cards */}
             <div className="not-prose mt-6 space-y-4 mb-10">
               {[
-                {
-                  name: "Formby Library",
-                  type: "Free · All ages",
-                  desc: "Genuinely brilliant and almost always overlooked. Story times, reading challenges, a quiet corner. Free entry makes this a no-brainer on a rain day.",
-                  tip: "Check the events calendar — dedicated half term activities often run during school breaks.",
-                  color: "border-blue-200 bg-blue-50",
-                  badge: "FREE",
-                  badgeColor: "bg-blue-600",
-                },
-                {
-                  name: "Southport Beach & Pleasureland Area",
-                  type: "15 mins away · Paid activities",
-                  desc: "Yes, it's Southport — but it's 15 minutes up the A565 and has indoor play, amusements, and soft play options when Formby itself is quiet.",
-                  tip: "Go mid-morning on a weekday. Quieter, shorter queues, and you'll be back for lunch.",
-                  color: "border-amber-200 bg-amber-50",
-                  badge: "NEARBY",
-                  badgeColor: "bg-amber-600",
-                },
+                { name: "Formby Library", type: "Free · All ages", desc: "Genuinely brilliant and almost always overlooked. Story times, reading challenges, a quiet corner. Free entry makes this a no-brainer on a rain day.", tip: "Check the events calendar — dedicated half term activities often run during school breaks.", color: "border-blue-200 bg-blue-50", badge: "FREE", badgeColor: "bg-blue-600" },
+                { name: "Southport Beach & Pleasureland Area", type: "15 mins away · Paid activities", desc: "Yes, it's Southport — but it's 15 minutes up the A565 and has indoor play, amusements, and soft play options when Formby itself is quiet.", tip: "Go mid-morning on a weekday. Quieter, shorter queues, and you'll be back for lunch.", color: "border-amber-200 bg-amber-50", badge: "NEARBY", badgeColor: "bg-amber-600" },
               ].map((a) => (
                 <div key={a.name} className={`rounded-2xl border p-5 ${a.color}`}>
                   <div className="flex items-start justify-between gap-3 mb-2">
@@ -198,12 +139,9 @@ export default function BlogPost() {
 
             <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 max-w-none">
               <h2>Day 3: The Big Nature Day</h2>
-              <p>
-                By day three, the kids are bouncing off walls. This is your nature day. Get them outside and properly tired. This is the day that pays dividends for the rest of the week.
-              </p>
+              <p>By day three, the kids are bouncing off walls. This is your nature day. Get them outside and properly tired.</p>
             </div>
 
-            {/* Pinewoods feature card */}
             <div className="not-prose my-6 bg-[#1C3220] rounded-2xl overflow-hidden text-white">
               <div className="p-7">
                 <div className="flex items-start gap-4">
@@ -211,7 +149,7 @@ export default function BlogPost() {
                   <div className="flex-1">
                     <h3 className="font-display text-xl font-bold mb-1">Formby Pinewoods — The Half Term Move</h3>
                     <p className="text-white/70 text-sm mb-4 leading-relaxed">
-                      This is the answer. Sandy trails, woodland, red squirrels if you&apos;re patient and quiet, and enough space for kids to genuinely run around for hours. Three hours here = shattered kids = quiet afternoon.
+                      Sandy trails, woodland, red squirrels if you&apos;re patient and quiet, and enough space for kids to genuinely run around for hours. Three hours here = shattered kids = quiet afternoon.
                     </p>
                     <div className="grid grid-cols-2 gap-3 mb-5">
                       {[
@@ -236,9 +174,7 @@ export default function BlogPost() {
 
             <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 max-w-none">
               <h2>Day 4: The Eat-Out Day</h2>
-              <p>
-                School lunches are off. Cooking every single meal for five days is exhausting. You deserve at least one lunch out. Here&apos;s what works in Formby with kids.
-              </p>
+              <p>School lunches are off. Cooking every single meal for five days is exhausting. You deserve at least one lunch out.</p>
             </div>
 
             <div className="not-prose my-6 space-y-4 mb-10">
@@ -264,18 +200,15 @@ export default function BlogPost() {
 
             <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 max-w-none">
               <h2>Day 5: Keep It Simple</h2>
-              <p>
-                You&apos;re tired. They&apos;re tired. Resist the urge to go out with a bang.
-              </p>
+              <p>You&apos;re tired. They&apos;re tired. Resist the urge to go out with a bang.</p>
             </div>
 
-            {/* Beach card */}
             <div className="not-prose my-6 bg-gradient-to-r from-[#1C4A5A] to-[#2E7A9A] rounded-2xl p-7 text-white mb-10">
               <div className="flex items-start gap-4">
                 <div className="text-4xl">🏖️</div>
                 <div>
                   <h3 className="font-display text-xl font-bold mb-2">Formby Beach — The No-Effort Option</h3>
-                  <p className="text-white/80 text-sm leading-relaxed mb-4">Bucket, spade, thermos of hot chocolate. The beach is free. Even on a grey February day, kids find something to do for hours. It requires almost zero planning.</p>
+                  <p className="text-white/80 text-sm leading-relaxed mb-4">Bucket, spade, thermos of hot chocolate. The beach is free. Even on a grey February day, kids find something to do for hours.</p>
                   <div className="flex flex-wrap gap-3 text-xs">
                     {["Free entry", "Dogs welcome", "Toilets on site", "L37 1YH"].map(t => (
                       <span key={t} className="bg-white/15 px-3 py-1 rounded-full">{t}</span>
@@ -285,7 +218,6 @@ export default function BlogPost() {
               </div>
             </div>
 
-            {/* Real talk callout */}
             <div className="not-prose bg-white rounded-2xl border border-gray-100 shadow-sm p-7 my-10">
               <h3 className="font-display text-xl font-bold text-[#1C3220] mb-4">The Real Talk</h3>
               <div className="space-y-3">
@@ -303,7 +235,6 @@ export default function BlogPost() {
               </div>
             </div>
 
-            {/* CTA */}
             <div className="not-prose bg-[#E8EDE6] rounded-2xl p-8">
               <p className="font-display font-bold text-[#1C3220] text-lg mb-2">Everything to do in Formby</p>
               <p className="text-[#1C3220]/70 text-sm mb-5">Browse all attractions, beaches, walks and places to eat in one place.</p>
@@ -313,9 +244,7 @@ export default function BlogPost() {
             </div>
           </article>
 
-          {/* Sidebar */}
           <aside className="lg:col-span-1 space-y-6">
-            {/* Quick plan */}
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sticky top-6">
               <h3 className="font-display font-bold text-[#1C3220] text-base mb-4">5-Day Half Term Plan</h3>
               <div className="space-y-3">
@@ -337,7 +266,6 @@ export default function BlogPost() {
               </div>
             </div>
 
-            {/* Useful links */}
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
               <h3 className="font-display font-bold text-[#1C3220] text-base mb-4">Useful Links</h3>
               <div className="space-y-2">
@@ -349,14 +277,12 @@ export default function BlogPost() {
                   { label: "Cafes in Formby", href: "/cafes" },
                 ].map(({ label, href }) => (
                   <Link key={href} href={href} className="flex items-center gap-2 text-sm text-[#2E6B3E] hover:text-[#1C3220] font-medium transition py-1 group">
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-                    {label}
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />{label}
                   </Link>
                 ))}
               </div>
             </div>
 
-            {/* Warning */}
             <div className="bg-amber-50 border border-amber-200 rounded-2xl p-5">
               <div className="flex items-start gap-2 mb-2">
                 <AlertCircle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
@@ -368,26 +294,22 @@ export default function BlogPost() {
             </div>
           </aside>
         </div>
-
-        {/* Author bio */}
         <ClareBio />
       </div>
 
-      {/* More posts */}
       <section className="bg-white border-t border-gray-100 py-16">
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-2">More from the blog</h2>
           <p className="text-gray-500 mb-8">More local guides from someone who actually lives here.</p>
           <div className="grid md:grid-cols-3 gap-5">
             {[
-              { title: "Formby Beach Weather Guide", slug: "formby-beach-weather-guide", excerpt: "When to visit, and when to stay home with a cuppa.", cat: "Seasonal" },
-              { title: "Best Restaurants for Families", slug: "where-to-eat-formby-with-kids", excerpt: "Where we actually eat in Formby with four kids.", cat: "Food" },
-              { title: "How to See Red Squirrels", slug: "red-squirrels-formby-spotting-guide", excerpt: "Local tips for actually spotting them.", cat: "Wildlife" },
+              { title: "Formby Beach Weather Guide", slug: "formby-beach-weather-guide", cat: "Seasonal" },
+              { title: "Best Restaurants for Families", slug: "where-to-eat-formby-with-kids", cat: "Food" },
+              { title: "How to See Red Squirrels", slug: "red-squirrels-formby-spotting-guide", cat: "Wildlife" },
             ].map((p) => (
               <Link key={p.slug} href={`/blog/${p.slug}`} className="group bg-[#F7F9F6] rounded-2xl border border-gray-100 hover:border-[#2E6B3E]/30 hover:shadow-sm transition-all p-5">
                 <span className="text-[10px] font-bold uppercase tracking-wider text-[#2E6B3E]">{p.cat}</span>
-                <h3 className="font-display font-bold text-[#1C3220] text-base mt-1 mb-2 group-hover:text-[#2E6B3E] transition-colors">{p.title}</h3>
-                <p className="text-gray-500 text-sm">{p.excerpt}</p>
+                <h3 className="font-display font-bold text-[#1C3220] text-base mt-1 group-hover:text-[#2E6B3E] transition-colors">{p.title}</h3>
               </Link>
             ))}
           </div>

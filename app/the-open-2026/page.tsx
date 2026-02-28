@@ -168,6 +168,8 @@ export default function TheOpen2026Page() {
                 { href: "#restaurants", label: "Restaurants" },
                 { href: "#parking", label: "Parking" },
                 { href: "#faq", label: "FAQ" },
+                { href: "/the-open-2026/accommodation", label: "All Accommodation →" },
+                { href: "/the-open-2026/restaurants", label: "All Restaurants →" },
               ].map(({ href, label }) => (
                 <a key={href} href={href} className="text-[#1C3220]/70 hover:text-[#2E6B3E] transition-colors font-medium">
                   {label}

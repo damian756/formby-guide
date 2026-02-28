@@ -24,6 +24,7 @@ model Business {
   description           String?         @db.Text
   shortDescription      String?
   images                String[]
+  tags                  String[]
   openingHours          Json?
   priceRange            String?         // £, ££, £££, ££££
   listingTier           String          @default("free") // free, standard, featured, premium

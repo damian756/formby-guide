@@ -1,29 +1,9 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Calendar, Clock, ArrowRight, CheckCircle, AlertCircle, X } from "lucide-react";
 import ClareBio from "../ClareBio";
 
-const BASE_URL = "https://www.formbyguide.co.uk";
-
-export const metadata: Metadata = {
-  title: "How to See Red Squirrels in Formby — Local Spotting Guide | FormbyGuide",
-  description: "Yes, red squirrels really live in Formby. But they won't show up on demand. A local's guide to when, where and how to actually spot them — including the timing mistakes most visitors make.",
-  keywords: "red squirrels Formby, how to see red squirrels Formby, Formby red squirrel reserve, spotting red squirrels, National Trust Formby wildlife",
-  alternates: { canonical: `${BASE_URL}/blog/red-squirrels-formby-spotting-guide` },
-  openGraph: {
-    title: "How to See Red Squirrels in Formby — Local Tips",
-    description: "Local tips for actually spotting red squirrels in Formby's National Trust pinewoods.",
-    url: `${BASE_URL}/blog/red-squirrels-formby-spotting-guide`,
-    type: "article",
-    siteName: "FormbyGuide.co.uk",
-    locale: "en_GB",
-    images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "FormbyGuide.co.uk" }],
-  },
-  twitter: { card: "summary_large_image", title: "How to See Red Squirrels in Formby", description: "When, where and how to actually spot them." },
-};
-
-export default function BlogPost() {
+export default function PostContent() {
   return (
     <div className="min-h-screen bg-[#F7F9F6]">
       <script
@@ -304,3 +284,4 @@ export default function BlogPost() {
     </div>
   );
 }
+

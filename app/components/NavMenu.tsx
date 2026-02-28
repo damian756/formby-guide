@@ -5,15 +5,16 @@ import Link from "next/link";
 import {
   Menu, X, ChevronDown,
   Utensils, Beer, Coffee, ShoppingBag, Dumbbell, BedDouble,
-  Waves, Squirrel, Compass, TreePine, BookOpen,
+  Waves, Squirrel, Compass, TreePine, BookOpen, ListFilter,
 } from "lucide-react";
 
 const NATURE_LINKS = [
-  { href: "/guides",                  label: "All Guides",              icon: BookOpen,  color: "text-[#C9A96E]" },
+  { href: "/guides",                  label: "All Guides",              icon: BookOpen,   color: "text-[#C9A96E]" },
   { href: "/things-to-do",           label: "Things To Do — Full Guide", icon: Compass,  color: "text-[#2E6B3E]" },
-  { href: "/formby-beach",           label: "Formby Beach",             icon: Waves,     color: "text-sky-500" },
-  { href: "/red-squirrels-formby",   label: "Red Squirrels",            icon: Squirrel,  color: "text-amber-600" },
-  { href: "/formby-pinewoods",       label: "Pinewoods",                icon: TreePine,  color: "text-[#2E6B3E]" },
+  { href: "/formby-beach",           label: "Formby Beach",             icon: Waves,      color: "text-sky-500" },
+  { href: "/red-squirrels-formby",   label: "Red Squirrels",            icon: Squirrel,   color: "text-amber-600" },
+  { href: "/formby-pinewoods",       label: "Pinewoods",                icon: TreePine,   color: "text-[#2E6B3E]" },
+  { href: "/collections",            label: "Curated Collections",      icon: ListFilter, color: "text-[#C9A96E]" },
 ];
 
 const BUSINESS_CATEGORIES = [

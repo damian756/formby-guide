@@ -1,27 +1,7 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Calendar, Clock, ArrowRight, Star, CheckCircle, AlertCircle, Utensils } from "lucide-react";
 import ClareBio from "../ClareBio";
-
-const BASE_URL = "https://www.formbyguide.co.uk";
-
-export const metadata: Metadata = {
-  title: "Best Restaurants in Formby for Families — Honest Review | FormbyGuide",
-  description: "A local mum of four reviews where to eat in Formby with kids. Honest assessments of family-friendly restaurants, cafes and pubs — not a sponsored round-up.",
-  keywords: "restaurants Formby families, where to eat Formby kids, family friendly restaurants Formby, Formby dining kids menu",
-  alternates: { canonical: `${BASE_URL}/blog/where-to-eat-formby-with-kids` },
-  openGraph: {
-    title: "Best Restaurants in Formby for Families",
-    description: "Honest reviews of family-friendly dining in Formby from a mum of four.",
-    url: `${BASE_URL}/blog/where-to-eat-formby-with-kids`,
-    type: "article",
-    siteName: "FormbyGuide.co.uk",
-    locale: "en_GB",
-    images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "FormbyGuide.co.uk" }],
-  },
-  twitter: { card: "summary_large_image", title: "Best Restaurants in Formby for Families", description: "Where to actually eat in Formby with kids." },
-};
 
 const RESTAURANTS = [
   {
@@ -42,7 +22,7 @@ const RESTAURANTS = [
     tagColor: "bg-amber-600 text-white",
     rating: 4,
     price: "£",
-    summary: "Formby's independent cafes are genuinely relaxed about children. Order a proper coffee, get cake for the kids, sit down. No pressure, no rushing. This is community dining.",
+    summary: "Formby's independent cafes are genuinely relaxed about children. Order a proper coffee, get cake for the kids, sit down. No pressure, no rushing.",
     pros: ["Low pressure atmosphere", "Often dog-friendly too", "Great for coffee while kids eat", "Reasonable prices"],
     cons: ["Limited hot food options at some", "Smaller spaces"],
     bestFor: "Mid-morning stops, post-beach cake",
@@ -54,7 +34,7 @@ const RESTAURANTS = [
     tagColor: "bg-blue-600 text-white",
     rating: 3,
     price: "£–££",
-    summary: "Some Formby pubs are great for families at lunchtime. Others have a vibe that's clearly adult-focused. Check before you go — look for 'family friendly' in recent reviews.",
+    summary: "Some Formby pubs are great for families at lunchtime. Others have a vibe that's clearly adult-focused. Check before you go.",
     pros: ["Often serve earlier lunches", "Garden spaces in summer", "Kids menus available at many"],
     cons: ["Evening atmosphere not always family-friendly", "Variable quality kitchen to kitchen"],
     bestFor: "Weekend lunch only — avoid evening with kids",
@@ -62,7 +42,7 @@ const RESTAURANTS = [
   },
 ];
 
-export default function BlogPost() {
+export default function PostContent() {
   return (
     <div className="min-h-screen bg-[#F7F9F6]">
       <script
@@ -74,19 +54,9 @@ export default function BlogPost() {
             headline: "Best Restaurants in Formby for Families — Honest Review",
             description: "A local mum of four reviews where to eat in Formby with kids. Honest assessments of family-friendly restaurants, cafes and pubs — not a sponsored round-up.",
             url: "https://www.formbyguide.co.uk/blog/where-to-eat-formby-with-kids",
-            author: {
-              "@type": "Person",
-              "@id": "https://www.formbyguide.co.uk/about#clare",
-              name: "Clare",
-              url: "https://www.formbyguide.co.uk/about",
-            },
-            publisher: {
-              "@type": "Organization",
-              "@id": "https://www.churchtownmedia.co.uk/#organization",
-              name: "Churchtown Media",
-              url: "https://www.churchtownmedia.co.uk",
-            },
-            datePublished: "2026-02-20",
+            author: { "@type": "Person", "@id": "https://www.formbyguide.co.uk/about#clare", name: "Clare", url: "https://www.formbyguide.co.uk/about" },
+            publisher: { "@type": "Organization", "@id": "https://www.churchtownmedia.co.uk/#organization", name: "Churchtown Media", url: "https://www.churchtownmedia.co.uk" },
+            datePublished: "2026-02-15",
             inLanguage: "en-GB",
           }),
         }}
@@ -104,7 +74,6 @@ export default function BlogPost() {
         </div>
       </div>
 
-      {/* Hero */}
       <section className="bg-gradient-to-br from-[#5C1A1A] via-[#8B3A3A] to-[#6B2020] text-white relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#C9A96E]/10 rounded-full -translate-y-24 translate-x-24 blur-3xl" />
@@ -119,7 +88,7 @@ export default function BlogPost() {
               <span className="text-[#C9A96E]">for Families</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
-              Four kids. Fussy eaters. A limited budget for disasters. After years of family dining in Formby, here&apos;s what actually works — and what I&apos;d avoid with children in tow.
+              Four kids. Fussy eaters. A limited budget for disasters. After years of family dining in Formby, here&apos;s what actually works.
             </p>
             <div className="flex items-center gap-3 text-sm text-white/60 flex-wrap">
               <div className="flex items-center gap-2">
@@ -137,7 +106,6 @@ export default function BlogPost() {
         </div>
       </section>
 
-      {/* Stats strip */}
       <div className="bg-[#5C1A1A] border-b border-white/10">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
@@ -158,18 +126,14 @@ export default function BlogPost() {
 
       <div className="container mx-auto px-4 max-w-5xl py-16">
         <div className="grid lg:grid-cols-3 gap-12">
-
           <article className="lg:col-span-2">
             <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 prose-p:leading-relaxed prose-strong:text-[#1C3220] max-w-none mb-10">
               <p className="lead text-xl text-gray-600 leading-relaxed">
-                Eating out with kids isn&apos;t what it was before kids. You&apos;re not looking for atmosphere and clever cocktails. You&apos;re looking for places where someone spills a drink and nobody gives you a death stare.
+                Eating out with kids isn&apos;t what it was before kids. You&apos;re looking for places where someone spills a drink and nobody gives you a death stare.
               </p>
-              <p>
-                Formby isn&apos;t overrun with restaurants, but what&apos;s here is genuinely good. You just need to know which places understand families and which ones are better saved for a babysitter night.
-              </p>
+              <p>Formby isn&apos;t overrun with restaurants, but what&apos;s here is genuinely good. You just need to know which places understand families.</p>
             </div>
 
-            {/* Restaurant cards */}
             <div className="not-prose space-y-6 mb-12">
               {RESTAURANTS.map((r) => (
                 <div key={r.name} className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
@@ -230,15 +194,10 @@ export default function BlogPost() {
               ))}
             </div>
 
-            {/* The honest take */}
             <div className="not-prose bg-[#1C3220] text-white rounded-2xl p-7 mb-10">
               <h3 className="font-display text-xl font-bold mb-4">The Money Reality</h3>
-              <p className="text-white/75 leading-relaxed mb-3">
-                Four kids eating out is expensive. Two mains, four kids&apos; meals, four drinks, and possibly four puddings — you&apos;re easily at £70–90 for a sit-down meal. That&apos;s real money.
-              </p>
-              <p className="text-white/75 leading-relaxed">
-                <strong className="text-white">To save money:</strong> Go for lunch not dinner. Most places are cheaper at lunch, quieter, and often quicker to get seated. <strong className="text-white">Worth the splurge:</strong> The Sparrowhawk. Quality is high enough that it doesn&apos;t feel like wasted money.
-              </p>
+              <p className="text-white/75 leading-relaxed mb-3">Four kids eating out is expensive. Two mains, four kids&apos; meals, four drinks — you&apos;re easily at £70–90 for a sit-down meal.</p>
+              <p className="text-white/75 leading-relaxed"><strong className="text-white">To save money:</strong> Go for lunch not dinner. <strong className="text-white">Worth the splurge:</strong> The Sparrowhawk.</p>
             </div>
 
             <div className="not-prose bg-[#E8EDE6] rounded-2xl p-8">
@@ -248,63 +207,30 @@ export default function BlogPost() {
                 <Link href="/restaurants" className="inline-flex items-center gap-2 bg-[#2E6B3E] hover:bg-[#1C3220] text-white px-5 py-3 rounded-full font-semibold text-sm transition">
                   Restaurants <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
-                <Link href="/cafes" className="inline-flex items-center gap-2 bg-white border border-[#2E6B3E] text-[#2E6B3E] hover:bg-[#E8EDE6] px-5 py-3 rounded-full font-semibold text-sm transition">
-                  Cafes & Coffee
-                </Link>
-                <Link href="/pubs" className="inline-flex items-center gap-2 bg-white border border-[#2E6B3E] text-[#2E6B3E] hover:bg-[#E8EDE6] px-5 py-3 rounded-full font-semibold text-sm transition">
-                  Pubs & Bars
-                </Link>
+                <Link href="/cafes" className="inline-flex items-center gap-2 bg-white border border-[#2E6B3E] text-[#2E6B3E] hover:bg-[#E8EDE6] px-5 py-3 rounded-full font-semibold text-sm transition">Cafes & Coffee</Link>
+                <Link href="/pubs" className="inline-flex items-center gap-2 bg-white border border-[#2E6B3E] text-[#2E6B3E] hover:bg-[#E8EDE6] px-5 py-3 rounded-full font-semibold text-sm transition">Pubs & Bars</Link>
               </div>
             </div>
           </article>
 
-          {/* Sidebar */}
           <aside className="lg:col-span-1 space-y-6">
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sticky top-6">
               <h3 className="font-display font-bold text-[#1C3220] text-base mb-4">Quick Reference</h3>
               <div className="space-y-4">
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">For a family lunch</p>
-                  <p className="text-sm font-semibold text-[#2E6B3E]">The Sparrowhawk → first choice</p>
-                </div>
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Post-beach cake stop</p>
-                  <p className="text-sm font-semibold text-[#2E6B3E]">Local independent cafes</p>
-                </div>
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Budget tip</p>
-                  <p className="text-sm text-gray-700">Go for lunch over dinner. Same quality, lower price, quieter.</p>
-                </div>
-                <div className="border-t border-gray-100 pt-4">
-                  <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Also worth looking at</p>
-                  <div className="space-y-2">
-                    {[
-                      { label: "Things to do with kids", href: "/blog/things-to-do-formby-half-term" },
-                      { label: "Formby Beach guide", href: "/formby-beach" },
-                    ].map(({ label, href }) => (
-                      <Link key={href} href={href} className="flex items-center gap-2 text-sm text-[#2E6B3E] hover:text-[#1C3220] font-medium py-1 group">
-                        <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-                        {label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
+                <div><p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">For a family lunch</p><p className="text-sm font-semibold text-[#2E6B3E]">The Sparrowhawk → first choice</p></div>
+                <div><p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Post-beach cake stop</p><p className="text-sm font-semibold text-[#2E6B3E]">Local independent cafes</p></div>
+                <div><p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Budget tip</p><p className="text-sm text-gray-700">Go for lunch over dinner. Same quality, lower price, quieter.</p></div>
               </div>
             </div>
-
             <div className="bg-amber-50 border border-amber-200 rounded-2xl p-5">
               <div className="flex items-start gap-2 mb-2">
                 <AlertCircle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
                 <p className="font-bold text-amber-900 text-sm">Weekend booking tip</p>
               </div>
-              <p className="text-amber-800 text-xs leading-relaxed">
-                The Sparrowhawk gets full at weekends. Book in advance, especially Friday evening and Sunday lunch. Don&apos;t risk a walk-in with hungry children.
-              </p>
+              <p className="text-amber-800 text-xs leading-relaxed">The Sparrowhawk gets full at weekends. Book in advance, especially Friday evening and Sunday lunch.</p>
             </div>
           </aside>
         </div>
-
-        {/* Author bio */}
         <ClareBio />
       </div>
 
