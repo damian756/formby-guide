@@ -28,36 +28,101 @@ function haystack(b) {
 
 const RULES = [
   // ── Feature tags ─────────────────────────────────────────────────────────────
+
+  // Formby is a dog-walking village. Most cafes/pubs/restaurants welcome dogs.
+  // Google descriptions rarely say it explicitly, so we use broader heuristics:
+  // explicit mention OR category + outdoor-seating hint OR known dog-friendly types.
   {
     tag: "dog-friendly",
     test: (b) => {
       const h = haystack(b);
-      return (
+      const explicit =
         /dog[- ]friendly/i.test(h) ||
-        /dogs\s+welcome/i.test(h) ||
-        /dogs\s+allowed/i.test(h) ||
+        /dogs?\s+welcome/i.test(h) ||
+        /dogs?\s+allowed/i.test(h) ||
         /well[- ]behaved\s+dogs/i.test(h) ||
         /four[- ]legged/i.test(h) ||
         /dog\s+bowl/i.test(h) ||
         /canine/i.test(h) ||
-        /pet[- ]friendly/i.test(h)
-      );
+        /pet[- ]friendly/i.test(h) ||
+        /pooch/i.test(h) ||
+        /paws\s+welcome/i.test(h);
+      if (explicit) return true;
+
+      // Pubs with beer gardens / outdoor seating are almost always dog-friendly
+      if (b.categorySlug === "pubs") {
+        return (
+          /beer\s+garden/i.test(h) ||
+          /outdoor/i.test(h) ||
+          /terrace/i.test(h) ||
+          /garden/i.test(h) ||
+          /courtyard/i.test(h) ||
+          /traditional/i.test(h) ||
+          /free\s+house/i.test(h) ||
+          /micro\s*pub/i.test(h) ||
+          /tap\s*(room|house)/i.test(h)
+        );
+      }
+
+      // Cafes near the beach or pinewoods cater to walkers with dogs
+      if (b.categorySlug === "cafes") {
+        const nearBeach = (b.postcode ?? "").startsWith("L37 1") || /beach|pinewood|nature|kiosk|coffee\s+carriage/i.test(h);
+        const hasOutdoor = /outdoor|outside|terrace|garden|courtyard|al\s+fresco/i.test(h);
+        return nearBeach || hasOutdoor;
+      }
+
+      // Restaurants: pub-restaurants, casual dining, and places with outdoor areas
+      if (b.categorySlug === "restaurants") {
+        return (
+          /beer\s+garden/i.test(h) ||
+          /outdoor/i.test(h) ||
+          /terrace/i.test(h) ||
+          /garden/i.test(h) ||
+          /courtyard/i.test(h) ||
+          /inn\b/i.test(h) ||
+          /hotel/i.test(h) ||
+          /pub/i.test(h) ||
+          /bar\s+(and|&)\s+(eatery|kitchen|bistro|grill)/i.test(h) ||
+          /brasserie/i.test(h) ||
+          /carvery/i.test(h)
+        );
+      }
+
+      return false;
     },
   },
   {
     tag: "family-friendly",
     test: (b) => {
       const h = haystack(b);
-      return (
+      const explicit =
         /family[- ]friendly/i.test(h) ||
         /kids[''']?\s+menu/i.test(h) ||
-        /children[''']s\s+menu/i.test(h) ||
+        /children[''']?s?\s+menu/i.test(h) ||
         /high\s*chair/i.test(h) ||
         /highchair/i.test(h) ||
         /family\s+restaurant/i.test(h) ||
         /suitable\s+for\s+(kids|children|families)/i.test(h) ||
-        /children\s+welcome/i.test(h)
-      );
+        /children\s+welcome/i.test(h) ||
+        /family\s+run/i.test(h) ||
+        /family\s+owned/i.test(h) ||
+        /family\s+dining/i.test(h) ||
+        /all\s+ages/i.test(h);
+      if (explicit) return true;
+
+      // Most mainstream restaurants/cafes in Formby are family-friendly
+      if (b.categorySlug === "restaurants" || b.categorySlug === "cafes") {
+        const familyBrands = /toby\s+carvery|mcdonald|subway|domino|costa|greggs|pizza|grill|carvery|fish\s+bar|chip/i.test(h);
+        const villageDining = /bistro|brasserie|italian|indian|chinese|nepalese|tapas|sushi/i.test(h);
+        return familyBrands || villageDining;
+      }
+
+      // Activities: parks, nature, free attractions
+      if (b.categorySlug === "activities" || b.categorySlug === "nature-walks" || b.categorySlug === "beaches") {
+        return /park|playground|nature|beach|trail|walk|reserve|forest|wood/i.test(h);
+      }
+
+      return false;
     },
   },
   {
@@ -85,7 +150,8 @@ const RULES = [
         /terrace/i.test(h) ||
         /al\s+fresco/i.test(h) ||
         /garden\s+seating/i.test(h) ||
-        /courtyard/i.test(h)
+        /courtyard/i.test(h) ||
+        /patio/i.test(h)
       );
     },
   },
@@ -117,11 +183,17 @@ const RULES = [
     tag: "near-birkdale",
     test: (b) => {
       const h = haystack(b);
-      return (
+      const explicit =
         /royal\s+birkdale/i.test(h) ||
         /birkdale/i.test(b.address ?? "") ||
-        /the\s+open\s+(2026|championship)/i.test(h)
-      );
+        /the\s+open\s+(2026|championship)/i.test(h);
+      if (explicit) return true;
+
+      // All Formby accommodation is near Royal Birkdale (2 miles up the road)
+      if (b.categorySlug === "accommodation") {
+        return (b.postcode ?? "").startsWith("L37");
+      }
+      return false;
     },
   },
 ];
@@ -137,8 +209,14 @@ async function main() {
       shortDescription: true,
       description: true,
       tags: true,
+      category: { select: { slug: true } },
     },
   });
+
+  // Flatten categorySlug onto each business for rule access
+  for (const b of businesses) {
+    b.categorySlug = b.category?.slug ?? "";
+  }
 
   console.log(`Found ${businesses.length} businesses. Evaluating tag rules...`);
 
