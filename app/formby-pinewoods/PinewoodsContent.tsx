@@ -7,50 +7,35 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
 const GALLERY = [
-  { src: "/pinewoods-deep-woodland.webp", alt: "Deep inside Formby pinewoods — ancient coastal pine woodland" },
-  { src: "/pinewoods-trail-sign.webp",    alt: "No horses signpost on Formby pinewoods trail" },
-  { src: "/pinewoods-tall-tree.webp",     alt: "Tall Scots pine in Formby pinewoods" },
-  { src: "/pinewoods-sandfield-farm.webp",alt: "Sandfield Farm heritage sign in the Formby pinewoods" },
-  { src: "/pinewoods-map-sign.webp",      alt: "National Trust Formby site map and information board" },
+  // Existing photo break images (used by labeled buttons)
+  { src: "/pinewoods-deep-woodland.webp",  alt: "Deep inside Formby pinewoods — ancient coastal pine woodland" },
+  { src: "/pinewoods-trail-sign.webp",     alt: "No horses signpost on Formby pinewoods trail" },
+  { src: "/pinewoods-tall-tree.webp",      alt: "Tall Scots pine in Formby pinewoods" },
+  { src: "/pinewoods-sandfield-farm.webp", alt: "Sandfield Farm heritage sign in the Formby pinewoods" },
+  { src: "/pinewoods-map-sign.webp",       alt: "National Trust Formby site map and information board" },
+  // WHY_VISIT card images (indices 5–10)
+  { src: "/squirrels-canopy.webp",         alt: "Morning light filtering through the pine canopy in Formby pinewoods" },
+  { src: "/blog-card-wildlife.webp",       alt: "Red squirrel in Formby pinewoods" },
+  { src: "/squirrels-beach-pines.webp",    alt: "The transition from Formby pinewoods to the beach and dunes" },
+  { src: "/pinewoods-card-birds.webp",     alt: "Crossbill in Formby pinewoods" },
+  { src: "/pinewoods-flowers.webp",        alt: "Spring wildflowers in the Formby pinewoods — wood anemones and bluebells" },
+  { src: "/pinewoods-card-sunset.webp",    alt: "Sunset light filtering through the Formby pinewoods toward the sea" },
+  // TRAILS card images (indices 11–13)
+  { src: "/squirrel-walk.webp",            alt: "The red squirrel trail through the dense Formby pinewoods" },
+  { src: "/beach-horses-ainsdale.webp",    alt: "Horses on the beach near Formby — the pinewoods-to-beach walk" },
+  { src: "/ainsdale-beach.webp",           alt: "Ainsdale Beach looking north — Sefton Coastal Path" },
+  // Wildlife section (indices 14–15)
+  { src: "/pinewoods-fungus-moss.webp",    alt: "Fungi and moss growing on a fallen log in Formby pinewoods" },
+  { src: "/natterjack-pond.webp",          alt: "Natterjack toad conservation pond in the Formby dune slacks" },
 ];
 
 const WHY_VISIT = [
-  {
-    title: "The Trees Themselves",
-    desc: "Mature Scots pine and Corsican pine, some over 100 years old. Light through the canopy on a morning walk is genuinely beautiful. Photographers rate this highly.",
-    image: "/squirrels-canopy.webp",
-    imagePos: "object-center",
-  },
-  {
-    title: "Red Squirrels",
-    desc: "Primary habitat for Formby's red squirrel colony. They live in the canopy and come down to forage. Trails through denser pine sections have the most reliable sightings.",
-    image: "/blog-card-wildlife.webp",
-    imagePos: "object-center",
-  },
-  {
-    title: "Access to the Beach",
-    desc: "Follow main paths west and you emerge onto dunes and Formby Beach. Takes ~15 minutes. The transition from woodland to open sea is genuinely dramatic.",
-    image: "/squirrels-beach-pines.webp",
-    imagePos: "object-center",
-  },
-  {
-    title: "Birdlife",
-    desc: "Crossbills, goldcrests, coal tits, woodpeckers, waders and sea birds depending on season. Birders rate Formby highly for the woodland/coastal combination.",
-    image: "/pinewoods-card-birds.webp",
-    imagePos: "object-center",
-  },
-  {
-    title: "Wildflowers & Plants",
-    desc: "Spring brings wood anemones, bluebells and woodland plants in sheltered sections. Dune slacks have their own distinct plant communities.",
-    image: "/pinewoods-flowers.webp",
-    imagePos: "object-center",
-  },
-  {
-    title: "Sunsets",
-    desc: "The path through the pines to the beach in late afternoon with light filtering through the trees. The kind of walk people come back to repeatedly.",
-    image: "/pinewoods-card-sunset.webp",
-    imagePos: "object-center",
-  },
+  { title: "The Trees Themselves",   desc: "Mature Scots pine and Corsican pine, some over 100 years old. Light through the canopy on a morning walk is genuinely beautiful. Photographers rate this highly.", image: "/squirrels-canopy.webp",      imagePos: "object-center", galleryIdx: 5  },
+  { title: "Red Squirrels",          desc: "Primary habitat for Formby's red squirrel colony. They live in the canopy and come down to forage. Trails through denser pine sections have the most reliable sightings.", image: "/blog-card-wildlife.webp",   imagePos: "object-center", galleryIdx: 6  },
+  { title: "Access to the Beach",    desc: "Follow main paths west and you emerge onto dunes and Formby Beach. Takes ~15 minutes. The transition from woodland to open sea is genuinely dramatic.", image: "/squirrels-beach-pines.webp", imagePos: "object-center", galleryIdx: 7  },
+  { title: "Birdlife",               desc: "Crossbills, goldcrests, coal tits, woodpeckers, waders and sea birds depending on season. Birders rate Formby highly for the woodland/coastal combination.", image: "/pinewoods-card-birds.webp",  imagePos: "object-center", galleryIdx: 8  },
+  { title: "Wildflowers & Plants",   desc: "Spring brings wood anemones, bluebells and woodland plants in sheltered sections. Dune slacks have their own distinct plant communities.", image: "/pinewoods-flowers.webp",      imagePos: "object-center", galleryIdx: 9  },
+  { title: "Sunsets",                desc: "The path through the pines to the beach in late afternoon with light filtering through the trees. The kind of walk people come back to repeatedly.", image: "/pinewoods-card-sunset.webp",  imagePos: "object-center", galleryIdx: 10 },
 ];
 
 const TRAILS = [
@@ -63,6 +48,7 @@ const TRAILS = [
     tip: "Go early morning for best squirrel sightings.",
     image: "/squirrel-walk.webp",
     imagePos: "object-center",
+    galleryIdx: 11,
   },
   {
     emoji: "🏖️",
@@ -73,6 +59,7 @@ const TRAILS = [
     tip: "Trainers fine on dry days. Wellies better after rain.",
     image: "/beach-horses-ainsdale.webp",
     imagePos: "object-center",
+    galleryIdx: 12,
   },
   {
     emoji: "🌊",
@@ -83,6 +70,7 @@ const TRAILS = [
     tip: "Check Sefton Coast landscape website for current path conditions.",
     image: "/ainsdale-beach.webp",
     imagePos: "object-center",
+    galleryIdx: 13,
   },
 ];
 
@@ -120,13 +108,17 @@ export default function PinewoodsContent() {
           </p>
         </div>
 
-        {/* Why Visit — image cards 3-col */}
+        {/* Why Visit — image cards 3-col, all lightbox-clickable */}
         <section id="why" className="mb-16 scroll-mt-20">
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">What Makes the Pinewoods Worth Visiting</h2>
           <div className="grid md:grid-cols-3 gap-5">
             {WHY_VISIT.map((item) => (
               <div key={item.title} className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
-                <div className="relative h-44 overflow-hidden">
+                <button
+                  onClick={() => open(item.galleryIdx)}
+                  className="relative h-44 w-full overflow-hidden block cursor-zoom-in focus:outline-none"
+                  aria-label={`Enlarge: ${item.title}`}
+                >
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -136,7 +128,10 @@ export default function PinewoodsContent() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                   <p className="absolute bottom-2 left-3 text-white font-display font-bold text-base drop-shadow">{item.title}</p>
-                </div>
+                  <span className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition bg-black/70 text-white text-xs font-medium px-2 py-1 rounded-lg">
+                    Enlarge
+                  </span>
+                </button>
                 <div className="p-4">
                   <p className="text-sm text-[#1C3220]/70 leading-relaxed">{item.desc}</p>
                 </div>
@@ -161,21 +156,28 @@ export default function PinewoodsContent() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
         </button>
 
-        {/* Walks & Trails — with image thumbnails */}
+        {/* Walks & Trails — with lightbox-clickable thumbnails */}
         <section id="walks" className="mb-16 scroll-mt-20">
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">Walks & Trails</h2>
           <div className="space-y-4 mb-8">
-            {TRAILS.map(({ name, time, level, desc, tip, image, imagePos }) => (
+            {TRAILS.map(({ name, time, level, desc, tip, image, imagePos, galleryIdx }) => (
               <div key={name} className="bg-white rounded-2xl border border-gray-100 overflow-hidden flex flex-col sm:flex-row">
-                <div className="relative w-full sm:w-48 h-40 sm:h-auto flex-none overflow-hidden">
+                <button
+                  onClick={() => open(galleryIdx)}
+                  className="relative w-full sm:w-48 h-40 sm:h-auto flex-none overflow-hidden block cursor-zoom-in group/trail focus:outline-none"
+                  aria-label={`Enlarge: ${name}`}
+                >
                   <Image
                     src={image}
                     alt={name}
                     fill
-                    className={`object-cover ${imagePos}`}
+                    className={`object-cover ${imagePos} transition-transform duration-500 group-hover/trail:scale-105`}
                     sizes="(max-width: 640px) 100vw, 192px"
                   />
-                </div>
+                  <span className="absolute top-2 right-2 opacity-0 group-hover/trail:opacity-100 transition bg-black/70 text-white text-xs font-medium px-2 py-1 rounded-lg">
+                    Enlarge
+                  </span>
+                </button>
                 <div className="p-5 flex flex-col flex-1">
                   <div className="flex items-start justify-between mb-2">
                     <h3 className="font-semibold text-[#1C3220] text-lg">{name}</h3>
@@ -189,7 +191,7 @@ export default function PinewoodsContent() {
             ))}
           </div>
 
-          {/* Trail sign */}
+          {/* Trail sign — clickable */}
           <button
             onClick={() => open(1)}
             className="relative w-full h-56 md:h-72 overflow-hidden rounded-2xl block cursor-zoom-in group"
@@ -212,22 +214,33 @@ export default function PinewoodsContent() {
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">Wildlife & Habitat</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
-              <div className="relative h-48 overflow-hidden">
+              <button
+                onClick={() => open(6)}
+                className="relative h-48 w-full overflow-hidden block cursor-zoom-in focus:outline-none"
+                aria-label="Enlarge: Red Squirrels"
+              >
                 <Image src="/blog-card-wildlife.webp" alt="Red squirrel in Formby pinewoods" fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 <p className="absolute bottom-3 left-4 text-white font-bold drop-shadow">🐿️ Red Squirrels</p>
-              </div>
+                <span className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition bg-black/70 text-white text-xs font-medium px-2 py-1 rounded-lg">Enlarge</span>
+              </button>
               <div className="p-5">
                 <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-2">The pinewoods are the primary habitat for Formby&apos;s red squirrel colony. They suit this woodland precisely and the National Trust actively manages the reserve to keep the population stable.</p>
                 <p className="text-xs text-[#1C3220]/50 italic">One of the most significant red squirrel populations on the North West coast.</p>
               </div>
             </div>
+
             <div className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
-              <div className="relative h-48 overflow-hidden">
+              <button
+                onClick={() => open(8)}
+                className="relative h-48 w-full overflow-hidden block cursor-zoom-in focus:outline-none"
+                aria-label="Enlarge: Birdlife"
+              >
                 <Image src="/pinewoods-card-birds.webp" alt="Crossbill birds in Formby pinewoods" fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 <p className="absolute bottom-3 left-4 text-white font-bold drop-shadow">🦅 Birdlife</p>
-              </div>
+                <span className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition bg-black/70 text-white text-xs font-medium px-2 py-1 rounded-lg">Enlarge</span>
+              </button>
               <div className="p-5">
                 <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-2">Crossbills, goldcrests, coal tits, woodpeckers, various waders and sea birds depending on season. The woodland-to-coast transition makes Formby particularly good for birders.</p>
                 <p className="text-xs text-[#1C3220]/50 italic">Check season guides for best birdwatching times.</p>
@@ -239,13 +252,19 @@ export default function PinewoodsContent() {
                 </a>
               </div>
             </div>
+
             <div className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-md transition-shadow md:col-span-2">
               <div className="grid md:grid-cols-2">
-                <div className="relative h-48 md:h-full overflow-hidden">
+                <button
+                  onClick={() => open(14)}
+                  className="relative h-48 md:h-full overflow-hidden block cursor-zoom-in focus:outline-none"
+                  aria-label="Enlarge: Fungi and moss"
+                >
                   <Image src="/pinewoods-fungus-moss.webp" alt="Fungi and moss growing on a fallen log in Formby pinewoods" fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent md:bg-none" />
                   <p className="absolute bottom-3 left-4 text-white font-bold drop-shadow md:hidden">🍄 Fungi & Lichen</p>
-                </div>
+                  <span className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition bg-black/70 text-white text-xs font-medium px-2 py-1 rounded-lg">Enlarge</span>
+                </button>
                 <div className="p-5 flex flex-col justify-center">
                   <p className="font-bold text-[#1C3220] mb-2">🍄 Fungi & Lichen</p>
                   <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-2">Ancient woodland indicator species — the variety of fungi and lichen here tells you something about how long this woodland has been established. Best seen in autumn after rain, on fallen logs and the pine floor. Completely underrated.</p>
@@ -255,12 +274,17 @@ export default function PinewoodsContent() {
             </div>
           </div>
 
-          {/* Natterjack toad callout */}
+          {/* Natterjack toad callout — clickable image */}
           <div className="mt-8 rounded-2xl border border-[#2E6B3E]/20 bg-[#E8EDE6] overflow-hidden">
             <div className="grid md:grid-cols-3">
-              <div className="relative h-52 md:h-auto overflow-hidden">
-                <Image src="/natterjack-pond.webp" alt="Natterjack toad conservation pond in Formby dune slacks" fill className="object-cover object-center" sizes="(max-width: 768px) 100vw, 33vw" />
-              </div>
+              <button
+                onClick={() => open(15)}
+                className="relative h-52 md:h-auto overflow-hidden block cursor-zoom-in group focus:outline-none"
+                aria-label="Enlarge: Natterjack toad pond"
+              >
+                <Image src="/natterjack-pond.webp" alt="Natterjack toad conservation pond in Formby dune slacks" fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 33vw" />
+                <span className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition bg-black/70 text-white text-xs font-medium px-2 py-1 rounded-lg">Enlarge</span>
+              </button>
               <div className="md:col-span-2 p-6 flex flex-col justify-center">
                 <p className="text-xs font-bold uppercase tracking-wider text-[#2E6B3E] mb-2">Conservation</p>
                 <h3 className="font-display font-bold text-[#1C3220] text-lg mb-2">Natterjack Toads — Formby&apos;s Other Resident</h3>
@@ -284,6 +308,7 @@ export default function PinewoodsContent() {
                   className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
+                <span className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition bg-black/70 text-white text-xs font-medium px-2 py-1 rounded-lg">Enlarge</span>
               </button>
               <div className="bg-white p-8 flex flex-col justify-center">
                 <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-4">

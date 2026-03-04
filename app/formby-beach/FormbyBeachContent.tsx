@@ -21,6 +21,7 @@ const GALLERY = [
   { src: "/whelk-egg-mass-ainsdale-beach.webp",            alt: "Whelk egg mass (sea wash ball) found on the Sefton Coast beach with seaweed" },
   { src: "/england-coast-path-sign-ainsdale.webp",         alt: "England Coast Path directional sign on the Sefton Coast near Formby" },
   { src: "/flask-driftwood-shells-ainsdale.webp",          alt: "Flask and cup on driftwood on Formby Beach with shells, Irish Sea in the background" },
+  { src: "/beach-dunes-spring-bud.webp",                   alt: "Spring vegetation budding on Formby sand dunes — new growth on the coastal dune system" },
 ];
 
 export default function FormbyBeachContent() {
@@ -279,9 +280,10 @@ export default function FormbyBeachContent() {
               </div>
             </div>
             <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden">
-              <div className="relative h-48 overflow-hidden">
-                <Image src="/beach-dunes-spring-bud.webp" alt="Spring vegetation growing on Formby sand dunes" fill className="object-cover object-center" sizes="(max-width: 768px) 100vw, 50vw" />
-              </div>
+              <button onClick={() => open(12)} className="relative h-48 w-full block cursor-zoom-in group" aria-label="View full image — spring dune vegetation">
+                <Image src="/beach-dunes-spring-bud.webp" alt="Spring vegetation budding on Formby sand dunes" fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
+                <span className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition bg-black/70 text-white text-xs font-medium px-2 py-1 rounded-lg">Enlarge</span>
+              </button>
               <div className="p-6">
                 <h3 className="font-semibold text-[#1C3220] text-lg mb-3">Formby Point</h3>
                 <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-3">
