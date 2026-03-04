@@ -8,13 +8,19 @@ import "yet-another-react-lightbox/styles.css";
 import { MapPin, Car, Dog, Coffee, ChevronRight, Info, Shield } from "lucide-react";
 
 const GALLERY = [
-  { src: "/formby-beach-shell.jpg",       alt: "Formby Beach — shell and sand dunes with the Irish Sea behind" },
-  { src: "/formby-beach-shell-close.jpg", alt: "Shell on Formby Beach sand" },
-  { src: "/formby-beach-sea.jpg",         alt: "Families walking along Formby Beach at the water's edge with waves and sand dunes" },
-  { src: "/beach-birds.webp",             alt: "Crows on Formby Beach sand" },
-  { src: "/formby-beach-paws.jpg",        alt: "Dog paws on Formby Beach sand" },
-  { src: "/beach-dunes-new.webp",         alt: "Formby sand dunes looking toward the Irish Sea" },
-  { src: "/beach-dunes-skull.webp",       alt: "Animal skull on Formby Beach dunes" },
+  { src: "/formby-beach-shell.jpg",                        alt: "Formby Beach — shell and sand dunes with the Irish Sea behind" },
+  { src: "/formby-beach-shell-close.jpg",                  alt: "Shell on Formby Beach sand" },
+  { src: "/formby-beach-sea.jpg",                          alt: "Families walking along Formby Beach at the water's edge with waves and sand dunes" },
+  { src: "/beach-birds.webp",                              alt: "Crows on Formby Beach sand" },
+  { src: "/formby-beach-paws.jpg",                         alt: "Dog paws on Formby Beach sand" },
+  { src: "/beach-dunes-new.webp",                          alt: "Formby sand dunes looking toward the Irish Sea" },
+  { src: "/beach-dunes-skull.webp",                        alt: "Animal skull on Formby Beach dunes" },
+  // Beachcombing finds — indices 7–11
+  { src: "/mermaids-purse-held-hand-ainsdale.webp",        alt: "A mermaid's purse — small-spotted catshark egg case — held in a hand on the Sefton Coast beach" },
+  { src: "/compass-jellyfish-closeup-ainsdale.webp",       alt: "Compass jellyfish on the beach — brown V-shaped markings visible on the Sefton Coast" },
+  { src: "/whelk-egg-mass-ainsdale-beach.webp",            alt: "Whelk egg mass (sea wash ball) found on the Sefton Coast beach with seaweed" },
+  { src: "/england-coast-path-sign-ainsdale.webp",         alt: "England Coast Path directional sign on the Sefton Coast near Formby" },
+  { src: "/flask-driftwood-shells-ainsdale.webp",          alt: "Flask and cup on driftwood on Formby Beach with shells, Irish Sea in the background" },
 ];
 
 export default function FormbyBeachContent() {
@@ -35,6 +41,7 @@ export default function FormbyBeachContent() {
               { href: "#dunes", label: "Dunes & Point" },
               { href: "#facilities", label: "Facilities" },
               { href: "#safety", label: "Safety" },
+              { href: "#beachcombing", label: "Beachcombing" },
             ].map(({ href, label }) => (
               <a key={href} href={href} className="text-[#1C3220]/70 hover:text-[#2E6B3E] transition-colors font-medium">
                 {label}
@@ -294,6 +301,29 @@ export default function FormbyBeachContent() {
             </a>{" "}
             you&apos;re likely to encounter along the shoreline and point.
           </p>
+          {/* England Coast Path */}
+          <div className="mt-6 rounded-2xl overflow-hidden border border-[#1C3220]/10 md:flex md:items-stretch">
+            <button
+              onClick={() => open(10)}
+              className="relative h-56 md:h-auto md:w-72 flex-none block cursor-zoom-in group w-full"
+              aria-label="View full image — England Coast Path sign"
+            >
+              <Image
+                src="/england-coast-path-sign-ainsdale.webp"
+                alt="England Coast Path directional sign near Formby on the Sefton Coast"
+                fill
+                className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 288px"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent md:bg-none" />
+            </button>
+            <div className="bg-[#F5F7F4] p-6 flex flex-col justify-center md:flex-1">
+              <h3 className="font-semibold text-[#1C3220] text-lg mb-2">England Coast Path</h3>
+              <p className="text-sm text-[#1C3220]/70 leading-relaxed">
+                The England Coast Path runs along this stretch of the Sefton coast — waymarked with the distinctive blue acorn sign. The Formby section links north toward Ainsdale and Southport, and south toward Crosby and Liverpool. Good flat walking with the dunes to your right and the sea to your left.
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* Facilities */}
@@ -332,6 +362,129 @@ export default function FormbyBeachContent() {
                   <li className="flex gap-2"><span className="font-bold">✅</span><span><strong>Best for walking:</strong> Low to mid tide gives most beach and firmer sand.</span></li>
                 </ul>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Beachcombing */}
+        <section id="beachcombing" className="mb-16 scroll-mt-20">
+          <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-3">Beachcombing</h2>
+          <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-8 max-w-2xl">
+            Low tide after a storm is prime time. The Sefton coast washes up more than shells — these are three things worth knowing about before you walk.
+          </p>
+
+          {/* Three-column finds grid */}
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+
+            {/* Mermaid's purse */}
+            <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm flex flex-col">
+              <button
+                onClick={() => open(7)}
+                className="relative h-64 w-full block cursor-zoom-in group flex-none"
+                aria-label="View full image — mermaid's purse"
+              >
+                <Image
+                  src="/mermaids-purse-held-hand-ainsdale.webp"
+                  alt="Mermaid's purse — small-spotted catshark egg case held in a hand on the Sefton Coast beach"
+                  fill
+                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                <p className="absolute bottom-3 left-4 text-white text-xs font-medium drop-shadow">Click to enlarge</p>
+              </button>
+              <div className="p-5 flex flex-col flex-1">
+                <h3 className="font-semibold text-[#1C3220] text-base mb-2">Mermaid&apos;s Purse</h3>
+                <p className="text-sm text-[#1C3220]/70 leading-relaxed flex-1">
+                  A black leathery pouch with curly tendrils — the egg case of a small-spotted catshark. Once the pup hatches, the empty case washes in. Harmless to handle. Found year-round, most often after storms.
+                </p>
+                <a
+                  href="https://www.seftoncoastwildlife.co.uk/blog/what-is-a-mermaids-purse"
+                  className="mt-3 text-xs font-semibold text-[#2E6B3E] hover:underline"
+                >
+                  What is a mermaid&apos;s purse? Full guide →
+                </a>
+              </div>
+            </div>
+
+            {/* Jellyfish */}
+            <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm flex flex-col">
+              <button
+                onClick={() => open(8)}
+                className="relative h-64 w-full block cursor-zoom-in group flex-none"
+                aria-label="View full image — compass jellyfish"
+              >
+                <Image
+                  src="/compass-jellyfish-closeup-ainsdale.webp"
+                  alt="Compass jellyfish on the Sefton Coast beach — brown V-shaped markings visible"
+                  fill
+                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                <p className="absolute bottom-3 left-4 text-white text-xs font-medium drop-shadow">Click to enlarge</p>
+              </button>
+              <div className="p-5 flex flex-col flex-1">
+                <h3 className="font-semibold text-[#1C3220] text-base mb-2">Jellyfish</h3>
+                <p className="text-sm text-[#1C3220]/70 leading-relaxed flex-1">
+                  Two species wash up on the Sefton coast: barrel jellyfish (huge, harmless) and compass jellyfish (brown V markings — mild sting). Both are normal and most common in winter and early spring after storms.
+                </p>
+                <a
+                  href="https://www.seftoncoastwildlife.co.uk/blog/jellyfish-sefton-coast"
+                  className="mt-3 text-xs font-semibold text-[#2E6B3E] hover:underline"
+                >
+                  Jellyfish species guide — Sefton Coast Wildlife →
+                </a>
+              </div>
+            </div>
+
+            {/* Whelk egg mass */}
+            <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm flex flex-col">
+              <button
+                onClick={() => open(9)}
+                className="relative h-64 w-full block cursor-zoom-in group flex-none"
+                aria-label="View full image — whelk egg mass"
+              >
+                <Image
+                  src="/whelk-egg-mass-ainsdale-beach.webp"
+                  alt="Whelk egg mass — sea wash ball — found on the Sefton Coast beach with seaweed"
+                  fill
+                  className="object-cover object-bottom transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                <p className="absolute bottom-3 left-4 text-white text-xs font-medium drop-shadow">Click to enlarge</p>
+              </button>
+              <div className="p-5 flex flex-col flex-1">
+                <h3 className="font-semibold text-[#1C3220] text-base mb-2">Whelk Egg Mass</h3>
+                <p className="text-sm text-[#1C3220]/70 leading-relaxed flex-1">
+                  White, spongy, slightly alien-looking — this is a common whelk egg mass, also called a sea wash ball or mermaid&apos;s necklace. Each tiny capsule held multiple whelk eggs. Completely harmless and fascinating to touch.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Lifestyle shot + tip */}
+          <div className="rounded-2xl overflow-hidden border border-[#1C3220]/10 md:flex md:items-stretch">
+            <button
+              onClick={() => open(11)}
+              className="relative h-56 md:h-auto md:w-80 flex-none block cursor-zoom-in group w-full"
+              aria-label="View full image — flask on driftwood"
+            >
+              <Image
+                src="/flask-driftwood-shells-ainsdale.webp"
+                alt="Flask and cup on driftwood on Formby Beach with shells in the foreground"
+                fill
+                className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 320px"
+              />
+            </button>
+            <div className="bg-[#F0F4EF] p-6 flex flex-col justify-center md:flex-1">
+              <p className="text-[#1C3220] font-semibold text-base mb-2">The one thing worth bringing</p>
+              <p className="text-sm text-[#1C3220]/70 leading-relaxed">
+                A flask. Non-negotiable in winter. Go at low tide, early morning after an overnight high tide — that&apos;s when the best finds wash in. Bring a small bag for shells and anything interesting. Boots are better than trainers — the tideline is wet even on a sunny day.
+              </p>
             </div>
           </div>
         </section>
