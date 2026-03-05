@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
-import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Link from "next/link";
 import NavMenu from "./components/NavMenu";
-import { CookieProvider } from "./components/CookieProvider";
-import CookieBanner from "./components/CookieBanner";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -92,17 +89,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <head>
-        <Script id="crisp-chat" strategy="afterInteractive">{`
-          window.$crisp=[];window.CRISP_WEBSITE_ID="923512e8-2a2f-4ea8-95d4-78bc7809b34d";(function(){var d=document;var s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
-        `}</Script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body className={`${playfair.variable} ${inter.variable} font-sans antialiased bg-[#F7F9F6]`}>
-        <CookieProvider>
-          <Navigation />
-          <main>{children}</main>
-          <Footer />
-          <CookieBanner />
-        </CookieProvider>
+        <Navigation />
+        <main>{children}</main>
+        <Footer />
         <Analytics />
       </body>
     </html>

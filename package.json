@@ -2,6 +2,12 @@
   "name": "formby-guide",
   "version": "0.1.0",
   "private": true,
+  "browserslist": [
+    "chrome >= 87",
+    "firefox >= 78",
+    "safari >= 14",
+    "edge >= 88"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
