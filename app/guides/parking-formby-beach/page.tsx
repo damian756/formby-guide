@@ -302,7 +302,7 @@ export default function ParkingFormbyBeachPage() {
                 </li>
                 <li className="flex gap-2">
                   <span className="text-[#2E6B3E] font-bold mt-0.5">•</span>
-                  <span><strong className="text-[#1C3220]">Formby station car park</strong> — paid parking, then 20-minute walk west along Victoria Road. Fine for off-peak visits.</span>
+                  <span><a href="https://www.southportguide.co.uk/parking/parking-formby-station-park-ride" target="_blank" rel="noopener" className="font-semibold text-[#1C3220] underline underline-offset-2 decoration-[#2E6B3E]/40 hover:text-[#2E6B3E] transition-colors">Formby station car park</a> — paid parking, then 20-minute walk west along Victoria Road. Fine for off-peak visits.</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-[#2E6B3E] font-bold mt-0.5">•</span>
@@ -310,7 +310,7 @@ export default function ParkingFormbyBeachPage() {
                 </li>
                 <li className="flex gap-2">
                   <span className="text-[#2E6B3E] font-bold mt-0.5">•</span>
-                  <span><strong className="text-[#1C3220]">Try Ainsdale Beach</strong> — 3 miles north in Southport, larger car park, often less busy. Different vibe but the same Sefton Coast sand.</span>
+                  <span><a href="https://www.southportguide.co.uk/parking/parking-ainsdale-beach-parking-area" target="_blank" rel="noopener" className="font-semibold text-[#1C3220] underline underline-offset-2 decoration-[#2E6B3E]/40 hover:text-[#2E6B3E] transition-colors">Ainsdale Beach car park</a> — 3 miles north in Southport, larger car park, often less busy. Different vibe but the same Sefton Coast sand.</span>
                 </li>
               </ul>
             </div>
@@ -364,6 +364,15 @@ export default function ParkingFormbyBeachPage() {
                   <p className="text-sm text-[#1C3220]/60">{desc}</p>
                 </Link>
               ))}
+              <a
+                href="https://www.southportguide.co.uk/parking/parking-national-trust-formby-lifeboat-road-car-park"
+                target="_blank"
+                rel="noopener"
+                className="bg-white rounded-xl border border-gray-100 p-5 hover:border-[#2E6B3E]/30 hover:shadow-sm transition-all group"
+              >
+                <h4 className="font-semibold text-[#1C3220] group-hover:text-[#2E6B3E] transition-colors mb-1">NT Lifeboat Road Listing ↗</h4>
+                <p className="text-sm text-[#1C3220]/60">Full parking info, busy guide and directions on SouthportGuide.</p>
+              </a>
             </div>
           </section>
 
