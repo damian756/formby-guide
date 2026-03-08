@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, Car, Clock, Smartphone, ChevronRight } from "lucide-react";
+import { MapPin, Car, Clock, Smartphone, ChevronRight, Utensils } from "lucide-react";
 import GuideLayout from "@/app/components/GuideLayout";
 import { getGuide } from "@/lib/guides-config";
 
@@ -342,6 +342,60 @@ export default function ParkingFormbyBeachPage() {
                   <h3 className="font-semibold text-[#1C3220] mb-2">{q}</h3>
                   <p className="text-sm text-[#1C3220]/70 leading-relaxed">{a}</p>
                 </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Where to eat */}
+          <section className="pt-10 border-t border-[#1C3220]/10 mb-10">
+            <div className="flex items-start gap-3 mb-5">
+              <Utensils className="w-5 h-5 text-[#2E6B3E] flex-shrink-0 mt-0.5" />
+              <div>
+                <h3 className="font-display text-xl font-bold text-[#1C3220]">Where to Eat While You&apos;re Here</h3>
+                <p className="text-sm text-[#1C3220]/60 mt-1">NT café is at the car park. For a proper meal, the village is 10 minutes away.</p>
+              </div>
+            </div>
+            <div className="grid sm:grid-cols-3 gap-4 mb-4">
+              {[
+                {
+                  name: "NT Café",
+                  href: "/cafes",
+                  emoji: "☕",
+                  tag: "On site",
+                  tagColor: "bg-[#2E6B3E] text-white",
+                  desc: "Coffee, cake and hot food at the car park. Dogs outside. Good stop before or after the walk.",
+                },
+                {
+                  name: "The Sparrowhawk",
+                  href: "/restaurants/the-sparrowhawk-formby",
+                  emoji: "🍺",
+                  tag: "Dog-friendly",
+                  tagColor: "bg-amber-500 text-white",
+                  desc: "Best post-beach option. Dog-friendly gastropub in the village, no booking needed most of the time.",
+                },
+                {
+                  name: "All Restaurants",
+                  href: "/guides/best-restaurants-formby",
+                  emoji: "🍽️",
+                  tag: "Guide",
+                  tagColor: "bg-[#1C3220] text-white",
+                  desc: "Emily's, Left Bank Brasserie, Don Luigi — the full honest guide to eating in Formby.",
+                },
+              ].map((r) => (
+                <Link
+                  key={r.name}
+                  href={r.href}
+                  className="bg-white rounded-xl border border-gray-100 p-4 hover:border-[#2E6B3E]/30 hover:shadow-sm transition-all group"
+                >
+                  <div className="flex items-center justify-between gap-2 mb-1.5">
+                    <div className="flex items-center gap-2">
+                      <span>{r.emoji}</span>
+                      <h4 className="font-semibold text-[#1C3220] text-sm group-hover:text-[#2E6B3E] transition-colors">{r.name}</h4>
+                    </div>
+                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full flex-none ${r.tagColor}`}>{r.tag}</span>
+                  </div>
+                  <p className="text-xs text-[#1C3220]/60 leading-relaxed">{r.desc}</p>
+                </Link>
               ))}
             </div>
           </section>

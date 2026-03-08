@@ -356,6 +356,79 @@ export default function PinewoodsContent() {
           </div>
         </section>
 
+        {/* Where to eat after your walk */}
+        <section className="mt-16 pt-12 border-t border-[#1C3220]/10 mb-16">
+          <h3 className="font-display text-2xl font-bold text-[#1C3220] mb-2">Where to Eat After Your Walk</h3>
+          <p className="text-[#1C3220]/60 text-sm mb-6 leading-relaxed">
+            The NT café is right at the car park. For something more substantial, the village is 10 minutes away — and The Sparrowhawk is perfect for a post-walk meal with dogs.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-5">
+            {[
+              {
+                name: "NT Café",
+                href: "/cafes",
+                tag: "On site",
+                tagColor: "bg-[#2E6B3E] text-white",
+                emoji: "☕",
+                desc: "At the car park entrance. Coffee, cake, soup. Dogs welcome in the outdoor seating area. Good post-walk pit stop.",
+              },
+              {
+                name: "The Sparrowhawk",
+                href: "/restaurants/the-sparrowhawk-formby",
+                tag: "Dog-friendly",
+                tagColor: "bg-amber-500 text-white",
+                emoji: "🍺",
+                desc: "Gastropub in the village, 10 minutes by car. Dog-friendly, beer garden in summer. The obvious choice if you haven't booked anywhere.",
+              },
+              {
+                name: "Emily's",
+                href: "/restaurants",
+                tag: "Local favourite",
+                tagColor: "bg-[#1C3220] text-white",
+                emoji: "🍽️",
+                desc: "Formby's most-loved neighbourhood restaurant. Good food, relaxed, reasonable prices. Book ahead at weekends.",
+              },
+              {
+                name: "Left Bank Brasserie",
+                href: "/restaurants",
+                tag: "Best overall",
+                tagColor: "bg-[#C9A96E] text-[#1C3220]",
+                emoji: "🥂",
+                desc: "If the walk is the occasion, make the meal match it. The best restaurant in Formby — book at least a week ahead at weekends.",
+              },
+            ].map((r) => (
+              <Link
+                key={r.name}
+                href={r.href}
+                className="bg-white rounded-2xl border border-gray-100 p-5 hover:border-[#2E6B3E]/30 hover:shadow-sm transition-all group flex flex-col"
+              >
+                <div className="flex items-start justify-between gap-2 mb-2">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl">{r.emoji}</span>
+                    <h4 className="font-display font-bold text-[#1C3220] text-base group-hover:text-[#2E6B3E] transition-colors">{r.name}</h4>
+                  </div>
+                  <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full flex-none ${r.tagColor}`}>{r.tag}</span>
+                </div>
+                <p className="text-sm text-[#1C3220]/65 leading-relaxed">{r.desc}</p>
+              </Link>
+            ))}
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href="/guides/best-restaurants-formby"
+              className="inline-flex items-center gap-2 bg-[#2E6B3E] hover:bg-[#1C3220] text-white px-5 py-2.5 rounded-full font-semibold text-sm transition-colors"
+            >
+              Best restaurants in Formby →
+            </Link>
+            <Link
+              href="/restaurants"
+              className="inline-flex items-center gap-2 border border-[#2E6B3E] text-[#2E6B3E] hover:bg-[#2E6B3E] hover:text-white px-5 py-2.5 rounded-full font-semibold text-sm transition-colors"
+            >
+              All Formby restaurants →
+            </Link>
+          </div>
+        </section>
+
         {/* Explore More */}
         <section className="mt-16 pt-12 border-t border-[#1C3220]/10">
           <h3 className="font-display text-2xl font-bold text-[#1C3220] mb-6">Explore More Formby</h3>

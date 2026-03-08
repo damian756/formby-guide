@@ -246,6 +246,63 @@ export default function RedSquirrelsContent() {
           </p>
         </section>
 
+        {/* Where to eat after your visit */}
+        <section className="mt-16 pt-12 border-t border-[#1C3220]/10 mb-16">
+          <h3 className="font-display text-2xl font-bold text-[#1C3220] mb-2">Where to Eat After Your Visit</h3>
+          <p className="text-[#1C3220]/60 text-sm mb-6 leading-relaxed">
+            The NT café is at the car park — decent coffee and cake. For a proper meal, the village is 10 minutes by car.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-5">
+            {[
+              {
+                name: "NT Café",
+                href: "/cafes",
+                tag: "On site",
+                tagColor: "bg-[#2E6B3E] text-white",
+                emoji: "☕",
+                desc: "At the Victoria Road car park. Coffee, cake and hot bites. Dogs welcome outside. Convenient post-walk stop before the drive home.",
+              },
+              {
+                name: "The Sparrowhawk",
+                href: "/restaurants/the-sparrowhawk-formby",
+                tag: "Dog-friendly",
+                tagColor: "bg-amber-500 text-white",
+                emoji: "🍺",
+                desc: "Best post-walk option in the village. Gastropub food, beer garden in summer, genuinely dog-friendly. No booking needed most of the time.",
+              },
+              {
+                name: "Emily's",
+                href: "/restaurants",
+                tag: "Local favourite",
+                tagColor: "bg-[#1C3220] text-white",
+                emoji: "🍽️",
+                desc: "The most-loved neighbourhood restaurant in Formby. Relaxed, good food, reasonable prices. Worth booking ahead at weekends.",
+              },
+            ].map((r) => (
+              <Link
+                key={r.name}
+                href={r.href}
+                className="bg-white rounded-2xl border border-gray-100 p-5 hover:border-[#2E6B3E]/30 hover:shadow-sm transition-all group flex flex-col"
+              >
+                <div className="flex items-start justify-between gap-2 mb-2">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl">{r.emoji}</span>
+                    <h4 className="font-display font-bold text-[#1C3220] text-base group-hover:text-[#2E6B3E] transition-colors">{r.name}</h4>
+                  </div>
+                  <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full flex-none ${r.tagColor}`}>{r.tag}</span>
+                </div>
+                <p className="text-sm text-[#1C3220]/65 leading-relaxed">{r.desc}</p>
+              </Link>
+            ))}
+          </div>
+          <Link
+            href="/guides/best-restaurants-formby"
+            className="inline-flex items-center gap-2 bg-[#2E6B3E] hover:bg-[#1C3220] text-white px-5 py-2.5 rounded-full font-semibold text-sm transition-colors"
+          >
+            Best restaurants in Formby →
+          </Link>
+        </section>
+
         {/* Explore More */}
         <section className="mt-4 pt-12 border-t border-[#1C3220]/10">
           <h3 className="font-display text-2xl font-bold text-[#1C3220] mb-6">Explore More Formby</h3>
