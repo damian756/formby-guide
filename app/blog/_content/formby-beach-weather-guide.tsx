@@ -154,9 +154,17 @@ export default function PostContent() {
             <div className="not-prose bg-[#E8EDE6] rounded-2xl p-8">
               <p className="font-display font-bold text-[#1C3220] text-lg mb-2">Full Formby Beach Guide</p>
               <p className="text-[#1C3220]/70 text-sm mb-5">Parking, facilities, tides, dogs — everything you need to plan your visit properly.</p>
-              <Link href="/formby-beach" className="inline-flex items-center gap-2 bg-[#2E6B3E] hover:bg-[#1C3220] text-white px-5 py-3 rounded-full font-semibold text-sm transition">
-                Formby Beach Guide <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
+              <div className="flex flex-wrap gap-3">
+                <Link href="/formby-beach" className="inline-flex items-center gap-2 bg-[#2E6B3E] hover:bg-[#1C3220] text-white px-5 py-3 rounded-full font-semibold text-sm transition">
+                  Formby Beach Guide <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+                <Link href="/guides/parking-formby-beach" className="inline-flex items-center gap-2 bg-white border border-[#2E6B3E] text-[#2E6B3E] hover:bg-[#E8EDE6] px-5 py-3 rounded-full font-semibold text-sm transition">
+                  Parking Guide
+                </Link>
+                <Link href="/red-squirrels-formby" className="inline-flex items-center gap-2 bg-white border border-[#2E6B3E] text-[#2E6B3E] hover:bg-[#E8EDE6] px-5 py-3 rounded-full font-semibold text-sm transition">
+                  Red Squirrel Reserve
+                </Link>
+              </div>
             </div>
           </article>
 
@@ -182,7 +190,7 @@ export default function PostContent() {
                 </div>
                 <div className="border-t border-gray-100 pt-4">
                   <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Parking</p>
-                  <p className="text-sm text-gray-700 flex items-start gap-1.5"><MapPin className="w-3.5 h-3.5 text-[#2E6B3E] mt-0.5 shrink-0" />L37 1YH · National Trust</p>
+                  <p className="text-sm text-gray-700 flex items-start gap-1.5"><MapPin className="w-3.5 h-3.5 text-[#2E6B3E] mt-0.5 shrink-0" /><Link href="/guides/parking-formby-beach" className="text-[#2E6B3E] hover:underline">L37 1YH · National Trust parking guide</Link></p>
                 </div>
               </div>
             </div>

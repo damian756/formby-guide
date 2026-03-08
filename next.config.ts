@@ -59,6 +59,14 @@ const nextConfig: NextConfig = {
 
   async redirects() {
     return [
+      // Force www — redirect bare domain to canonical www
+      {
+        source: "/(.*)",
+        has: [{ type: "host", value: "formbyguide.co.uk" }],
+        destination: "https://www.formbyguide.co.uk/:path*",
+        permanent: true,
+      },
+      // Redirect Vercel preview domain
       {
         source: "/(.*)",
         has: [{ type: "host", value: "formby-guide.vercel.app" }],

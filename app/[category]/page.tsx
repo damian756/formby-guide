@@ -1,3 +1,4 @@
+import React from "react";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -28,9 +29,9 @@ const CAT_ORDER = [
   "accommodation", "shopping", "nature-walks", "beaches",
 ];
 
-const CATEGORY_CONTENT: Record<string, string[]> = {
+const CATEGORY_CONTENT: Record<string, React.ReactNode[]> = {
   "restaurants": [
-    "Formby punches above its weight for eating out. The village has a good spread — from proper date-night places like Left Bank Brasserie and Don Luigi to more casual spots like The Sparrowhawk and Emily's. Sorrento is worth knowing about too, especially if you want Italian without the drive into Liverpool.",
+    <>Formby punches above its weight for eating out. The village has a good spread — from proper date-night places like Left Bank Brasserie and Don Luigi to more casual spots like <Link href="/restaurants/the-sparrowhawk-formby" className="text-[#2E6B3E] hover:underline font-medium">The Sparrowhawk</Link> and Emily&apos;s. Sorrento is worth knowing about too, especially if you want Italian without the drive into Liverpool.</>,
     "The Freshfield and Hightown pubs add a few more options if you're flexible on location. For most visitors the village centre is the obvious base — everything's walkable from the train station or the main car parks on Duke Street.",
     "Worth booking ahead at weekends, especially for Left Bank Brasserie and Don Luigi. Midweek you'll generally walk in.",
   ],
@@ -68,6 +69,45 @@ const CATEGORY_CONTENT: Record<string, string[]> = {
     "Formby Beach postcode is L37 1YH — that's the National Trust car park on Victoria Road, and it's the main access point for the beach, the sand dunes, and the red squirrel trail.",
     "Parking costs vary by season — roughly £6–£9 via the National Trust app. Download the app before you leave; the signal at the car park is patchy. Dogs are allowed on most of the beach year-round, with some seasonal restrictions on certain sections in summer.",
     "The walk from the car park to the waterline is about 15–20 minutes across the dunes. Worth knowing: there are real rip currents near Formby Point. If the sea looks rough, stick to the flagged zones.",
+  ],
+};
+
+const CATEGORY_GUIDES: Record<string, { href: string; label: string }[]> = {
+  restaurants: [
+    { href: "/guides/best-restaurants-formby", label: "Best Restaurants in Formby" },
+    { href: "/guides/formby-village",           label: "Formby Village Guide" },
+    { href: "/guides/dog-friendly-formby",      label: "Dog-Friendly Formby" },
+  ],
+  cafes: [
+    { href: "/guides/dog-friendly-formby",              label: "Dog-Friendly Formby" },
+    { href: "/collections/cafes-near-formby-beach",     label: "Cafes Near Formby Beach" },
+    { href: "/guides/formby-village",                   label: "Formby Village Guide" },
+  ],
+  pubs: [
+    { href: "/guides/dog-friendly-formby",          label: "Dog-Friendly Formby" },
+    { href: "/collections/dog-friendly-pubs-formby", label: "Dog-Friendly Pubs" },
+  ],
+  "nature-walks": [
+    { href: "/red-squirrels-formby",   label: "Red Squirrel Reserve Guide" },
+    { href: "/formby-pinewoods",       label: "Formby Pinewoods Guide" },
+    { href: "/formby-beach",           label: "Formby Beach Guide" },
+  ],
+  activities: [
+    { href: "/red-squirrels-formby",   label: "Red Squirrel Reserve" },
+    { href: "/formby-beach",           label: "Formby Beach Guide" },
+    { href: "/formby-pinewoods",       label: "Formby Pinewoods" },
+  ],
+  accommodation: [
+    { href: "/the-open-2026",                        label: "The Open 2026 — Stay in Formby" },
+    { href: "/collections/stay-near-royal-birkdale", label: "Places Near Royal Birkdale" },
+  ],
+  shopping: [
+    { href: "/guides/formby-village", label: "Formby Village Guide" },
+  ],
+  beaches: [
+    { href: "/formby-beach",                label: "Formby Beach Guide" },
+    { href: "/guides/parking-formby-beach", label: "Parking at Formby Beach" },
+    { href: "/guides/dog-friendly-formby",  label: "Dog-Friendly Beach Rules" },
   ],
 };
 
@@ -280,6 +320,24 @@ export default async function CategoryPage({ params, searchParams }: Props) {
           currentSort={sort}
           currentArea={area}
         />
+
+        {/* Related Guides strip */}
+        {CATEGORY_GUIDES[category] && (
+          <div className="mt-10 mb-2">
+            <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3">Related guides</p>
+            <div className="flex flex-wrap gap-2">
+              {CATEGORY_GUIDES[category].map(({ href, label }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#2E6B3E] border border-[#2E6B3E]/30 hover:bg-[#2E6B3E] hover:text-white px-4 py-2 rounded-full transition-colors"
+                >
+                  {label} →
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Bottom CTA */}
         <div className="mt-14 rounded-2xl overflow-hidden">

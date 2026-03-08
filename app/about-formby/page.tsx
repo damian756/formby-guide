@@ -54,7 +54,7 @@ export default function AboutFormbyPage() {
             About Formby
           </h1>
           <p className="text-lg text-white/80 max-w-2xl leading-relaxed">
-            A village on the Sefton Coast in Merseyside — 12 miles south of Southport, 12 miles north of Liverpool, and home to one of England&apos;s most important red squirrel colonies.
+            A village on the Sefton Coast in Merseyside — 12 miles south of Southport, 12 miles north of Liverpool, and home to one of England&apos;s most important <Link href="/red-squirrels-formby" className="text-[#C9A96E] hover:underline">red squirrel colonies</Link>.
           </p>
         </div>
       </section>
@@ -127,13 +127,13 @@ export default function AboutFormbyPage() {
         <section className="mb-12">
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-4">What Formby is like</h2>
           <p className="text-[#1C3220]/70 leading-relaxed mb-4">
-            Formby is affluent, quiet, and genuinely nice to spend time in. It&apos;s not a tourist town — there&apos;s no seafront promenade, no amusements, no pier. What there is: a pleasant village centre with independent shops and good restaurants, a Merseyrail station, and — a 15-minute drive west — the National Trust pinewoods, red squirrel reserve, and beach.
+            Formby is affluent, quiet, and genuinely nice to spend time in. It&apos;s not a tourist town — there&apos;s no seafront promenade, no amusements, no pier. What there is: a pleasant village centre with independent shops and <Link href="/restaurants" className="text-[#2E6B3E] hover:underline font-medium">good restaurants</Link>, a Merseyrail station, and — a 15-minute drive west — the <Link href="/formby-pinewoods" className="text-[#2E6B3E] hover:underline font-medium">National Trust pinewoods</Link>, <Link href="/red-squirrels-formby" className="text-[#2E6B3E] hover:underline font-medium">red squirrel reserve</Link>, and <Link href="/formby-beach" className="text-[#2E6B3E] hover:underline font-medium">beach</Link>.
           </p>
           <p className="text-[#1C3220]/70 leading-relaxed mb-4">
             The demographic is mostly families and professionals who want to be within reach of Liverpool but with more space. There&apos;s a strong community feel — lots of local sports clubs, independent businesses, and the kind of charity shops where you occasionally find something genuinely good.
           </p>
           <p className="text-[#1C3220]/70 leading-relaxed mb-8">
-            As a visitor, you&apos;re mostly here for the National Trust site. But the village itself is worth an hour of your time — a walk along Chapel Lane, lunch at one of the restaurants, a browse of the shops — before or after the beach.
+            As a visitor, you&apos;re mostly here for the <Link href="/formby-beach" className="text-[#2E6B3E] hover:underline font-medium">National Trust beach and pinewoods</Link>. But the village itself is worth an hour of your time — a walk along Chapel Lane, lunch at one of the <Link href="/restaurants" className="text-[#2E6B3E] hover:underline font-medium">restaurants</Link>, a browse of the <Link href="/shopping" className="text-[#2E6B3E] hover:underline font-medium">shops</Link> — before or after the beach.
           </p>
 
           {/* Village street photo break */}
@@ -158,10 +158,10 @@ export default function AboutFormbyPage() {
               <tbody>
                 {[
                   { label: "Location",     value: "Sefton, Merseyside, north-west England" },
-                  { label: "Postcode",     value: "L37 (village), L37 1YH (National Trust beach)" },
+                  { label: "Postcode",     value: <><Link href="/formby-beach#parking" className="text-[#2E6B3E] hover:underline">L37 (village), L37 1YH (National Trust beach)</Link></> },
                   { label: "County",       value: "Merseyside (Metropolitan Borough of Sefton)" },
                   { label: "Population",   value: "Approximately 25,000" },
-                  { label: "Known for",    value: "Red squirrels, National Trust beach, pinewoods, affluent village" },
+                  { label: "Known for",    value: <><Link href="/red-squirrels-formby" className="text-[#2E6B3E] hover:underline">Red squirrels</Link>, <Link href="/formby-beach" className="text-[#2E6B3E] hover:underline">National Trust beach</Link>, <Link href="/formby-pinewoods" className="text-[#2E6B3E] hover:underline">pinewoods</Link>, affluent village</> },
                   { label: "Nearest city", value: "Liverpool (12 miles south-east)" },
                   { label: "Nearest town", value: "Southport (12 miles north)" },
                   { label: "Station",      value: "Formby — Merseyrail Northern Line (Liverpool to Southport)" },

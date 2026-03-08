@@ -164,9 +164,14 @@ export default function PostContent() {
                         </div>
                       ))}
                     </div>
-                    <Link href="/formby-pinewoods" className="inline-flex items-center gap-2 bg-[#C9A96E] hover:bg-[#b8944f] text-white text-sm font-bold px-4 py-2.5 rounded-full transition">
-                      Full Pinewoods Guide <ArrowRight className="w-3.5 h-3.5" />
-                    </Link>
+                    <div className="flex flex-wrap gap-3">
+                      <Link href="/formby-pinewoods" className="inline-flex items-center gap-2 bg-[#C9A96E] hover:bg-[#b8944f] text-white text-sm font-bold px-4 py-2.5 rounded-full transition">
+                        Full Pinewoods Guide <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                      <Link href="/red-squirrels-formby" className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 text-white text-sm font-medium px-4 py-2.5 rounded-full transition">
+                        Red Squirrels
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -179,14 +184,14 @@ export default function PostContent() {
 
             <div className="not-prose my-6 space-y-4 mb-10">
               {[
-                { name: "The Sparrowhawk", desc: "Proper restaurant with a children's menu that has things kids actually eat. Staff understand family dining. Not a chain — real food, real service.", tag: "Best for sit-down" },
-                { name: "Local cafes & coffee shops", desc: "Formby has independent cafes that are genuinely relaxed about children. Order your coffee, get cake for the kids, sit down. Nobody's rushing you.", tag: "Best for casual" },
+                { name: "The Sparrowhawk", href: "/restaurants/the-sparrowhawk-formby", desc: "Proper restaurant with a children's menu that has things kids actually eat. Staff understand family dining. Not a chain — real food, real service.", tag: "Best for sit-down" },
+                { name: "Local cafes & coffee shops", href: "/cafes", desc: "Formby has independent cafes that are genuinely relaxed about children. Order your coffee, get cake for the kids, sit down. Nobody's rushing you.", tag: "Best for casual" },
               ].map((r) => (
                 <div key={r.name} className="bg-white rounded-2xl border border-gray-100 p-5 flex items-start gap-4">
                   <div className="w-10 h-10 rounded-xl bg-[#F5E8E8] flex items-center justify-center text-lg flex-shrink-0">🍽️</div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">
-                      <h3 className="font-bold text-[#1C3220]">{r.name}</h3>
+                      <Link href={r.href} className="font-bold text-[#1C3220] hover:text-[#2E6B3E] transition-colors">{r.name}</Link>
                       <span className="text-[10px] font-bold text-[#8B3A3A] bg-[#F5E8E8] px-2 py-0.5 rounded-full">{r.tag}</span>
                     </div>
                     <p className="text-sm text-gray-600">{r.desc}</p>

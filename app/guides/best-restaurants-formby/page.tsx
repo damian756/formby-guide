@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Utensils, Star, ChevronRight } from "lucide-react";
+import { Utensils, Star, ChevronRight, ArrowRight } from "lucide-react";
 import GuideLayout from "@/app/components/GuideLayout";
 import { getGuide } from "@/lib/guides-config";
 
@@ -105,6 +105,7 @@ const restaurants = [
   {
     rank: 3,
     name: "The Sparrowhawk",
+    slug: "the-sparrowhawk-formby",
     type: "Gastropub",
     priceRange: "££",
     dogFriendly: true,
@@ -239,7 +240,9 @@ export default function BestRestaurantsFormbyPage() {
           <section className="mb-16">
             <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">The Reviews</h2>
             <div className="space-y-6">
-              {restaurants.map(({ rank, name, type, priceRange, dogFriendly, booking, description, honest, bestFor }) => (
+              {restaurants.map(({ rank, name, type, priceRange, dogFriendly, booking, description, honest, bestFor, ...rest }) => {
+                const slug = (rest as { slug?: string }).slug;
+                return (
                 <div key={name} className="bg-white rounded-2xl border border-gray-100 overflow-hidden">
                   <div className="bg-[#E8EDE6] px-6 py-4 flex items-center gap-4">
                     <div className="w-10 h-10 bg-[#1C3220] text-[#C9A96E] rounded-xl flex items-center justify-center font-display font-bold text-lg flex-none">
@@ -251,6 +254,14 @@ export default function BestRestaurantsFormbyPage() {
                         {type} · {priceRange} · {dogFriendly ? "Dog-friendly" : "No dogs"} · {booking}
                       </p>
                     </div>
+                    {slug && (
+                      <Link
+                        href={`/restaurants/${slug}`}
+                        className="inline-flex items-center gap-1 text-xs font-semibold text-[#2E6B3E] border border-[#2E6B3E]/30 hover:bg-[#2E6B3E] hover:text-white px-3 py-1.5 rounded-full transition-colors flex-none"
+                      >
+                        View listing <ArrowRight className="w-3 h-3" />
+                      </Link>
+                    )}
                   </div>
                   <div className="p-6">
                     <p
@@ -269,7 +280,8 @@ export default function BestRestaurantsFormbyPage() {
                     </p>
                   </div>
                 </div>
-              ))}
+                );
+              })}
             </div>
           </section>
 

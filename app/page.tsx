@@ -186,10 +186,10 @@ export default function HomePage() {
       <section className="bg-[#2E6B3E] text-white">
         <div className="container mx-auto px-4 max-w-7xl py-3">
           <div className="flex flex-wrap gap-x-8 gap-y-1.5 text-sm text-white/80 justify-center md:justify-start">
-            <span>📍 L37 1YH — NT car park postcode</span>
-            <span>🅿️ Parking from £6 via NT app</span>
+            <Link href="/formby-beach#parking" className="hover:text-white hover:underline transition">📍 L37 1YH — NT car park postcode</Link>
+            <Link href="/guides/parking-formby-beach" className="hover:text-white hover:underline transition">🅿️ Parking from £6 via NT app</Link>
             <span>🐕 Dogs welcome on the beach year-round</span>
-            <span>🐿️ Red squirrels — best Sept to Feb</span>
+            <Link href="/red-squirrels-formby" className="hover:text-white hover:underline transition">🐿️ Red squirrels — best Sept to Feb</Link>
             <span>🚆 30 mins from Liverpool Central (Merseyrail)</span>
           </div>
         </div>

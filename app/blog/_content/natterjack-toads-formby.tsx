@@ -108,7 +108,7 @@ export default function PostContent() {
           <article className="lg:col-span-2">
             <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 prose-p:leading-relaxed prose-strong:text-[#1C3220] max-w-none mb-10">
               <p className="lead text-xl text-gray-600 leading-relaxed">
-                Between the pinewoods and the beach at Formby, there are shallow ponds in the low-lying dune slacks. They don&apos;t look like much — a bit of water, some reeds, scrubby vegetation. Most walkers pass them without a second glance. But those ponds are there for a reason, and the reason is one of Britain&apos;s most endangered amphibians.
+                Between the <Link href="/formby-pinewoods" className="text-[#2E6B3E] hover:underline font-medium">pinewoods</Link> and the <Link href="/formby-beach" className="text-[#2E6B3E] hover:underline font-medium">beach at Formby</Link>, there are shallow ponds in the low-lying dune slacks. They don&apos;t look like much — a bit of water, some reeds, scrubby vegetation. Most walkers pass them without a second glance. But those ponds are there for a reason, and the reason is one of Britain&apos;s most endangered amphibians.
               </p>
               <p>
                 The natterjack toad. Smaller than a common toad, with a distinctive yellow stripe down its back and a call that carries for over a mile on a still spring night.
@@ -201,7 +201,7 @@ export default function PostContent() {
 
               <h2>Worth Knowing If You Visit</h2>
               <p>
-                You don&apos;t need to make a special trip just for the toads. They&apos;re part of the wider Formby experience — walk the pinewoods to the beach in the evening between April and June, listen for the calling, look for the NT information boards near the dune slacks, and appreciate that this is genuinely rare.
+                You don&apos;t need to make a special trip just for the toads. They&apos;re part of the wider Formby experience — <Link href="/blog/formby-pinewoods-walking-guide" className="text-[#2E6B3E] hover:underline">walk the pinewoods to the beach</Link> in the evening between April and June, listen for the calling, look for the NT information boards near the dune slacks, and appreciate that this is genuinely rare.
               </p>
               <p>
                 If you go in daylight, the ponds are still worth a quiet look from the path. You might see spawn or tadpoles in the shallower areas in late April and May.
