@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-import { MapPin, Car, Dog, Coffee, ChevronRight, Info, Shield } from "lucide-react";
+import { MapPin, Car, Dog, Coffee, ChevronRight, Info, Shield, Utensils, ArrowRight } from "lucide-react";
 
 const GALLERY = [
   { src: "/formby-beach-shell.jpg",                        alt: "Formby Beach — shell and sand dunes with the Irish Sea behind" },
@@ -488,6 +488,115 @@ export default function FormbyBeachContent() {
                 A flask. Non-negotiable in winter. Go at low tide, early morning after an overnight high tide — that&apos;s when the best finds wash in. Bring a small bag for shells and anything interesting. Boots are better than trainers — the tideline is wet even on a sunny day.
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* Where to eat after the beach */}
+        <section className="mt-16 pt-12 border-t border-[#1C3220]/10 mb-16">
+          <div className="flex items-start gap-3 mb-6">
+            <Utensils className="w-6 h-6 text-[#2E6B3E] flex-shrink-0 mt-1" />
+            <div>
+              <h2 className="font-display text-2xl font-bold text-[#1C3220]">Where to Eat After the Beach</h2>
+              <p className="text-[#1C3220]/60 text-sm mt-1 leading-relaxed">
+                The NT café covers post-walk coffee and cake. For a proper meal, the village is 10 minutes by car.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+            {[
+              {
+                name: "NT Café",
+                href: "/cafes",
+                tag: "On site",
+                tagColor: "bg-[#2E6B3E] text-white",
+                emoji: "☕",
+                desc: "At the Victoria Road car park. Coffee, cake, soup and hot bites. Outdoor seating. Dogs welcome outside. Not cheap but convenient.",
+                note: "Walk-ins only",
+              },
+              {
+                name: "The Sparrowhawk",
+                href: "/restaurants/the-sparrowhawk-formby",
+                tag: "Dog-friendly",
+                tagColor: "bg-amber-500 text-white",
+                emoji: "🍺",
+                desc: "Best post-walk option in the village. Gastropub food, beer garden in summer, and they genuinely welcome dogs. No booking needed most of the time.",
+                note: "10 min drive",
+              },
+              {
+                name: "Emily's",
+                href: "/restaurants",
+                tag: "Local favourite",
+                tagColor: "bg-[#1C3220] text-white",
+                emoji: "🍽️",
+                desc: "The most-loved neighbourhood restaurant in Formby. Good food, reasonable prices. Worth booking ahead if you're coming on a Friday or Saturday.",
+                note: "10 min drive · Book ahead",
+              },
+              {
+                name: "Left Bank Brasserie",
+                href: "/restaurants",
+                tag: "Best overall",
+                tagColor: "bg-[#C9A96E] text-[#1C3220]",
+                emoji: "🥂",
+                desc: "The best restaurant in Formby — proper brasserie food and a great wine list. Book at least a week ahead at weekends. Worth the effort.",
+                note: "10 min drive · Essential to book",
+              },
+              {
+                name: "Don Luigi",
+                href: "/restaurants",
+                tag: "Italian",
+                tagColor: "bg-red-600 text-white",
+                emoji: "🍕",
+                desc: "Reliable Italian in the village. Good for groups and families. Decent pasta and pizza, friendly staff. No booking drama for most weekday visits.",
+                note: "10 min drive",
+              },
+              {
+                name: "Village Cafés",
+                href: "/cafes",
+                tag: "Casual",
+                tagColor: "bg-gray-500 text-white",
+                emoji: "☕",
+                desc: "Several independent cafés near Chapel Lane — good for coffee, cake and a sandwich. Relaxed about kids and dogs. No booking, just walk in.",
+                note: "10 min drive",
+              },
+            ].map((r) => (
+              <Link
+                key={r.name}
+                href={r.href}
+                className="bg-white rounded-2xl border border-gray-100 p-5 hover:border-[#2E6B3E]/30 hover:shadow-sm transition-all group flex flex-col"
+              >
+                <div className="flex items-start justify-between gap-2 mb-2">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl">{r.emoji}</span>
+                    <h3 className="font-display font-bold text-[#1C3220] text-base group-hover:text-[#2E6B3E] transition-colors">{r.name}</h3>
+                  </div>
+                  <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full flex-none ${r.tagColor}`}>{r.tag}</span>
+                </div>
+                <p className="text-sm text-[#1C3220]/65 leading-relaxed flex-1 mb-3">{r.desc}</p>
+                <p className="text-xs text-[#1C3220]/40 font-medium">{r.note}</p>
+              </Link>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href="/guides/best-restaurants-formby"
+              className="inline-flex items-center gap-2 bg-[#2E6B3E] hover:bg-[#1C3220] text-white px-5 py-2.5 rounded-full font-semibold text-sm transition-colors"
+            >
+              Best restaurants in Formby <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+            <Link
+              href="/restaurants"
+              className="inline-flex items-center gap-2 border border-[#2E6B3E] text-[#2E6B3E] hover:bg-[#2E6B3E] hover:text-white px-5 py-2.5 rounded-full font-semibold text-sm transition-colors"
+            >
+              All Formby restaurants →
+            </Link>
+            <Link
+              href="/cafes"
+              className="inline-flex items-center gap-2 border border-[#2E6B3E] text-[#2E6B3E] hover:bg-[#2E6B3E] hover:text-white px-5 py-2.5 rounded-full font-semibold text-sm transition-colors"
+            >
+              Cafés in Formby →
+            </Link>
           </div>
         </section>
 
