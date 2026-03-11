@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Link from "next/link";
 import NavMenu from "./components/NavMenu";
@@ -96,7 +95,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Navigation />
         <main>{children}</main>
         <Footer />
-        <Analytics />
       </body>
     </html>
   );
