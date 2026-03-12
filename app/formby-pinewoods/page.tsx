@@ -11,14 +11,14 @@ const BASE_URL = "https://www.formbyguide.co.uk";
 export const metadata: Metadata = {
   title: "Formby Pinewoods — Walks, Wildlife & What to Expect",
   description:
-    "Complete guide to Formby pinewoods — walks, trails, red squirrels, birdwatching, and everything you need to plan your visit. Including opening times and facilities.",
+    "Complete guide to Formby pinewoods — walks, trails, birdwatching, and everything you need to plan your visit. Ancient coastal woodland managed by the National Trust. Postcode L37 1YH.",
   keywords:
-    "formby pinewoods, national trust formby, formby walks, coastal walks, red squirrels, pinewoods trails, birdwatching formby",
+    "formby pinewoods, national trust formby, formby walks, coastal walks, pinewoods trails, birdwatching formby, woodland walks formby",
   alternates: { canonical: `${BASE_URL}/formby-pinewoods` },
   openGraph: {
     title: "Formby Pinewoods — Walks, Wildlife & What to Expect",
     description:
-      "Ancient woodland running to the sea. Red squirrels in the canopy, brilliant walks, and light through the pines that's genuinely special.",
+      "Ancient coastal pine woodland managed by the National Trust. Brilliant walks, birdwatching, and light through the pines that's genuinely special. Walk from the car park to the sea.",
     url: `${BASE_URL}/formby-pinewoods`,
     type: "website",
     siteName: "FormbyGuide.co.uk",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Formby Pinewoods — Walks, Wildlife & What to Expect",
     description:
-      "Ancient woodland running to the sea. Red squirrels in the canopy, brilliant walks, and light through the pines that's genuinely special.",
+      "Ancient coastal pine woodland managed by the National Trust. Brilliant walks, birdwatching, and light through the pines that's genuinely special.",
   },
 };
 
@@ -113,7 +113,7 @@ export default function PinewoodsPage() {
               Formby Pinewoods
             </h1>
             <p className="text-xl text-white/90 leading-relaxed mb-8 drop-shadow">
-              Ancient coastal woodland with red squirrels in the canopy, brilliant walks, and light through the pines that&apos;s genuinely special. Walk from the road to the sea.
+              Ancient coastal woodland managed by the National Trust — brilliant walks, exceptional birdlife, and light through the pines that&apos;s genuinely special. Walk from the car park straight to the sea.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {[
@@ -142,7 +142,7 @@ export default function PinewoodsPage() {
           <div className="md:flex md:items-end md:gap-16">
             <div className="mb-8 md:mb-0 md:flex-1">
               <p className="font-display text-2xl md:text-3xl text-white font-semibold leading-snug">
-                Ancient coastal woodland — <span className="text-[#C9A96E]">red squirrels overhead</span>, walks through the pines, the sea at the end.
+                Ancient coastal woodland — <span className="text-[#C9A96E]">mature pine, crossbills in the canopy</span>, walks through the pines, the sea at the end.
               </p>
               <p className="text-white/55 text-sm leading-relaxed mt-4 max-w-xl">
                 Walk from the car park through ancient pines to Formby Beach in under 20 minutes. Or spend a morning on the squirrel trails. Flat throughout, manageable for all ages.

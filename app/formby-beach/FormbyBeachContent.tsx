@@ -84,6 +84,19 @@ export default function FormbyBeachContent() {
 
       <div className="container mx-auto px-4 max-w-6xl py-12">
 
+        {/* Editorial intro */}
+        <div className="max-w-3xl mb-14">
+          <p className="text-lg text-[#1C3220]/80 leading-relaxed mb-4">
+            Formby Beach is a National Trust managed beach on the Sefton Coast — west-facing, backed by significant sand dunes and Scots pine woodland, and genuinely one of the best beaches in the North West. No promenade. No amusements. Wide open sand, the Irish Sea in front of you, and pinewoods behind.
+          </p>
+          <p className="text-base text-[#1C3220]/70 leading-relaxed mb-4">
+            The postcode is <strong>L37 1YH</strong>. That's where you park — the National Trust car park on Victoria Road. From there it's a 15-minute walk through the pinewoods to the beach itself. On a sunny summer Saturday it fills fast; arrive by 9:30am or use the train. On a Tuesday in November you'll have the place to yourself, which is a very specific kind of brilliant.
+          </p>
+          <p className="text-base text-[#1C3220]/70 leading-relaxed">
+            Dogs are welcome year-round with no seasonal restrictions on the beach itself — one reason Formby is popular with dog walkers from across Merseyside. The walk from the train station at Formby takes about 20 minutes on a well-marked path. Worth doing if you want to skip the parking entirely.
+          </p>
+        </div>
+
         {/* Practical Info */}
         <section id="practical" className="mb-16 scroll-mt-20">
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">Practical Information</h2>

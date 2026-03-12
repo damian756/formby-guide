@@ -30,12 +30,12 @@ const GALLERY = [
 ];
 
 const WHY_VISIT = [
-  { title: "The Trees Themselves",   desc: "Mature Scots pine and Corsican pine, some over 100 years old. Light through the canopy on a morning walk is genuinely beautiful. Photographers rate this highly.", image: "/squirrels-canopy.webp",      imagePos: "object-center", galleryIdx: 5  },
-  { title: "Red Squirrels",          desc: "Primary habitat for Formby's red squirrel colony. They live in the canopy and come down to forage. Trails through denser pine sections have the most reliable sightings.", image: "/blog-card-wildlife.webp",   imagePos: "object-center", galleryIdx: 6  },
-  { title: "Access to the Beach",    desc: "Follow main paths west and you emerge onto dunes and Formby Beach. Takes ~15 minutes. The transition from woodland to open sea is genuinely dramatic.", image: "/squirrels-beach-pines.webp", imagePos: "object-center", galleryIdx: 7  },
-  { title: "Birdlife",               desc: "Crossbills, goldcrests, coal tits, woodpeckers, waders and sea birds depending on season. Birders rate Formby highly for the woodland/coastal combination.", image: "/pinewoods-card-birds.webp",  imagePos: "object-center", galleryIdx: 8  },
-  { title: "Wildflowers & Plants",   desc: "Spring brings wood anemones, bluebells and woodland plants in sheltered sections. Dune slacks have their own distinct plant communities.", image: "/pinewoods-flowers.webp",      imagePos: "object-center", galleryIdx: 9  },
-  { title: "Sunsets",                desc: "The path through the pines to the beach in late afternoon with light filtering through the trees. The kind of walk people come back to repeatedly.", image: "/pinewoods-card-sunset.webp",  imagePos: "object-center", galleryIdx: 10 },
+  { title: "The Trees Themselves",   desc: "Mature Scots pine and Corsican pine, some over 100 years old. Light through the canopy on a morning walk is genuinely beautiful. Photographers rate this highly.", image: "/squirrels-canopy.webp",      imagePos: "object-center", galleryIdx: 5,  link: null },
+  { title: "Red Squirrels",          desc: "The pinewoods are home to one of England's last red squirrel colonies. For best times to visit, which trails to take, and photography tips — see the full red squirrel guide.", image: "/blog-card-wildlife.webp",   imagePos: "object-center", galleryIdx: 6,  link: "/red-squirrels-formby" },
+  { title: "Access to the Beach",    desc: "Follow main paths west and you emerge onto dunes and Formby Beach. Takes ~15 minutes. The transition from woodland to open sea is genuinely dramatic.", image: "/squirrels-beach-pines.webp", imagePos: "object-center", galleryIdx: 7,  link: null },
+  { title: "Birdlife",               desc: "Crossbills, goldcrests, coal tits, woodpeckers, waders and sea birds depending on season. Birders rate Formby highly for the woodland/coastal combination.", image: "/pinewoods-card-birds.webp",  imagePos: "object-center", galleryIdx: 8,  link: null },
+  { title: "Wildflowers & Plants",   desc: "Spring brings wood anemones, bluebells and woodland plants in sheltered sections. Dune slacks have their own distinct plant communities.", image: "/pinewoods-flowers.webp",      imagePos: "object-center", galleryIdx: 9,  link: null },
+  { title: "Sunsets",                desc: "The path through the pines to the beach in late afternoon with light filtering through the trees. The kind of walk people come back to repeatedly.", image: "/pinewoods-card-sunset.webp",  imagePos: "object-center", galleryIdx: 10, link: null },
 ];
 
 const TRAILS = [
@@ -134,6 +134,11 @@ export default function PinewoodsContent() {
                 </button>
                 <div className="p-4">
                   <p className="text-sm text-[#1C3220]/70 leading-relaxed">{item.desc}</p>
+                  {item.link && (
+                    <Link href={item.link} className="inline-block mt-2 text-xs font-semibold text-[#2E6B3E] hover:underline underline-offset-2">
+                      Full red squirrel guide →
+                    </Link>
+                  )}
                 </div>
               </div>
             ))}
@@ -225,8 +230,10 @@ export default function PinewoodsContent() {
                 <span className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition bg-black/70 text-white text-xs font-medium px-2 py-1 rounded-lg">Enlarge</span>
               </button>
               <div className="p-5">
-                <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-2">The pinewoods are the primary habitat for Formby&apos;s red squirrel colony. They suit this woodland precisely and the National Trust actively manages the reserve to keep the population stable.</p>
-                <p className="text-xs text-[#1C3220]/50 italic">One of the most significant red squirrel populations on the North West coast.</p>
+                <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-3">The pinewoods are home to one of England&apos;s last red squirrel colonies — the National Trust actively manages the reserve to keep the population stable. For full detail on when and where to see them, best trails, and photography tips:</p>
+                <Link href="/red-squirrels-formby" className="inline-flex items-center gap-1.5 bg-[#2E6B3E] hover:bg-[#1C3220] text-white text-xs font-bold px-3 py-1.5 rounded-full transition-colors">
+                  Red squirrel guide →
+                </Link>
               </div>
             </div>
 
