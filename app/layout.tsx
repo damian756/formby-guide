@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
@@ -95,6 +96,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Navigation />
         <main>{children}</main>
         <Footer />
+        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="3bpGxV8z6gq8dFWHAjf6Zg" strategy="afterInteractive" />
       </body>
     </html>
   );
