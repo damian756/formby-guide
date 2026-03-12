@@ -96,7 +96,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Navigation />
         <main>{children}</main>
         <Footer />
-        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="3bpGxV8z6gq8dFWHAjf6Zg" strategy="afterInteractive" />
+        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="3bpGxV8z6gq6dFWHAjf6Zg" strategy="afterInteractive" />
       </body>
     </html>
   );
