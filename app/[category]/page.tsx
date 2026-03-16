@@ -74,9 +74,10 @@ const CATEGORY_CONTENT: Record<string, React.ReactNode[]> = {
 
 const CATEGORY_GUIDES: Record<string, { href: string; label: string }[]> = {
   restaurants: [
-    { href: "/guides/best-restaurants-formby", label: "Best Restaurants in Formby" },
-    { href: "/guides/formby-village",           label: "Formby Village Guide" },
-    { href: "/guides/dog-friendly-formby",      label: "Dog-Friendly Formby" },
+    { href: "/guides/best-restaurants-formby",      label: "Best Restaurants in Formby" },
+    { href: "/the-open-2026/restaurants",           label: "Restaurants During The Open 2026" },
+    { href: "/guides/formby-village",               label: "Formby Village Guide" },
+    { href: "/guides/dog-friendly-formby",          label: "Dog-Friendly Formby" },
   ],
   cafes: [
     { href: "/guides/dog-friendly-formby",              label: "Dog-Friendly Formby" },
@@ -99,6 +100,7 @@ const CATEGORY_GUIDES: Record<string, { href: string; label: string }[]> = {
   ],
   accommodation: [
     { href: "/the-open-2026",                        label: "The Open 2026 — Stay in Formby" },
+    { href: "/the-open-2026/accommodation",          label: "Open Week Accommodation Guide" },
     { href: "/collections/stay-near-royal-birkdale", label: "Places Near Royal Birkdale" },
   ],
   shopping: [

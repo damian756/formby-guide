@@ -291,6 +291,14 @@ export default function TheOpen2026Page() {
                 The Open at Royal Birkdale in 2014 sold out accommodation across a 15-mile radius. Formby, Birkdale, Southport, Ainsdale, Crosby — all of it goes. The closer to the event, the more expensive and scarce options become.
               </p>
             </div>
+            <div className="mt-5">
+              <Link
+                href="/the-open-2026/accommodation"
+                className="inline-flex items-center gap-2 bg-[#1C3220] text-white px-6 py-3 rounded-full font-semibold text-sm hover:bg-[#2E6B3E] transition-colors"
+              >
+                View all Open Week accommodation in Formby →
+              </Link>
+            </div>
           </section>
 
           {/* Restaurants */}
@@ -340,10 +348,16 @@ export default function TheOpen2026Page() {
                 </div>
               ))}
             </div>
-            <div className="mt-6">
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link
+                href="/the-open-2026/restaurants"
+                className="inline-flex items-center gap-2 bg-[#1C3220] text-white px-6 py-3 rounded-full font-semibold text-sm hover:bg-[#2E6B3E] transition-colors"
+              >
+                All Formby restaurants during Open week →
+              </Link>
               <Link
                 href="/guides/best-restaurants-formby"
-                className="inline-flex items-center gap-2 text-[#2E6B3E] font-semibold text-sm hover:text-[#1C3220] transition-colors"
+                className="inline-flex items-center gap-2 border border-[#1C3220] text-[#1C3220] px-6 py-3 rounded-full font-semibold text-sm hover:bg-[#1C3220] hover:text-white transition-colors"
               >
                 Full restaurants guide →
               </Link>

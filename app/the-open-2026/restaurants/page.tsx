@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "FormbyGuide.co.uk",
     locale: "en_GB",
+    images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "Restaurants in Formby during The Open 2026 — FormbyGuide.co.uk" }],
   },
 };
 

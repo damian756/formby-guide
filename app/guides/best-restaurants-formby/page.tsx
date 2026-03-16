@@ -370,6 +370,7 @@ export default function BestRestaurantsFormbyPage() {
             <div className="grid sm:grid-cols-3 gap-4">
               {[
                 { href: "/restaurants", label: "All Restaurants", desc: "Browse the full restaurant directory." },
+                { href: "/blog/where-to-eat-formby-with-kids", label: "Eating Out With Kids", desc: "Which Formby restaurants are actually good with children." },
                 { href: "/guides/formby-village", label: "Formby Village", desc: "Chapel Lane, shopping, and the full village guide." },
                 { href: "/cafes", label: "Cafés", desc: "Coffee stops and lighter bites." },
               ].map(({ href, label, desc }) => (

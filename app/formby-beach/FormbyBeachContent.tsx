@@ -480,6 +480,17 @@ export default function FormbyBeachContent() {
 
           </div>
 
+          {/* Natterjack toads callout */}
+          <div className="bg-[#E8EDE6] rounded-2xl p-5 border border-[#1C3220]/10">
+            <p className="font-semibold text-[#1C3220] text-sm mb-1">🐸 What about those conservation ponds?</p>
+            <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-3">
+              You&apos;ll pass small fenced ponds on the path to the beach. They&apos;re for natterjack toads — Britain&apos;s rarest amphibian. Most people walk straight past without knowing what they are.
+            </p>
+            <Link href="/blog/natterjack-toads-formby" className="text-xs font-semibold text-[#2E6B3E] hover:underline">
+              Read: Natterjack toads at Formby — the full story →
+            </Link>
+          </div>
+
           {/* Lifestyle shot + tip */}
           <div className="rounded-2xl overflow-hidden border border-[#1C3220]/10 md:flex md:items-stretch">
             <button

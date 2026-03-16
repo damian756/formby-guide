@@ -20,22 +20,36 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const collection = getCollection(slug);
   if (!collection) return { title: "Not Found" };
 
+  let isIndexable = false;
+  try {
+    const count = await prisma.business.count({
+      where: {
+        category: { slug: { in: collection.categorySlugs } },
+        tags: { hasEvery: collection.tags },
+      },
+    });
+    isIndexable = count >= MIN_LISTINGS;
+  } catch { /* DB unavailable — default to noindex */ }
+
   const url = `${BASE_URL}/collections/${slug}`;
   return {
     title: `${collection.title} | FormbyGuide.co.uk`,
     description: collection.metaDescription,
     alternates: { canonical: url },
+    ...(!isIndexable ? { robots: { index: false, follow: false } } : {}),
     openGraph: {
       title: collection.title,
       description: collection.metaDescription,
       url,
       type: "website",
       siteName: "FormbyGuide.co.uk",
+      images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "FormbyGuide.co.uk" }],
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title: collection.title,
       description: collection.metaDescription,
+      images: [`${BASE_URL}/og-default.png`],
     },
   };
 }
@@ -167,8 +181,6 @@ export default async function CollectionPage({ params }: Props) {
 
   return (
     <>
-      {!isIndexable && <meta name="robots" content="noindex, nofollow" />}
-
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}

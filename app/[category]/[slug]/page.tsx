@@ -194,10 +194,15 @@ export default async function BusinessPage({ params }: Props) {
 
   // JSON-LD
   const schemaType = SCHEMA_TYPES[category] || "LocalBusiness";
+  const listingUrl = `https://www.formbyguide.co.uk/${category}/${slug}`;
   const jsonLd: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": schemaType,
     name: business.name,
+    url: business.website
+      ? (business.website.startsWith("http") ? business.website : `https://${business.website}`)
+      : listingUrl,
+    sameAs: [listingUrl],
     address: {
       "@type": "PostalAddress",
       streetAddress: business.address.replace(/,?\s*(United Kingdom|UK)$/i, "").split(",")[0].trim(),
@@ -207,7 +212,6 @@ export default async function BusinessPage({ params }: Props) {
       addressCountry: "GB",
     },
     ...(business.phone ? { telephone: business.phone } : {}),
-    ...(business.website ? { url: business.website.startsWith("http") ? business.website : `https://${business.website}` } : {}),
     ...(business.lat && business.lng ? {
       geo: { "@type": "GeoCoordinates", latitude: business.lat, longitude: business.lng },
     } : {}),
