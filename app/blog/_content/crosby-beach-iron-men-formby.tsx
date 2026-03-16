@@ -35,10 +35,16 @@ export default function PostContent() {
         </div>
       </div>
 
-      <section className="bg-gradient-to-br from-[#1C3220] via-[#1C4A5A] to-[#2A4A8B] text-white relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-[#C9A96E]/10 rounded-full -translate-y-24 translate-x-24 blur-3xl" />
-        </div>
+      <section className="relative text-white overflow-hidden min-h-[480px] flex items-end">
+        <Image
+          src="/blog-card-crosby-iron-men.webp"
+          alt="Antony Gormley Iron Men sculptures at Crosby Beach"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20" />
         <div className="relative container mx-auto px-4 max-w-5xl py-16 md:py-24">
           <div className="max-w-3xl">
             <div className="inline-block bg-[#C9A96E]/20 border border-[#C9A96E]/30 text-[#C9A96E] text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-5">
