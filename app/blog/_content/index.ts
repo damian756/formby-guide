@@ -10,6 +10,9 @@ import FamilyRestaurants from "./where-to-eat-formby-with-kids";
 import RedSquirrels from "./red-squirrels-formby-spotting-guide";
 import Pinewoods from "./formby-pinewoods-walking-guide";
 import Natterjack from "./natterjack-toads-formby";
+import DayTrip from "./formby-day-trip-from-liverpool";
+import DogsBeach from "./dogs-formby-beach";
+import CrosbyIronMen from "./crosby-beach-iron-men-formby";
 
 export const POST_COMPONENTS: Record<string, ComponentType> = {
   "things-to-do-formby-half-term": HalfTerm,
@@ -18,4 +21,7 @@ export const POST_COMPONENTS: Record<string, ComponentType> = {
   "red-squirrels-formby-spotting-guide": RedSquirrels,
   "formby-pinewoods-walking-guide": Pinewoods,
   "natterjack-toads-formby": Natterjack,
+  "formby-day-trip-from-liverpool": DayTrip,
+  "dogs-formby-beach": DogsBeach,
+  "crosby-beach-iron-men-formby": CrosbyIronMen,
 };
