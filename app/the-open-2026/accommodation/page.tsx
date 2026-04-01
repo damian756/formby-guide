@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight, Star, MapPin, ArrowRight, Hotel } from "lucide-react";
 import { prisma } from "@/lib/prisma";
+import { LATEROOMS } from "@/lib/affiliate-links";
 
 export const revalidate = 3600;
 
@@ -149,10 +150,18 @@ export default async function OpenAccommodationPage() {
             <h2 className="font-display text-2xl font-bold text-[#1C3220] mb-2">
               Accommodation listings coming soon
             </h2>
-            <p className="text-gray-500 max-w-sm mx-auto text-sm">
-              We&apos;re adding accommodation listings. In the meantime, check Booking.com and Airbnb 
-              for &quot;Formby&quot; — there are good options available.
+            <p className="text-gray-500 max-w-sm mx-auto text-sm mb-6">
+              We&apos;re adding accommodation listings. In the meantime, search LateRooms for Formby 
+              to compare prices and availability.
             </p>
+            <a
+              href={LATEROOMS.formbyOpen2026}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-flex items-center gap-2 bg-[#1C3220] text-white px-6 py-3 rounded-full font-semibold text-sm hover:bg-[#2E6B3E] transition-colors"
+            >
+              Search Formby on LateRooms →
+            </a>
           </div>
         ) : (
           <>
@@ -222,6 +231,25 @@ export default async function OpenAccommodationPage() {
             </div>
           </>
         )}
+
+        {/* ── LateRooms CTA ──────────────────────────────────────────── */}
+        <div className="mt-10 bg-gradient-to-r from-[#1C3220] to-[#2E6B3E] rounded-2xl p-7 flex flex-col sm:flex-row items-center gap-6">
+          <div className="flex-1 text-center sm:text-left">
+            <p className="text-[#C9A96E] text-xs font-bold uppercase tracking-widest mb-1">Partner</p>
+            <h3 className="font-display text-xl font-bold text-white mb-2">Compare Formby Hotels for Open Week</h3>
+            <p className="text-white/70 text-sm leading-relaxed">
+              Search availability for 12-19 July 2026 across Formby hotels, B&Bs and guest houses. Free cancellation on most rooms.
+            </p>
+          </div>
+          <a
+            href={LATEROOMS.formbyOpen2026}
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            className="flex-none bg-[#C9A96E] hover:bg-[#E8C87A] text-[#1C3220] font-bold text-sm px-6 py-3.5 rounded-full transition-colors whitespace-nowrap"
+          >
+            Search on LateRooms →
+          </a>
+        </div>
 
         {/* ── Getting there ─────────────────────────────────────────── */}
         <div className="mt-14 bg-[#1C3220] rounded-2xl p-6 md:p-8 text-white">

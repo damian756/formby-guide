@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { ChevronRight } from "lucide-react";
 import { getCategoryBySlug, isValidCategory } from "@/lib/config";
 import { prisma } from "@/lib/prisma";
+import { LATEROOMS } from "@/lib/affiliate-links";
 import CategoryBrowser, { type BrowserBusiness } from "@/components/CategoryBrowser";
 import type { MapPin } from "@/components/CategoryMapTypes";
 
@@ -305,6 +306,26 @@ export default async function CategoryPage({ params, searchParams }: Props) {
                 <p key={i} className="text-gray-600 text-[15px] leading-relaxed">{para}</p>
               ))}
             </div>
+          </div>
+        )}
+
+        {category === "accommodation" && (
+          <div className="bg-gradient-to-r from-[#3A1A5C] to-[#5A2E8B] rounded-2xl p-6 mb-5 flex flex-col sm:flex-row items-center gap-5">
+            <div className="flex-1 text-center sm:text-left">
+              <p className="text-[#C9A96E] text-xs font-bold uppercase tracking-widest mb-1">Partner</p>
+              <p className="text-white font-semibold mb-1">Compare Formby accommodation on LateRooms</p>
+              <p className="text-white/60 text-xs leading-relaxed">
+                Over 100,000 UK properties. Free cancellation and pay-later flexibility.
+              </p>
+            </div>
+            <a
+              href={LATEROOMS.formby}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="flex-none bg-[#C9A96E] hover:bg-[#E8C87A] text-[#1C3220] font-bold text-sm px-5 py-3 rounded-full transition-colors whitespace-nowrap"
+            >
+              Search Formby →
+            </a>
           </div>
         )}
 
