@@ -168,7 +168,7 @@ export const BLOG_POSTS: BlogPost[] = [
   // ── April 2026 posts ──────────────────────────────────────────────────────
   {
     slug: "easter-at-formby-beach-2026",
-    title: "Easter at Formby Beach 2026 — What to Expect and How to Do It Right",
+    title: "Easter at Formby Beach 2026: What to Expect and How to Do It Right",
     excerpt: "Four days, a beach, a pine wood, possibly a red squirrel, and 40,000 other people with the same idea. Here's how to do Easter at Formby without the stress.",
     author: "Clare",
     date: "April 3, 2026",
@@ -176,7 +176,7 @@ export const BLOG_POSTS: BlogPost[] = [
     categorySlug: "seasonal",
     gradient: "linear-gradient(135deg, #1C4A5A 0%, #2E6B3E 100%)",
     image: "/blog-easter-formby.jpg",
-    metaTitle: "Easter at Formby Beach 2026 — What to Expect",
+    metaTitle: "Easter at Formby Beach 2026: What to Expect",
     metaDescription: "Everything you need to know about visiting Formby Beach at Easter 2026. When to arrive, where to park, red squirrels, and where to eat after. Written by a Formby local.",
   },
   {
@@ -189,12 +189,12 @@ export const BLOG_POSTS: BlogPost[] = [
     categorySlug: "seasonal",
     gradient: "linear-gradient(135deg, #1C3220 0%, #1C4A5A 100%)",
     image: "/blog-formby-open-base.jpg",
-    metaTitle: "Staying in Formby for The Open 2026 — Is It Worth It?",
+    metaTitle: "Staying in Formby for The Open 2026: Is It Worth It?",
     metaDescription: "The Open Championship is at Royal Birkdale in July 2026. Formby is 20 minutes away by train. Here's why it might make a better base than central Southport, and what to know before you book.",
   },
   {
     slug: "wild-garlic-formby-pinewoods",
-    title: "Wild Garlic in Formby Pinewoods — Where to Find It and What to Do With It",
+    title: "Wild Garlic in Formby Pinewoods: Where to Find It and What to Do With It",
     excerpt: "April is the month the pinewoods turn white with wild garlic. If you've never walked through it, you're missing one of the genuinely good things about living near here.",
     author: "Clare",
     date: "April 4, 2026",
@@ -202,7 +202,7 @@ export const BLOG_POSTS: BlogPost[] = [
     categorySlug: "wildlife",
     gradient: "linear-gradient(135deg, #1A5C3A 0%, #4A6B1C 100%)",
     image: "/blog-wild-garlic-pinewoods.jpg",
-    metaTitle: "Wild Garlic at Formby — Where to Find It in April",
+    metaTitle: "Wild Garlic at Formby: Where to Find It in April",
     metaDescription: "April is wild garlic season in the Formby pinewoods. Where to walk to find it, when it peaks, what it smells like, and what to do with it if you pick some. Written by a Formby local.",
   },
   {

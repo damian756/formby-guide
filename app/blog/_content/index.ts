@@ -16,6 +16,9 @@ import CrosbyIronMen from "./crosby-beach-iron-men-formby";
 import SpringFormby from "./spring-formby-beach-april";
 import FormbyCafes from "./best-cafes-formby-village";
 import FormbyVillageWalk from "./formby-village-walk-guide";
+import EasterFormby from "./easter-at-formby-beach-2026";
+import FormbyOpenBase from "./formby-open-2026-base";
+import WildGarlic from "./wild-garlic-formby-pinewoods";
 
 export const POST_COMPONENTS: Record<string, ComponentType> = {
   "things-to-do-formby-half-term": HalfTerm,
@@ -30,4 +33,7 @@ export const POST_COMPONENTS: Record<string, ComponentType> = {
   "spring-formby-beach-april": SpringFormby,
   "best-cafes-formby-village": FormbyCafes,
   "formby-village-walk-guide": FormbyVillageWalk,
+  "easter-at-formby-beach-2026": EasterFormby,
+  "formby-open-2026-base": FormbyOpenBase,
+  "wild-garlic-formby-pinewoods": WildGarlic,
 };
