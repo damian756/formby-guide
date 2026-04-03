@@ -357,27 +357,27 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {[
+          [
             {
-              title: "Half Term in Formby — What Actually Works",
-              excerpt: "Four kids, five days, limited budget. Honest tips from someone who&apos;s done it many times.",
-              cat: "Family",
-              gradient: "from-[#1C3220] to-[#2E6B3E]",
-              slug: "things-to-do-formby-half-term",
+              title: "Easter at Formby Beach 2026",
+              excerpt: "How to do Easter weekend at Formby without spending half of it stuck in traffic on Victoria Road.",
+              cat: "Seasonal",
+              gradient: "from-[#1C4A5A] to-[#2E6B3E]",
+              slug: "easter-at-formby-beach-2026",
             },
             {
-              title: "How to Actually See Red Squirrels",
-              excerpt: "Yes, they live here. But turn up at 2pm on a Saturday and you&apos;ll see nothing. Here&apos;s what locals know.",
+              title: "Why Formby Makes a Better Open 2026 Base",
+              excerpt: "Southport is sold out. Formby is 7 minutes by train from Birkdale station. Here&apos;s why it works.",
+              cat: "The Open 2026",
+              gradient: "from-[#1C3220] to-[#1C4A5A]",
+              slug: "formby-open-2026-base",
+            },
+            {
+              title: "Wild Garlic in the Pinewoods — April",
+              excerpt: "The pinewoods smell different in April. Here&apos;s where to find the wild garlic and what to do with it.",
               cat: "Wildlife",
-              gradient: "from-[#6B4020] to-[#A8764A]",
-              slug: "red-squirrels-formby-spotting-guide",
-            },
-            {
-              title: "Walking the Formby Pinewoods",
-              excerpt: "Trail options, what to wear, and the terrain mistake most visitors make on their first visit.",
-              cat: "Walks",
-              gradient: "from-[#1A5C3A] to-[#2E8B5A]",
-              slug: "formby-pinewoods-walking-guide",
+              gradient: "from-[#1A5C3A] to-[#4A6B1C]",
+              slug: "wild-garlic-formby-pinewoods",
             },
           ].map((post) => (
             <Link
