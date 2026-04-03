@@ -357,7 +357,7 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          [
+          {[
             {
               title: "Easter at Formby Beach 2026",
               excerpt: "How to do Easter weekend at Formby without spending half of it stuck in traffic on Victoria Road.",
@@ -373,7 +373,7 @@ export default function HomePage() {
               slug: "formby-open-2026-base",
             },
             {
-              title: "Wild Garlic in the Pinewoods — April",
+              title: "Wild Garlic in the Pinewoods. April.",
               excerpt: "The pinewoods smell different in April. Here&apos;s where to find the wild garlic and what to do with it.",
               cat: "Wildlife",
               gradient: "from-[#1A5C3A] to-[#4A6B1C]",
