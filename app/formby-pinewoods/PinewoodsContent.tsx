@@ -8,7 +8,7 @@ import "yet-another-react-lightbox/styles.css";
 
 const GALLERY = [
   // Existing photo break images (used by labeled buttons)
-  { src: "/pinewoods-deep-woodland.webp",  alt: "Deep inside Formby pinewoods — ancient coastal pine woodland" },
+  { src: "/pinewoods-deep-woodland.webp",  alt: "Deep inside Formby pinewoods: ancient coastal pine woodland" },
   { src: "/pinewoods-trail-sign.webp",     alt: "No horses signpost on Formby pinewoods trail" },
   { src: "/pinewoods-tall-tree.webp",      alt: "Tall Scots pine in Formby pinewoods" },
   { src: "/pinewoods-sandfield-farm.webp", alt: "Sandfield Farm heritage sign in the Formby pinewoods" },
@@ -18,12 +18,12 @@ const GALLERY = [
   { src: "/blog-card-wildlife.webp",       alt: "Red squirrel in Formby pinewoods" },
   { src: "/squirrels-beach-pines.webp",    alt: "The transition from Formby pinewoods to the beach and dunes" },
   { src: "/pinewoods-card-birds.webp",     alt: "Crossbill in Formby pinewoods" },
-  { src: "/pinewoods-flowers.webp",        alt: "Spring wildflowers in the Formby pinewoods — wood anemones and bluebells" },
+  { src: "/pinewoods-flowers.webp",        alt: "Spring wildflowers in the Formby pinewoods: wood anemones and bluebells" },
   { src: "/pinewoods-card-sunset.webp",    alt: "Sunset light filtering through the Formby pinewoods toward the sea" },
   // TRAILS card images (indices 11–13)
   { src: "/squirrel-walk.webp",            alt: "The red squirrel trail through the dense Formby pinewoods" },
-  { src: "/beach-horses-ainsdale.webp",    alt: "Horses on the beach near Formby — the pinewoods-to-beach walk" },
-  { src: "/ainsdale-beach.webp",           alt: "Ainsdale Beach looking north — Sefton Coastal Path" },
+  { src: "/beach-horses-ainsdale.webp",    alt: "Horses on the beach near Formby: the pinewoods-to-beach walk" },
+  { src: "/ainsdale-beach.webp",           alt: "Ainsdale Beach looking north: Sefton Coastal Path" },
   // Wildlife section (indices 14–15)
   { src: "/pinewoods-fungus-moss.webp",    alt: "Fungi and moss growing on a fallen log in Formby pinewoods" },
   { src: "/natterjack-pond.webp",          alt: "Natterjack toad conservation pond in the Formby dune slacks" },
@@ -31,7 +31,7 @@ const GALLERY = [
 
 const WHY_VISIT = [
   { title: "The Trees Themselves",   desc: "Mature Scots pine and Corsican pine, some over 100 years old. Light through the canopy on a morning walk is genuinely beautiful. Photographers rate this highly.", image: "/squirrels-canopy.webp",      imagePos: "object-center", galleryIdx: 5,  link: null },
-  { title: "Red Squirrels",          desc: "The pinewoods are home to one of England's last red squirrel colonies. For best times to visit, which trails to take, and photography tips — see the full red squirrel guide.", image: "/blog-card-wildlife.webp",   imagePos: "object-center", galleryIdx: 6,  link: "/red-squirrels-formby" },
+  { title: "Red Squirrels",          desc: "The pinewoods are home to one of England's last red squirrel colonies. For best times to visit, which trails to take, and photography tips: see the full red squirrel guide.", image: "/blog-card-wildlife.webp",   imagePos: "object-center", galleryIdx: 6,  link: "/red-squirrels-formby" },
   { title: "Access to the Beach",    desc: "Follow main paths west and you emerge onto dunes and Formby Beach. Takes ~15 minutes. The transition from woodland to open sea is genuinely dramatic.", image: "/squirrels-beach-pines.webp", imagePos: "object-center", galleryIdx: 7,  link: null },
   { title: "Birdlife",               desc: "Crossbills, goldcrests, coal tits, woodpeckers, waders and sea birds depending on season. Birders rate Formby highly for the woodland/coastal combination.", image: "/pinewoods-card-birds.webp",  imagePos: "object-center", galleryIdx: 8,  link: null },
   { title: "Wildflowers & Plants",   desc: "Spring brings wood anemones, bluebells and woodland plants in sheltered sections. Dune slacks have their own distinct plant communities.", image: "/pinewoods-flowers.webp",      imagePos: "object-center", galleryIdx: 9,  link: null },
@@ -104,11 +104,11 @@ export default function PinewoodsContent() {
         {/* Intro */}
         <div className="max-w-3xl mb-12">
           <p className="text-lg text-[#1C3220]/80 leading-relaxed">
-            The Formby pinewoods aren&apos;t natural — they were planted in the 19th century to stabilise sand dunes — but they feel ancient. What started as a practical project has become one of the most important habitats on the north-west coast. Mature Scots and Corsican pine, red squirrels in the canopy, and paths that walk you straight through to the beach.
+            The Formby pinewoods aren&apos;t natural: they were planted in the 19th century to stabilise sand dunes: but they feel ancient. What started as a practical project has become one of the most important habitats on the north-west coast. Mature Scots and Corsican pine, red squirrels in the canopy, and paths that walk you straight through to the beach.
           </p>
         </div>
 
-        {/* Why Visit — image cards 3-col, all lightbox-clickable */}
+        {/* Why Visit: image cards 3-col, all lightbox-clickable */}
         <section id="why" className="mb-16 scroll-mt-20">
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">What Makes the Pinewoods Worth Visiting</h2>
           <div className="grid md:grid-cols-3 gap-5">
@@ -145,7 +145,7 @@ export default function PinewoodsContent() {
           </div>
         </section>
 
-        {/* Photo break — deep woodland */}
+        {/* Photo break: deep woodland */}
         <button
           onClick={() => open(0)}
           className="relative -mx-4 sm:-mx-6 lg:-mx-8 mb-16 h-64 md:h-80 overflow-hidden rounded-2xl w-[calc(100%+2rem)] sm:w-[calc(100%+3rem)] lg:w-[calc(100%+4rem)] block cursor-zoom-in group"
@@ -153,7 +153,7 @@ export default function PinewoodsContent() {
         >
           <Image
             src="/pinewoods-deep-woodland.webp"
-            alt="Deep inside Formby pinewoods — ancient coastal pine woodland"
+            alt="Deep inside Formby pinewoods: ancient coastal pine woodland"
             fill
             className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
             sizes="100vw"
@@ -161,7 +161,7 @@ export default function PinewoodsContent() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
         </button>
 
-        {/* Walks & Trails — with lightbox-clickable thumbnails */}
+        {/* Walks & Trails: with lightbox-clickable thumbnails */}
         <section id="walks" className="mb-16 scroll-mt-20">
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">Walks & Trails</h2>
           <div className="space-y-4 mb-8">
@@ -196,7 +196,7 @@ export default function PinewoodsContent() {
             ))}
           </div>
 
-          {/* Trail sign — clickable */}
+          {/* Trail sign: clickable */}
           <button
             onClick={() => open(1)}
             className="relative w-full h-56 md:h-72 overflow-hidden rounded-2xl block cursor-zoom-in group"
@@ -210,7 +210,7 @@ export default function PinewoodsContent() {
               sizes="100vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-            <p className="absolute bottom-4 left-4 text-white text-sm font-medium drop-shadow">The trails are well signed — follow the markers and you won&apos;t get lost</p>
+            <p className="absolute bottom-4 left-4 text-white text-sm font-medium drop-shadow">The trails are well signed: follow the markers and you won&apos;t get lost</p>
           </button>
         </section>
 
@@ -230,7 +230,7 @@ export default function PinewoodsContent() {
                 <span className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition bg-black/70 text-white text-xs font-medium px-2 py-1 rounded-lg">Enlarge</span>
               </button>
               <div className="p-5">
-                <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-3">The pinewoods are home to one of England&apos;s last red squirrel colonies — the National Trust actively manages the reserve to keep the population stable. For full detail on when and where to see them, best trails, and photography tips:</p>
+                <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-3">The pinewoods are home to one of England&apos;s last red squirrel colonies: the National Trust actively manages the reserve to keep the population stable. For full detail on when and where to see them, best trails, and photography tips:</p>
                 <Link href="/red-squirrels-formby" className="inline-flex items-center gap-1.5 bg-[#2E6B3E] hover:bg-[#1C3220] text-white text-xs font-bold px-3 py-1.5 rounded-full transition-colors">
                   Red squirrel guide →
                 </Link>
@@ -274,14 +274,14 @@ export default function PinewoodsContent() {
                 </button>
                 <div className="p-5 flex flex-col justify-center">
                   <p className="font-bold text-[#1C3220] mb-2">🍄 Fungi & Lichen</p>
-                  <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-2">Ancient woodland indicator species — the variety of fungi and lichen here tells you something about how long this woodland has been established. Best seen in autumn after rain, on fallen logs and the pine floor. Completely underrated.</p>
+                  <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-2">Ancient woodland indicator species: the variety of fungi and lichen here tells you something about how long this woodland has been established. Best seen in autumn after rain, on fallen logs and the pine floor. Completely underrated.</p>
                   <p className="text-xs text-[#1C3220]/50 italic">October and November are peak fungus season.</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Natterjack toad callout — clickable image */}
+          {/* Natterjack toad callout: clickable image */}
           <div className="mt-8 rounded-2xl border border-[#2E6B3E]/20 bg-[#E8EDE6] overflow-hidden">
             <div className="grid md:grid-cols-3">
               <button
@@ -294,8 +294,8 @@ export default function PinewoodsContent() {
               </button>
               <div className="md:col-span-2 p-6 flex flex-col justify-center">
                 <p className="text-xs font-bold uppercase tracking-wider text-[#2E6B3E] mb-2">Conservation</p>
-                <h3 className="font-display font-bold text-[#1C3220] text-lg mb-2">Natterjack Toads — Formby&apos;s Other Resident</h3>
-                <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-4">Most people walk straight past the conservation ponds in the dune slacks without knowing what they are. Those ponds were built for natterjack toads — the rarest amphibian in Britain, and Formby is one of their last strongholds. In April and May you can hear the males calling at night from a surprisingly long distance.</p>
+                <h3 className="font-display font-bold text-[#1C3220] text-lg mb-2">Natterjack Toads: Formby&apos;s Other Resident</h3>
+                <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-4">Most people walk straight past the conservation ponds in the dune slacks without knowing what they are. Those ponds were built for natterjack toads: the rarest amphibian in Britain, and Formby is one of their last strongholds. In April and May you can hear the males calling at night from a surprisingly long distance.</p>
                 <a href="/blog/natterjack-toads-formby" className="text-[#2E6B3E] font-semibold text-sm hover:underline">Read the full natterjack toad guide →</a>
               </div>
             </div>
@@ -322,7 +322,7 @@ export default function PinewoodsContent() {
                   The pinewoods were planted in the late 19th century by the Formby family and later the Weld-Blundell estate to stabilise coastal dunes and provide timber. By the 20th century they had matured into the dense, atmospheric woodland you walk through today.
                 </p>
                 <p className="text-sm text-[#1C3220]/70 leading-relaxed">
-                  Red squirrels have lived in the pinewoods for as long as anyone can remember — they suit the habitat precisely. The decline of grey squirrel populations in managed reserves like this one has helped stabilise the red population. The National Trust acquired the site in the 1960s and has been managing it for conservation ever since.
+                  Red squirrels have lived in the pinewoods for as long as anyone can remember: they suit the habitat precisely. The decline of grey squirrel populations in managed reserves like this one has helped stabilise the red population. The National Trust acquired the site in the 1960s and has been managing it for conservation ever since.
                 </p>
               </div>
             </div>
@@ -367,7 +367,7 @@ export default function PinewoodsContent() {
         <section className="mt-16 pt-12 border-t border-[#1C3220]/10 mb-16">
           <h3 className="font-display text-2xl font-bold text-[#1C3220] mb-2">Where to Eat After Your Walk</h3>
           <p className="text-[#1C3220]/60 text-sm mb-6 leading-relaxed">
-            The NT café is right at the car park. For something more substantial, the village is 10 minutes away — and The Sparrowhawk is perfect for a post-walk meal with dogs.
+            The NT café is right at the car park. For something more substantial, the village is 10 minutes away: and The Sparrowhawk is perfect for a post-walk meal with dogs.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-5">
             {[
@@ -401,7 +401,7 @@ export default function PinewoodsContent() {
                 tag: "Best overall",
                 tagColor: "bg-[#C9A96E] text-[#1C3220]",
                 emoji: "🥂",
-                desc: "If the walk is the occasion, make the meal match it. The best restaurant in Formby — book at least a week ahead at weekends.",
+                desc: "If the walk is the occasion, make the meal match it. The best restaurant in Formby: book at least a week ahead at weekends.",
               },
             ].map((r) => (
               <Link

@@ -12,8 +12,8 @@ export default function PostContent() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            headline: "Best Cafes in Formby Village — Where to Eat, Drink and Sit Down",
-            description: "The honest guide to cafes in Formby village — which ones are worth it, what to order, and where to go after the beach. From the NT cafe to village independents.",
+            headline: "Best Cafes in Formby Village: Where to Eat, Drink and Sit Down",
+            description: "The honest guide to cafes in Formby village: which ones are worth it, what to order, and where to go after the beach. From the NT cafe to village independents.",
             url: "https://www.formbyguide.co.uk/blog/best-cafes-formby-village",
             author: { "@type": "Person", "@id": "https://www.formbyguide.co.uk/about#clare", name: "Clare", url: "https://www.formbyguide.co.uk/about" },
             publisher: { "@type": "Organization", "@id": "https://www.churchtownmedia.co.uk/#organization", name: "Churchtown Media", url: "https://www.churchtownmedia.co.uk" },
@@ -55,14 +55,14 @@ export default function PostContent() {
               <span className="text-[#C9A96E]">in Formby Village</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
-              Where to go for a proper coffee, decent cake, and somewhere to sit down — before or after the beach.
+              Where to go for a proper coffee, decent cake, and somewhere to sit down: before or after the beach.
             </p>
             <div className="flex items-center gap-3 text-sm text-white/60 flex-wrap">
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 rounded-full overflow-hidden ring-1 ring-white/20">
                   <Image src="/clare.png" alt="Clare" width={32} height={32} className="object-cover w-full h-full" />
                 </div>
-                <span>Clare — Formby local</span>
+                <span>Clare: Formby local</span>
               </div>
               <span className="text-white/30">·</span>
               <div className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" /><span>March 18, 2026</span></div>
@@ -77,7 +77,7 @@ export default function PostContent() {
         <div className="prose prose-lg prose-slate max-w-none">
 
           <p className="text-xl text-[#1C3220] font-medium leading-relaxed mb-8">
-            Formby village isn&apos;t exactly overflowing with cafes — but what it has is worth knowing about. A handful of independents that do a decent job, the National Trust cafe if you&apos;re already at the beach, and enough options that you won&apos;t be stuck with a petrol station coffee after a morning walk. Here&apos;s the honest breakdown.
+            Formby village isn&apos;t exactly overflowing with cafes: but what it has is worth knowing about. A handful of independents that do a decent job, the National Trust cafe if you&apos;re already at the beach, and enough options that you won&apos;t be stuck with a petrol station coffee after a morning walk. Here&apos;s the honest breakdown.
           </p>
 
           <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">The National Trust Cafe at Formby Beach</h2>
@@ -85,7 +85,7 @@ export default function PostContent() {
             If you&apos;re visiting the beach and pinewoods, the NT cafe is the obvious choice. It&apos;s at the end of the car park, right at the start of the squirrel trail. The coffee is decent, the cake is good (the cake changes but it&apos;s reliably proper home-baked rather than packaged), and it&apos;s open from when the car park opens in April through to the end of the season.
           </p>
           <p className="text-[#4A6B5A] leading-relaxed mb-4">
-            It&apos;s not cheap — NT catering never is — but you&apos;re paying for a cup of coffee with a view of the pinewoods and the knowledge that the money goes back into the estate. Worth it. Dogs are welcome outside.
+            It&apos;s not cheap: NT catering never is: but you&apos;re paying for a cup of coffee with a view of the pinewoods and the knowledge that the money goes back into the estate. Worth it. Dogs are welcome outside.
           </p>
 
           <div className="bg-[#F0F7F2] border-l-4 border-[#2E6B3E] rounded-r-lg px-6 py-5 my-8">
@@ -95,9 +95,9 @@ export default function PostContent() {
             </p>
           </div>
 
-          <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">Formby village — the independent options</h2>
+          <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">Formby village: the independent options</h2>
           <p className="text-[#4A6B5A] leading-relaxed mb-4">
-            In the village centre (a five-minute drive or 20-minute walk from the NT car park), there are a few options worth knowing about. They don&apos;t all have the same name every year — Formby has an independent cafe scene that shifts — so I&apos;ll describe what&apos;s there and let you check what&apos;s currently trading.
+            In the village centre (a five-minute drive or 20-minute walk from the NT car park), there are a few options worth knowing about. They don&apos;t all have the same name every year: Formby has an independent cafe scene that shifts: so I&apos;ll describe what&apos;s there and let you check what&apos;s currently trading.
           </p>
           <p className="text-[#4A6B5A] leading-relaxed mb-4">
             The Chapel Lane area and the roads around the village centre have had a reliable selection of cafe and coffee options for years. These tend to be the kind of places that serve a proper flat white, have cake that was made that morning, and where you can sit down without feeling rushed. The sort of place I prefer to a chain. Not always Instagrammable. Generally good.
@@ -105,22 +105,22 @@ export default function PostContent() {
 
           <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">What about brunch?</h2>
           <p className="text-[#4A6B5A] leading-relaxed mb-4">
-            For a proper sit-down brunch, the village restaurants do better service than the cafes. Left Bank Brasserie is the obvious choice for something that feels like a treat — book ahead on weekends. The Sparrowhawk and Emily&apos;s Kitchen are also worth checking for weekend brunch menus.
+            For a proper sit-down brunch, the village restaurants do better service than the cafes. Left Bank Brasserie is the obvious choice for something that feels like a treat: book ahead on weekends. The Sparrowhawk and Emily&apos;s Kitchen are also worth checking for weekend brunch menus.
           </p>
           <p className="text-[#4A6B5A] leading-relaxed mb-4">
-            If you want a quick coffee and a pastry before the beach, the village cafes are the answer. If you want a full brunch experience, those restaurants are where you&apos;ll get it — just with a table booked and slightly more structure to your morning.
+            If you want a quick coffee and a pastry before the beach, the village cafes are the answer. If you want a full brunch experience, those restaurants are where you&apos;ll get it: just with a table booked and slightly more structure to your morning.
           </p>
 
-          <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">After the beach — what actually works</h2>
+          <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">After the beach: what actually works</h2>
           <p className="text-[#4A6B5A] leading-relaxed mb-4">
             The pattern that works well: arrive early, beach first, then drive to the village for lunch rather than trying to eat at the NT cafe when it&apos;s busy at 1pm. The village is five minutes by car and has more options. It also separates the sandy, soggy post-beach phase from the clean, warm lunch phase, which is better for everyone.
           </p>
 
           <ul className="space-y-2 text-[#4A6B5A] my-4">
             {[
-              "NT Cafe — best for coffee and cake while you're at the beach estate.",
-              "Village cafes — best for a sit-down coffee, mid-morning, before or after the beach.",
-              "Village restaurants (Left Bank, Emily's) — best for a proper brunch or lunch, with a booking.",
+              "NT Cafe: best for coffee and cake while you're at the beach estate.",
+              "Village cafes: best for a sit-down coffee, mid-morning, before or after the beach.",
+              "Village restaurants (Left Bank, Emily's): best for a proper brunch or lunch, with a booking.",
               "Most cafes close by 4–5pm. Don't plan a late afternoon coffee stop without checking first.",
             ].map((item) => (
               <li key={item} className="flex gap-3">

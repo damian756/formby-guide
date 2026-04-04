@@ -61,7 +61,7 @@ const PACKAGES = [
 
 const STATS = [
   { icon: Users, label: "Target audience", value: "Day visitors & locals", sub: "People actively planning a Formby visit" },
-  { icon: TrendingUp, label: "Growing traffic", value: "New site — rising fast", sub: "Targeting high-intent searches for Formby" },
+  { icon: TrendingUp, label: "Growing traffic", value: "New site: rising fast", sub: "Targeting high-intent searches for Formby" },
   { icon: BarChart2, label: "Content-first SEO", value: "Pages ranking for key terms", sub: "Red squirrels, Formby beach, things to do" },
   { icon: Star, label: "Local authority", value: "Built by Churchtown Media", sub: "Also behind SouthportGuide.co.uk" },
 ];
@@ -122,18 +122,18 @@ export default function AdvertisePage() {
           <div className="max-w-2xl mb-10">
             <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-3">Why FormbyGuide?</h2>
             <p className="text-[#1C3220]/60 leading-relaxed">
-              Formby punches above its weight for day visitors — the National Trust site, red squirrels, and beach draw people from across the North West. FormbyGuide is built to catch them at the research stage, before they decide where to eat or what to do.
+              Formby punches above its weight for day visitors: the National Trust site, red squirrels, and beach draw people from across the North West. FormbyGuide is built to catch them at the research stage, before they decide where to eat or what to do.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-5">
             {[
               {
                 title: "High-intent traffic",
-                desc: "People searching 'things to do Formby' or 'restaurants Formby' are actively planning. They're not browsing — they're deciding.",
+                desc: "People searching 'things to do Formby' or 'restaurants Formby' are actively planning. They're not browsing: they're deciding.",
               },
               {
                 title: "Content that ranks",
-                desc: "The site is built around editorial content covering the beach, pinewoods, and red squirrels — pages that attract and convert visitor traffic.",
+                desc: "The site is built around editorial content covering the beach, pinewoods, and red squirrels: pages that attract and convert visitor traffic.",
               },
               {
                 title: "Local knowledge",
@@ -199,7 +199,7 @@ export default function AdvertisePage() {
         <div className="bg-[#E8EDE6] rounded-2xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="font-display text-xl font-bold text-[#1C3220] mb-1">Not sure where to start?</h3>
-            <p className="text-[#1C3220]/60 text-sm">Claim a free listing first — it takes about 2 minutes and costs nothing.</p>
+            <p className="text-[#1C3220]/60 text-sm">Claim a free listing first: it takes about 2 minutes and costs nothing.</p>
           </div>
           <Link href="/claim-listing" className="flex-shrink-0 bg-[#2E6B3E] hover:bg-[#1C3220] text-white font-bold px-6 py-3 rounded-full transition-colors whitespace-nowrap">
             Claim free listing →

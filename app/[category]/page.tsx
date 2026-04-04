@@ -32,43 +32,43 @@ const CAT_ORDER = [
 
 const CATEGORY_CONTENT: Record<string, React.ReactNode[]> = {
   "restaurants": [
-    <>Formby punches above its weight for eating out. The village has a good spread — from proper date-night places like Left Bank Brasserie and Don Luigi to more casual spots like <Link href="/restaurants/the-sparrowhawk-formby" className="text-[#2E6B3E] hover:underline font-medium">The Sparrowhawk</Link> and Emily&apos;s. Sorrento is worth knowing about too, especially if you want Italian without the drive into Liverpool.</>,
-    "The Freshfield and Hightown pubs add a few more options if you're flexible on location. For most visitors the village centre is the obvious base — everything's walkable from the train station or the main car parks on Duke Street.",
+    <>Formby punches above its weight for eating out. The village has a good spread: from proper date-night places like Left Bank Brasserie and Don Luigi to more casual spots like <Link href="/restaurants/the-sparrowhawk-formby" className="text-[#2E6B3E] hover:underline font-medium">The Sparrowhawk</Link> and Emily&apos;s. Sorrento is worth knowing about too, especially if you want Italian without the drive into Liverpool.</>,
+    "The Freshfield and Hightown pubs add a few more options if you're flexible on location. For most visitors the village centre is the obvious base: everything's walkable from the train station or the main car parks on Duke Street.",
     "Worth booking ahead at weekends, especially for Left Bank Brasserie and Don Luigi. Midweek you'll generally walk in.",
   ],
   "cafes": [
-    "Good coffee is easier to find in Formby than you'd expect for a village this size. The Coffee Carriage is a local favourite — small, friendly, worth the queue. Dapa Coffee is another good option, particularly if you want somewhere to actually sit.",
+    "Good coffee is easier to find in Formby than you'd expect for a village this size. The Coffee Carriage is a local favourite: small, friendly, worth the queue. Dapa Coffee is another good option, particularly if you want somewhere to actually sit.",
     "If you're coming from the beach or the red squirrel trail, the National Trust café at the car park does a decent enough coffee and the cake is good. It's not cheap but it's convenient and you're already there.",
-    "The Udder Guys does ice cream and light snacks — more of a summer thing, but brilliant in season.",
+    "The Udder Guys does ice cream and light snacks: more of a summer thing, but brilliant in season.",
   ],
   "pubs": [
     "Formby's pub scene is solid rather than spectacular, which is exactly what you want after a walk. The Freshfield and The Lifeboat are the two that come up most often. The Grapes in Freshfield has a decent beer garden if the weather holds.",
-    "If you're after a pint post-beach or post-pinewoods walk, The Freshfield is probably your best bet — it's on the right side of the village for most people driving in from the A565. Dog-friendly too, which matters.",
-    "The Pinewoods pub is what it sounds like — close to the NT entrance, fine for a quick pint, not a destination.",
+    "If you're after a pint post-beach or post-pinewoods walk, The Freshfield is probably your best bet: it's on the right side of the village for most people driving in from the A565. Dog-friendly too, which matters.",
+    "The Pinewoods pub is what it sounds like: close to the NT entrance, fine for a quick pint, not a destination.",
   ],
   "activities": [
     "The National Trust pinewoods and red squirrel trail are the headline acts, and they're genuinely worth it. Beyond that, there's cycling along the coastal path, kayaking at Crosby, and horse riding if you've got kids who need something to do.",
-    "Formby Beach is an activity in itself — the dunes are brilliant for kids to scramble up, and the walk from the NT car park to the waterline takes about 15–20 minutes depending on the tide. Worth checking tide times before you go.",
+    "Formby Beach is an activity in itself: the dunes are brilliant for kids to scramble up, and the walk from the NT car park to the waterline takes about 15–20 minutes depending on the tide. Worth checking tide times before you go.",
     "The Crosby Coastal Park (home to the Iron Men sculpture) is a 20-minute drive south and worth combining into a longer day out on the Sefton Coast.",
   ],
   "accommodation": [
-    "Formby doesn't have a huge amount of accommodation, which is mostly fine — Liverpool is 20 minutes by train and Southport is 15, so most visitors use one of those as a base. But if you want to stay local, there are a handful of B&Bs and holiday lets around the village and Freshfield.",
-    "If you're here for The Open 2026 at Royal Birkdale, staying in Formby puts you 10 minutes from the course — genuinely useful. Southport accommodation sells out fast and Formby gives you the same access without the same scramble.",
+    "Formby doesn't have a huge amount of accommodation, which is mostly fine: Liverpool is 20 minutes by train and Southport is 15, so most visitors use one of those as a base. But if you want to stay local, there are a handful of B&Bs and holiday lets around the village and Freshfield.",
+    "If you're here for The Open 2026 at Royal Birkdale, staying in Formby puts you 10 minutes from the course: genuinely useful. Southport accommodation sells out fast and Formby gives you the same access without the same scramble.",
     "Book early if you're visiting in summer. The NT events calendar fills up quickly and local accommodation follows.",
   ],
   "shopping": [
-    "Chapel Lane is the main drag for independent shops in Formby — a mix of boutiques, gifts, and the odd useful local service. It's not huge but it's worth a browse, especially if you're killing an hour between lunch and the beach.",
-    "The charity shops are genuinely good. I find something almost every time — there are a couple along the high street that are worth a look if you're patient and not in a rush.",
+    "Chapel Lane is the main drag for independent shops in Formby: a mix of boutiques, gifts, and the odd useful local service. It's not huge but it's worth a browse, especially if you're killing an hour between lunch and the beach.",
+    "The charity shops are genuinely good. I find something almost every time: there are a couple along the high street that are worth a look if you're patient and not in a rush.",
     "Most of the chain shops are on or near Duke Street. The M&S Foodhall is useful if you want to grab something for the beach.",
   ],
   "nature-walks": [
-    "The National Trust pinewoods are the main draw — the red squirrel trail is well-marked and most people can walk it in about an hour. Go early, especially if you're hoping to spot squirrels. September to February gives you the best sighting odds.",
+    "The National Trust pinewoods are the main draw: the red squirrel trail is well-marked and most people can walk it in about an hour. Go early, especially if you're hoping to spot squirrels. September to February gives you the best sighting odds.",
     "The coastal path runs north–south along the whole Sefton Coast, so you can extend any walk into something bigger if you've got the legs for it. Formby Point is about 20 minutes from the NT car park and worth reaching if the tide is out.",
-    "Parking is at the NT car park (L37 1YH) — book through the National Trust app before you leave. The signal in the car park can be unreliable, so sort it at home.",
+    "Parking is at the NT car park (L37 1YH): book through the National Trust app before you leave. The signal in the car park can be unreliable, so sort it at home.",
   ],
   "beaches": [
-    "Formby Beach postcode is L37 1YH — that's the National Trust car park on Victoria Road, and it's the main access point for the beach, the sand dunes, and the red squirrel trail.",
-    "Parking costs vary by season — roughly £6–£9 via the National Trust app. Download the app before you leave; the signal at the car park is patchy. Dogs are allowed on most of the beach year-round, with some seasonal restrictions on certain sections in summer.",
+    "Formby Beach postcode is L37 1YH: that's the National Trust car park on Victoria Road, and it's the main access point for the beach, the sand dunes, and the red squirrel trail.",
+    "Parking costs vary by season: roughly £6–£9 via the National Trust app. Download the app before you leave; the signal at the car park is patchy. Dogs are allowed on most of the beach year-round, with some seasonal restrictions on certain sections in summer.",
     "The walk from the car park to the waterline is about 15–20 minutes across the dunes. Worth knowing: there are real rip currents near Formby Point. If the sea looks rough, stick to the flagged zones.",
   ],
 };
@@ -100,7 +100,7 @@ const CATEGORY_GUIDES: Record<string, { href: string; label: string }[]> = {
     { href: "/formby-pinewoods",       label: "Formby Pinewoods" },
   ],
   accommodation: [
-    { href: "/the-open-2026",                        label: "The Open 2026 — Stay in Formby" },
+    { href: "/the-open-2026",                        label: "The Open 2026: Stay in Formby" },
     { href: "/the-open-2026/accommodation",          label: "Open Week Accommodation Guide" },
     { href: "/collections/stay-near-royal-birkdale", label: "Places Near Royal Birkdale" },
   ],
@@ -137,7 +137,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!cat) return { title: "Category" };
   const theme = THEMES[category];
   const title = `${cat.name} in Formby`;
-  const description = `${theme?.tagline || cat.description} — browse all listings with Google ratings and contact details on FormbyGuide.co.uk`;
+  const description = `${theme?.tagline || cat.description}: browse all listings with Google ratings and contact details on FormbyGuide.co.uk`;
   const url = `${BASE_URL}/${category}`;
   return {
     title, description,

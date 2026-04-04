@@ -7,11 +7,11 @@ const BASE_URL = "https://www.formbyguide.co.uk";
 export const metadata: Metadata = {
   title: "About FormbyGuide | Your Independent Guide to Formby",
   description:
-    "FormbyGuide.co.uk is an independent local guide to Formby — red squirrels, the beach, pinewoods, village dining and everything visitors need. Published by Churchtown Media.",
+    "FormbyGuide.co.uk is an independent local guide to Formby: red squirrels, the beach, pinewoods, village dining and everything visitors need. Published by Churchtown Media.",
   alternates: { canonical: `${BASE_URL}/about` },
   openGraph: {
     title: "About FormbyGuide.co.uk",
-    description: "Independent guide to Formby — written by a local, published by Churchtown Media.",
+    description: "Independent guide to Formby: written by a local, published by Churchtown Media.",
     url: `${BASE_URL}/about`,
     type: "website",
     siteName: "FormbyGuide.co.uk",
@@ -26,7 +26,7 @@ const schemaData = [
     name: "FormbyGuide.co.uk",
     url: BASE_URL,
     description:
-      "Independent local guide to Formby — red squirrels, the beach, pinewoods, village dining and everything visitors need.",
+      "Independent local guide to Formby: red squirrels, the beach, pinewoods, village dining and everything visitors need.",
     publisher: {
       "@type": "Organization",
       "@id": "https://www.churchtownmedia.co.uk/#organization",
@@ -44,7 +44,7 @@ const schemaData = [
     name: "Clare",
     jobTitle: "Editor, FormbyGuide.co.uk",
     description:
-      "Editorial voice of FormbyGuide.co.uk — written from the perspective of a Formby local of 15+ years. Mum of four, she knows every trail, tide time and family-friendly spot on the Sefton Coast.",
+      "Editorial voice of FormbyGuide.co.uk: written from the perspective of a Formby local of 15+ years. Mum of four, she knows every trail, tide time and family-friendly spot on the Sefton Coast.",
     worksFor: {
       "@id": `${BASE_URL}/#website`,
     },
@@ -83,7 +83,7 @@ export default function AboutPage() {
               About FormbyGuide
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl">
-              An independent local guide to Formby — the red squirrels, the beach, the pinewoods,
+              An independent local guide to Formby: the red squirrels, the beach, the pinewoods,
               where to eat, and everything a visitor needs to know. Written by someone who lives here.
             </p>
           </div>
@@ -99,14 +99,14 @@ export default function AboutPage() {
                 <div className="flex-shrink-0 w-16 h-16 rounded-full overflow-hidden ring-2 ring-[#2E6B3E]/20">
                   <Image
                     src="/clare.png"
-                    alt="Clare — Editor, FormbyGuide.co.uk"
+                    alt="Clare: Editor, FormbyGuide.co.uk"
                     width={64}
                     height={64}
                     className="object-cover w-full h-full"
                   />
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1C3220] text-lg">Clare — Editor</p>
+                  <p className="font-semibold text-[#1C3220] text-lg">Clare: Editor</p>
                   <div className="flex flex-wrap gap-2 mt-1">
                     <span className="bg-[#2E6B3E]/10 text-[#2E6B3E] text-xs font-semibold px-2.5 py-0.5 rounded-full border border-[#2E6B3E]/20">Formby Local</span>
                     <span className="text-gray-400 text-xs flex items-center gap-1">📍 Formby, Merseyside</span>
@@ -116,21 +116,21 @@ export default function AboutPage() {
                 </div>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                FormbyGuide is written in the voice of Clare — a local Formby woman who has lived
+                FormbyGuide is written in the voice of Clare: a local Formby woman who has lived
                 here for over fifteen years. Mum of four, she knows every trail, tide time, and
                 family-friendly spot on the Sefton Coast, and isn&apos;t shy about telling you which
                 ones aren&apos;t worth the bother.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Clare is the target reader and the author. She writes like she&apos;s texting a
-                friend who&apos;s visiting for the first time — practical info first, honest about
+                friend who&apos;s visiting for the first time: practical info first, honest about
                 what&apos;s worth it, and never gushing. If something isn&apos;t up to scratch,
                 she&apos;ll say so.
               </p>
               <div className="bg-[#F0F5EF] rounded-xl px-5 py-4 border border-[#2E6B3E]/15">
                 <p className="text-sm text-gray-600">
                   <span className="font-semibold text-[#1C3220]">A note on transparency:</span>{" "}
-                  Clare is an editorial voice — a persona built from genuine local knowledge. The
+                  Clare is an editorial voice: a persona built from genuine local knowledge. The
                   real person behind FormbyGuide is Damian Roche of Churchtown Media. All content
                   reflects real first-hand knowledge of the area. No sponsored editorial, no fluff.
                 </p>
@@ -146,7 +146,7 @@ export default function AboutPage() {
                 <div className="flex-shrink-0">
                   <Image
                     src="https://www.churchtownmedia.co.uk/images/about/damian-headshot.jpg"
-                    alt="Damian Roche — Founder of Churchtown Media"
+                    alt="Damian Roche: Founder of Churchtown Media"
                     width={88}
                     height={88}
                     className="rounded-2xl"
@@ -163,10 +163,10 @@ export default function AboutPage() {
                     >
                       Churchtown Media Ltd
                     </a>{" "}
-                    — Company No. 16960442
+                   : Company No. 16960442
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-3">
-                    Damian is based in Churchtown, Southport — neighbouring Formby and right on the
+                    Damian is based in Churchtown, Southport: neighbouring Formby and right on the
                     Sefton Coast. He built FormbyGuide as part of the{" "}
                     <a
                       href="https://seftoncoast.network"
@@ -174,7 +174,7 @@ export default function AboutPage() {
                     >
                       Sefton Coast Network
                     </a>{" "}
-                    — a group of four independent editorial guides covering this stretch of coast.
+                   : a group of four independent editorial guides covering this stretch of coast.
                     FormbyGuide exists because no dedicated, editorially independent guide to Formby
                     existed anywhere online.
                   </p>
@@ -196,10 +196,10 @@ export default function AboutPage() {
             <h2 className="font-display text-2xl font-bold text-[#1C3220] mb-5">What we cover</h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                { label: "Red Squirrels", desc: "The best guide to visiting the NT red squirrel reserve — when to go, what to bring, what to expect." },
+                { label: "Red Squirrels", desc: "The best guide to visiting the NT red squirrel reserve: when to go, what to bring, what to expect." },
                 { label: "Formby Beach", desc: "Parking, postcode, dog rules, facilities, sand dunes and Formby Point. Everything you need before you set off." },
-                { label: "The Pinewoods", desc: "Walking trails through the National Trust pinewoods — wildlife, history, and how to get there." },
-                { label: "Restaurants & Cafés", desc: "Where to eat in Formby village — independent restaurants, cafés, and the NT café by the beach." },
+                { label: "The Pinewoods", desc: "Walking trails through the National Trust pinewoods: wildlife, history, and how to get there." },
+                { label: "Restaurants & Cafés", desc: "Where to eat in Formby village: independent restaurants, cafés, and the NT café by the beach." },
                 { label: "Things To Do", desc: "Activities, family days out, walking routes and everything else for a day in Formby." },
                 { label: "Local businesses", desc: "The full directory of Formby shops, services and businesses." },
               ].map(({ label, desc }) => (
@@ -216,7 +216,7 @@ export default function AboutPage() {
             <h2 className="font-display text-2xl font-bold text-[#1C3220] mb-5">How it&apos;s funded</h2>
             <div className="bg-white rounded-2xl border border-gray-100 p-8">
               <p className="text-gray-700 leading-relaxed mb-4">
-                FormbyGuide is free to use. It&apos;s funded by featured placement — businesses can
+                FormbyGuide is free to use. It&apos;s funded by featured placement: businesses can
                 pay for premium positioning in listings. This is disclosed clearly on the site.
               </p>
               <p className="text-gray-700 leading-relaxed">
@@ -232,7 +232,7 @@ export default function AboutPage() {
             <div className="bg-white rounded-2xl border border-gray-100 p-8">
               <p className="text-gray-700 leading-relaxed mb-6">
                 To list your business, ask about featured placement, or flag anything that looks
-                wrong — use the contact form below.
+                wrong: use the contact form below.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link

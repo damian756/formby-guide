@@ -55,7 +55,7 @@ export default function TermsPage() {
           <section>
             <h2 className="font-display text-xl font-bold text-[#1C3220] mb-4">2. About the Site</h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-3">
-              FormbyGuide.co.uk is a visitor guide and local business directory for Formby, Merseyside, operated by <strong>Churchtown Media</strong>. The Site provides information about local businesses, attractions, and the natural environment — including Formby Beach, the National Trust pinewoods, and red squirrel reserve.
+              FormbyGuide.co.uk is a visitor guide and local business directory for Formby, Merseyside, operated by <strong>Churchtown Media</strong>. The Site provides information about local businesses, attractions, and the natural environment: including Formby Beach, the National Trust pinewoods, and red squirrel reserve.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed">
               Contact: <a href="mailto:hello@churchtownmedia.co.uk" className="text-[#2E6B3E] hover:underline">hello@churchtownmedia.co.uk</a>

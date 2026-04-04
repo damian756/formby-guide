@@ -12,7 +12,7 @@ export default function PostContent() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            headline: "Easter at Formby Beach 2026 — What to Expect and How to Do It Right",
+            headline: "Easter at Formby Beach 2026: What to Expect and How to Do It Right",
             description: "Everything you need to know about visiting Formby Beach at Easter 2026. When to arrive, where to park, red squirrels, and where to eat after.",
             url: "https://www.formbyguide.co.uk/blog/easter-at-formby-beach-2026",
             author: { "@type": "Person", "@id": "https://www.formbyguide.co.uk/about#clare", name: "Clare", url: "https://www.formbyguide.co.uk/about" },
@@ -48,7 +48,7 @@ export default function PostContent() {
         <div className="relative z-10 container mx-auto px-4 max-w-5xl pb-10 pt-24">
           <span className="inline-block bg-[#2E6B3E] text-white text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">Seasonal</span>
           <h1 className="font-display text-3xl md:text-5xl font-bold leading-tight mb-4 max-w-3xl">
-            Easter at Formby Beach 2026 — What to Expect and How to Do It Right
+            Easter at Formby Beach 2026: What to Expect and How to Do It Right
           </h1>
           <div className="flex items-center gap-3 text-white/70 text-sm">
             <span>Clare</span>
@@ -87,7 +87,7 @@ export default function PostContent() {
           <p className="text-sm font-semibold text-[#1C3220] mb-1">Useful links for Easter at Formby</p>
           <ul className="text-sm text-[#2E6B3E] space-y-1">
             <li><Link href="/blog/red-squirrels-formby-spotting-guide" className="hover:underline">How to actually see red squirrels in Formby →</Link></li>
-            <li><Link href="/blog/formby-beach-weather-guide" className="hover:underline">Formby Beach weather guide — when to visit →</Link></li>
+            <li><Link href="/blog/formby-beach-weather-guide" className="hover:underline">Formby Beach weather guide: when to visit →</Link></li>
             <li><Link href="/blog/best-cafes-formby-village" className="hover:underline">Best cafes in Formby village →</Link></li>
           </ul>
         </div>

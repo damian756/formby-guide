@@ -38,7 +38,7 @@ export default function PostContent() {
       <section className="relative text-white overflow-hidden min-h-[480px] flex items-end">
         <Image
           src="/blog-formby-open-base.jpg"
-          alt="Formby village high street with spring blossom — a quieter base for The Open 2026"
+          alt="Formby village high street with spring blossom: a quieter base for The Open 2026"
           fill
           priority
           className="object-cover object-center"
@@ -79,7 +79,7 @@ export default function PostContent() {
           <h2>The Honest Caveats</h2>
           <p>You&apos;re not walking to the course from Formby. You&apos;re getting the train, and trains during Open week will be busy on championship days. Get to Formby station early on Saturday and Sunday. Standing room only is a real possibility on peak days.</p>
           <p>Formby village doesn&apos;t have the dining variety of Southport town centre. There are good restaurants but the choice is narrower. If you want to eat out every evening with a wide range of options, Southport has more. Formby has quality over quantity.</p>
-          <p>And if the accommodation you find is actually in Freshfield rather than Formby village, check which station is closer. Freshfield station is one stop north of Formby on the same line — also perfectly manageable, adds about three minutes to the journey.</p>
+          <p>And if the accommodation you find is actually in Freshfield rather than Formby village, check which station is closer. Freshfield station is one stop north of Formby on the same line: also perfectly manageable, adds about three minutes to the journey.</p>
 
           <h2>What to Book</h2>
           <p>Look for properties within a fifteen-minute walk of either Formby or Freshfield station. That keeps your travel to the course under thirty minutes total. Beyond that radius, you start needing to drive to the station, which introduces the parking problem you were trying to avoid.</p>
@@ -88,9 +88,9 @@ export default function PostContent() {
         <div className="mt-8 bg-[#F0F5EF] border border-[#2E6B3E]/20 rounded-2xl p-5">
           <p className="text-sm font-semibold text-[#1C3220] mb-1">More on The Open 2026</p>
           <ul className="text-sm text-[#2E6B3E] space-y-1">
-            <li><Link href="/the-open-2026" className="hover:underline">Formby Guide: The Open 2026 — staying in Formby for the golf →</Link></li>
-            <li><a href="https://www.seftonlinks.com/the-open-2026" target="_blank" rel="noopener" className="hover:underline">SeftonLinks — full course and spectator guide to Royal Birkdale →</a></li>
-            <li><a href="https://www.southportguide.co.uk/guides/the-open-2026" target="_blank" rel="noopener" className="hover:underline">SouthportGuide — Open 2026 transport and hotels →</a></li>
+            <li><Link href="/the-open-2026" className="hover:underline">Formby Guide: The Open 2026: staying in Formby for the golf →</Link></li>
+            <li><a href="https://www.seftonlinks.com/the-open-2026" target="_blank" rel="noopener" className="hover:underline">SeftonLinks: full course and spectator guide to Royal Birkdale →</a></li>
+            <li><a href="https://www.southportguide.co.uk/guides/the-open-2026" target="_blank" rel="noopener" className="hover:underline">SouthportGuide: Open 2026 transport and hotels →</a></li>
           </ul>
         </div>
 

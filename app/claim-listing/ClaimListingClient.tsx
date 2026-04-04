@@ -82,7 +82,7 @@ export default function ClaimListingClient() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#C9A96E]/10 rounded-full -translate-y-8 translate-x-8 blur-2xl" />
               <div className="relative">
                 <p className="text-[#C9A96E] text-xs font-bold uppercase tracking-widest mb-2">Featured listing</p>
-                <p className="font-display font-bold text-white mb-2">More visibility — coming soon</p>
+                <p className="font-display font-bold text-white mb-2">More visibility: coming soon</p>
                 <p className="text-white/60 text-sm mb-4">Appear at the top of your category with a prominent featured badge. Paid tiers launching soon.</p>
                 <Link href="/contact" className="block text-center border border-[#C9A96E]/40 text-[#C9A96E] px-4 py-2 rounded-full font-bold text-sm hover:bg-[#C9A96E]/10 transition">
                   Enquire about advertising →

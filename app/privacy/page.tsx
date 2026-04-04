@@ -6,11 +6,11 @@ const BASE_URL = "https://www.formbyguide.co.uk";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | FormbyGuide.co.uk",
-  description: "Privacy Policy for FormbyGuide.co.uk — how we collect, use and protect your personal data in accordance with UK GDPR.",
+  description: "Privacy Policy for FormbyGuide.co.uk: how we collect, use and protect your personal data in accordance with UK GDPR.",
   alternates: { canonical: `${BASE_URL}/privacy` },
   openGraph: {
     title: "Privacy Policy | FormbyGuide.co.uk",
-    description: "Privacy Policy for FormbyGuide.co.uk — how we collect, use and protect your personal data in accordance with UK GDPR.",
+    description: "Privacy Policy for FormbyGuide.co.uk: how we collect, use and protect your personal data in accordance with UK GDPR.",
     url: `${BASE_URL}/privacy`,
     type: "website",
     siteName: "FormbyGuide.co.uk",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Privacy Policy | FormbyGuide.co.uk",
-    description: "Privacy Policy for FormbyGuide.co.uk — how we collect, use and protect your personal data in accordance with UK GDPR.",
+    description: "Privacy Policy for FormbyGuide.co.uk: how we collect, use and protect your personal data in accordance with UK GDPR.",
   },
 };
 
@@ -160,8 +160,8 @@ export default function PrivacyPage() {
                 </thead>
                 <tbody className="divide-y divide-gray-50">
                   {[
-                    ["Essential", "Site functionality (session, security)", "No — always active"],
-                    ["Analytics (Plausible)", "Understanding how visitors use the site — cookieless, no consent needed", "No"],
+                    ["Essential", "Site functionality (session, security)", "No: always active"],
+                    ["Analytics (Plausible)", "Understanding how visitors use the site: cookieless, no consent needed", "No"],
                   ].map(([type, purpose, required]) => (
                     <tr key={type}>
                       <td className="px-4 py-3 font-semibold text-[#1C3220] align-top whitespace-nowrap">{type}</td>

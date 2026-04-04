@@ -9,25 +9,25 @@ import { getGuide } from "@/lib/guides-config";
 const BASE_URL = "https://www.formbyguide.co.uk";
 
 export const metadata: Metadata = {
-  title: "Formby Beach — Parking, Postcode, Dogs & Everything Else",
+  title: "Formby Beach: Parking, Postcode, Dogs & Everything Else",
   description:
-    "Everything you need to know about Formby Beach — postcode (L37 1YH), parking prices, dog rules, tide times, facilities and the best times to visit. Written by a local.",
+    "Everything you need to know about Formby Beach: postcode (L37 1YH), parking prices, dog rules, tide times, facilities and the best times to visit. Written by a local.",
   keywords:
     "Formby beach, formby beach postcode, parking at formby beach, formby beach car park, formby beach dogs, formby beach national trust, formby sand dunes, formby point",
   alternates: { canonical: `${BASE_URL}/formby-beach` },
   openGraph: {
-    title: "Formby Beach — Parking, Postcode, Dogs & Everything Else",
+    title: "Formby Beach: Parking, Postcode, Dogs & Everything Else",
     description:
       "Postcode, parking prices, dog rules, tide info and what to actually expect. Everything for planning your visit to Formby Beach.",
     url: `${BASE_URL}/formby-beach`,
     type: "website",
     siteName: "FormbyGuide.co.uk",
     locale: "en_GB",
-    images: [{ url: `${BASE_URL}/formby-beach-hero.jpg`, width: 1200, height: 630, alt: "Formby Beach — sand dunes and the Irish Sea" }],
+    images: [{ url: `${BASE_URL}/formby-beach-hero.jpg`, width: 1200, height: 630, alt: "Formby Beach: sand dunes and the Irish Sea" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Formby Beach — Parking, Postcode, Dogs & Everything Else",
+    title: "Formby Beach: Parking, Postcode, Dogs & Everything Else",
     description:
       "Postcode, parking prices, dog rules, tide info and what to actually expect. Everything for planning your visit to Formby Beach.",
   },
@@ -40,7 +40,7 @@ const beachJsonLd = {
       "@type": "TouristAttraction",
       "@id": `${BASE_URL}/formby-beach#attraction`,
       name: "Formby Beach",
-      description: "A National Trust managed beach on the Sefton Coast — sand dunes, Formby Point, and the Irish Sea. Postcode L37 1YH.",
+      description: "A National Trust managed beach on the Sefton Coast: sand dunes, Formby Point, and the Irish Sea. Postcode L37 1YH.",
       url: `${BASE_URL}/formby-beach`,
       geo: { "@type": "GeoCoordinates", latitude: 53.5553, longitude: -3.0886 },
       address: {
@@ -69,17 +69,17 @@ const beachJsonLd = {
         {
           "@type": "Question",
           name: "How much does parking cost at Formby Beach?",
-          acceptedAnswer: { "@type": "Answer", text: "National Trust car park. NT members park free; non-members pay approximately £6–£8 via the NT app. Download it before you arrive — signal in the car park is unreliable." },
+          acceptedAnswer: { "@type": "Answer", text: "National Trust car park. NT members park free; non-members pay approximately £6–£8 via the NT app. Download it before you arrive: signal in the car park is unreliable." },
         },
         {
           "@type": "Question",
           name: "Are dogs allowed at Formby Beach?",
-          acceptedAnswer: { "@type": "Answer", text: "Yes, dogs are welcome at Formby Beach year-round. Some sections near the tern nesting areas have seasonal restrictions from April to August — follow the signage on the day." },
+          acceptedAnswer: { "@type": "Answer", text: "Yes, dogs are welcome at Formby Beach year-round. Some sections near the tern nesting areas have seasonal restrictions from April to August: follow the signage on the day." },
         },
         {
           "@type": "Question",
           name: "What time does the Formby Beach car park open?",
-          acceptedAnswer: { "@type": "Answer", text: "The National Trust car park opens from around 8am. It fills up quickly on sunny weekends — aim to arrive before 10am in summer." },
+          acceptedAnswer: { "@type": "Answer", text: "The National Trust car park opens from around 8am. It fills up quickly on sunny weekends: aim to arrive before 10am in summer." },
         },
         {
           "@type": "Question",
@@ -101,7 +101,7 @@ export default function FormbyBeachPage() {
       <section className="relative text-white py-16 md:py-24 overflow-hidden min-h-[420px] flex items-center">
         <Image
           src="/formby-beach-hero.jpg"
-          alt="Formby Beach — sand dunes and the Irish Sea"
+          alt="Formby Beach: sand dunes and the Irish Sea"
           fill
           priority
           className="object-cover object-bottom"
@@ -119,7 +119,7 @@ export default function FormbyBeachPage() {
               Formby Beach
             </h1>
             <p className="text-xl text-white/90 leading-relaxed mb-8 drop-shadow">
-              Wide open sand, dramatic dunes, and the Irish Sea with no crowds. One of the best beaches in the North West — and you don&apos;t have to fight for space.
+              Wide open sand, dramatic dunes, and the Irish Sea with no crowds. One of the best beaches in the North West: and you don&apos;t have to fight for space.
             </p>
 
             {/* Quick facts grid */}

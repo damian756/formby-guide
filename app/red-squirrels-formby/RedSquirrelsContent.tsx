@@ -9,7 +9,7 @@ import "yet-another-react-lightbox/styles.css";
 const GALLERY = [
   { src: "/squirrels-canopy.webp",       alt: "Morning light filtering through the pine canopy in Formby pinewoods" },
   { src: "/blog-card-walks.webp",        alt: "The red squirrel trail through the Formby pinewoods" },
-  { src: "/squirrels-beach-pines.webp",  alt: "The pinewoods-to-beach walk at Formby — woodland giving way to sand dunes" },
+  { src: "/squirrels-beach-pines.webp",  alt: "The pinewoods-to-beach walk at Formby: woodland giving way to sand dunes" },
   { src: "/ttd-card-coastal-path.webp",  alt: "The Sefton Coastal Path heading north from Formby toward Ainsdale" },
 ];
 
@@ -27,7 +27,7 @@ const TRAILS = [
     name: "Beach & Pines (extended)",
     time: "1.5–2 hours",
     difficulty: "Easy–Moderate",
-    desc: "Follow squirrel trail through pines, continue west to beach, walk along sand, return through dunes. Brilliant combination — wildlife and sea in one go. Wellies or sturdy footwear recommended.",
+    desc: "Follow squirrel trail through pines, continue west to beach, walk along sand, return through dunes. Brilliant combination: wildlife and sea in one go. Wellies or sturdy footwear recommended.",
     image: "/squirrels-beach-pines.webp",
     imagePos: "object-center",
     galleryIdx: 2,
@@ -77,7 +77,7 @@ export default function RedSquirrelsContent() {
             {[
               { season: "Best",      months: "September – February", desc: "Peak season. Squirrels are most active foraging before winter. Fewer leaves = better sightings. Autumn light through the pines is stunning." },
               { season: "Good",      months: "March – May",          desc: "Young squirrels born in spring. You may spot juveniles. Activity is good but thicker foliage makes spotting harder." },
-              { season: "Possible",  months: "June – August",        desc: "Summer is quietest — squirrels are active but dense canopy and heat reduces visibility. Go early morning." },
+              { season: "Possible",  months: "June – August",        desc: "Summer is quietest: squirrels are active but dense canopy and heat reduces visibility. Go early morning." },
               { season: "Time of Day", months: "First 2 hours after sunrise", desc: "Consistently the best window. They come down from the canopy to forage before it gets busy. By midday they're much harder to spot." },
             ].map(({ season, months, desc }) => (
               <div key={months} className={`rounded-2xl border p-6 ${season === "Best" ? "bg-amber-50 border-amber-200" : "bg-white border-gray-100"}`}>
@@ -91,11 +91,11 @@ export default function RedSquirrelsContent() {
           </div>
         </section>
 
-        {/* Canopy photo break — now lightbox-clickable */}
+        {/* Canopy photo break: now lightbox-clickable */}
         <button
           onClick={() => open(0)}
           className="relative -mx-4 sm:-mx-6 lg:-mx-8 mb-16 h-64 md:h-80 overflow-hidden rounded-2xl w-[calc(100%+2rem)] sm:w-[calc(100%+3rem)] lg:w-[calc(100%+4rem)] block cursor-zoom-in group"
-          aria-label="View full image — morning light through the pinewoods"
+          aria-label="View full image: morning light through the pinewoods"
         >
           <Image
             src="/squirrels-canopy.webp"
@@ -158,7 +158,7 @@ export default function RedSquirrelsContent() {
           </div>
         </section>
 
-        {/* Trails — all thumbnails clickable */}
+        {/* Trails: all thumbnails clickable */}
         <section id="trails" className="mb-16 scroll-mt-20">
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">Squirrel Trails & Walks</h2>
           <div className="space-y-4">
@@ -197,13 +197,13 @@ export default function RedSquirrelsContent() {
           <div className="grid md:grid-cols-2 gap-6">
             {[
               { emoji: "👁️", title: "Move Slowly & Quietly",     desc: "They hear you before they see you. Walk slowly, stop often, look up into canopy. Less spooking = higher chance they carry on." },
-              { emoji: "🔭", title: "Bring Binoculars",           desc: "Not essential but brilliant. Often high in the pines — binoculars let you see properly instead of just a rusty blur." },
+              { emoji: "🔭", title: "Bring Binoculars",           desc: "Not essential but brilliant. Often high in the pines: binoculars let you see properly instead of just a rusty blur." },
               { emoji: "🧥", title: "Dress for Coastal Weather",  desc: "Coastal woodland gets cool and damp even on warm days. Layers and waterproofs make sense year-round." },
               { emoji: "👟", title: "Good Footwear",              desc: "Trainers fine on dry days. After rain paths are muddy. Wellies if you're planning to walk to the beach." },
               { emoji: "📱", title: "Download NT App First",      desc: "You need it for parking. Signal on site is poor. Sort it at home before you leave." },
               { emoji: "🐕", title: "Dogs Welcome (On Leads)",    desc: "Dogs are fine on trails but must be on leads in squirrel reserve. Signs mark where the lead zone starts." },
-              { emoji: "📸", title: "Photography Tips",           desc: "Morning light through pines is stunning. Phone cameras struggle with low canopy light — a decent zoom lens helps." },
-              { emoji: "🚫", title: "Don't Feed Them",            desc: "Tempting but harmful to squirrels and the reserve. Watch and enjoy — that's enough." },
+              { emoji: "📸", title: "Photography Tips",           desc: "Morning light through pines is stunning. Phone cameras struggle with low canopy light: a decent zoom lens helps." },
+              { emoji: "🚫", title: "Don't Feed Them",            desc: "Tempting but harmful to squirrels and the reserve. Watch and enjoy: that's enough." },
             ].map(({ emoji, title, desc }) => (
               <div key={title} className="bg-white rounded-2xl border border-gray-100 p-6">
                 <div className="text-3xl mb-2">{emoji}</div>
@@ -219,9 +219,9 @@ export default function RedSquirrelsContent() {
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">Common Questions</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {[
-              { q: "Are red squirrels guaranteed?",     a: "No wildlife sighting is ever guaranteed, but Formby is about as reliable as it gets in England. Go early on a dry morning in autumn or winter and chances are good. Some mornings you'll see several. On a wet summer afternoon, you might see none. Manage expectations but don't be put off — it's worth the visit regardless." },
-              { q: "Is it suitable for young children?", a: "Yes. The squirrel trail is flat and manageable for kids. Pushchairs are fine on main paths. Keep children calm and slow-moving near the squirrel zone — excited running sends them straight up into the canopy." },
-              { q: "Do I need to book?",                a: "You don't need to book to visit — but you should book your parking slot via the NT app or website before you leave, especially in summer and at weekends. The car park fills up and on-site signal is terrible." },
+              { q: "Are red squirrels guaranteed?",     a: "No wildlife sighting is ever guaranteed, but Formby is about as reliable as it gets in England. Go early on a dry morning in autumn or winter and chances are good. Some mornings you'll see several. On a wet summer afternoon, you might see none. Manage expectations but don't be put off: it's worth the visit regardless." },
+              { q: "Is it suitable for young children?", a: "Yes. The squirrel trail is flat and manageable for kids. Pushchairs are fine on main paths. Keep children calm and slow-moving near the squirrel zone: excited running sends them straight up into the canopy." },
+              { q: "Do I need to book?",                a: "You don't need to book to visit: but you should book your parking slot via the NT app or website before you leave, especially in summer and at weekends. The car park fills up and on-site signal is terrible." },
               { q: "What's happened to the red squirrel population?", a: "Grey squirrels, introduced from North America in the 1870s, gradually displaced reds across most of England. They compete for food and carry squirrelpox (fatal to reds but not greys). Formby survives because the habitat suits reds and the NT actively manages the reserve, including grey squirrel control." },
             ].map(({ q, a }) => (
               <div key={q} className="bg-white rounded-xl p-5 border border-gray-100">
@@ -242,7 +242,7 @@ export default function RedSquirrelsContent() {
             >
               Sefton Coast Wildlife red squirrel species profile
             </a>{" "}
-            covers habitat, diet, conservation status, and why the Formby population has survived where others haven&apos;t — including why grey squirrels struggle in pure pine.
+            covers habitat, diet, conservation status, and why the Formby population has survived where others haven&apos;t: including why grey squirrels struggle in pure pine.
           </p>
         </section>
 
@@ -250,7 +250,7 @@ export default function RedSquirrelsContent() {
         <section className="mt-16 pt-12 border-t border-[#1C3220]/10 mb-16">
           <h3 className="font-display text-2xl font-bold text-[#1C3220] mb-2">Where to Eat After Your Visit</h3>
           <p className="text-[#1C3220]/60 text-sm mb-6 leading-relaxed">
-            The NT café is at the car park — decent coffee and cake. For a proper meal, the village is 10 minutes by car.
+            The NT café is at the car park: decent coffee and cake. For a proper meal, the village is 10 minutes by car.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-5">
             {[

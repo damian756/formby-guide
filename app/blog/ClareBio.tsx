@@ -19,7 +19,7 @@ export default function ClareBio() {
           </div>
           <p className="text-sm text-gray-600 leading-relaxed mb-3">
             Clare has lived in Formby for over fifteen years. Mum of four, she knows every trail,
-            tide time, and family-friendly spot on the Sefton Coast — and isn&apos;t shy about telling you
+            tide time, and family-friendly spot on the Sefton Coast: and isn&apos;t shy about telling you
             which ones aren&apos;t worth the bother. She writes for FormbyGuide to share the kind of
             honest, practical tips you&apos;d only get from someone who actually lives here.
           </p>
@@ -33,7 +33,7 @@ export default function ClareBio() {
 
       <div className="border-t border-[#2E6B3E]/10 mt-5 pt-4 flex items-center justify-between flex-wrap gap-3">
         <p className="text-xs text-gray-400 italic">
-          All tips are based on Clare&apos;s personal experience — no sponsored content, no fluff.
+          All tips are based on Clare&apos;s personal experience: no sponsored content, no fluff.
         </p>
         <Link
           href="/blog"

@@ -66,7 +66,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const area = extractArea(b.address, b.postcode);
     const catLabel = SHORT_CAT[category] ?? category;
     const location = area === "Formby" ? "Formby" : `${area}, Formby`;
-    const title = `${b.name} — ${catLabel}, ${location}`;
+    const title = `${b.name}: ${catLabel}, ${location}`;
     const desc = b.description
       ? b.description.replace(/\n/g, " ").trim().slice(0, 155)
       : b.shortDescription
@@ -620,7 +620,7 @@ function OpeningHoursDisplay({ data }: { data: unknown }) {
         {reordered.map((line, i) => {
           const colonIdx = line.indexOf(": ");
           const day = colonIdx > 0 ? line.slice(0, colonIdx) : line;
-          const time = colonIdx > 0 ? line.slice(colonIdx + 2) : "—";
+          const time = colonIdx > 0 ? line.slice(colonIdx + 2) : "-";
           const isToday = i === todayIndex;
           return (
             <li key={day + i} className={cn("flex justify-between text-sm py-1 px-2 rounded", isToday ? "bg-[#E8EDE6] font-semibold text-[#1C3220]" : "text-gray-600")}>

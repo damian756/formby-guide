@@ -9,25 +9,25 @@ import { getGuide } from "@/lib/guides-config";
 const BASE_URL = "https://www.formbyguide.co.uk";
 
 export const metadata: Metadata = {
-  title: "Formby Pinewoods — Walks, Wildlife & What to Expect",
+  title: "Formby Pinewoods: Walks, Wildlife & What to Expect",
   description:
-    "Complete guide to Formby pinewoods — walks, trails, birdwatching, and everything you need to plan your visit. Ancient coastal woodland managed by the National Trust. Postcode L37 1YH.",
+    "Complete guide to Formby pinewoods: walks, trails, birdwatching, and everything you need to plan your visit. Ancient coastal woodland managed by the National Trust. Postcode L37 1YH.",
   keywords:
     "formby pinewoods, national trust formby, formby walks, coastal walks, pinewoods trails, birdwatching formby, woodland walks formby",
   alternates: { canonical: `${BASE_URL}/formby-pinewoods` },
   openGraph: {
-    title: "Formby Pinewoods — Walks, Wildlife & What to Expect",
+    title: "Formby Pinewoods: Walks, Wildlife & What to Expect",
     description:
       "Ancient coastal pine woodland managed by the National Trust. Brilliant walks, birdwatching, and light through the pines that's genuinely special. Walk from the car park to the sea.",
     url: `${BASE_URL}/formby-pinewoods`,
     type: "website",
     siteName: "FormbyGuide.co.uk",
     locale: "en_GB",
-    images: [{ url: `${BASE_URL}/pinewoods-hero.webp`, width: 1200, height: 630, alt: "Formby pinewoods — path through coastal pine woodland" }],
+    images: [{ url: `${BASE_URL}/pinewoods-hero.webp`, width: 1200, height: 630, alt: "Formby pinewoods: path through coastal pine woodland" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Formby Pinewoods — Walks, Wildlife & What to Expect",
+    title: "Formby Pinewoods: Walks, Wildlife & What to Expect",
     description:
       "Ancient coastal pine woodland managed by the National Trust. Brilliant walks, birdwatching, and light through the pines that's genuinely special.",
   },
@@ -40,7 +40,7 @@ const pinewoodsJsonLd = {
       "@type": "TouristAttraction",
       "@id": `${BASE_URL}/formby-pinewoods#attraction`,
       name: "Formby Pinewoods",
-      description: "Coastal pine woodland managed by the National Trust — walks, red squirrels, birdwatching, and direct access to Formby Beach.",
+      description: "Coastal pine woodland managed by the National Trust: walks, red squirrels, birdwatching, and direct access to Formby Beach.",
       url: `${BASE_URL}/formby-pinewoods`,
       geo: { "@type": "GeoCoordinates", latitude: 53.5553, longitude: -3.0886 },
       address: {
@@ -63,7 +63,7 @@ const pinewoodsJsonLd = {
         {
           "@type": "Question",
           name: "Are Formby pinewoods the same as the National Trust Formby estate?",
-          acceptedAnswer: { "@type": "Answer", text: "Yes — the pinewoods are managed by the National Trust as part of the wider Formby estate. The same car park (postcode L37 1YH) serves the beach, pinewoods, and red squirrel reserve." },
+          acceptedAnswer: { "@type": "Answer", text: "Yes: the pinewoods are managed by the National Trust as part of the wider Formby estate. The same car park (postcode L37 1YH) serves the beach, pinewoods, and red squirrel reserve." },
         },
         {
           "@type": "Question",
@@ -78,7 +78,7 @@ const pinewoodsJsonLd = {
         {
           "@type": "Question",
           name: "Is there parking at Formby pinewoods?",
-          acceptedAnswer: { "@type": "Answer", text: "Yes — the National Trust car park at L37 1YH serves the pinewoods, beach, and squirrel reserve. NT members park free; non-members pay approximately £6–£8 via the NT app." },
+          acceptedAnswer: { "@type": "Answer", text: "Yes: the National Trust car park at L37 1YH serves the pinewoods, beach, and squirrel reserve. NT members park free; non-members pay approximately £6–£8 via the NT app." },
         },
       ],
     },
@@ -95,7 +95,7 @@ export default function PinewoodsPage() {
       <section className="relative text-white py-16 md:py-24 overflow-hidden min-h-[420px] flex items-center">
         <Image
           src="/pinewoods-acorn.webp"
-          alt="Acorn on the Formby pinewoods floor — ancient coastal woodland"
+          alt="Acorn on the Formby pinewoods floor: ancient coastal woodland"
           fill
           priority
           className="object-cover object-center"
@@ -113,7 +113,7 @@ export default function PinewoodsPage() {
               Formby Pinewoods
             </h1>
             <p className="text-xl text-white/90 leading-relaxed mb-8 drop-shadow">
-              Ancient coastal woodland managed by the National Trust — brilliant walks, exceptional birdlife, and light through the pines that&apos;s genuinely special. Walk from the car park straight to the sea.
+              Ancient coastal woodland managed by the National Trust: brilliant walks, exceptional birdlife, and light through the pines that&apos;s genuinely special. Walk from the car park straight to the sea.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {[
@@ -142,7 +142,7 @@ export default function PinewoodsPage() {
           <div className="md:flex md:items-end md:gap-16">
             <div className="mb-8 md:mb-0 md:flex-1">
               <p className="font-display text-2xl md:text-3xl text-white font-semibold leading-snug">
-                Ancient coastal woodland — <span className="text-[#C9A96E]">mature pine, crossbills in the canopy</span>, walks through the pines, the sea at the end.
+                Ancient coastal woodland: <span className="text-[#C9A96E]">mature pine, crossbills in the canopy</span>, walks through the pines, the sea at the end.
               </p>
               <p className="text-white/55 text-sm leading-relaxed mt-4 max-w-xl">
                 Walk from the car park through ancient pines to Formby Beach in under 20 minutes. Or spend a morning on the squirrel trails. Flat throughout, manageable for all ages.

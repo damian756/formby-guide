@@ -11,14 +11,14 @@ const BASE_URL = "https://www.formbyguide.co.uk";
 export const metadata: Metadata = {
   title: "Red Squirrels in Formby | Where to See Them & What to Expect",
   description:
-    "Everything you need to know about seeing red squirrels in Formby — postcode (L37 1YH), best times, how to get there, what to bring and practical tips from a local.",
+    "Everything you need to know about seeing red squirrels in Formby: postcode (L37 1YH), best times, how to get there, what to bring and practical tips from a local.",
   keywords:
     "red squirrels formby, see red squirrels, formby red squirrels, national trust formby, formby nature reserve, formby wildlife",
   alternates: { canonical: `${BASE_URL}/red-squirrels-formby` },
   openGraph: {
-    title: "Red Squirrels in Formby — Where to See Them & What to Expect",
+    title: "Red Squirrels in Formby: Where to See Them & What to Expect",
     description:
-      "One of the best places in England to see them in the wild. Go early, wear layers, bring binoculars — here's everything you need to know.",
+      "One of the best places in England to see them in the wild. Go early, wear layers, bring binoculars: here's everything you need to know.",
     url: `${BASE_URL}/red-squirrels-formby`,
     type: "website",
     siteName: "FormbyGuide.co.uk",
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Red Squirrels in Formby — Where to See Them & What to Expect",
+    title: "Red Squirrels in Formby: Where to See Them & What to Expect",
     description:
-      "One of the best places in England to see them in the wild. Go early, wear layers, bring binoculars — here's everything you need to know.",
+      "One of the best places in England to see them in the wild. Go early, wear layers, bring binoculars: here's everything you need to know.",
   },
 };
 
@@ -40,7 +40,7 @@ const squirrelsJsonLd = {
       "@type": "TouristAttraction",
       "@id": `${BASE_URL}/red-squirrels-formby#attraction`,
       name: "Formby Red Squirrel Reserve",
-      description: "National Trust managed red squirrel reserve in the Formby pinewoods — one of the best places in England to see red squirrels in the wild.",
+      description: "National Trust managed red squirrel reserve in the Formby pinewoods: one of the best places in England to see red squirrels in the wild.",
       url: `${BASE_URL}/red-squirrels-formby`,
       geo: { "@type": "GeoCoordinates", latitude: 53.5553, longitude: -3.0886 },
       address: {
@@ -58,7 +58,7 @@ const squirrelsJsonLd = {
         {
           "@type": "Question",
           name: "When is the best time to see red squirrels at Formby?",
-          acceptedAnswer: { "@type": "Answer", text: "September to February is peak time, especially early morning. Go before 10am for the best chance — they're most active in the first couple of hours after dawn." },
+          acceptedAnswer: { "@type": "Answer", text: "September to February is peak time, especially early morning. Go before 10am for the best chance: they're most active in the first couple of hours after dawn." },
         },
         {
           "@type": "Question",
@@ -68,12 +68,12 @@ const squirrelsJsonLd = {
         {
           "@type": "Question",
           name: "Do I need to pay to see the red squirrels at Formby?",
-          acceptedAnswer: { "@type": "Answer", text: "The car park charges apply — free for NT members, around £6–£8 for non-members. The squirrel reserve itself is free to walk through once you're parked." },
+          acceptedAnswer: { "@type": "Answer", text: "The car park charges apply: free for NT members, around £6–£8 for non-members. The squirrel reserve itself is free to walk through once you're parked." },
         },
         {
           "@type": "Question",
           name: "Are binoculars useful at the Formby red squirrel reserve?",
-          acceptedAnswer: { "@type": "Answer", text: "Binoculars help but aren't essential — the squirrels often come quite close to the trail. A telephoto lens is useful if you want decent photographs." },
+          acceptedAnswer: { "@type": "Answer", text: "Binoculars help but aren't essential: the squirrels often come quite close to the trail. A telephoto lens is useful if you want decent photographs." },
         },
         {
           "@type": "Question",
@@ -114,7 +114,7 @@ export default function RedSquirrelsPage() {
               Red Squirrels in Formby
             </h1>
             <p className="text-lg text-white/80 leading-relaxed mb-8">
-              One of the best places in England to see them in the wild. Go early, wear layers, bring binoculars — and watch even teenagers get excited when they spot one.
+              One of the best places in England to see them in the wild. Go early, wear layers, bring binoculars: and watch even teenagers get excited when they spot one.
             </p>
             {/* Quick facts */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -147,7 +147,7 @@ export default function RedSquirrelsPage() {
                 One of the <span className="text-[#C9A96E]">last reliable places</span> in England to see red squirrels in the wild.
               </p>
               <p className="text-white/55 text-sm leading-relaxed mt-4 max-w-xl">
-                They&apos;re not tame and nobody feeds them on cue — but show up at the right time, move quietly, and you&apos;ve got a decent chance. On a good autumn morning we&apos;ve counted half a dozen from a single trail.
+                They&apos;re not tame and nobody feeds them on cue: but show up at the right time, move quietly, and you&apos;ve got a decent chance. On a good autumn morning we&apos;ve counted half a dozen from a single trail.
               </p>
             </div>
             <div className="flex flex-wrap gap-3 md:flex-none">

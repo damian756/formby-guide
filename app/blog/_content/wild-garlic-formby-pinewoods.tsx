@@ -12,7 +12,7 @@ export default function PostContent() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            headline: "Wild Garlic in Formby Pinewoods — Where to Find It and What to Do With It",
+            headline: "Wild Garlic in Formby Pinewoods: Where to Find It and What to Do With It",
             description: "April is wild garlic season in the Formby pinewoods. Where to walk to find it, when it peaks, and what to do with it if you pick some.",
             url: "https://www.formbyguide.co.uk/blog/wild-garlic-formby-pinewoods",
             author: { "@type": "Person", "@id": "https://www.formbyguide.co.uk/about#clare", name: "Clare", url: "https://www.formbyguide.co.uk/about" },
@@ -48,7 +48,7 @@ export default function PostContent() {
         <div className="relative z-10 container mx-auto px-4 max-w-5xl pb-10 pt-24">
           <span className="inline-block bg-[#2E6B3E] text-white text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">Wildlife</span>
           <h1 className="font-display text-3xl md:text-5xl font-bold leading-tight mb-4 max-w-3xl">
-            Wild Garlic in Formby Pinewoods — Where to Find It and What to Do With It
+            Wild Garlic in Formby Pinewoods: Where to Find It and What to Do With It
           </h1>
           <div className="flex items-center gap-3 text-white/70 text-sm">
             <span>Clare</span>
@@ -71,9 +71,9 @@ export default function PostContent() {
 
           <h2>When It Peaks</h2>
           <p>The flowering season in Formby runs roughly from late March to mid-May. Peak flowering is typically the first two weeks of April in a normal year. Right now, early April, is exactly the right time. The flowers will start to fade and the leaves will toughen up by the end of April, becoming less useful for eating.</p>
-          <p>The leaves appear before the flowers and can be picked from late February. The flowers themselves are edible too and arguably nicer — they have a slightly milder flavour than the leaves and look good scattered over food.</p>
+          <p>The leaves appear before the flowers and can be picked from late February. The flowers themselves are edible too and arguably nicer: they have a slightly milder flavour than the leaves and look good scattered over food.</p>
 
-          <h2>Picking — Is It Allowed?</h2>
+          <h2>Picking: Is It Allowed?</h2>
           <p>Small amounts for personal use are generally fine in National Trust areas under the traditional right to forage. The rules around foraging on NT land are that you should not uproot plants, should only take small quantities, and should not pick protected species. Wild garlic is not a protected species.</p>
           <p>Do not strip any single patch. Take a few handfuls of leaves from across a wide area. Leave plenty. The smell in the woods is partly what makes the April walk worth doing, and that requires the plants to be there for people after you.</p>
           <p>Also: make absolutely sure you have wild garlic and not lily of the valley or lords-and-ladies, both of which grow in similar conditions and are toxic. Wild garlic smells strongly of garlic when a leaf is crushed. If it doesn&apos;t smell of garlic, don&apos;t eat it.</p>
@@ -91,9 +91,9 @@ export default function PostContent() {
         <div className="mt-8 bg-[#F0F5EF] border border-[#2E6B3E]/20 rounded-2xl p-5">
           <p className="text-sm font-semibold text-[#1C3220] mb-1">More Formby pinewoods reading</p>
           <ul className="text-sm text-[#2E6B3E] space-y-1">
-            <li><Link href="/blog/formby-pinewoods-walking-guide" className="hover:underline">Walking in Formby Pinewoods — trail guide →</Link></li>
+            <li><Link href="/blog/formby-pinewoods-walking-guide" className="hover:underline">Walking in Formby Pinewoods: trail guide →</Link></li>
             <li><Link href="/blog/red-squirrels-formby-spotting-guide" className="hover:underline">How to actually see red squirrels at Formby →</Link></li>
-            <li><Link href="/blog/natterjack-toads-formby" className="hover:underline">Natterjack Toads at Formby — Britain&apos;s rarest amphibian →</Link></li>
+            <li><Link href="/blog/natterjack-toads-formby" className="hover:underline">Natterjack Toads at Formby: Britain&apos;s rarest amphibian →</Link></li>
           </ul>
         </div>
 

@@ -37,7 +37,7 @@ const RESTAURANTS = [
     summary: "Some Formby pubs are great for families at lunchtime. Others have a vibe that's clearly adult-focused. Check before you go.",
     pros: ["Often serve earlier lunches", "Garden spaces in summer", "Kids menus available at many"],
     cons: ["Evening atmosphere not always family-friendly", "Variable quality kitchen to kitchen"],
-    bestFor: "Weekend lunch only — avoid evening with kids",
+    bestFor: "Weekend lunch only: avoid evening with kids",
     link: "/pubs",
   },
 ];
@@ -51,8 +51,8 @@ export default function PostContent() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            headline: "Best Restaurants in Formby for Families — Honest Review",
-            description: "A local mum of four reviews where to eat in Formby with kids. Honest assessments of family-friendly restaurants, cafes and pubs — not a sponsored round-up.",
+            headline: "Best Restaurants in Formby for Families: Honest Review",
+            description: "A local mum of four reviews where to eat in Formby with kids. Honest assessments of family-friendly restaurants, cafes and pubs: not a sponsored round-up.",
             url: "https://www.formbyguide.co.uk/blog/where-to-eat-formby-with-kids",
             author: { "@type": "Person", "@id": "https://www.formbyguide.co.uk/about#clare", name: "Clare", url: "https://www.formbyguide.co.uk/about" },
             publisher: { "@type": "Organization", "@id": "https://www.churchtownmedia.co.uk/#organization", name: "Churchtown Media", url: "https://www.churchtownmedia.co.uk" },
@@ -95,7 +95,7 @@ export default function PostContent() {
                 <div className="w-8 h-8 rounded-full overflow-hidden ring-1 ring-white/20">
                   <Image src="/clare.png" alt="Clare" width={32} height={32} className="object-cover w-full h-full" />
                 </div>
-                <span>Clare — Formby local, mum of 4</span>
+                <span>Clare: Formby local, mum of 4</span>
               </div>
               <span className="text-white/30">·</span>
               <div className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" /><span>February 15, 2026</span></div>
@@ -196,7 +196,7 @@ export default function PostContent() {
 
             <div className="not-prose bg-[#1C3220] text-white rounded-2xl p-7 mb-10">
               <h3 className="font-display text-xl font-bold mb-4">The Money Reality</h3>
-              <p className="text-white/75 leading-relaxed mb-3">Four kids eating out is expensive. Two mains, four kids&apos; meals, four drinks — you&apos;re easily at £70–90 for a sit-down meal.</p>
+              <p className="text-white/75 leading-relaxed mb-3">Four kids eating out is expensive. Two mains, four kids&apos; meals, four drinks: you&apos;re easily at £70–90 for a sit-down meal.</p>
               <p className="text-white/75 leading-relaxed"><strong className="text-white">To save money:</strong> Go for lunch not dinner. <strong className="text-white">Worth the splurge:</strong> The Sparrowhawk.</p>
             </div>
 

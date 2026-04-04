@@ -4,23 +4,23 @@ import { TreePine, Waves, Utensils, Coffee, Beer, ShoppingBag, Bed, Bike, Chevro
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "FormbyGuide.co.uk — Your Local Guide to Formby",
+  title: "FormbyGuide.co.uk: Your Local Guide to Formby",
   description:
-    "Your definitive guide to Formby — beach, pinewoods, red squirrels, restaurants and things to do on the Sefton Coast. Written by locals, for visitors and residents.",
+    "Your definitive guide to Formby: beach, pinewoods, red squirrels, restaurants and things to do on the Sefton Coast. Written by locals, for visitors and residents.",
   keywords: "Formby, Formby Beach, Formby pinewoods, red squirrels Formby, things to do Formby, restaurants Formby, Sefton Coast",
   alternates: { canonical: "https://www.formbyguide.co.uk" },
   openGraph: {
-    title: "FormbyGuide.co.uk — Your Local Guide to Formby",
-    description: "Your definitive guide to Formby — beach, pinewoods, red squirrels and the best places to eat on the Sefton Coast.",
+    title: "FormbyGuide.co.uk: Your Local Guide to Formby",
+    description: "Your definitive guide to Formby: beach, pinewoods, red squirrels and the best places to eat on the Sefton Coast.",
     url: "https://www.formbyguide.co.uk",
     type: "website",
     siteName: "FormbyGuide.co.uk",
     locale: "en_GB",
-    images: [{ url: "https://www.formbyguide.co.uk/formby-beach-hero.jpg", width: 1200, height: 630, alt: "Formby Beach — sand dunes and the Irish Sea" }],
+    images: [{ url: "https://www.formbyguide.co.uk/formby-beach-hero.jpg", width: 1200, height: 630, alt: "Formby Beach: sand dunes and the Irish Sea" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "FormbyGuide.co.uk — Your Local Guide to Formby",
+    title: "FormbyGuide.co.uk: Your Local Guide to Formby",
     description: "Beach, pinewoods, red squirrels and the best places to eat in Formby.",
     images: ["https://www.formbyguide.co.uk/formby-beach-hero.jpg"],
   },
@@ -51,7 +51,7 @@ export default function HomePage() {
                 "@id": "https://www.formbyguide.co.uk/#website",
                 url: "https://www.formbyguide.co.uk",
                 name: "FormbyGuide.co.uk",
-                description: "Your local guide to Formby — beach, pinewoods, red squirrels, restaurants and things to do on the Sefton Coast.",
+                description: "Your local guide to Formby: beach, pinewoods, red squirrels, restaurants and things to do on the Sefton Coast.",
                 publisher: { "@id": "https://www.formbyguide.co.uk/#organization" },
                 inLanguage: "en-GB",
               },
@@ -81,7 +81,7 @@ export default function HomePage() {
       />
 
       {/* ══════════════════════════════════════════
-          HERO — SPLIT LAYOUT (image left, nav right)
+          HERO: SPLIT LAYOUT (image left, nav right)
       ══════════════════════════════════════════ */}
       <section className="bg-[#1C3220] overflow-hidden">
         <div className="h-1 bg-gradient-to-r from-transparent via-[#C9A96E] to-transparent" />
@@ -114,12 +114,12 @@ export default function HomePage() {
             </div>
 
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 leading-tight">
-              Your Local Guide<br />
-              <span className="text-[#C9A96E]">to Formby.</span>
+              Welcome to<br />
+              <span className="text-[#C9A96E]">Formby.</span>
             </h1>
 
             <p className="text-white/60 text-sm md:text-base mb-7 leading-relaxed max-w-sm">
-              Red squirrels, the National Trust beach, pinewoods walks, and the best places to eat in the village — from someone who actually lives here.
+              I'm Clare. I live here, and this is the honest guide to our beach, the pinewoods, spotting the red squirrels, and where to actually get a decent coffee afterwards.
             </p>
 
             {/* Red squirrel highlight card */}
@@ -186,10 +186,10 @@ export default function HomePage() {
       <section className="bg-[#2E6B3E] text-white">
         <div className="container mx-auto px-4 max-w-7xl py-3">
           <div className="flex flex-wrap gap-x-8 gap-y-1.5 text-sm text-white/80 justify-center md:justify-start">
-            <Link href="/formby-beach#parking" className="hover:text-white hover:underline transition">📍 L37 1YH — NT car park postcode</Link>
+            <Link href="/formby-beach#parking" className="hover:text-white hover:underline transition">📍 L37 1YH: NT car park postcode</Link>
             <Link href="/guides/parking-formby-beach" className="hover:text-white hover:underline transition">🅿️ Parking from £6 via NT app</Link>
             <span>🐕 Dogs welcome on the beach year-round</span>
-            <Link href="/red-squirrels-formby" className="hover:text-white hover:underline transition">🐿️ Red squirrels — best Sept to Feb</Link>
+            <Link href="/red-squirrels-formby" className="hover:text-white hover:underline transition">🐿️ Red squirrels: best Sept to Feb</Link>
             <span>🚆 30 mins from Liverpool Central (Merseyrail)</span>
           </div>
         </div>
@@ -201,7 +201,7 @@ export default function HomePage() {
       <section className="container mx-auto px-4 max-w-7xl py-14">
         <div className="mb-8">
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-1">Explore Formby</h2>
-          <p className="text-[#1C3220]/50 text-sm">Everything worth knowing, from someone who lives here.</p>
+          <p className="text-[#1C3220]/50 text-sm">Skip the tourist traps. Here is what you actually need to know.</p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           {CATEGORIES.map((cat) => (
@@ -232,7 +232,7 @@ export default function HomePage() {
                 See red squirrels in the wild
               </h2>
               <p className="text-[#1C3220]/70 leading-relaxed mb-3">
-                Formby is one of the last reliable places in England to see red squirrels. The National Trust pinewoods on Victoria Road are home to a thriving colony — go early morning, September through February is the best window, but you&apos;ve got a decent chance year-round.
+                Formby is one of the last reliable places in England to see red squirrels. The National Trust pinewoods on Victoria Road are home to a thriving colony: go early morning, September through February is the best window, but you&apos;ve got a decent chance year-round.
               </p>
               <p className="text-[#1C3220]/70 leading-relaxed mb-6">
                 Even my teenagers stop moaning the moment they spot one.
@@ -241,7 +241,7 @@ export default function HomePage() {
                 href="/red-squirrels-formby"
                 className="inline-flex items-center gap-2 bg-[#2E6B3E] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1C3220] transition-colors text-sm"
               >
-                Full guide — where, when & what to bring →
+                Full guide: where, when & what to bring →
               </Link>
             </div>
             <div className="bg-white rounded-2xl p-6 border border-[#1C3220]/10">
@@ -249,9 +249,9 @@ export default function HomePage() {
               <ul className="space-y-3 text-sm">
                 {[
                   { icon: "📍", label: "Postcode", val: "L37 1YH (NT Victoria Road car park)" },
-                  { icon: "🅿️", label: "Parking", val: "From £6 — book via NT app before you leave. No signal on site." },
+                  { icon: "🅿️", label: "Parking", val: "From £6: book via NT app before you leave. No signal on site." },
                   { icon: "⏰", label: "Best time", val: "Early morning, September to February" },
-                  { icon: "🐕", label: "Dogs", val: "Welcome — on leads in the squirrel reserve" },
+                  { icon: "🐕", label: "Dogs", val: "Welcome: on leads in the squirrel reserve" },
                   { icon: "🚆", label: "By train", val: "Formby station (Merseyrail) → 20 min walk" },
                 ].map((r) => (
                   <li key={r.label} className="flex gap-3">
@@ -272,7 +272,7 @@ export default function HomePage() {
         <div className="flex items-end justify-between mb-8">
           <div>
             <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-1">Where to eat in Formby</h2>
-            <p className="text-[#1C3220]/50 text-sm">Formby village eats well. Here are the ones worth booking.</p>
+            <p className="text-[#1C3220]/50 text-sm">We are spoilt for choice in the village. These are the places I actually book for myself (and the ones that are good with kids).</p>
           </div>
           <Link href="/restaurants" className="text-sm font-medium text-[#2E6B3E] hover:text-[#1C3220] transition-colors hidden sm:block">
             See all →
@@ -280,7 +280,7 @@ export default function HomePage() {
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
-            { name: "Emily's Restaurant",    desc: "Relaxed and popular. Gets busy — book ahead.", price: "££",  slug: "emilys-formby" },
+            { name: "Emily's Restaurant",    desc: "Relaxed and popular. Gets busy: book ahead.", price: "££",  slug: "emilys-formby" },
             { name: "Left Bank Brasserie",   desc: "A proper treat. Worth it. Book for weekends.",  price: "£££", slug: "left-bank-brasserie-formby" },
             { name: "The Sparrowhawk",       desc: "Solid village dining, loyal local crowd.",       price: "££",  slug: "the-sparrowhawk-formby" },
             { name: "Don Luigi",             desc: "Italian, well-reviewed, plenty of regulars.",    price: "££",  slug: "don-luigi-formby" },
@@ -316,14 +316,14 @@ export default function HomePage() {
               {
                 emoji: "🏖️",
                 title: "Formby Beach",
-                desc: "Wide, wild and brilliant. Sand dunes, sea, and dogs welcome year-round. The postcode is L37 1YH — book NT parking before you leave.",
+                desc: "Wide, wild and brilliant. Sand dunes, sea, and dogs welcome year-round. The postcode is L37 1YH: book NT parking before you leave.",
                 href: "/formby-beach",
                 cta: "Beach guide →",
               },
               {
                 emoji: "🌲",
                 title: "Formby Pinewoods",
-                desc: "Ancient pinewoods running down to the coast. Walk through them to the beach, or just do the squirrel trail loop — 30 minutes, flat all the way.",
+                desc: "Ancient pinewoods running down to the coast. Walk through them to the beach, or just do the squirrel trail loop: 30 minutes, flat all the way.",
                 href: "/formby-pinewoods",
                 cta: "Pinewoods guide →",
               },
@@ -344,7 +344,7 @@ export default function HomePage() {
       </section>
 
       {/* ══════════════════════════════════════════
-          BLOG — LATEST POSTS
+          BLOG: LATEST POSTS
       ══════════════════════════════════════════ */}
       <section className="container mx-auto px-4 max-w-7xl py-14">
         <div className="flex items-end justify-between mb-8">
@@ -362,21 +362,21 @@ export default function HomePage() {
               title: "Easter at Formby Beach 2026",
               excerpt: "How to do Easter weekend at Formby without spending half of it stuck in traffic on Victoria Road.",
               cat: "Seasonal",
-              gradient: "from-[#1C4A5A] to-[#2E6B3E]",
+              image: "/blog-easter-formby.jpg",
               slug: "easter-at-formby-beach-2026",
             },
             {
               title: "Why Formby Makes a Better Open 2026 Base",
-              excerpt: "Southport is sold out. Formby is 7 minutes by train from Birkdale station. Here&apos;s why it works.",
+              excerpt: "Southport is sold out. Formby is 7 minutes by train from Birkdale station. Here's why it works.",
               cat: "The Open 2026",
-              gradient: "from-[#1C3220] to-[#1C4A5A]",
+              image: "/blog-formby-open-base.jpg",
               slug: "formby-open-2026-base",
             },
             {
               title: "Wild Garlic in the Pinewoods. April.",
-              excerpt: "The pinewoods smell different in April. Here&apos;s where to find the wild garlic and what to do with it.",
+              excerpt: "The pinewoods smell different in April. Here's where to find the wild garlic and what to do with it.",
               cat: "Wildlife",
-              gradient: "from-[#1A5C3A] to-[#4A6B1C]",
+              image: "/blog-wild-garlic-pinewoods.jpg",
               slug: "wild-garlic-formby-pinewoods",
             },
           ].map((post) => (
@@ -385,7 +385,15 @@ export default function HomePage() {
               href={`/blog/${post.slug}`}
               className="group flex flex-col bg-white rounded-2xl overflow-hidden border border-[#1C3220]/8 card-hover hover:border-[#2E6B3E]/30 transition-all"
             >
-              <div className={`h-32 w-full bg-gradient-to-br ${post.gradient}`} />
+              <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#E8EDE6]">
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+              </div>
               <div className="p-5 flex flex-col flex-1">
                 <span className="text-[10px] font-bold uppercase tracking-wider text-[#2E6B3E] mb-2">{post.cat}</span>
                 <h3 className="font-display font-bold text-[#1C3220] text-sm leading-snug group-hover:text-[#2E6B3E] transition-colors mb-2 flex-1">
@@ -409,7 +417,7 @@ export default function HomePage() {
           <div className="flex items-end justify-between mb-6">
             <div>
               <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-1">Photos from Formby</h2>
-              <p className="text-[#1C3220]/50 text-sm">Real shots — no stock, no AI. All taken locally.</p>
+              <p className="text-[#1C3220]/50 text-sm">Real shots: no stock, no AI. All taken locally.</p>
             </div>
             <Link href="/gallery" className="text-sm font-medium text-[#2E6B3E] hover:text-[#1C3220] transition-colors hidden sm:block">
               Full gallery →
@@ -466,7 +474,7 @@ export default function HomePage() {
             href="/claim-listing"
             className="inline-block bg-[#2E6B3E] hover:bg-[#1C3220] text-white font-semibold px-8 py-3 rounded-lg transition-colors"
           >
-            List Your Business — Free
+            List Your Business for Free
           </Link>
         </div>
       </section>

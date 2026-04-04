@@ -10,27 +10,27 @@ const BASE_URL = "https://www.formbyguide.co.uk";
 export const metadata: Metadata = {
   title: "Formby Village | Chapel Lane, Shops & Restaurants Guide | FormbyGuide",
   description:
-    "Formby village guide — Chapel Lane, independent shops, the best restaurants, and the part of Formby most visitors never see. Ten minutes from the beach.",
+    "Formby village guide: Chapel Lane, independent shops, the best restaurants, and the part of Formby most visitors never see. Ten minutes from the beach.",
   keywords:
     "formby village, chapel lane formby, formby town centre, formby shops, formby restaurants, formby independent shops",
   alternates: { canonical: `${BASE_URL}/guides/formby-village` },
   openGraph: {
     title: "Formby Village | Chapel Lane, Shops & Restaurants",
     description:
-      "Formby village guide — Chapel Lane, independent shops, and the best restaurants. The bit most visitors miss.",
+      "Formby village guide: Chapel Lane, independent shops, and the best restaurants. The bit most visitors miss.",
     url: `${BASE_URL}/guides/formby-village`,
     type: "website",
     siteName: "FormbyGuide.co.uk",
     locale: "en_GB",
-    images: [{ url: `${BASE_URL}/about-village-street.webp`, width: 1200, height: 630, alt: "Formby village — Chapel Lane" }],
+    images: [{ url: `${BASE_URL}/about-village-street.webp`, width: 1200, height: 630, alt: "Formby village: Chapel Lane" }],
   },
 };
 
 const pageSchema = {
   "@context": "https://schema.org",
   "@type": "ShoppingDistrict",
-  name: "Formby Village — Chapel Lane",
-  description: "Formby village centre — independent shops and restaurants on Chapel Lane and the surrounding streets.",
+  name: "Formby Village: Chapel Lane",
+  description: "Formby village centre: independent shops and restaurants on Chapel Lane and the surrounding streets.",
   url: `${BASE_URL}/guides/formby-village`,
   address: {
     "@type": "PostalAddress",
@@ -51,7 +51,7 @@ const faqSchema = {
       name: "Where is Formby village?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Formby village is in the centre of Formby, about 10 minutes by car from the National Trust beach car park. The main shopping area is Chapel Lane — a mix of independent shops, restaurants, and cafés.",
+        text: "Formby village is in the centre of Formby, about 10 minutes by car from the National Trust beach car park. The main shopping area is Chapel Lane: a mix of independent shops, restaurants, and cafés.",
       },
     },
     {
@@ -59,7 +59,7 @@ const faqSchema = {
       name: "What's on Chapel Lane in Formby?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Chapel Lane has a mix of independent shops, estate agents, cafés, and some good restaurants. It's not a high street full of chains — mostly independents and a few small multiples. Worth a browse if you're looking for something different.",
+        text: "Chapel Lane has a mix of independent shops, estate agents, cafés, and some good restaurants. It's not a high street full of chains: mostly independents and a few small multiples. Worth a browse if you're looking for something different.",
       },
     },
     {
@@ -75,7 +75,7 @@ const faqSchema = {
       name: "How far is Formby village from the beach?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Formby village is about 1.5 miles from the National Trust beach car park (L37 1YH) — around 10 minutes by car. A 25-minute walk through residential streets, or take a taxi.",
+        text: "Formby village is about 1.5 miles from the National Trust beach car park (L37 1YH): around 10 minutes by car. A 25-minute walk through residential streets, or take a taxi.",
       },
     },
   ],
@@ -93,7 +93,7 @@ export default function FormbyVillagePage() {
         <section className="relative text-white py-20 md:py-28 overflow-hidden min-h-[480px] flex items-center bg-[#1C3220]">
           <Image
             src="/about-village-street.webp"
-            alt="Formby village — Chapel Lane and the village centre"
+            alt="Formby village: Chapel Lane and the village centre"
             fill
             priority
             className="object-cover object-center opacity-50"
@@ -140,10 +140,10 @@ export default function FormbyVillagePage() {
           <div className="h-0.5 bg-gradient-to-r from-transparent via-[#C9A96E] to-transparent" />
           <div className="container mx-auto px-4 max-w-6xl py-10">
             <p className="font-display text-2xl md:text-3xl text-white font-semibold leading-snug max-w-2xl">
-              Formby is an <span className="text-[#C9A96E]">affluent village</span> — not a seaside town. Most of the good stuff is inland.
+              Formby is an <span className="text-[#C9A96E]">affluent village</span>: not a seaside town. Most of the good stuff is inland.
             </p>
             <p className="text-white/55 text-sm leading-relaxed mt-4 max-w-xl">
-              The postcode L37 1YH gets you to the beach. The village centre is L37 4 — 10 minutes by car, a different world. Independent shops, good restaurants, people who actually live here rather than tourists.
+              The postcode L37 1YH gets you to the beach. The village centre is L37 4: 10 minutes by car, a different world. Independent shops, good restaurants, people who actually live here rather than tourists.
             </p>
           </div>
         </div>
@@ -156,13 +156,13 @@ export default function FormbyVillagePage() {
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div>
                 <p className="text-[#1C3220]/70 leading-relaxed mb-4">
-                  Chapel Lane is Formby&apos;s main shopping street — the one worth visiting rather than the Tesco end. It&apos;s a mix of independent shops, estate agents (plenty of them — Formby property is expensive), a few cafés, and restaurants at the better end of what you&apos;d find in Merseyside.
+                  Chapel Lane is Formby&apos;s main shopping street: the one worth visiting rather than the Tesco end. It&apos;s a mix of independent shops, estate agents (plenty of them: Formby property is expensive), a few cafés, and restaurants at the better end of what you&apos;d find in Merseyside.
                 </p>
                 <p className="text-[#1C3220]/70 leading-relaxed mb-4">
-                  It&apos;s not a long street. You can walk the length of it in five minutes. The independent shops are the reason to go — there are no national chains worth noting. Charity shops on and around Chapel Lane are worth a browse if you&apos;re patient (I&apos;ve found some good things in the British Heart Foundation).
+                  It&apos;s not a long street. You can walk the length of it in five minutes. The independent shops are the reason to go: there are no national chains worth noting. Charity shops on and around Chapel Lane are worth a browse if you&apos;re patient (I&apos;ve found some good things in the British Heart Foundation).
                 </p>
                 <p className="text-[#1C3220]/70 leading-relaxed">
-                  Parking on Chapel Lane and surrounding streets is reasonably easy on weekday mornings. Saturday mornings get busy — park in one of the side streets and walk.
+                  Parking on Chapel Lane and surrounding streets is reasonably easy on weekday mornings. Saturday mornings get busy: park in one of the side streets and walk.
                 </p>
               </div>
               <div className="relative h-56 overflow-hidden rounded-2xl">
@@ -185,12 +185,12 @@ export default function FormbyVillagePage() {
               {[
                 {
                   type: "Independent Shops",
-                  desc: "A handful of genuinely independent shops on and near Chapel Lane — gifts, clothing, interiors. Not extraordinary but better than most town centres. The kind of shopping trip where you buy something you weren&apos;t expecting to.",
+                  desc: "A handful of genuinely independent shops on and near Chapel Lane: gifts, clothing, interiors. Not extraordinary but better than most town centres. The kind of shopping trip where you buy something you weren&apos;t expecting to.",
                   icon: ShoppingBag,
                 },
                 {
                   type: "Charity Shops",
-                  desc: "Formby is an affluent area — the charity shops reflect that. British Heart Foundation on Chapel Lane is usually worth a browse. Don&apos;t expect Primark prices but the donations tend to be decent quality.",
+                  desc: "Formby is an affluent area: the charity shops reflect that. British Heart Foundation on Chapel Lane is usually worth a browse. Don&apos;t expect Primark prices but the donations tend to be decent quality.",
                   icon: ShoppingBag,
                 },
                 {
@@ -222,27 +222,27 @@ export default function FormbyVillagePage() {
                   name: "Left Bank Brasserie",
                   type: "Brasserie",
                   desc: "The standout Formby restaurant. Proper food, good wine list, the kind of place you&apos;d choose for a birthday dinner or a decent date. Not cheap but not pretending to be. Gorgeous room. Book well ahead at weekends.",
-                  note: "Book ahead — always",
+                  note: "Book ahead: always",
                   noteClass: "bg-red-50 border-red-100 text-red-700",
                 },
                 {
                   name: "Emily&apos;s",
                   type: "Restaurant",
-                  desc: "The most popular neighbourhood restaurant in Formby. Locals go back regularly — that&apos;s the best endorsement. Good food at reasonable prices, relaxed atmosphere. Popular with families and groups.",
+                  desc: "The most popular neighbourhood restaurant in Formby. Locals go back regularly: that&apos;s the best endorsement. Good food at reasonable prices, relaxed atmosphere. Popular with families and groups.",
                   note: "Book ahead at weekends",
                   noteClass: "bg-amber-50 border-amber-100 text-amber-700",
                 },
                 {
                   name: "The Sparrowhawk",
                   type: "Gastropub",
-                  desc: "Good pub food done well. The best option if you haven&apos;t booked — can usually find a table for food, especially early evening. Dog-friendly. Decent beer.",
+                  desc: "Good pub food done well. The best option if you haven&apos;t booked: can usually find a table for food, especially early evening. Dog-friendly. Decent beer.",
                   note: "Walk-ins possible",
                   noteClass: "bg-[#E8EDE6] border-[#1C3220]/10 text-[#2E6B3E]",
                 },
                 {
                   name: "Don Luigi",
                   type: "Italian",
-                  desc: "Solid Italian in the village. Good for groups and families. Reliable rather than exceptional — exactly what you want from a neighbourhood Italian. Better value than some of the alternatives.",
+                  desc: "Solid Italian in the village. Good for groups and families. Reliable rather than exceptional: exactly what you want from a neighbourhood Italian. Better value than some of the alternatives.",
                   note: "Good for groups",
                   noteClass: "bg-[#E8EDE6] border-[#1C3220]/10 text-[#2E6B3E]",
                 },
@@ -273,7 +273,7 @@ export default function FormbyVillagePage() {
 
           {/* How it compares to the beach */}
           <section className="mb-16 bg-[#E8EDE6] rounded-2xl p-6 md:p-8">
-            <h2 className="font-display text-2xl font-bold text-[#1C3220] mb-3">Village vs Beach — Two Different Days Out</h2>
+            <h2 className="font-display text-2xl font-bold text-[#1C3220] mb-3">Village vs Beach: Two Different Days Out</h2>
             <div className="grid md:grid-cols-2 gap-6 mt-6">
               <div>
                 <h3 className="font-semibold text-[#1C3220] mb-3">Beach Day</h3>
@@ -305,7 +305,7 @@ export default function FormbyVillagePage() {
               <div className="bg-white rounded-2xl border border-gray-100 p-5">
                 <h3 className="font-semibold text-[#1C3220] mb-3">By Train</h3>
                 <p className="text-sm text-[#1C3220]/70 leading-relaxed">
-                  Formby station is on the Merseyrail Northern Line from Liverpool Central — 25-minute journey. The station is a 5-minute walk from Chapel Lane. Trains run every 15–20 minutes.
+                  Formby station is on the Merseyrail Northern Line from Liverpool Central: 25-minute journey. The station is a 5-minute walk from Chapel Lane. Trains run every 15–20 minutes.
                 </p>
               </div>
             </div>
@@ -318,19 +318,19 @@ export default function FormbyVillagePage() {
               {[
                 {
                   q: "Is Formby village worth visiting if I'm just here for the beach?",
-                  a: "Yes, if you have a full day. After the beach — sandy, windswept, possibly wet — the village is a good option for lunch or dinner. Left Bank or Emily's are both worth the trip. Ten minutes by car from the NT car park.",
+                  a: "Yes, if you have a full day. After the beach: sandy, windswept, possibly wet: the village is a good option for lunch or dinner. Left Bank or Emily's are both worth the trip. Ten minutes by car from the NT car park.",
                 },
                 {
                   q: "Are there independent shops in Formby?",
-                  a: "Yes. Not an overwhelming number but enough to make a browse worthwhile. Formby is wealthy — the independents that survive here tend to be decent quality. Charity shops also reflect the local income level.",
+                  a: "Yes. Not an overwhelming number but enough to make a browse worthwhile. Formby is wealthy: the independents that survive here tend to be decent quality. Charity shops also reflect the local income level.",
                 },
                 {
                   q: "Do I need to book restaurants in Formby?",
-                  a: "At Left Bank and Emily's, yes — especially on Friday and Saturday evenings. Weekday lunches are usually fine without booking. The Sparrowhawk is the most walk-in friendly option.",
+                  a: "At Left Bank and Emily's, yes: especially on Friday and Saturday evenings. Weekday lunches are usually fine without booking. The Sparrowhawk is the most walk-in friendly option.",
                 },
                 {
                   q: "Is Formby village different from Formby beach?",
-                  a: "Very. The beach is the National Trust estate — pinewoods, dunes, the Irish Sea. The village is an inland suburb-style community with a proper town centre, good restaurants, and normal day-to-day shops. Two different reasons to visit.",
+                  a: "Very. The beach is the National Trust estate: pinewoods, dunes, the Irish Sea. The village is an inland suburb-style community with a proper town centre, good restaurants, and normal day-to-day shops. Two different reasons to visit.",
                 },
               ].map(({ q, a }) => (
                 <div key={q} className="bg-white rounded-xl p-5 border border-gray-100">

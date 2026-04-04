@@ -11,12 +11,12 @@ const BASE_URL = "https://www.formbyguide.co.uk";
 export const metadata: Metadata = {
   title: "Collections | Curated Lists for Formby | FormbyGuide",
   description:
-    "Curated collections of Formby businesses — dog-friendly restaurants, cafés near the beach, family-friendly activities, and more. Filtered, local, and honest.",
+    "Curated collections of Formby businesses: dog-friendly restaurants, cafés near the beach, family-friendly activities, and more. Filtered, local, and honest.",
   alternates: { canonical: `${BASE_URL}/collections` },
   openGraph: {
     title: "Collections | FormbyGuide.co.uk",
     description:
-      "Curated Formby business collections — dog-friendly, family-friendly, near the beach, free to do, and more.",
+      "Curated Formby business collections: dog-friendly, family-friendly, near the beach, free to do, and more.",
     url: `${BASE_URL}/collections`,
     type: "website",
     siteName: "FormbyGuide.co.uk",
@@ -28,7 +28,7 @@ const COLLECTION_LD = {
   "@type": "CollectionPage",
   name: "Formby Collections",
   description:
-    "Curated collections of Formby businesses — dog-friendly restaurants, cafés near the beach, family-friendly activities, and more.",
+    "Curated collections of Formby businesses: dog-friendly restaurants, cafés near the beach, family-friendly activities, and more.",
   url: `${BASE_URL}/collections`,
   publisher: {
     "@type": "Organization",
@@ -89,7 +89,7 @@ export default async function CollectionsIndexPage() {
               Formby Collections
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl">
-              Filtered lists of Formby businesses — dog-friendly, family-friendly, near the beach, 
+              Filtered lists of Formby businesses: dog-friendly, family-friendly, near the beach, 
               and more. No aggregator rankings. Just what&apos;s actually here, with a bit of honest context.
             </p>
           </div>

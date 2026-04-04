@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
       from: FROM_EMAIL,
       to: TO_EMAIL,
       replyTo: `${name} <${email}>`,
-      subject: `[FormbyGuide] ${subject}${businessName ? ` — ${businessName}` : ""}`,
+      subject: `[FormbyGuide] ${subject}${businessName ? `: ${businessName}` : ""}`,
       html: `
         <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; background: #F7F9F6; padding: 32px; border-radius: 8px;">
           <div style="border-bottom: 3px solid #C9A96E; padding-bottom: 16px; margin-bottom: 24px;">
@@ -44,7 +44,7 @@ export async function POST(req: NextRequest) {
           <table style="width: 100%; border-collapse: collapse; margin-bottom: 24px;">
             <tr>
               <td style="padding: 8px 0; color: #888; font-size: 13px; width: 110px; vertical-align: top;">Subject</td>
-              <td style="padding: 8px 0; color: #1C3220; font-weight: bold;">${subject}${businessName ? ` — ${businessName}` : ""}</td>
+              <td style="padding: 8px 0; color: #1C3220; font-weight: bold;">${subject}${businessName ? `: ${businessName}` : ""}</td>
             </tr>
             <tr>
               <td style="padding: 8px 0; color: #888; font-size: 13px; vertical-align: top;">From</td>
@@ -63,7 +63,7 @@ export async function POST(req: NextRequest) {
 
           <p style="color: #999; font-size: 12px; text-align: center;">
             Reply directly to this email to respond to ${name}.<br/>
-            FormbyGuide.co.uk — Built by <a href="https://churchtownmedia.co.uk" style="color: #2E6B3E;">Churchtown Media</a>
+            FormbyGuide.co.uk: Built by <a href="https://churchtownmedia.co.uk" style="color: #2E6B3E;">Churchtown Media</a>
           </p>
         </div>
       `,
@@ -78,7 +78,7 @@ export async function POST(req: NextRequest) {
     await resend.emails.send({
       from: FROM_EMAIL,
       to: email,
-      subject: "Thanks for getting in touch — FormbyGuide.co.uk",
+      subject: "Thanks for getting in touch: FormbyGuide.co.uk",
       html: `
         <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; background: #F7F9F6; padding: 32px; border-radius: 8px;">
           <div style="border-bottom: 3px solid #C9A96E; padding-bottom: 16px; margin-bottom: 24px;">

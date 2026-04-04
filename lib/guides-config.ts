@@ -68,7 +68,7 @@ export const GUIDES: Guide[] = [
     title: "Formby Beach",
     description: "National Trust beach with sand dunes. Postcode, parking, dogs, and what to expect.",
     excerpt:
-      "Formby Beach guide — postcode L37 1YH, NT app parking, dog rules, facilities, sand dunes, and honest advice on what to expect. Written by a Formby local.",
+      "Formby Beach guide: postcode L37 1YH, NT app parking, dog rules, facilities, sand dunes, and honest advice on what to expect. Written by a Formby local.",
     category: "nature-walks",
     heroImage: "/formby-beach-hero.jpg",
     url: "/formby-beach",
@@ -83,14 +83,14 @@ export const GUIDES: Guide[] = [
     },
     metaTitle: "Formby Beach | Postcode, Parking, Dogs & What to Expect | FormbyGuide",
     metaDescription:
-      "Formby Beach guide — postcode L37 1YH, NT app parking (download before you leave), dog rules, sand dunes, and honest advice from a local.",
+      "Formby Beach guide: postcode L37 1YH, NT app parking (download before you leave), dog rules, sand dunes, and honest advice from a local.",
   },
   {
     slug: "red-squirrels-formby",
     title: "Red Squirrels in Formby",
     description: "One of England's best places to see red squirrels. When to go, where to look, what to bring.",
     excerpt:
-      "The Formby red squirrel reserve — when to visit (September to February peak), which trails have the highest sighting rates, what to bring, and NT parking info.",
+      "The Formby red squirrel reserve: when to visit (September to February peak), which trails have the highest sighting rates, what to bring, and NT parking info.",
     category: "nature-walks",
     heroImage: "/squirrels-hero.webp",
     url: "/red-squirrels-formby",
@@ -105,14 +105,14 @@ export const GUIDES: Guide[] = [
     },
     metaTitle: "Red Squirrels in Formby | Where to See Them & What to Expect | FormbyGuide",
     metaDescription:
-      "Everything you need to see red squirrels in Formby — best months, which trails, what to bring, NT parking (L37 1YH). Written by a local who walks this route regularly.",
+      "Everything you need to see red squirrels in Formby: best months, which trails, what to bring, NT parking (L37 1YH). Written by a local who walks this route regularly.",
   },
   {
     slug: "formby-pinewoods",
     title: "Formby Pinewoods",
     description: "Ancient pine woodland running to the sea. Walks, wildlife, and light through the trees.",
     excerpt:
-      "Formby Pinewoods guide — trails, red squirrels, birdwatching, seasonal tips, and everything you need to plan your visit to one of the Sefton Coast's best walks.",
+      "Formby Pinewoods guide: trails, red squirrels, birdwatching, seasonal tips, and everything you need to plan your visit to one of the Sefton Coast's best walks.",
     category: "nature-walks",
     heroImage: "/pinewoods-hero.webp",
     url: "/formby-pinewoods",
@@ -127,7 +127,7 @@ export const GUIDES: Guide[] = [
     },
     metaTitle: "Formby Pinewoods | Walks, Wildlife & Complete Guide | FormbyGuide",
     metaDescription:
-      "Formby Pinewoods — trails, wildlife, red squirrels, birdwatching, and what to bring. The complete guide to one of the Sefton Coast's finest walks.",
+      "Formby Pinewoods: trails, wildlife, red squirrels, birdwatching, and what to bring. The complete guide to one of the Sefton Coast's finest walks.",
   },
 
   // ── Practical ────────────────────────────────────────────────────────────
@@ -136,7 +136,7 @@ export const GUIDES: Guide[] = [
     title: "Parking at Formby Beach",
     description: "NT car park, the app you need, postcode L37 1YH, prices, and when it fills.",
     excerpt:
-      "Parking at Formby Beach — postcode L37 1YH, National Trust app booking (download before you leave — signal in the car park is terrible), prices, and when to arrive.",
+      "Parking at Formby Beach: postcode L37 1YH, National Trust app booking (download before you leave: signal in the car park is terrible), prices, and when to arrive.",
     category: "practical",
     heroImage: "/beach-car-park-sign.webp",
     seoPriority: 0.88,
@@ -146,14 +146,14 @@ export const GUIDES: Guide[] = [
     status: "published",
     metaTitle: "Parking at Formby Beach | NT Car Park, Postcode & Tips | FormbyGuide",
     metaDescription:
-      "Parking at Formby Beach — postcode L37 1YH, National Trust app booking, prices, peak times, and alternative parking nearby. Everything you need before you leave home.",
+      "Parking at Formby Beach: postcode L37 1YH, National Trust app booking, prices, peak times, and alternative parking nearby. Everything you need before you leave home.",
   },
   {
     slug: "dog-friendly-formby",
     title: "Dog-Friendly Formby",
     description: "Beach access rules, best off-lead walks, and the pubs and cafés that actually mean it.",
     excerpt:
-      "Formby is genuinely good for dogs — the NT beach (with seasonal rules), the pinewoods, and a cluster of dog-welcoming pubs and cafés in the village.",
+      "Formby is genuinely good for dogs: the NT beach (with seasonal rules), the pinewoods, and a cluster of dog-welcoming pubs and cafés in the village.",
     category: "practical",
     heroImage: "/dog-on-formby-beach.jpg",
     seoPriority: 0.85,
@@ -174,7 +174,7 @@ export const GUIDES: Guide[] = [
   {
     slug: "formby-village",
     title: "Formby Village",
-    description: "Chapel Lane, independent shops, proper restaurants — the bit most visitors miss.",
+    description: "Chapel Lane, independent shops, proper restaurants: the bit most visitors miss.",
     excerpt:
       "Formby village is 10 minutes from the beach and most visitors never go. Chapel Lane has independent shops, proper restaurants, and Emily's. The complete guide.",
     category: "areas",
@@ -190,16 +190,16 @@ export const GUIDES: Guide[] = [
     },
     metaTitle: "Formby Village | Chapel Lane, Shops & Restaurants Guide | FormbyGuide",
     metaDescription:
-      "Formby village guide — Chapel Lane, independent shops, the best restaurants in Formby, and the part of town most visitors never see.",
+      "Formby village guide: Chapel Lane, independent shops, the best restaurants in Formby, and the part of town most visitors never see.",
   },
 
   // ── Food & Drink ─────────────────────────────────────────────────────────
   {
     slug: "best-restaurants-formby",
     title: "Best Restaurants in Formby",
-    description: "Clare's honest guide — Emily's, Left Bank Brasserie, The Sparrowhawk, and more.",
+    description: "Clare's honest guide: Emily's, Left Bank Brasserie, The Sparrowhawk, and more.",
     excerpt:
-      "The best restaurants in Formby right now — Clare's honest ranking. Emily's, Left Bank Brasserie, The Sparrowhawk, Don Luigi, and a few more worth knowing about.",
+      "The best restaurants in Formby right now: Clare's honest ranking. Emily's, Left Bank Brasserie, The Sparrowhawk, Don Luigi, and a few more worth knowing about.",
     category: "food-drink",
     heroImage: "/blog-card-food.webp",
     seoPriority: 0.88,
@@ -212,16 +212,16 @@ export const GUIDES: Guide[] = [
     },
     metaTitle: "Best Restaurants in Formby 2026 | Honest Local Guide | FormbyGuide",
     metaDescription:
-      "The best restaurants in Formby — Clare's honest guide. Emily's, Left Bank Brasserie, The Sparrowhawk, Don Luigi. No sponsored results.",
+      "The best restaurants in Formby: Clare's honest guide. Emily's, Left Bank Brasserie, The Sparrowhawk, Don Luigi. No sponsored results.",
   },
 
   // ── Events ───────────────────────────────────────────────────────────────
   {
     slug: "the-open-2026",
-    title: "The Open Championship 2026 — Stay in Formby",
+    title: "The Open Championship 2026: Stay in Formby",
     description: "Royal Birkdale is 2 miles from Formby. Where to stay, how to get there, where to eat.",
     excerpt:
-      "The Open Championship 2026 is at Royal Birkdale — two miles from Formby. Where to stay in Formby, how to get to the course, and where to eat during Open week.",
+      "The Open Championship 2026 is at Royal Birkdale: two miles from Formby. Where to stay in Formby, how to get to the course, and where to eat during Open week.",
     category: "events",
     heroImage: "/about-formby-railway.webp",
     url: "/the-open-2026",
@@ -236,7 +236,7 @@ export const GUIDES: Guide[] = [
     },
     metaTitle: "Stay in Formby for The Open 2026 | Royal Birkdale Guide | FormbyGuide",
     metaDescription:
-      "The Open Championship 2026 is at Royal Birkdale — 2 miles from Formby. Where to stay, how to get to the course, where to eat during Open week.",
+      "The Open Championship 2026 is at Royal Birkdale: 2 miles from Formby. Where to stay, how to get to the course, where to eat during Open week.",
   },
 ];
 

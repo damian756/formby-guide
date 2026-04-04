@@ -12,8 +12,8 @@ export default function PostContent() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            headline: "How to See Red Squirrels in Formby — Local Spotting Guide",
-            description: "Yes, red squirrels really live in Formby. But they won't show up on demand. A local's guide to when, where and how to actually spot them — including the timing mistakes most visitors make.",
+            headline: "How to See Red Squirrels in Formby: Local Spotting Guide",
+            description: "Yes, red squirrels really live in Formby. But they won't show up on demand. A local's guide to when, where and how to actually spot them: including the timing mistakes most visitors make.",
             url: "https://www.formbyguide.co.uk/blog/red-squirrels-formby-spotting-guide",
             author: {
               "@type": "Person",
@@ -60,14 +60,14 @@ export default function PostContent() {
               <span className="text-[#C9A96E]">Red Squirrels in Formby</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
-              Yes, they genuinely live here. Yes, they&apos;re extraordinary. But turn up at 2pm on a busy Saturday and you&apos;ll see nothing. Here&apos;s what visitors don&apos;t know — and what locals do.
+              Yes, they genuinely live here. Yes, they&apos;re extraordinary. But turn up at 2pm on a busy Saturday and you&apos;ll see nothing. Here&apos;s what visitors don&apos;t know: and what locals do.
             </p>
             <div className="flex items-center gap-3 text-sm text-white/60 flex-wrap">
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 rounded-full overflow-hidden ring-1 ring-white/20">
                   <Image src="/clare.png" alt="Clare" width={32} height={32} className="object-cover w-full h-full" />
                 </div>
-                <span>Clare — Formby local</span>
+                <span>Clare: Formby local</span>
               </div>
               <span className="text-white/30">·</span>
               <div className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" /><span>February 12, 2026</span></div>
@@ -103,7 +103,7 @@ export default function PostContent() {
           <article className="lg:col-span-2">
             <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 prose-p:leading-relaxed prose-strong:text-[#1C3220] max-w-none mb-10">
               <p className="lead text-xl text-gray-600 leading-relaxed">
-                Formby is genuinely one of the last strongholds of the red squirrel in England. These aren&apos;t zoo animals. They&apos;re truly wild — and that&apos;s exactly what makes seeing one so remarkable.
+                Formby is genuinely one of the last strongholds of the red squirrel in England. These aren&apos;t zoo animals. They&apos;re truly wild: and that&apos;s exactly what makes seeing one so remarkable.
               </p>
               <p>
                 Most visitors arrive expecting to spot them easily. They don&apos;t. They leave disappointed. Here&apos;s the full picture on how to give yourself the best possible chance.
@@ -117,7 +117,7 @@ export default function PostContent() {
                 <div>
                   <p className="font-bold text-red-900 mb-1">The mistake 80% of visitors make</p>
                   <p className="text-red-800 text-sm leading-relaxed">
-                    Arriving between 11am and 3pm. Red squirrels are most active at dawn and early morning. By mid-morning they&apos;ve retreated into the canopy. Midday visits are almost guaranteed disappointment. Adjust your timing first — it matters more than anything else.
+                    Arriving between 11am and 3pm. Red squirrels are most active at dawn and early morning. By mid-morning they&apos;ve retreated into the canopy. Midday visits are almost guaranteed disappointment. Adjust your timing first: it matters more than anything else.
                   </p>
                 </div>
               </div>
@@ -126,20 +126,20 @@ export default function PostContent() {
             <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 max-w-none mb-10">
               <h2>Timing: The Single Biggest Factor</h2>
               <p>
-                <strong>Before 9am is ideal.</strong> Red squirrels are most active at dawn and in the first couple of hours of daylight — feeding, moving, visible at eye level. By mid-morning the activity drops off sharply as they retreat into the canopy.
+                <strong>Before 9am is ideal.</strong> Red squirrels are most active at dawn and in the first couple of hours of daylight: feeding, moving, visible at eye level. By mid-morning the activity drops off sharply as they retreat into the canopy.
               </p>
               <p>
                 Between 9am and noon you might still get lucky, especially on cooler days when they stay active longer. After 12pm? Honestly, don&apos;t bother. The woodland gets busier with people and dogs, the squirrels disappear upward, and you&apos;ll spend an hour seeing nothing and feeling disappointed.
               </p>
               <p>
-                If you can only visit at midday, set your expectations accordingly — and come back early another time.
+                If you can only visit at midday, set your expectations accordingly: and come back early another time.
               </p>
               <h2>Season Matters Too</h2>
               <p>
-                <strong>Spring (March–May)</strong> and <strong>autumn (September–November)</strong> are your best bets. Spring is brilliant because the squirrels are very active — feeding, building nests, raising young — and the leaf canopy hasn&apos;t fully come in yet so they&apos;re much easier to spot. Autumn is when they&apos;re foraging for winter and you often catch them at ground level, which makes for great photographs.
+                <strong>Spring (March–May)</strong> and <strong>autumn (September–November)</strong> are your best bets. Spring is brilliant because the squirrels are very active: feeding, building nests, raising young: and the leaf canopy hasn&apos;t fully come in yet so they&apos;re much easier to spot. Autumn is when they&apos;re foraging for winter and you often catch them at ground level, which makes for great photographs.
               </p>
               <p>
-                Summer is hit and miss. They&apos;re still there, but the dense canopy hides them and the woodland is busier. Winter visits are more productive than people expect — less leaf cover means you can actually see into the trees, and cold mornings can be surprisingly active.
+                Summer is hit and miss. They&apos;re still there, but the dense canopy hides them and the woodland is busier. Winter visits are more productive than people expect: less leaf cover means you can actually see into the trees, and cold mornings can be surprisingly active.
               </p>
             </div>
 
@@ -155,10 +155,10 @@ export default function PostContent() {
                   {[
                     "Walk slowly and stop frequently",
                     "Talk in a whisper or stay silent",
-                    "Sit on a bench and wait — let them come to you",
+                    "Sit on a bench and wait: let them come to you",
                     "Look up into the canopy as you walk",
                     "Visit the areas near feeders if available",
-                    "Bring binoculars — worth every penny",
+                    "Bring binoculars: worth every penny",
                   ].map(tip => (
                     <li key={tip} className="flex items-start gap-2 text-sm text-[#1C3220]">
                       <CheckCircle className="w-3.5 h-3.5 text-[#2E6B3E] shrink-0 mt-0.5" />{tip}
@@ -174,7 +174,7 @@ export default function PostContent() {
                     "Play music or loud podcasts",
                     "Rustle bags or snack packets near trees",
                     "Feed them with your own food",
-                    "Approach if you do spot one — stay still",
+                    "Approach if you do spot one: stay still",
                     "Visit only once and expect a sighting",
                   ].map(tip => (
                     <li key={tip} className="flex items-start gap-2 text-sm text-gray-700">
@@ -192,10 +192,10 @@ export default function PostContent() {
                 <div>
                   <h3 className="font-display text-xl font-bold mb-3">Why Formby&apos;s Red Squirrels Matter</h3>
                   <p className="text-white/75 leading-relaxed mb-3">
-                    Grey squirrels — introduced from North America in the 1870s — carry squirrelpox, a disease harmless to greys but fatal to reds. Reds have lost 98% of their UK population.
+                    Grey squirrels: introduced from North America in the 1870s: carry squirrelpox, a disease harmless to greys but fatal to reds. Reds have lost 98% of their UK population.
                   </p>
                   <p className="text-white/75 leading-relaxed">
-                    Formby&apos;s pinewoods form a natural coastal barrier that has helped protect this colony. The National Trust&apos;s active management — grey squirrel control, habitat protection, supplementary feeding — keeps this population alive. When you see one, you&apos;re seeing something genuinely precious.
+                    Formby&apos;s pinewoods form a natural coastal barrier that has helped protect this colony. The National Trust&apos;s active management: grey squirrel control, habitat protection, supplementary feeding: keeps this population alive. When you see one, you&apos;re seeing something genuinely precious.
                   </p>
                 </div>
               </div>
@@ -203,7 +203,7 @@ export default function PostContent() {
 
             <div className="not-prose bg-[#E8EDE6] rounded-2xl p-8">
               <p className="font-display font-bold text-[#1C3220] text-lg mb-2">Full Red Squirrel Guide</p>
-              <p className="text-[#1C3220]/70 text-sm mb-5">Everything about visiting the Formby Red Squirrel Reserve — parking, trails, facilities and conservation.</p>
+              <p className="text-[#1C3220]/70 text-sm mb-5">Everything about visiting the Formby Red Squirrel Reserve: parking, trails, facilities and conservation.</p>
               <Link href="/red-squirrels-formby" className="inline-flex items-center gap-2 bg-[#2E6B3E] hover:bg-[#1C3220] text-white px-5 py-3 rounded-full font-semibold text-sm transition">
                 Red Squirrel Reserve Guide <ArrowRight className="w-3.5 h-3.5" />
               </Link>
@@ -221,7 +221,7 @@ export default function PostContent() {
                   { item: "Stay quiet and slow", critical: true },
                   { item: "Bring binoculars", critical: false },
                   { item: "Check feeders first", critical: false },
-                  { item: "Sit and wait — don't rush", critical: true },
+                  { item: "Sit and wait: don't rush", critical: true },
                   { item: "Don't feed them", critical: false },
                 ].map(({ item, critical }) => (
                   <div key={item} className="flex items-center gap-3">

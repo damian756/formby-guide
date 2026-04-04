@@ -11,7 +11,7 @@ const BASE_URL = "https://www.formbyguide.co.uk";
 export const metadata: Metadata = {
   title: "Accommodation in Formby for The Open 2026 | FormbyGuide",
   description:
-    "Where to stay in Formby for The Open 2026 at Royal Birkdale. B&Bs, holiday lets and places to stay two miles from the course — with a direct train to Birkdale station.",
+    "Where to stay in Formby for The Open 2026 at Royal Birkdale. B&Bs, holiday lets and places to stay two miles from the course: with a direct train to Birkdale station.",
   alternates: { canonical: `${BASE_URL}/the-open-2026/accommodation` },
   openGraph: {
     title: "Accommodation in Formby for The Open 2026",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "FormbyGuide.co.uk",
     locale: "en_GB",
-    images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "Accommodation in Formby for The Open 2026 — FormbyGuide.co.uk" }],
+    images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "Accommodation in Formby for The Open 2026: FormbyGuide.co.uk" }],
   },
 };
 
@@ -108,7 +108,7 @@ export default async function OpenAccommodationPage() {
           </h1>
           <p className="text-white/70 text-lg max-w-2xl leading-relaxed mb-6">
             Formby is two miles from Royal Birkdale and one train stop away. If Birkdale and Southport 
-            are full — and they will be — Formby is the practical alternative. Book early.
+            are full: and they will be: Formby is the practical alternative. Book early.
           </p>
 
           <div className="flex flex-wrap gap-3 text-sm">
@@ -135,10 +135,10 @@ export default async function OpenAccommodationPage() {
       {/* ── Alert ────────────────────────────────────────────────────── */}
       <div className="container mx-auto px-4 max-w-6xl py-8">
         <div className="bg-amber-50 border border-amber-200 rounded-2xl p-5 mb-10">
-          <p className="text-amber-900 font-semibold text-sm mb-1">Book now — seriously.</p>
+          <p className="text-amber-900 font-semibold text-sm mb-1">Book now: seriously.</p>
           <p className="text-amber-800 text-sm leading-relaxed">
             The Open at Royal Birkdale in 2014 sold out accommodation across a 15-mile radius. 
-            Formby, Birkdale, Southport, Ainsdale, Crosby — all of it went. The closer to July 2026, 
+            Formby, Birkdale, Southport, Ainsdale, Crosby: all of it went. The closer to July 2026, 
             the more expensive and scarce options become.
           </p>
         </div>
@@ -255,7 +255,7 @@ export default async function OpenAccommodationPage() {
         <div className="mt-14 bg-[#1C3220] rounded-2xl p-6 md:p-8 text-white">
           <h2 className="font-display text-xl font-bold mb-3">Getting to the Course from Formby</h2>
           <p className="text-white/70 text-sm leading-relaxed mb-4 max-w-xl">
-            Merseyrail Northern Line — Formby to Birkdale station. One stop, under 5 minutes. Walk 
+            Merseyrail Northern Line: Formby to Birkdale station. One stop, under 5 minutes. Walk 
             10 minutes from Birkdale station to Royal Birkdale. No parking stress, no traffic.
           </p>
           <Link

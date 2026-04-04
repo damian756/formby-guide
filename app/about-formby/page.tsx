@@ -6,14 +6,14 @@ import { ChevronRight } from "lucide-react";
 const BASE_URL = "https://www.formbyguide.co.uk";
 
 export const metadata: Metadata = {
-  title: "About Formby — Where Is It, What's There & Why Visit",
+  title: "About Formby: Where Is It, What's There & Why Visit",
   description:
     "Where is Formby? It's a village on the Sefton Coast in Merseyside, about 12 miles south of Southport and 12 miles north of Liverpool. Here's everything worth knowing about the place.",
   keywords:
     "where is Formby, Formby village, Formby town, Formby Merseyside, Formby Liverpool, Formby Sefton, about Formby, Formby UK",
   alternates: { canonical: `${BASE_URL}/about-formby` },
   openGraph: {
-    title: "About Formby — Where Is It, What's There & Why Visit",
+    title: "About Formby: Where Is It, What's There & Why Visit",
     description:
       "Where is Formby, what's it like, and why do people visit? A practical, honest guide to the village from someone who lives there.",
     url: `${BASE_URL}/about-formby`,
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Formby — Where Is It, What's There & Why Visit",
+    title: "About Formby: Where Is It, What's There & Why Visit",
     description:
       "Where is Formby, what's it like, and why do people visit? A practical, honest guide to the village from someone who lives there.",
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 export default function AboutFormbyPage() {
   return (
     <>
-      {/* Hero — image with overlay */}
+      {/* Hero: image with overlay */}
       <section className="relative h-72 md:h-96 overflow-hidden">
         <Image
           src="/about-formby-hero.webp"
@@ -54,7 +54,7 @@ export default function AboutFormbyPage() {
             About Formby
           </h1>
           <p className="text-lg text-white/80 max-w-2xl leading-relaxed">
-            A village on the Sefton Coast in Merseyside — 12 miles south of Southport, 12 miles north of Liverpool, and home to one of England&apos;s most important <Link href="/red-squirrels-formby" className="text-[#C9A96E] hover:underline">red squirrel colonies</Link>.
+            A village on the Sefton Coast in Merseyside: 12 miles south of Southport, 12 miles north of Liverpool, and home to one of England&apos;s most important <Link href="/red-squirrels-formby" className="text-[#C9A96E] hover:underline">red squirrel colonies</Link>.
           </p>
         </div>
       </section>
@@ -66,7 +66,7 @@ export default function AboutFormbyPage() {
           <div className="md:flex md:items-end md:gap-16">
             <div className="mb-8 md:mb-0 md:flex-1">
               <p className="font-display text-2xl md:text-3xl text-white font-semibold leading-snug">
-                A <span className="text-[#C9A96E]">quiet, affluent village</span> on the Sefton Coast — 20 minutes from Liverpool, with one of England&apos;s last red squirrel colonies on its doorstep.
+                A <span className="text-[#C9A96E]">quiet, affluent village</span> on the Sefton Coast: 20 minutes from Liverpool, with one of England&apos;s last red squirrel colonies on its doorstep.
               </p>
               <p className="text-white/55 text-sm leading-relaxed mt-4 max-w-xl">
                 Not a tourist town. No pier, no amusements. What there is: good restaurants, ancient pinewoods, a National Trust beach, and the kind of place you&apos;ll want to come back to.
@@ -127,13 +127,13 @@ export default function AboutFormbyPage() {
         <section className="mb-12">
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-4">What Formby is like</h2>
           <p className="text-[#1C3220]/70 leading-relaxed mb-4">
-            Formby is affluent, quiet, and genuinely nice to spend time in. It&apos;s not a tourist town — there&apos;s no seafront promenade, no amusements, no pier. What there is: a pleasant village centre with independent shops and <Link href="/restaurants" className="text-[#2E6B3E] hover:underline font-medium">good restaurants</Link>, a Merseyrail station, and — a 15-minute drive west — the <Link href="/formby-pinewoods" className="text-[#2E6B3E] hover:underline font-medium">National Trust pinewoods</Link>, <Link href="/red-squirrels-formby" className="text-[#2E6B3E] hover:underline font-medium">red squirrel reserve</Link>, and <Link href="/formby-beach" className="text-[#2E6B3E] hover:underline font-medium">beach</Link>.
+            Formby is affluent, quiet, and genuinely nice to spend time in. It&apos;s not a tourist town: there&apos;s no seafront promenade, no amusements, no pier. What there is: a pleasant village centre with independent shops and <Link href="/restaurants" className="text-[#2E6B3E] hover:underline font-medium">good restaurants</Link>, a Merseyrail station, and: a 15-minute drive west: the <Link href="/formby-pinewoods" className="text-[#2E6B3E] hover:underline font-medium">National Trust pinewoods</Link>, <Link href="/red-squirrels-formby" className="text-[#2E6B3E] hover:underline font-medium">red squirrel reserve</Link>, and <Link href="/formby-beach" className="text-[#2E6B3E] hover:underline font-medium">beach</Link>.
           </p>
           <p className="text-[#1C3220]/70 leading-relaxed mb-4">
-            The demographic is mostly families and professionals who want to be within reach of Liverpool but with more space. There&apos;s a strong community feel — lots of local sports clubs, independent businesses, and the kind of charity shops where you occasionally find something genuinely good.
+            The demographic is mostly families and professionals who want to be within reach of Liverpool but with more space. There&apos;s a strong community feel: lots of local sports clubs, independent businesses, and the kind of charity shops where you occasionally find something genuinely good.
           </p>
           <p className="text-[#1C3220]/70 leading-relaxed mb-8">
-            As a visitor, you&apos;re mostly here for the <Link href="/formby-beach" className="text-[#2E6B3E] hover:underline font-medium">National Trust beach and pinewoods</Link>. But the village itself is worth an hour of your time — a walk along Chapel Lane, lunch at one of the <Link href="/restaurants" className="text-[#2E6B3E] hover:underline font-medium">restaurants</Link>, a browse of the <Link href="/shopping" className="text-[#2E6B3E] hover:underline font-medium">shops</Link> — before or after the beach.
+            As a visitor, you&apos;re mostly here for the <Link href="/formby-beach" className="text-[#2E6B3E] hover:underline font-medium">National Trust beach and pinewoods</Link>. But the village itself is worth an hour of your time: a walk along Chapel Lane, lunch at one of the <Link href="/restaurants" className="text-[#2E6B3E] hover:underline font-medium">restaurants</Link>, a browse of the <Link href="/shopping" className="text-[#2E6B3E] hover:underline font-medium">shops</Link>: before or after the beach.
           </p>
 
           {/* Village street photo break */}
@@ -146,7 +146,7 @@ export default function AboutFormbyPage() {
               sizes="100vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-            <p className="absolute bottom-3 left-4 text-white text-sm font-medium drop-shadow">Chapel Lane — worth an hour of anyone&apos;s time</p>
+            <p className="absolute bottom-3 left-4 text-white text-sm font-medium drop-shadow">Chapel Lane: worth an hour of anyone&apos;s time</p>
           </div>
         </section>
 
@@ -164,7 +164,7 @@ export default function AboutFormbyPage() {
                   { label: "Known for",    value: <><Link href="/red-squirrels-formby" className="text-[#2E6B3E] hover:underline">Red squirrels</Link>, <Link href="/formby-beach" className="text-[#2E6B3E] hover:underline">National Trust beach</Link>, <Link href="/formby-pinewoods" className="text-[#2E6B3E] hover:underline">pinewoods</Link>, affluent village</> },
                   { label: "Nearest city", value: "Liverpool (12 miles south-east)" },
                   { label: "Nearest town", value: "Southport (12 miles north)" },
-                  { label: "Station",      value: "Formby — Merseyrail Northern Line (Liverpool to Southport)" },
+                  { label: "Station",      value: "Formby: Merseyrail Northern Line (Liverpool to Southport)" },
                 ].map((r, i) => (
                   <tr key={i} className={i % 2 === 0 ? "bg-[#E8EDE6]/50" : "bg-white"}>
                     <td className="p-3 font-semibold text-[#1C3220] w-40">{r.label}</td>
@@ -176,17 +176,17 @@ export default function AboutFormbyPage() {
           </div>
         </section>
 
-        {/* History — split layout with Victorian railway */}
+        {/* History: split layout with Victorian railway */}
         <section className="mb-12">
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-6">A bit of history</h2>
 
           <div className="space-y-4 text-[#1C3220]/70 leading-relaxed mb-8">
             <p>
-              Formby has been settled since at least Viking times — the name itself is Old Norse, thought to derive from &ldquo;Fornr&apos;s farmstead.&rdquo; The area was recorded in the Domesday Book of 1086, and the village grew gradually over the following centuries as a coastal agricultural community.
+              Formby has been settled since at least Viking times: the name itself is Old Norse, thought to derive from &ldquo;Fornr&apos;s farmstead.&rdquo; The area was recorded in the Domesday Book of 1086, and the village grew gradually over the following centuries as a coastal agricultural community.
             </p>
           </div>
 
-          {/* Victorian railway — split card */}
+          {/* Victorian railway: split card */}
           <div className="rounded-2xl border border-gray-100 overflow-hidden mb-8">
             <div className="grid md:grid-cols-2">
               <div className="relative h-64 md:h-auto min-h-[240px]">
@@ -199,9 +199,9 @@ export default function AboutFormbyPage() {
                 />
               </div>
               <div className="bg-white p-8 flex flex-col justify-center">
-                <p className="text-xs font-semibold text-[#2E6B3E] uppercase tracking-wider mb-3">The Railway — 1848</p>
+                <p className="text-xs font-semibold text-[#2E6B3E] uppercase tracking-wider mb-3">The Railway: 1848</p>
                 <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-3">
-                  The 19th century brought the railway — Formby station opened in 1848 — and with it, wealthier Liverpool residents looking for a commutable home away from the city. The character of the place as a prosperous, leafy commuter village was established in this period and has remained broadly similar since.
+                  The 19th century brought the railway: Formby station opened in 1848: and with it, wealthier Liverpool residents looking for a commutable home away from the city. The character of the place as a prosperous, leafy commuter village was established in this period and has remained broadly similar since.
                 </p>
                 <p className="text-sm text-[#1C3220]/70 leading-relaxed">
                   The pinewoods were planted in the late 19th century to stabilise coastal dunes, and the red squirrels have lived in them for as long as anyone can document. The National Trust acquired the site in the 1960s.
@@ -210,7 +210,7 @@ export default function AboutFormbyPage() {
             </div>
           </div>
 
-          {/* Asparagus fields — full-width photo break */}
+          {/* Asparagus fields: full-width photo break */}
           <div className="relative -mx-4 sm:-mx-8 h-60 md:h-72 overflow-hidden rounded-2xl mb-8">
             <Image
               src="/about-formby-asparagus.webp"
@@ -227,7 +227,7 @@ export default function AboutFormbyPage() {
           </div>
 
           <p className="text-[#1C3220]/70 leading-relaxed">
-            The asparagus fields that made Formby famous — &ldquo;Formby asparagus&rdquo; was a known local product sold at Liverpool markets — are largely gone now, replaced by housing. A few small-scale growers still produce local asparagus in season.
+            The asparagus fields that made Formby famous: &ldquo;Formby asparagus&rdquo; was a known local product sold at Liverpool markets: are largely gone now, replaced by housing. A few small-scale growers still produce local asparagus in season.
           </p>
         </section>
 
@@ -235,7 +235,7 @@ export default function AboutFormbyPage() {
         <section className="mb-12">
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-4">Is Formby in Liverpool?</h2>
           <p className="text-[#1C3220]/70 leading-relaxed mb-4">
-            Technically no — and this question comes up a lot. Formby is in the Metropolitan Borough of Sefton, not in the City of Liverpool. It has a Merseyside postcode (L37) and a Liverpool phone dialling code (0170x), but it&apos;s administered by Sefton Council, not Liverpool City Council.
+            Technically no: and this question comes up a lot. Formby is in the Metropolitan Borough of Sefton, not in the City of Liverpool. It has a Merseyside postcode (L37) and a Liverpool phone dialling code (0170x), but it&apos;s administered by Sefton Council, not Liverpool City Council.
           </p>
           <p className="text-[#1C3220]/70 leading-relaxed">
             In practice, most people treat it as part of the wider Liverpool commuter belt. It&apos;s on the Liverpool to Southport train line, draws heavily on the Liverpool day-tripper market, and is culturally more connected to Liverpool than to anywhere else. But if someone from Formby hears you call it &ldquo;part of Liverpool&rdquo; they&apos;ll probably correct you.

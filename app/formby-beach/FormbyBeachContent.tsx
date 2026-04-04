@@ -8,20 +8,20 @@ import "yet-another-react-lightbox/styles.css";
 import { MapPin, Car, Dog, Coffee, ChevronRight, Info, Shield, Utensils, ArrowRight } from "lucide-react";
 
 const GALLERY = [
-  { src: "/formby-beach-shell.jpg",                        alt: "Formby Beach — shell and sand dunes with the Irish Sea behind" },
+  { src: "/formby-beach-shell.jpg",                        alt: "Formby Beach: shell and sand dunes with the Irish Sea behind" },
   { src: "/formby-beach-shell-close.jpg",                  alt: "Shell on Formby Beach sand" },
   { src: "/formby-beach-sea.jpg",                          alt: "Families walking along Formby Beach at the water's edge with waves and sand dunes" },
   { src: "/beach-birds.webp",                              alt: "Crows on Formby Beach sand" },
   { src: "/formby-beach-paws.jpg",                         alt: "Dog paws on Formby Beach sand" },
   { src: "/beach-dunes-new.webp",                          alt: "Formby sand dunes looking toward the Irish Sea" },
   { src: "/beach-dunes-skull.webp",                        alt: "Animal skull on Formby Beach dunes" },
-  // Beachcombing finds — indices 7–11
-  { src: "/mermaids-purse-held-hand-ainsdale.webp",        alt: "A mermaid's purse — small-spotted catshark egg case — held in a hand on the Sefton Coast beach" },
-  { src: "/compass-jellyfish-closeup-ainsdale.webp",       alt: "Compass jellyfish on the beach — brown V-shaped markings visible on the Sefton Coast" },
+  // Beachcombing finds: indices 7–11
+  { src: "/mermaids-purse-held-hand-ainsdale.webp",        alt: "A mermaid's purse: small-spotted catshark egg case: held in a hand on the Sefton Coast beach" },
+  { src: "/compass-jellyfish-closeup-ainsdale.webp",       alt: "Compass jellyfish on the beach: brown V-shaped markings visible on the Sefton Coast" },
   { src: "/whelk-egg-mass-ainsdale-beach.webp",            alt: "Whelk egg mass (sea wash ball) found on the Sefton Coast beach with seaweed" },
   { src: "/england-coast-path-sign-ainsdale.webp",         alt: "England Coast Path directional sign on the Sefton Coast near Formby" },
   { src: "/flask-driftwood-shells-ainsdale.webp",          alt: "Flask and cup on driftwood on Formby Beach with shells, Irish Sea in the background" },
-  { src: "/beach-dunes-spring-bud.webp",                   alt: "Spring vegetation budding on Formby sand dunes — new growth on the coastal dune system" },
+  { src: "/beach-dunes-spring-bud.webp",                   alt: "Spring vegetation budding on Formby sand dunes: new growth on the coastal dune system" },
 ];
 
 export default function FormbyBeachContent() {
@@ -59,10 +59,10 @@ export default function FormbyBeachContent() {
           <div className="md:flex md:items-end md:gap-16">
             <div className="mb-8 md:mb-0 md:flex-1">
               <p className="font-display text-2xl md:text-3xl text-white font-semibold leading-snug">
-                A <span className="text-[#C9A96E]">proper beach</span> — wide open sand, dramatic dunes, pinewoods behind you and the Irish Sea in front.
+                A <span className="text-[#C9A96E]">proper beach</span>: wide open sand, dramatic dunes, pinewoods behind you and the Irish Sea in front.
               </p>
               <p className="text-white/55 text-sm leading-relaxed mt-4 max-w-xl">
-                Busy on a sunny Saturday in summer. Almost empty on a Tuesday in October. Both are valid. No promenade, no amusements — just beach.
+                Busy on a sunny Saturday in summer. Almost empty on a Tuesday in October. Both are valid. No promenade, no amusements: just beach.
               </p>
             </div>
             <div className="flex flex-wrap gap-3 md:flex-none">
@@ -87,13 +87,13 @@ export default function FormbyBeachContent() {
         {/* Editorial intro */}
         <div className="max-w-3xl mb-14">
           <p className="text-lg text-[#1C3220]/80 leading-relaxed mb-4">
-            Formby Beach is a National Trust managed beach on the Sefton Coast — west-facing, backed by significant sand dunes and Scots pine woodland, and genuinely one of the best beaches in the North West. No promenade. No amusements. Wide open sand, the Irish Sea in front of you, and pinewoods behind.
+            Formby Beach is a National Trust managed beach on the Sefton Coast: west-facing, backed by significant sand dunes and Scots pine woodland, and genuinely one of the best beaches in the North West. No promenade. No amusements. Wide open sand, the Irish Sea in front of you, and pinewoods behind.
           </p>
           <p className="text-base text-[#1C3220]/70 leading-relaxed mb-4">
-            The postcode is <strong>L37 1YH</strong>. That's where you park — the National Trust car park on Victoria Road. From there it's a 15-minute walk through the pinewoods to the beach itself. On a sunny summer Saturday it fills fast; arrive by 9:30am or use the train. On a Tuesday in November you'll have the place to yourself, which is a very specific kind of brilliant.
+            The postcode is <strong>L37 1YH</strong>. That's where you park: the National Trust car park on Victoria Road. From there it's a 15-minute walk through the pinewoods to the beach itself. On a sunny summer Saturday it fills fast; arrive by 9:30am or use the train. On a Tuesday in November you'll have the place to yourself, which is a very specific kind of brilliant.
           </p>
           <p className="text-base text-[#1C3220]/70 leading-relaxed">
-            Dogs are welcome year-round with no seasonal restrictions on the beach itself — one reason Formby is popular with dog walkers from across Merseyside. The walk from the train station at Formby takes about 20 minutes on a well-marked path. Worth doing if you want to skip the parking entirely.
+            Dogs are welcome year-round with no seasonal restrictions on the beach itself: one reason Formby is popular with dog walkers from across Merseyside. The walk from the train station at Formby takes about 20 minutes on a well-marked path. Worth doing if you want to skip the parking entirely.
           </p>
         </div>
 
@@ -117,7 +117,7 @@ export default function FormbyBeachContent() {
                   <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">•</span><span className="text-[#1C3220]/70"><strong>NT Members:</strong> Free parking, book via app</span></li>
                   <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">•</span><span className="text-[#1C3220]/70"><strong>Non-members:</strong> From £6/day via NT app</span></li>
                   <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">•</span><span className="text-[#1C3220]/70">Train from Formby station: 20-min walk</span></li>
-                  <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">•</span><span className="text-[#1C3220]/70">Book BEFORE you leave — no signal on site</span></li>
+                  <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">•</span><span className="text-[#1C3220]/70">Book BEFORE you leave: no signal on site</span></li>
                 </ul>
               </div>
             </div>
@@ -144,7 +144,7 @@ export default function FormbyBeachContent() {
           </div>
         </section>
 
-        {/* Photo break — shell */}
+        {/* Photo break: shell */}
         <button
           onClick={() => open(0)}
           className="relative -mx-4 sm:-mx-6 lg:-mx-8 mb-16 h-64 md:h-80 overflow-hidden rounded-2xl w-[calc(100%+2rem)] sm:w-[calc(100%+3rem)] lg:w-[calc(100%+4rem)] block cursor-zoom-in group"
@@ -152,13 +152,13 @@ export default function FormbyBeachContent() {
         >
           <Image
             src="/formby-beach-shell.jpg"
-            alt="Formby Beach — shell and sand dunes with the Irish Sea behind"
+            alt="Formby Beach: shell and sand dunes with the Irish Sea behind"
             fill
             className="object-cover object-bottom transition-transform duration-500 group-hover:scale-105"
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-          <p className="absolute bottom-4 left-4 text-white/80 text-sm drop-shadow">Formby Beach at low tide — plenty of space</p>
+          <p className="absolute bottom-4 left-4 text-white/80 text-sm drop-shadow">Formby Beach at low tide: plenty of space</p>
         </button>
 
         {/* What to Expect */}
@@ -166,7 +166,7 @@ export default function FormbyBeachContent() {
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-6">What the Beach Is Actually Like</h2>
           <div className="grid lg:grid-cols-3 gap-4">
 
-            {/* Feature — left, spans 2 cols, full height */}
+            {/* Feature: left, spans 2 cols, full height */}
             <button
               onClick={() => open(2)}
               className="lg:col-span-2 relative rounded-2xl overflow-hidden cursor-zoom-in group h-72 lg:h-auto lg:min-h-[440px] block w-full text-left"
@@ -182,11 +182,11 @@ export default function FormbyBeachContent() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <h3 className="font-display font-bold text-white text-xl mb-2">The Beach Itself</h3>
-                <p className="text-white/80 text-sm leading-relaxed max-w-lg">Wide sandy beach backed by significant dunes. Pinewoods behind the dunes — walk through takes ~15 mins. Flat paths, pushchair-friendly on dry days. West-facing, so sunsets are exceptional.</p>
+                <p className="text-white/80 text-sm leading-relaxed max-w-lg">Wide sandy beach backed by significant dunes. Pinewoods behind the dunes: walk through takes ~15 mins. Flat paths, pushchair-friendly on dry days. West-facing, so sunsets are exceptional.</p>
               </div>
             </button>
 
-            {/* Right column — two stacked cards */}
+            {/* Right column: two stacked cards */}
             <div className="flex flex-col gap-4">
               <button
                 onClick={() => open(1)}
@@ -203,7 +203,7 @@ export default function FormbyBeachContent() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5">
                   <h3 className="font-display font-bold text-white text-base mb-1">The Sea</h3>
-                  <p className="text-white/75 text-xs leading-relaxed">Irish Sea — don&apos;t expect Mediterranean temps. Significant tidal range. Low tide = plenty of sand. Check tides before you go.</p>
+                  <p className="text-white/75 text-xs leading-relaxed">Irish Sea: don&apos;t expect Mediterranean temps. Significant tidal range. Low tide = plenty of sand. Check tides before you go.</p>
                 </div>
               </button>
 
@@ -247,7 +247,7 @@ export default function FormbyBeachContent() {
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 flex flex-col justify-center">
                 <Dog className="w-8 h-8 text-blue-600 mb-4" />
                 <p className="text-lg text-blue-900 mb-6 leading-relaxed">
-                  Dogs are <strong>welcome year-round</strong> — no seasonal restrictions. This makes Formby one of the better dog beaches on the Sefton Coast.
+                  Dogs are <strong>welcome year-round</strong>: no seasonal restrictions. This makes Formby one of the better dog beaches on the Sefton Coast.
                 </p>
                 <div className="grid grid-cols-1 gap-3 text-sm">
                   <div className="flex items-center gap-2"><span className="font-bold text-green-600">✓</span> <span className="text-blue-800"><strong>On the beach:</strong> No restrictions</span></div>
@@ -260,7 +260,7 @@ export default function FormbyBeachContent() {
           </div>
         </section>
 
-        {/* Photo break — dunes */}
+        {/* Photo break: dunes */}
         <button
           onClick={() => open(5)}
           className="relative -mx-4 sm:-mx-6 lg:-mx-8 mb-16 h-64 md:h-80 overflow-hidden rounded-2xl w-[calc(100%+2rem)] sm:w-[calc(100%+3rem)] lg:w-[calc(100%+4rem)] block cursor-zoom-in group"
@@ -287,27 +287,27 @@ export default function FormbyBeachContent() {
               <div className="p-6">
                 <h3 className="font-semibold text-[#1C3220] text-lg mb-3">The Dunes</h3>
                 <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-3">
-                  Sand dunes over 10 metres high. Part of active conservation effort. You&apos;ll see fenced-off sections — not jobsworth bureaucracy. The dunes are genuinely fragile and the NT is fighting coastal erosion that&apos;s been eating into the pinewoods for decades.
+                  Sand dunes over 10 metres high. Part of active conservation effort. You&apos;ll see fenced-off sections: not jobsworth bureaucracy. The dunes are genuinely fragile and the NT is fighting coastal erosion that&apos;s been eating into the pinewoods for decades.
                 </p>
                 <p className="text-xs text-[#1C3220]/50 italic">Please don&apos;t climb restricted areas.</p>
               </div>
             </div>
             <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden">
-              <button onClick={() => open(12)} className="relative h-48 w-full block cursor-zoom-in group" aria-label="View full image — spring dune vegetation">
+              <button onClick={() => open(12)} className="relative h-48 w-full block cursor-zoom-in group" aria-label="View full image: spring dune vegetation">
                 <Image src="/beach-dunes-spring-bud.webp" alt="Spring vegetation budding on Formby sand dunes" fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
                 <span className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition bg-black/70 text-white text-xs font-medium px-2 py-1 rounded-lg">Enlarge</span>
               </button>
               <div className="p-6">
                 <h3 className="font-semibold text-[#1C3220] text-lg mb-3">Formby Point</h3>
                 <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-3">
-                  Headland at the south end of the beach. ~1.5 mile walk from main car park. Views back along the coast are worth it. At low tide, sometimes see prehistoric footprints — over 5,000 years old. They appear and disappear with the sand.
+                  Headland at the south end of the beach. ~1.5 mile walk from main car park. Views back along the coast are worth it. At low tide, sometimes see prehistoric footprints: over 5,000 years old. They appear and disappear with the sand.
                 </p>
-                <p className="text-xs text-[#1C3220]/50 italic">Let the NT know if you spot them — don&apos;t disturb.</p>
+                <p className="text-xs text-[#1C3220]/50 italic">Let the NT know if you spot them: don&apos;t disturb.</p>
               </div>
             </div>
           </div>
           <p className="mt-6 text-sm text-[#1C3220]/70 leading-relaxed">
-            The dune system supports a range of coastal species — ringed plover, little tern, natterjack toad, and several SAC-qualifying plants.{" "}
+            The dune system supports a range of coastal species: ringed plover, little tern, natterjack toad, and several SAC-qualifying plants.{" "}
             <a
               href="https://www.seftoncoastwildlife.co.uk/nature/sefton-coast"
               className="font-medium text-[#2E6B3E] underline underline-offset-2 hover:text-[#1C3220] transition-colors"
@@ -321,7 +321,7 @@ export default function FormbyBeachContent() {
             <button
               onClick={() => open(10)}
               className="relative h-56 md:h-auto md:w-72 flex-none block cursor-zoom-in group w-full"
-              aria-label="View full image — England Coast Path sign"
+              aria-label="View full image: England Coast Path sign"
             >
               <Image
                 src="/england-coast-path-sign-ainsdale.webp"
@@ -335,7 +335,7 @@ export default function FormbyBeachContent() {
             <div className="bg-[#F5F7F4] p-6 flex flex-col justify-center md:flex-1">
               <h3 className="font-semibold text-[#1C3220] text-lg mb-2">England Coast Path</h3>
               <p className="text-sm text-[#1C3220]/70 leading-relaxed">
-                The England Coast Path runs along this stretch of the Sefton coast — waymarked with the distinctive blue acorn sign. The Formby section links north toward Ainsdale and Southport, and south toward Crosby and Liverpool. Good flat walking with the dunes to your right and the sea to your left.
+                The England Coast Path runs along this stretch of the Sefton coast: waymarked with the distinctive blue acorn sign. The Formby section links north toward Ainsdale and Southport, and south toward Crosby and Liverpool. Good flat walking with the dunes to your right and the sea to your left.
               </p>
             </div>
           </div>
@@ -385,7 +385,7 @@ export default function FormbyBeachContent() {
         <section id="beachcombing" className="mb-16 scroll-mt-20">
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-3">Beachcombing</h2>
           <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-8 max-w-2xl">
-            Low tide after a storm is prime time. The Sefton coast washes up more than shells — these are three things worth knowing about before you walk.
+            Low tide after a storm is prime time. The Sefton coast washes up more than shells: these are three things worth knowing about before you walk.
           </p>
 
           {/* Three-column finds grid */}
@@ -396,11 +396,11 @@ export default function FormbyBeachContent() {
               <button
                 onClick={() => open(7)}
                 className="relative h-64 w-full block cursor-zoom-in group flex-none"
-                aria-label="View full image — mermaid's purse"
+                aria-label="View full image: mermaid's purse"
               >
                 <Image
                   src="/mermaids-purse-held-hand-ainsdale.webp"
-                  alt="Mermaid's purse — small-spotted catshark egg case held in a hand on the Sefton Coast beach"
+                  alt="Mermaid's purse: small-spotted catshark egg case held in a hand on the Sefton Coast beach"
                   fill
                   className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -411,7 +411,7 @@ export default function FormbyBeachContent() {
               <div className="p-5 flex flex-col flex-1">
                 <h3 className="font-semibold text-[#1C3220] text-base mb-2">Mermaid&apos;s Purse</h3>
                 <p className="text-sm text-[#1C3220]/70 leading-relaxed flex-1">
-                  A black leathery pouch with curly tendrils — the egg case of a small-spotted catshark. Once the pup hatches, the empty case washes in. Harmless to handle. Found year-round, most often after storms.
+                  A black leathery pouch with curly tendrils: the egg case of a small-spotted catshark. Once the pup hatches, the empty case washes in. Harmless to handle. Found year-round, most often after storms.
                 </p>
                 <a
                   href="https://www.seftoncoastwildlife.co.uk/blog/what-is-a-mermaids-purse"
@@ -427,11 +427,11 @@ export default function FormbyBeachContent() {
               <button
                 onClick={() => open(8)}
                 className="relative h-64 w-full block cursor-zoom-in group flex-none"
-                aria-label="View full image — compass jellyfish"
+                aria-label="View full image: compass jellyfish"
               >
                 <Image
                   src="/compass-jellyfish-closeup-ainsdale.webp"
-                  alt="Compass jellyfish on the Sefton Coast beach — brown V-shaped markings visible"
+                  alt="Compass jellyfish on the Sefton Coast beach: brown V-shaped markings visible"
                   fill
                   className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -442,13 +442,13 @@ export default function FormbyBeachContent() {
               <div className="p-5 flex flex-col flex-1">
                 <h3 className="font-semibold text-[#1C3220] text-base mb-2">Jellyfish</h3>
                 <p className="text-sm text-[#1C3220]/70 leading-relaxed flex-1">
-                  Two species wash up on the Sefton coast: barrel jellyfish (huge, harmless) and compass jellyfish (brown V markings — mild sting). Both are normal and most common in winter and early spring after storms.
+                  Two species wash up on the Sefton coast: barrel jellyfish (huge, harmless) and compass jellyfish (brown V markings: mild sting). Both are normal and most common in winter and early spring after storms.
                 </p>
                 <a
                   href="https://www.seftoncoastwildlife.co.uk/blog/jellyfish-sefton-coast"
                   className="mt-3 text-xs font-semibold text-[#2E6B3E] hover:underline"
                 >
-                  Jellyfish species guide — Sefton Coast Wildlife →
+                  Jellyfish species guide: Sefton Coast Wildlife →
                 </a>
               </div>
             </div>
@@ -458,11 +458,11 @@ export default function FormbyBeachContent() {
               <button
                 onClick={() => open(9)}
                 className="relative h-64 w-full block cursor-zoom-in group flex-none"
-                aria-label="View full image — whelk egg mass"
+                aria-label="View full image: whelk egg mass"
               >
                 <Image
                   src="/whelk-egg-mass-ainsdale-beach.webp"
-                  alt="Whelk egg mass — sea wash ball — found on the Sefton Coast beach with seaweed"
+                  alt="Whelk egg mass: sea wash ball: found on the Sefton Coast beach with seaweed"
                   fill
                   className="object-cover object-bottom transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -473,7 +473,7 @@ export default function FormbyBeachContent() {
               <div className="p-5 flex flex-col flex-1">
                 <h3 className="font-semibold text-[#1C3220] text-base mb-2">Whelk Egg Mass</h3>
                 <p className="text-sm text-[#1C3220]/70 leading-relaxed flex-1">
-                  White, spongy, slightly alien-looking — this is a common whelk egg mass, also called a sea wash ball or mermaid&apos;s necklace. Each tiny capsule held multiple whelk eggs. Completely harmless and fascinating to touch.
+                  White, spongy, slightly alien-looking: this is a common whelk egg mass, also called a sea wash ball or mermaid&apos;s necklace. Each tiny capsule held multiple whelk eggs. Completely harmless and fascinating to touch.
                 </p>
               </div>
             </div>
@@ -484,10 +484,10 @@ export default function FormbyBeachContent() {
           <div className="bg-[#E8EDE6] rounded-2xl p-5 border border-[#1C3220]/10">
             <p className="font-semibold text-[#1C3220] text-sm mb-1">🐸 What about those conservation ponds?</p>
             <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-3">
-              You&apos;ll pass small fenced ponds on the path to the beach. They&apos;re for natterjack toads — Britain&apos;s rarest amphibian. Most people walk straight past without knowing what they are.
+              You&apos;ll pass small fenced ponds on the path to the beach. They&apos;re for natterjack toads: Britain&apos;s rarest amphibian. Most people walk straight past without knowing what they are.
             </p>
             <Link href="/blog/natterjack-toads-formby" className="text-xs font-semibold text-[#2E6B3E] hover:underline">
-              Read: Natterjack toads at Formby — the full story →
+              Read: Natterjack toads at Formby: the full story →
             </Link>
           </div>
 
@@ -496,7 +496,7 @@ export default function FormbyBeachContent() {
             <button
               onClick={() => open(11)}
               className="relative h-56 md:h-auto md:w-80 flex-none block cursor-zoom-in group w-full"
-              aria-label="View full image — flask on driftwood"
+              aria-label="View full image: flask on driftwood"
             >
               <Image
                 src="/flask-driftwood-shells-ainsdale.webp"
@@ -509,7 +509,7 @@ export default function FormbyBeachContent() {
             <div className="bg-[#F0F4EF] p-6 flex flex-col justify-center md:flex-1">
               <p className="text-[#1C3220] font-semibold text-base mb-2">The one thing worth bringing</p>
               <p className="text-sm text-[#1C3220]/70 leading-relaxed">
-                A flask. Non-negotiable in winter. Go at low tide, early morning after an overnight high tide — that&apos;s when the best finds wash in. Bring a small bag for shells and anything interesting. Boots are better than trainers — the tideline is wet even on a sunny day.
+                A flask. Non-negotiable in winter. Go at low tide, early morning after an overnight high tide: that&apos;s when the best finds wash in. Bring a small bag for shells and anything interesting. Boots are better than trainers: the tideline is wet even on a sunny day.
               </p>
             </div>
           </div>
@@ -562,7 +562,7 @@ export default function FormbyBeachContent() {
                 tag: "Best overall",
                 tagColor: "bg-[#C9A96E] text-[#1C3220]",
                 emoji: "🥂",
-                desc: "The best restaurant in Formby — proper brasserie food and a great wine list. Book at least a week ahead at weekends. Worth the effort.",
+                desc: "The best restaurant in Formby: proper brasserie food and a great wine list. Book at least a week ahead at weekends. Worth the effort.",
                 note: "10 min drive · Essential to book",
               },
               {
@@ -580,7 +580,7 @@ export default function FormbyBeachContent() {
                 tag: "Casual",
                 tagColor: "bg-gray-500 text-white",
                 emoji: "☕",
-                desc: "Several independent cafés near Chapel Lane — good for coffee, cake and a sandwich. Relaxed about kids and dogs. No booking, just walk in.",
+                desc: "Several independent cafés near Chapel Lane: good for coffee, cake and a sandwich. Relaxed about kids and dogs. No booking, just walk in.",
                 note: "10 min drive",
               },
             ].map((r) => (
@@ -624,7 +624,7 @@ export default function FormbyBeachContent() {
           </div>
         </section>
 
-        {/* Related Links — image cards like about-formby */}
+        {/* Related Links: image cards like about-formby */}
         <section className="mt-16 pt-12 border-t border-[#1C3220]/10">
           <h3 className="font-display text-2xl font-bold text-[#1C3220] mb-6">Explore More Formby</h3>
           <div className="grid sm:grid-cols-2 gap-4">

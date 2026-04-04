@@ -12,7 +12,7 @@ export default function PostContent() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            headline: "Formby Day Trip from Liverpool — The Honest Guide",
+            headline: "Formby Day Trip from Liverpool: The Honest Guide",
             description: "How to do a Formby day trip from Liverpool (or Manchester) properly. Train times, what to do, where to eat, and how long you actually need.",
             url: "https://www.formbyguide.co.uk/blog/formby-day-trip-from-liverpool",
             author: { "@type": "Person", "@id": "https://www.formbyguide.co.uk/about#clare", name: "Clare", url: "https://www.formbyguide.co.uk/about" },
@@ -55,14 +55,14 @@ export default function PostContent() {
               <span className="text-[#C9A96E]">The Honest Guide</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
-              25 minutes on the Merseyrail. Beach, pinewoods, red squirrels, a decent lunch. Here&apos;s how to do it properly — and what most day trip guides miss.
+              25 minutes on the Merseyrail. Beach, pinewoods, red squirrels, a decent lunch. Here&apos;s how to do it properly: and what most day trip guides miss.
             </p>
             <div className="flex items-center gap-3 text-sm text-white/60 flex-wrap">
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 rounded-full overflow-hidden ring-1 ring-white/20">
                   <Image src="/clare.png" alt="Clare" width={32} height={32} className="object-cover w-full h-full" />
                 </div>
-                <span>Clare — Formby local</span>
+                <span>Clare: Formby local</span>
               </div>
               <span className="text-white/30">·</span>
               <div className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" /><span>March 12, 2026</span></div>
@@ -96,7 +96,7 @@ export default function PostContent() {
           <article className="lg:col-span-2">
             <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 prose-p:leading-relaxed prose-strong:text-[#1C3220] prose-a:text-[#2E6B3E] max-w-none">
               <p className="lead text-xl text-gray-600 leading-relaxed">
-                People from Liverpool don&apos;t realise how close Formby is. You can be on Formby Beach — proper wide empty sand, dunes, pinewoods behind you — in under half an hour from Liverpool Central. Door to beach, 45 minutes if you&apos;re not rushing.
+                People from Liverpool don&apos;t realise how close Formby is. You can be on Formby Beach: proper wide empty sand, dunes, pinewoods behind you: in under half an hour from Liverpool Central. Door to beach, 45 minutes if you&apos;re not rushing.
               </p>
               <p>
                 I&apos;ve lived here 44 years and I&apos;m still slightly baffled that more people don&apos;t make this trip. The beach is genuinely brilliant. The pinewoods are unlike anything else in the North West. And it&apos;s not heaving with tourists the way the Wirral coastline can get on a good day.
@@ -116,7 +116,7 @@ export default function PostContent() {
                       <Train className="w-4 h-4 text-[#2E6B3E]" />
                     </div>
                     <div>
-                      <p className="font-bold text-[#1C3220] text-sm">By Train — Recommended</p>
+                      <p className="font-bold text-[#1C3220] text-sm">By Train: Recommended</p>
                       <p className="text-xs text-gray-500">Merseyrail Northern Line</p>
                     </div>
                   </div>
@@ -134,13 +134,13 @@ export default function PostContent() {
                     </div>
                     <div>
                       <p className="font-bold text-[#1C3220] text-sm">By Car</p>
-                      <p className="text-xs text-gray-500">Via A565 — Formby Bypass</p>
+                      <p className="text-xs text-gray-500">Via A565: Formby Bypass</p>
                     </div>
                   </div>
                   <ul className="space-y-1.5 text-sm text-gray-700">
                     <li className="flex items-start gap-2"><CheckCircle className="w-3.5 h-3.5 text-[#2E6B3E] mt-0.5 shrink-0" /><span>Liverpool → Formby: <strong>30–40 minutes</strong></span></li>
                     <li className="flex items-start gap-2"><CheckCircle className="w-3.5 h-3.5 text-[#2E6B3E] mt-0.5 shrink-0" /><span>Manchester → Formby: <strong>60–70 minutes</strong></span></li>
-                    <li className="flex items-start gap-2"><AlertCircle className="w-3.5 h-3.5 text-amber-500 mt-0.5 shrink-0" /><span>NT car park (L37 1YH) — <strong>book via NT app</strong> before leaving</span></li>
+                    <li className="flex items-start gap-2"><AlertCircle className="w-3.5 h-3.5 text-amber-500 mt-0.5 shrink-0" /><span>NT car park (L37 1YH): <strong>book via NT app</strong> before leaving</span></li>
                   </ul>
                   <p className="text-xs text-gray-400 mt-3">Signal at the car park is poor. Download the National Trust app at home.</p>
                 </div>
@@ -153,14 +153,14 @@ export default function PostContent() {
                 <div>
                   <p className="font-bold text-amber-900 text-sm mb-1">If you&apos;re driving from Manchester</p>
                   <p className="text-amber-800 text-sm leading-relaxed">
-                    The M58/A59 via Maghull is usually faster than the M57. Park at the National Trust car park (L37 1YH) — about £6–9 via the app. Don&apos;t wait until you arrive to book; the car park can fill by 10am on a sunny weekend.
+                    The M58/A59 via Maghull is usually faster than the M57. Park at the National Trust car park (L37 1YH): about £6–9 via the app. Don&apos;t wait until you arrive to book; the car park can fill by 10am on a sunny weekend.
                   </p>
                 </div>
               </div>
             </div>
 
             <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 max-w-none">
-              <h2>The Ideal Day Out — In Order</h2>
+              <h2>The Ideal Day Out: In Order</h2>
               <p>Here&apos;s how I&apos;d structure it if I had one day and wanted to see the best of Formby without rushing.</p>
             </div>
 
@@ -169,7 +169,7 @@ export default function PostContent() {
                 {
                   time: "9:30–10:00am",
                   title: "Arrive at the National Trust car park",
-                  desc: "Victoria Road, L37 1YH. From the car park, you're already in the pinewoods. Toilets at the car park — use them before you head off.",
+                  desc: "Victoria Road, L37 1YH. From the car park, you're already in the pinewoods. Toilets at the car park: use them before you head off.",
                   tip: "Arrive early if you can. By 11am on a good day the car park is at capacity.",
                   emoji: "🅿️",
                 },
@@ -183,14 +183,14 @@ export default function PostContent() {
                 {
                   time: "12:00–2:00pm",
                   title: "Formby Beach",
-                  desc: "Wide open sand, massive dunes, Irish Sea views. Bring something to sit on. The beach is enormous — find a quiet spot away from the main path even on busy days.",
+                  desc: "Wide open sand, massive dunes, Irish Sea views. Bring something to sit on. The beach is enormous: find a quiet spot away from the main path even on busy days.",
                   tip: "Check the tide before you go. High tide at Formby means less beach. Low tide is best.",
                   emoji: "🏖️",
                 },
                 {
                   time: "2:30–4:00pm",
                   title: "Lunch in the village",
-                  desc: "Drive or taxi from the beach to Formby village — about 10 minutes. Left Bank Brasserie for a proper lunch, Emily's for something more relaxed, NT café if you don't want to move far.",
+                  desc: "Drive or taxi from the beach to Formby village: about 10 minutes. Left Bank Brasserie for a proper lunch, Emily's for something more relaxed, NT café if you don't want to move far.",
                   tip: "If you're on the train and don't want to drive to the village, the NT café at the car park does coffee and hot food.",
                   emoji: "🍽️",
                 },
@@ -220,7 +220,7 @@ export default function PostContent() {
                 Yes. Genuinely. Formby Beach in winter is one of my favourite things about living here. Empty, dramatic, the light off the Irish Sea on a clear January afternoon is properly beautiful. You need layers, decent boots, and a flask. But it&apos;s worth it.
               </p>
               <p>
-                The red squirrel sightings are actually <strong>better</strong> from autumn through February — they&apos;re out earlier and the trees are thinner so you can see them more clearly. If you want to see them, winter is when you go.
+                The red squirrel sightings are actually <strong>better</strong> from autumn through February: they&apos;re out earlier and the trees are thinner so you can see them more clearly. If you want to see them, winter is when you go.
               </p>
               <p>
                 The only thing to check in winter is tides. High tides in January can reduce the beach significantly. Look up the tide times before you plan.
@@ -231,7 +231,7 @@ export default function PostContent() {
             <div className="not-prose my-6 grid sm:grid-cols-2 gap-3">
               {[
                 { item: "Layers", note: "Wind off the Irish Sea is real, even in summer." },
-                { item: "Proper shoes", note: "Sandy paths and dune grass — trainers get full of sand." },
+                { item: "Proper shoes", note: "Sandy paths and dune grass: trainers get full of sand." },
                 { item: "NT app downloaded", note: "Book the car park before you leave home. No signal at the gate." },
                 { item: "Flask", note: "Non-negotiable in autumn and winter. The café isn&apos;t always open." },
                 { item: "Binoculars", note: "Brilliant for red squirrels and the birdlife on the coastal path." },
@@ -253,7 +253,7 @@ export default function PostContent() {
                 <div>
                   <h3 className="font-display text-xl font-bold mb-2">The Red Squirrels Are the Real Reason to Come</h3>
                   <p className="text-white/70 text-sm leading-relaxed mb-4">
-                    Formby is one of the best places in England to see red squirrels in the wild. The pinewoods are a managed habitat — they actually live here, year-round. You won&apos;t see them if you arrive at 2pm and walk fast and loud. Go early, go slow, go quiet.
+                    Formby is one of the best places in England to see red squirrels in the wild. The pinewoods are a managed habitat: they actually live here, year-round. You won&apos;t see them if you arrive at 2pm and walk fast and loud. Go early, go slow, go quiet.
                   </p>
                   <Link href="/red-squirrels-formby" className="inline-flex items-center gap-2 bg-[#C9A96E] hover:bg-[#b8944f] text-white text-sm font-bold px-4 py-2.5 rounded-full transition">
                     Full red squirrel guide <ArrowRight className="w-3.5 h-3.5" />
@@ -264,7 +264,7 @@ export default function PostContent() {
 
             <div className="not-prose bg-[#E8EDE6] rounded-2xl p-8">
               <p className="font-display font-bold text-[#1C3220] text-lg mb-2">Plan your full day in Formby</p>
-              <p className="text-[#1C3220]/70 text-sm mb-5">Restaurants, walks, beach guide, parking info — everything in one place.</p>
+              <p className="text-[#1C3220]/70 text-sm mb-5">Restaurants, walks, beach guide, parking info: everything in one place.</p>
               <div className="flex flex-wrap gap-3">
                 <Link href="/things-to-do" className="inline-flex items-center gap-2 bg-[#2E6B3E] hover:bg-[#1C3220] text-white px-5 py-3 rounded-full font-semibold text-sm transition">
                   Things to Do in Formby <ArrowRight className="w-3.5 h-3.5" />

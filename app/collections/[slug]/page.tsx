@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     });
     isIndexable = count >= MIN_LISTINGS;
-  } catch { /* DB unavailable — default to noindex */ }
+  } catch { /* DB unavailable: default to noindex */ }
 
   const url = `${BASE_URL}/collections/${slug}`;
   return {
@@ -220,7 +220,7 @@ export default async function CollectionPage({ params }: Props) {
               <span>{count === 1 ? "listing" : "listings"} found</span>
               {!isIndexable && (
                 <span className="ml-2 text-amber-400 text-xs font-semibold uppercase tracking-wider">
-                  · Building — more coming soon
+                  · Building: more coming soon
                 </span>
               )}
             </div>

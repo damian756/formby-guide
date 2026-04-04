@@ -10,7 +10,7 @@ import {
 
 const NATURE_LINKS = [
   { href: "/guides",                  label: "All Guides",              icon: BookOpen,   color: "text-[#C9A96E]" },
-  { href: "/things-to-do",           label: "Things To Do — Full Guide", icon: Compass,  color: "text-[#2E6B3E]" },
+  { href: "/things-to-do",           label: "Things To Do: Full Guide", icon: Compass,  color: "text-[#2E6B3E]" },
   { href: "/formby-beach",           label: "Formby Beach",             icon: Waves,      color: "text-sky-500" },
   { href: "/red-squirrels-formby",   label: "Red Squirrels",            icon: Squirrel,   color: "text-amber-600" },
   { href: "/formby-pinewoods",       label: "Pinewoods",                icon: TreePine,   color: "text-[#2E6B3E]" },
@@ -50,7 +50,7 @@ export default function NavMenu() {
             <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${exploreOpen ? "rotate-180" : ""}`} />
           </Link>
 
-          {/* Invisible bridge — keeps hover active when moving from trigger to dropdown */}
+          {/* Invisible bridge: keeps hover active when moving from trigger to dropdown */}
           <div className="absolute top-full left-0 w-80 h-4 z-40" />
 
           {/* Mega dropdown */}
@@ -163,7 +163,7 @@ export default function NavMenu() {
           <div className="border-t border-gray-100 pt-4 mb-4 space-y-1">
             <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-2">Near Southport too?</p>
             {[
-              { href: "https://www.southportguide.co.uk/collections/dog-friendly-pubs-southport",        label: "🐾 Dog-friendly pubs — Southport" },
+              { href: "https://www.southportguide.co.uk/collections/dog-friendly-pubs-southport",        label: "🐾 Dog-friendly pubs: Southport" },
               { href: "https://www.southportguide.co.uk/collections/lord-street-restaurants-southport",  label: "🍽️ Lord Street restaurants" },
               { href: "https://www.southportguide.co.uk/collections/hotels-near-royal-birkdale",         label: "⛳ Hotels near Royal Birkdale" },
             ].map(({ href, label }) => (

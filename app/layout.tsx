@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
 
   title: {
-    default: "FormbyGuide.co.uk — Your Complete Guide to Formby",
+    default: "FormbyGuide.co.uk: Your Complete Guide to Formby",
     template: "%s | FormbyGuide.co.uk",
   },
   description:
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: BASE_URL,
     siteName: "FormbyGuide.co.uk",
-    title: "FormbyGuide.co.uk — Your Complete Guide to Formby",
+    title: "FormbyGuide.co.uk: Your Complete Guide to Formby",
     description:
       "Discover the best restaurants, beaches, walks and things to do in Formby. Red squirrels, pinewoods and the Sefton Coast.",
     images: [
@@ -54,14 +54,14 @@ export const metadata: Metadata = {
         url: `${BASE_URL}/og-default.png`,
         width: 1200,
         height: 630,
-        alt: "FormbyGuide.co.uk — Discover Formby",
+        alt: "FormbyGuide.co.uk: Discover Formby",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "FormbyGuide.co.uk — Your Complete Guide to Formby",
+    title: "FormbyGuide.co.uk: Your Complete Guide to Formby",
     description: "Discover the best restaurants, beaches, walks and things to do in Formby.",
     images: [`${BASE_URL}/og-default.png`],
   },
@@ -134,7 +134,7 @@ function Footer() {
               <span className="text-white/40 text-sm font-normal ml-1">.co.uk</span>
             </div>
             <p className="text-sm leading-relaxed text-white/60 mb-4 max-w-xs">
-              Your local guide to Formby — beach, pinewoods, red squirrels, and the best places to eat and explore on the Sefton Coast.
+              Your local guide to Formby: beach, pinewoods, red squirrels, and the best places to eat and explore on the Sefton Coast.
             </p>
             <a href="https://churchtownmedia.co.uk" className="text-xs text-[#C9A96E] hover:text-[#E8C87A] transition">
               Built by Churchtown Media ↗
@@ -244,7 +244,7 @@ function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40">
-          <p>&copy; 2026 FormbyGuide.co.uk — All rights reserved.</p>
+          <p>&copy; 2026 FormbyGuide.co.uk: All rights reserved.</p>
           <div className="flex gap-5">
             <Link href="/privacy" className="hover:text-white/70 transition">Privacy</Link>
             <Link href="/terms" className="hover:text-white/70 transition">Terms</Link>

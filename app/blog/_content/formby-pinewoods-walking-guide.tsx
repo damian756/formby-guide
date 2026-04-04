@@ -34,7 +34,7 @@ const TRAILS = [
     color: "border-amber-200 bg-amber-50",
     badge: "Best for walkers",
     badgeColor: "bg-amber-600 text-white",
-    desc: "Uses the full extent of the trail network. Takes in quieter sections of the woodland that most visitors never reach. Download the map offline — signal can be patchy in the deeper woodland.",
+    desc: "Uses the full extent of the trail network. Takes in quieter sections of the woodland that most visitors never reach. Download the map offline: signal can be patchy in the deeper woodland.",
     highlights: ["Quieter, less visited sections", "Most varied terrain", "Best for photography", "Proper navigation needed"],
   },
 ];
@@ -48,7 +48,7 @@ export default function PostContent() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            headline: "Walking in Formby Pinewoods — Trail Guide, Tips & What to Bring",
+            headline: "Walking in Formby Pinewoods: Trail Guide, Tips & What to Bring",
             description: "Everything you need to walk the Formby Pinewoods. Trail options, terrain advice, what to wear, what to bring, and the local knowledge that makes the difference.",
             url: "https://www.formbyguide.co.uk/blog/formby-pinewoods-walking-guide",
             author: {
@@ -97,14 +97,14 @@ export default function PostContent() {
               <span className="text-[#C9A96E]">Pinewoods</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
-              The Pinewoods are genuinely one of the best things about living here. Ancient coastal woodland, red squirrels, dune systems and sea views — all within walking distance of Formby station. Here&apos;s how to make the most of it.
+              The Pinewoods are genuinely one of the best things about living here. Ancient coastal woodland, red squirrels, dune systems and sea views: all within walking distance of Formby station. Here&apos;s how to make the most of it.
             </p>
             <div className="flex items-center gap-3 text-sm text-white/60 flex-wrap">
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 rounded-full overflow-hidden ring-1 ring-white/20">
                   <Image src="/clare.png" alt="Clare" width={32} height={32} className="object-cover w-full h-full" />
                 </div>
-                <span>Clare — walks here weekly</span>
+                <span>Clare: walks here weekly</span>
               </div>
               <span className="text-white/30">·</span>
               <div className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" /><span>February 10, 2026</span></div>
@@ -140,7 +140,7 @@ export default function PostContent() {
           <article className="lg:col-span-2">
             <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 prose-p:leading-relaxed prose-strong:text-[#1C3220] max-w-none mb-8">
               <p className="lead text-xl text-gray-600 leading-relaxed">
-                Formby Pinewoods is remarkable. A coastal plantation of Scots and Corsican pine that creates its own microclimate — warmer, quieter, and genuinely otherworldly compared to the exposed beach just metres away.
+                Formby Pinewoods is remarkable. A coastal plantation of Scots and Corsican pine that creates its own microclimate: warmer, quieter, and genuinely otherworldly compared to the exposed beach just metres away.
               </p>
               <p>
                 I walk here at least once a week. Here&apos;s what I&apos;ve learned that the trail maps don&apos;t tell you.
@@ -151,7 +151,7 @@ export default function PostContent() {
             <div className="not-prose relative w-full h-56 overflow-hidden rounded-2xl mb-10">
               <Image src="/nt-sign.webp" alt="National Trust Formby sign at the car park entrance" fill className="object-cover object-center" sizes="(max-width: 1024px) 100vw, 66vw" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-              <p className="absolute bottom-3 left-4 text-white/80 text-xs drop-shadow">Victoria Road, L37 1YH — the main NT car park entrance</p>
+              <p className="absolute bottom-3 left-4 text-white/80 text-xs drop-shadow">Victoria Road, L37 1YH: the main NT car park entrance</p>
             </div>
 
             {/* Terrain warning */}
@@ -161,7 +161,7 @@ export default function PostContent() {
                 <div>
                   <p className="font-bold text-amber-900 mb-1">What the brochure doesn&apos;t tell you about the terrain</p>
                   <p className="text-amber-800 text-sm leading-relaxed">
-                    The Pinewoods are sandy. Not &quot;a bit sandy&quot; — genuinely sandy. Trainers get filled with sand within ten minutes on the dune sections. Bring proper walking shoes or wellies. Your favourite white Nikes will not thank you.
+                    The Pinewoods are sandy. Not &quot;a bit sandy&quot;: genuinely sandy. Trainers get filled with sand within ten minutes on the dune sections. Bring proper walking shoes or wellies. Your favourite white Nikes will not thank you.
                   </p>
                 </div>
               </div>
@@ -209,18 +209,18 @@ export default function PostContent() {
             <div className="not-prose relative w-full h-52 overflow-hidden rounded-2xl mb-10">
               <Image src="/pinewoods-trail-sign.webp" alt="Trail signpost in Formby pinewoods" fill className="object-cover object-center" sizes="(max-width: 1024px) 100vw, 66vw" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-              <p className="absolute bottom-3 left-4 text-white/80 text-xs drop-shadow">The trails are well signed — you won&apos;t need a map for the shorter loops</p>
+              <p className="absolute bottom-3 left-4 text-white/80 text-xs drop-shadow">The trails are well signed: you won&apos;t need a map for the shorter loops</p>
             </div>
 
             {/* What to bring */}
             <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 max-w-none">
-              <h2>What to Bring — The Full List</h2>
+              <h2>What to Bring: The Full List</h2>
             </div>
 
             <div className="not-prose grid md:grid-cols-2 gap-4 my-6 mb-12">
               {[
-                { category: "Essential", color: "bg-[#E8EDE6] border-[#2E6B3E]/20", items: ["Walking shoes or wellies (not trainers)", "Water — more than you think", "Snacks if going over 90 mins", "A layering jacket"], },
-                { category: "Strongly recommended", color: "bg-blue-50 border-blue-200", items: ["Binoculars for squirrel spotting", "Downloaded offline map (signal patchy)", "Insect repellent May–September", "Change of socks — just trust me"], },
+                { category: "Essential", color: "bg-[#E8EDE6] border-[#2E6B3E]/20", items: ["Walking shoes or wellies (not trainers)", "Water: more than you think", "Snacks if going over 90 mins", "A layering jacket"], },
+                { category: "Strongly recommended", color: "bg-blue-50 border-blue-200", items: ["Binoculars for squirrel spotting", "Downloaded offline map (signal patchy)", "Insect repellent May–September", "Change of socks: just trust me"], },
                 { category: "With kids", color: "bg-amber-50 border-amber-200", items: ["Snacks and more snacks", "Small backpack they can carry themselves", "Wellies are non-negotiable", "Something to identify wildlife"], },
                 { category: "Leave at home", color: "bg-red-50 border-red-200", items: ["White or light-coloured trainers", "Sandals or flip-flops", "Expectations of staying clean", "Noise (bluetooth speakers etc)"], },
               ].map(({ category, color, items }) => (
@@ -241,7 +241,7 @@ export default function PostContent() {
             <div className="not-prose relative w-full h-52 overflow-hidden rounded-2xl mb-10">
               <Image src="/pinewoods-fungus.webp" alt="Fungus growing on a fallen log in Formby pinewoods" fill className="object-cover object-center" sizes="(max-width: 1024px) 100vw, 66vw" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-              <p className="absolute bottom-3 left-4 text-white/80 text-xs drop-shadow">Autumn is brilliant for fungi — look out for them on fallen logs and at the base of the pines</p>
+              <p className="absolute bottom-3 left-4 text-white/80 text-xs drop-shadow">Autumn is brilliant for fungi: look out for them on fallen logs and at the base of the pines</p>
             </div>
 
             {/* Best time callout */}
@@ -282,7 +282,7 @@ export default function PostContent() {
               <div className="relative h-36 overflow-hidden">
                 <Image src="/pinewoods-no-parking.webp" alt="No parking sign in Formby pinewoods" fill className="object-cover object-center" sizes="33vw" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                <p className="absolute bottom-2 left-3 text-white text-xs drop-shadow">Don&apos;t park on Victoria Road — use the NT car park</p>
+                <p className="absolute bottom-2 left-3 text-white text-xs drop-shadow">Don&apos;t park on Victoria Road: use the NT car park</p>
               </div>
               <div className="p-6">
               <h3 className="font-display font-bold text-[#1C3220] text-base mb-4">Getting There</h3>
@@ -324,7 +324,7 @@ export default function PostContent() {
             <div className="bg-[#E8EDE6] border border-[#2E6B3E]/20 rounded-2xl p-5">
               <p className="font-bold text-[#1C3220] text-sm mb-2">🐿️ Squirrel spotting from the Pinewoods?</p>
               <p className="text-[#1C3220]/70 text-xs leading-relaxed mb-3">
-                Read our separate guide on exactly when and where to spot red squirrels — including the timing mistakes most visitors make.
+                Read our separate guide on exactly when and where to spot red squirrels: including the timing mistakes most visitors make.
               </p>
               <Link href="/blog/red-squirrels-formby-spotting-guide" className="text-[#2E6B3E] font-bold text-xs hover:underline flex items-center gap-1">
                 Red squirrel guide <ArrowRight className="w-3 h-3" />
@@ -334,7 +334,7 @@ export default function PostContent() {
             <div className="bg-white rounded-2xl border border-gray-100 p-5">
               <p className="font-bold text-[#1C3220] text-sm mb-2">🍽️ Where to eat after your walk</p>
               <p className="text-[#1C3220]/70 text-xs leading-relaxed mb-3">
-                The NT café covers post-walk coffee and cake. For a proper meal, the village is 10 minutes by car. <Link href="/restaurants/the-sparrowhawk-formby" className="text-[#2E6B3E] font-medium hover:underline">The Sparrowhawk</Link> is dog-friendly and doesn&apos;t need a booking — ideal after a muddy walk.
+                The NT café covers post-walk coffee and cake. For a proper meal, the village is 10 minutes by car. <Link href="/restaurants/the-sparrowhawk-formby" className="text-[#2E6B3E] font-medium hover:underline">The Sparrowhawk</Link> is dog-friendly and doesn&apos;t need a booking: ideal after a muddy walk.
               </p>
               <Link href="/guides/best-restaurants-formby" className="text-[#2E6B3E] font-bold text-xs hover:underline flex items-center gap-1">
                 Best restaurants in Formby <ArrowRight className="w-3 h-3" />

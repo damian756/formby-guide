@@ -10,17 +10,17 @@ const BASE_URL = "https://www.formbyguide.co.uk";
 export const metadata: Metadata = {
   title: "Restaurants in Formby During Open Week 2026 | FormbyGuide",
   description:
-    "Where to eat in Formby during The Open 2026. Restaurants in Formby village, away from the Birkdale crowds. Book ahead — Open week gets busy.",
+    "Where to eat in Formby during The Open 2026. Restaurants in Formby village, away from the Birkdale crowds. Book ahead: Open week gets busy.",
   alternates: { canonical: `${BASE_URL}/the-open-2026/restaurants` },
   openGraph: {
     title: "Restaurants in Formby During Open Week 2026",
     description:
-      "Formby village restaurants during The Open 2026 — away from the Birkdale crowds, book ahead.",
+      "Formby village restaurants during The Open 2026: away from the Birkdale crowds, book ahead.",
     url: `${BASE_URL}/the-open-2026/restaurants`,
     type: "website",
     siteName: "FormbyGuide.co.uk",
     locale: "en_GB",
-    images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "Restaurants in Formby during The Open 2026 — FormbyGuide.co.uk" }],
+    images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "Restaurants in Formby during The Open 2026: FormbyGuide.co.uk" }],
   },
 };
 
@@ -106,7 +106,7 @@ export default async function OpenRestaurantsPage() {
           </h1>
           <p className="text-white/70 text-lg max-w-2xl leading-relaxed mb-6">
             Formby village has some excellent restaurants that won&apos;t be heaving with Open crowds 
-            the way Birkdale pubs will. Book ahead for evening meals — Open week does get busy, 
+            the way Birkdale pubs will. Book ahead for evening meals: Open week does get busy, 
             even here.
           </p>
 
@@ -137,7 +137,7 @@ export default async function OpenRestaurantsPage() {
           <p className="text-[#1C3220] font-semibold text-sm mb-1">Book ahead for evenings.</p>
           <p className="text-[#1C3220]/70 text-sm leading-relaxed">
             Formby restaurants fill up during Open week, especially evenings. Left Bank Brasserie 
-            and Emily&apos;s in particular — book these as early as you can. Lunch is usually easier to walk into.
+            and Emily&apos;s in particular: book these as early as you can. Lunch is usually easier to walk into.
           </p>
         </div>
 

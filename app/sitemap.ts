@@ -12,7 +12,7 @@ function parseBlogDate(dateStr: string): Date {
   return isNaN(d.getTime()) ? new Date("2026-02-01") : d;
 }
 
-// Stable reference dates — update when relevant pages change meaningfully
+// Stable reference dates: update when relevant pages change meaningfully
 const D = {
   today:  new Date("2026-03-02"),
   feb22:  new Date("2026-02-22"),
@@ -46,7 +46,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/terms`,                           lastModified: D.jan01, priority: 0.3, changeFrequency: "yearly"  },
   ];
 
-  // Blog posts — use actual post dates
+  // Blog posts: use actual post dates
   const blogPages: MetadataRoute.Sitemap = BLOG_POSTS.map((p) => ({
     url: `${BASE_URL}/blog/${p.slug}`,
     lastModified: parseBlogDate(p.date),
@@ -74,7 +74,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.6,
     }));
   } catch {
-    // DB unavailable — return static pages only
+    // DB unavailable: return static pages only
   }
 
   // Collection pages

@@ -10,14 +10,14 @@ const BASE_URL = "https://www.formbyguide.co.uk";
 export const metadata: Metadata = {
   title: "Best Restaurants in Formby 2026 | Honest Local Guide | FormbyGuide",
   description:
-    "The best restaurants in Formby — Clare's honest guide. Emily's, Left Bank Brasserie, The Sparrowhawk, Don Luigi. No sponsored results, no filler.",
+    "The best restaurants in Formby: Clare's honest guide. Emily's, Left Bank Brasserie, The Sparrowhawk, Don Luigi. No sponsored results, no filler.",
   keywords:
     "best restaurants formby, formby restaurants, where to eat formby, left bank brasserie formby, emily's formby, the sparrowhawk formby",
   alternates: { canonical: `${BASE_URL}/guides/best-restaurants-formby` },
   openGraph: {
     title: "Best Restaurants in Formby 2026 | Honest Local Guide",
     description:
-      "Clare's honest guide to the best restaurants in Formby — Emily's, Left Bank Brasserie, The Sparrowhawk, Don Luigi, and where to avoid.",
+      "Clare's honest guide to the best restaurants in Formby: Emily's, Left Bank Brasserie, The Sparrowhawk, Don Luigi, and where to avoid.",
     url: `${BASE_URL}/guides/best-restaurants-formby`,
     type: "website",
     siteName: "FormbyGuide.co.uk",
@@ -59,7 +59,7 @@ const faqSchema = {
       name: "Are there dog-friendly restaurants in Formby?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The Sparrowhawk is dog-friendly. Other restaurants are less predictable — call ahead if you're planning to bring your dog to a restaurant rather than a pub.",
+        text: "The Sparrowhawk is dog-friendly. Other restaurants are less predictable: call ahead if you're planning to bring your dog to a restaurant rather than a pub.",
       },
     },
     {
@@ -67,7 +67,7 @@ const faqSchema = {
       name: "Are there good restaurants near Formby Beach?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The NT café is at the beach. The village restaurants (Emily's, Left Bank, The Sparrowhawk) are about 10 minutes by car — the sensible option for a post-walk lunch or dinner rather than the café.",
+        text: "The NT café is at the beach. The village restaurants (Emily's, Left Bank, The Sparrowhawk) are about 10 minutes by car: the sensible option for a post-walk lunch or dinner rather than the café.",
       },
     },
   ],
@@ -82,7 +82,7 @@ const restaurants = [
     dogFriendly: false,
     booking: "Essential at weekends",
     description:
-      "The best restaurant in Formby. Proper brasserie food, excellent wine list, room that&apos;s actually atmospheric rather than just beige. The kind of place that&apos;s genuinely enjoyable rather than just okay. Book at least a week ahead for Friday or Saturday evenings — it fills up and they don&apos;t overbook.",
+      "The best restaurant in Formby. Proper brasserie food, excellent wine list, room that&apos;s actually atmospheric rather than just beige. The kind of place that&apos;s genuinely enjoyable rather than just okay. Book at least a week ahead for Friday or Saturday evenings: it fills up and they don&apos;t overbook.",
     honest:
       "The price reflects the quality. If you&apos;re on a budget, this isn&apos;t it. If you&apos;re looking for the best meal in Formby, this is it.",
     bestFor: "Birthday dinners, date nights, celebrating something",
@@ -111,9 +111,9 @@ const restaurants = [
     dogFriendly: true,
     booking: "Walk-ins possible",
     description:
-      "Good gastropub food done consistently well. The most flexible option in Formby — doesn&apos;t require booking with the same urgency as Left Bank or Emily&apos;s. Dog-friendly. Beer garden in summer. The right choice if you haven&apos;t booked but want a decent evening out.",
+      "Good gastropub food done consistently well. The most flexible option in Formby: doesn&apos;t require booking with the same urgency as Left Bank or Emily&apos;s. Dog-friendly. Beer garden in summer. The right choice if you haven&apos;t booked but want a decent evening out.",
     honest:
-      "Pub food rather than restaurant food — which is exactly what you want from it. Not trying to be Left Bank and better for it.",
+      "Pub food rather than restaurant food: which is exactly what you want from it. Not trying to be Left Bank and better for it.",
     bestFor: "Post-walk meals, dogs, unplanned evenings out",
     location: "Village",
   },
@@ -165,7 +165,7 @@ export default function BestRestaurantsFormbyPage() {
                 Best Restaurants in Formby
               </h1>
               <p className="text-xl text-white/85 leading-relaxed mb-6">
-                Written by someone who eats here regularly. No sponsorship, no filler — just honest recommendations from a local.
+                Written by someone who eats here regularly. No sponsorship, no filler: just honest recommendations from a local.
               </p>
               <div className="flex flex-wrap gap-3">
                 {[
@@ -193,7 +193,7 @@ export default function BestRestaurantsFormbyPage() {
               Formby has <span className="text-[#C9A96E]">four restaurants</span> worth knowing about. Here they are, in order.
             </p>
             <p className="text-white/55 text-sm leading-relaxed mt-4 max-w-xl">
-              These are all in the village, not at the beach. Book ahead for weekends — Formby is small and the good places fill up quickly.
+              These are all in the village, not at the beach. Book ahead for weekends: Formby is small and the good places fill up quickly.
             </p>
           </div>
         </div>
@@ -292,13 +292,13 @@ export default function BestRestaurantsFormbyPage() {
               <div>
                 <h3 className="font-semibold text-[#1C3220] mb-2">NT Café (at the beach)</h3>
                 <p className="text-sm text-[#1C3220]/70 leading-relaxed">
-                  The National Trust café at the Victoria Road car park. Decent coffee, good cake, hot food at lunchtimes. Not cheap — you&apos;re paying for location, not cuisine. Ideal for a post-walk stop before the drive home. Dogs welcome outside.
+                  The National Trust café at the Victoria Road car park. Decent coffee, good cake, hot food at lunchtimes. Not cheap: you&apos;re paying for location, not cuisine. Ideal for a post-walk stop before the drive home. Dogs welcome outside.
                 </p>
               </div>
               <div>
                 <h3 className="font-semibold text-[#1C3220] mb-2">Village Cafés</h3>
                 <p className="text-sm text-[#1C3220]/70 leading-relaxed">
-                  Several independent cafés near Chapel Lane in the village — good for coffee and lunch. Worth exploring if you&apos;re spending time in the village rather than at the beach. Nothing that needs booking; casual walk-in options.
+                  Several independent cafés near Chapel Lane in the village: good for coffee and lunch. Worth exploring if you&apos;re spending time in the village rather than at the beach. Nothing that needs booking; casual walk-in options.
                 </p>
               </div>
             </div>
@@ -310,19 +310,19 @@ export default function BestRestaurantsFormbyPage() {
             <div className="grid md:grid-cols-2 gap-5">
               {[
                 {
-                  title: "Left Bank — book 7–10 days ahead for weekends",
+                  title: "Left Bank: book 7–10 days ahead for weekends",
                   desc: "Friday and Saturday evenings fill up quickly. For a birthday or special meal, book further ahead. Weekday lunches are usually available with shorter notice.",
                 },
                 {
-                  title: "Emily's — book by Tuesday for the weekend",
+                  title: "Emily's: book by Tuesday for the weekend",
                   desc: "Popular with regulars who book standing weeks. Call earlier rather than later. Weekday bookings much easier.",
                 },
                 {
-                  title: "The Sparrowhawk — early or late walk-ins",
+                  title: "The Sparrowhawk: early or late walk-ins",
                   desc: "If you want a table without booking, go early (before 7pm) or later (after 9pm) on weekends. Midweek is easy. Food service hours worth checking.",
                 },
                 {
-                  title: "Don Luigi — groups call ahead",
+                  title: "Don Luigi: groups call ahead",
                   desc: "For a table of 6 or more, call ahead. Smaller groups can usually get in without booking on most nights.",
                 },
               ].map(({ title, desc }) => (
@@ -345,15 +345,15 @@ export default function BestRestaurantsFormbyPage() {
                 },
                 {
                   q: "Where should I go if I haven't booked?",
-                  a: "The Sparrowhawk — gastropub, dog-friendly, walk-ins usually possible especially early evening. Or Don Luigi if you're going with a group and want pasta and pizza.",
+                  a: "The Sparrowhawk: gastropub, dog-friendly, walk-ins usually possible especially early evening. Or Don Luigi if you're going with a group and want pasta and pizza.",
                 },
                 {
                   q: "Are there restaurants near Formby Beach?",
-                  a: "The NT café is at the beach. The actual restaurants are in the village — about 10 minutes by car. Worth the drive for a proper meal rather than settling for the café.",
+                  a: "The NT café is at the beach. The actual restaurants are in the village: about 10 minutes by car. Worth the drive for a proper meal rather than settling for the café.",
                 },
                 {
                   q: "Is Emily's good for kids?",
-                  a: "Yes — Emily's is family-friendly. Relaxed atmosphere, not overly formal. Left Bank is fine for older kids; less ideal if yours are very young.",
+                  a: "Yes: Emily's is family-friendly. Relaxed atmosphere, not overly formal. Left Bank is fine for older kids; less ideal if yours are very young.",
                 },
               ].map(({ q, a }) => (
                 <div key={q} className="bg-white rounded-xl p-5 border border-gray-100">

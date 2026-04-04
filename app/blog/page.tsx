@@ -8,11 +8,11 @@ import { BLOG_POSTS, BLOG_CATEGORIES } from "@/lib/blog-posts";
 const BASE_URL = "https://www.formbyguide.co.uk";
 
 export const metadata: Metadata = {
-  title: "Blog — Local Guides, Tips & Stories from Formby",
+  title: "Blog: Local Guides, Tips & Stories from Formby",
   description: "Discover local stories, seasonal guides, and insider tips for making the most of Formby. Written by locals, for visitors and residents.",
   alternates: { canonical: `${BASE_URL}/blog` },
   openGraph: {
-    title: "Blog — Local Guides, Tips & Stories from Formby",
+    title: "Blog: Local Guides, Tips & Stories from Formby",
     description: "Local insights and guides for Formby. Seasonal tips, local knowledge, and things worth knowing.",
     url: `${BASE_URL}/blog`,
     type: "website",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blog — Local Guides, Tips & Stories from Formby",
+    title: "Blog: Local Guides, Tips & Stories from Formby",
     description: "Local insights and guides for Formby. Seasonal tips, local knowledge, and things worth knowing.",
   },
 };
@@ -38,7 +38,7 @@ export default function BlogPage() {
       <section className="relative h-64 md:h-80 bg-[#1C3220] overflow-hidden">
         <Image
           src="/blog-hero.webp"
-          alt="Formby pinewoods — local guides and stories"
+          alt="Formby pinewoods: local guides and stories"
           fill
           priority
           className="object-cover object-center"

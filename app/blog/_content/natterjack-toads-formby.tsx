@@ -12,8 +12,8 @@ export default function PostContent() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            headline: "Natterjack Toads at Formby — Britain's Rarest Amphibian",
-            description: "Most people walk straight past the conservation ponds at Formby without knowing what they're for. Here's the full story on natterjack toads — Britain's rarest amphibian — and how to find them.",
+            headline: "Natterjack Toads at Formby: Britain's Rarest Amphibian",
+            description: "Most people walk straight past the conservation ponds at Formby without knowing what they're for. Here's the full story on natterjack toads: Britain's rarest amphibian: and how to find them.",
             url: "https://www.formbyguide.co.uk/blog/natterjack-toads-formby",
             author: {
               "@type": "Person",
@@ -45,7 +45,7 @@ export default function PostContent() {
         </div>
       </div>
 
-      {/* Hero — real photo */}
+      {/* Hero: real photo */}
       <section className="relative text-white overflow-hidden min-h-[420px] flex items-end">
         <Image
           src="/natterjack-pond.webp"
@@ -72,7 +72,7 @@ export default function PostContent() {
                 <div className="w-8 h-8 rounded-full overflow-hidden ring-1 ring-white/20">
                   <Image src="/clare.png" alt="Clare" width={32} height={32} className="object-cover w-full h-full" />
                 </div>
-                <span>Clare — Formby local</span>
+                <span>Clare: Formby local</span>
               </div>
               <span className="text-white/30">·</span>
               <div className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" /><span>February 22, 2026</span></div>
@@ -108,7 +108,7 @@ export default function PostContent() {
           <article className="lg:col-span-2">
             <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 prose-p:leading-relaxed prose-strong:text-[#1C3220] max-w-none mb-10">
               <p className="lead text-xl text-gray-600 leading-relaxed">
-                Between the <Link href="/formby-pinewoods" className="text-[#2E6B3E] hover:underline font-medium">pinewoods</Link> and the <Link href="/formby-beach" className="text-[#2E6B3E] hover:underline font-medium">beach at Formby</Link>, there are shallow ponds in the low-lying dune slacks. They don&apos;t look like much — a bit of water, some reeds, scrubby vegetation. Most walkers pass them without a second glance. But those ponds are there for a reason, and the reason is one of Britain&apos;s most endangered amphibians.
+                Between the <Link href="/formby-pinewoods" className="text-[#2E6B3E] hover:underline font-medium">pinewoods</Link> and the <Link href="/formby-beach" className="text-[#2E6B3E] hover:underline font-medium">beach at Formby</Link>, there are shallow ponds in the low-lying dune slacks. They don&apos;t look like much: a bit of water, some reeds, scrubby vegetation. Most walkers pass them without a second glance. But those ponds are there for a reason, and the reason is one of Britain&apos;s most endangered amphibians.
               </p>
               <p>
                 The natterjack toad. Smaller than a common toad, with a distinctive yellow stripe down its back and a call that carries for over a mile on a still spring night.
@@ -125,7 +125,7 @@ export default function PostContent() {
                 sizes="(max-width: 1024px) 100vw, 66vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-              <p className="absolute bottom-3 left-4 text-white/80 text-xs drop-shadow">The NT information boards explain the conservation work — easy to miss if you&apos;re not looking</p>
+              <p className="absolute bottom-3 left-4 text-white/80 text-xs drop-shadow">The NT information boards explain the conservation work: easy to miss if you&apos;re not looking</p>
             </div>
 
             <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 max-w-none mb-10">
@@ -134,7 +134,7 @@ export default function PostContent() {
                 Natterjacks need very specific conditions: warm, shallow water for breeding, sandy soil for burrowing, and open ground with short vegetation. The dune slacks at Formby are one of the few places left in Britain where all of these come together naturally.
               </p>
               <p>
-                They&apos;ve lost around 75% of their historic range in the UK. Development, drainage, and changing land use have wiped out most of their habitat over the last century. The Sefton Coast — including Formby — is now one of the most important sites in the country for their survival. The National Trust manages the conservation ponds specifically to support the breeding population here.
+                They&apos;ve lost around 75% of their historic range in the UK. Development, drainage, and changing land use have wiped out most of their habitat over the last century. The Sefton Coast: including Formby: is now one of the most important sites in the country for their survival. The National Trust manages the conservation ponds specifically to support the breeding population here.
               </p>
               <p>
                 They&apos;re fully protected under UK law. You can&apos;t disturb them, their eggs, or their habitat.
@@ -145,19 +145,19 @@ export default function PostContent() {
             <div className="not-prose relative w-full h-56 overflow-hidden rounded-2xl mb-10">
               <Image
                 src="/beach-dunes-spring-bud.webp"
-                alt="Spring vegetation in Formby dune slacks — natterjack toad habitat"
+                alt="Spring vegetation in Formby dune slacks: natterjack toad habitat"
                 fill
                 className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 66vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-              <p className="absolute bottom-3 left-4 text-white/80 text-xs drop-shadow">The dune slacks in spring — the habitat comes alive in April and May</p>
+              <p className="absolute bottom-3 left-4 text-white/80 text-xs drop-shadow">The dune slacks in spring: the habitat comes alive in April and May</p>
             </div>
 
             <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 max-w-none mb-10">
               <h2>How to Find Them</h2>
               <p>
-                You almost certainly won&apos;t see one in daylight. Natterjacks are nocturnal and spend most of the day buried in the sand. But from April through June, on warm evenings, the males call — and the call is extraordinary. It&apos;s been described as something between a cricket and a small chainsaw. Loud, carrying, unmistakeable once you know what it is. On a still night, you can hear them from well over half a mile away.
+                You almost certainly won&apos;t see one in daylight. Natterjacks are nocturnal and spend most of the day buried in the sand. But from April through June, on warm evenings, the males call: and the call is extraordinary. It&apos;s been described as something between a cricket and a small chainsaw. Loud, carrying, unmistakeable once you know what it is. On a still night, you can hear them from well over half a mile away.
               </p>
               <p>
                 The breeding ponds are in the dune slack area between the pinewoods and the beach. Walk the path west from the main car park through the pines, and before you reach the beach you&apos;ll pass through the dune slack zone. You can hear the ponds before you see them in spring and early summer.
@@ -171,7 +171,7 @@ export default function PostContent() {
                 <div>
                   <p className="font-bold text-amber-900 mb-1">Please don&apos;t disturb the ponds</p>
                   <p className="text-amber-800 text-sm leading-relaxed">
-                    The conservation ponds and surrounding habitat are protected. Don&apos;t approach the water&apos;s edge, don&apos;t shine torches directly into the ponds, and keep dogs well away. The NT has done an enormous amount of work to establish this population — it&apos;s fragile.
+                    The conservation ponds and surrounding habitat are protected. Don&apos;t approach the water&apos;s edge, don&apos;t shine torches directly into the ponds, and keep dogs well away. The NT has done an enormous amount of work to establish this population: it&apos;s fragile.
                   </p>
                 </div>
               </div>
@@ -181,7 +181,7 @@ export default function PostContent() {
             <div className="not-prose relative w-full h-52 overflow-hidden rounded-2xl mb-10">
               <Image
                 src="/pinewoods-fungus-moss-2.webp"
-                alt="Fungi and moss on the woodland floor at Formby — part of the dune ecosystem"
+                alt="Fungi and moss on the woodland floor at Formby: part of the dune ecosystem"
                 fill
                 className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 66vw"
@@ -193,7 +193,7 @@ export default function PostContent() {
             <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 max-w-none mb-10">
               <h2>What the National Trust Does Here</h2>
               <p>
-                The NT&apos;s management at Formby isn&apos;t just about the pinewoods and the squirrels. They actively manage the dune slack ponds — clearing vegetation, controlling water levels, and monitoring the breeding population. It&apos;s labour-intensive work and it&apos;s the reason the toads are still here.
+                The NT&apos;s management at Formby isn&apos;t just about the pinewoods and the squirrels. They actively manage the dune slack ponds: clearing vegetation, controlling water levels, and monitoring the breeding population. It&apos;s labour-intensive work and it&apos;s the reason the toads are still here.
               </p>
               <p>
                 The Sefton Coast is part of a wider conservation network for natterjacks across the north-west. Formby, Ainsdale, and the wider dune system form a connected habitat corridor that gives the population room to spread and recover.
@@ -201,7 +201,7 @@ export default function PostContent() {
 
               <h2>Worth Knowing If You Visit</h2>
               <p>
-                You don&apos;t need to make a special trip just for the toads. They&apos;re part of the wider Formby experience — <Link href="/blog/formby-pinewoods-walking-guide" className="text-[#2E6B3E] hover:underline">walk the pinewoods to the beach</Link> in the evening between April and June, listen for the calling, look for the NT information boards near the dune slacks, and appreciate that this is genuinely rare.
+                You don&apos;t need to make a special trip just for the toads. They&apos;re part of the wider Formby experience: <Link href="/blog/formby-pinewoods-walking-guide" className="text-[#2E6B3E] hover:underline">walk the pinewoods to the beach</Link> in the evening between April and June, listen for the calling, look for the NT information boards near the dune slacks, and appreciate that this is genuinely rare.
               </p>
               <p>
                 If you go in daylight, the ponds are still worth a quiet look from the path. You might see spawn or tadpoles in the shallower areas in late April and May.
@@ -212,13 +212,13 @@ export default function PostContent() {
             <div className="not-prose relative w-full h-48 overflow-hidden rounded-2xl mb-10">
               <Image
                 src="/pinewoods-acorn.webp"
-                alt="Acorn on the Formby pinewoods floor — part of the woodland ecosystem"
+                alt="Acorn on the Formby pinewoods floor: part of the woodland ecosystem"
                 fill
                 className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 66vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-              <p className="absolute bottom-3 left-4 text-white/80 text-xs drop-shadow">The woodland floor alongside the dune slacks — oak and pine together</p>
+              <p className="absolute bottom-3 left-4 text-white/80 text-xs drop-shadow">The woodland floor alongside the dune slacks: oak and pine together</p>
             </div>
 
             {/* CTA */}
@@ -243,7 +243,7 @@ export default function PostContent() {
               <div className="space-y-4 text-sm">
                 <div>
                   <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">Species</p>
-                  <p className="text-gray-700">Epidalea calamita — the natterjack toad</p>
+                  <p className="text-gray-700">Epidalea calamita: the natterjack toad</p>
                 </div>
                 <div>
                   <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">UK status</p>
@@ -263,7 +263,7 @@ export default function PostContent() {
                 </div>
                 <div>
                   <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">Parking</p>
-                  <p className="text-gray-700">L37 1YH — National Trust car park, Victoria Road</p>
+                  <p className="text-gray-700">L37 1YH: National Trust car park, Victoria Road</p>
                 </div>
               </div>
             </div>
