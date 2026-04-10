@@ -352,7 +352,7 @@ export default async function BusinessPage({ params }: Props) {
 
                   {/* CTA buttons */}
                   <div className="flex flex-wrap gap-3">
-                    {business.website && (
+                    {business.website && business.claimed && (
                       <a
                         href={business.website.startsWith("http") ? business.website : `https://${business.website}`}
                         target="_blank"
@@ -361,6 +361,14 @@ export default async function BusinessPage({ params }: Props) {
                       >
                         <Globe className="w-4 h-4" /> Visit Website
                       </a>
+                    )}
+                    {business.website && !business.claimed && (
+                      <Link
+                        href="/claim-listing"
+                        className="inline-flex items-center gap-2 bg-[#C9A96E]/10 text-[#1C3220] border border-[#C9A96E]/50 px-5 py-2.5 rounded-full hover:bg-[#C9A96E]/20 transition font-semibold text-sm"
+                      >
+                        <Globe className="w-4 h-4 text-[#C9A96E]" /> Claim listing to add website
+                      </Link>
                     )}
                     {business.phone && (
                       <a
@@ -500,7 +508,7 @@ export default async function BusinessPage({ params }: Props) {
                   </InfoRow>
                 )}
 
-                {business.website && (
+                {business.website && business.claimed && (
                   <InfoRow icon={<Globe className="w-4 h-4 text-[#2E6B3E]" />} label="Website">
                     <a
                       href={business.website.startsWith("http") ? business.website : `https://${business.website}`}
@@ -510,6 +518,16 @@ export default async function BusinessPage({ params }: Props) {
                     >
                       {business.website.replace(/^https?:\/\/(www\.)?/, "").split("/")[0]}
                     </a>
+                  </InfoRow>
+                )}
+                {business.website && !business.claimed && (
+                  <InfoRow icon={<Globe className="w-4 h-4 text-gray-300" />} label="Website">
+                    <Link
+                      href="/claim-listing"
+                      className="text-[#C9A96E] text-sm hover:underline"
+                    >
+                      Claim listing to unlock
+                    </Link>
                   </InfoRow>
                 )}
 
