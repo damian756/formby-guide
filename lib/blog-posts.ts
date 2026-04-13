@@ -218,6 +218,32 @@ export const BLOG_POSTS: BlogPost[] = [
     metaTitle: "Formby Village Walk: Chapel Lane, High Street & Things to See",
     metaDescription: "A guide to walking around Formby village: Chapel Lane boutiques, independent shops, the best pubs and cafes, and how long it actually takes. Good for a rainy afternoon or post-beach wind-down.",
   },
+  {
+    slug: "left-bank-brasserie-formby",
+    title: "Left Bank Brasserie Formby: An Honest Review",
+    excerpt: "Formby's fanciest restaurant. Worth the price? Worth booking ahead? Worth dressing up for? After going twice, here's where I actually land on it.",
+    author: "Clare",
+    date: "April 2, 2026",
+    readTime: "6 min read",
+    categorySlug: "food",
+    gradient: "linear-gradient(135deg, #5C1A1A 0%, #8B3A3A 100%)",
+    image: "/blog-card-food.webp",
+    metaTitle: "Left Bank Brasserie Formby Review 2026: Is It Worth It?",
+    metaDescription: "An honest review of Left Bank Brasserie in Formby village. Food, service, prices and whether it's actually worth the booking. Written by a local who's been twice.",
+  },
+  {
+    slug: "formby-in-may",
+    title: "Formby in May: Why It's One of the Best Months to Visit",
+    excerpt: "May at Formby is genuinely brilliant. The beach is quiet, the pinewoods are at their greenest, the red squirrels are out, and the weather is the best it gets without the August crowds. Here's what makes it the local's favourite month.",
+    author: "Clare",
+    date: "April 2, 2026",
+    readTime: "6 min read",
+    categorySlug: "seasonal",
+    gradient: "linear-gradient(135deg, #1C4A5A 0%, #2E6B3E 100%)",
+    image: "/blog-card-seasonal.webp",
+    metaTitle: "Formby in May: Best Things to Do, What to Expect",
+    metaDescription: "May is one of the best times to visit Formby. Quieter beach, green pinewoods, red squirrels active, natterjack toads calling in the evenings. What to do, where to go, and what makes May special.",
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
