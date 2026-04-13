@@ -28,7 +28,7 @@ export default function PostContent() {
               name: "Churchtown Media",
               url: "https://www.churchtownmedia.co.uk",
             },
-            datePublished: "2026-04-02",
+            datePublished: "2026-04-12",
             inLanguage: "en-GB",
           }),
         }}
@@ -65,7 +65,7 @@ export default function PostContent() {
           <div className="flex items-center gap-3 text-white/70 text-sm">
             <span>Clare</span>
             <span>·</span>
-            <span>April 2, 2026</span>
+            <span>April 12, 2026</span>
             <span>·</span>
             <span>6 min read</span>
           </div>
