@@ -21,6 +21,8 @@ import FormbyOpenBase from "./formby-open-2026-base";
 import WildGarlic from "./wild-garlic-formby-pinewoods";
 import LeftBankBrasserie from "./left-bank-brasserie-formby";
 import FormbyInMay from "./formby-in-may";
+import BlackpoolOrFormby from "./blackpool-or-formby-family-day-out";
+import FormbyFromBlackpool from "./formby-day-trip-from-blackpool";
 
 export const POST_COMPONENTS: Record<string, ComponentType> = {
   "things-to-do-formby-half-term": HalfTerm,
@@ -40,4 +42,6 @@ export const POST_COMPONENTS: Record<string, ComponentType> = {
   "wild-garlic-formby-pinewoods": WildGarlic,
   "left-bank-brasserie-formby": LeftBankBrasserie,
   "formby-in-may": FormbyInMay,
+  "blackpool-or-formby-family-day-out": BlackpoolOrFormby,
+  "formby-day-trip-from-blackpool": FormbyFromBlackpool,
 };
