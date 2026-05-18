@@ -19,6 +19,7 @@ import FormbyVillageWalk from "./formby-village-walk-guide";
 import EasterFormby from "./easter-at-formby-beach-2026";
 import FormbyOpenBase from "./formby-open-2026-base";
 import WildGarlic from "./wild-garlic-formby-pinewoods";
+import FormbyJune from "./formby-june-school-holidays";
 import LeftBankBrasserie from "./left-bank-brasserie-formby";
 import FormbyInMay from "./formby-in-may";
 import BlackpoolOrFormby from "./blackpool-or-formby-family-day-out";
@@ -42,6 +43,7 @@ export const POST_COMPONENTS: Record<string, ComponentType> = {
   "easter-at-formby-beach-2026": EasterFormby,
   "formby-open-2026-base": FormbyOpenBase,
   "wild-garlic-formby-pinewoods": WildGarlic,
+  "formby-june-school-holidays": FormbyJune,
   "left-bank-brasserie-formby": LeftBankBrasserie,
   "formby-in-may": FormbyInMay,
   "blackpool-or-formby-family-day-out": BlackpoolOrFormby,
