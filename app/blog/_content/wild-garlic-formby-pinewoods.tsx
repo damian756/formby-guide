@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ArrowRight } from "lucide-react";
 import ClareBio from "../ClareBio";
 
 export default function PostContent() {
@@ -12,12 +12,12 @@ export default function PostContent() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            headline: "Wild Garlic in Formby Pinewoods: Where to Find It and What to Do With It",
-            description: "April is wild garlic season in the Formby pinewoods. Where to walk to find it, when it peaks, and what to do with it if you pick some.",
+            headline: "Wild Garlic at Formby Pinewoods: Where to Find It and What to Do With It",
+            description: "May is the month wild garlic takes over the woodland floor in Formby. Where to find it, when to go, and what to cook.",
             url: "https://www.formbyguide.co.uk/blog/wild-garlic-formby-pinewoods",
             author: { "@type": "Person", "@id": "https://www.formbyguide.co.uk/about#clare", name: "Clare", url: "https://www.formbyguide.co.uk/about" },
             publisher: { "@type": "Organization", "@id": "https://www.churchtownmedia.co.uk/#organization", name: "Churchtown Media", url: "https://www.churchtownmedia.co.uk" },
-            datePublished: "2026-04-04",
+            datePublished: "2026-05-17",
             inLanguage: "en-GB",
           }),
         }}
@@ -30,73 +30,129 @@ export default function PostContent() {
             <ChevronRight className="w-3 h-3" />
             <Link href="/blog" className="hover:text-[#2E6B3E] transition">Blog</Link>
             <ChevronRight className="w-3 h-3" />
-            <span className="text-[#1C3220] font-medium">Wild Garlic in Formby</span>
+            <span className="text-[#1C3220] font-medium">Wild Garlic at Formby</span>
           </nav>
         </div>
       </div>
 
       <section className="relative text-white overflow-hidden min-h-[480px] flex items-end">
         <Image
-          src="/blog-wild-garlic-pinewoods.jpg"
-          alt="Wild garlic covering the floor of Formby pinewoods in spring with white flowers"
+          src="/blog-wild-garlic-formby-pinewoods.jpg"
+          alt="Wild garlic carpet in Formby pinewoods, May"
           fill
           priority
           className="object-cover object-center"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent" />
-        <div className="relative z-10 container mx-auto px-4 max-w-5xl pb-10 pt-24">
-          <span className="inline-block bg-[#2E6B3E] text-white text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">Wildlife</span>
-          <h1 className="font-display text-3xl md:text-5xl font-bold leading-tight mb-4 max-w-3xl">
-            Wild Garlic in Formby Pinewoods: Where to Find It and What to Do With It
-          </h1>
-          <div className="flex items-center gap-3 text-white/70 text-sm">
-            <span>Clare</span>
-            <span>·</span>
-            <span>April 4, 2026</span>
-            <span>·</span>
-            <span>5 min read</span>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20" />
+        <div className="relative container mx-auto px-4 max-w-5xl py-16 md:py-24">
+          <div className="max-w-3xl">
+            <div className="inline-block bg-[#2E8A6E]/20 border border-[#2E8A6E]/30 text-[#7DD4B8] text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-5">
+              Wildlife
+            </div>
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight">
+              Wild Garlic at Formby:<br />
+              <span className="text-[#7DD4B8]">Where to Find It in May</span>
+            </h1>
+            <p className="text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
+              For a few weeks in May, parts of the Formby pinewoods smell incredible and look extraordinary. Here&apos;s where to go and what to do with it when you get home.
+            </p>
           </div>
         </div>
       </section>
 
-      <div className="container mx-auto px-4 max-w-3xl py-12">
-        <div className="prose prose-lg max-w-none text-[#1C3220]">
-          <p>April is the month the pinewoods smell different. You notice it before you see it: a clean, sharp, garlicky scent rising from the ground as you walk under the Scots pines. Then you look down and the floor has turned white. That&apos;s the wild garlic. Allium ursinum, also called ramsons, and once you know it&apos;s there, you wonder how you ever walked past it.</p>
+      <div className="container mx-auto px-4 max-w-5xl py-16">
+        <div className="grid lg:grid-cols-3 gap-12">
+          <article className="lg:col-span-2">
+            <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 prose-p:leading-relaxed prose-strong:text-[#1C3220] prose-a:text-[#2E6B3E] max-w-none">
+              <p className="lead text-xl text-gray-600 leading-relaxed">
+                I grew up in Formby and I&apos;ll be honest: I didn&apos;t really notice wild garlic until a few years ago. Now it&apos;s one of the things I look forward to most in May. If you walk through certain parts of the pinewoods on a warm morning in mid-May, the smell hits you before you see it.
+              </p>
 
-          <h2>Where to Find It</h2>
-          <p>The wild garlic grows on the woodland floor beneath the main pine plantation, particularly in areas where the soil is damper and there&apos;s a bit more shade. The best patches in Formby tend to be along the paths that cut between the pines heading toward the beach, away from the main tourist routes.</p>
-          <p>Walk in from the National Trust car park on Freshfield Road and take the path heading northwest through the pines rather than the main red squirrel trail. Within five to ten minutes you&apos;ll be into the denser woodland sections where the wild garlic carpets the floor in April. The smell tells you before your eyes do.</p>
-          <p>It&apos;s also worth checking the lower paths near the dune edge where the pinewoods give way to dune scrub. Damper spots at the dune base can have good patches.</p>
+              <h2>Where to Find Wild Garlic in Formby</h2>
+              <p>
+                The best spots are in the deciduous woodland sections rather than the Scots pine areas. Wild garlic needs damp, shaded conditions under broadleaf trees. The patches around the edges of the NT car park area and along some of the wetter paths toward the slack areas are the most reliable.
+              </p>
+              <p>
+                You&apos;ll smell it before you see it. That distinctive garlic scent in the air means you&apos;re close. The white star-shaped flowers in full bloom cover the ground in large drifts. Once you spot one patch, you&apos;ll usually find more nearby.
+              </p>
 
-          <h2>When It Peaks</h2>
-          <p>The flowering season in Formby runs roughly from late March to mid-May. Peak flowering is typically the first two weeks of April in a normal year. Right now, early April, is exactly the right time. The flowers will start to fade and the leaves will toughen up by the end of April, becoming less useful for eating.</p>
-          <p>The leaves appear before the flowers and can be picked from late February. The flowers themselves are edible too and arguably nicer: they have a slightly milder flavour than the leaves and look good scattered over food.</p>
+              <h2>When to Go</h2>
+              <p>
+                Peak wild garlic season at Formby is roughly the last two weeks of April into mid-May. By late May the flowers have usually gone over and the leaves become less useful. Go now if you&apos;re reading this in May.
+              </p>
+              <p>
+                Early morning is genuinely better. The scent is stronger, the woodland is quieter, and you&apos;re not competing with the weekend crowds at the NT car park. An 8am walk on a weekday in May is one of the best things Formby offers.
+              </p>
 
-          <h2>Picking: Is It Allowed?</h2>
-          <p>Small amounts for personal use are generally fine in National Trust areas under the traditional right to forage. The rules around foraging on NT land are that you should not uproot plants, should only take small quantities, and should not pick protected species. Wild garlic is not a protected species.</p>
-          <p>Do not strip any single patch. Take a few handfuls of leaves from across a wide area. Leave plenty. The smell in the woods is partly what makes the April walk worth doing, and that requires the plants to be there for people after you.</p>
-          <p>Also: make absolutely sure you have wild garlic and not lily of the valley or lords-and-ladies, both of which grow in similar conditions and are toxic. Wild garlic smells strongly of garlic when a leaf is crushed. If it doesn&apos;t smell of garlic, don&apos;t eat it.</p>
+              <h2>Picking Responsibly</h2>
+              <p>
+                You can pick wild garlic for personal use on the Formby pinewoods paths, but a few rules apply. Don&apos;t strip any one patch bare. Take leaves rather than bulbs (the plant regenerates from the bulb). Don&apos;t pick in the NT car park areas where foraging rules may be stricter. And be certain of your identification: the leaves look similar to lily of the valley, which is toxic. Wild garlic leaves smell unmistakably of garlic when crushed. Lily of the valley does not.
+              </p>
 
-          <h2>What to Do With It</h2>
-          <p>Wild garlic pesto is the obvious one and it genuinely is excellent. Blitz the leaves with pine nuts, parmesan, olive oil, and a little lemon juice. Works exactly as basil pesto would, but with a garlic flavour that&apos;s softer and more complex than you&apos;d get from garlic cloves. Keeps in the fridge for a week.</p>
-          <p>Wild garlic butter is faster and incredibly useful: soften butter, mix in finely chopped leaves, roll in clingfilm, keep in the fridge. Melt over a steak, spread on toast, use to roast chicken. It freezes well too.</p>
-          <p>The flowers are nice scattered over salads, on soup, or as a garnish. They look pretty and taste mild.</p>
-          <p>If you&apos;re walking with kids and they&apos;re sceptical, tell them to crush a leaf and smell it. That usually does the job. Mine were into it immediately. One of them now identifies wild garlic every April with the kind of authority she didn&apos;t have at the start of last spring. Accidental natural history education is the best kind.</p>
+              <h2>What to Do With It</h2>
+              <p>
+                At home I use wild garlic a few different ways. The simplest is a pesto: blitz the leaves with olive oil, parmesan, pine nuts and a squeeze of lemon. It lasts about a week in the fridge. Goes on pasta, toast, scrambled eggs, anything.
+              </p>
+              <p>
+                Wild garlic butter is easier still. Chop the leaves fine, mix with softened butter and a pinch of salt. Roll in cling film and freeze. You&apos;ve got flavoured butter for months.
+              </p>
+              <p>
+                The flowers are edible too and look brilliant scattered over a salad or on a bowl of soup.
+              </p>
+            </div>
 
-          <h2>The Walk Itself</h2>
-          <p>A wild garlic walk through the Formby pinewoods in April takes about 45 minutes at a relaxed pace. Take the path from the NT car park into the pines, go slowly through the denser sections, loop back out via the dune edge, and finish at the NT cafe for coffee. It&apos;s the kind of walk that justifies living near here.</p>
+            <div className="not-prose my-10 bg-[#E8EDE6] rounded-2xl p-8">
+              <p className="font-display font-bold text-[#1C3220] text-lg mb-2">Practical info</p>
+              <ul className="space-y-2 text-sm text-[#1C3220]/80">
+                <li><strong>Postcode:</strong> L37 1YH (NT car park, Formby)</li>
+                <li><strong>Best timing:</strong> late April to mid-May, early morning</li>
+                <li><strong>Parking:</strong> NT car park, book via the NT app</li>
+                <li><strong>Dogs:</strong> welcome on leads through the pinewoods</li>
+              </ul>
+            </div>
+
+            <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 max-w-none">
+              <h2>While You&apos;re There</h2>
+              <p>
+                If you&apos;re walking the pinewoods in May anyway, this is also peak red squirrel season. Early morning on a weekday is your best chance of seeing them. Keep dogs on leads throughout the squirrel trail. The NT café is open from 10am.
+              </p>
+            </div>
+
+            <div className="not-prose mt-10">
+              <Link href="/red-squirrels-formby" className="inline-flex items-center gap-2 text-[#2E6B3E] font-semibold text-sm hover:underline">
+                Red squirrel spotting guide for Formby <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </article>
+
+          <aside className="lg:col-span-1 space-y-6">
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sticky top-6">
+              <h3 className="font-display font-bold text-[#1C3220] text-base mb-4">Wild Garlic Quick Facts</h3>
+              <div className="space-y-3 text-sm text-gray-600">
+                <div className="pb-3 border-b border-gray-50"><strong className="text-[#1C3220]">Season:</strong> Late April to mid-May</div>
+                <div className="pb-3 border-b border-gray-50"><strong className="text-[#1C3220]">Smell:</strong> Unmistakably garlicky when leaves crushed</div>
+                <div className="pb-3 border-b border-gray-50"><strong className="text-[#1C3220]">Flowers:</strong> White, star-shaped, edible</div>
+                <div className="pb-3 border-b border-gray-50"><strong className="text-[#1C3220]">Warning:</strong> Don&apos;t confuse with lily of the valley (toxic)</div>
+                <div><strong className="text-[#1C3220]">Picking:</strong> Personal use only, take leaves not bulbs</div>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+              <h3 className="font-display font-bold text-[#1C3220] text-base mb-4">Related Guides</h3>
+              <div className="space-y-2">
+                {[
+                  { label: "Formby Pinewoods Guide", href: "/formby-pinewoods" },
+                  { label: "Red Squirrels at Formby", href: "/red-squirrels-formby" },
+                  { label: "Formby Beach Guide", href: "/formby-beach" },
+                ].map(({ label, href }) => (
+                  <Link key={href} href={href} className="flex items-center gap-2 text-sm text-[#2E6B3E] hover:text-[#1C3220] font-medium transition py-1 group">
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />{label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </aside>
         </div>
-
-        <div className="mt-8 bg-[#F0F5EF] border border-[#2E6B3E]/20 rounded-2xl p-5">
-          <p className="text-sm font-semibold text-[#1C3220] mb-1">More Formby pinewoods reading</p>
-          <ul className="text-sm text-[#2E6B3E] space-y-1">
-            <li><Link href="/blog/formby-pinewoods-walking-guide" className="hover:underline">Walking in Formby Pinewoods: trail guide →</Link></li>
-            <li><Link href="/blog/red-squirrels-formby-spotting-guide" className="hover:underline">How to actually see red squirrels at Formby →</Link></li>
-            <li><Link href="/blog/natterjack-toads-formby" className="hover:underline">Natterjack Toads at Formby: Britain&apos;s rarest amphibian →</Link></li>
-          </ul>
-        </div>
-
         <ClareBio />
       </div>
     </div>
