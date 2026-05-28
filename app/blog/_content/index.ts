@@ -26,6 +26,8 @@ import BlackpoolOrFormby from "./blackpool-or-formby-family-day-out";
 import FormbyFromBlackpool from "./formby-day-trip-from-blackpool";
 import FormbyBeachSummer from "./formby-beach-summer-guide";
 import SparrowhawkReview from "./the-sparrowhawk-formby-review";
+import FormbyBeachLateMay from "./formby-beach-late-may-2026";
+import FormbyRedSquirrelsJune from "./formby-red-squirrels-june";
 
 export const POST_COMPONENTS: Record<string, ComponentType> = {
   "things-to-do-formby-half-term": HalfTerm,
@@ -50,4 +52,6 @@ export const POST_COMPONENTS: Record<string, ComponentType> = {
   "formby-day-trip-from-blackpool": FormbyFromBlackpool,
   "formby-beach-summer-guide": FormbyBeachSummer,
   "the-sparrowhawk-formby-review": SparrowhawkReview,
+  "formby-beach-late-may-2026": FormbyBeachLateMay,
+  "formby-red-squirrels-june": FormbyRedSquirrelsJune,
 };
