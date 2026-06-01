@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight, Star, MapPin, ArrowRight, Hotel } from "lucide-react";
 import { prisma } from "@/lib/prisma";
-import { LATEROOMS } from "@/lib/affiliate-links";
+import { LATEROOMS, COTTAGES } from "@/lib/affiliate-links";
 
 export const revalidate = 3600;
 
@@ -248,6 +248,25 @@ export default async function OpenAccommodationPage() {
             className="flex-none bg-[#C9A96E] hover:bg-[#E8C87A] text-[#1C3220] font-bold text-sm px-6 py-3.5 rounded-full transition-colors whitespace-nowrap"
           >
             Search on LateRooms →
+          </a>
+        </div>
+
+        {/* ── Cottages.com CTA ──────────────────────────────────────── */}
+        <div className="mt-6 bg-white border border-gray-200 rounded-2xl p-7 flex flex-col sm:flex-row items-center gap-6">
+          <div className="flex-1 text-center sm:text-left">
+            <p className="text-[#C9A96E] text-xs font-bold uppercase tracking-widest mb-1">Self-Catering Partner</p>
+            <h3 className="font-display text-xl font-bold text-[#1C3220] mb-2">Holiday Lets Near Formby Beach</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              Formby has a good number of holiday cottages and lets, particularly useful if you are coming as a group or family. Costs less per head than hotel rooms and you have a proper base. Cottages.com cover properties across Formby and the Sefton Coast.
+            </p>
+          </div>
+          <a
+            href={COTTAGES.summerSale}
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            className="flex-none bg-[#1C3220] hover:bg-[#C9A96E] hover:text-[#1C3220] text-white font-bold text-sm px-6 py-3.5 rounded-full transition-colors whitespace-nowrap"
+          >
+            Browse holiday lets →
           </a>
         </div>
 
