@@ -4,7 +4,7 @@ import Link from "next/link";
 import { MapPin, Train, Car, Hotel, ChevronRight } from "lucide-react";
 import GuideLayout from "@/app/components/GuideLayout";
 import { getGuide } from "@/lib/guides-config";
-import { LATEROOMS } from "@/lib/affiliate-links";
+import { LATEROOMS, SYKES } from "@/lib/affiliate-links";
 
 const BASE_URL = "https://www.formbyguide.co.uk";
 
@@ -299,6 +299,14 @@ export default function TheOpen2026Page() {
               >
                 View all Open Week accommodation in Formby →
               </Link>
+              <a
+                href={SYKES.formbyOpen2026}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="inline-flex items-center gap-2 border border-[#1C3220] text-[#1C3220] px-6 py-3 rounded-full font-semibold text-sm hover:bg-[#1C3220] hover:text-white transition-colors"
+              >
+                Cottages via Sykes →
+              </a>
               <a
                 href={LATEROOMS.formbyOpen2026}
                 target="_blank"
