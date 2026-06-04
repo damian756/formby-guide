@@ -20,10 +20,7 @@ export const GO_APE = {
 
 // Sykes Cottages — self-catering holiday lets (Awin mid 3317)
 export const SYKES = {
-  formby:
-    "https://www.awin1.com/cread.php?awinmid=3317&awinaffid=2780822&campaign=Formby+Self-Catering&ued=https%3A%2F%2Fwww.sykescottages.co.uk%2Fcottages%2Fnorth-west-england%2Flancashire-and-merseyside%2Fformby%2F",
-  formbyOpen2026:
-    "https://www.awin1.com/cread.php?awinmid=3317&awinaffid=2780822&campaign=Formby+Open+2026&ued=https%3A%2F%2Fwww.sykescottages.co.uk%2Fcottages%2Fnorth-west-england%2Flancashire-and-merseyside%2Fformby%2F%3Farrival%3D2026-07-12%26departure%3D2026-07-19",
-  seftonCoast:
-    "https://www.awin1.com/cread.php?awinmid=3317&awinaffid=2780822&campaign=Sefton+Coast+Cottages&ued=https%3A%2F%2Fwww.sykescottages.co.uk%2Fcottages%2Fnorth-west-england%2Flancashire-and-merseyside%2F",
+  formby:        "https://www.awin1.com/cread.php?awinmid=3317&awinaffid=2780822",
+  formbyOpen2026: "https://www.awin1.com/cread.php?awinmid=3317&awinaffid=2780822",
+  seftonCoast:   "https://www.awin1.com/cread.php?awinmid=3317&awinaffid=2780822",
 } as const;
