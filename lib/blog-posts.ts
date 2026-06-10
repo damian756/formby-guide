@@ -374,6 +374,32 @@ export const BLOG_POSTS: BlogPost[] = [
     metaTitle: "Formby in May: Best Things to Do, What to Expect",
     metaDescription: "May is one of the best times to visit Formby. Quieter beach, green pinewoods, red squirrels active, natterjack toads calling in the evenings. What to do, where to go, and what makes May special.",
   },
+  {
+    slug: "formby-asparagus-guide",
+    title: "Formby Asparagus: The Local Delicacy You Should Be Eating Right Now",
+    excerpt: "The asparagus season ends in June. Formby's sandy soil grows some of the best in the country. If you haven't bought it yet this year, this week is your last chance.",
+    author: "Clare",
+    date: "June 10, 2026",
+    readTime: "5 min read",
+    categorySlug: "food",
+    gradient: "linear-gradient(135deg, #1A5C3A 0%, #2E8A6E 100%)",
+    image: "/blog-formby-asparagus.webp",
+    metaTitle: "Formby Asparagus: Where to Buy It and Why It's Special",
+    metaDescription: "Formby asparagus grows in the same sandy soil as the red squirrel pinewoods. The season runs to mid-June. Where to buy it locally, how to cook it, and why the Formby variety has its own flavour.",
+  },
+  {
+    slug: "fathers-day-formby-2026",
+    title: "Father's Day in Formby 2026: The Honest Guide to What's Worth Doing",
+    excerpt: "Father's Day is Sunday 15 June. If your dad is anything like mine, he doesn't want a fuss but he'd appreciate a good lunch and a decent afternoon. Here's what Formby can offer.",
+    author: "Clare",
+    date: "June 10, 2026",
+    readTime: "5 min read",
+    categorySlug: "family",
+    gradient: "linear-gradient(135deg, #1C3220 0%, #2E6B3E 100%)",
+    image: "/blog-fathers-day-formby.webp",
+    metaTitle: "Father's Day in Formby 2026: Where to Eat and What to Do",
+    metaDescription: "Father's Day in Formby on June 15. The best restaurants to book, things to do with the family, and Clare's honest take on what makes a good day out in Formby with a dad in tow.",
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
