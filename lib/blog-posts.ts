@@ -400,6 +400,32 @@ export const BLOG_POSTS: BlogPost[] = [
     metaTitle: "Father's Day in Formby 2026: Where to Eat and What to Do",
     metaDescription: "Father's Day in Formby on June 15. The best restaurants to book, things to do with the family, and Clare's honest take on what makes a good day out in Formby with a dad in tow.",
   },
+  {
+    slug: "formby-beach-july-2026",
+    title: "Formby Beach in July: What to Expect in Peak Season",
+    excerpt: "July is the busiest month at Formby beach. Parking is harder, the beach is fuller, and on a good day it is brilliant. Here is what July actually looks like and how to make the most of it.",
+    author: "Clare",
+    date: "June 22, 2026",
+    readTime: "5 min read",
+    categorySlug: "seasonal",
+    gradient: "linear-gradient(135deg, #1C4A5A 0%, #2E7A9A 100%)",
+    image: "/blog-formby-july-beach.webp",
+    metaTitle: "Formby Beach in July 2026: Parking, Crowds and What to Expect",
+    metaDescription: "July is peak season at Formby Beach. Parking fills by 10am on good weather days. Here is an honest guide to visiting in July, including timing, what to bring, and when to avoid the worst of the crowds.",
+  },
+  {
+    slug: "ainsdale-beach-walk-from-formby",
+    title: "Walking from Formby to Ainsdale: The Coastal Path Along the Beach",
+    excerpt: "One of the best walks on the Sefton Coast and most visitors never do it. From Formby Point south to Ainsdale is about three miles of open beach and dune path. Here is what to expect.",
+    author: "Clare",
+    date: "June 22, 2026",
+    readTime: "6 min read",
+    categorySlug: "walks",
+    gradient: "linear-gradient(135deg, #1A5C3A 0%, #2E8A6E 100%)",
+    image: "/blog-ainsdale-coastal-walk.webp",
+    metaTitle: "Walking from Formby to Ainsdale: Coastal Path Guide",
+    metaDescription: "The coastal walk from Formby Point south to Ainsdale beach covers about three miles of open sand and dune path. What to expect, how long it takes, and practical information for the route.",
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
