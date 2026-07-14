@@ -36,6 +36,8 @@ import FormbyBeachJuly from "./formby-beach-july-2026";
 import AinsdaleCostalWalk from "./ainsdale-beach-walk-from-formby";
 import FormbyRainyDay from "./formby-rainy-day-guide";
 import FormbyNTFirstVisit from "./formby-national-trust-first-visit";
+import FormbyOpenWeek from "./formby-open-week-2026";
+import FormbyCycling from "./formby-cycling-routes";
 
 export const POST_COMPONENTS: Record<string, ComponentType> = {
   "things-to-do-formby-half-term": HalfTerm,
@@ -70,4 +72,6 @@ export const POST_COMPONENTS: Record<string, ComponentType> = {
   "ainsdale-beach-walk-from-formby": AinsdaleCostalWalk,
   "formby-rainy-day-guide": FormbyRainyDay,
   "formby-national-trust-first-visit": FormbyNTFirstVisit,
+  "formby-open-week-2026": FormbyOpenWeek,
+  "formby-cycling-routes": FormbyCycling,
 };
