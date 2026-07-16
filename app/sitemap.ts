@@ -14,7 +14,7 @@ function parseBlogDate(dateStr: string): Date {
 
 // Stable reference dates: update when relevant pages change meaningfully
 const D = {
-  today:  new Date("2026-03-02"),
+  today:  new Date("2026-07-16"),
   feb22:  new Date("2026-02-22"),
   feb15:  new Date("2026-02-15"),
   feb01:  new Date("2026-02-01"),
@@ -36,8 +36,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/activities`,                      lastModified: D.feb15, priority: 0.7, changeFrequency: "monthly" },
     { url: `${BASE_URL}/accommodation`,                   lastModified: D.feb15, priority: 0.7, changeFrequency: "weekly"  },
     { url: `${BASE_URL}/shopping`,                        lastModified: D.feb15, priority: 0.7, changeFrequency: "monthly" },
-    { url: `${BASE_URL}/the-open-2026/accommodation`,     lastModified: D.feb22, priority: 0.8, changeFrequency: "weekly"  },
-    { url: `${BASE_URL}/the-open-2026/restaurants`,       lastModified: D.feb22, priority: 0.8, changeFrequency: "weekly"  },
+    { url: `${BASE_URL}/the-open-2026`,                    lastModified: D.today, priority: 0.9, changeFrequency: "daily"   },
+    { url: `${BASE_URL}/the-open-2026/accommodation`,     lastModified: D.today, priority: 0.8, changeFrequency: "daily"   },
+    { url: `${BASE_URL}/the-open-2026/restaurants`,       lastModified: D.today, priority: 0.8, changeFrequency: "daily"   },
     { url: `${BASE_URL}/about`,                           lastModified: D.feb01, priority: 0.5, changeFrequency: "monthly" },
     { url: `${BASE_URL}/claim-listing`,                   lastModified: D.feb01, priority: 0.5, changeFrequency: "monthly" },
     { url: `${BASE_URL}/advertise`,                       lastModified: D.feb01, priority: 0.5, changeFrequency: "monthly" },
