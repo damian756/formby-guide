@@ -158,7 +158,7 @@ export default function AdvertisePage() {
                 Formby is an affluent village with a strong professional residential base. The audience here responds to premium brands. Display advertising on FormbyGuide, combined with SouthportGuide and SeftonLinks, reaches the full Sefton Coast professional and visitor demographic from a single package.
               </p>
               <p className="text-white/65 text-sm leading-relaxed">
-                One relationship. One invoice. Category exclusivity included. Six months paid upfront. Email us to request the full media kit.
+                One relationship. One invoice. Category exclusivity included. Six-month minimum contract. Email us to request the full media kit.
               </p>
               <a href="mailto:partnerships@seftoncoast.network" className="inline-flex items-center gap-2 mt-6 bg-[#C9A96E] hover:bg-[#b8944f] text-white font-semibold px-5 py-2.5 rounded-lg text-sm transition-colors">
                 <Mail className="w-4 h-4" />
@@ -190,7 +190,7 @@ export default function AdvertisePage() {
           <div className="text-center mb-8">
             <p className="text-[#C9A96E] text-xs font-bold uppercase tracking-widest mb-2">Display advertising</p>
             <h2 className="font-display text-2xl font-bold text-[#1C3220]">Network packages</h2>
-            <p className="text-[#1C3220]/55 text-sm mt-2">Six months paid upfront. Category exclusivity included on all packages.</p>
+            <p className="text-[#1C3220]/55 text-sm mt-2">Six-month minimum contract. Category exclusivity included on all packages.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-5">
             {NETWORK_PACKAGES.map((pkg) => (
@@ -202,7 +202,7 @@ export default function AdvertisePage() {
                 </div>
                 <div className="p-5 bg-white">
                   <div className="text-2xl font-extrabold text-[#1C3220] mb-0.5">{pkg.price}<span className="text-sm font-normal text-[#1C3220]/40"> / month</span></div>
-                  <p className="text-xs text-[#1C3220]/40 mb-4">{pkg.total} paid upfront on agreement</p>
+                  <p className="text-xs text-[#1C3220]/40 mb-4">{pkg.total} · 6-month minimum contract</p>
                   <ul className="space-y-2 mb-5">
                     {pkg.features.map((f) => (
                       <li key={f} className="flex items-start gap-2 text-xs text-[#1C3220]/70">
