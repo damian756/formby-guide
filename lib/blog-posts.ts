@@ -478,6 +478,32 @@ export const BLOG_POSTS: BlogPost[] = [
     metaTitle: "Walking from Formby to Ainsdale: Coastal Path Guide",
     metaDescription: "The coastal walk from Formby Point south to Ainsdale beach covers about three miles of open sand and dune path. What to expect, how long it takes, and practical information for the route.",
   },
+  {
+    slug: "formby-august-guide",
+    title: "Formby in August: Late Summer at Its Best",
+    excerpt: "August at Formby is genuinely brilliant if you time it right. The beach is at its widest, the squirrels are active, and the evenings in the village are everything a late summer evening should be.",
+    author: "Clare",
+    date: "August 21, 2026",
+    readTime: "6 min read",
+    categorySlug: "seasonal",
+    gradient: "linear-gradient(135deg, #1C4A5A 0%, #2E7A9A 100%)",
+    image: "/blog-formby-beach-august.webp",
+    metaTitle: "Formby in August 2026: Late Summer Guide",
+    metaDescription: "August at Formby: what the beach is like, when to go for red squirrels, parking reality, and where to eat in the village in late summer. Clare's honest guide.",
+  },
+  {
+    slug: "formby-red-squirrels-september",
+    title: "Red Squirrels in September: The Season Is Starting at Formby",
+    excerpt: "September is when the red squirrel sighting odds at Formby start to climb. The summer crowds are mostly gone, the squirrels are busier ahead of winter, and the pinewoods feel different. Here is what to expect.",
+    author: "Clare",
+    date: "August 21, 2026",
+    readTime: "5 min read",
+    categorySlug: "wildlife",
+    gradient: "linear-gradient(135deg, #1A5C3A 0%, #2E8A6E 100%)",
+    image: "/blog-formby-red-squirrel-september.webp",
+    metaTitle: "Red Squirrels at Formby in September: What to Expect",
+    metaDescription: "September is when Formby red squirrel sighting rates start to improve. The season runs September to February. Clare's honest guide to visiting in early autumn with odds, tips and practical information.",
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {

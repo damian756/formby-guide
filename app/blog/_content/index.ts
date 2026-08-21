@@ -38,6 +38,8 @@ import FormbyRainyDay from "./formby-rainy-day-guide";
 import FormbyNTFirstVisit from "./formby-national-trust-first-visit";
 import FormbyOpenWeek from "./formby-open-week-2026";
 import FormbyCycling from "./formby-cycling-routes";
+import FormbyAugustGuide from "./formby-august-guide";
+import FormbyRedSquirrelsSeptember from "./formby-red-squirrels-september";
 
 export const POST_COMPONENTS: Record<string, ComponentType> = {
   "things-to-do-formby-half-term": HalfTerm,
@@ -74,4 +76,6 @@ export const POST_COMPONENTS: Record<string, ComponentType> = {
   "formby-national-trust-first-visit": FormbyNTFirstVisit,
   "formby-open-week-2026": FormbyOpenWeek,
   "formby-cycling-routes": FormbyCycling,
+  "formby-august-guide": FormbyAugustGuide,
+  "formby-red-squirrels-september": FormbyRedSquirrelsSeptember,
 };
