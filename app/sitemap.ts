@@ -14,7 +14,7 @@ function parseBlogDate(dateStr: string): Date {
 
 // Stable reference dates: update when relevant pages change meaningfully
 const D = {
-  today:  new Date("2026-08-21"),
+  today:  new Date("2026-09-09"),
   feb22:  new Date("2026-02-22"),
   feb15:  new Date("2026-02-15"),
   feb01:  new Date("2026-02-01"),
