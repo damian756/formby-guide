@@ -58,7 +58,7 @@ const schemaData = [
     jobTitle: "Founder, Churchtown Media",
     url: "https://www.churchtownmedia.co.uk/about",
     sameAs: [
-      "https://www.linkedin.com/in/damian-roche-7ba8293a5/",
+      "https://www.linkedin.com/in/damian-roche/",
       "https://find-and-update.company-information.service.gov.uk/company/16960442",
     ],
   },
@@ -182,7 +182,7 @@ export default function AboutPage() {
                     existed anywhere online.
                   </p>
                   <a
-                    href="https://www.linkedin.com/in/damian-roche-7ba8293a5/"
+                    href="https://www.linkedin.com/in/damian-roche/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 mt-2 text-sm font-semibold text-[#1C3220] hover:text-[#2E6B3E] transition-colors"

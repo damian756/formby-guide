@@ -43,4 +43,4 @@ Written in the voice of **Clare** — a 44-year-old local Formby woman. Practica
 ## Developer
 
 **Damian Roche** — Churchtown Media  
-[churchtownmedia.co.uk](https://www.churchtownmedia.co.uk) · [LinkedIn](https://www.linkedin.com/in/damian-roche-7ba8293a5/)
+[churchtownmedia.co.uk](https://www.churchtownmedia.co.uk) · [LinkedIn](https://www.linkedin.com/in/damian-roche/)
