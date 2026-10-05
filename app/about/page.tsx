@@ -223,6 +223,10 @@ export default function AboutPage() {
                 Featured placement has no influence on what gets written. We may also earn affiliate
                 commissions from some external links. These are disclosed where they appear.
               </p>
+              <p className="text-gray-700 leading-relaxed mt-4">
+                Our publisher&apos;s interests are listed on the{" "}
+                <Link href="/disclosure" className="text-[#2E6B3E] hover:underline font-medium">disclosure page</Link>.
+              </p>
             </div>
           </section>
 
