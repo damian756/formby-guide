@@ -165,6 +165,9 @@ export default function AboutPage() {
                     </a>{" "}
                    : Company No. 16960442
                   </p>
+                  <p className="text-gray-500 text-sm mb-3">
+                    Registered office: Suite RA01, 195-197 Wood Street, London, E17 3NU.
+                  </p>
                   <p className="text-gray-700 leading-relaxed mb-3">
                     Damian is based in Churchtown, Southport: neighbouring Formby and right on the
                     Sefton Coast. He built FormbyGuide as part of the{" "}
