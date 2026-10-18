@@ -58,13 +58,13 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "dotenv": "^17.3.1",
+    "dotenv": "^17.4.2",
     "eslint": "^9",
-    "eslint-config-next": "16.1.6",
-    "sharp": "^0.34.5",
+    "eslint-config-next": "16.2.10",
+    "sharp": "^0.35.3",
     "tailwindcss": "^4",
     "to-ico": "^1.1.5",
-    "tsx": "^4.21.0",
+    "tsx": "^4.23.1",
     "typescript": "^5"
   }
 }
