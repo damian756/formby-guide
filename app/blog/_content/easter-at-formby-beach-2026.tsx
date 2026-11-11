@@ -80,7 +80,7 @@ export default function PostContent() {
 
           <h2>Eating After</h2>
           <p>There are mobile food concessions in the car parks in spring and summer. Bring a flask and a picnic as well, and expect a queue at any van on Easter Saturday.</p>
-          <p>Formby village is a ten-minute drive or twenty-minute walk. For a sit-down meal, book a table at one of the village restaurants. The cafes on Chapel Lane are an option for a lighter lunch. If you want something quick and the kids need feeding now, the village has a few options that won&apos;t involve a long wait.</p>
+          <p>Formby village is a short drive from the beach car parks; on foot, allow at least half an hour. For a sit-down meal, book a table at one of the village restaurants. The cafes on Chapel Lane are an option for a lighter lunch. If you want something quick and the kids need feeding now, the village has a few options that won&apos;t involve a long wait.</p>
         </div>
 
         <div className="mt-8 bg-[#F0F5EF] border border-[#2E6B3E]/20 rounded-2xl p-5">

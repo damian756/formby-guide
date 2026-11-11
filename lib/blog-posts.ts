@@ -373,7 +373,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "fathers-day-formby-2026",
     title: "Father's Day in Formby 2026: The Honest Guide to What's Worth Doing",
-    excerpt: "Father's Day is Sunday 15 June. If your dad is anything like mine, he doesn't want a fuss but he'd appreciate a good lunch and a decent afternoon. Here's what Formby can offer.",
+    excerpt: "Father's Day is Sunday 21 June. If your dad is anything like mine, he doesn't want a fuss but he'd appreciate a good lunch and a decent afternoon. Here's what Formby can offer.",
     author: "Clare",
     date: "June 10, 2026",
     readTime: "5 min read",
@@ -381,7 +381,7 @@ export const BLOG_POSTS: BlogPost[] = [
     gradient: "linear-gradient(135deg, #1C3220 0%, #2E6B3E 100%)",
     image: "/blog-fathers-day-formby.webp",
     metaTitle: "Father's Day in Formby 2026: Where to Eat and What to Do",
-    metaDescription: "Father's Day in Formby on June 15: where to book a meal, things to do with the family, and what makes a good day out in Formby with a dad in tow.",
+    metaDescription: "Father's Day in Formby on 21 June: where to book a meal, things to do with the family, and what makes a good day out in Formby with a dad in tow.",
   },
   {
     slug: "formby-beach-july-2026",

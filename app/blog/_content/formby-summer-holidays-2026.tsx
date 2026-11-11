@@ -101,7 +101,7 @@ export default function PostContent() {
               The village has a cinema. Small, independent, good for a wet afternoon. Check what is on at The Grand Cinema on Chapel Lane.
             </p>
             <p>
-              If you are driving to Southport for a rainy day, Splash World on the promenade and The Atkinson on Lord Street are both in Southport, about 15 minutes from Formby village.
+              If you are driving to Southport for a rainy day, Dunes Splash World on the Esplanade and The Atkinson on Lord Street are both in Southport, about 15 minutes from Formby village.
             </p>
 
             <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">August Bank Holiday Weekend</h2>

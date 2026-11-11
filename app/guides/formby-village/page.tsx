@@ -159,7 +159,7 @@ export default function FormbyVillagePage() {
                   Chapel Lane is Formby&apos;s main shopping street. It&apos;s a mix of independent shops, estate agents (plenty of them: Formby property is expensive), a few cafés, and restaurants nearby.
                 </p>
                 <p className="text-[#1C3220]/70 leading-relaxed mb-4">
-                  It&apos;s not a long street. You can walk the length of it in five minutes. The independent shops are the reason to go: there are no national chains worth noting. There are charity shops on and around Chapel Lane too.
+                  It&apos;s not a long street. You can walk the length of it in five minutes. Most of the shops are independents. There are charity shops on and around Chapel Lane too.
                 </p>
                 <p className="text-[#1C3220]/70 leading-relaxed">
                   Parking on Chapel Lane and surrounding streets is reasonably easy on weekday mornings. Saturday mornings get busy: park in one of the side streets and walk.
@@ -228,7 +228,7 @@ export default function FormbyVillagePage() {
                 {
                   name: "Emily's",
                   type: "Restaurant",
-                  desc: "On Brows Lane. Breakfast and brunch from 9am every day, an à la carte menu in the evening, and a kids menu for under-12s. Emily's advises booking at weekends.",
+                  desc: "On Brows Lane. Breakfast and brunch from 9am every day, an à la carte menu on Monday to Saturday evenings, and a kids menu for under-12s. Emily's advises booking at weekends.",
                   note: "Brows Lane",
                   noteClass: "bg-[#E8EDE6] border-[#1C3220]/10 text-[#2E6B3E]",
                 },

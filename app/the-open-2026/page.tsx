@@ -121,7 +121,7 @@ export default function TheOpen2026Page() {
               Royal Birkdale Golf Club is on Waterloo Road, Southport, PR8 2LX. Visitors play as Members for the Day and check in at the Professional Shop on arrival.
             </p>
             <p className="text-[#1C3220]/75 leading-relaxed mb-4">
-              When we checked the club&apos;s visitors page in November 2026, it said visitor tee times were fully booked throughout 2027, including its Birkdale Experience package, and asked golfers to check back for 2028 availability. The club also runs Open Events, its own competitions, through the year.
+              When we checked the club&apos;s visitor booking page on 11 November 2026, it said visitor tee times were fully booked throughout 2026 and 2027, including its Birkdale Open Experience Package, and asked golfers to check back for 2028 availability. The club also runs Open Events, its own competitions, through the year.
             </p>
             <p className="text-[#1C3220]/75 leading-relaxed mb-4">
               The club asks for smart golf clothing on the course: a collared shirt tucked in and golf shoes. Jeans, tracksuits, round-neck T-shirts and trainers are not allowed.

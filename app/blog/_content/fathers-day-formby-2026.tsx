@@ -14,7 +14,7 @@ export default function PostContent() {
             "@type": "Article",
             headline: "Father's Day in Formby 2026: The Honest Guide to What's Worth Doing",
             description:
-              "Father's Day in Formby on June 15. Where to book a meal, things to do with the family, and what makes a good day out in Formby with a dad in tow.",
+              "Father's Day in Formby on 21 June: where to book a meal, things to do with the family, and what makes a good day out in Formby with a dad in tow.",
             url: "https://www.formbyguide.co.uk/blog/fathers-day-formby-2026",
             datePublished: "2026-06-10",
             author: {
@@ -61,7 +61,7 @@ export default function PostContent() {
             Father&apos;s Day in Formby 2026: The Honest Guide to What&apos;s Worth Doing
           </h1>
           <p className="text-white/80 mt-3 text-lg max-w-2xl">
-            Father&apos;s Day is Sunday 15 June. If your dad is anything like mine, he doesn&apos;t want a fuss but he&apos;d appreciate a good lunch and a decent afternoon. Here&apos;s what Formby can offer.
+            Father&apos;s Day is Sunday 21 June. If your dad is anything like mine, he doesn&apos;t want a fuss but he&apos;d appreciate a good lunch and a decent afternoon. Here&apos;s what Formby can offer.
           </p>
           <p className="text-white/55 text-sm mt-3">Clare &middot; 10 June 2026 &middot; 5 min read</p>
         </div>

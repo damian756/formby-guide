@@ -287,7 +287,7 @@ export default function HomePage() {
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
-            { name: "Emily's",          desc: "Brunch from 9am every day and an à la carte menu in the evening. Brows Lane.",  slug: "emilys-formby" },
+            { name: "Emily's",          desc: "Brunch from 9am every day and an à la carte menu on Monday to Saturday evenings. Brows Lane.",  slug: "emilys-formby" },
             { name: "The Sparrowhawk",  desc: "A Brunning & Price pub in a country house with five acres of woods and parkland. Southport Old Road.", slug: "the-sparrowhawk-formby" },
             { name: "Don Luigi",        desc: "Italian restaurant with pizza, a grill menu and small plates. Church Road.", slug: "don-luigi-formby" },
             { name: "Sorrento",         desc: "Family-run Italian restaurant, in Formby since 2009, with outdoor seating. Three Tuns Lane.", slug: "sorrento" },

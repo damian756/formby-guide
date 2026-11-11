@@ -97,7 +97,7 @@ export default function PostContent() {
 
           <p>There are mobile food concessions in the car parks in spring and summer only, and there is no year-round National Trust cafe at Formby. Bring a picnic and a flask if you don&apos;t want to move the car.</p>
 
-          <p>For a proper lunch, Formby village is about a ten-minute drive or a twenty-minute walk from the beach. Book ahead at weekends if you want a sit-down meal at one of the village restaurants. The cafes on Chapel Lane are an option for something lighter. If you want quick and easy with kids, the village has a few options that will sort you out without fuss.</p>
+          <p>For a proper lunch, Formby village is a short drive from the beach car parks; on foot, allow at least half an hour. Book ahead at weekends if you want a sit-down meal at one of the village restaurants. The cafes on Chapel Lane are an option for something lighter. If you want quick and easy with kids, the village has a few options that will sort you out without fuss.</p>
 
           <h2>How Long Do You Need?</h2>
 

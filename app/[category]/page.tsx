@@ -33,7 +33,7 @@ const CAT_ORDER = [
 
 const CATEGORY_CONTENT: Record<string, React.ReactNode[]> = {
   "restaurants": [
-    <>Places to eat in Formby include Emily&apos;s on Brows Lane, which serves brunch by day and an à la carte menu in the evening; two Italian restaurants, Don Luigi on Church Road and Sorrento on Three Tuns Lane; and <Link href="/restaurants/the-sparrowhawk-formby" className="text-[#2E6B3E] hover:underline font-medium">The Sparrowhawk</Link>, a Brunning &amp; Price pub on Southport Old Road.</>,
+    <>Places to eat in Formby include Emily&apos;s on Brows Lane, which serves brunch by day and an à la carte menu on Monday to Saturday evenings; two Italian restaurants, Don Luigi on Church Road and Sorrento on Three Tuns Lane; and <Link href="/restaurants/the-sparrowhawk-formby" className="text-[#2E6B3E] hover:underline font-medium">The Sparrowhawk</Link>, a Brunning &amp; Price pub on Southport Old Road.</>,
     "The listings below give each restaurant's address and contact details. Opening times change through the year, so check with the restaurant before you go.",
   ],
   "cafes": [

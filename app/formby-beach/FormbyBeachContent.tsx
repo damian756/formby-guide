@@ -550,7 +550,7 @@ export default function FormbyBeachContent() {
                 href: "/restaurants/emilys-formby",
                 tag: "Brunch from 9am",
                 tagColor: "bg-[#1C3220] text-white",
-                desc: "A restaurant on Brows Lane serving breakfast and brunch from 9am every day and an à la carte menu in the evening. Well-behaved dogs are welcome until 5pm.",
+                desc: "A restaurant on Brows Lane serving breakfast and brunch from 9am every day and an à la carte menu on Monday to Saturday evenings. Well-behaved dogs are welcome until 5pm.",
                 note: "10 min drive",
               },
               {
