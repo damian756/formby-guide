@@ -58,6 +58,29 @@ It applies to all five sites: Southport Guide, Formby Guide, Sefton Links, Sefto
 
 ---
 
+## 1b. Standing rule: traffic first (Damian, 11 Nov 2026)
+
+Damian's words, 11 Nov 2026, for every Sefton Coast and Lakes network site: "their only goal is to drive traffic, we dont need to focus much on conversion, but just raw numbers. Having high traffic is what will sell the advert space locally".
+
+**What it means:**
+- **Judge every choice by visits from search.**
+  - Keep every page that can rank indexable and in the sitemap.
+  - Write titles and descriptions for what people search: place plus thing, in plain words.
+  - Never trade a title or address that ranks for a tidier one.
+- **Fix anything that stops a page being crawled or indexed:** canonicals, redirect chains, a noindex left on by accident, thin duplicates.
+- **Link related pages to each other,** within a site and across the network where it helps the reader.
+- **Keep pages fast.**
+- **No new conversion work:** no new calls to action, pop-ups or funnels. Fixes to broken forms or wrong promises still count as fixes.
+- **Each site's report carries "Traffic: what to do next"**, ranked by the visits it is likely to gain:
+  - search terms not yet covered;
+  - pages one edit away from ranking;
+  - a sensible number of posts a month.
+
+  Later sessions work from that plan.
+- **Advertise pages:** the ranking titles were restored on 11 Nov ("Advertise on [Site] | Sefton Coast Network | [domain]"). Keep them, keep the URL, canonical and the site's own link text to `/advertise`, and keep the plain advertising phrases ("advertising in Southport", "Featured listings and display advertising"). Each site's report records this under SEO.
+
+---
+
 ## 2. Shared architecture: file map
 
 All four are Next.js 16 App Router, Tailwind v4, Prisma (Neon), deployed on Vercel. Blog posts are code, not CMS.
