@@ -39,7 +39,7 @@ export default function PrivacyPage() {
             <p className="text-[#C9A96E] text-xs font-bold uppercase tracking-widest">Legal</p>
           </div>
           <h1 className="font-display text-4xl font-bold text-white mb-2">Privacy Policy</h1>
-          <p className="text-white/50 text-sm">Last updated: 20 February 2026</p>
+          <p className="text-white/50 text-sm">Last updated: 11 November 2026</p>
         </div>
       </section>
 
@@ -76,11 +76,15 @@ export default function PrivacyPage() {
                 },
                 {
                   title: "Billing information",
-                  desc: "Handled entirely by Stripe, our payment processor. We do not store or have access to card details.",
+                  desc: "Advertising and featured listings are paid by invoice. There is no checkout on this site and we do not take card payments here.",
                 },
                 {
                   title: "Usage data",
-                  desc: "Privacy-friendly, cookieless page view analytics via Plausible. No personal data or IP addresses are collected or stored.",
+                  desc: "Ahrefs Web Analytics: page view statistics without cookies. It records the page, referrer, browser, device, language, screen size and approximate location (city level), and counts visitors with a daily pseudonymous identifier that is not kept across days.",
+                },
+                {
+                  title: "Page view counts",
+                  desc: "We keep a daily count of views for each page in our own database: the page address, the date and a number. Nothing about you is stored: no IP address, cookie or device details.",
                 },
               ].map(({ title, desc }) => (
                 <div key={title} className="flex gap-4">
@@ -108,8 +112,8 @@ export default function PrivacyPage() {
                   {[
                     ["Contact enquiries", "Legitimate interest and your consent"],
                     ["Business listings", "Performance of a contract (your listing agreement)"],
-                    ["Payment processing", "Performance of a contract"],
-                    ["Analytics", "Legitimate interest in understanding site usage"],
+                    ["Invoicing for advertising", "Performance of a contract"],
+                    ["Analytics and page view counts", "Legitimate interest in understanding site usage"],
                   ].map(([purpose, basis]) => (
                     <tr key={purpose}>
                       <td className="p-3 border border-gray-100 text-gray-700">{purpose}</td>
@@ -126,7 +130,8 @@ export default function PrivacyPage() {
             <ul className="space-y-2 text-gray-600 text-sm">
               <li className="flex gap-3"><span className="text-[#C9A96E]">→</span> Contact form submissions: <strong>12 months</strong></li>
               <li className="flex gap-3"><span className="text-[#C9A96E]">→</span> Business listing data: <strong>for the duration of your listing plus 6 months</strong></li>
-              <li className="flex gap-3"><span className="text-[#C9A96E]">→</span> Analytics data: <strong>aggregated, no personal data retained</strong> (Plausible Analytics)</li>
+              <li className="flex gap-3"><span className="text-[#C9A96E]">→</span> Page view counts: <strong>daily totals per page, kept in our own database</strong></li>
+              <li className="flex gap-3"><span className="text-[#C9A96E]">→</span> Ahrefs Web Analytics data: <strong>held by Ahrefs</strong> (see Ahrefs&apos; privacy information)</li>
             </ul>
           </section>
 
@@ -134,8 +139,7 @@ export default function PrivacyPage() {
             <h2 className="font-display text-xl font-bold text-[#1C3220] mb-4">5. Third parties we share data with</h2>
             <div className="space-y-3">
               {[
-                { name: "Plausible (Analytics)", detail: "Privacy-friendly, cookieless analytics. All data is aggregated and processed in the EU. No personal data is collected." },
-                { name: "Stripe", detail: "Payment processing for paid business listings. Subject to Stripe's own privacy policy." },
+                { name: "Ahrefs (Web Analytics)", detail: "Ahrefs Web Analytics: page view statistics without cookies. It records the page, referrer, browser, device, language, screen size and approximate location (city level), and counts visitors with a daily pseudonymous identifier that is not kept across days." },
                 { name: "Vercel", detail: "Website hosting infrastructure. Data is processed in UK/EU-region data centres where possible." },
                 { name: "Resend", detail: "Transactional email delivery for contact form submissions. Emails are processed and delivered via Resend's infrastructure." },
               ].map(({ name, detail }) => (
@@ -145,6 +149,12 @@ export default function PrivacyPage() {
                 </div>
               ))}
             </div>
+            <p className="text-gray-500 text-sm mt-4">
+              Ahrefs describes its analytics on its own page:{" "}
+              <a href="https://help.ahrefs.com/en/articles/10247870-about-ahrefs-web-analytics" target="_blank" rel="noopener noreferrer" className="text-[#2E6B3E] hover:underline">
+                About Ahrefs Web Analytics
+              </a>.
+            </p>
             <p className="text-gray-500 text-sm mt-4 font-medium">We do not sell your personal data to any third party.</p>
           </section>
 
@@ -162,7 +172,7 @@ export default function PrivacyPage() {
                 <tbody className="divide-y divide-gray-50">
                   {[
                     ["Essential", "Site functionality (session, security)", "No: always active"],
-                    ["Analytics (Plausible)", "Understanding how visitors use the site: cookieless, no consent needed", "No"],
+                    ["Analytics (Ahrefs Web Analytics)", "Understanding how visitors use the site: Ahrefs Web Analytics sets no cookies", "No"],
                   ].map(([type, purpose, required]) => (
                     <tr key={type}>
                       <td className="px-4 py-3 font-semibold text-[#1C3220] align-top whitespace-nowrap">{type}</td>
