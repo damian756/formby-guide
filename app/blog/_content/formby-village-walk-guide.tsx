@@ -95,7 +95,7 @@ export default function PostContent() {
         <div className="prose prose-lg prose-slate max-w-none">
 
           <p className="text-xl text-[#1C3220] font-medium leading-relaxed mb-8">
-            Most people who visit Formby go straight to the beach. Which is fair: the beach and pinewoods are genuinely the main event. But if you&apos;re here for a full day, or you&apos;ve done the beach and want something else, the village itself is worth an hour. Here&apos;s what&apos;s actually there.
+            Most people who visit Formby go straight to the beach. Which is fair: the beach and pinewoods are the main event. But if you&apos;re here for a full day, or you&apos;ve done the beach and want something else, the village itself is worth an hour. Here&apos;s what&apos;s actually there.
           </p>
 
           <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">Chapel Lane</h2>
@@ -103,7 +103,7 @@ export default function PostContent() {
             Chapel Lane is the best street in Formby for browsing. It runs parallel to the main Formby bypass road and has a cluster of independent shops: boutiques, gift shops, a few cafes: that give the village a proper centre. It&apos;s where you go if you want to spend an hour browsing and come home with something that isn&apos;t from Amazon.
           </p>
           <p className="text-[#4A6B5A] leading-relaxed mb-4">
-            I&apos;m in the charity shops here most weeks. There are a couple that stock genuinely good quality items: Formby is an affluent area and the charity shop donations reflect that. If you&apos;re a bargain hunter, it&apos;s worth 20 minutes. I&apos;ve found some proper things over the years.
+            I&apos;m in the charity shops here most weeks. There are a couple that stock good quality items: Formby is an affluent area and the charity shop donations reflect that. If you&apos;re a bargain hunter, it&apos;s worth 20 minutes. I&apos;ve found some proper things over the years.
           </p>
 
           <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">The high street and surrounding roads</h2>
@@ -125,9 +125,9 @@ export default function PostContent() {
           </p>
 
           <div className="bg-[#1C3220] text-white rounded-xl p-6 my-10">
-            <p className="font-bold text-[#C9A96E] text-sm uppercase tracking-wide mb-2">The honest case for the village</p>
+            <p className="font-bold text-[#C9A96E] text-sm uppercase tracking-wide mb-2">The case for the village</p>
             <p className="leading-relaxed text-white/85">
-              Formby village isn&apos;t a destination in its own right: it&apos;s a pleasant complement to the beach. If you&apos;re here for the day and you want more than just sand and pinewoods, a village wander is a genuinely nice way to spend the second half of it. Especially if there are good charity shops involved.
+              Formby village isn&apos;t a destination in its own right: it&apos;s a pleasant complement to the beach. If you&apos;re here for the day and you want more than just sand and pinewoods, a village wander is a nice way to spend the second half of it. Especially if there are good charity shops involved.
             </p>
           </div>
 

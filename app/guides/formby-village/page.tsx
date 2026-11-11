@@ -185,7 +185,7 @@ export default function FormbyVillagePage() {
               {[
                 {
                   type: "Independent Shops",
-                  desc: "A handful of genuinely independent shops on and near Chapel Lane: gifts, clothing, interiors. Not extraordinary but better than most town centres. The kind of shopping trip where you buy something you weren't expecting to.",
+                  desc: "A handful of independent shops on and near Chapel Lane: gifts, clothing, interiors. Not extraordinary but better than most town centres. The kind of shopping trip where you buy something you weren't expecting to.",
                   icon: ShoppingBag,
                 },
                 {

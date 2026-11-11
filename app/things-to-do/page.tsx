@@ -49,7 +49,7 @@ const FEATURED = [
     id: "beach",
     tag: "Beach · Sand dunes",
     title: "Formby Beach",
-    desc: "A proper beach. Wide open sand, dramatic dunes, and the Irish Sea with no theme park attached. Walk through the pinewoods to get there: about 15 minutes from the car park. The moment you come over the dunes is genuinely great.",
+    desc: "A proper beach. Wide open sand, dramatic dunes, and the Irish Sea with no theme park attached. Walk through the pinewoods to get there: about 15 minutes from the car park. The moment you come over the dunes is great.",
     href: "/formby-beach",
     image: "/beach-dunes-new.webp",
     imagePosition: "object-center",
@@ -82,7 +82,7 @@ const SECONDARY = [
     id: "cycling",
     tag: "Cycling · Outdoor",
     title: "Cycle the Sefton Coast",
-    desc: "The Trans Pennine Trail runs along the coast and is cycle-friendly. Southport to Formby without touching a main road: flat, largely traffic-free, and genuinely pretty. Good for families with older children who can manage a few miles.",
+    desc: "The Trans Pennine Trail runs along the coast and is cycle-friendly. Southport to Formby without touching a main road: flat, largely traffic-free, and pretty. Good for families with older children who can manage a few miles.",
     href: "/activities",
     image: "/ainsdale-beach.webp",
     imagePosition: "object-center",
@@ -172,7 +172,7 @@ export default function ThingsToDoPage() {
           <div className="md:flex md:items-end md:gap-16">
             <div className="mb-8 md:mb-0 md:flex-1">
               <p className="font-display text-2xl md:text-3xl text-white font-semibold leading-snug">
-                Small village, <span className="text-[#C9A96E]">genuinely full day out</span>: the NT site alone is worth the drive from Liverpool or Manchester.
+                Small village, <span className="text-[#C9A96E]">full day out</span>: the NT site alone is worth the drive from Liverpool or Manchester.
               </p>
               <p className="text-white/55 text-sm leading-relaxed mt-4 max-w-xl">
                 Add the village restaurants and a walk through the pines and you won&apos;t be stuck for things to do.

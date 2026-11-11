@@ -91,7 +91,7 @@ export default function PostContent() {
             From the car park you have three main options: the red squirrel trail through the pinewoods, the path to the beach through the dunes, or the coastal path walking north or south. Most first-time visitors do the squirrel trail first and then walk to the beach. That is the right order.
           </p>
           <p>
-            The squirrel trail is a marked circular route through the pinewoods. It takes about 45 minutes at a relaxed pace. The squirrels are red squirrels: a genuinely rare thing in England. Formby is one of the strongholds for the species in the north west because the grey squirrels that have displaced red squirrels elsewhere have not established in the pinewoods here.
+            The squirrel trail is a marked circular route through the pinewoods. It takes about 45 minutes at a relaxed pace. The squirrels are red squirrels: a rare thing in England. Formby is one of the strongholds for the species in the north west because the grey squirrels that have displaced red squirrels elsewhere have not established in the pinewoods here.
           </p>
           <p>
             From the squirrel trail it is a 10 to 15 minute walk through the dunes to reach the open beach. The path is sandy and winds through the dune system. Take it slowly and look at the dune plants. There is sea holly in July, the distinctive electric-blue spiky plant, and the dunes are worth noticing in their own right rather than just rushing through to reach the sand.

@@ -102,7 +102,7 @@ export default function PostContent() {
                 I drove past the signs for Crosby Beach hundreds of times before I actually stopped. When I finally went: properly, at low tide, early morning, with decent light: I understood why people travel specifically to see them. The figures are eerie in the best possible way. Covered in barnacles, stained by salt and rust, staring out at the Irish Sea. There&apos;s nothing quite like it.
               </p>
               <p>
-                Combined with a morning at Formby Beach or the pinewoods, it makes a genuinely brilliant full day on the Sefton Coast. Here&apos;s how to do it.
+                Combined with a morning at Formby Beach or the pinewoods, it makes a brilliant full day on the Sefton Coast. Here&apos;s how to do it.
               </p>
             </div>
 
@@ -219,7 +219,7 @@ export default function PostContent() {
               {[
                 { item: "Wellies or waterproof boots", note: "The sand near the tide line is wet. Trainers will be soaked." },
                 { item: "Check tide times", note: "Crosby Beach Tides: search before you leave home." },
-                { item: "Camera", note: "The figures are genuinely photogenic in interesting light. Go for it." },
+                { item: "Camera", note: "The figures are photogenic in interesting light. Go for it." },
                 { item: "Dogs welcome", note: "Dogs are allowed on Crosby Beach year-round. No seasonal restrictions." },
                 { item: "No café on the beach", note: "Bring a flask. The nearest café is back in Crosby village." },
                 { item: "Allow 1–1.5 hours", note: "Walk out, find figures in the water at low tide, walk back. Don't rush it." },

@@ -148,7 +148,7 @@ export default function PostContent() {
                   <div className="flex-1">
                     <h3 className="font-display text-xl font-bold mb-1">Formby Pinewoods: The Half Term Move</h3>
                     <p className="text-white/70 text-sm mb-4 leading-relaxed">
-                      Sandy trails, woodland, red squirrels if you&apos;re patient and quiet, and enough space for kids to genuinely run around for hours. Three hours here = shattered kids = quiet afternoon.
+                      Sandy trails, woodland, red squirrels if you&apos;re patient and quiet, and enough space for kids to run around for hours. Three hours here = shattered kids = quiet afternoon.
                     </p>
                     <div className="grid grid-cols-2 gap-3 mb-5">
                       {[

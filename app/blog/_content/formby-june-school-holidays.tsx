@@ -55,7 +55,7 @@ export default function PostContent() {
               <span className="text-[#7BBDD4]">The Sweet Spot Before August</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
-              Four kids means I know exactly what Formby is like at every stage of the school calendar. June is genuinely one of the best months. Here&apos;s why.
+              Four kids means I know exactly what Formby is like at every stage of the school calendar. June is one of the best months. Here&apos;s why.
             </p>
           </div>
         </div>
@@ -74,7 +74,7 @@ export default function PostContent() {
                 Formby Beach in June is the best version of itself before the crowds arrive. The water is warming up after a cold spring, the sand is clean, and the dunes are green and alive. You&apos;ll still need to be there before 10am on a sunny Saturday to get a decent parking spot, but it&apos;s not yet the August situation where half the car park is gone before 9am.
               </p>
               <p>
-                Tide times matter more in June because the evenings are long. Evening low tides in June are genuinely beautiful: the light is extraordinary from about 7pm onwards and the beach empties out as families with young children head home. If you can do an evening walk in June, do it.
+                Tide times matter more in June because the evenings are long. Evening low tides in June are beautiful: the light is extraordinary from about 7pm onwards and the beach empties out as families with young children head home. If you can do an evening walk in June, do it.
               </p>
 
               <h2>Red Squirrels in June</h2>
@@ -84,7 +84,7 @@ export default function PostContent() {
 
               <h2>The Pinewoods in June</h2>
               <p>
-                The pinewoods are at their greenest in early summer. The bracken is coming up, the paths are well-defined after the spring growth, and the light through the Scots pines in the morning is genuinely worth getting up early for. The wild garlic from May is mostly over by June, but the woodland floor has its own character in early summer.
+                The pinewoods are at their greenest in early summer. The bracken is coming up, the paths are well-defined after the spring growth, and the light through the Scots pines in the morning is worth getting up early for. The wild garlic from May is mostly over by June, but the woodland floor has its own character in early summer.
               </p>
 
               <h2>What Gets Busy</h2>

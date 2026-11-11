@@ -42,7 +42,7 @@ export default function PostContent() {
             What to Do in Formby When It Rains
           </h1>
           <p className="text-lg text-gray-600 mb-6">
-            British summer, British weather. If your Formby day turns wet, here is an honest guide to what actually works.
+            British summer, British weather. If your Formby day turns wet, here is what works.
           </p>
           <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden mb-6">
             <Image
@@ -68,7 +68,7 @@ export default function PostContent() {
             Rain in the pinewoods is actually fine. The canopy takes most of it. The sandy paths drain quickly and stay walkable in all but the heaviest sustained downpour. If it starts raining lightly while you are in the NT pinewoods, carry on. You are probably more sheltered than you think and the forest in rain has a different quality to it that is worth experiencing at least once.
           </p>
           <p>
-            If it is genuinely heavy, be aware that there is no year-round National Trust cafe at Formby, and the mobile food concessions in the car parks run in spring and summer only. The village is a short drive away, and a warm coffee there is the right call.
+            If it is heavy, be aware that there is no year-round National Trust cafe at Formby, and the mobile food concessions in the car parks run in spring and summer only. The village is a short drive away, and a warm coffee there is the right call.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Lunch in the Village</h2>

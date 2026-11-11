@@ -10,14 +10,14 @@ const BASE_URL = "https://www.formbyguide.co.uk";
 export const metadata: Metadata = {
   title: "Dog-Friendly Formby | Beach Rules, Walks, Pubs & Cafés | FormbyGuide",
   description:
-    "Formby is genuinely good for dogs: NT beach (with seasonal rules), the pinewoods, and dog-welcoming pubs and cafés in the village. The complete dog-friendly guide.",
+    "Formby is good for dogs: NT beach (with seasonal rules), the pinewoods, and dog-welcoming pubs and cafés in the village. The complete dog-friendly guide.",
   keywords:
     "dog friendly formby, formby beach dogs, dogs formby pinewoods, dog friendly pubs formby, formby dog walks",
   alternates: { canonical: `${BASE_URL}/guides/dog-friendly-formby` },
   openGraph: {
     title: "Dog-Friendly Formby | Beach Rules, Walks, Pubs & Cafés",
     description:
-      "Formby is genuinely good for dogs. Beach rules, off-lead walks, and pubs and cafés that welcome dogs.",
+      "Formby is good for dogs. Beach rules, off-lead walks, and pubs and cafés that welcome dogs.",
     url: `${BASE_URL}/guides/dog-friendly-formby`,
     type: "website",
     siteName: "FormbyGuide.co.uk",
@@ -104,7 +104,7 @@ export default function DogFriendlyFormbyPage() {
                 Dog-Friendly Formby
               </h1>
               <p className="text-xl text-white/85 leading-relaxed mb-8">
-                Beach, pinewoods, off-lead walks, and pubs that welcome dogs. Formby is genuinely good for dogs.
+                Beach, pinewoods, off-lead walks, and pubs that welcome dogs. Formby is good for dogs.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 {[
@@ -174,7 +174,7 @@ export default function DogFriendlyFormbyPage() {
                 {
                   area: "Main Pinewoods",
                   rule: "Off-lead fine",
-                  desc: "The woodland paths through the pines are open to dogs. Wide paths, good surfaces, and enough space that your dog isn't going to bother anyone. A genuinely good walk for dogs that like trees and sniffs.",
+                  desc: "The woodland paths through the pines are open to dogs. Wide paths, good surfaces, and enough space that your dog isn't going to bother anyone. A good walk for dogs that like trees and sniffs.",
                   badgeClass: "bg-[#E8EDE6] text-[#2E6B3E]",
                 },
                 {
@@ -318,7 +318,7 @@ export default function DogFriendlyFormbyPage() {
                 },
                 {
                   q: "What's the best season to bring a dog to Formby?",
-                  a: "Autumn and winter are excellent: the beach is quieter, the tide restrictions are off, and the pinewoods are genuinely beautiful in autumn. Summer works fine too but gets busy on weekends.",
+                  a: "Autumn and winter are excellent: the beach is quieter, the tide restrictions are off, and the pinewoods are beautiful in autumn. Summer works fine too but gets busy on weekends.",
                 },
               ].map(({ q, a }) => (
                 <div key={q} className="bg-white rounded-xl p-5 border border-gray-100">

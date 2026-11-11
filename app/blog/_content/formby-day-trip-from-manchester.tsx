@@ -14,7 +14,7 @@ export default function PostContent() {
             "@type": "Article",
             headline: "Formby Day Trip from Manchester: How to Do It Properly",
             description:
-              "Manchester to Formby by train is under 90 minutes. Most people from Manchester have never been. Here is the honest guide to how to get there, what to do, and whether it is worth the journey.",
+              "Manchester to Formby by train is under 90 minutes. Most people from Manchester have never been. Here is a guide to how to get there, what to do, and whether it is worth the journey.",
             url: "https://www.formbyguide.co.uk/blog/formby-day-trip-from-manchester",
             datePublished: "2026-09-09",
             author: {
@@ -53,7 +53,7 @@ export default function PostContent() {
             Formby Day Trip from Manchester: How to Do It Properly
           </h1>
           <p className="text-lg text-gray-600 mb-6">
-            Manchester to Formby by train is under 90 minutes. Most people from Manchester have never been. The beach, the red squirrels, the pinewoods, and a decent lunch. Here is the honest guide.
+            Manchester to Formby by train is under 90 minutes. Most people from Manchester have never been. The beach, the red squirrels, the pinewoods, and a decent lunch. Here is a guide.
           </p>
           <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden mb-6">
             <Image
@@ -70,7 +70,7 @@ export default function PostContent() {
 
         <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
           <p>
-            People from Manchester tend to go to the Peak District for nature, or drive to Blackpool for a seaside day. Formby, which is under 90 minutes by train and has better beaches than Blackpool, a National Trust pinewood reserve, red squirrels and genuinely good restaurants, is mostly overlooked. That is partly a geography perception problem and partly because the train route is not obvious. Here is the straightforward version.
+            People from Manchester tend to go to the Peak District for nature, or drive to Blackpool for a seaside day. Formby, which is under 90 minutes by train and has better beaches than Blackpool, a National Trust pinewood reserve, red squirrels and restaurants, is mostly overlooked. That is partly a geography perception problem and partly because the train route is not obvious. Here is the straightforward version.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Getting There by Train</h2>
@@ -128,7 +128,7 @@ export default function PostContent() {
             Yes. Straightforwardly. The combination of a proper pinewood nature reserve, red squirrel sightings in season, one of the better stretches of beach in the north-west, and a functioning village with decent restaurants is not common within 90 minutes of Manchester by train. It is the kind of day out that surprises people who expected something lesser.
           </p>
           <p>
-            September and October are the best months. The squirrel sighting odds are improving, the beach is quieter than August, the weather can still be genuinely pleasant, and the pinewoods in early autumn light are worth the journey on their own.
+            September and October are the best months. The squirrel sighting odds are improving, the beach is quieter than August, the weather can still be pleasant, and the pinewoods in early autumn light are worth the journey on their own.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Practical Summary</h2>

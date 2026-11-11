@@ -84,7 +84,7 @@ export default function PostContent() {
           May is post-Easter, pre-summer. The school holiday crowds haven&apos;t arrived yet. On a weekday in May, Formby Beach can feel like your own private beach: wide, flat, the dunes greenish-gold with new marram grass, the Irish Sea doing whatever it likes. I&apos;ve walked the full length of the beach in May and counted fewer than 30 people. In August that same walk would put you past several thousand.
         </p>
         <p className="text-gray-700 leading-relaxed mb-5">
-          The weather in May is genuinely better than August on average. That sounds counterintuitive. But May gets more sunshine hours and less rain than the summer months in the northwest, and the wind, always present on the coast, is warmer. You&apos;ll still need a layer, but you&apos;re not piling on waterproofs.
+          The weather in May is better than August on average. That sounds counterintuitive. But May gets more sunshine hours and less rain than the summer months in the northwest, and the wind, always present on the coast, is warmer. You&apos;ll still need a layer, but you&apos;re not piling on waterproofs.
         </p>
         <div className="bg-[#F0F5F1] border-l-4 border-[#2E6B3E] rounded-r-xl px-5 py-4 my-7">
           <p className="text-[#1C3220] font-medium leading-relaxed">

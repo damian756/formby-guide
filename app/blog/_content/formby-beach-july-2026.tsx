@@ -14,7 +14,7 @@ export default function PostContent() {
             "@type": "Article",
             headline: "Formby Beach in July: What to Expect in Peak Season",
             description:
-              "July is peak season at Formby Beach. Parking fills by 10am on good weather days. Here is an honest guide to visiting in July, including timing, what to bring, and when to avoid the worst of the crowds.",
+              "July is peak season at Formby Beach. Parking fills by 10am on good weather days. Here is a guide to visiting in July, including timing, what to bring, and when to avoid the worst of the crowds.",
             url: "https://www.formbyguide.co.uk/blog/formby-beach-july-2026",
             datePublished: "2026-06-22",
             author: {
@@ -70,10 +70,10 @@ export default function PostContent() {
 
         <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
           <p>
-            I have been going to Formby beach most summers for over fifteen years. July is the month when it gets genuinely busy, and that changes how you need to approach it. Not so busy that it stops being worth going. Just busy enough that turning up at 11am on a Saturday without a plan is going to cause problems.
+            I have been going to Formby beach most summers for over fifteen years. July is the month when it gets busy, and that changes how you need to approach it. Not so busy that it stops being worth going. Just busy enough that turning up at 11am on a Saturday without a plan is going to cause problems.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Parking in July: The Honest Version</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Parking in July</h2>
           <p>
             The National Trust car park on Victoria Road (L37 1LJ) is the main access point for the beach and pinewoods. In July, on any day with decent weather, it fills before 10am. I mean that. Not 11am or noon. Before 10am on a warm Sunday in July, that car park is full and there are cars turning around in the lane.
           </p>

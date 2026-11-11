@@ -14,7 +14,7 @@ export default function PostContent() {
             "@type": "Article",
             headline: "Formby in August: Late Summer at Its Best",
             description:
-              "August at Formby is genuinely brilliant if you time it right. The beach is at its widest, the squirrels are active, and the evenings in the village are everything a late summer evening should be.",
+              "August at Formby is brilliant if you time it right. The beach is at its widest, the squirrels are active, and the evenings in the village are everything a late summer evening should be.",
             url: "https://www.formbyguide.co.uk/blog/formby-august-guide",
             datePublished: "2026-08-21",
             author: {
@@ -53,7 +53,7 @@ export default function PostContent() {
             Formby in August: Late Summer at Its Best
           </h1>
           <p className="text-lg text-gray-600 mb-6">
-            August at Formby is genuinely brilliant if you time it right. The beach is at its widest, the squirrels are active, and the evenings in the village are everything a late summer evening should be.
+            August at Formby is brilliant if you time it right. The beach is at its widest, the squirrels are active, and the evenings in the village are everything a late summer evening should be.
           </p>
           <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden mb-6">
             <Image
@@ -78,7 +78,7 @@ export default function PostContent() {
             Formby beach in August is wide and flat at low tide in a way that is still surprising even when you know it. The sand is firm. The tide goes out further than most people expect. The shallow pools of seawater that form at mid-tide reflect the sky in a way that makes the whole place look bigger and more dramatic than it is.
           </p>
           <p>
-            The dunes behind the beach are still green. The marram grass is at its most established in August before the autumn winds start to reshape things. Walking along the top of the dunes gives you views over both the beach and the inland pinewoods that are genuinely worth stopping for.
+            The dunes behind the beach are still green. The marram grass is at its most established in August before the autumn winds start to reshape things. Walking along the top of the dunes gives you views over both the beach and the inland pinewoods that are worth stopping for.
           </p>
           <p>
             Parking: there is no booking, so get there early. The National Trust car park on Victoria Road (L37 1LJ) fills before 10am on warm weekends, and the National Trust asks people to come by train if they can. Pay at the machine or with the JustPark app. Weekdays in August are noticeably easier than Saturdays. If you have flexibility, a Tuesday morning in August is a very different experience from a Saturday afternoon.
@@ -94,7 +94,7 @@ export default function PostContent() {
           <div className="bg-[#F0F7F2] border-l-4 border-[#2E6B3E] p-5 rounded-r-lg my-6">
             <p className="font-semibold text-gray-900 mb-1">Clare&apos;s tip:</p>
             <p className="text-gray-700">
-              Early August mornings on the squirrel trail with nobody else around are genuinely one of the better experiences at Formby. Get there before 9am, go slowly, and look up into the pines rather than along the path.
+              Early August mornings on the squirrel trail with nobody else around are one of the better experiences at Formby. Get there before 9am, go slowly, and look up into the pines rather than along the path.
             </p>
           </div>
 
@@ -103,12 +103,12 @@ export default function PostContent() {
             Formby village in August is relaxed in the right way. The restaurants on Chapel Lane and around the village centre are busy at weekends but not impossible to get into on a weekday evening. Book ahead at weekends. The restaurants directory lists them all with addresses and contact details.
           </p>
           <p>
-            The charity shops on Chapel Lane are worth a proper browse in August. I have been in and out of them for years and the quality varies enormously week to week. August tends to be good for summer clearances. Not glamorous, but genuinely worth forty minutes if you enjoy a rummage.
+            The charity shops on Chapel Lane are worth a proper browse in August. I have been in and out of them for years and the quality varies enormously week to week. August tends to be good for summer clearances. Not glamorous, but worth forty minutes if you enjoy a rummage.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What to Do with Kids in August</h2>
           <p>
-            The beach is the obvious answer and the right one. But the prehistoric footprint trail at Formby Point is worth doing with children who are old enough to be interested. The prints emerge at low tide when conditions are right. They are genuinely ancient and genuinely there, which tends to land differently with children than most heritage experiences do.
+            The beach is the obvious answer and the right one. But the prehistoric footprint trail at Formby Point is worth doing with children who are old enough to be interested. The prints emerge at low tide when conditions are right. They are ancient, and they are right there in front of you, which tends to land differently with children than most heritage experiences do.
           </p>
           <p>
             The squirrel trail works brilliantly with children between about five and twelve. Younger than five is a gamble unless they are patient. Older teenagers often become convincingly enthusiastic once they actually see a squirrel, even if they were cynical about it on the way there.
@@ -119,7 +119,7 @@ export default function PostContent() {
             The last week of August is when Formby starts its shift toward autumn. School holidays end in early September and the character of the place changes noticeably. The late August bank holiday weekend is busy in the way July weekends are busy. After that, the crowds thin and the place becomes something different again.
           </p>
           <p>
-            If you are trying to decide between a late August visit and a September visit, September wins on crowds. August wins on likelihood of genuinely warm weather. It is a genuine trade-off, and either works.
+            If you are trying to decide between a late August visit and a September visit, September wins on crowds. August wins on likelihood of warm weather. It is a genuine trade-off, and either works.
           </p>
         </div>
 

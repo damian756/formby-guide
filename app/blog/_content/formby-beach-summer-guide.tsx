@@ -14,7 +14,7 @@ export default function PostContent() {
             "@type": "Article",
             headline: "Formby Beach in Summer: What You Need to Know Before You Go",
             description:
-              "The honest guide to Formby Beach in summer. Parking, tide times, dogs, crowds, and the best spots. From a local who's been hundreds of times.",
+              "A guide to Formby Beach in summer. Parking, tide times, dogs, crowds, and the best spots. From a local who's been hundreds of times.",
             url: "https://www.formbyguide.co.uk/blog/formby-beach-summer-guide",
             author: {
               "@type": "Person",
@@ -65,7 +65,7 @@ export default function PostContent() {
             Formby Beach in Summer: What You Need to Know Before You Go
           </h1>
           <p className="text-gray-200 text-lg max-w-2xl">
-            The honest guide. Parking, tide times, crowds, dogs, and the spots most visitors miss.
+            Parking, tide times, crowds, dogs, and the spots most visitors miss.
           </p>
         </div>
       </section>
@@ -132,7 +132,7 @@ export default function PostContent() {
         <h2 className="text-2xl font-bold text-[#1C3220] mb-4 mt-10">The Walk from the Car Park</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
           It&apos;s about a 10-15 minute walk from the main car park to the waterline. Through the pinewoods, 
-          over the dune boardwalk, down onto the sand. It&apos;s a genuinely lovely walk. The pinewoods in 
+          over the dune boardwalk, down onto the sand. It&apos;s a lovely walk. The pinewoods in 
           summer are cool and smell exactly like a proper pine forest. The red squirrel sightings along 
           this route are real, particularly early in the morning.
         </p>

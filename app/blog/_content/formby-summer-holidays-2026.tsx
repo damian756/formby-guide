@@ -12,7 +12,7 @@ export default function PostContent() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            headline: "Formby Summer Holidays 2026: Six Weeks with Kids, Honestly",
+            headline: "Formby Summer Holidays 2026: Six Weeks with Kids",
             description: "How to use Formby through the school summer holidays. Beach timing, red squirrels, pinewoods walks, rainy day options, and what to avoid on August bank holiday weekend.",
             url: "https://www.formbyguide.co.uk/blog/formby-summer-holidays-2026",
             author: { "@type": "Person", "@id": "https://www.formbyguide.co.uk/about#clare", name: "Clare", url: "https://www.formbyguide.co.uk/about" },
@@ -51,7 +51,7 @@ export default function PostContent() {
               Family
             </div>
             <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-4">
-              Formby Summer Holidays 2026: Six Weeks with Kids, Honestly
+              Formby Summer Holidays 2026: Six Weeks with Kids
             </h1>
             <p className="text-lg text-white/80">1 June 2026 · 6 min read · Written by Clare</p>
           </div>

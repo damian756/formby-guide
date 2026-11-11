@@ -68,7 +68,7 @@ export const GUIDES: Guide[] = [
     title: "Formby Beach",
     description: "National Trust beach with sand dunes. Postcode, parking, dogs, and what to expect.",
     excerpt:
-      "Formby Beach guide: postcode L37 1LJ, parking, dog rules, facilities, sand dunes, and honest advice on what to expect. Written by a Formby local.",
+      "Formby Beach guide: postcode L37 1LJ, parking, dog rules, facilities, sand dunes, and what to expect. Written by a Formby local.",
     category: "nature-walks",
     heroImage: "/formby-beach-hero.jpg",
     url: "/formby-beach",
@@ -83,7 +83,7 @@ export const GUIDES: Guide[] = [
     },
     metaTitle: "Formby Beach | Postcode, Parking, Dogs & What to Expect | FormbyGuide",
     metaDescription:
-      "Formby Beach guide: postcode L37 1LJ, parking (pay at the machine or with JustPark), dog rules, sand dunes, and honest advice from a local.",
+      "Formby Beach guide: postcode L37 1LJ, parking (pay at the machine or with JustPark), dog rules, sand dunes, and advice from a local.",
   },
   {
     slug: "red-squirrels-formby",
@@ -153,7 +153,7 @@ export const GUIDES: Guide[] = [
     title: "Dog-Friendly Formby",
     description: "Beach access rules, off-lead walks, and pubs and cafés that welcome dogs.",
     excerpt:
-      "Formby is genuinely good for dogs: the NT beach (with seasonal rules), the pinewoods, and a cluster of dog-welcoming pubs and cafés in the village.",
+      "Formby is good for dogs: the NT beach (with seasonal rules), the pinewoods, and a cluster of dog-welcoming pubs and cafés in the village.",
     category: "practical",
     heroImage: "/dog-on-formby-beach.jpg",
     seoPriority: 0.85,
@@ -167,7 +167,7 @@ export const GUIDES: Guide[] = [
     },
     metaTitle: "Dog-Friendly Formby | Beach Rules, Walks, Pubs & Cafés | FormbyGuide",
     metaDescription:
-      "Formby is genuinely dog-friendly. Beach access rules, best off-lead walks in the pinewoods, and the pubs and cafés that actually welcome dogs.",
+      "Formby is dog-friendly. Beach access rules, best off-lead walks in the pinewoods, and the pubs and cafés that actually welcome dogs.",
   },
 
   // ── Areas ────────────────────────────────────────────────────────────────

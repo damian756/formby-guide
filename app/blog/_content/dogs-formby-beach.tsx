@@ -55,7 +55,7 @@ export default function PostContent() {
               <span className="text-[#C9A96E]">to Formby Beach?</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
-              Short answer: yes. Longer answer: it depends on the time of year and which part of the beach you&apos;re on. Here&apos;s the honest version.
+              Short answer: yes. Longer answer: it depends on the time of year and which part of the beach you&apos;re on. Here are the details.
             </p>
             <div className="flex items-center gap-3 text-sm text-white/60 flex-wrap">
               <div className="flex items-center gap-2">
@@ -127,7 +127,7 @@ export default function PostContent() {
                 The restriction doesn&apos;t cover the whole beach. North of the restriction (toward Freshfield and Ainsdale) dogs are still welcome. South toward Formby Point, also fine. It&apos;s a specific middle section that gets protected.
               </p>
               <p>
-                In practice, this means most dog walkers just come in spring, autumn and winter: when the beach is genuinely brilliant, often much quieter, and the weather is more interesting if you&apos;re into that kind of thing. My favourite dog walks here are October to March.
+                In practice, this means most dog walkers just come in spring, autumn and winter: when the beach is often much quieter, and the weather is more interesting if you&apos;re into that kind of thing. My favourite dog walks here are October to March.
               </p>
               <h2>On Lead or Off Lead?</h2>
               <p>

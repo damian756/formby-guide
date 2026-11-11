@@ -97,7 +97,7 @@ export default function PostContent() {
               <span className="text-[#C9A96E]">Pinewoods</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
-              The Pinewoods are genuinely one of the best things about living here. Ancient coastal woodland, red squirrels, dune systems and sea views: all within walking distance of Formby station. Here&apos;s how to make the most of it.
+              The Pinewoods are one of the best things about living here. Ancient coastal woodland, red squirrels, dune systems and sea views: all within walking distance of Formby station. Here&apos;s how to make the most of it.
             </p>
             <div className="flex items-center gap-3 text-sm text-white/60 flex-wrap">
               <div className="flex items-center gap-2">
@@ -140,7 +140,7 @@ export default function PostContent() {
           <article className="lg:col-span-2">
             <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 prose-p:leading-relaxed prose-strong:text-[#1C3220] max-w-none mb-8">
               <p className="lead text-xl text-gray-600 leading-relaxed">
-                Formby Pinewoods is remarkable. A coastal plantation of Scots and Corsican pine that creates its own microclimate: warmer, quieter, and genuinely otherworldly compared to the exposed beach just metres away.
+                Formby Pinewoods is remarkable. A coastal plantation of Scots and Corsican pine that creates its own microclimate: warmer, quieter, and otherworldly compared to the exposed beach just metres away.
               </p>
               <p>
                 I walk here at least once a week. Here&apos;s what I&apos;ve learned that the trail maps don&apos;t tell you.
@@ -161,7 +161,7 @@ export default function PostContent() {
                 <div>
                   <p className="font-bold text-amber-900 mb-1">What the brochure doesn&apos;t tell you about the terrain</p>
                   <p className="text-amber-800 text-sm leading-relaxed">
-                    The Pinewoods are sandy. Not &quot;a bit sandy&quot;: genuinely sandy. Trainers get filled with sand within ten minutes on the dune sections. Bring proper walking shoes or wellies. Your favourite white Nikes will not thank you.
+                    The Pinewoods are sandy. Not &quot;a bit sandy&quot;: very sandy. Trainers get filled with sand within ten minutes on the dune sections. Bring proper walking shoes or wellies. Your favourite white Nikes will not thank you.
                   </p>
                 </div>
               </div>
@@ -251,7 +251,7 @@ export default function PostContent() {
                 {[
                   { label: "Best time of day", val: "Early morning (before 9:30am). Still, quiet, best wildlife activity, beautiful light." },
                   { label: "Best season", val: "Spring and autumn. Spring for new growth and active squirrels. Autumn for colour and foraging wildlife." },
-                  { label: "Best day of week", val: "Wednesday or Thursday morning. Quietest by far. Weekends can be genuinely busy." },
+                  { label: "Best day of week", val: "Wednesday or Thursday morning. Quietest by far. Weekends can be busy." },
                   { label: "Avoid", val: "Saturday afternoons in summer. August bank holidays. Any time after heavy rain (boggy and slippery in places)." },
                 ].map(({ label, val }) => (
                   <div key={label} className="bg-white/10 rounded-xl p-4">

@@ -12,7 +12,7 @@ export default function PostContent() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            headline: "Formby Day Trip from Liverpool: The Honest Guide",
+            headline: "Formby Day Trip from Liverpool: A Local Guide",
             description: "How to do a Formby day trip from Liverpool (or Manchester) properly. Train times, what to do, where to eat, and how long you actually need.",
             url: "https://www.formbyguide.co.uk/blog/formby-day-trip-from-liverpool",
             author: { "@type": "Person", "@id": "https://www.formbyguide.co.uk/about#clare", name: "Clare", url: "https://www.formbyguide.co.uk/about" },
@@ -52,7 +52,7 @@ export default function PostContent() {
             </div>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight">
               Formby Day Trip from Liverpool<br />
-              <span className="text-[#C9A96E]">The Honest Guide</span>
+              <span className="text-[#C9A96E]">A Local Guide</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
               25 minutes on the Merseyrail. Beach, pinewoods, red squirrels, a decent lunch. Here&apos;s how to do it properly: and what most day trip guides miss.
@@ -99,7 +99,7 @@ export default function PostContent() {
                 People from Liverpool don&apos;t realise how close Formby is. You can be on Formby Beach: proper wide empty sand, dunes, pinewoods behind you: in under half an hour from Liverpool Central. Door to beach, 45 minutes if you&apos;re not rushing.
               </p>
               <p>
-                I&apos;ve lived here 44 years and I&apos;m still slightly baffled that more people don&apos;t make this trip. The beach is genuinely brilliant. The pinewoods are unlike anything else in the North West. And it&apos;s not heaving with tourists the way the Wirral coastline can get on a good day.
+                I&apos;ve lived here 44 years and I&apos;m still slightly baffled that more people don&apos;t make this trip. The beach is brilliant. The pinewoods are unlike anything else in the North West. And it&apos;s not heaving with tourists the way the Wirral coastline can get on a good day.
               </p>
               <p>
                 Here&apos;s how I&apos;d plan it if I were visiting for the first time.
@@ -212,7 +212,7 @@ export default function PostContent() {
             <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 max-w-none">
               <h2>Is It Worth Coming in Winter?</h2>
               <p>
-                Yes. Genuinely. Formby Beach in winter is one of my favourite things about living here. Empty, dramatic, the light off the Irish Sea on a clear January afternoon is properly beautiful. You need layers, decent boots, and a flask. But it&apos;s worth it.
+                Yes. Formby Beach in winter is one of my favourite things about living here. Empty, dramatic, the light off the Irish Sea on a clear January afternoon is properly beautiful. You need layers, decent boots, and a flask. But it&apos;s worth it.
               </p>
               <p>
                 The red squirrel sightings are actually <strong>better</strong> from autumn through February: they&apos;re out earlier and the trees are thinner so you can see them more clearly. If you want to see them, winter is when you go.

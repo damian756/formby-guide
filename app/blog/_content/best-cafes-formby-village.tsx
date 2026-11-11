@@ -77,7 +77,7 @@ export default function PostContent() {
         <div className="prose prose-lg prose-slate max-w-none">
 
           <p className="text-xl text-[#1C3220] font-medium leading-relaxed mb-8">
-            Formby village isn&apos;t exactly overflowing with cafes: but what it has is worth knowing about. A handful of independents that do a decent job, a mobile food concession at the beach car parks in spring and summer, and enough options that you won&apos;t be stuck with a petrol station coffee after a morning walk. Here&apos;s the honest breakdown.
+            Formby village isn&apos;t exactly overflowing with cafes: but what it has is worth knowing about. A handful of independents that do a decent job, a mobile food concession at the beach car parks in spring and summer, and enough options that you won&apos;t be stuck with a petrol station coffee after a morning walk. Here&apos;s the breakdown.
           </p>
 
           <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">Food and Drink at Formby Beach</h2>

@@ -87,7 +87,7 @@ export default function FormbyBeachContent() {
         {/* Editorial intro */}
         <div className="max-w-3xl mb-14">
           <p className="text-lg text-[#1C3220]/80 leading-relaxed mb-4">
-            Formby Beach is a National Trust managed beach on the Sefton Coast: west-facing, backed by significant sand dunes and Scots pine woodland, and genuinely one of the best beaches in the North West. No promenade. No amusements. Wide open sand, the Irish Sea in front of you, and pinewoods behind.
+            Formby Beach is a National Trust managed beach on the Sefton Coast: west-facing, backed by significant sand dunes and Scots pine woodland, and one of the best beaches in the North West. No promenade. No amusements. Wide open sand, the Irish Sea in front of you, and pinewoods behind.
           </p>
           <p className="text-base text-[#1C3220]/70 leading-relaxed mb-4">
             The postcode is <strong>L37 1LJ</strong>. That's where you park: the National Trust car park on Victoria Road. From there it's a 15-minute walk through the pinewoods to the beach itself. On a sunny summer Saturday it fills fast; arrive by 9:30am or use the train. On a Tuesday in November you'll have the place to yourself, which is a very specific kind of brilliant.
@@ -222,7 +222,7 @@ export default function FormbyBeachContent() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5">
                   <h3 className="font-display font-bold text-white text-base mb-1">Best Times</h3>
-                  <p className="text-white/75 text-xs leading-relaxed">Low tide + not too windy = perfect. Winter is brilliant if you like it quiet and dramatic. Sunsets here are genuinely special.</p>
+                  <p className="text-white/75 text-xs leading-relaxed">Low tide + not too windy = perfect. Winter is brilliant if you like it quiet and dramatic. Sunsets here are special.</p>
                 </div>
               </button>
             </div>
@@ -287,7 +287,7 @@ export default function FormbyBeachContent() {
               <div className="p-6">
                 <h3 className="font-semibold text-[#1C3220] text-lg mb-3">The Dunes</h3>
                 <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-3">
-                  Sand dunes over 10 metres high. Part of active conservation effort. You&apos;ll see fenced-off sections: not jobsworth bureaucracy. The dunes are genuinely fragile and the NT is fighting coastal erosion that&apos;s been eating into the pinewoods for decades.
+                  Sand dunes over 10 metres high. Part of active conservation effort. You&apos;ll see fenced-off sections: not jobsworth bureaucracy. The dunes are fragile and the NT is fighting coastal erosion that&apos;s been eating into the pinewoods for decades.
                 </p>
                 <p className="text-xs text-[#1C3220]/50 italic">Please don&apos;t climb restricted areas.</p>
               </div>

@@ -12,7 +12,7 @@ export default function PostContent() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            headline: "Father's Day in Formby 2026: The Honest Guide to What's Worth Doing",
+            headline: "Father's Day in Formby 2026: Where to Eat and What to Do",
             description:
               "Father's Day in Formby on 21 June: where to book a meal, things to do with the family, and what makes a good day out in Formby with a dad in tow.",
             url: "https://www.formbyguide.co.uk/blog/fathers-day-formby-2026",
@@ -58,7 +58,7 @@ export default function PostContent() {
         <div className="relative container mx-auto px-4 max-w-5xl pb-10 pt-16">
           <span className="inline-block bg-[#2E6B3E] text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">Family</span>
           <h1 className="font-display text-3xl md:text-5xl font-bold leading-tight max-w-3xl">
-            Father&apos;s Day in Formby 2026: The Honest Guide to What&apos;s Worth Doing
+            Father&apos;s Day in Formby 2026: Where to Eat and What to Do
           </h1>
           <p className="text-white/80 mt-3 text-lg max-w-2xl">
             Father&apos;s Day is Sunday 21 June. If your dad is anything like mine, he doesn&apos;t want a fuss but he&apos;d appreciate a good lunch and a decent afternoon. Here&apos;s what Formby can offer.
@@ -70,7 +70,7 @@ export default function PostContent() {
       <div className="container mx-auto px-4 max-w-3xl py-10">
         <div className="prose prose-lg prose-green max-w-none">
 
-          <p>Father&apos;s Day is this Sunday and if you are still working out what to do in Formby, here is the honest rundown. I have four kids and a dad I need to keep happy, so I have thought about this more than I probably should have.</p>
+          <p>Father&apos;s Day is this Sunday and if you are still working out what to do in Formby, here is a rundown. I have four kids and a dad I need to keep happy, so I have thought about this more than I probably should have.</p>
 
           <h2>Restaurants</h2>
 
@@ -82,7 +82,7 @@ export default function PostContent() {
 
           <h2>The Beach and Pinewoods</h2>
 
-          <p>Formby Beach on a sunny June day is genuinely excellent. The car park at the National Trust site (L37 1LJ) fills up by late morning. If you are going, go early or accept you will be parking on the road and walking further than planned.</p>
+          <p>Formby Beach on a sunny June day is excellent. The car park at the National Trust site (L37 1LJ) fills up by late morning. If you are going, go early or accept you will be parking on the road and walking further than planned.</p>
 
           <p>The red squirrel trail through the pinewoods is worth doing if your dad has never been. It takes about an hour at a relaxed pace and the squirrels are still active in June. Young squirrels born earlier in the year are out and about. It is not guaranteed, but in June you have a reasonable chance.</p>
 

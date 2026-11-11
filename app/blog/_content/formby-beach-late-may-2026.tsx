@@ -63,7 +63,7 @@ export default function PostContent() {
           <article className="lg:col-span-2 prose prose-lg max-w-none">
 
             <p className="text-xl text-gray-700 font-medium leading-relaxed mb-8">
-              Late May is genuinely one of the nicest times to be at Formby Beach. The pinewoods are properly green, the sand is warm, and the evenings are long enough to make a late afternoon visit worthwhile. It is also, I should warn you, one of the busier periods of the year.
+              Late May is one of the nicest times to be at Formby Beach. The pinewoods are properly green, the sand is warm, and the evenings are long enough to make a late afternoon visit worthwhile. It is also, I should warn you, one of the busier periods of the year.
             </p>
 
             <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">The Parking Reality</h2>
@@ -74,7 +74,7 @@ export default function PostContent() {
               Pay at the machines or with the JustPark app (set up an account before you arrive, as it saves time). NT members and Blue Badge holders park free. There is no booking, so arrive early in busy periods.
             </p>
             <p>
-              If the main car park is full, the other National Trust car park is on Lifeboat Road (L37 2EB), but it is small too and a payment cannot be moved between the two. Do not park on the surrounding residential streets. The alternative is to park back towards Formby village and walk or cycle the coastal path. It adds 20 minutes each way but is genuinely fine if you are not carrying too much.
+              If the main car park is full, the other National Trust car park is on Lifeboat Road (L37 2EB), but it is small too and a payment cannot be moved between the two. Do not park on the surrounding residential streets. The alternative is to park back towards Formby village and walk or cycle the coastal path. It adds 20 minutes each way but is fine if you are not carrying too much.
             </p>
 
             <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">Tide Timing</h2>

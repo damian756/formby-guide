@@ -45,7 +45,7 @@ const CATEGORY_CONTENT: Record<string, React.ReactNode[]> = {
     "The listings below give each pub's address and contact details. If you are bringing a dog or want to eat, check with the pub before you go.",
   ],
   "activities": [
-    "The National Trust pinewoods and red squirrel trail are the headline acts, and they're genuinely worth it. Beyond that, there's cycling along the coastal path, kayaking at Crosby, and horse riding if you've got kids who need something to do.",
+    "The National Trust pinewoods and red squirrel trail are the headline acts. Beyond that, there's cycling along the coastal path, kayaking at Crosby, and horse riding if you've got kids who need something to do.",
     "Formby Beach is an activity in itself: the dunes are brilliant for kids to scramble up, and the walk from the NT car park to the waterline takes about 15–20 minutes depending on the tide. Worth checking tide times before you go.",
     "The Crosby Coastal Park (home to the Iron Men sculpture) is a 20-minute drive south and worth combining into a longer day out on the Sefton Coast.",
   ],
@@ -55,7 +55,7 @@ const CATEGORY_CONTENT: Record<string, React.ReactNode[]> = {
   ],
   "shopping": [
     "Chapel Lane is the main drag for independent shops in Formby: a mix of boutiques, gifts, and the odd useful local service. It's not huge but it's worth a browse, especially if you're killing an hour between lunch and the beach.",
-    "The charity shops are genuinely good. I find something almost every time: there are a couple along the high street that are worth a look if you're patient and not in a rush.",
+    "The charity shops are good. I find something almost every time: there are a couple along the high street that are worth a look if you're patient and not in a rush.",
     "Marks & Spencer has a food shop at The Cloisters on Halsall Lane, useful for picking up food for the beach.",
   ],
   "nature-walks": [
