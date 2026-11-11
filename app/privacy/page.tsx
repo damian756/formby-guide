@@ -142,6 +142,7 @@ export default function PrivacyPage() {
                 { name: "Ahrefs (Web Analytics)", detail: "Ahrefs Web Analytics: page view statistics without cookies. It records the page, referrer, browser, device, language, screen size and approximate location (city level), and counts visitors with a daily pseudonymous identifier that is not kept across days." },
                 { name: "Vercel", detail: "Website hosting infrastructure. Data is processed in UK/EU-region data centres where possible." },
                 { name: "Resend", detail: "Transactional email delivery for contact form submissions. Emails are processed and delivered via Resend's infrastructure." },
+                { name: "OpenStreetMap (maps)", detail: "Maps are drawn with OpenStreetMap tiles, which your browser loads from the OpenStreetMap Foundation's servers; they receive your IP address, browser type, our site's address and the map area you view. On the few listings without a map pin, Google Maps loads only if you click “Show map (Google Maps)”." },
               ].map(({ name, detail }) => (
                 <div key={name} className="bg-[#F7F9F6] rounded-xl p-4">
                   <p className="font-semibold text-[#1C3220] text-sm mb-1">{name}</p>
