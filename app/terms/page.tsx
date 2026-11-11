@@ -6,7 +6,7 @@ import { DISPLAY_EMAIL } from "@/lib/contact";
 const BASE_URL = "https://www.formbyguide.co.uk";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | FormbyGuide.co.uk",
+  title: "Terms & Conditions",
   description: "Terms and Conditions for use of FormbyGuide.co.uk, including business listing terms.",
   alternates: { canonical: `${BASE_URL}/terms` },
   openGraph: {
@@ -39,7 +39,7 @@ export default function TermsPage() {
             <p className="text-[#C9A96E] text-xs font-bold uppercase tracking-widest">Legal</p>
           </div>
           <h1 className="font-display text-4xl font-bold text-white mb-2">Terms &amp; Conditions</h1>
-          <p className="text-white/50 text-sm">Last updated: 20 February 2026</p>
+          <p className="text-white/50 text-sm">Last updated: 11 November 2026</p>
         </div>
       </section>
 
@@ -102,14 +102,14 @@ export default function TermsPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold text-[#1C3220] text-sm mb-2">5.2 Paid subscriptions</h3>
+                <h3 className="font-semibold text-[#1C3220] text-sm mb-2">5.2 Paid placements</h3>
                 <ul className="space-y-2">
                   {[
-                    "Paid subscriptions are billed monthly in advance via Stripe",
-                    "Subscriptions may be cancelled at any time; cancellation takes effect at the end of the current billing period",
-                    "No refund is given for the unused portion of a current billing period",
-                    "We reserve the right to change subscription pricing with 30 days' written notice",
-                    "Failure to pay will result in suspension and, after 14 days, removal of the enhanced listing",
+                    "Featured places, adverts and sponsorships are paid by invoice. There is no online checkout.",
+                    "Some options have a minimum term, shown on the advertise page. After it, a placement can be stopped with one month's notice.",
+                    "No refund is given for the unused part of a period already invoiced.",
+                    "We give 30 days' written notice of any price change. A founding-offer price is held for the twelve months promised on the advertise page.",
+                    "If an invoice is not paid, the placement is paused and, after 14 days, removed.",
                   ].map((item) => (
                     <li key={item} className="flex gap-3 text-sm text-gray-600">
                       <span className="text-[#C9A96E] flex-none mt-0.5">•</span>

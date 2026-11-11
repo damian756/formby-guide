@@ -6,7 +6,7 @@ import { DISPLAY_EMAIL } from "@/lib/contact";
 const BASE_URL = "https://www.formbyguide.co.uk";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | FormbyGuide.co.uk",
+  title: "Privacy Policy",
   description: "Privacy Policy for FormbyGuide.co.uk: how we collect, use and protect your personal data in accordance with UK GDPR.",
   alternates: { canonical: `${BASE_URL}/privacy` },
   openGraph: {
@@ -49,7 +49,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="font-display text-xl font-bold text-[#1C3220] mb-4">1. Who we are</h2>
             <p className="text-gray-600 leading-relaxed mb-3">
-              FormbyGuide.co.uk is operated by <strong>Churchtown Media</strong>, a digital media company based in Merseyside, England.
+              FormbyGuide.co.uk is operated by <strong>Churchtown Media Ltd</strong>, a digital media company based in Merseyside, England.
             </p>
             <p className="text-gray-600 leading-relaxed mb-3">
               We are committed to protecting your personal data in accordance with the <strong>UK General Data Protection Regulation (UK GDPR)</strong> and the Data Protection Act 2018.
@@ -111,7 +111,7 @@ export default function PrivacyPage() {
                 <tbody>
                   {[
                     ["Contact enquiries", "Legitimate interest and your consent"],
-                    ["Business listings", "Performance of a contract (your listing agreement)"],
+                    ["Business listings", "Legitimate interest in publishing public information about local businesses; a contract where a business pays for a placement"],
                     ["Invoicing for advertising", "Performance of a contract"],
                     ["Analytics and page view counts", "Legitimate interest in understanding site usage"],
                   ].map(([purpose, basis]) => (
@@ -140,9 +140,9 @@ export default function PrivacyPage() {
             <div className="space-y-3">
               {[
                 { name: "Ahrefs (Web Analytics)", detail: "Ahrefs Web Analytics: page view statistics without cookies. It records the page, referrer, browser, device, language, screen size and approximate location (city level), and counts visitors with a daily pseudonymous identifier that is not kept across days." },
-                { name: "Vercel", detail: "Website hosting infrastructure. Data is processed in UK/EU-region data centres where possible." },
+                { name: "Vercel", detail: "Hosts the website. Pages are served from Vercel's network, and the site's server code, including the contact form, runs in Vercel's iad1 region in Washington, D.C., USA." },
                 { name: "Resend", detail: "Transactional email delivery for contact form submissions. Emails are processed and delivered via Resend's infrastructure." },
-                { name: "OpenStreetMap (maps)", detail: "Maps are drawn with OpenStreetMap tiles, which your browser loads from the OpenStreetMap Foundation's servers; they receive your IP address, browser type, our site's address and the map area you view. On the few listings without a map pin, Google Maps loads only if you click “Show map (Google Maps)”." },
+                { name: "OpenStreetMap (maps)", detail: "Maps are drawn with OpenStreetMap tiles, which your browser loads from the OpenStreetMap Foundation's servers; they receive your IP address, browser type, our site's address and the map area you view." },
               ].map(({ name, detail }) => (
                 <div key={name} className="bg-[#F7F9F6] rounded-xl p-4">
                   <p className="font-semibold text-[#1C3220] text-sm mb-1">{name}</p>
@@ -161,6 +161,7 @@ export default function PrivacyPage() {
 
           <section>
             <h2 className="font-display text-xl font-bold text-[#1C3220] mb-4">6. Cookies</h2>
+            <p className="text-gray-600 text-sm leading-relaxed mb-4">This site sets no cookies of its own and stores nothing in your browser.</p>
             <div className="overflow-x-auto rounded-xl border border-gray-100">
               <table className="w-full text-sm">
                 <thead className="bg-[#F7F9F6]">
@@ -172,7 +173,6 @@ export default function PrivacyPage() {
                 </thead>
                 <tbody className="divide-y divide-gray-50">
                   {[
-                    ["Essential", "Site functionality (session, security)", "No: always active"],
                     ["Analytics (Ahrefs Web Analytics)", "Understanding how visitors use the site: Ahrefs Web Analytics sets no cookies", "No"],
                   ].map(([type, purpose, required]) => (
                     <tr key={type}>
