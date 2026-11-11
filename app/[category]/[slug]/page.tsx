@@ -6,6 +6,7 @@ import { getCategoryBySlug, isValidCategory } from "@/lib/config";
 import { prisma } from "@/lib/prisma";
 import ListingMapLazy from "@/components/ListingMapLazy";
 import { isBlockedUrl } from "@/lib/blocked-domains";
+import { openingHoursSpecification } from "@/lib/opening-hours";
 
 type Props = { params: Promise<{ category: string; slug: string }> };
 
@@ -21,8 +22,11 @@ const SCHEMA_TYPES: Record<string, string> = {
   shopping:      "Store",
   activities:    "LocalBusiness",
   "nature-walks":"TouristAttraction",
-  beaches:       "Park",
+  beaches:       "Beach",
 };
+
+// Places, not businesses: schema.org gives them no priceRange.
+const NON_BUSINESS_TYPES = new Set(["TouristAttraction", "Beach"]);
 
 const FOOD_CATS = new Set(["restaurants", "cafes", "pubs"]);
 
@@ -207,23 +211,28 @@ export default async function BusinessPage({ params }: Props) {
       ? `https://www.google.com/maps/search/?api=1&query=${placeQuery}&query_place_id=${placeIdParam}`
       : null;
 
-  // JSON-LD
+  // JSON-LD. It says only what the page shows: the business's website is in it only
+  // when the page links to it (claimed listings), otherwise `url` is this page.
   const schemaType = SCHEMA_TYPES[category] || "LocalBusiness";
   const listingUrl = `https://www.formbyguide.co.uk/${category}/${slug}`;
+  const showsWebsite = !!website && business.claimed;
+  const streetAddress = business.address.replace(/,?\s*(United Kingdom|UK)$/i, "").split(",")[0].trim();
   const jsonLd: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": schemaType,
     name: business.name,
-    url: website
+    url: website && showsWebsite
       ? (website.startsWith("http") ? website : `https://${website}`)
       : listingUrl,
-    sameAs: [listingUrl],
+    ...(showsWebsite ? { sameAs: [listingUrl] } : {}),
+    ...(heroImage ? { image: heroImage.startsWith("http") ? heroImage : `https://www.formbyguide.co.uk${heroImage}` } : {}),
+    // Empty stored fields are left out rather than sent as "".
     address: {
       "@type": "PostalAddress",
-      streetAddress: business.address.replace(/,?\s*(United Kingdom|UK)$/i, "").split(",")[0].trim(),
+      ...(streetAddress ? { streetAddress } : {}),
       addressLocality: area,
       addressRegion: "Merseyside",
-      postalCode: business.postcode,
+      ...(business.postcode ? { postalCode: business.postcode } : {}),
       addressCountry: "GB",
     },
     ...(business.phone ? { telephone: business.phone } : {}),
@@ -232,33 +241,16 @@ export default async function BusinessPage({ params }: Props) {
     } : {}),
     // No aggregateRating: the rating shown on the page is Google's, and Google's
     // review snippet rules do not allow third-party ratings in this markup.
-    ...(business.priceRange ? { priceRange: business.priceRange } : {}),
+    // priceRange belongs to LocalBusiness types only, not Beach or TouristAttraction.
+    ...(business.priceRange && !NON_BUSINESS_TYPES.has(schemaType) ? { priceRange: business.priceRange } : {}),
     ...(business.description || business.shortDescription ? {
       description: business.description || business.shortDescription,
     } : {}),
   };
 
-  // Opening hours JSON-LD
-  if (business.openingHours && typeof business.openingHours === "object") {
-    const oh = business.openingHours as { weekdayText?: string[] };
-    if (oh.weekdayText?.length) {
-      const specs = oh.weekdayText.map((line: string) => {
-        const [day, times] = line.split(": ");
-        if (!times || times === "Closed") return null;
-        if (times === "Open 24 hours") {
-          return { "@type": "OpeningHoursSpecification", dayOfWeek: `https://schema.org/${day}`, opens: "00:00", closes: "23:59" };
-        }
-        const [open, close] = times.split(" – ").map((t: string) => {
-          const [time, ampm] = t.split(" ");
-          const [h, m] = time.split(":").map(Number);
-          const h24 = ampm === "PM" && h !== 12 ? h + 12 : (ampm === "AM" && h === 12 ? 0 : h);
-          return `${String(h24).padStart(2, "0")}:${String(m || 0).padStart(2, "0")}`;
-        });
-        return { "@type": "OpeningHoursSpecification", dayOfWeek: `https://schema.org/${day}`, opens: open, closes: close };
-      }).filter(Boolean);
-      if (specs.length) jsonLd.openingHoursSpecification = specs;
-    }
-  }
+  // Opening hours JSON-LD, from the same stored hours the page prints (lib/opening-hours.ts).
+  const hoursSpec = openingHoursSpecification(business.openingHours);
+  if (hoursSpec.length) jsonLd.openingHoursSpecification = hoursSpec;
 
   const breadcrumbLd = {
     "@context": "https://schema.org",
