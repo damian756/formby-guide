@@ -44,7 +44,7 @@ const schemaData = [
     name: "Clare",
     jobTitle: "Editor, FormbyGuide.co.uk",
     description:
-      "Editorial voice of FormbyGuide.co.uk: written from the perspective of a Formby local of 15+ years. Mum of four, she knows every trail, tide time and family-friendly spot on the Sefton Coast.",
+      "Editor of FormbyGuide.co.uk and part of Churchtown Media Ltd, the family business that publishes it. A Formby local of 15+ years. Mum of four, she knows every trail, tide time and family-friendly spot on the Sefton Coast.",
     worksFor: {
       "@id": `${BASE_URL}/#website`,
     },
@@ -125,8 +125,8 @@ export default function AboutPage() {
               <div className="bg-[#F0F5EF] rounded-xl px-5 py-4 border border-[#2E6B3E]/15">
                 <p className="text-sm text-gray-600">
                   <span className="font-semibold text-[#1C3220]">A note on transparency:</span>{" "}
-                  Clare is an editorial voice: a persona built from genuine local knowledge. The
-                  real person behind FormbyGuide is Damian Roche of Churchtown Media. All content
+                  Clare is real, and part of the family business that publishes FormbyGuide:
+                  Churchtown Media Ltd. All content
                   reflects real first-hand knowledge of the area. Nothing under Clare&apos;s name is paid for: a
                   sponsored article is labelled Sponsored and carries the name of the business that paid.
                 </p>
