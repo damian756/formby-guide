@@ -5,6 +5,7 @@ import { MapPin, Phone, Globe, Clock, Star, ChevronRight, ShieldCheck, ShieldAle
 import { getCategoryBySlug, isValidCategory } from "@/lib/config";
 import { prisma } from "@/lib/prisma";
 import ListingMapLazy from "@/components/ListingMapLazy";
+import { isBlockedUrl } from "@/lib/blocked-domains";
 
 type Props = { params: Promise<{ category: string; slug: string }> };
 
@@ -165,6 +166,10 @@ export default async function BusinessPage({ params }: Props) {
 
   if (!business) notFound();
 
+  // A stored website on the blocked list (lib/blocked-domains.ts) is never rendered:
+  // not as a link, not in the JSON-LD, and not as a "claim to add website" prompt.
+  const website = business.website && !isBlockedUrl(business.website) ? business.website : null;
+
   const isFeatured = business.listingTier === "featured" || business.listingTier === "premium";
   const area = extractArea(business.address, business.postcode);
   const formattedAddress = formatAddress(business.address, business.postcode);
@@ -209,8 +214,8 @@ export default async function BusinessPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": schemaType,
     name: business.name,
-    url: business.website
-      ? (business.website.startsWith("http") ? business.website : `https://${business.website}`)
+    url: website
+      ? (website.startsWith("http") ? website : `https://${website}`)
       : listingUrl,
     sameAs: [listingUrl],
     address: {
@@ -356,9 +361,9 @@ export default async function BusinessPage({ params }: Props) {
 
                   {/* CTA buttons */}
                   <div className="flex flex-wrap gap-3">
-                    {business.website && business.claimed && (
+                    {website && business.claimed && (
                       <a
-                        href={business.website.startsWith("http") ? business.website : `https://${business.website}`}
+                        href={website.startsWith("http") ? website : `https://${website}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 bg-[#2E6B3E] text-white px-5 py-2.5 rounded-full hover:bg-[#1C3220] transition font-semibold text-sm"
@@ -366,7 +371,7 @@ export default async function BusinessPage({ params }: Props) {
                         <Globe className="w-4 h-4" /> Visit Website
                       </a>
                     )}
-                    {business.website && !business.claimed && (
+                    {website && !business.claimed && (
                       <Link
                         href="/claim-listing"
                         className="inline-flex items-center gap-2 bg-[#C9A96E]/10 text-[#1C3220] border border-[#C9A96E]/50 px-5 py-2.5 rounded-full hover:bg-[#C9A96E]/20 transition font-semibold text-sm"
@@ -520,19 +525,19 @@ export default async function BusinessPage({ params }: Props) {
                   </InfoRow>
                 )}
 
-                {business.website && business.claimed && (
+                {website && business.claimed && (
                   <InfoRow icon={<Globe className="w-4 h-4 text-[#2E6B3E]" />} label="Website">
                     <a
-                      href={business.website.startsWith("http") ? business.website : `https://${business.website}`}
+                      href={website.startsWith("http") ? website : `https://${website}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-[#2E6B3E] text-sm hover:underline break-all"
                     >
-                      {business.website.replace(/^https?:\/\/(www\.)?/, "").split("/")[0]}
+                      {website.replace(/^https?:\/\/(www\.)?/, "").split("/")[0]}
                     </a>
                   </InfoRow>
                 )}
-                {business.website && !business.claimed && (
+                {website && !business.claimed && (
                   <InfoRow icon={<Globe className="w-4 h-4 text-gray-300" />} label="Website">
                     <Link
                       href="/claim-listing"
