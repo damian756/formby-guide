@@ -15,6 +15,7 @@ export const metadata = {
     title: "Disclosure",
     description: DESCRIPTION,
     url: PAGE_URL,
+    images: [{ url: "https://www.formbyguide.co.uk/og-default.png", width: 1200, height: 630, alt: "FormbyGuide.co.uk" }],
   },
 };
 

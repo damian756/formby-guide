@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useState, useMemo, useEffect, useSyncExternalStore } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Search, X } from "lucide-react";
@@ -31,10 +30,24 @@ interface Props {
   categories: BlogCategory[];
 }
 
+// The category comes from ?category= in the address bar. It is read with
+// useSyncExternalStore rather than useSearchParams: on the server (and while
+// hydrating) it is "", so the server HTML carries the full list with every post
+// link, and the page is not swapped out when the browser takes over.
+const URL_CHANGE = "blog-category-change";
+function subscribeToUrl(onChange: () => void) {
+  window.addEventListener("popstate", onChange);
+  window.addEventListener(URL_CHANGE, onChange);
+  return () => {
+    window.removeEventListener("popstate", onChange);
+    window.removeEventListener(URL_CHANGE, onChange);
+  };
+}
+const categoryFromUrl = () => new URLSearchParams(window.location.search).get("category") ?? "";
+const noCategory = () => "";
+
 export default function BlogClient({ posts, categories }: Props) {
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const activeCategory = searchParams.get("category") ?? "";
+  const activeCategory = useSyncExternalStore(subscribeToUrl, categoryFromUrl, noCategory);
 
   const [query, setQuery] = useState("");
 
@@ -43,13 +56,15 @@ export default function BlogClient({ posts, categories }: Props) {
   }, [activeCategory]);
 
   function selectCategory(slug: string) {
-    const params = new URLSearchParams(searchParams.toString());
+    const params = new URLSearchParams(window.location.search);
     if (slug) {
       params.set("category", slug);
     } else {
       params.delete("category");
     }
-    router.push(`/blog?${params.toString()}`);
+    const qs = params.toString();
+    window.history.pushState(null, "", qs ? `/blog?${qs}` : "/blog");
+    window.dispatchEvent(new Event(URL_CHANGE));
   }
 
   const filtered = useMemo(() => {

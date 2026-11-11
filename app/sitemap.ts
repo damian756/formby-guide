@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import { prisma } from "@/lib/prisma";
 import { GUIDES, getGuideUrl } from "@/lib/guides-config";
-import { COLLECTIONS } from "@/lib/collections-config";
+import { COLLECTIONS, MIN_LISTINGS } from "@/lib/collections-config";
 import { BLOG_POSTS } from "@/lib/blog-posts";
 
 const BASE_URL = "https://www.formbyguide.co.uk";
@@ -43,6 +43,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/contact`,                         lastModified: D.feb01, priority: 0.5, changeFrequency: "yearly"  },
     { url: `${BASE_URL}/privacy`,                         lastModified: D.jan01, priority: 0.3, changeFrequency: "yearly"  },
     { url: `${BASE_URL}/terms`,                           lastModified: D.jan01, priority: 0.3, changeFrequency: "yearly"  },
+    { url: `${BASE_URL}/disclosure`,                      lastModified: D.today, priority: 0.3, changeFrequency: "yearly"  },
+    { url: `${BASE_URL}/gallery`,                         lastModified: D.feb15, priority: 0.5, changeFrequency: "monthly" },
   ];
 
   // Blog posts: use actual post dates
@@ -76,10 +78,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // DB unavailable: return static pages only
   }
 
-  // Collection pages
+  // Collection pages. A collection with fewer than MIN_LISTINGS listings is noindex
+  // (app/collections/[slug]/page.tsx counts the same way), so it is left out here.
+  const listed = await Promise.all(
+    COLLECTIONS.map((c) =>
+      prisma.business
+        .count({ where: { category: { slug: { in: c.categorySlugs } }, tags: { hasEvery: c.tags } } })
+        .then((n) => n >= MIN_LISTINGS)
+        .catch(() => true),
+    ),
+  );
   const collectionPages: MetadataRoute.Sitemap = [
     { url: `${BASE_URL}/collections`, lastModified: D.feb15, changeFrequency: "monthly" as const, priority: 0.8 },
-    ...COLLECTIONS.map((c) => ({
+    ...COLLECTIONS.filter((_, i) => listed[i]).map((c) => ({
       url: `${BASE_URL}/collections/${c.slug}`,
       lastModified: D.feb15,
       changeFrequency: "monthly" as const,

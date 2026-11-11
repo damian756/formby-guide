@@ -15,6 +15,13 @@ export function generateStaticParams() {
   return BLOG_POSTS.map((p) => ({ slug: p.slug }));
 }
 
+// "June 10, 2026" -> "2026-06-10" (Open Graph wants an ISO date). Read as UTC so the
+// day does not move with the server's time zone.
+function isoDate(date: string): string | undefined {
+  const d = new Date(`${date} UTC`);
+  return isNaN(d.getTime()) ? undefined : d.toISOString().slice(0, 10);
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getBlogPost(slug);
@@ -34,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       siteName: "FormbyGuide.co.uk",
       locale: "en_GB",
-      publishedTime: post.date,
+      publishedTime: isoDate(post.date),
       // A sponsored article is bylined by its sponsor, never a persona.
       authors: [post.sponsor ? post.sponsor.name : post.author],
       tags: category ? [category.label] : undefined,

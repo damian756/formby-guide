@@ -14,7 +14,7 @@ const NATURE_LINKS = [
   { href: "/formby-beach",           label: "Formby Beach",             icon: Waves,      color: "text-sky-500" },
   { href: "/red-squirrels-formby",   label: "Red Squirrels",            icon: Squirrel,   color: "text-amber-600" },
   { href: "/formby-pinewoods",       label: "Pinewoods",                icon: TreePine,   color: "text-[#2E6B3E]" },
-  { href: "/collections",            label: "Curated Collections",      icon: ListFilter, color: "text-[#C9A96E]" },
+  { href: "/collections",            label: "Collections",      icon: ListFilter, color: "text-[#C9A96E]" },
 ];
 
 const BUSINESS_CATEGORIES = [

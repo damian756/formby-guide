@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import Image from "next/image";
 import { Newspaper } from "lucide-react";
 import BlogClient, { type BlogPost, type BlogCategory } from "./BlogClient";
@@ -63,13 +62,7 @@ export default function BlogPage() {
       </section>
 
       {/* Interactive content (search + tabs + grid) */}
-      <Suspense fallback={
-        <div className="flex justify-center py-20">
-          <div className="w-8 h-8 border-2 border-[#C9A96E] border-t-transparent rounded-full animate-spin" />
-        </div>
-      }>
-        <BlogClient posts={BLOG_POSTS} categories={CATEGORIES} />
-      </Suspense>
+      <BlogClient posts={BLOG_POSTS} categories={CATEGORIES} />
 
       {/* Coming soon footer */}
       <div className="max-w-6xl mx-auto px-4 pb-16 text-center border-t border-gray-100 pt-12">

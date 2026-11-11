@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "FormbyGuide.co.uk",
     locale: "en_GB",
+    images: [{ url: "https://www.formbyguide.co.uk/og-default.png", width: 1200, height: 630, alt: "FormbyGuide.co.uk" }],
   },
 };
 

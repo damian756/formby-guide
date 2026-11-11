@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     url: `${BASE_URL}/about`,
     type: "website",
     siteName: "FormbyGuide.co.uk",
+    images: [{ url: "https://www.formbyguide.co.uk/og-default.png", width: 1200, height: 630, alt: "FormbyGuide.co.uk" }],
   },
 };
 

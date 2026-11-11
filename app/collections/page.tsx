@@ -11,15 +11,16 @@ const BASE_URL = "https://www.formbyguide.co.uk";
 export const metadata: Metadata = {
   title: "Collections: Formby Lists by Theme",
   description:
-    "Curated collections of Formby businesses: dog-friendly restaurants, cafés near the beach, family-friendly activities, and more. Filtered, local, and honest.",
+    "Formby places by theme: dog-friendly restaurants, cafés near the beach, family-friendly activities and more, with addresses and contact details.",
   alternates: { canonical: `${BASE_URL}/collections` },
   openGraph: {
     title: "Collections | FormbyGuide.co.uk",
     description:
-      "Curated Formby business collections: dog-friendly, family-friendly, near the beach, free to do, and more.",
+      "Formby places by theme: dog-friendly, family-friendly, near the beach, free to do and more.",
     url: `${BASE_URL}/collections`,
     type: "website",
     siteName: "FormbyGuide.co.uk",
+    images: [{ url: "https://www.formbyguide.co.uk/og-default.png", width: 1200, height: 630, alt: "FormbyGuide.co.uk" }],
   },
 };
 
@@ -28,7 +29,7 @@ const COLLECTION_LD = {
   "@type": "CollectionPage",
   name: "Formby Collections",
   description:
-    "Curated collections of Formby businesses: dog-friendly restaurants, cafés near the beach, family-friendly activities, and more.",
+    "Formby places by theme: dog-friendly restaurants, cafés near the beach, family-friendly activities and more.",
   url: `${BASE_URL}/collections`,
   publisher: {
     "@type": "Organization",

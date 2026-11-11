@@ -103,7 +103,7 @@ export default function TheOpen2026Page() {
             <p className="text-xs text-[#1C3220]/60 mt-3">
               Source:{" "}
               <a
-                href="https://www.theopen.com/Royal-Birkdale-154th-Open"
+                href="https://www.theopen.com/previous-opens/royal-birkdale-154th-open"
                 className="text-[#2E6B3E] underline underline-offset-2"
                 target="_blank"
                 rel="noopener noreferrer"
