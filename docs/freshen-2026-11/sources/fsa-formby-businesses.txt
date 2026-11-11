@@ -1,0 +1,16 @@
+Food Standards Agency food hygiene register (api.ratings.food.gov.uk), fetched 11 Nov 2026. FHRSID | name | business type | address | last inspection
+144302 | The Olive Grove Restaurant And Bar | Restaurant/Cafe/Canteen | 1a The Beacons, Halsall Lane, Formby, Merseyside L37 3NN | 2026-10-27
+1522775 | Emilys | Restaurant/Cafe/Canteen | 25 Brows Lane, Formby, Merseyside L37 4DZ | 2025-02-05
+44619 | Don Luigi | Restaurant/Cafe/Canteen | 31 Church Road, Formby, Merseyside L37 8BQ | 2026-06-17
+131210 | Sorrento | Restaurant/Cafe/Canteen | 29 Three Tuns Lane, Formby, Merseyside L37 4AQ | 2026-09-23
+127114 | The Sparrowhawk | Hotel/bed & breakfast/guest house | Southport Old Road, Formby L37 0AB | 2025-02-18
+1534506 | DAPA | Restaurant/Cafe/Canteen | 25 Chapel Lane, Formby, Merseyside L37 4DL | 2026-07-29
+1005259 | The Udder Guys | Restaurant/Cafe/Canteen | 53 Piercefield Road, Formby L37 7DG | 2025-04-10
+110619 | Freshfield Hotel | Pub/bar/nightclub | The Freshfield Hotel, 1 Massams Lane, Formby L37 7BD | 2025-02-11
+877854 | The Lifeboat | Restaurant/Cafe/Canteen | 41 Three Tuns Lane, Formby L37 4AQ | 2024-10-22
+84911 | Grapes Hotel Formby - K-Town, Chik Box, Locked & Loaded, 88th Street, | Pub/bar/nightclub | Grapes Hotel, Green Lane, Formby L37 7DL | 2024-10-23
+133853 | The Pinewoods - Burrito Bandits, District Taco & Don Taco'te | Pub/bar/nightclub | 2A Wicks Green, Formby, Merseyside L37 1PR | 2024-11-13
+800020 | The Coffee Carriage | Restaurant/Cafe/Canteen | Maghull Railway Station, Station Road, Maghull L31 3DE | 2024-07-08
+
+No establishment named Left Bank in Formby. 1a The Beacons, Halsall Lane is registered to The Olive Grove Restaurant And Bar (inspected 27 Oct 2026). No Coffee Carriage in Formby (the only one is at Maghull station).
+The domain leftbankformby.co.uk (the restaurant's former website, as linked from a TripAligner listing) now serves an unrelated gambling site (checked 11 Nov 2026). Taken with the FSA record above, Left Bank Brasserie cannot be confirmed as trading.

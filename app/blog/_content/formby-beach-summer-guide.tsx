@@ -192,9 +192,8 @@ export default function PostContent() {
         <p className="text-gray-700 leading-relaxed mb-4">
           In spring and summer there are mobile food concessions in the car parks, but there is no 
           year-round National Trust cafe at Formby. For a proper sit-down lunch after the beach, Formby village 
-          is about 10 minutes by car. The Sparrowhawk on Liverpool Road is good for a post-walk 
-          meal. Left Bank Brasserie on Chapel Lane is the better restaurant option if you want 
-          something proper. Book ahead at weekends.
+          is about 10 minutes by car. The Sparrowhawk, a Brunning &amp; Price pub on Southport Old Road, 
+          serves food from noon every day.
         </p>
 
         <div className="bg-[#1C3220] text-white rounded-xl p-6 my-10">

@@ -378,23 +378,23 @@ export default function PinewoodsContent() {
               {
                 name: "The Sparrowhawk",
                 href: "/restaurants/the-sparrowhawk-formby",
-                tag: "Dog-friendly",
+                tag: "Dogs in the bar",
                 tagColor: "bg-amber-500 text-white",
-                desc: "Gastropub in the village, 10 minutes by car. Dog-friendly, beer garden in summer. The obvious choice if you haven't booked anywhere.",
+                desc: "A Brunning & Price pub on Southport Old Road, with food from noon every day and a terrace and gardens. Well-behaved dogs on leads are welcome in the bar area.",
               },
               {
                 name: "Emily's",
-                href: "/restaurants",
-                tag: "Local favourite",
+                href: "/restaurants/emilys-formby",
+                tag: "Brunch from 9am",
                 tagColor: "bg-[#1C3220] text-white",
-                desc: "Formby's most-loved neighbourhood restaurant. Good food, relaxed, reasonable prices. Book ahead at weekends.",
+                desc: "A restaurant on Brows Lane serving breakfast and brunch from 9am every day and an à la carte menu in the evening. Well-behaved dogs are welcome until 5pm.",
               },
               {
-                name: "Left Bank Brasserie",
-                href: "/restaurants",
-                tag: "Best overall",
+                name: "Don Luigi",
+                href: "/restaurants/don-luigi-formby",
+                tag: "Italian",
                 tagColor: "bg-[#C9A96E] text-[#1C3220]",
-                desc: "If the walk is the occasion, make the meal match it. The best restaurant in Formby: book at least a week ahead at weekends.",
+                desc: "An Italian restaurant on Church Road, with pizza, a grill menu and small plates.",
               },
             ].map((r) => (
               <Link
@@ -417,7 +417,7 @@ export default function PinewoodsContent() {
               href="/guides/best-restaurants-formby"
               className="inline-flex items-center gap-2 bg-[#2E6B3E] hover:bg-[#1C3220] text-white px-5 py-2.5 rounded-full font-semibold text-sm transition-colors"
             >
-              Best restaurants in Formby →
+              Restaurants in Formby →
             </Link>
             <Link
               href="/restaurants"

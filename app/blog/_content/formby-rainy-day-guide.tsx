@@ -76,10 +76,10 @@ export default function PostContent() {
             A rainy lunchtime in Formby village is genuinely pleasant. The main street has a handful of good options and none of them require planning if you arrive by noon.
           </p>
           <p>
-            Left Bank Brasserie on Brows Lane is the best sit-down option. It is the kind of place that suits a slow rainy lunch: the food is good, the room is comfortable, and you can take your time without feeling like you are being rushed through for the next booking at lunchtime on a weekday. At weekends in July, booking ahead is wise even for lunch.
+            Emily&apos;s on Brows Lane serves breakfast and brunch from 9am every day and lunch from 12:30pm Monday to Saturday. It takes walk-ins but advises booking, especially at weekends.
           </p>
           <p>
-            The Sparrowhawk on Sparrowhawk Way is slightly more casual and more likely to take a walk-in on a rainy day. Good pub food, decent beer, and the kind of atmosphere that improves in bad weather because everyone is sheltering together.
+            The Sparrowhawk, a Brunning &amp; Price pub on Southport Old Road, serves food from noon every day. It has open fires, and keeps some tables for people who have not booked.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Drive to Southport</h2>
@@ -95,8 +95,8 @@ export default function PostContent() {
             <ul className="space-y-1 text-sm text-gray-700 list-disc list-inside">
               <li>NT pinewoods in light rain: carry on, the canopy helps</li>
               <li>No year-round NT cafe: head to the village for a warm drink</li>
-              <li>Left Bank Brasserie: best sit-down lunch, book at weekends</li>
-              <li>The Sparrowhawk: casual, walk-in friendly at lunch</li>
+              <li>Emily&apos;s, Brows Lane: brunch from 9am, book at weekends</li>
+              <li>The Sparrowhawk, Southport Old Road: food from noon, some tables kept for walk-ins</li>
               <li>Southport: The Atkinson and Southport Market, 15 minutes away</li>
               <li>The Formby village charity shops on Chapel Lane if you want a browse</li>
             </ul>

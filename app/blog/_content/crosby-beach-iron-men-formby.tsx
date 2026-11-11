@@ -189,7 +189,7 @@ export default function PostContent() {
                 {
                   time: "1:00–1:30pm",
                   title: "Lunch: village or car park food van",
-                  desc: "Drive into Formby village for a proper lunch at Emily's or The Sparrowhawk, or grab something from a mobile food concession in the car park (spring and summer only) if you want to keep moving.",
+                  desc: "Drive into Formby village for lunch (Emily's on Brows Lane serves brunch from 9am every day), or grab something from a mobile food concession in the car park (spring and summer only) if you want to keep moving.",
                 },
                 {
                   time: "2:30–4:30pm",

@@ -151,7 +151,7 @@ export const GUIDES: Guide[] = [
   {
     slug: "dog-friendly-formby",
     title: "Dog-Friendly Formby",
-    description: "Beach access rules, best off-lead walks, and the pubs and cafés that actually mean it.",
+    description: "Beach access rules, off-lead walks, and pubs and cafés that welcome dogs.",
     excerpt:
       "Formby is genuinely good for dogs: the NT beach (with seasonal rules), the pinewoods, and a cluster of dog-welcoming pubs and cafés in the village.",
     category: "practical",
@@ -174,9 +174,9 @@ export const GUIDES: Guide[] = [
   {
     slug: "formby-village",
     title: "Formby Village",
-    description: "Chapel Lane, independent shops, proper restaurants: the bit most visitors miss.",
+    description: "Chapel Lane, independent shops, cafés and restaurants: the bit most visitors miss.",
     excerpt:
-      "Formby village is 10 minutes from the beach and most visitors never go. Chapel Lane has independent shops, proper restaurants, and Emily's. The complete guide.",
+      "Formby village is 10 minutes from the beach and most visitors never go. Chapel Lane has independent shops, cafés and restaurants nearby. The complete guide.",
     category: "areas",
     heroImage: "/about-village-street.webp",
     seoPriority: 0.85,
@@ -190,29 +190,29 @@ export const GUIDES: Guide[] = [
     },
     metaTitle: "Formby Village | Chapel Lane, Shops & Restaurants Guide | FormbyGuide",
     metaDescription:
-      "Formby village guide: Chapel Lane, independent shops, the best restaurants in Formby, and the part of town most visitors never see.",
+      "Formby village guide: Chapel Lane, independent shops, restaurants and cafés, and the part of town most visitors never see.",
   },
 
   // ── Food & Drink ─────────────────────────────────────────────────────────
   {
     slug: "best-restaurants-formby",
-    title: "Best Restaurants in Formby",
-    description: "Clare's honest guide: Emily's, Left Bank Brasserie, The Sparrowhawk, and more.",
+    title: "Restaurants in Formby",
+    description: "Where Formby's restaurants are and what each one offers, from their own websites.",
     excerpt:
-      "The best restaurants in Formby right now: Clare's honest ranking. Emily's, Left Bank Brasserie, The Sparrowhawk, Don Luigi, and a few more worth knowing about.",
+      "Restaurants in Formby: Emily's, The Sparrowhawk, Don Luigi and Sorrento, with addresses and what each one offers, taken from their own websites.",
     category: "food-drink",
     heroImage: "/blog-card-food.webp",
     seoPriority: 0.88,
     datePublished: "2026-02-27",
-    dateUpdated: "2026-02-27",
+    dateUpdated: "2026-11-11",
     tags: ["restaurants", "food", "dining", "village"],
     status: "published",
     listingFilter: {
       categorySlugs: ["restaurants"],
     },
-    metaTitle: "Best Restaurants in Formby 2026 | Honest Local Guide | FormbyGuide",
+    metaTitle: "Restaurants in Formby: Where They Are and What They Offer | FormbyGuide",
     metaDescription:
-      "The best restaurants in Formby: Clare's honest guide. Emily's, Left Bank Brasserie, The Sparrowhawk, Don Luigi. No sponsored results.",
+      "Restaurants in Formby: Emily's, The Sparrowhawk, Don Luigi and Sorrento. Addresses, menus and dog policies, taken from each restaurant's own website.",
   },
 
   // ── Events ───────────────────────────────────────────────────────────────

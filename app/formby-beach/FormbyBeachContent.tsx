@@ -540,33 +540,33 @@ export default function FormbyBeachContent() {
               {
                 name: "The Sparrowhawk",
                 href: "/restaurants/the-sparrowhawk-formby",
-                tag: "Dog-friendly",
+                tag: "Dogs in the bar",
                 tagColor: "bg-amber-500 text-white",
-                desc: "Best post-walk option in the village. Gastropub food, beer garden in summer, and they genuinely welcome dogs. No booking needed most of the time.",
+                desc: "A Brunning & Price pub on Southport Old Road, with food from noon every day and a terrace and gardens. Well-behaved dogs on leads are welcome in the bar area.",
                 note: "10 min drive",
               },
               {
                 name: "Emily's",
-                href: "/restaurants",
-                tag: "Local favourite",
+                href: "/restaurants/emilys-formby",
+                tag: "Brunch from 9am",
                 tagColor: "bg-[#1C3220] text-white",
-                desc: "The most-loved neighbourhood restaurant in Formby. Good food, reasonable prices. Worth booking ahead if you're coming on a Friday or Saturday.",
-                note: "10 min drive · Book ahead",
+                desc: "A restaurant on Brows Lane serving breakfast and brunch from 9am every day and an à la carte menu in the evening. Well-behaved dogs are welcome until 5pm.",
+                note: "10 min drive",
               },
               {
-                name: "Left Bank Brasserie",
-                href: "/restaurants",
-                tag: "Best overall",
+                name: "Sorrento",
+                href: "/restaurants/sorrento",
+                tag: "Italian",
                 tagColor: "bg-[#C9A96E] text-[#1C3220]",
-                desc: "The best restaurant in Formby: proper brasserie food and a great wine list. Book at least a week ahead at weekends. Worth the effort.",
-                note: "10 min drive · Essential to book",
+                desc: "A family-run Italian restaurant on Three Tuns Lane, in Formby since 2009, with an outdoor seating area.",
+                note: "10 min drive",
               },
               {
                 name: "Don Luigi",
-                href: "/restaurants",
+                href: "/restaurants/don-luigi-formby",
                 tag: "Italian",
                 tagColor: "bg-red-600 text-white",
-                desc: "Reliable Italian in the village. Good for groups and families. Decent pasta and pizza, friendly staff. No booking drama for most weekday visits.",
+                desc: "An Italian restaurant on Church Road, with pizza, a grill menu and small plates.",
                 note: "10 min drive",
               },
               {
@@ -574,7 +574,7 @@ export default function FormbyBeachContent() {
                 href: "/cafes",
                 tag: "Casual",
                 tagColor: "bg-gray-500 text-white",
-                desc: "Several independent cafés near Chapel Lane: good for coffee, cake and a sandwich. Relaxed about kids and dogs. No booking, just walk in.",
+                desc: "Independent cafés on and around Chapel Lane. The cafés directory lists them with addresses and contact details.",
                 note: "10 min drive",
               },
             ].map((r) => (
@@ -600,7 +600,7 @@ export default function FormbyBeachContent() {
               href="/guides/best-restaurants-formby"
               className="inline-flex items-center gap-2 bg-[#2E6B3E] hover:bg-[#1C3220] text-white px-5 py-2.5 rounded-full font-semibold text-sm transition-colors"
             >
-              Best restaurants in Formby <ArrowRight className="w-3.5 h-3.5" />
+              Restaurants in Formby <ArrowRight className="w-3.5 h-3.5" />
             </Link>
             <Link
               href="/restaurants"

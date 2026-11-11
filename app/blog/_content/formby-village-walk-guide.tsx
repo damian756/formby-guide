@@ -13,7 +13,7 @@ export default function PostContent() {
             "@context": "https://schema.org",
             "@type": "Article",
             headline: "Formby Village Walk: Chapel Lane, the High Street, and What's Worth Stopping For",
-            description: "A guide to walking around Formby village: Chapel Lane boutiques, independent shops, the best pubs and cafes, and how long it actually takes.",
+            description: "A guide to walking around Formby village: Chapel Lane boutiques, independent shops, pubs and cafés, and how long it actually takes.",
             url: "https://www.formbyguide.co.uk/blog/formby-village-walk-guide",
             author: { "@type": "Person", "@id": "https://www.formbyguide.co.uk/about#clare", name: "Clare", url: "https://www.formbyguide.co.uk/about" },
             publisher: { "@type": "Organization", "@id": "https://www.churchtownmedia.co.uk/#organization", name: "Churchtown Media", url: "https://www.churchtownmedia.co.uk" },
@@ -116,7 +116,7 @@ export default function PostContent() {
 
           <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">Pubs for after</h2>
           <p className="text-[#4A6B5A] leading-relaxed mb-4">
-            The village has a handful of pubs that are good for a post-walk lunch or an afternoon drink. The Freshfield near Freshfield station is dog-friendly and does a decent food menu: good option if you&apos;ve walked in from the nature reserve. The Victoria Hotel on Liverpool Road is more of a traditional pub. Both are worth knowing about.
+            The village has a handful of pubs for a post-walk lunch or an afternoon drink, including the Freshfield Hotel on Massams Lane and the Grapes Hotel on Green Lane. The pubs directory lists more, with addresses and contact details.
           </p>
 
           <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">The practical route</h2>

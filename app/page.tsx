@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.formbyguide.co.uk" },
   openGraph: {
     title: "FormbyGuide.co.uk: Your Local Guide to Formby",
-    description: "Your definitive guide to Formby: beach, pinewoods, red squirrels and the best places to eat on the Sefton Coast.",
+    description: "A guide to Formby on the Sefton Coast: the beach, the pinewoods, red squirrels and places to eat.",
     url: "https://www.formbyguide.co.uk",
     type: "website",
     siteName: "FormbyGuide.co.uk",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "FormbyGuide.co.uk: Your Local Guide to Formby",
-    description: "Beach, pinewoods, red squirrels and the best places to eat in Formby.",
+    description: "Beach, pinewoods, red squirrels and places to eat in Formby.",
     images: ["https://www.formbyguide.co.uk/formby-beach-hero.jpg"],
   },
 };
@@ -279,7 +279,7 @@ export default function HomePage() {
         <div className="flex items-end justify-between mb-8">
           <div>
             <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-1">Where to eat in Formby</h2>
-            <p className="text-[#1C3220]/50 text-sm">We are spoilt for choice in the village. These are the places I actually book for myself (and the ones that are good with kids).</p>
+            <p className="text-[#1C3220]/50 text-sm">Some of the places to eat in and around the village, described from their own websites. The directory lists them all.</p>
           </div>
           <Link href="/restaurants" className="text-sm font-medium text-[#2E6B3E] hover:text-[#1C3220] transition-colors hidden sm:block">
             See all →
@@ -287,19 +287,18 @@ export default function HomePage() {
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
-            { name: "Emily's Restaurant",    desc: "Relaxed and popular. Gets busy: book ahead.", price: "££",  slug: "emilys-formby" },
-            { name: "Left Bank Brasserie",   desc: "A proper treat. Worth it. Book for weekends.",  price: "£££", slug: "left-bank-brasserie-formby" },
-            { name: "The Sparrowhawk",       desc: "Solid village dining, loyal local crowd.",       price: "££",  slug: "the-sparrowhawk-formby" },
-            { name: "Don Luigi",             desc: "Italian, well-reviewed, plenty of regulars.",    price: "££",  slug: "don-luigi-formby" },
+            { name: "Emily's",          desc: "Brunch from 9am every day and an à la carte menu in the evening. Brows Lane.",  slug: "emilys-formby" },
+            { name: "The Sparrowhawk",  desc: "A Brunning & Price pub in a country house with five acres of woods and parkland. Southport Old Road.", slug: "the-sparrowhawk-formby" },
+            { name: "Don Luigi",        desc: "Italian restaurant with pizza, a grill menu and small plates. Church Road.", slug: "don-luigi-formby" },
+            { name: "Sorrento",         desc: "Family-run Italian restaurant, in Formby since 2009, with outdoor seating. Three Tuns Lane.", slug: "sorrento" },
           ].map((r) => (
             <Link
               key={r.slug}
               href={`/restaurants/${r.slug}`}
               className="group bg-white rounded-xl p-5 border border-[#1C3220]/8 card-hover hover:border-[#2E6B3E]/30 transition-all"
             >
-              <div className="flex items-start justify-between mb-3">
+              <div className="mb-3">
                 <Utensils className="w-5 h-5 text-[#8B3A3A]" aria-hidden="true" />
-                <span className="text-xs font-medium text-[#1C3220]/50 bg-[#E8EDE6] px-2 py-1 rounded">{r.price}</span>
               </div>
               <h3 className="font-display font-bold text-[#1C3220] mb-1 text-sm group-hover:text-[#2E6B3E] transition-colors">
                 {r.name}

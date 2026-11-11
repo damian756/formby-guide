@@ -187,7 +187,7 @@ export default function PostContent() {
                 {
                   time: "2:30–4:00pm",
                   title: "Lunch in the village",
-                  desc: "Drive or taxi from the beach to Formby village: about 10 minutes. Left Bank Brasserie for a proper lunch, Emily's for something more relaxed, or a mobile food concession in the car park (spring and summer only) if you don't want to move far.",
+                  desc: "Drive or taxi from the beach to Formby village: about 10 minutes. Emily's on Brows Lane serves brunch from 9am and lunch from 12:30pm Monday to Saturday, or try a mobile food concession in the car park (spring and summer only) if you don't want to move far.",
                   tip: "If you're on the train and don't want to drive to the village, there are mobile food concessions in the car parks in spring and summer only, so bring a flask and snacks the rest of the year.",
                 },
               ].map((s) => (
@@ -298,7 +298,7 @@ export default function PostContent() {
                   { label: "Formby Pinewoods", href: "/formby-pinewoods" },
                   { label: "Red Squirrels Guide", href: "/red-squirrels-formby" },
                   { label: "Parking Guide", href: "/guides/parking-formby-beach" },
-                  { label: "Best Restaurants", href: "/guides/best-restaurants-formby" },
+                  { label: "Restaurants in Formby", href: "/guides/best-restaurants-formby" },
                 ].map(({ label, href }) => (
                   <Link key={href} href={href} className="flex items-center gap-2 text-sm text-[#2E6B3E] hover:text-[#1C3220] font-medium transition py-1 group">
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />{label}

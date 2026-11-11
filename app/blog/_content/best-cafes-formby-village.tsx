@@ -12,8 +12,8 @@ export default function PostContent() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            headline: "Best Cafes in Formby Village: Where to Eat, Drink and Sit Down",
-            description: "The honest guide to cafes in Formby village: which ones are worth it, what to order, and where to go after the beach. From village independents to what to expect at the beach.",
+            headline: "Cafés in Formby Village: Coffee, Lunch and Food at the Beach",
+            description: "Cafés in Formby village, brunch, and what food there is at the beach: mobile concessions in the car parks in spring and summer only.",
             url: "https://www.formbyguide.co.uk/blog/best-cafes-formby-village",
             author: { "@type": "Person", "@id": "https://www.formbyguide.co.uk/about#clare", name: "Clare", url: "https://www.formbyguide.co.uk/about" },
             publisher: { "@type": "Organization", "@id": "https://www.churchtownmedia.co.uk/#organization", name: "Churchtown Media", url: "https://www.churchtownmedia.co.uk" },
@@ -30,7 +30,7 @@ export default function PostContent() {
             <ChevronRight className="w-3 h-3" />
             <Link href="/blog" className="hover:text-[#2E6B3E] transition">Blog</Link>
             <ChevronRight className="w-3 h-3" />
-            <span className="text-[#1C3220] font-medium">Best Cafes in Formby</span>
+            <span className="text-[#1C3220] font-medium">Cafés in Formby</span>
           </nav>
         </div>
       </div>
@@ -51,11 +51,11 @@ export default function PostContent() {
               Food Guide · Cafes
             </div>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight">
-              Best Cafes<br />
+              Cafés<br />
               <span className="text-[#C9A96E]">in Formby Village</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
-              Where to go for a proper coffee, decent cake, and somewhere to sit down: before or after the beach.
+              Coffee, lunch and somewhere to sit down, before or after the beach.
             </p>
             <div className="flex items-center gap-3 text-sm text-white/60 flex-wrap">
               <div className="flex items-center gap-2">
@@ -105,10 +105,10 @@ export default function PostContent() {
 
           <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">What about brunch?</h2>
           <p className="text-[#4A6B5A] leading-relaxed mb-4">
-            For a proper sit-down brunch, the village restaurants do better service than the cafes. Left Bank Brasserie is the obvious choice for something that feels like a treat: book ahead on weekends. The Sparrowhawk and Emily&apos;s Kitchen are also worth checking for weekend brunch menus.
+            Some village restaurants serve brunch as well. Emily&apos;s on Brows Lane, for example, says on its website that it serves breakfast and brunch from 9am every day, and advises booking at weekends.
           </p>
           <p className="text-[#4A6B5A] leading-relaxed mb-4">
-            If you want a quick coffee and a pastry before the beach, the village cafes are the answer. If you want a full brunch experience, those restaurants are where you&apos;ll get it: just with a table booked and slightly more structure to your morning.
+            For a quick coffee and a pastry before the beach, try the village cafés. For a sit-down brunch, book a table at a restaurant that serves one.
           </p>
 
           <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">After the beach: what actually works</h2>
@@ -120,7 +120,7 @@ export default function PostContent() {
             {[
               "Beach car park concessions: spring and summer only, so bring a flask the rest of the year.",
               "Village cafes: best for a sit-down coffee, mid-morning, before or after the beach.",
-              "Village restaurants (Left Bank, Emily's): best for a proper brunch or lunch, with a booking.",
+              "Village restaurants: for a sit-down brunch or lunch, with a booking.",
               "Most cafes close by 4–5pm. Don't plan a late afternoon coffee stop without checking first.",
             ].map((item) => (
               <li key={item} className="flex gap-3">

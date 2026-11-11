@@ -3,6 +3,12 @@ import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import ClareBio from "../ClareBio";
 
+// Rewritten 11 Nov 2026: was a review with verdicts. Now a factual profile taken
+// only from the pub's own pages (brunningandprice.co.uk/sparrowhawk/, home and
+// contact pages, fetched 11 Nov 2026; captures in docs/freshen-2026-11/sources/).
+
+const SOURCE = "https://www.brunningandprice.co.uk/sparrowhawk/";
+
 export default function PostContent() {
   return (
     <div className="min-h-screen bg-[#F7F9F6]">
@@ -11,10 +17,10 @@ export default function PostContent() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Review",
-            headline: "The Sparrowhawk Formby: An Honest Local Review",
+            "@type": "Article",
+            headline: "The Sparrowhawk, Formby: What It Is and What It Offers",
             description:
-              "Is The Sparrowhawk in Formby worth it? Food, drinks, atmosphere, prices and whether locals actually rate it. Written by someone who has been multiple times.",
+              "The Sparrowhawk is a Brunning & Price pub in a country house on Southport Old Road, Formby. Opening and food times, menus, dogs, access and booking, from the pub's own website.",
             url: "https://www.formbyguide.co.uk/blog/the-sparrowhawk-formby-review",
             author: {
               "@type": "Person",
@@ -22,17 +28,18 @@ export default function PostContent() {
               name: "Clare",
               url: "https://www.formbyguide.co.uk/about",
             },
-            itemReviewed: {
-              "@type": "Restaurant",
+            about: {
+              "@type": "BarOrPub",
               name: "The Sparrowhawk",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "Liverpool Road",
+                streetAddress: "Southport Old Road",
                 addressLocality: "Formby",
                 addressRegion: "Merseyside",
-                postalCode: "L37",
+                postalCode: "L37 0AB",
                 addressCountry: "GB",
               },
+              url: SOURCE,
             },
             publisher: {
               "@type": "Organization",
@@ -41,6 +48,7 @@ export default function PostContent() {
               url: "https://www.churchtownmedia.co.uk",
             },
             datePublished: "2026-05-07",
+            dateModified: "2026-11-11",
             inLanguage: "en-GB",
           }),
         }}
@@ -53,13 +61,13 @@ export default function PostContent() {
             <ChevronRight className="w-3 h-3" />
             <Link href="/blog" className="hover:text-[#2E6B3E] transition">Blog</Link>
             <ChevronRight className="w-3 h-3" />
-            <span className="text-[#1C3220] font-medium">The Sparrowhawk Review</span>
+            <span className="text-[#1C3220] font-medium">The Sparrowhawk</span>
           </nav>
         </div>
       </div>
 
       {/* Hero */}
-      <section className="relative text-white overflow-hidden min-h-[480px] flex items-end">
+      <section className="relative text-white overflow-hidden min-h-[420px] flex items-end">
         <Image
           src="/blog-sparrowhawk-formby-review.jpg"
           alt="A bowl of pappardelle ragu with Parmesan in warm candlelit restaurant lighting"
@@ -71,125 +79,106 @@ export default function PostContent() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
         <div className="relative z-10 container mx-auto px-4 max-w-5xl pb-10 pt-24">
           <div className="inline-block bg-[#2E6B3E] text-white text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wide">
-            Restaurant Review
+            Places to Eat
           </div>
           <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-3">
-            The Sparrowhawk Formby: An Honest Local Review
+            The Sparrowhawk, Formby: What It Is and What It Offers
           </h1>
           <p className="text-gray-200 text-lg max-w-2xl">
-            Good pub or great pub? I&apos;ve been enough times to have an opinion.
+            Opening and food times, menus, dogs, access and booking, from the pub&apos;s own website.
           </p>
         </div>
       </section>
 
       {/* Content */}
       <article className="container mx-auto px-4 max-w-3xl py-12">
+        <div className="mb-8 bg-[#FFF8E8] border border-[#C9A96E]/40 rounded-xl p-5 text-sm text-[#1C3220]">
+          <p>
+            Updated 11 November 2026. This page used to be a review. It now sets out only what The Sparrowhawk says about itself on its own website, checked on that date. Times and menus change, so check with the pub before you go.
+          </p>
+        </div>
+
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
-          The Sparrowhawk is on Liverpool Road, which puts it between the village centre and the 
-          Formby bypass. It&apos;s a Vintage Inns pub, which tells you something about what to expect 
-          from the food: well-managed, consistent, priced fairly, occasionally excellent rather than 
-          routinely so. It&apos;s popular with Formby locals for a reason and popular with day trippers 
-          for a similar reason. It is reliably good.
+          The Sparrowhawk is a Brunning &amp; Price pub on Southport Old Road, Formby. It is in a country house set in five acres of woods and parkland, with a terrace for eating outside and gardens beyond.
         </p>
 
-        <h2 className="text-2xl font-bold text-[#1C3220] mb-4 mt-10">The Food</h2>
+        <h2 className="text-2xl font-bold text-[#1C3220] mb-4 mt-10">Food and Drink</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
-          Pub classics done properly. Steak, fish, burgers, Sunday roasts. The menu is broad enough 
-          that most people will find something. The steaks are the headline dish and they&apos;re worth 
-          ordering if that&apos;s what you&apos;re after. Cooked correctly, good quality, nothing to 
-          complain about.
-        </p>
-        <p className="text-gray-700 leading-relaxed mb-4">
-          The Sunday roast is where The Sparrowhawk does particularly well locally. Generous portions, 
-          decent gravy, vegetables that are actually cooked rather than barely introduced to hot water. 
-          I&apos;ve had Sunday lunch there more than once and it&apos;s consistently the thing people 
-          recommend it for.
-        </p>
-        <p className="text-gray-700 leading-relaxed mb-4">
-          Fish and chips: straightforward, good batter, proper fish. The children&apos;s menu covers 
-          the basics without being embarrassing. If you&apos;re coming with kids after a day at the 
-          beach, there&apos;s plenty of choice.
+          The pub says its menus have a spine of classic British dishes with influences from other parts of the world, and that it puts each day&apos;s menus on its website. There is a Sunday menu with roasts, a pudding menu and a wine and drinks list.
         </p>
         <p className="text-gray-700 leading-relaxed mb-8">
-          What it isn&apos;t: experimental, fine dining, or a place to impress someone on a significant 
-          date. For that, go to Left Bank Brasserie on Chapel Lane and book in advance. The Sparrowhawk 
-          is a very good pub with very good pub food. That&apos;s a high standard and they meet it.
+          It is accredited by Coeliac UK for serving gluten-free food safely.
         </p>
 
-        <h2 className="text-2xl font-bold text-[#1C3220] mb-4 mt-10">The Drinks</h2>
-        <p className="text-gray-700 leading-relaxed mb-4">
-          Standard Vintage Inns drinks range. Real ales on tap, a reasonable wine list, cocktails, 
-          the full soft drinks selection for the kids. The cask ales are kept well, which matters 
-          more than it sounds. I&apos;ve had a pint here that I&apos;d describe as properly good.
-        </p>
+        <h2 className="text-2xl font-bold text-[#1C3220] mb-4 mt-10">Opening and Food Times</h2>
+        <div className="bg-white border border-gray-100 rounded-xl overflow-hidden mb-3">
+          <table className="w-full text-sm">
+            <thead className="bg-[#E8EDE6] text-[#1C3220]">
+              <tr>
+                <th className="text-left font-semibold py-2.5 px-4">Day</th>
+                <th className="text-left font-semibold py-2.5 px-4">Open</th>
+                <th className="text-left font-semibold py-2.5 px-4">Daily menu</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-100 text-gray-700">
+              {[
+                ["Monday to Wednesday", "12noon to 10:30pm", "12noon to 8pm"],
+                ["Thursday to Saturday", "12noon to 11pm", "12noon to 9pm"],
+                ["Sunday", "12noon to 10pm", "12noon to 8pm"],
+              ].map(([day, open, food]) => (
+                <tr key={day}>
+                  <td className="py-2.5 px-4 font-medium text-[#1C3220]">{day}</td>
+                  <td className="py-2.5 px-4">{open}</td>
+                  <td className="py-2.5 px-4">{food}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-xs text-gray-500 mb-8">As listed on the pub&apos;s contact page on 11 November 2026.</p>
+
+        <h2 className="text-2xl font-bold text-[#1C3220] mb-4 mt-10">Dogs</h2>
         <p className="text-gray-700 leading-relaxed mb-8">
-          Prices are mid-range for Formby. A main and a couple of drinks will be somewhere around 
-          £25-35 per person at current prices. Not cheap, not extravagant. About what you&apos;d 
-          expect from a good pub in a village like this.
+          Well-behaved dogs on leads are welcome in the bar area, and the pub asks that they stay off the furniture. If you are booking a table and bringing a dog, tell the pub so it can give you a suitable table.
         </p>
 
-        <h2 className="text-2xl font-bold text-[#1C3220] mb-4 mt-10">The Space</h2>
-        <p className="text-gray-700 leading-relaxed mb-4">
-          It&apos;s a large pub by Formby standards. Multiple dining areas, a bar section, a garden 
-          for when the weather justifies it. The garden is one of the better pub gardens in the area 
-          and it fills up quickly on warm evenings and Sunday afternoons.
-        </p>
-        <p className="text-gray-700 leading-relaxed mb-4">
-          The interior is warm and comfortable. Dark wood, soft lighting, the kind of place where 
-          a meal stretches to two hours without it feeling like you should move. Good for groups. 
-          Good for families. The noise level at busy times is what you&apos;d expect from a well-used 
-          pub dining room.
-        </p>
+        <h2 className="text-2xl font-bold text-[#1C3220] mb-4 mt-10">Access</h2>
         <p className="text-gray-700 leading-relaxed mb-8">
-          Dogs are welcome in the bar and garden areas. If you&apos;re coming from the beach with the 
-          dog, this is the practical choice.
+          The pub says it has full disabled access, including an accessible toilet and disabled parking. It also notes that a sat nav may stop a little short, and has a directions map on its website.
         </p>
 
-        <h2 className="text-2xl font-bold text-[#1C3220] mb-4 mt-10">Do You Need to Book?</h2>
+        <h2 className="text-2xl font-bold text-[#1C3220] mb-4 mt-10">Booking</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
-          Yes. At weekends, definitely. Sunday lunch in particular fills up by mid-morning. 
-          Weekday lunchtimes are more relaxed. You can book online through the Vintage Inns 
-          website or call directly. Don&apos;t turn up on a Sunday at 1pm without a reservation 
-          and expect a table.
+          You can book by phone or through the booking calendar on the pub&apos;s website, but not by email or Facebook. The pub keeps room for people who have not booked and runs a waiting list when there are no free tables. Outside tables are not reserved.
         </p>
         <p className="text-gray-700 leading-relaxed mb-8">
-          If you&apos;re visiting Formby on a weekend, especially in summer, book The Sparrowhawk 
-          ahead and get to the car park early: both fill up.
+          It cannot take very large parties, wedding parties or functions.
         </p>
 
         <div className="bg-[#1C3220] text-white rounded-xl p-6 my-10">
           <p className="font-semibold text-lg mb-3">The Sparrowhawk: Quick Facts</p>
-          <div className="grid grid-cols-2 gap-2 text-sm text-gray-200">
-            <div><span className="text-white font-medium">Address:</span> Liverpool Road, Formby</div>
-            <div><span className="text-white font-medium">Type:</span> Gastropub (Vintage Inns)</div>
-            <div><span className="text-white font-medium">Food:</span> Classic British pub menu</div>
-            <div><span className="text-white font-medium">Price:</span> Mid-range (~£25-35 per head)</div>
-            <div><span className="text-white font-medium">Dogs:</span> Bar and garden only</div>
-            <div><span className="text-white font-medium">Booking:</span> Essential at weekends</div>
+          <div className="grid sm:grid-cols-2 gap-2 text-sm text-gray-200">
+            <div><span className="text-white font-medium">Address:</span> Southport Old Road, Formby, L37 0AB</div>
+            <div><span className="text-white font-medium">Phone:</span> 01704 882 350</div>
+            <div><span className="text-white font-medium">Type:</span> Pub with food (Brunning &amp; Price)</div>
+            <div><span className="text-white font-medium">Dogs:</span> On leads, in the bar area</div>
           </div>
+          <p className="text-xs text-gray-300 mt-4">
+            Source:{" "}
+            <a href={SOURCE} className="underline underline-offset-2" target="_blank" rel="noopener noreferrer">
+              The Sparrowhawk on brunningandprice.co.uk
+            </a>
+          </p>
         </div>
-
-        <h2 className="text-2xl font-bold text-[#1C3220] mb-4 mt-10">The Verdict</h2>
-        <p className="text-gray-700 leading-relaxed mb-4">
-          The Sparrowhawk is a pub that Formby is lucky to have. Consistent, comfortable, well-run, 
-          with food that does what it says and service that doesn&apos;t make you feel like an 
-          inconvenience. It&apos;s not the place for a special occasion dinner but it&apos;s 
-          exactly right for lunch after a morning on the beach or a Sunday roast with the family.
-        </p>
-        <p className="text-gray-700 leading-relaxed mb-8">
-          I&apos;d recommend it without hesitation to anyone asking where to eat in Formby if they 
-          want something reliable and good. If they want something genuinely special, I&apos;d send 
-          them to Left Bank Brasserie and tell them to book.
-        </p>
 
         <ClareBio />
 
         <div className="mt-10 pt-8 border-t border-gray-200">
           <p className="text-sm text-gray-500 mb-3">More from Formby Guide</p>
           <div className="flex flex-wrap gap-3">
-            <Link href="/restaurants" className="text-[#2E6B3E] hover:underline font-medium text-sm">Restaurants in Formby</Link>
-            <Link href="/blog/left-bank-brasserie-formby" className="text-[#2E6B3E] hover:underline font-medium text-sm">Left Bank Brasserie Review</Link>
-            <Link href="/blog/formby-beach-summer-guide" className="text-[#2E6B3E] hover:underline font-medium text-sm">Formby Beach in Summer</Link>
+            <Link href="/restaurants/the-sparrowhawk-formby" className="text-[#2E6B3E] hover:underline font-medium text-sm">The Sparrowhawk listing</Link>
+            <Link href="/guides/best-restaurants-formby" className="text-[#2E6B3E] hover:underline font-medium text-sm">Restaurants in Formby</Link>
+            <Link href="/formby-pinewoods" className="text-[#2E6B3E] hover:underline font-medium text-sm">Formby Pinewoods</Link>
           </div>
         </div>
       </article>

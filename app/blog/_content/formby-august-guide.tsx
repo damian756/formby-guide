@@ -100,7 +100,7 @@ export default function PostContent() {
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">The Village in Late Summer</h2>
           <p>
-            Formby village in August is relaxed in the right way. The restaurants on Chapel Lane and around the village centre are busy at weekends but not impossible to get into on a weekday evening. Left Bank Brasserie is still the special occasion option and worth booking ahead at weekends. The Sparrowhawk is reliable for something a bit more casual.
+            Formby village in August is relaxed in the right way. The restaurants on Chapel Lane and around the village centre are busy at weekends but not impossible to get into on a weekday evening. Book ahead at weekends. The restaurants directory lists them all with addresses and contact details.
           </p>
           <p>
             The charity shops on Chapel Lane are worth a proper browse in August. I have been in and out of them for years and the quality varies enormously week to week. August tends to be good for summer clearances. Not glamorous, but genuinely worth forty minutes if you enjoy a rummage.

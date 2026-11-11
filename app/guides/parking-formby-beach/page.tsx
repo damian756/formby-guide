@@ -360,16 +360,16 @@ export default function ParkingFormbyBeachPage() {
                 {
                   name: "The Sparrowhawk",
                   href: "/restaurants/the-sparrowhawk-formby",
-                  tag: "Dog-friendly",
+                  tag: "Dogs in the bar",
                   tagColor: "bg-amber-500 text-white",
-                  desc: "Best post-beach option. Dog-friendly gastropub in the village, no booking needed most of the time.",
+                  desc: "A Brunning & Price pub on Southport Old Road, with food from noon every day. Dogs on leads are welcome in the bar area.",
                 },
                 {
                   name: "All Restaurants",
                   href: "/guides/best-restaurants-formby",
                   tag: "Guide",
                   tagColor: "bg-[#1C3220] text-white",
-                  desc: "Emily's, Left Bank Brasserie, Don Luigi: the full honest guide to eating in Formby.",
+                  desc: "Restaurants in Formby: where they are and what each one offers, from their own websites.",
                 },
               ].map((r) => (
                 <Link

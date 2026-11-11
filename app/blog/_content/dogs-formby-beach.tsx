@@ -183,22 +183,16 @@ export default function PostContent() {
             <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 max-w-none">
               <h2>Dog-Friendly Pubs and Cafés Near the Beach</h2>
               <p>
-                After a walk you&apos;re going to want a coffee or a pint. Formby is fairly good for dog-friendly venues: far better than you&apos;d expect for a quiet village.
+                After a walk you&apos;re going to want a coffee or a pint. Dog policies differ from place to place and sometimes by time of day, so check before you go. The dog-friendly guide lists more.
               </p>
             </div>
 
             <div className="not-prose my-6 space-y-4">
               {[
                 {
-                  name: "The Freshfield pub",
-                  tag: "Dog-friendly",
-                  desc: "On Massams Lane, Freshfield. Good beer garden, genuinely dog-friendly. Solid pub food. Post-walk pint sorted.",
-                  href: "/pubs",
-                },
-                {
                   name: "The Sparrowhawk",
-                  tag: "Dog-friendly garden",
-                  desc: "Village centre. Good food, dog-friendly outdoor area. Worth booking if you're going at a weekend.",
+                  tag: "Dogs in the bar",
+                  desc: "A Brunning & Price pub on Southport Old Road. It says well-behaved dogs on leads are welcome in the bar area, and asks you to mention your dog when you book.",
                   href: "/restaurants/the-sparrowhawk-formby",
                 },
               ].map((v) => (

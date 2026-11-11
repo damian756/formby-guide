@@ -117,7 +117,7 @@ export default function PostContent() {
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Where to Eat</h2>
           <p>
-            The village has several good options. Left Bank Brasserie is the special occasion choice: proper cooking, worth booking ahead at weekends. The Sparrowhawk is a reliable pub with good food and a beer garden that works on a September afternoon. For something more casual, the cafes on Chapel Lane cover coffee and lunch well.
+            The village has restaurants, pubs and cafes. The Sparrowhawk, a Brunning &amp; Price pub on Southport Old Road, serves food from noon every day, with a terrace and gardens. For something more casual, the cafes on Chapel Lane serve coffee and lunch.
           </p>
           <p>
             Mobile food concessions in the car parks run in spring and summer only, so do not rely on one for a post-walk coffee in September. Bring a flask.

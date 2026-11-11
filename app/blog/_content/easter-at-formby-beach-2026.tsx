@@ -80,7 +80,7 @@ export default function PostContent() {
 
           <h2>Eating After</h2>
           <p>There are mobile food concessions in the car parks in spring and summer. Bring a flask and a picnic as well, and expect a queue at any van on Easter Saturday.</p>
-          <p>Formby village is a ten-minute drive or twenty-minute walk. Left Bank Brasserie on Freshfield Road is the proper sit-down option. Busy at Easter but good. Book if you can. The cafes on Chapel Lane are good for a lighter lunch. If you want something quick and the kids need feeding now, the village has a few options that won&apos;t involve a long wait.</p>
+          <p>Formby village is a ten-minute drive or twenty-minute walk. For a sit-down meal, book a table at one of the village restaurants. The cafes on Chapel Lane are an option for a lighter lunch. If you want something quick and the kids need feeding now, the village has a few options that won&apos;t involve a long wait.</p>
         </div>
 
         <div className="mt-8 bg-[#F0F5EF] border border-[#2E6B3E]/20 rounded-2xl p-5">
@@ -88,7 +88,7 @@ export default function PostContent() {
           <ul className="text-sm text-[#2E6B3E] space-y-1">
             <li><Link href="/blog/red-squirrels-formby-spotting-guide" className="hover:underline">How to actually see red squirrels in Formby →</Link></li>
             <li><Link href="/blog/formby-beach-weather-guide" className="hover:underline">Formby Beach weather guide: when to visit →</Link></li>
-            <li><Link href="/blog/best-cafes-formby-village" className="hover:underline">Best cafes in Formby village →</Link></li>
+            <li><Link href="/blog/best-cafes-formby-village" className="hover:underline">Cafés in Formby village →</Link></li>
           </ul>
         </div>
 

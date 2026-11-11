@@ -18,7 +18,7 @@ type Props = {
 const THEMES: Record<string, { gradient: string; accent: string; emoji: string; tagline: string }> = {
   "nature-walks":  { gradient: "from-[#1C3220] to-[#2E6B3E]", accent: "#2E6B3E", emoji: "🌲", tagline: "Trails, woodland and coastal walks in Formby" },
   "beaches":       { gradient: "from-[#1C4A5A] to-[#2E7A9A]", accent: "#1C4A5A", emoji: "🏖️", tagline: "Formby Beach and the Sefton Coast" },
-  "restaurants":   { gradient: "from-[#5C1A1A] to-[#8B3A3A]", accent: "#8B3A3A", emoji: "🍽️", tagline: "The best places to eat in Formby" },
+  "restaurants":   { gradient: "from-[#5C1A1A] to-[#8B3A3A]", accent: "#8B3A3A", emoji: "🍽️", tagline: "Places to eat in and around Formby" },
   "cafes":         { gradient: "from-[#5C3A1A] to-[#8B6040]", accent: "#8B6040", emoji: "☕", tagline: "Coffee, cake and somewhere to sit in Formby" },
   "pubs":          { gradient: "from-[#1A2E5C] to-[#2A4A8B]", accent: "#2A4A8B", emoji: "🍺", tagline: "Pubs and bars in Formby village" },
   "activities":    { gradient: "from-[#1A5C3A] to-[#2E8B5A]", accent: "#1A5C3A", emoji: "🏄", tagline: "Things to do and activities in Formby" },
@@ -33,19 +33,16 @@ const CAT_ORDER = [
 
 const CATEGORY_CONTENT: Record<string, React.ReactNode[]> = {
   "restaurants": [
-    <>Formby punches above its weight for eating out. The village has a good spread: from proper date-night places like Left Bank Brasserie and Don Luigi to more casual spots like <Link href="/restaurants/the-sparrowhawk-formby" className="text-[#2E6B3E] hover:underline font-medium">The Sparrowhawk</Link> and Emily&apos;s. Sorrento is worth knowing about too, especially if you want Italian without the drive into Liverpool.</>,
-    "The Freshfield and Hightown pubs add a few more options if you're flexible on location. For most visitors the village centre is the obvious base: everything's walkable from the train station or the main car parks on Duke Street.",
-    "Worth booking ahead at weekends, especially for Left Bank Brasserie and Don Luigi. Midweek you'll generally walk in.",
+    <>Places to eat in Formby include Emily&apos;s on Brows Lane, which serves brunch by day and an à la carte menu in the evening; two Italian restaurants, Don Luigi on Church Road and Sorrento on Three Tuns Lane; and <Link href="/restaurants/the-sparrowhawk-formby" className="text-[#2E6B3E] hover:underline font-medium">The Sparrowhawk</Link>, a Brunning &amp; Price pub on Southport Old Road.</>,
+    "The listings below give each restaurant's address and contact details. Opening times change through the year, so check with the restaurant before you go.",
   ],
   "cafes": [
-    "Good coffee is easier to find in Formby than you'd expect for a village this size. The Coffee Carriage is a local favourite: small, friendly, worth the queue. Dapa Coffee is another good option, particularly if you want somewhere to actually sit.",
-    "If you're coming from the beach or the red squirrel trail, the National Trust café at the car park does a decent enough coffee and the cake is good. It's not cheap but it's convenient and you're already there.",
-    "The Udder Guys does ice cream and light snacks: more of a summer thing, but brilliant in season.",
+    "Most of Formby's cafés are in the village, on and around Chapel Lane. The listings below give addresses and contact details for each.",
+    "There is no café at the National Trust site. The Trust says ice cream, snacks and refreshments are sold from mobile concessions in the car parks in spring and summer.",
   ],
   "pubs": [
-    "Formby's pub scene is solid rather than spectacular, which is exactly what you want after a walk. The Freshfield and The Lifeboat are the two that come up most often. The Grapes in Freshfield has a decent beer garden if the weather holds.",
-    "If you're after a pint post-beach or post-pinewoods walk, The Freshfield is probably your best bet: it's on the right side of the village for most people driving in from the A565. Dog-friendly too, which matters.",
-    "The Pinewoods pub is what it sounds like: close to the NT entrance, fine for a quick pint, not a destination.",
+    "These are the pubs and bars in our directory. The Sparrowhawk, a Brunning & Price pub on Southport Old Road, says well-behaved dogs on leads are welcome in its bar area.",
+    "The listings below give each pub's address and contact details. If you are bringing a dog or want to eat, check with the pub before you go.",
   ],
   "activities": [
     "The National Trust pinewoods and red squirrel trail are the headline acts, and they're genuinely worth it. Beyond that, there's cycling along the coastal path, kayaking at Crosby, and horse riding if you've got kids who need something to do.",
@@ -59,7 +56,7 @@ const CATEGORY_CONTENT: Record<string, React.ReactNode[]> = {
   "shopping": [
     "Chapel Lane is the main drag for independent shops in Formby: a mix of boutiques, gifts, and the odd useful local service. It's not huge but it's worth a browse, especially if you're killing an hour between lunch and the beach.",
     "The charity shops are genuinely good. I find something almost every time: there are a couple along the high street that are worth a look if you're patient and not in a rush.",
-    "Most of the chain shops are on or near Duke Street. The M&S Foodhall is useful if you want to grab something for the beach.",
+    "Marks & Spencer has a food shop at The Cloisters on Halsall Lane, useful for picking up food for the beach.",
   ],
   "nature-walks": [
     "The National Trust pinewoods are the main draw: the red squirrel trail is well-marked and most people can walk it in about an hour. Go early, especially if you're hoping to spot squirrels. September to February gives you the best sighting odds.",
@@ -75,7 +72,7 @@ const CATEGORY_CONTENT: Record<string, React.ReactNode[]> = {
 
 const CATEGORY_GUIDES: Record<string, { href: string; label: string }[]> = {
   restaurants: [
-    { href: "/guides/best-restaurants-formby",      label: "Best Restaurants in Formby" },
+    { href: "/guides/best-restaurants-formby",      label: "Restaurants in Formby: A Guide" },
     { href: "/guides/formby-village",               label: "Formby Village Guide" },
     { href: "/guides/dog-friendly-formby",          label: "Dog-Friendly Formby" },
   ],

@@ -1,44 +1,34 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronRight, Calendar, Clock, ArrowRight, Star, CheckCircle, AlertCircle, Utensils } from "lucide-react";
+import { ChevronRight, Calendar, Clock, ArrowRight, CheckCircle, AlertCircle, Utensils } from "lucide-react";
 import ClareBio from "../ClareBio";
 
+// Rewritten 11 Nov 2026: no ratings, rankings or verdicts. Facts about named places
+// come from their own websites, fetched 11 Nov 2026 (docs/freshen-2026-11/sources/).
 const RESTAURANTS = [
   {
+    name: "Emily's",
+    summary: "A restaurant on Brows Lane serving breakfast and brunch from 9am every day, and a main menu from 12:30pm Monday to Saturday and from 2pm on Sundays.",
+    pros: ["A kids menu for guests under 12", "A gluten-free brunch menu", "Well-behaved dogs welcome until 5pm"],
+    cons: ["Walk-ins are first come, first served; Emily's advises booking, especially at weekends", "No dogs during evening service"],
+    link: "/restaurants/emilys-formby",
+    linkLabel: "View listing",
+  },
+  {
     name: "The Sparrowhawk",
-    tag: "Best Overall",
-    tagColor: "bg-[#2E6B3E] text-white",
-    rating: 5,
-    price: "££",
-    summary: "The best family restaurant in Formby. Proper food, a children's menu that kids actually want to eat, and staff who genuinely understand what family dining looks like.",
-    pros: ["Kids menu with real food, not just nuggets", "Patient, warm staff", "Good wine list for the adults", "Doesn't feel chaotic even when busy"],
-    cons: ["Booking recommended at weekends", "Can get warm in summer"],
-    bestFor: "Sit-down family lunches or weekend dinners",
+    summary: "A Brunning & Price pub on Southport Old Road, in a country house set in five acres of woods and parkland, with a terrace and gardens.",
+    pros: ["Food from noon every day", "Coeliac UK accredited for gluten-free food", "Full disabled access, including disabled parking"],
+    cons: ["Bookings by phone or online; some tables are kept for people who have not booked", "Outside tables are not reserved", "Dogs on leads in the bar area only"],
     link: "/restaurants/the-sparrowhawk-formby",
+    linkLabel: "View listing",
   },
   {
-    name: "Local Independent Cafes",
-    tag: "Best Casual",
-    tagColor: "bg-amber-600 text-white",
-    rating: 4,
-    price: "£",
-    summary: "Formby's independent cafes are genuinely relaxed about children. Order a proper coffee, get cake for the kids, sit down. No pressure, no rushing.",
-    pros: ["Low pressure atmosphere", "Often dog-friendly too", "Great for coffee while kids eat", "Reasonable prices"],
-    cons: ["Limited hot food options at some", "Smaller spaces"],
-    bestFor: "Mid-morning stops, post-beach cake",
+    name: "Cafés in the Village",
+    summary: "Formby's cafés are mostly in the village, on and around Chapel Lane. The cafés directory lists them with addresses and contact details.",
+    pros: ["Coffee, cake and light lunches"],
+    cons: ["Opening times vary, so check before a late afternoon stop"],
     link: "/cafes",
-  },
-  {
-    name: "Pubs with Food",
-    tag: "Hit & Miss",
-    tagColor: "bg-blue-600 text-white",
-    rating: 3,
-    price: "£–££",
-    summary: "Some Formby pubs are great for families at lunchtime. Others have a vibe that's clearly adult-focused. Check before you go.",
-    pros: ["Often serve earlier lunches", "Garden spaces in summer", "Kids menus available at many"],
-    cons: ["Evening atmosphere not always family-friendly", "Variable quality kitchen to kitchen"],
-    bestFor: "Weekend lunch only: avoid evening with kids",
-    link: "/pubs",
+    linkLabel: "Browse cafés",
   },
 ];
 
@@ -51,8 +41,9 @@ export default function PostContent() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            headline: "Best Restaurants in Formby for Families: Honest Review",
-            description: "A local mum of four reviews where to eat in Formby with kids. Honest assessments of family-friendly restaurants, cafes and pubs: not a sponsored round-up.",
+            headline: "Eating Out in Formby with Kids",
+            description: "Where to eat in Formby with children: kids menus, times, dogs and booking at two village restaurants, from their own websites, plus the cafés.",
+            dateModified: "2026-11-11",
             url: "https://www.formbyguide.co.uk/blog/where-to-eat-formby-with-kids",
             author: { "@type": "Person", "@id": "https://www.formbyguide.co.uk/about#clare", name: "Clare", url: "https://www.formbyguide.co.uk/about" },
             publisher: { "@type": "Organization", "@id": "https://www.churchtownmedia.co.uk/#organization", name: "Churchtown Media", url: "https://www.churchtownmedia.co.uk" },
@@ -84,11 +75,11 @@ export default function PostContent() {
               Food · Family Dining
             </div>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight">
-              Best Restaurants in Formby<br />
-              <span className="text-[#C9A96E]">for Families</span>
+              Eating Out in Formby<br />
+              <span className="text-[#C9A96E]">with Kids</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
-              Four kids. Fussy eaters. A limited budget for disasters. After years of family dining in Formby, here&apos;s what actually works.
+              Kids menus, times, dogs and booking, taken from the restaurants&apos; own websites and checked in November 2026.
             </p>
             <div className="flex items-center gap-3 text-sm text-white/60 flex-wrap">
               <div className="flex items-center gap-2">
@@ -113,7 +104,7 @@ export default function PostContent() {
               { label: "Years experience", value: "6+" },
               { label: "Kids tested", value: "4" },
               { label: "Average budget", value: "£15–25pp" },
-              { label: "Honest rating", value: "Not sponsored" },
+              { label: "Checked", value: "Nov 2026" },
             ].map(({ label, value }) => (
               <div key={label} className="px-5 py-4 text-center">
                 <div className="text-[#C9A96E] font-bold text-lg">{value}</div>
@@ -131,7 +122,7 @@ export default function PostContent() {
               <p className="lead text-xl text-gray-600 leading-relaxed">
                 Eating out with kids isn&apos;t what it was before kids. You&apos;re looking for places where someone spills a drink and nobody gives you a death stare.
               </p>
-              <p>Formby isn&apos;t overrun with restaurants, but what&apos;s here is genuinely good. You just need to know which places understand families.</p>
+              <p>Here is what two village restaurants say on their own websites about children, times, dogs and booking, listed alphabetically. Check with them before you go, as menus and times change.</p>
             </div>
 
             <div className="not-prose space-y-6 mb-12">
@@ -145,23 +136,14 @@ export default function PostContent() {
                         </div>
                         <div>
                           <h3 className="font-display text-xl font-bold text-[#1C3220]">{r.name}</h3>
-                          <div className="flex items-center gap-2 mt-0.5">
-                            <div className="flex">
-                              {Array.from({ length: 5 }).map((_, i) => (
-                                <Star key={i} className={`w-3 h-3 ${i < r.rating ? "fill-amber-400 text-amber-400" : "text-gray-200"}`} />
-                              ))}
-                            </div>
-                            <span className="text-gray-400 text-xs">{r.price}</span>
-                          </div>
                         </div>
                       </div>
-                      <span className={`text-xs font-bold px-3 py-1.5 rounded-full ${r.tagColor}`}>{r.tag}</span>
                     </div>
                     <p className="text-gray-700 text-sm leading-relaxed mb-4">{r.summary}</p>
                   </div>
                   <div className="grid md:grid-cols-2 gap-0 border-t border-gray-100">
                     <div className="px-6 py-4 border-b md:border-b-0 md:border-r border-gray-100">
-                      <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">What&apos;s great</p>
+                      <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">What it offers</p>
                       <ul className="space-y-1.5">
                         {r.pros.map(p => (
                           <li key={p} className="flex items-start gap-2 text-sm text-gray-700">
@@ -172,22 +154,18 @@ export default function PostContent() {
                     </div>
                     <div className="px-6 py-4">
                       <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Worth knowing</p>
-                      <ul className="space-y-1.5 mb-4">
+                      <ul className="space-y-1.5">
                         {r.cons.map(c => (
                           <li key={c} className="flex items-start gap-2 text-sm text-gray-700">
                             <AlertCircle className="w-3.5 h-3.5 text-amber-500 shrink-0 mt-0.5" />{c}
                           </li>
                         ))}
                       </ul>
-                      <div className="bg-[#E8EDE6] rounded-xl px-3 py-2">
-                        <p className="text-[10px] uppercase tracking-wider text-[#2E6B3E] font-bold mb-0.5">Best for</p>
-                        <p className="text-sm text-[#1C3220]">{r.bestFor}</p>
-                      </div>
                     </div>
                   </div>
                   <div className="px-6 py-4 bg-gray-50 border-t border-gray-100">
                     <Link href={r.link} className="inline-flex items-center gap-2 text-[#2E6B3E] font-bold text-sm hover:text-[#1C3220] transition">
-                      View full listing <ArrowRight className="w-3.5 h-3.5" />
+                      {r.linkLabel} <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
                   </div>
                 </div>
@@ -197,12 +175,12 @@ export default function PostContent() {
             <div className="not-prose bg-[#1C3220] text-white rounded-2xl p-7 mb-10">
               <h3 className="font-display text-xl font-bold mb-4">The Money Reality</h3>
               <p className="text-white/75 leading-relaxed mb-3">Four kids eating out is expensive. Two mains, four kids&apos; meals, four drinks: you&apos;re easily at £70–90 for a sit-down meal.</p>
-              <p className="text-white/75 leading-relaxed"><strong className="text-white">To save money:</strong> Go for lunch not dinner. <strong className="text-white">Worth the splurge:</strong> The Sparrowhawk.</p>
+              <p className="text-white/75 leading-relaxed"><strong className="text-white">To save money:</strong> Go for lunch not dinner.</p>
             </div>
 
             <div className="not-prose bg-[#E8EDE6] rounded-2xl p-8">
               <p className="font-display font-bold text-[#1C3220] text-lg mb-2">Browse All Formby Restaurants</p>
-              <p className="text-[#1C3220]/70 text-sm mb-5">Reviews, ratings, hygiene scores and contact details in one place.</p>
+              <p className="text-[#1C3220]/70 text-sm mb-5">Addresses and contact details in one place.</p>
               <div className="flex flex-wrap gap-3">
                 <Link href="/restaurants" className="inline-flex items-center gap-2 bg-[#2E6B3E] hover:bg-[#1C3220] text-white px-5 py-3 rounded-full font-semibold text-sm transition">
                   Restaurants <ArrowRight className="w-3.5 h-3.5" />
@@ -217,17 +195,17 @@ export default function PostContent() {
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sticky top-6">
               <h3 className="font-display font-bold text-[#1C3220] text-base mb-4">Quick Reference</h3>
               <div className="space-y-4">
-                <div><p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">For a family lunch</p><p className="text-sm font-semibold text-[#2E6B3E]">The Sparrowhawk → first choice</p></div>
-                <div><p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Post-beach cake stop</p><p className="text-sm font-semibold text-[#2E6B3E]">Local independent cafes</p></div>
+                <div><p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Kids menu</p><p className="text-sm text-gray-700">Emily&apos;s has a kids menu for under-12s.</p></div>
+                <div><p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Gluten-free</p><p className="text-sm text-gray-700">Emily&apos;s has a gluten-free brunch menu; The Sparrowhawk is Coeliac UK accredited.</p></div>
                 <div><p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Budget tip</p><p className="text-sm text-gray-700">Go for lunch over dinner. Same quality, lower price, quieter.</p></div>
               </div>
             </div>
             <div className="bg-amber-50 border border-amber-200 rounded-2xl p-5">
               <div className="flex items-start gap-2 mb-2">
                 <AlertCircle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
-                <p className="font-bold text-amber-900 text-sm">Weekend booking tip</p>
+                <p className="font-bold text-amber-900 text-sm">Weekend booking</p>
               </div>
-              <p className="text-amber-800 text-xs leading-relaxed">The Sparrowhawk gets full at weekends. Book in advance, especially Friday evening and Sunday lunch.</p>
+              <p className="text-amber-800 text-xs leading-relaxed">Emily&apos;s advises booking, especially at weekends. The Sparrowhawk keeps some tables for people who have not booked and runs a waiting list when it is full.</p>
             </div>
           </aside>
         </div>

@@ -1,139 +1,142 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Utensils, Star, ChevronRight, ArrowRight } from "lucide-react";
+import { ChevronRight, ArrowRight } from "lucide-react";
 import GuideLayout from "@/app/components/GuideLayout";
 import { getGuide } from "@/lib/guides-config";
 
 const BASE_URL = "https://www.formbyguide.co.uk";
 
+// Reframed 11 Nov 2026 from a ranked "best restaurants" list into a factual guide.
+// Every description comes from the restaurant's own website, fetched 11 Nov 2026
+// (captures in docs/freshen-2026-11/sources/), with addresses checked against the
+// Food Standards Agency register. No rankings, verdicts or price ratings.
+
 export const metadata: Metadata = {
-  title: "Best Restaurants in Formby 2026 | Honest Local Guide | FormbyGuide",
+  title: "Restaurants in Formby: Where They Are and What They Offer | FormbyGuide",
   description:
-    "The best restaurants in Formby: Clare's honest guide. Emily's, Left Bank Brasserie, The Sparrowhawk, Don Luigi. No sponsored results, no filler.",
+    "Restaurants in Formby: Emily's, The Sparrowhawk, Don Luigi and Sorrento. Addresses, menus and dog policies, taken from each restaurant's own website.",
   keywords:
-    "best restaurants formby, formby restaurants, where to eat formby, left bank brasserie formby, emily's formby, the sparrowhawk formby",
+    "restaurants formby, where to eat formby, formby restaurants, emily's formby, the sparrowhawk formby, don luigi formby, sorrento formby",
   alternates: { canonical: `${BASE_URL}/guides/best-restaurants-formby` },
   openGraph: {
-    title: "Best Restaurants in Formby 2026 | Honest Local Guide",
+    title: "Restaurants in Formby: Where They Are and What They Offer",
     description:
-      "Clare's honest guide to the best restaurants in Formby: Emily's, Left Bank Brasserie, The Sparrowhawk, Don Luigi, and where to avoid.",
+      "Emily's, The Sparrowhawk, Don Luigi and Sorrento: addresses, menus and dog policies, from each restaurant's own website.",
     url: `${BASE_URL}/guides/best-restaurants-formby`,
     type: "website",
     siteName: "FormbyGuide.co.uk",
     locale: "en_GB",
-    images: [{ url: `${BASE_URL}/blog-card-food.webp`, width: 1200, height: 630, alt: "Best restaurants in Formby" }],
+    images: [{ url: `${BASE_URL}/blog-card-food.webp`, width: 1200, height: 630, alt: "A table laid for a meal" }],
   },
 };
 
 const pageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Best Restaurants in Formby 2026",
-  description: "Honest guide to the best restaurants in Formby, written by a local.",
+  name: "Restaurants in Formby",
+  description: "Where Formby's restaurants are and what each one offers, from their own websites.",
   url: `${BASE_URL}/guides/best-restaurants-formby`,
 };
+
+type Restaurant = {
+  name: string;
+  slug: string;
+  kind: string;
+  address: string;
+  offers: string[];
+  dogs: string;
+  booking: string;
+  source: { label: string; href: string };
+};
+
+// Alphabetical order. Nothing here is a ranking.
+const restaurants: Restaurant[] = [
+  {
+    name: "Don Luigi",
+    slug: "don-luigi-formby",
+    kind: "Italian restaurant",
+    address: "31 Church Road, Formby, L37 8BQ",
+    offers: [
+      "Main, set, grill, small plates and drinks menus, with pizza in the Naples style.",
+      "Christmas and New Year's Eve menus in December.",
+      "Gift cards are sold in the restaurant only, not online.",
+    ],
+    dogs: "Not stated on its website: ask the restaurant.",
+    booking: "Book a table through its website or by phone on 01704 878257.",
+    source: { label: "donluigirestaurant.co.uk", href: "http://www.donluigirestaurant.co.uk/" },
+  },
+  {
+    name: "Emily's",
+    slug: "emilys-formby",
+    kind: "Restaurant",
+    address: "25 Brows Lane, Formby",
+    offers: [
+      "Describes itself as a botanical hideaway in the heart of Formby.",
+      "Breakfast and brunch from 9am every day; the main menu from 12:30pm Monday to Saturday and the Sunday menu from 2pm.",
+      "A kids menu for under-12s, a gluten-free brunch menu and private dining.",
+    ],
+    dogs: "Well-behaved dogs are welcome every day until 5pm, but not during evening service.",
+    booking: "Walk-ins are taken on a first come, first served basis; Emily's advises booking, especially at weekends.",
+    source: { label: "emilysformby.com", href: "https://emilysformby.com/" },
+  },
+  {
+    name: "Sorrento",
+    slug: "sorrento",
+    kind: "Family-run Italian restaurant",
+    address: "29 Three Tuns Lane, Formby, L37 4AQ",
+    offers: [
+      "Opened in Formby in September 2009, after the family's first Sorrento in Orrell in 1998.",
+      "Menu, specials, desserts and wine list on its website.",
+      "An outdoor seating area.",
+    ],
+    dogs: "Not stated on its website: ask the restaurant.",
+    booking: "Contact details are on its website.",
+    source: { label: "sorrento.uk.com", href: "https://www.sorrento.uk.com/" },
+  },
+  {
+    name: "The Sparrowhawk",
+    slug: "the-sparrowhawk-formby",
+    kind: "Pub with food (Brunning & Price)",
+    address: "Southport Old Road, Formby, L37 0AB",
+    offers: [
+      "A country house set in five acres of woods and parkland, with a terrace and gardens.",
+      "A daily menu built on British dishes, and Sunday roasts. Coeliac UK accredited for gluten-free food.",
+      "Open from noon every day. Food from noon to 8pm Sunday to Wednesday and to 9pm Thursday to Saturday.",
+      "Full disabled access, including an accessible toilet and disabled parking.",
+    ],
+    dogs: "Well-behaved dogs on leads are welcome in the bar area.",
+    booking: "Bookings by phone or online, not by email or Facebook. Some tables are kept for people who have not booked, and there is a waiting list when it is full.",
+    source: { label: "brunningandprice.co.uk/sparrowhawk", href: "https://www.brunningandprice.co.uk/sparrowhawk/" },
+  },
+];
+
+const faqs = [
+  {
+    q: "Which restaurants in Formby welcome dogs?",
+    a: "The Sparrowhawk says well-behaved dogs on leads are welcome in its bar area. Emily's says well-behaved dogs are welcome until 5pm, but not during evening service. For anywhere else, ask before you go.",
+  },
+  {
+    q: "Is there a café or restaurant at Formby Beach?",
+    a: "No. The National Trust says ice cream, snacks and refreshments are sold from mobile concessions in the car parks in spring and summer. The restaurants are in and around the village.",
+  },
+  {
+    q: "Can I eat at The Sparrowhawk without booking?",
+    a: "The Sparrowhawk says it keeps room for people who have not booked and runs a waiting list when there are no free tables. Its outside tables are not reserved.",
+  },
+];
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is the best restaurant in Formby?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Left Bank Brasserie is the best restaurant in Formby for a proper sit-down dinner. Emily's is the most popular neighbourhood restaurant and the best option for a relaxed mid-week meal.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do I need to book restaurants in Formby?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, for Left Bank Brasserie and Emily's at weekends. Book at least a week ahead for Friday and Saturday evenings. The Sparrowhawk is more walk-in friendly.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are there dog-friendly restaurants in Formby?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The Sparrowhawk is dog-friendly. Other restaurants are less predictable: call ahead if you're planning to bring your dog to a restaurant rather than a pub.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are there good restaurants near Formby Beach?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "There is no café on site at the beach, only mobile food concessions in the car parks in spring and summer. The village restaurants (Emily's, Left Bank, The Sparrowhawk) are about 10 minutes by car: the sensible option for a post-walk lunch or dinner.",
-      },
-    },
-  ],
+  mainEntity: faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
 };
 
-const restaurants = [
-  {
-    rank: 1,
-    name: "Left Bank Brasserie",
-    type: "Brasserie",
-    priceRange: "£££",
-    dogFriendly: false,
-    booking: "Essential at weekends",
-    description:
-      "The best restaurant in Formby. Proper brasserie food, excellent wine list, room that&apos;s actually atmospheric rather than just beige. The kind of place that&apos;s genuinely enjoyable rather than just okay. Book at least a week ahead for Friday or Saturday evenings: it fills up and they don&apos;t overbook.",
-    honest:
-      "The price reflects the quality. If you&apos;re on a budget, this isn&apos;t it. If you&apos;re looking for the best meal in Formby, this is it.",
-    bestFor: "Birthday dinners, date nights, celebrating something",
-    location: "Village centre",
-  },
-  {
-    rank: 2,
-    name: "Emily's",
-    type: "Restaurant",
-    priceRange: "££",
-    dogFriendly: false,
-    booking: "Book ahead at weekends",
-    description:
-      "The most-loved neighbourhood restaurant in Formby. Locals go back regularly, which is a far better endorsement than any review. Good food, reasonable prices, the kind of place you&apos;re happy to go on a Thursday evening without it feeling like a special occasion.",
-    honest:
-      "Not the cheapest but very good value for what you get. No annoying pretension. Kids fine, groups fine, couples fine.",
-    bestFor: "Regular dining, family meals, groups",
-    location: "Village centre",
-  },
-  {
-    rank: 3,
-    name: "The Sparrowhawk",
-    slug: "the-sparrowhawk-formby",
-    type: "Gastropub",
-    priceRange: "££",
-    dogFriendly: true,
-    booking: "Walk-ins possible",
-    description:
-      "Good gastropub food done consistently well. The most flexible option in Formby: doesn&apos;t require booking with the same urgency as Left Bank or Emily&apos;s. Dog-friendly. Beer garden in summer. The right choice if you haven&apos;t booked but want a decent evening out.",
-    honest:
-      "Pub food rather than restaurant food: which is exactly what you want from it. Not trying to be Left Bank and better for it.",
-    bestFor: "Post-walk meals, dogs, unplanned evenings out",
-    location: "Village",
-  },
-  {
-    rank: 4,
-    name: "Don Luigi",
-    type: "Italian",
-    priceRange: "££",
-    dogFriendly: false,
-    booking: "Book for larger groups",
-    description:
-      "Reliable Italian in the village. Good for groups and families that want a table easily and predictable food. Not going to change your life but won&apos;t disappoint either. Decent pasta, good pizza, friendly service.",
-    honest:
-      "It&apos;s the Italian restaurant in a town that needs a good Italian restaurant. It fills the gap well. Best for groups where you need everyone to find something they want.",
-    bestFor: "Groups, families, Italian cravings",
-    location: "Village",
-  },
-];
-
-export default function BestRestaurantsFormbyPage() {
+export default function RestaurantsFormbyPage() {
   const guide = getGuide("best-restaurants-formby");
   return (
     <GuideLayout guide={guide}>
@@ -142,10 +145,10 @@ export default function BestRestaurantsFormbyPage() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
         {/* Hero */}
-        <section className="relative text-white py-20 md:py-28 overflow-hidden min-h-[480px] flex items-center bg-[#1C3220]">
+        <section className="relative text-white py-16 md:py-24 overflow-hidden min-h-[400px] flex items-center bg-[#1C3220]">
           <Image
             src="/blog-card-food.webp"
-            alt="Best restaurants in Formby"
+            alt="A table laid for a meal"
             fill
             priority
             className="object-cover object-center opacity-50"
@@ -159,48 +162,27 @@ export default function BestRestaurantsFormbyPage() {
                 <ChevronRight className="w-4 h-4" />
                 <Link href="/guides" className="hover:text-white transition">Guides</Link>
                 <ChevronRight className="w-4 h-4" />
-                <span>Best Restaurants</span>
+                <span>Restaurants</span>
               </div>
               <h1 className="font-display text-4xl md:text-5xl font-bold mb-4 leading-tight">
-                Best Restaurants in Formby
+                Restaurants in Formby
               </h1>
-              <p className="text-xl text-white/85 leading-relaxed mb-6">
-                Written by someone who eats here regularly. No sponsorship, no filler: just honest recommendations from a local.
+              <p className="text-xl text-white/85 leading-relaxed">
+                Where four of Formby&apos;s restaurants are and what each one offers, taken from their own websites in November 2026.
               </p>
-              <div className="flex flex-wrap gap-3">
-                {[
-                  { icon: Star, label: "Left Bank Brasserie", note: "Best overall" },
-                  { icon: Utensils, label: "Emily's", note: "Best local regular" },
-                ].map(({ icon: Icon, label, note }) => (
-                  <div key={label} className="bg-white/10 backdrop-blur rounded-lg px-4 py-2.5 border border-white/20">
-                    <div className="flex items-center gap-2">
-                      <Icon className="w-3.5 h-3.5 text-[#C9A96E]" />
-                      <span className="font-semibold text-sm">{label}</span>
-                    </div>
-                    <p className="text-white/60 text-xs mt-0.5 ml-5">{note}</p>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </section>
 
-        {/* Intro band */}
-        <div className="bg-[#1C3220]">
-          <div className="h-0.5 bg-gradient-to-r from-transparent via-[#C9A96E] to-transparent" />
-          <div className="container mx-auto px-4 max-w-6xl py-10">
-            <p className="font-display text-2xl md:text-3xl text-white font-semibold leading-snug max-w-2xl">
-              Formby has <span className="text-[#C9A96E]">four restaurants</span> worth knowing about. Here they are, in order.
-            </p>
-            <p className="text-white/55 text-sm leading-relaxed mt-4 max-w-xl">
-              These are all in the village, not at the beach. Book ahead for weekends: Formby is small and the good places fill up quickly.
-            </p>
-          </div>
-        </div>
-
         <div className="container mx-auto px-4 max-w-6xl py-12">
 
-          {/* Quick comparison table */}
+          <p className="text-[#1C3220]/75 leading-relaxed mb-10 max-w-3xl">
+            They are listed in alphabetical order. Menus and opening times change, so check with the restaurant before you go. The{" "}
+            <Link href="/restaurants" className="text-[#2E6B3E] underline underline-offset-2">restaurants directory</Link>{" "}
+            lists every restaurant we know of in and around Formby.
+          </p>
+
+          {/* At a glance */}
           <section className="mb-12">
             <h2 className="font-display text-2xl font-bold text-[#1C3220] mb-6">At a Glance</h2>
             <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden">
@@ -210,24 +192,15 @@ export default function BestRestaurantsFormbyPage() {
                     <tr>
                       <th className="text-left font-semibold py-3 px-5">Restaurant</th>
                       <th className="text-left font-semibold py-3 px-5">Type</th>
-                      <th className="text-left font-semibold py-3 px-5">Price</th>
-                      <th className="text-left font-semibold py-3 px-5">Dogs</th>
-                      <th className="text-left font-semibold py-3 px-5">Booking</th>
+                      <th className="text-left font-semibold py-3 px-5">Address</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-50">
-                    {restaurants.map(({ name, type, priceRange, dogFriendly, booking }) => (
-                      <tr key={name} className="hover:bg-gray-50">
+                    {restaurants.map(({ name, kind, address }) => (
+                      <tr key={name}>
                         <td className="py-3 px-5 font-semibold text-[#1C3220]">{name}</td>
-                        <td className="py-3 px-5 text-[#1C3220]/60">{type}</td>
-                        <td className="py-3 px-5 font-medium text-[#2E6B3E]">{priceRange}</td>
-                        <td className="py-3 px-5">
-                          {dogFriendly
-                            ? <span className="text-[#2E6B3E] font-semibold">Yes</span>
-                            : <span className="text-gray-400">No</span>
-                          }
-                        </td>
-                        <td className="py-3 px-5 text-[#1C3220]/60 text-xs">{booking}</td>
+                        <td className="py-3 px-5 text-[#1C3220]/70">{kind}</td>
+                        <td className="py-3 px-5 text-[#1C3220]/70">{address}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -236,58 +209,49 @@ export default function BestRestaurantsFormbyPage() {
             </div>
           </section>
 
-          {/* Individual reviews */}
+          {/* Each restaurant */}
           <section className="mb-16">
-            <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">The Reviews</h2>
+            <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">The Restaurants</h2>
             <div className="space-y-6">
-              {restaurants.map(({ rank, name, type, priceRange, dogFriendly, booking, description, honest, bestFor, ...rest }) => {
-                const slug = (rest as { slug?: string }).slug;
-                return (
+              {restaurants.map(({ name, slug, kind, address, offers, dogs, booking, source }) => (
                 <div key={name} className="bg-white rounded-2xl border border-gray-100 overflow-hidden">
-                  <div className="bg-[#E8EDE6] px-6 py-4 flex items-center gap-4">
-                    <div className="w-10 h-10 bg-[#1C3220] text-[#C9A96E] rounded-xl flex items-center justify-center font-display font-bold text-lg flex-none">
-                      {rank}
-                    </div>
-                    <div className="flex-1">
+                  <div className="bg-[#E8EDE6] px-6 py-4 flex flex-wrap items-center gap-4">
+                    <div className="flex-1 min-w-[12rem]">
                       <h3 className="font-display font-bold text-[#1C3220] text-xl">{name}</h3>
-                      <p className="text-xs text-[#1C3220]/50 mt-0.5">
-                        {type} · {priceRange} · {dogFriendly ? "Dog-friendly" : "No dogs"} · {booking}
-                      </p>
+                      <p className="text-xs text-[#1C3220]/60 mt-0.5">{kind} · {address}</p>
                     </div>
-                    {slug && (
-                      <Link
-                        href={`/restaurants/${slug}`}
-                        className="inline-flex items-center gap-1 text-xs font-semibold text-[#2E6B3E] border border-[#2E6B3E]/30 hover:bg-[#2E6B3E] hover:text-white px-3 py-1.5 rounded-full transition-colors flex-none"
-                      >
-                        View listing <ArrowRight className="w-3 h-3" />
-                      </Link>
-                    )}
+                    <Link
+                      href={`/restaurants/${slug}`}
+                      className="inline-flex items-center gap-1 text-xs font-semibold text-[#2E6B3E] border border-[#2E6B3E]/30 hover:bg-[#2E6B3E] hover:text-white px-3 py-1.5 rounded-full transition-colors flex-none"
+                    >
+                      View listing <ArrowRight className="w-3 h-3" />
+                    </Link>
                   </div>
                   <div className="p-6">
-                    <p
-                      className="text-[#1C3220]/80 leading-relaxed mb-4"
-                      dangerouslySetInnerHTML={{ __html: description.replace(/&apos;/g, "'") }}
-                    />
-                    <div className="bg-amber-50 border border-amber-100 rounded-xl p-4 mb-4">
-                      <p className="text-xs font-bold text-amber-700 uppercase tracking-widest mb-1">Honest take</p>
-                      <p
-                        className="text-sm text-amber-900/80 leading-relaxed"
-                        dangerouslySetInnerHTML={{ __html: honest.replace(/&apos;/g, "'") }}
-                      />
-                    </div>
-                    <p className="text-xs text-[#1C3220]/50">
-                      <span className="font-semibold text-[#1C3220]">Best for: </span>{bestFor}
+                    <ul className="list-disc pl-5 space-y-1.5 text-[#1C3220]/80 leading-relaxed mb-4">
+                      {offers.map((o) => <li key={o}>{o}</li>)}
+                    </ul>
+                    <p className="text-sm text-[#1C3220]/75 mb-1.5">
+                      <span className="font-semibold text-[#1C3220]">Dogs: </span>{dogs}
+                    </p>
+                    <p className="text-sm text-[#1C3220]/75 mb-3">
+                      <span className="font-semibold text-[#1C3220]">Booking: </span>{booking}
+                    </p>
+                    <p className="text-xs text-[#1C3220]/60">
+                      Source:{" "}
+                      <a href={source.href} className="text-[#2E6B3E] underline underline-offset-2" target="_blank" rel="noopener noreferrer">
+                        {source.label}
+                      </a>
                     </p>
                   </div>
                 </div>
-                );
-              })}
+              ))}
             </div>
           </section>
 
           {/* Cafes + beach concessions */}
           <section className="mb-16 bg-[#E8EDE6] rounded-2xl p-6 md:p-8">
-            <h2 className="font-display text-2xl font-bold text-[#1C3220] mb-4">Cafés & Lighter Options</h2>
+            <h2 className="font-display text-2xl font-bold text-[#1C3220] mb-4">Cafés and Food at the Beach</h2>
             <div className="grid md:grid-cols-2 gap-5">
               <div>
                 <h3 className="font-semibold text-[#1C3220] mb-2">Food at the Beach</h3>
@@ -298,39 +262,11 @@ export default function BestRestaurantsFormbyPage() {
               <div>
                 <h3 className="font-semibold text-[#1C3220] mb-2">Village Cafés</h3>
                 <p className="text-sm text-[#1C3220]/70 leading-relaxed">
-                  Several independent cafés near Chapel Lane in the village: good for coffee and lunch. Worth exploring if you&apos;re spending time in the village rather than at the beach. Nothing that needs booking; casual walk-in options.
+                  There are cafés on and around Chapel Lane in the village. The{" "}
+                  <Link href="/cafes" className="text-[#2E6B3E] underline underline-offset-2">cafés directory</Link>{" "}
+                  lists them with addresses and contact details.
                 </p>
               </div>
-            </div>
-          </section>
-
-          {/* Booking tips */}
-          <section className="mb-16">
-            <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-6">Booking Tips</h2>
-            <div className="grid md:grid-cols-2 gap-5">
-              {[
-                {
-                  title: "Left Bank: book 7–10 days ahead for weekends",
-                  desc: "Friday and Saturday evenings fill up quickly. For a birthday or special meal, book further ahead. Weekday lunches are usually available with shorter notice.",
-                },
-                {
-                  title: "Emily's: book by Tuesday for the weekend",
-                  desc: "Popular with regulars who book standing weeks. Call earlier rather than later. Weekday bookings much easier.",
-                },
-                {
-                  title: "The Sparrowhawk: early or late walk-ins",
-                  desc: "If you want a table without booking, go early (before 7pm) or later (after 9pm) on weekends. Midweek is easy. Food service hours worth checking.",
-                },
-                {
-                  title: "Don Luigi: groups call ahead",
-                  desc: "For a table of 6 or more, call ahead. Smaller groups can usually get in without booking on most nights.",
-                },
-              ].map(({ title, desc }) => (
-                <div key={title} className="bg-white rounded-2xl border border-gray-100 p-5">
-                  <h3 className="font-semibold text-[#1C3220] mb-2">{title}</h3>
-                  <p className="text-sm text-[#1C3220]/70 leading-relaxed">{desc}</p>
-                </div>
-              ))}
             </div>
           </section>
 
@@ -338,24 +274,7 @@ export default function BestRestaurantsFormbyPage() {
           <section className="mb-12">
             <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">Common Questions</h2>
             <div className="grid md:grid-cols-2 gap-4">
-              {[
-                {
-                  q: "What's the best restaurant in Formby?",
-                  a: "Left Bank Brasserie. If you want the best meal available in Formby, that's your answer. Book ahead.",
-                },
-                {
-                  q: "Where should I go if I haven't booked?",
-                  a: "The Sparrowhawk: gastropub, dog-friendly, walk-ins usually possible especially early evening. Or Don Luigi if you're going with a group and want pasta and pizza.",
-                },
-                {
-                  q: "Are there restaurants near Formby Beach?",
-                  a: "There is no café on site at the beach, only mobile concessions in the car parks in spring and summer. The actual restaurants are in the village: about 10 minutes by car. Worth the drive for a proper meal.",
-                },
-                {
-                  q: "Is Emily's good for kids?",
-                  a: "Yes: Emily's is family-friendly. Relaxed atmosphere, not overly formal. Left Bank is fine for older kids; less ideal if yours are very young.",
-                },
-              ].map(({ q, a }) => (
+              {faqs.map(({ q, a }) => (
                 <div key={q} className="bg-white rounded-xl p-5 border border-gray-100">
                   <h3 className="font-semibold text-[#1C3220] mb-2">{q}</h3>
                   <p className="text-sm text-[#1C3220]/70 leading-relaxed">{a}</p>
@@ -370,7 +289,7 @@ export default function BestRestaurantsFormbyPage() {
             <div className="grid sm:grid-cols-3 gap-4">
               {[
                 { href: "/restaurants", label: "All Restaurants", desc: "Browse the full restaurant directory." },
-                { href: "/blog/where-to-eat-formby-with-kids", label: "Eating Out With Kids", desc: "Which Formby restaurants are actually good with children." },
+                { href: "/blog/where-to-eat-formby-with-kids", label: "Eating Out With Kids", desc: "Children's menus and family facilities, from the restaurants' own pages." },
                 { href: "/guides/formby-village", label: "Formby Village", desc: "Chapel Lane, shopping, and the full village guide." },
                 { href: "/cafes", label: "Cafés", desc: "Coffee stops and lighter bites." },
               ].map(({ href, label, desc }) => (

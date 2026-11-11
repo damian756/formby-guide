@@ -95,13 +95,13 @@ export default function PostContent() {
 
             <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">Rainy Days</h2>
             <p>
-              It will rain. At some point in six weeks it always does. Formby village has a handful of options. Left Bank Brasserie if you want a proper meal and the kids are old enough to sit still. The Sparrowhawk for a pub lunch with a garden you can actually use when it is not raining.
+              It will rain. At some point in six weeks it always does. Formby village has a handful of options. Emily&apos;s on Brows Lane has a kids menu for under-12s. The Sparrowhawk on Southport Old Road serves food from noon and has a terrace and gardens.
             </p>
             <p>
               The village has a cinema. Small, independent, good for a wet afternoon. Check what is on at The Grand Cinema on Chapel Lane.
             </p>
             <p>
-              If you are driving to Southport for a rainy day, Splash World on the promenade and The Atkinson on Lord Street are both excellent and genuinely different options. About 15 minutes from Formby village.
+              If you are driving to Southport for a rainy day, Splash World on the promenade and The Atkinson on Lord Street are both in Southport, about 15 minutes from Formby village.
             </p>
 
             <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">August Bank Holiday Weekend</h2>

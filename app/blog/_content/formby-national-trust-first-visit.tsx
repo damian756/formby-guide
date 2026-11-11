@@ -113,7 +113,7 @@ export default function PostContent() {
             There is no year-round National Trust cafe at Formby. In spring and summer there are mobile food concessions in the car parks, and in peak July they have queues from about 11am. Get there before noon or after 2pm, or bring a picnic.
           </p>
           <p>
-            For a proper sit-down meal, Formby village is a 10-minute drive. Left Bank Brasserie is the best option. Book ahead at weekends.
+            For a sit-down meal, Formby village is a 10-minute drive. The restaurants directory lists the options; book ahead at weekends.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What to Bring</h2>

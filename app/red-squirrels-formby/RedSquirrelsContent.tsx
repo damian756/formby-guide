@@ -263,16 +263,16 @@ export default function RedSquirrelsContent() {
               {
                 name: "The Sparrowhawk",
                 href: "/restaurants/the-sparrowhawk-formby",
-                tag: "Dog-friendly",
+                tag: "Dogs in the bar",
                 tagColor: "bg-amber-500 text-white",
-                desc: "Best post-walk option in the village. Gastropub food, beer garden in summer, genuinely dog-friendly. No booking needed most of the time.",
+                desc: "A Brunning & Price pub on Southport Old Road, with food from noon every day and a terrace and gardens. Well-behaved dogs on leads are welcome in the bar area.",
               },
               {
                 name: "Emily's",
-                href: "/restaurants",
-                tag: "Local favourite",
+                href: "/restaurants/emilys-formby",
+                tag: "Brunch from 9am",
                 tagColor: "bg-[#1C3220] text-white",
-                desc: "The most-loved neighbourhood restaurant in Formby. Relaxed, good food, reasonable prices. Worth booking ahead at weekends.",
+                desc: "A restaurant on Brows Lane serving breakfast and brunch from 9am every day and an à la carte menu in the evening. Well-behaved dogs are welcome until 5pm.",
               },
             ].map((r) => (
               <Link
@@ -294,7 +294,7 @@ export default function RedSquirrelsContent() {
             href="/guides/best-restaurants-formby"
             className="inline-flex items-center gap-2 bg-[#2E6B3E] hover:bg-[#1C3220] text-white px-5 py-2.5 rounded-full font-semibold text-sm transition-colors"
           >
-            Best restaurants in Formby →
+            Restaurants in Formby →
           </Link>
         </section>
 

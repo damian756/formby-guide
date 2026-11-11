@@ -1,7 +1,7 @@
 export const CATEGORIES = [
   { slug: "nature-walks",  name: "Nature & Walks",  description: "National Trust trails, pinewoods and coastal paths in Formby" },
   { slug: "beaches",       name: "Beaches",          description: "Formby Beach and the Sefton Coast" },
-  { slug: "restaurants",   name: "Restaurants",      description: "Best restaurants in Formby" },
+  { slug: "restaurants",   name: "Restaurants",      description: "Restaurants in Formby" },
   { slug: "cafes",         name: "Cafes & Coffee",   description: "Cafes and coffee shops in Formby" },
   { slug: "pubs",          name: "Pubs & Bars",      description: "Pubs and bars in Formby village" },
   { slug: "activities",    name: "Activities",       description: "Things to do and family activities in Formby" },

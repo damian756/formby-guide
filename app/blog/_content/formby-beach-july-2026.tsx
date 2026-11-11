@@ -111,7 +111,7 @@ export default function PostContent() {
               <li>Check tide times if swimming is the plan</li>
               <li>Bring suncream: the dune exposure means more sun than you expect</li>
               <li>Dogs are allowed on the beach year round at Formby</li>
-              <li>Pack a picnic and check for a mobile food concession in the car parks; Left Bank and The Sparrowhawk are best for dinner</li>
+              <li>Pack a picnic and check for a mobile food concession in the car parks; for dinner, the restaurants are in the village</li>
             </ul>
           </div>
 
@@ -120,7 +120,7 @@ export default function PostContent() {
             In spring and summer there are mobile food concessions in the car parks, so you can get a coffee or a bite without leaving the beach. Expect a queue by midday in July, so get in before noon.
           </p>
           <p>
-            For a proper sit-down meal, Formby village is ten minutes by car from the beach. Left Bank Brasserie on Brows Lane is the best option in the village and worth booking ahead in July. The Sparrowhawk on Sparrowhawk Way is good for lunch without a reservation if you are willing to arrive early.
+            For a proper sit-down meal, Formby village is ten minutes by car from the beach. The Sparrowhawk, a Brunning &amp; Price pub on Southport Old Road, serves food from noon every day, and keeps some tables for people who have not booked.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Dogs in July</h2>

@@ -134,7 +134,7 @@ export default function PostContent() {
           {[
             "Morning: early start at the National Trust red squirrel trail. Before 9am if possible. Car park at L37 1LJ.",
             "Mid-morning: walk through the pinewoods to the beach. The transition from pine shade to open dune is one of the better short walks in the northwest.",
-            "Lunch: back to Formby village. Left Bank Brasserie if you want a proper meal. A mobile food concession in the car park if you want something quick and don't mind the queue (spring and summer only).",
+            "Lunch: back to Formby village for a sit-down meal. A mobile food concession in the car park if you want something quick and don't mind the queue (spring and summer only).",
             "Afternoon: beach. Low tide is the time to walk the full length. Check tide tables before you go.",
             "Evening (warm nights): head toward Ainsdale NNR after 8pm and listen for the natterjack toads. You don't need to go far from the road.",
           ].map((item, i) => (

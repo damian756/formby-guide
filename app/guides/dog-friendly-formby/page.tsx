@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Dog-Friendly Formby | Beach Rules, Walks, Pubs & Cafés",
     description:
-      "Formby is genuinely good for dogs. Beach rules, best off-lead walks, and pubs and cafés that actually mean it.",
+      "Formby is genuinely good for dogs. Beach rules, off-lead walks, and pubs and cafés that welcome dogs.",
     url: `${BASE_URL}/guides/dog-friendly-formby`,
     type: "website",
     siteName: "FormbyGuide.co.uk",
@@ -58,7 +58,7 @@ const faqSchema = {
       name: "Are there dog-friendly pubs in Formby?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes: The Sparrowhawk is known to be dog-friendly. Several other pubs in the village welcome dogs in their bar areas or beer gardens. It's worth calling ahead if you're not sure.",
+        text: "Yes. The Sparrowhawk on Southport Old Road says well-behaved dogs on leads are welcome in its bar area. Other pubs have their own policies, so call ahead if you're not sure.",
       },
     },
     {
@@ -104,7 +104,7 @@ export default function DogFriendlyFormbyPage() {
                 Dog-Friendly Formby
               </h1>
               <p className="text-xl text-white/85 leading-relaxed mb-8">
-                Beach, pinewoods, off-lead walks, and pubs that actually mean it. Formby is genuinely good for dogs.
+                Beach, pinewoods, off-lead walks, and pubs that welcome dogs. Formby is genuinely good for dogs.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 {[
@@ -253,8 +253,8 @@ export default function DogFriendlyFormbyPage() {
                   name: "The Sparrowhawk",
                   type: "Pub",
                   icon: Beer,
-                  desc: "Dog-friendly in the bar and beer garden. Good pub food, proper pints, and the kind of place that won't make you feel awkward about bringing the dog in.",
-                  dogNote: "Bar and beer garden",
+                  desc: "A Brunning & Price pub on Southport Old Road. It says well-behaved dogs on leads are welcome in the bar area and should stay off the furniture, and asks you to mention your dog when you book.",
+                  dogNote: "Bar area, on a lead",
                 },
               ].map(({ name, type, icon: Icon, desc, dogNote }) => (
                 <div key={name} className="bg-white rounded-2xl border border-gray-100 p-5">

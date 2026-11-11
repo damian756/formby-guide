@@ -14,7 +14,7 @@ export default function PostContent() {
             "@type": "Article",
             headline: "Father's Day in Formby 2026: The Honest Guide to What's Worth Doing",
             description:
-              "Father's Day in Formby on June 15. The best restaurants to book, things to do with the family, and Clare's honest take on what makes a good day out in Formby with a dad in tow.",
+              "Father's Day in Formby on June 15. Where to book a meal, things to do with the family, and what makes a good day out in Formby with a dad in tow.",
             url: "https://www.formbyguide.co.uk/blog/fathers-day-formby-2026",
             datePublished: "2026-06-10",
             author: {
@@ -72,11 +72,11 @@ export default function PostContent() {
 
           <p>Father&apos;s Day is this Sunday and if you are still working out what to do in Formby, here is the honest rundown. I have four kids and a dad I need to keep happy, so I have thought about this more than I probably should have.</p>
 
-          <h2>Restaurants: Book Today</h2>
+          <h2>Restaurants</h2>
 
-          <p>Left Bank Brasserie on Chapel Lane is the right answer if you want a genuinely good meal. It is the best restaurant in Formby. Book it today because it will be full. Father&apos;s Day Sunday is one of their busiest days of the year.</p>
+          <p>The Sparrowhawk, a Brunning &amp; Price pub on Southport Old Road, has a Sunday menu with roasts, a terrace and gardens. It takes bookings by phone or through its website, and keeps some tables for people who have not booked.</p>
 
-          <p>The Sparrowhawk is a good pub option: proper food, a decent beer garden if the weather is right, and it handles families without being chaotic. Call ahead even if they say they take walk-ins. On Father&apos;s Day, you will not walk into anywhere decent without a reservation.</p>
+          <p>Sundays are busy at most restaurants in the village, so book ahead wherever you choose.</p>
 
           <p>For something more casual, the village has a few cafe options that work well for a relaxed brunch rather than a formal lunch. If your dad is not a sit-down-dinner person, a morning at the beach followed by a decent coffee and cake is actually a more enjoyable day than an overpriced Sunday roast.</p>
 
@@ -90,12 +90,12 @@ export default function PostContent() {
 
           <h2>Formby Golf Club</h2>
 
-          <p>If your dad plays golf, Formby Golf Club is a few minutes from the village. Visitor rounds are available and the course is in excellent condition in June. It is a proper club with a proper clubhouse lunch. Call ahead to arrange a visitor tee time and combine it with lunch in the clubhouse. That is a genuinely good Father&apos;s Day for any golfer.</p>
+          <p>If your dad plays golf, Formby Golf Club is a few minutes from the village. Contact the club about visitor tee times before you go.</p>
 
           <h2>Practical Notes</h2>
 
           <ul>
-            <li>Book restaurants today, not Saturday morning</li>
+            <li>Book restaurants ahead rather than on the day</li>
             <li>NT car park L37 1LJ: no booking, pay at the machine or with JustPark, fills quickly on sunny Sundays (come by train if you can)</li>
             <li>The village has free parking on Chapel Lane and surrounding streets if you are just coming for lunch</li>
             <li>Beach is best in the morning: go early, the afternoon crowds build up</li>

@@ -92,7 +92,7 @@ export default function PostContent() {
                 The NT car park fills on warm weekends from late June onwards. There is no booking, so get there early. Set up a JustPark account at home if you want to pay by app: the signal in the car park is unreliable and you don&apos;t want to be searching for the app when you arrive. Weekdays in June are dramatically quieter than weekends.
               </p>
               <p>
-                The village restaurants start getting busy on weekend evenings from late June. The Sparrowhawk in particular gets full. Book ahead if you want a table on a Friday or Saturday night.
+                The village restaurants start getting busy on weekend evenings from late June. Book ahead if you want a table on a Friday or Saturday night.
               </p>
 
               <h2>What Stays Quiet</h2>
@@ -100,7 +100,7 @@ export default function PostContent() {
                 The coastal path north of the NT car park area stays relatively empty even in early summer. If you want a walk without the crowds, head north from the main beach access rather than south. The path toward Ainsdale is longer, quieter, and often more interesting for wildlife.
               </p>
               <p>
-                The village cafes and independent shops on the high street are busy at weekends but manageable. Left Bank Brasserie is good for a weekend lunch but again, booking is sensible in June.
+                The village cafes and independent shops on the high street are busy at weekends but manageable. For a weekend lunch at a restaurant, booking is sensible in June.
               </p>
 
               <h2>June With the Kids</h2>
@@ -117,7 +117,7 @@ export default function PostContent() {
               <ul className="space-y-2 text-sm text-[#1C3220]/80">
                 <li><strong>Beach:</strong> Less busy than August, still worth arriving early at weekends, as parking cannot be booked</li>
                 <li><strong>Red squirrels:</strong> Early morning still productive, less reliable midday</li>
-                <li><strong>Restaurants:</strong> Book weekend evenings, especially The Sparrowhawk and Left Bank</li>
+                <li><strong>Restaurants:</strong> Book weekend evenings</li>
                 <li><strong>Best time of day:</strong> Early morning or evening low tide walks</li>
                 <li><strong>Parking postcode:</strong> L37 1LJ, no booking, pay at the machine or with JustPark</li>
               </ul>

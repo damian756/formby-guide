@@ -10,14 +10,14 @@ const BASE_URL = "https://www.formbyguide.co.uk";
 export const metadata: Metadata = {
   title: "Formby Village | Chapel Lane, Shops & Restaurants Guide | FormbyGuide",
   description:
-    "Formby village guide: Chapel Lane, independent shops, the best restaurants, and the part of Formby most visitors never see. Ten minutes from the beach.",
+    "Formby village guide: Chapel Lane, independent shops, restaurants, and the part of Formby most visitors never see. Ten minutes from the beach.",
   keywords:
     "formby village, chapel lane formby, formby town centre, formby shops, formby restaurants, formby independent shops",
   alternates: { canonical: `${BASE_URL}/guides/formby-village` },
   openGraph: {
     title: "Formby Village | Chapel Lane, Shops & Restaurants",
     description:
-      "Formby village guide: Chapel Lane, independent shops, and the best restaurants. The bit most visitors miss.",
+      "Formby village guide: Chapel Lane, independent shops and restaurants. The bit most visitors miss.",
     url: `${BASE_URL}/guides/formby-village`,
     type: "website",
     siteName: "FormbyGuide.co.uk",
@@ -59,15 +59,15 @@ const faqSchema = {
       name: "What's on Chapel Lane in Formby?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Chapel Lane has a mix of independent shops, estate agents, cafés, and some good restaurants. It's not a high street full of chains: mostly independents and a few small multiples. Worth a browse if you're looking for something different.",
+        text: "Chapel Lane has a mix of independent shops, estate agents, cafés and restaurants. It's not a high street full of chains: mostly independents and a few small multiples. Worth a browse if you're looking for something different.",
       },
     },
     {
       "@type": "Question",
-      name: "What are the best restaurants in Formby village?",
+      name: "What restaurants are there in Formby village?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Left Bank Brasserie, Emily's, The Sparrowhawk, and Don Luigi are the main options in the village. Left Bank is the most upmarket; Emily's is the most popular local neighbourhood restaurant. Book ahead at weekends.",
+        text: "They include Emily's on Brows Lane, Don Luigi on Church Road and Sorrento on Three Tuns Lane. The Sparrowhawk, a Brunning & Price pub, is on Southport Old Road. The restaurants directory lists them all.",
       },
     },
     {
@@ -113,7 +113,7 @@ export default function FormbyVillagePage() {
                 Formby Village
               </h1>
               <p className="text-xl text-white/85 leading-relaxed mb-8">
-                Most visitors head straight to the beach and miss the village entirely. Ten minutes inland and you&apos;ve got Chapel Lane, some of the best restaurants in Merseyside, and a very decent afternoon out.
+                Most visitors head straight to the beach and miss the village entirely. Ten minutes inland and you&apos;ve got Chapel Lane, its shops and cafés, and restaurants nearby.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 {[
@@ -156,10 +156,10 @@ export default function FormbyVillagePage() {
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div>
                 <p className="text-[#1C3220]/70 leading-relaxed mb-4">
-                  Chapel Lane is Formby&apos;s main shopping street: the one worth visiting rather than the Tesco end. It&apos;s a mix of independent shops, estate agents (plenty of them: Formby property is expensive), a few cafés, and restaurants at the better end of what you&apos;d find in Merseyside.
+                  Chapel Lane is Formby&apos;s main shopping street. It&apos;s a mix of independent shops, estate agents (plenty of them: Formby property is expensive), a few cafés, and restaurants nearby.
                 </p>
                 <p className="text-[#1C3220]/70 leading-relaxed mb-4">
-                  It&apos;s not a long street. You can walk the length of it in five minutes. The independent shops are the reason to go: there are no national chains worth noting. Charity shops on and around Chapel Lane are worth a browse if you&apos;re patient (I&apos;ve found some good things in the British Heart Foundation).
+                  It&apos;s not a long street. You can walk the length of it in five minutes. The independent shops are the reason to go: there are no national chains worth noting. There are charity shops on and around Chapel Lane too.
                 </p>
                 <p className="text-[#1C3220]/70 leading-relaxed">
                   Parking on Chapel Lane and surrounding streets is reasonably easy on weekday mornings. Saturday mornings get busy: park in one of the side streets and walk.
@@ -190,12 +190,12 @@ export default function FormbyVillagePage() {
                 },
                 {
                   type: "Charity Shops",
-                  desc: "Formby is an affluent area: the charity shops reflect that. British Heart Foundation on Chapel Lane is usually worth a browse. Don't expect Primark prices but the donations tend to be decent quality.",
+                  desc: "There are several charity shops on and around Chapel Lane.",
                   icon: ShoppingBag,
                 },
                 {
                   type: "Groceries & Day-to-Day",
-                  desc: "Sainsbury's Local, Co-op, and independent butchers and delis near the village centre. If you're self-catering locally, you're well served. The deli options are better than most areas of comparable size.",
+                  desc: "Food shops, butchers and delis in and around the village centre, useful if you are self-catering locally.",
                   icon: ShoppingBag,
                 },
               ].map(({ type, desc, icon: Icon }) => (
@@ -214,36 +214,36 @@ export default function FormbyVillagePage() {
           <section className="mb-16">
             <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-4">Restaurants & Eating Out</h2>
             <p className="text-[#1C3220]/70 leading-relaxed mb-8 max-w-2xl">
-              The village punches well above its weight for a town of this size. Four restaurants worth knowing about, and all of them require booking at weekends.
+              Four of the restaurants in and around the village, described from their own websites and listed alphabetically. The restaurants directory lists the rest.
             </p>
             <div className="space-y-4">
               {[
                 {
-                  name: "Left Bank Brasserie",
-                  type: "Brasserie",
-                  desc: "The standout Formby restaurant. Proper food, good wine list, the kind of place you'd choose for a birthday dinner or a decent date. Not cheap but not pretending to be. Gorgeous room. Book well ahead at weekends.",
-                  note: "Book ahead: always",
-                  noteClass: "bg-red-50 border-red-100 text-red-700",
+                  name: "Don Luigi",
+                  type: "Italian restaurant",
+                  desc: "On Church Road. Main, grill, small plates and drinks menus, with pizza in the Naples style.",
+                  note: "Church Road",
+                  noteClass: "bg-[#E8EDE6] border-[#1C3220]/10 text-[#2E6B3E]",
                 },
                 {
                   name: "Emily's",
                   type: "Restaurant",
-                  desc: "The most popular neighbourhood restaurant in Formby. Locals go back regularly: that's the best endorsement. Good food at reasonable prices, relaxed atmosphere. Popular with families and groups.",
-                  note: "Book ahead at weekends",
-                  noteClass: "bg-amber-50 border-amber-100 text-amber-700",
-                },
-                {
-                  name: "The Sparrowhawk",
-                  type: "Gastropub",
-                  desc: "Good pub food done well. The best option if you haven't booked: can usually find a table for food, especially early evening. Dog-friendly. Decent beer.",
-                  note: "Walk-ins possible",
+                  desc: "On Brows Lane. Breakfast and brunch from 9am every day, an à la carte menu in the evening, and a kids menu for under-12s. Emily's advises booking at weekends.",
+                  note: "Brows Lane",
                   noteClass: "bg-[#E8EDE6] border-[#1C3220]/10 text-[#2E6B3E]",
                 },
                 {
-                  name: "Don Luigi",
-                  type: "Italian",
-                  desc: "Solid Italian in the village. Good for groups and families. Reliable rather than exceptional: exactly what you want from a neighbourhood Italian. Better value than some of the alternatives.",
-                  note: "Good for groups",
+                  name: "Sorrento",
+                  type: "Italian restaurant",
+                  desc: "On Three Tuns Lane. Family-run, in Formby since September 2009, with an outdoor seating area.",
+                  note: "Three Tuns Lane",
+                  noteClass: "bg-[#E8EDE6] border-[#1C3220]/10 text-[#2E6B3E]",
+                },
+                {
+                  name: "The Sparrowhawk",
+                  type: "Pub with food (Brunning & Price)",
+                  desc: "On Southport Old Road, in a country house with five acres of woods and parkland. Food from noon every day; some tables are kept for people who have not booked. Dogs on leads are welcome in the bar area.",
+                  note: "Southport Old Road",
                   noteClass: "bg-[#E8EDE6] border-[#1C3220]/10 text-[#2E6B3E]",
                 },
               ].map(({ name, type, desc, note, noteClass }) => (
@@ -266,7 +266,7 @@ export default function FormbyVillagePage() {
                 href="/guides/best-restaurants-formby"
                 className="inline-flex items-center gap-2 text-[#2E6B3E] font-semibold text-sm hover:text-[#1C3220] transition-colors"
               >
-                Full restaurants guide with more detail →
+                Restaurants in Formby: the full guide →
               </Link>
             </div>
           </section>
@@ -284,7 +284,7 @@ export default function FormbyVillagePage() {
               <div>
                 <h3 className="font-semibold text-[#1C3220] mb-3">Village Day (or Evening)</h3>
                 <p className="text-sm text-[#1C3220]/70 leading-relaxed">
-                  Park near Chapel Lane, browse the shops, lunch at Emily&apos;s or dinner at Left Bank, maybe a drink afterwards. Genuinely enjoyable afternoon out that has nothing to do with sand. Worth combining with the beach if you&apos;ve got a full day.
+                  Park near Chapel Lane, browse the shops, have lunch or dinner in the village, maybe a drink afterwards. An afternoon out that has nothing to do with sand. Worth combining with the beach if you&apos;ve got a full day.
                 </p>
               </div>
             </div>
@@ -318,19 +318,19 @@ export default function FormbyVillagePage() {
               {[
                 {
                   q: "Is Formby village worth visiting if I'm just here for the beach?",
-                  a: "Yes, if you have a full day. After the beach: sandy, windswept, possibly wet: the village is a good option for lunch or dinner. Left Bank or Emily's are both worth the trip. Ten minutes by car from the NT car park.",
+                  a: "Yes, if you have a full day. After the beach: sandy, windswept, possibly wet: the village has restaurants and cafés for lunch or dinner. Ten minutes by car from the NT car park.",
                 },
                 {
                   q: "Are there independent shops in Formby?",
-                  a: "Yes. Not an overwhelming number but enough to make a browse worthwhile. Formby is wealthy: the independents that survive here tend to be decent quality. Charity shops also reflect the local income level.",
+                  a: "Yes. Not an overwhelming number but enough to make a browse worthwhile. Charity shops too.",
                 },
                 {
                   q: "Do I need to book restaurants in Formby?",
-                  a: "At Left Bank and Emily's, yes: especially on Friday and Saturday evenings. Weekday lunches are usually fine without booking. The Sparrowhawk is the most walk-in friendly option.",
+                  a: "Book ahead for Friday and Saturday evenings if you can. Emily's advises booking at weekends; The Sparrowhawk keeps some tables for people who have not booked.",
                 },
                 {
                   q: "Is Formby village different from Formby beach?",
-                  a: "Very. The beach is the National Trust estate: pinewoods, dunes, the Irish Sea. The village is an inland suburb-style community with a proper town centre, good restaurants, and normal day-to-day shops. Two different reasons to visit.",
+                  a: "Very. The beach is the National Trust estate: pinewoods, dunes, the Irish Sea. The village is an inland suburb-style community with a proper town centre, restaurants, and normal day-to-day shops. Two different reasons to visit.",
                 },
               ].map(({ q, a }) => (
                 <div key={q} className="bg-white rounded-xl p-5 border border-gray-100">

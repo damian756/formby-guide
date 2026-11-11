@@ -62,6 +62,8 @@ const nextConfig: NextConfig = {
       // The Open 2026 has been played: week-only pages go to the evergreen listings (11 Nov 2026)
       { source: "/the-open-2026/accommodation", destination: "/accommodation", permanent: true },
       { source: "/the-open-2026/restaurants",   destination: "/restaurants",   permanent: true },
+      // Review of a restaurant that could not be confirmed as trading (FSA register, 11 Nov 2026)
+      { source: "/blog/left-bank-brasserie-formby", destination: "/guides/best-restaurants-formby", permanent: true },
       // Force www — redirect bare domain to canonical www
       {
         source: "/(.*)",

@@ -112,7 +112,7 @@ export default function PostContent() {
               In spring and summer there are mobile food concessions in the car parks, doing coffee and basic food. For a proper lunch, the options are in Formby village, a 10 to 15 minute drive away.
             </p>
             <p>
-              The Sparrowhawk on Stephenson Way is the most popular post-beach option. Good food, beer garden, family friendly. Gets busy on summer weekends. Left Bank Brasserie on Brows Lane if you want something a step up and are not in sandy clothes. Both worth booking ahead at weekends.
+              The Sparrowhawk, a Brunning &amp; Price pub on Southport Old Road, serves food from noon every day, with a terrace and gardens. Emily&apos;s on Brows Lane serves brunch from 9am every day and an evening menu. Both advise booking at busy times.
             </p>
 
             <div className="bg-[#EBF5EE] border-l-4 border-[#2E6B3E] rounded-r-lg p-5 my-8">

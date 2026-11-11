@@ -12,7 +12,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Things To Do in Formby | Local Guide to Beaches, Walks & More",
   description:
-    "The complete guide to things to do in Formby: from red squirrels and the National Trust beach to the best restaurants in the village. Written by a local who knows the place.",
+    "The complete guide to things to do in Formby: from red squirrels and the National Trust beach to the restaurants in the village. Written by a local who knows the place.",
   keywords:
     "things to do in formby, things to do formby, formby things to do, formby day out, formby with kids, formby with dogs, formby activities",
   alternates: { canonical: `${BASE_URL}/things-to-do` },
@@ -72,11 +72,11 @@ const SECONDARY = [
     id: "eat",
     tag: "Restaurants · Cafes",
     title: "Eat in the village",
-    desc: "Formby has a genuinely good restaurant scene for a town this size. Emily's is popular and relaxed, Left Bank Brasserie is a proper treat (book ahead for weekends), Don Luigi does solid Italian, and The Sparrowhawk is reliable for a post-walk lunch.",
+    desc: "The village has restaurants, pubs and cafés. Emily's on Brows Lane serves brunch from 9am every day; Don Luigi and Sorrento are Italian restaurants; The Sparrowhawk, a Brunning & Price pub on Southport Old Road, serves food from noon.",
     href: "/restaurants",
     image: "/about-village-street.webp",
     imagePosition: "object-center",
-    practical: ["Book ahead for weekends: the good ones fill up", "Village centre: ~10 mins from NT beach", "Chapel Lane has most of the independents"],
+    practical: ["Book ahead for weekends", "Village centre: ~10 mins from NT beach", "Chapel Lane has most of the independents"],
   },
   {
     id: "cycling",

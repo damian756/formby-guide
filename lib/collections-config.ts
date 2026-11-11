@@ -22,9 +22,9 @@ export const COLLECTIONS: Collection[] = [
     slug: "dog-friendly-restaurants-formby",
     title: "Dog-Friendly Restaurants in Formby",
     metaDescription:
-      "Dog-friendly restaurants in Formby: places that genuinely welcome dogs, not just tolerate them. Updated local list with honest ratings.",
+      "Restaurants in Formby listed as dog-friendly, with addresses and contact details. Check each restaurant's dog policy before you go.",
     intro:
-      "Formby is a dog-walking town at heart: beach walks, pinewood trails, and a Labrador on every corner. So it's fair to expect the restaurants to keep up. These are the places that actually mean dog-friendly: water bowls, space for muddy dogs, staff who don't visibly panic when yours shakes itself at the door. Worth phoning ahead for weekend evenings.",
+      "Formby is a dog-walking town: beach walks, pinewood trails and dogs everywhere. These restaurants are listed in our directory as dog-friendly. Dog policies can differ by room and time of day, so phone ahead to check before you go.",
     tags: ["dog-friendly"],
     categorySlugs: ["restaurants"],
     emoji: "🐾",
@@ -34,9 +34,9 @@ export const COLLECTIONS: Collection[] = [
     slug: "dog-friendly-cafes-formby",
     title: "Dog-Friendly Cafés in Formby",
     metaDescription:
-      "Dog-friendly cafés in Formby: coffee stops that welcome dogs after a beach walk or pinewood trail. Honest local list.",
+      "Cafés in Formby listed as dog-friendly, for a coffee after a beach walk or pinewood trail. Addresses and contact details.",
     intro:
-      "After a walk through the pinewoods or along the beach, a decent coffee is non-negotiable. These are Formby's cafés that welcome dogs properly: inside or with genuinely sheltered outdoor space, not just a sign on the door and a damp corner. Most put water bowls out. A few have biscuits for the dog, which always helps.",
+      "These cafés are listed in our directory as dog-friendly. Some welcome dogs inside and some only at outdoor tables, so check with the café before you go.",
     tags: ["dog-friendly"],
     categorySlugs: ["cafes"],
     emoji: "☕",
@@ -46,9 +46,9 @@ export const COLLECTIONS: Collection[] = [
     slug: "dog-friendly-pubs-formby",
     title: "Dog-Friendly Pubs in Formby",
     metaDescription:
-      "Dog-friendly pubs in Formby: the welcoming ones, not just the ones that say so. Post-walk pints with your dog in tow.",
+      "Pubs in Formby listed as dog-friendly, for a drink after a walk. Addresses and contact details.",
     intro:
-      "Post-walk pub visits in Formby are a local institution. The question is which pubs are actually dog-welcoming rather than just dog-tolerating. These are the pubs where dogs are inside, welcome, and don't get the side-eye from the bar. Good food at most of them too: useful after a long walk.",
+      "These pubs are listed in our directory as dog-friendly. Many pubs allow dogs in the bar but not in dining areas, so check with the pub before you go.",
     tags: ["dog-friendly"],
     categorySlugs: ["pubs"],
     emoji: "🐶",
@@ -74,9 +74,9 @@ export const COLLECTIONS: Collection[] = [
     slug: "restaurants-formby-village",
     title: "Restaurants in Formby Village",
     metaDescription:
-      "Restaurants in Formby village: the best places to eat on and around Chapel Lane and the village centre. Local list, honest ratings.",
+      "Restaurants in and around Formby village centre and Chapel Lane, with addresses and contact details.",
     intro:
-      "Formby village has a decent restaurant scene for its size: a handful of genuinely good independents within walking distance of each other. Chapel Lane and the surrounding streets have most of them. These are the village restaurants worth booking, from a casual dinner to a proper occasion.",
+      "These are restaurants in and around Formby village centre, most within walking distance of each other. The listings give each one's address and contact details.",
     tags: ["village-centre"],
     categorySlugs: ["restaurants"],
     emoji: "🍽️",
@@ -88,7 +88,7 @@ export const COLLECTIONS: Collection[] = [
     metaDescription:
       "Cafés near Formby Beach: where to get a coffee before or after a walk. Local independents, spring and summer concessions, and what to expect.",
     intro:
-      "The coffee situation near Formby Beach is better than it used to be. There is no café on site at Formby, only mobile concessions in the car parks in spring and summer, so the nearby options are worth knowing about if you want a proper coffee before or after your walk. These are the closest options with your sandy boots still on.",
+      "There is no café on site at Formby, only mobile concessions in the car parks in spring and summer. These are the cafés nearest the beach, for a coffee before or after your walk.",
     tags: ["near-beach"],
     categorySlugs: ["cafes"],
     emoji: "🌊",

@@ -183,8 +183,9 @@ export default function PostContent() {
 
             <div className="not-prose my-6 space-y-4 mb-10">
               {[
-                { name: "The Sparrowhawk", href: "/restaurants/the-sparrowhawk-formby", desc: "Proper restaurant with a children's menu that has things kids actually eat. Staff understand family dining. Not a chain: real food, real service.", tag: "Best for sit-down" },
-                { name: "Local cafes & coffee shops", href: "/cafes", desc: "Formby has independent cafes that are genuinely relaxed about children. Order your coffee, get cake for the kids, sit down. Nobody's rushing you.", tag: "Best for casual" },
+                { name: "Emily's", href: "/restaurants/emilys-formby", desc: "A restaurant on Brows Lane serving breakfast and brunch from 9am every day, with a kids menu for under-12s.", tag: "Sit-down" },
+                { name: "The Sparrowhawk", href: "/restaurants/the-sparrowhawk-formby", desc: "A Brunning & Price pub on Southport Old Road, with food from noon every day and a terrace and gardens.", tag: "Sit-down" },
+                { name: "Local cafes & coffee shops", href: "/cafes", desc: "Formby's independent cafes are mostly in the village, on and around Chapel Lane.", tag: "Casual" },
               ].map((r) => (
                 <div key={r.name} className="bg-white rounded-2xl border border-gray-100 p-5 flex items-start gap-4">
                   <div className="flex-1">
@@ -254,7 +255,7 @@ export default function PostContent() {
                   { day: "Day 1", activity: "Library + local cafe", free: true },
                   { day: "Day 2", activity: "Southport trip", free: false },
                   { day: "Day 3", activity: "Pinewoods all morning", free: true },
-                  { day: "Day 4", activity: "Lunch out at Sparrowhawk", free: false },
+                  { day: "Day 4", activity: "Lunch out in the village", free: false },
                   { day: "Day 5", activity: "Formby Beach", free: true },
                 ].map(({ day, activity, free }) => (
                   <div key={day} className="flex items-start gap-3 pb-3 border-b border-gray-50 last:border-0 last:pb-0">
@@ -306,7 +307,7 @@ export default function PostContent() {
           <div className="grid md:grid-cols-3 gap-5">
             {[
               { title: "Formby Beach Weather Guide", slug: "formby-beach-weather-guide", cat: "Seasonal" },
-              { title: "Best Restaurants for Families", slug: "where-to-eat-formby-with-kids", cat: "Food" },
+              { title: "Eating Out in Formby with Kids", slug: "where-to-eat-formby-with-kids", cat: "Food" },
               { title: "How to See Red Squirrels", slug: "red-squirrels-formby-spotting-guide", cat: "Wildlife" },
             ].map((p) => (
               <Link key={p.slug} href={`/blog/${p.slug}`} className="group bg-[#F7F9F6] rounded-2xl border border-gray-100 hover:border-[#2E6B3E]/30 hover:shadow-sm transition-all p-5">

@@ -137,7 +137,7 @@ function Footer() {
               <span className="text-white/40 text-sm font-normal ml-1">.co.uk</span>
             </div>
             <p className="text-sm leading-relaxed text-white/60 mb-4 max-w-xs">
-              Your local guide to Formby: beach, pinewoods, red squirrels, and the best places to eat and explore on the Sefton Coast.
+              Your local guide to Formby: beach, pinewoods, red squirrels, and places to eat and explore on the Sefton Coast.
             </p>
             <a href="https://churchtownmedia.co.uk" className="text-xs text-[#C9A96E] hover:text-[#E8C87A] transition">
               Built by Churchtown Media ↗

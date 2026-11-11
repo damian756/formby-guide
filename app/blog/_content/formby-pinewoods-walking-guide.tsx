@@ -334,10 +334,10 @@ export default function PostContent() {
             <div className="bg-white rounded-2xl border border-gray-100 p-5">
               <p className="font-bold text-[#1C3220] text-sm mb-2">Where to eat after your walk</p>
               <p className="text-[#1C3220]/70 text-xs leading-relaxed mb-3">
-                There is no year-round café at the National Trust site, though mobile food concessions run in the car parks in spring and summer. For a proper meal, the village is 10 minutes by car. <Link href="/restaurants/the-sparrowhawk-formby" className="text-[#2E6B3E] font-medium hover:underline">The Sparrowhawk</Link> is dog-friendly and doesn&apos;t need a booking: ideal after a muddy walk.
+                There is no year-round café at the National Trust site, though mobile food concessions run in the car parks in spring and summer. For a proper meal, the village is 10 minutes by car. <Link href="/restaurants/the-sparrowhawk-formby" className="text-[#2E6B3E] font-medium hover:underline">The Sparrowhawk</Link> on Southport Old Road says dogs on leads are welcome in its bar area, and it keeps some tables for people who have not booked.
               </p>
               <Link href="/guides/best-restaurants-formby" className="text-[#2E6B3E] font-bold text-xs hover:underline flex items-center gap-1">
-                Best restaurants in Formby <ArrowRight className="w-3 h-3" />
+                Restaurants in Formby <ArrowRight className="w-3 h-3" />
               </Link>
             </div>
           </aside>
