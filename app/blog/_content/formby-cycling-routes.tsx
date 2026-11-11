@@ -48,7 +48,7 @@ export default function PostContent() {
           </p>
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">National Trust Access Tracks</h2>
           <p>
-            The National Trust estate at Formby has internal tracks that are accessible on foot and by bike. The main track from the Victoria Road car park (L37 1YH) to the beach is compacted sand and gravel and rideable on a hybrid or mountain bike. It is not suitable for road bikes. Cycling is permitted on the main access track but not on the narrower footpaths through the pinewoods.
+            The National Trust estate at Formby has internal tracks that are accessible on foot and by bike. The main track from the Victoria Road car park (L37 1LJ) to the beach is compacted sand and gravel and rideable on a hybrid or mountain bike. It is not suitable for road bikes. Cycling is permitted on the main access track but not on the narrower footpaths through the pinewoods.
           </p>
           <p>
             Be aware of walkers and families on the main NT track, particularly in summer when it is busy between 10am and 4pm. Early morning and evening cycling is more pleasant and considerably less congested.

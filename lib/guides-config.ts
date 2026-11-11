@@ -68,7 +68,7 @@ export const GUIDES: Guide[] = [
     title: "Formby Beach",
     description: "National Trust beach with sand dunes. Postcode, parking, dogs, and what to expect.",
     excerpt:
-      "Formby Beach guide: postcode L37 1YH, NT app parking, dog rules, facilities, sand dunes, and honest advice on what to expect. Written by a Formby local.",
+      "Formby Beach guide: postcode L37 1LJ, parking, dog rules, facilities, sand dunes, and honest advice on what to expect. Written by a Formby local.",
     category: "nature-walks",
     heroImage: "/formby-beach-hero.jpg",
     url: "/formby-beach",
@@ -83,7 +83,7 @@ export const GUIDES: Guide[] = [
     },
     metaTitle: "Formby Beach | Postcode, Parking, Dogs & What to Expect | FormbyGuide",
     metaDescription:
-      "Formby Beach guide: postcode L37 1YH, NT app parking (download before you leave), dog rules, sand dunes, and honest advice from a local.",
+      "Formby Beach guide: postcode L37 1LJ, parking (pay at the machine or with JustPark), dog rules, sand dunes, and honest advice from a local.",
   },
   {
     slug: "red-squirrels-formby",
@@ -105,7 +105,7 @@ export const GUIDES: Guide[] = [
     },
     metaTitle: "Red Squirrels in Formby | Where to See Them & What to Expect | FormbyGuide",
     metaDescription:
-      "Everything you need to see red squirrels in Formby: best months, which trails, what to bring, NT parking (L37 1YH). Written by a local who walks this route regularly.",
+      "Everything you need to see red squirrels in Formby: best months, which trails, what to bring, NT parking (L37 1LJ). Written by a local who walks this route regularly.",
   },
   {
     slug: "formby-pinewoods",
@@ -134,9 +134,9 @@ export const GUIDES: Guide[] = [
   {
     slug: "parking-formby-beach",
     title: "Parking at Formby Beach",
-    description: "NT car park, the app you need, postcode L37 1YH, prices, and when it fills.",
+    description: "NT car parks, how to pay, postcode L37 1LJ, and when they fill.",
     excerpt:
-      "Parking at Formby Beach: postcode L37 1YH, National Trust app booking (download before you leave: signal in the car park is terrible), prices, and when to arrive.",
+      "Parking at Formby Beach: postcode L37 1LJ, how to pay (at the machine or with JustPark, no booking; signal in the car park is terrible), and when to arrive.",
     category: "practical",
     heroImage: "/beach-car-park-sign.webp",
     seoPriority: 0.88,
@@ -146,7 +146,7 @@ export const GUIDES: Guide[] = [
     status: "published",
     metaTitle: "Parking at Formby Beach | NT Car Park, Postcode & Tips | FormbyGuide",
     metaDescription:
-      "Parking at Formby Beach: postcode L37 1YH, National Trust app booking, prices, peak times, and alternative parking nearby. Everything you need before you leave home.",
+      "Parking at Formby Beach: postcode L37 1LJ, how to pay with no booking, peak times, and the second National Trust car park. Everything you need before you leave home.",
   },
   {
     slug: "dog-friendly-formby",

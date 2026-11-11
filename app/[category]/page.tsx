@@ -53,7 +53,6 @@ const CATEGORY_CONTENT: Record<string, React.ReactNode[]> = {
   ],
   "accommodation": [
     "Formby doesn't have a huge amount of accommodation, which is mostly fine: Liverpool is 20 minutes by train and Southport is 15, so most visitors use one of those as a base. But if you want to stay local, there are a handful of B&Bs and holiday lets around the village and Freshfield.",
-    "If you're here for The Open 2026 at Royal Birkdale, staying in Formby puts you 10 minutes from the course: genuinely useful. Southport accommodation sells out fast and Formby gives you the same access without the same scramble.",
     "Book early if you're visiting in summer. The NT events calendar fills up quickly and local accommodation follows.",
   ],
   "shopping": [
@@ -64,11 +63,11 @@ const CATEGORY_CONTENT: Record<string, React.ReactNode[]> = {
   "nature-walks": [
     "The National Trust pinewoods are the main draw: the red squirrel trail is well-marked and most people can walk it in about an hour. Go early, especially if you're hoping to spot squirrels. September to February gives you the best sighting odds.",
     "The coastal path runs north–south along the whole Sefton Coast, so you can extend any walk into something bigger if you've got the legs for it. Formby Point is about 20 minutes from the NT car park and worth reaching if the tide is out.",
-    "Parking is at the NT car park (L37 1YH): book through the National Trust app before you leave. The signal in the car park can be unreliable, so sort it at home.",
+    "Parking is at the NT car parks on Victoria Road (L37 1LJ) and Lifeboat Road (L37 2EB). There is no booking: pay at the machine with coins or card, or with the JustPark app. National Trust members and Blue Badge holders park free.",
   ],
   "beaches": [
-    "Formby Beach postcode is L37 1YH: that's the National Trust car park on Victoria Road, and it's the main access point for the beach, the sand dunes, and the red squirrel trail.",
-    "Parking costs vary by season: roughly £6–£9 via the National Trust app. Download the app before you leave; the signal at the car park is patchy. Dogs are allowed on most of the beach year-round, with some seasonal restrictions on certain sections in summer.",
+    "Formby Beach postcode is L37 1LJ: that's the National Trust car park on Victoria Road, and it's the main access point for the beach, the sand dunes, and the red squirrel trail.",
+    "Pay at the machine or with the JustPark app; National Trust members and Blue Badge holders park free. Dogs are allowed on most of the beach year-round, with some seasonal restrictions on certain sections in summer.",
     "The walk from the car park to the waterline is about 15–20 minutes across the dunes. Worth knowing: there are real rip currents near Formby Point. If the sea looks rough, stick to the flagged zones.",
   ],
 };
@@ -100,8 +99,6 @@ const CATEGORY_GUIDES: Record<string, { href: string; label: string }[]> = {
     { href: "/formby-pinewoods",       label: "Formby Pinewoods" },
   ],
   accommodation: [
-    { href: "/the-open-2026",                        label: "The Open 2026: Stay in Formby" },
-    { href: "/the-open-2026/accommodation",          label: "Open Week Accommodation Guide" },
     { href: "/collections/stay-near-royal-birkdale", label: "Places Near Royal Birkdale" },
   ],
   shopping: [
@@ -229,8 +226,8 @@ export default async function CategoryPage({ params, searchParams }: Props) {
   const sortOptions = [
     { key: "default", label: "Best Match" },
     { key: "alpha",   label: "A – Z" },
-    { key: "google",  label: "⭐ Google Rating" },
-    ...(isFoodCat ? [{ key: "hygiene", label: "🛡️ Food Safety Rating" }] : []),
+    { key: "google",  label: "Google Rating" },
+    ...(isFoodCat ? [{ key: "hygiene", label: "Food Safety Rating" }] : []),
   ];
 
   return (
@@ -247,7 +244,6 @@ export default async function CategoryPage({ params, searchParams }: Props) {
 
           <div className="flex items-end justify-between gap-6">
             <div>
-              <div className="text-5xl mb-4 drop-shadow-md">{theme.emoji}</div>
               <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
                 {cat.name}
                 <span className="text-white/50 font-normal"> in Formby</span>
@@ -290,7 +286,6 @@ export default async function CategoryPage({ params, searchParams }: Props) {
                   }`}
                   style={isActive ? { backgroundColor: theme.accent, borderColor: theme.accent } : {}}
                 >
-                  <span className="text-sm leading-none">{t.emoji}</span>
                   {c.name}
                 </Link>
               );
@@ -365,7 +360,6 @@ export default async function CategoryPage({ params, searchParams }: Props) {
         {/* Bottom CTA */}
         <div className="mt-14 rounded-2xl overflow-hidden">
           <div className={`bg-gradient-to-br ${theme.gradient} p-8 md:p-10 text-center`}>
-            <div className="text-4xl mb-3">{theme.emoji}</div>
             <h3 className="font-display text-2xl font-bold text-white mb-2">Own a business in Formby?</h3>
             <p className="text-white/70 text-sm mb-6 max-w-sm mx-auto">
               List for free and get discovered by visitors planning their trip to Formby.

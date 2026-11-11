@@ -68,13 +68,13 @@ export default function PostContent() {
 
             <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">The Parking Reality</h2>
             <p>
-              The National Trust car park at Formby Point (postcode L37 1YH) fills on good weather days. In late May, with half term just passed and the weather improving, you should aim to arrive by 9.30am if you want a space without circling. By 11am on a sunny Saturday it is full and there is a queue.
+              The National Trust car park at Formby Point (postcode L37 1LJ) fills on good weather days. In late May, with half term just passed and the weather improving, you should aim to arrive by 9.30am if you want a space without circling. By 11am on a sunny Saturday it is full and there is a queue.
             </p>
             <p>
-              Pay via the National Trust app before you arrive if you can. It saves time at the machines. NT members park free. Non-members: standard NT car park pricing applies. Book your space via the app during busy periods.
+              Pay at the machines or with the JustPark app (set up an account before you arrive, as it saves time). NT members and Blue Badge holders park free. There is no booking, so arrive early in busy periods.
             </p>
             <p>
-              If the main car park is full, do not park on Lifeboat Road or the surrounding residential streets. The alternative is to park back towards Formby village and walk or cycle the coastal path. It adds 20 minutes each way but is genuinely fine if you are not carrying too much.
+              If the main car park is full, the other National Trust car park is on Lifeboat Road (L37 2EB), but it is small too and a payment cannot be moved between the two. Do not park on the surrounding residential streets. The alternative is to park back towards Formby village and walk or cycle the coastal path. It adds 20 minutes each way but is genuinely fine if you are not carrying too much.
             </p>
 
             <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">Tide Timing</h2>
@@ -96,7 +96,7 @@ export default function PostContent() {
               The rest of the beach is open. Keep dogs on leads near the little tern nesting area and in the pinewoods where red squirrels are present. Off lead on the open beach once you are clear of the sensitive sections: fine.
             </p>
             <p>
-              Water. Bring it. The beach has no taps and the NT café is back at the car park. Dogs get thirsty faster than you expect on warm sand.
+              Water. Bring it. The beach has no taps and any food concession is back at the car park. Dogs get thirsty faster than you expect on warm sand.
             </p>
 
             <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">The Pinewoods in Late May</h2>
@@ -109,7 +109,7 @@ export default function PostContent() {
 
             <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">After the Beach</h2>
             <p>
-              The NT café at the car park does coffee and basic food. It is fine. For a proper lunch, the options are in Formby village, a 10 to 15 minute drive away.
+              In spring and summer there are mobile food concessions in the car parks, doing coffee and basic food. For a proper lunch, the options are in Formby village, a 10 to 15 minute drive away.
             </p>
             <p>
               The Sparrowhawk on Stephenson Way is the most popular post-beach option. Good food, beer garden, family friendly. Gets busy on summer weekends. Left Bank Brasserie on Brows Lane if you want something a step up and are not in sandy clothes. Both worth booking ahead at weekends.
@@ -118,12 +118,12 @@ export default function PostContent() {
             <div className="bg-[#EBF5EE] border-l-4 border-[#2E6B3E] rounded-r-lg p-5 my-8">
               <p className="font-semibold text-[#1C3220] mb-2">Late May: Quick Reference</p>
               <ul className="text-sm text-gray-700 space-y-1 list-disc list-inside">
-                <li>Car park postcode: L37 1YH</li>
+                <li>Car park postcode: L37 1LJ</li>
                 <li>Arrive by 9.30am on good weather days</li>
                 <li>Check tide times before going (aim for low tide)</li>
                 <li>Dogs allowed on most of the beach</li>
                 <li>Seasonal dog-free zone near little tern nesting area</li>
-                <li>NT café at car park; village restaurants 10 min drive</li>
+                <li>Mobile food concessions in the car parks (spring and summer); village restaurants 10 min drive</li>
               </ul>
             </div>
 
@@ -141,10 +141,10 @@ export default function PostContent() {
             <div className="bg-white rounded-xl border border-gray-100 p-5 shadow-sm">
               <h3 className="font-bold text-[#1C3220] mb-3">Practical Info</h3>
               <dl className="text-sm space-y-2">
-                <div><dt className="font-semibold text-gray-500">Postcode</dt><dd>L37 1YH</dd></div>
-                <div><dt className="font-semibold text-gray-500">Car park</dt><dd>National Trust, book via app</dd></div>
+                <div><dt className="font-semibold text-gray-500">Postcode</dt><dd>L37 1LJ</dd></div>
+                <div><dt className="font-semibold text-gray-500">Car park</dt><dd>National Trust, pay at the machine or with JustPark</dd></div>
                 <div><dt className="font-semibold text-gray-500">Dogs</dt><dd>Allowed (seasonal restrictions apply)</dd></div>
-                <div><dt className="font-semibold text-gray-500">Café</dt><dd>NT café at car park</dd></div>
+                <div><dt className="font-semibold text-gray-500">Food</dt><dd>Mobile concessions in the car parks (spring and summer)</dd></div>
               </dl>
             </div>
             <ClareBio />

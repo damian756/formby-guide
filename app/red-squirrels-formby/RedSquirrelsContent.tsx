@@ -118,13 +118,13 @@ export default function RedSquirrelsContent() {
               <div className="space-y-3 text-sm">
                 <div>
                   <p className="font-medium text-[#1C3220]">National Trust Formby</p>
-                  <p className="text-[#1C3220]/70">Victoria Road, Formby, L37 1YH</p>
+                  <p className="text-[#1C3220]/70">Victoria Road, Formby, L37 1LJ</p>
                 </div>
                 <ul className="space-y-1 text-[#1C3220]/70">
                   <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">•</span> Main car park on Victoria Road</li>
                   <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">•</span> Squirrel trails start from car park</li>
-                  <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">•</span> Download NT app &amp; book parking before you leave</li>
-                  <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">•</span> No phone signal on site</li>
+                  <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">•</span> No booking: pay at the machine or with JustPark</li>
+                  <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">•</span> Train: Freshfield station, then west along Victoria Road</li>
                 </ul>
               </div>
             </div>
@@ -143,11 +143,11 @@ export default function RedSquirrelsContent() {
 
         {/* Parking */}
         <section className="mb-16">
-          <h3 className="font-semibold text-[#1C3220] text-xl mb-4">Parking Prices</h3>
+          <h3 className="font-semibold text-[#1C3220] text-xl mb-4">Parking</h3>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
-              { who: "NT Members", price: "Free", note: "Show card or app" },
-              { who: "Non-members", price: "From £6", note: "Book via NT app" },
+              { who: "NT members and Blue Badge holders", price: "Free", note: "Members scan their card or check in with JustPark. Blue Badge holders tell the welcome team on arrival." },
+              { who: "Non-members", price: "Pay on the day", note: "At the machine (coins or card) or with the JustPark app" },
             ].map(({ who, price, note }) => (
               <div key={who} className="bg-[#E8EDE6] rounded-xl p-4 border border-[#1C3220]/10">
                 <p className="text-sm text-[#1C3220]/60 mb-1">{who}</p>
@@ -183,7 +183,7 @@ export default function RedSquirrelsContent() {
                     <h3 className="font-semibold text-[#1C3220] text-lg">{name}</h3>
                     <span className="text-xs font-medium text-[#2E6B3E] bg-[#E8EDE6] px-2.5 py-1 rounded-full ml-2 whitespace-nowrap">{difficulty}</span>
                   </div>
-                  <p className="text-sm text-[#1C3220]/60 mb-2">⏱️ {time}</p>
+                  <p className="text-sm text-[#1C3220]/60 mb-2">{time}</p>
                   <p className="text-sm text-[#1C3220]/70 leading-relaxed">{desc}</p>
                 </div>
               </div>
@@ -196,17 +196,16 @@ export default function RedSquirrelsContent() {
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">Tips & What to Bring</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { emoji: "👁️", title: "Move Slowly & Quietly",     desc: "They hear you before they see you. Walk slowly, stop often, look up into canopy. Less spooking = higher chance they carry on." },
-              { emoji: "🔭", title: "Bring Binoculars",           desc: "Not essential but brilliant. Often high in the pines: binoculars let you see properly instead of just a rusty blur." },
-              { emoji: "🧥", title: "Dress for Coastal Weather",  desc: "Coastal woodland gets cool and damp even on warm days. Layers and waterproofs make sense year-round." },
-              { emoji: "👟", title: "Good Footwear",              desc: "Trainers fine on dry days. After rain paths are muddy. Wellies if you're planning to walk to the beach." },
-              { emoji: "📱", title: "Download NT App First",      desc: "You need it for parking. Signal on site is poor. Sort it at home before you leave." },
-              { emoji: "🐕", title: "Dogs Welcome (On Leads)",    desc: "Dogs are fine on trails but must be on leads in squirrel reserve. Signs mark where the lead zone starts." },
-              { emoji: "📸", title: "Photography Tips",           desc: "Morning light through pines is stunning. Phone cameras struggle with low canopy light: a decent zoom lens helps." },
-              { emoji: "🚫", title: "Don't Feed Them",            desc: "Tempting but harmful to squirrels and the reserve. Watch and enjoy: that's enough." },
-            ].map(({ emoji, title, desc }) => (
+              { title: "Move Slowly & Quietly",     desc: "They hear you before they see you. Walk slowly, stop often, look up into canopy. Less spooking = higher chance they carry on." },
+              { title: "Bring Binoculars",           desc: "Not essential but brilliant. Often high in the pines: binoculars let you see properly instead of just a rusty blur." },
+              { title: "Dress for Coastal Weather",  desc: "Coastal woodland gets cool and damp even on warm days. Layers and waterproofs make sense year-round." },
+              { title: "Good Footwear",              desc: "Trainers fine on dry days. After rain paths are muddy. Wellies if you're planning to walk to the beach." },
+              { title: "Set Up JustPark at Home",    desc: "If you want to pay for parking by app, set up JustPark before you leave. Otherwise the machines take coins or card." },
+              { title: "Dogs Welcome (On Leads)",    desc: "Dogs are fine on trails but must be on leads in squirrel reserve. Signs mark where the lead zone starts." },
+              { title: "Photography Tips",           desc: "Morning light through pines is stunning. Phone cameras struggle with low canopy light: a decent zoom lens helps." },
+              { title: "Don't Feed Them",            desc: "Tempting but harmful to squirrels and the reserve. Watch and enjoy: that's enough." },
+            ].map(({ title, desc }) => (
               <div key={title} className="bg-white rounded-2xl border border-gray-100 p-6">
-                <div className="text-3xl mb-2">{emoji}</div>
                 <h3 className="font-semibold text-[#1C3220] mb-2">{title}</h3>
                 <p className="text-sm text-[#1C3220]/70 leading-relaxed">{desc}</p>
               </div>
@@ -221,7 +220,7 @@ export default function RedSquirrelsContent() {
             {[
               { q: "Are red squirrels guaranteed?",     a: "No wildlife sighting is ever guaranteed, but Formby is about as reliable as it gets in England. Go early on a dry morning in autumn or winter and chances are good. Some mornings you'll see several. On a wet summer afternoon, you might see none. Manage expectations but don't be put off: it's worth the visit regardless." },
               { q: "Is it suitable for young children?", a: "Yes. The squirrel trail is flat and manageable for kids. Pushchairs are fine on main paths. Keep children calm and slow-moving near the squirrel zone: excited running sends them straight up into the canopy." },
-              { q: "Do I need to book?",                a: "You don't need to book to visit: but you should book your parking slot via the NT app or website before you leave, especially in summer and at weekends. The car park fills up and on-site signal is terrible." },
+              { q: "Do I need to book?",                a: "No. There is no booking for visits or parking. The two car parks are small and fill early on sunny days, so the National Trust suggests coming by train when it is busy." },
               { q: "What's happened to the red squirrel population?", a: "Grey squirrels, introduced from North America in the 1870s, gradually displaced reds across most of England. They compete for food and carry squirrelpox (fatal to reds but not greys). Formby survives because the habitat suits reds and the NT actively manages the reserve, including grey squirrel control." },
             ].map(({ q, a }) => (
               <div key={q} className="bg-white rounded-xl p-5 border border-gray-100">
@@ -250,24 +249,22 @@ export default function RedSquirrelsContent() {
         <section className="mt-16 pt-12 border-t border-[#1C3220]/10 mb-16">
           <h3 className="font-display text-2xl font-bold text-[#1C3220] mb-2">Where to Eat After Your Visit</h3>
           <p className="text-[#1C3220]/60 text-sm mb-6 leading-relaxed">
-            The NT café is at the car park: decent coffee and cake. For a proper meal, the village is 10 minutes by car.
+            In spring and summer there are food and drink vans in the car park. For a proper meal, the village is 10 minutes by car.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-5">
             {[
               {
-                name: "NT Café",
-                href: "/cafes",
-                tag: "On site",
+                name: "Car park food vans",
+                href: "/formby-beach#facilities",
+                tag: "Spring & summer",
                 tagColor: "bg-[#2E6B3E] text-white",
-                emoji: "☕",
-                desc: "At the Victoria Road car park. Coffee, cake and hot bites. Dogs welcome outside. Convenient post-walk stop before the drive home.",
+                desc: "Mobile food and drink concessions in the NT car parks during spring and summer. Nothing in autumn and winter, so bring a flask.",
               },
               {
                 name: "The Sparrowhawk",
                 href: "/restaurants/the-sparrowhawk-formby",
                 tag: "Dog-friendly",
                 tagColor: "bg-amber-500 text-white",
-                emoji: "🍺",
                 desc: "Best post-walk option in the village. Gastropub food, beer garden in summer, genuinely dog-friendly. No booking needed most of the time.",
               },
               {
@@ -275,7 +272,6 @@ export default function RedSquirrelsContent() {
                 href: "/restaurants",
                 tag: "Local favourite",
                 tagColor: "bg-[#1C3220] text-white",
-                emoji: "🍽️",
                 desc: "The most-loved neighbourhood restaurant in Formby. Relaxed, good food, reasonable prices. Worth booking ahead at weekends.",
               },
             ].map((r) => (
@@ -286,7 +282,6 @@ export default function RedSquirrelsContent() {
               >
                 <div className="flex items-start justify-between gap-2 mb-2">
                   <div className="flex items-center gap-2">
-                    <span className="text-xl">{r.emoji}</span>
                     <h4 className="font-display font-bold text-[#1C3220] text-base group-hover:text-[#2E6B3E] transition-colors">{r.name}</h4>
                   </div>
                   <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full flex-none ${r.tagColor}`}>{r.tag}</span>

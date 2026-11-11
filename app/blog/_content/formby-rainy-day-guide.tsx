@@ -68,7 +68,7 @@ export default function PostContent() {
             Rain in the pinewoods is actually fine. The canopy takes most of it. The sandy paths drain quickly and stay walkable in all but the heaviest sustained downpour. If it starts raining lightly while you are in the NT pinewoods, carry on. You are probably more sheltered than you think and the forest in rain has a different quality to it that is worth experiencing at least once.
           </p>
           <p>
-            If it is genuinely heavy, the NT cafe at the car park end is the obvious move. It is warm, does a decent coffee, and the queue tends to move. It is not cheap but you are already there and it is the right call.
+            If it is genuinely heavy, be aware that there is no year-round National Trust cafe at Formby, and the mobile food concessions in the car parks run in spring and summer only. The village is a short drive away, and a warm coffee there is the right call.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Lunch in the Village</h2>
@@ -94,7 +94,7 @@ export default function PostContent() {
             <h3 className="font-semibold text-[#2E6B3E] mb-2">Rainy day options in brief</h3>
             <ul className="space-y-1 text-sm text-gray-700 list-disc list-inside">
               <li>NT pinewoods in light rain: carry on, the canopy helps</li>
-              <li>NT cafe: reliable, warm, queue usually moves</li>
+              <li>No year-round NT cafe: head to the village for a warm drink</li>
               <li>Left Bank Brasserie: best sit-down lunch, book at weekends</li>
               <li>The Sparrowhawk: casual, walk-in friendly at lunch</li>
               <li>Southport: The Atkinson and Southport Market, 15 minutes away</li>

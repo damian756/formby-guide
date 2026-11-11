@@ -74,7 +74,7 @@ export default function PostContent() {
             {[
               { label: "Best ages", value: "3–14" },
               { label: "Budget/day", value: "£10–40" },
-              { label: "Parking", value: "L37 1YH" },
+              { label: "Parking", value: "L37 1LJ" },
               { label: "Half term", value: "17–21 Feb" },
             ].map(({ label, value }) => (
               <div key={label} className="px-5 py-4 text-center">
@@ -145,7 +145,6 @@ export default function PostContent() {
             <div className="not-prose my-6 bg-[#1C3220] rounded-2xl overflow-hidden text-white">
               <div className="p-7">
                 <div className="flex items-start gap-4">
-                  <div className="text-4xl">🌲</div>
                   <div className="flex-1">
                     <h3 className="font-display text-xl font-bold mb-1">Formby Pinewoods: The Half Term Move</h3>
                     <p className="text-white/70 text-sm mb-4 leading-relaxed">
@@ -153,7 +152,7 @@ export default function PostContent() {
                     </p>
                     <div className="grid grid-cols-2 gap-3 mb-5">
                       {[
-                        { label: "Parking", val: "L37 1YH · National Trust" },
+                        { label: "Parking", val: "L37 1LJ · National Trust" },
                         { label: "Duration", val: "2–3 hours recommended" },
                         { label: "Terrain", val: "Sandy, uneven: proper shoes" },
                         { label: "Facilities", val: "Toilets at car park" },
@@ -188,7 +187,6 @@ export default function PostContent() {
                 { name: "Local cafes & coffee shops", href: "/cafes", desc: "Formby has independent cafes that are genuinely relaxed about children. Order your coffee, get cake for the kids, sit down. Nobody's rushing you.", tag: "Best for casual" },
               ].map((r) => (
                 <div key={r.name} className="bg-white rounded-2xl border border-gray-100 p-5 flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#F5E8E8] flex items-center justify-center text-lg flex-shrink-0">🍽️</div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">
                       <Link href={r.href} className="font-bold text-[#1C3220] hover:text-[#2E6B3E] transition-colors">{r.name}</Link>
@@ -210,12 +208,11 @@ export default function PostContent() {
 
             <div className="not-prose my-6 bg-gradient-to-r from-[#1C4A5A] to-[#2E7A9A] rounded-2xl p-7 text-white mb-10">
               <div className="flex items-start gap-4">
-                <div className="text-4xl">🏖️</div>
                 <div>
                   <h3 className="font-display text-xl font-bold mb-2">Formby Beach: The No-Effort Option</h3>
                   <p className="text-white/80 text-sm leading-relaxed mb-4">Bucket, spade, thermos of hot chocolate. The beach is free. Even on a grey February day, kids find something to do for hours.</p>
                   <div className="flex flex-wrap gap-3 text-xs">
-                    {["Free entry", "Dogs welcome", "Toilets on site", "L37 1YH"].map(t => (
+                    {["Free entry", "Dogs welcome", "Toilets on site", "L37 1LJ"].map(t => (
                       <span key={t} className="bg-white/15 px-3 py-1 rounded-full">{t}</span>
                     ))}
                   </div>

@@ -41,7 +41,7 @@ export default function PostContent() {
           </p>
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">The Beach Is Normal</h2>
           <p>
-            Formby beach is not affected by The Open. The National Trust car park at L37 1YH is operating as normal. Parking is still available in the mornings. The beach itself, the pinewoods, and the red squirrel trail are all running at standard July capacity, which is busy but manageable. If you are staying in the area and want a day out that does not involve Open week crowds, Formby beach is the obvious answer.
+            Formby beach is not affected by The Open. The National Trust car park at L37 1LJ is operating as normal. Parking is still available in the mornings. The beach itself, the pinewoods, and the red squirrel trail are all running at standard July capacity, which is busy but manageable. If you are staying in the area and want a day out that does not involve Open week crowds, Formby beach is the obvious answer.
           </p>
           <p>
             The red squirrels are around, though July is not the peak viewing month. Early morning on the squirrel trail gives the best chance. Bring binoculars and be patient.

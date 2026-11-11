@@ -109,11 +109,11 @@ export default function PostContent() {
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Practical: Parking and Timing</h2>
           <ul className="space-y-3 list-none pl-0">
             {[
-              ["Car park", "Victoria Road, Formby, L37 1YH. Book via the National Trust app. In September, weekday availability is good. Weekends still worth booking but the pressure is noticeably lower than in July and August."],
+              ["Car park", "Victoria Road, Formby, L37 1LJ. No booking: pay at the machine or with the JustPark app. In September, weekday availability is good. Weekends still fill but the pressure is noticeably lower than in July and August."],
               ["Best time", "Before 9am for squirrels. Morning visits in September have far better odds than afternoon ones. The pinewoods in early morning light are also at their best."],
-              ["NT membership", "If you are a National Trust member, parking is included. Non-members pay via the NT app or at the machine. Around £7 for the day."],
+              ["NT membership", "If you are a National Trust member, parking is free: scan your card or check in with JustPark. Blue Badge holders also park free; tell the welcome team on arrival. Everyone else pays at the machine or with JustPark."],
               ["Dogs", "Dogs welcome on a lead in the nature reserve. Keep them on the lead in the pinewoods. The red squirrels are more active in September and a loose dog in the pinewoods is not helpful for anyone."],
-              ["Cafe", "The seasonal cafe near the car park. Check before you go whether it is open. Opening days reduce from September onwards compared to the summer peak."],
+              ["Food and drink", "Mobile concessions in the car parks run in spring and summer only, and there is no year-round National Trust cafe. Bring a flask."],
             ].map(([item, detail]) => (
               <li key={item} className="flex gap-3">
                 <span className="text-[#2E6B3E] font-bold flex-none">→</span>

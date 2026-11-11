@@ -75,7 +75,7 @@ const faqSchema = {
       name: "How far is Formby village from the beach?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Formby village is about 1.5 miles from the National Trust beach car park (L37 1YH): around 10 minutes by car. A 25-minute walk through residential streets, or take a taxi.",
+        text: "Formby village is about 1.5 miles from the National Trust beach car park (L37 1LJ): around 10 minutes by car. A 25-minute walk through residential streets, or take a taxi.",
       },
     },
   ],
@@ -143,7 +143,7 @@ export default function FormbyVillagePage() {
               Formby is an <span className="text-[#C9A96E]">affluent village</span>: not a seaside town. Most of the good stuff is inland.
             </p>
             <p className="text-white/55 text-sm leading-relaxed mt-4 max-w-xl">
-              The postcode L37 1YH gets you to the beach. The village centre is L37 4: 10 minutes by car, a different world. Independent shops, good restaurants, people who actually live here rather than tourists.
+              The postcode L37 1LJ gets you to the beach. The village centre is L37 4: 10 minutes by car, a different world. Independent shops, good restaurants, people who actually live here rather than tourists.
             </p>
           </div>
         </div>
@@ -185,17 +185,17 @@ export default function FormbyVillagePage() {
               {[
                 {
                   type: "Independent Shops",
-                  desc: "A handful of genuinely independent shops on and near Chapel Lane: gifts, clothing, interiors. Not extraordinary but better than most town centres. The kind of shopping trip where you buy something you weren&apos;t expecting to.",
+                  desc: "A handful of genuinely independent shops on and near Chapel Lane: gifts, clothing, interiors. Not extraordinary but better than most town centres. The kind of shopping trip where you buy something you weren't expecting to.",
                   icon: ShoppingBag,
                 },
                 {
                   type: "Charity Shops",
-                  desc: "Formby is an affluent area: the charity shops reflect that. British Heart Foundation on Chapel Lane is usually worth a browse. Don&apos;t expect Primark prices but the donations tend to be decent quality.",
+                  desc: "Formby is an affluent area: the charity shops reflect that. British Heart Foundation on Chapel Lane is usually worth a browse. Don't expect Primark prices but the donations tend to be decent quality.",
                   icon: ShoppingBag,
                 },
                 {
                   type: "Groceries & Day-to-Day",
-                  desc: "Sainsbury&apos;s Local, Co-op, and independent butchers and delis near the village centre. If you&apos;re self-catering locally, you&apos;re well served. The deli options are better than most areas of comparable size.",
+                  desc: "Sainsbury's Local, Co-op, and independent butchers and delis near the village centre. If you're self-catering locally, you're well served. The deli options are better than most areas of comparable size.",
                   icon: ShoppingBag,
                 },
               ].map(({ type, desc, icon: Icon }) => (
@@ -221,21 +221,21 @@ export default function FormbyVillagePage() {
                 {
                   name: "Left Bank Brasserie",
                   type: "Brasserie",
-                  desc: "The standout Formby restaurant. Proper food, good wine list, the kind of place you&apos;d choose for a birthday dinner or a decent date. Not cheap but not pretending to be. Gorgeous room. Book well ahead at weekends.",
+                  desc: "The standout Formby restaurant. Proper food, good wine list, the kind of place you'd choose for a birthday dinner or a decent date. Not cheap but not pretending to be. Gorgeous room. Book well ahead at weekends.",
                   note: "Book ahead: always",
                   noteClass: "bg-red-50 border-red-100 text-red-700",
                 },
                 {
-                  name: "Emily&apos;s",
+                  name: "Emily's",
                   type: "Restaurant",
-                  desc: "The most popular neighbourhood restaurant in Formby. Locals go back regularly: that&apos;s the best endorsement. Good food at reasonable prices, relaxed atmosphere. Popular with families and groups.",
+                  desc: "The most popular neighbourhood restaurant in Formby. Locals go back regularly: that's the best endorsement. Good food at reasonable prices, relaxed atmosphere. Popular with families and groups.",
                   note: "Book ahead at weekends",
                   noteClass: "bg-amber-50 border-amber-100 text-amber-700",
                 },
                 {
                   name: "The Sparrowhawk",
                   type: "Gastropub",
-                  desc: "Good pub food done well. The best option if you haven&apos;t booked: can usually find a table for food, especially early evening. Dog-friendly. Decent beer.",
+                  desc: "Good pub food done well. The best option if you haven't booked: can usually find a table for food, especially early evening. Dog-friendly. Decent beer.",
                   note: "Walk-ins possible",
                   noteClass: "bg-[#E8EDE6] border-[#1C3220]/10 text-[#2E6B3E]",
                 },
@@ -278,7 +278,7 @@ export default function FormbyVillagePage() {
               <div>
                 <h3 className="font-semibold text-[#1C3220] mb-3">Beach Day</h3>
                 <p className="text-sm text-[#1C3220]/70 leading-relaxed">
-                  NT car park (L37 1YH), walk through pines to the beach, let the kids and dogs run, NT café, back through the dunes. Two to three hours. If you&apos;re coming from Liverpool or Manchester this is probably the main reason to visit.
+                  NT car park (L37 1LJ), walk through pines to the beach, let the kids and dogs run, back through the dunes. Two to three hours. If you&apos;re coming from Liverpool or Manchester this is probably the main reason to visit.
                 </p>
               </div>
               <div>

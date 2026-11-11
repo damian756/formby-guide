@@ -11,7 +11,7 @@ const BASE_URL = "https://www.formbyguide.co.uk";
 export const metadata: Metadata = {
   title: "Red Squirrels in Formby | Where to See Them & What to Expect",
   description:
-    "Everything you need to know about seeing red squirrels in Formby: postcode (L37 1YH), best times, how to get there, what to bring and practical tips from a local.",
+    "Everything you need to know about seeing red squirrels in Formby: postcode (L37 1LJ), best times, how to get there, what to bring and practical tips from a local.",
   keywords:
     "red squirrels formby, see red squirrels, formby red squirrels, national trust formby, formby nature reserve, formby wildlife",
   alternates: { canonical: `${BASE_URL}/red-squirrels-formby` },
@@ -45,7 +45,7 @@ const squirrelsJsonLd = {
       geo: { "@type": "GeoCoordinates", latitude: 53.5553, longitude: -3.0886 },
       address: {
         "@type": "PostalAddress",
-        postalCode: "L37 1YH",
+        postalCode: "L37 1LJ",
         addressLocality: "Formby",
         addressRegion: "Merseyside",
         addressCountry: "GB",
@@ -63,12 +63,12 @@ const squirrelsJsonLd = {
         {
           "@type": "Question",
           name: "Where exactly are the red squirrels at Formby?",
-          acceptedAnswer: { "@type": "Answer", text: "The red squirrel reserve is within the National Trust Formby estate. Park at the main NT car park (postcode L37 1YH) and follow the red squirrel trail signs from the car park." },
+          acceptedAnswer: { "@type": "Answer", text: "The red squirrel reserve is within the National Trust Formby estate. Park at the main NT car park (postcode L37 1LJ) and follow the red squirrel trail signs from the car park." },
         },
         {
           "@type": "Question",
           name: "Do I need to pay to see the red squirrels at Formby?",
-          acceptedAnswer: { "@type": "Answer", text: "The car park charges apply: free for NT members, around £6–£8 for non-members. The squirrel reserve itself is free to walk through once you're parked." },
+          acceptedAnswer: { "@type": "Answer", text: "Parking is free for NT members and Blue Badge holders; everyone else pays at the machine or with the JustPark app. The squirrel reserve itself is free to walk through once you're parked." },
         },
         {
           "@type": "Question",
@@ -109,7 +109,6 @@ export default function RedSquirrelsPage() {
               <ChevronRight className="w-4 h-4" />
               <span>Red Squirrels</span>
             </div>
-            <div className="text-5xl mb-4">🐿️</div>
             <h1 className="font-display text-4xl md:text-5xl font-bold mb-4 leading-tight">
               Red Squirrels in Formby
             </h1>
@@ -119,7 +118,7 @@ export default function RedSquirrelsPage() {
             {/* Quick facts */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {[
-                { icon: MapPin, label: "Postcode", value: "L37 1YH" },
+                { icon: MapPin, label: "Postcode", value: "L37 1LJ" },
                 { icon: Clock, label: "Best Months", value: "Sept – Feb" },
                 { icon: Dog, label: "Dogs", value: "On leads" },
                 { icon: Camera, label: "Gear", value: "Binoculars help" },
@@ -152,13 +151,13 @@ export default function RedSquirrelsPage() {
             </div>
             <div className="flex flex-wrap gap-3 md:flex-none">
               {[
-                { icon: "📍", label: "Postcode", val: "L37 1YH" },
-                { icon: "📅", label: "Best months", val: "Sept – Feb" },
-                { icon: "🐕", label: "Dogs", val: "On leads" },
-                { icon: "🅿️", label: "Parking", val: "From £6" },
-              ].map(({ icon, label, val }) => (
+                { label: "Postcode", val: "L37 1LJ" },
+                { label: "Best months", val: "Sept – Feb" },
+                { label: "Dogs", val: "On leads" },
+                { label: "Parking", val: "Machine or JustPark" },
+              ].map(({ label, val }) => (
                 <div key={label} className="bg-white/8 rounded-xl px-4 py-3 border border-white/10 min-w-[110px]">
-                  <div className="text-[10px] text-white/40 uppercase tracking-wider mb-1">{icon} {label}</div>
+                  <div className="text-[10px] text-white/40 uppercase tracking-wider mb-1">{label}</div>
                   <div className="text-sm font-bold text-white">{val}</div>
                 </div>
               ))}

@@ -163,7 +163,6 @@ export default function BlogClient({ posts, categories }: Props) {
       <div className="max-w-6xl mx-auto px-4 pb-12">
         {filtered.length === 0 ? (
           <div className="text-center py-20">
-            <div className="text-5xl mb-4">✍️</div>
             <h3 className="font-display text-xl font-bold text-[#1C3220] mb-2">
               {query ? `No posts found for "${query}"` : "No posts in this category yet"}
             </h3>

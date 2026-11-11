@@ -154,7 +154,7 @@ export default function PostContent() {
         </p>
         <p className="text-gray-700 leading-relaxed mb-8">
           If you&apos;re visiting Formby on a weekend, especially in summer, book The Sparrowhawk 
-          the same day you book your parking. Both run out.
+          ahead and get to the car park early: both fill up.
         </p>
 
         <div className="bg-[#1C3220] text-white rounded-xl p-6 my-10">

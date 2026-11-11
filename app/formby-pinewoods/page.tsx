@@ -11,7 +11,7 @@ const BASE_URL = "https://www.formbyguide.co.uk";
 export const metadata: Metadata = {
   title: "Formby Pinewoods: Walks, Wildlife & What to Expect",
   description:
-    "Complete guide to Formby pinewoods: walks, trails, birdwatching, and everything you need to plan your visit. Ancient coastal woodland managed by the National Trust. Postcode L37 1YH.",
+    "Complete guide to Formby pinewoods: walks, trails, birdwatching, and everything you need to plan your visit. Ancient coastal woodland managed by the National Trust. Postcode L37 1LJ.",
   keywords:
     "formby pinewoods, national trust formby, formby walks, coastal walks, pinewoods trails, birdwatching formby, woodland walks formby",
   alternates: { canonical: `${BASE_URL}/formby-pinewoods` },
@@ -45,7 +45,7 @@ const pinewoodsJsonLd = {
       geo: { "@type": "GeoCoordinates", latitude: 53.5553, longitude: -3.0886 },
       address: {
         "@type": "PostalAddress",
-        postalCode: "L37 1YH",
+        postalCode: "L37 1LJ",
         addressLocality: "Formby",
         addressRegion: "Merseyside",
         addressCountry: "GB",
@@ -63,7 +63,7 @@ const pinewoodsJsonLd = {
         {
           "@type": "Question",
           name: "Are Formby pinewoods the same as the National Trust Formby estate?",
-          acceptedAnswer: { "@type": "Answer", text: "Yes: the pinewoods are managed by the National Trust as part of the wider Formby estate. The same car park (postcode L37 1YH) serves the beach, pinewoods, and red squirrel reserve." },
+          acceptedAnswer: { "@type": "Answer", text: "Yes: the pinewoods are managed by the National Trust as part of the wider Formby estate. The same car park (postcode L37 1LJ) serves the beach, pinewoods, and red squirrel reserve." },
         },
         {
           "@type": "Question",
@@ -78,7 +78,7 @@ const pinewoodsJsonLd = {
         {
           "@type": "Question",
           name: "Is there parking at Formby pinewoods?",
-          acceptedAnswer: { "@type": "Answer", text: "Yes: the National Trust car park at L37 1YH serves the pinewoods, beach, and squirrel reserve. NT members park free; non-members pay approximately £6–£8 via the NT app." },
+          acceptedAnswer: { "@type": "Answer", text: "Yes: the National Trust car park at L37 1LJ serves the pinewoods, beach, and squirrel reserve. NT members and Blue Badge holders park free; everyone else pays at the machine or with the JustPark app." },
         },
       ],
     },
@@ -117,7 +117,7 @@ export default function PinewoodsPage() {
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {[
-                { icon: MapPin, label: "Postcode",  value: "L37 1YH" },
+                { icon: MapPin, label: "Postcode",  value: "L37 1LJ" },
                 { icon: Clock,  label: "Walk Time", value: "30 min – 3 hrs" },
                 { icon: Compass,label: "Terrain",   value: "Flat, some sand" },
                 { icon: Dog,    label: "Dogs",      value: "Welcome" },
@@ -145,18 +145,18 @@ export default function PinewoodsPage() {
                 Ancient coastal woodland: <span className="text-[#C9A96E]">mature pine, crossbills in the canopy</span>, walks through the pines, the sea at the end.
               </p>
               <p className="text-white/55 text-sm leading-relaxed mt-4 max-w-xl">
-                Walk from the car park through ancient pines to Formby Beach in under 20 minutes. Or spend a morning on the squirrel trails. Flat throughout, manageable for all ages.
+                Walk from the car park through the pines to Formby Beach in under 20 minutes. Or spend a morning on the squirrel trails. Flat throughout, manageable for all ages.
               </p>
             </div>
             <div className="flex flex-wrap gap-3 md:flex-none">
               {[
-                { icon: "📍", label: "Postcode",  val: "L37 1YH" },
-                { icon: "⏱️", label: "Walk time", val: "30 min – 3 hrs" },
-                { icon: "🐕", label: "Dogs",      val: "Welcome" },
-                { icon: "🅿️", label: "Parking",   val: "From £6" },
-              ].map(({ icon, label, val }) => (
+                { label: "Postcode",  val: "L37 1LJ" },
+                { label: "Walk time", val: "30 min – 3 hrs" },
+                { label: "Dogs",      val: "Welcome" },
+                { label: "Parking",   val: "Machine or JustPark" },
+              ].map(({ label, val }) => (
                 <div key={label} className="bg-white/8 rounded-xl px-4 py-3 border border-white/10 min-w-[110px]">
-                  <div className="text-[10px] text-white/40 uppercase tracking-wider mb-1">{icon} {label}</div>
+                  <div className="text-[10px] text-white/40 uppercase tracking-wider mb-1">{label}</div>
                   <div className="text-sm font-bold text-white">{val}</div>
                 </div>
               ))}

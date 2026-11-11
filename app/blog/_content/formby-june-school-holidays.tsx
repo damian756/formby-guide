@@ -89,7 +89,7 @@ export default function PostContent() {
 
               <h2>What Gets Busy</h2>
               <p>
-                The NT car park fills on warm weekends from late June onwards. Book via the NT app before you leave the house: the signal in the car park is unreliable and you don&apos;t want to be searching for the app when you arrive. Weekdays in June are dramatically quieter than weekends.
+                The NT car park fills on warm weekends from late June onwards. There is no booking, so get there early. Set up a JustPark account at home if you want to pay by app: the signal in the car park is unreliable and you don&apos;t want to be searching for the app when you arrive. Weekdays in June are dramatically quieter than weekends.
               </p>
               <p>
                 The village restaurants start getting busy on weekend evenings from late June. The Sparrowhawk in particular gets full. Book ahead if you want a table on a Friday or Saturday night.
@@ -108,18 +108,18 @@ export default function PostContent() {
                 With four kids, June is my favourite month for a beach day. Long evenings mean you can leave later in the afternoon and still get a proper couple of hours. The water is cold but swimmable if your kids are the sort who don&apos;t complain about cold water. Mine are not, but we go anyway.
               </p>
               <p>
-                The red squirrel trail is still a solid option if you can do it early. Kids who arrive before 9am and stay quiet have a reasonable chance of seeing them. The café at the NT car park does good ice cream which has become a non-negotiable part of our post-squirrel-walk routine.
+                The red squirrel trail is still a solid option if you can do it early. Kids who arrive before 9am and stay quiet have a reasonable chance of seeing them. In spring and summer there are mobile food concessions in the car parks.
               </p>
             </div>
 
             <div className="not-prose my-10 bg-[#E8EDE6] rounded-2xl p-8">
               <p className="font-display font-bold text-[#1C3220] text-lg mb-3">June in Formby: Quick summary</p>
               <ul className="space-y-2 text-sm text-[#1C3220]/80">
-                <li><strong>Beach:</strong> Less busy than August, still worth booking parking early at weekends</li>
+                <li><strong>Beach:</strong> Less busy than August, still worth arriving early at weekends, as parking cannot be booked</li>
                 <li><strong>Red squirrels:</strong> Early morning still productive, less reliable midday</li>
                 <li><strong>Restaurants:</strong> Book weekend evenings, especially The Sparrowhawk and Left Bank</li>
                 <li><strong>Best time of day:</strong> Early morning or evening low tide walks</li>
-                <li><strong>Parking postcode:</strong> L37 1YH, NT app booking recommended</li>
+                <li><strong>Parking postcode:</strong> L37 1LJ, no booking, pay at the machine or with JustPark</li>
               </ul>
             </div>
           </article>

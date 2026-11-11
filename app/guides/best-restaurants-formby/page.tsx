@@ -67,7 +67,7 @@ const faqSchema = {
       name: "Are there good restaurants near Formby Beach?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The NT café is at the beach. The village restaurants (Emily's, Left Bank, The Sparrowhawk) are about 10 minutes by car: the sensible option for a post-walk lunch or dinner rather than the café.",
+        text: "There is no café on site at the beach, only mobile food concessions in the car parks in spring and summer. The village restaurants (Emily's, Left Bank, The Sparrowhawk) are about 10 minutes by car: the sensible option for a post-walk lunch or dinner.",
       },
     },
   ],
@@ -285,14 +285,14 @@ export default function BestRestaurantsFormbyPage() {
             </div>
           </section>
 
-          {/* Cafes + NT */}
+          {/* Cafes + beach concessions */}
           <section className="mb-16 bg-[#E8EDE6] rounded-2xl p-6 md:p-8">
             <h2 className="font-display text-2xl font-bold text-[#1C3220] mb-4">Cafés & Lighter Options</h2>
             <div className="grid md:grid-cols-2 gap-5">
               <div>
-                <h3 className="font-semibold text-[#1C3220] mb-2">NT Café (at the beach)</h3>
+                <h3 className="font-semibold text-[#1C3220] mb-2">Food at the Beach</h3>
                 <p className="text-sm text-[#1C3220]/70 leading-relaxed">
-                  The National Trust café at the Victoria Road car park. Decent coffee, good cake, hot food at lunchtimes. Not cheap: you&apos;re paying for location, not cuisine. Ideal for a post-walk stop before the drive home. Dogs welcome outside.
+                  There is no café on site at Formby. Mobile concessions run in the car parks in spring and summer only, so bring a flask the rest of the year.
                 </p>
               </div>
               <div>
@@ -349,7 +349,7 @@ export default function BestRestaurantsFormbyPage() {
                 },
                 {
                   q: "Are there restaurants near Formby Beach?",
-                  a: "The NT café is at the beach. The actual restaurants are in the village: about 10 minutes by car. Worth the drive for a proper meal rather than settling for the café.",
+                  a: "There is no café on site at the beach, only mobile concessions in the car parks in spring and summer. The actual restaurants are in the village: about 10 minutes by car. Worth the drive for a proper meal.",
                 },
                 {
                   q: "Is Emily's good for kids?",

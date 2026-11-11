@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Dog, MapPin, Coffee, Beer, ChevronRight } from "lucide-react";
+import { Dog, MapPin, Beer, ChevronRight } from "lucide-react";
 import GuideLayout from "@/app/components/GuideLayout";
 import { getGuide } from "@/lib/guides-config";
 
@@ -136,7 +136,7 @@ export default function DogFriendlyFormbyPage() {
               <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">✓</span> Formby Pinewoods: dogs welcome, on leads in the red squirrel reserve zone</li>
               <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">✓</span> Off-lead areas on the beach (outside restricted zones) and parts of the pinewoods</li>
               <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">✓</span> Dog-friendly pubs and cafés in the village</li>
-              <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">✓</span> NT car park postcode: L37 1YH: download the NT app before you leave</li>
+              <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">✓</span> NT car park postcode: L37 1LJ: set up JustPark at home if you want to pay by app</li>
             </ul>
           </div>
 
@@ -174,19 +174,19 @@ export default function DogFriendlyFormbyPage() {
                 {
                   area: "Main Pinewoods",
                   rule: "Off-lead fine",
-                  desc: "The woodland paths through the pines are open to dogs. Wide paths, good surfaces, and enough space that your dog isn&apos;t going to bother anyone. A genuinely good walk for dogs that like trees and sniffs.",
+                  desc: "The woodland paths through the pines are open to dogs. Wide paths, good surfaces, and enough space that your dog isn't going to bother anyone. A genuinely good walk for dogs that like trees and sniffs.",
                   badgeClass: "bg-[#E8EDE6] text-[#2E6B3E]",
                 },
                 {
                   area: "Red Squirrel Reserve Zone",
                   rule: "On leads required",
-                  desc: "The signed squirrel reserve trail requires dogs to be on leads throughout. It&apos;s marked clearly from the car park. This isn&apos;t optional: keep your dog on lead through the entire reserve area.",
+                  desc: "The signed squirrel reserve trail requires dogs to be on leads throughout. It's marked clearly from the car park. This isn't optional: keep your dog on lead through the entire reserve area.",
                   badgeClass: "bg-amber-100 text-amber-700",
                 },
                 {
                   area: "Beach Dunes",
                   rule: "Off-lead fine",
-                  desc: "The dunes between the pinewoods and the beach are good off-lead territory. Mind the vegetation: the NT asks visitors to stick to paths to prevent dune erosion. Most dogs are fine if they&apos;re not tearing through everything.",
+                  desc: "The dunes between the pinewoods and the beach are good off-lead territory. Mind the vegetation: the NT asks visitors to stick to paths to prevent dune erosion. Most dogs are fine if they're not tearing through everything.",
                   badgeClass: "bg-[#E8EDE6] text-[#2E6B3E]",
                 },
               ].map(({ area, rule, desc, badgeClass }) => (
@@ -211,7 +211,7 @@ export default function DogFriendlyFormbyPage() {
                 {
                   name: "Beach & Dunes Circuit",
                   time: "1–1.5 hours",
-                  desc: "Park at L37 1YH, walk through pines to the beach, turn left or right along the sand, return through the dunes. Classic Formby walk. Dogs love the sand. Good recall essential: the beach is wide and open.",
+                  desc: "Park at L37 1LJ, walk through pines to the beach, turn left or right along the sand, return through the dunes. Classic Formby walk. Dogs love the sand. Good recall essential: the beach is wide and open.",
                   rating: 5,
                 },
                 {
@@ -234,7 +234,7 @@ export default function DogFriendlyFormbyPage() {
                     ))}
                   </div>
                   <h3 className="font-semibold text-[#1C3220] mb-1">{name}</h3>
-                  <p className="text-xs text-[#C9A96E] font-semibold mb-2">⏱️ {time}</p>
+                  <p className="text-xs text-[#C9A96E] font-semibold mb-2">{time}</p>
                   <p className="text-sm text-[#1C3220]/70 leading-relaxed">{desc}</p>
                 </div>
               ))}
@@ -245,23 +245,16 @@ export default function DogFriendlyFormbyPage() {
           <section className="mb-12">
             <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-4">Dog-Friendly Pubs & Cafés</h2>
             <p className="text-[#1C3220]/70 leading-relaxed mb-6 max-w-2xl">
-              A few places in Formby village genuinely welcome dogs rather than just tolerating them. Worth calling ahead if you&apos;re not sure: especially for table service restaurants.
+              Browse the pubs and cafés listings for more places in the village, and call ahead if you&apos;re not sure, especially for table service restaurants.
             </p>
-            <div className="grid md:grid-cols-2 gap-5">
+            <div className="grid gap-5 max-w-xl">
               {[
                 {
                   name: "The Sparrowhawk",
                   type: "Pub",
                   icon: Beer,
-                  desc: "Dog-friendly in the bar and beer garden. Good pub food, proper pints, and the kind of place that won&apos;t make you feel awkward about bringing the dog in.",
+                  desc: "Dog-friendly in the bar and beer garden. Good pub food, proper pints, and the kind of place that won't make you feel awkward about bringing the dog in.",
                   dogNote: "Bar and beer garden",
-                },
-                {
-                  name: "NT Café (Victoria Road)",
-                  type: "Café",
-                  icon: Coffee,
-                  desc: "At the National Trust car park: dogs welcome outside in the outdoor seating area. Convenient for right after the walk. Decent coffee, good cake. It&apos;s not cheap but you&apos;re not paying for Greggs either.",
-                  dogNote: "Outdoor seating",
                 },
               ].map(({ name, type, icon: Icon, desc, dogNote }) => (
                 <div key={name} className="bg-white rounded-2xl border border-gray-100 p-5">
@@ -291,15 +284,14 @@ export default function DogFriendlyFormbyPage() {
             <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-6">Practical Tips</h2>
             <div className="grid md:grid-cols-2 gap-5">
               {[
-                { emoji: "🅿️", title: "Parking", desc: "NT car park, L37 1YH. Download the NT app at home: no signal on site. Members free, non-members from £6." },
-                { emoji: "🌊", title: "Tides", desc: "Formby Beach has significant tidal range. Check tide times before you go: low tide gives you the most beach. Don&apos;t get caught between the sea and steep dunes at high tide." },
-                { emoji: "💧", title: "Water", desc: "The beach is sandy and can get warm in summer. Bring water for your dog: especially on longer walks through the dunes." },
-                { emoji: "♻️", title: "Poo bags", desc: "Bins in the NT car park and at the beach entrance. Bring plenty. Fines apply for not picking up." },
-                { emoji: "🦮", title: "Leads in the car park", desc: "Keep dogs on leads in the car park: other dogs, families, and cyclists all use the access road. Save the off-lead for the beach." },
-                { emoji: "🐿️", title: "Red squirrels", desc: "If you walk the squirrel trail, dogs on leads throughout. Signs mark where this starts. The squirrels don&apos;t appreciate dog chaos below their trees." },
-              ].map(({ emoji, title, desc }) => (
+                { title: "Parking", desc: "NT car park, L37 1LJ. Pay at the machine or with the JustPark app (set up an account at home: little signal on site). Members and Blue Badge holders park free." },
+                { title: "Tides", desc: "Formby Beach has significant tidal range. Check tide times before you go: low tide gives you the most beach. Don't get caught between the sea and steep dunes at high tide." },
+                { title: "Water", desc: "The beach is sandy and can get warm in summer. Bring water for your dog: especially on longer walks through the dunes." },
+                { title: "Poo bags", desc: "Bins in the NT car park and at the beach entrance. Bring plenty. Fines apply for not picking up." },
+                { title: "Leads in the car park", desc: "Keep dogs on leads in the car park: other dogs, families, and cyclists all use the access road. Save the off-lead for the beach." },
+                { title: "Red squirrels", desc: "If you walk the squirrel trail, dogs on leads throughout. Signs mark where this starts. The squirrels don't appreciate dog chaos below their trees." },
+              ].map(({ title, desc }) => (
                 <div key={title} className="bg-white rounded-2xl border border-gray-100 p-5">
-                  <div className="text-2xl mb-2">{emoji}</div>
                   <h3 className="font-semibold text-[#1C3220] mb-2">{title}</h3>
                   <p className="text-sm text-[#1C3220]/70 leading-relaxed">{desc}</p>
                 </div>
@@ -314,7 +306,7 @@ export default function DogFriendlyFormbyPage() {
               {[
                 {
                   q: "Are dogs allowed at Formby Beach all year?",
-                  a: "Yes, with one exception. Between April and August, a section near the Little Tern nesting area has restrictions. It&apos;s clearly signed on arrival. Outside this zone and outside this period, dogs are welcome on the whole beach.",
+                  a: "Yes, with one exception. Between April and August, a section near the Little Tern nesting area has restrictions. It's clearly signed on arrival. Outside this zone and outside this period, dogs are welcome on the whole beach.",
                 },
                 {
                   q: "Does my dog need to be on a lead in the pinewoods?",
@@ -322,7 +314,7 @@ export default function DogFriendlyFormbyPage() {
                 },
                 {
                   q: "Is there anywhere to get water for my dog?",
-                  a: "The NT café has outdoor seating where you can ask for water. Bring a collapsible bowl and a bottle on longer walks: especially in warmer months.",
+                  a: "There is no café on site, so bring a collapsible bowl and a bottle on longer walks: especially in warmer months.",
                 },
                 {
                   q: "What's the best season to bring a dog to Formby?",
@@ -344,7 +336,7 @@ export default function DogFriendlyFormbyPage() {
               {[
                 { href: "/formby-beach", label: "Formby Beach", desc: "Full guide to the beach: facilities, parking, what to expect." },
                 { href: "/formby-pinewoods", label: "Formby Pinewoods", desc: "Walks, squirrels, and the best woodland routes." },
-                { href: "/guides/parking-formby-beach", label: "Parking Guide", desc: "NT app, postcode, prices, and when it fills." },
+                { href: "/guides/parking-formby-beach", label: "Parking Guide", desc: "How to pay, postcode, and when it fills." },
               ].map(({ href, label, desc }) => (
                 <Link
                   key={href}

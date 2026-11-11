@@ -115,7 +115,6 @@ export default async function CollectionsIndexPage() {
                 href={`/collections/${c.slug}`}
                 className="group bg-white rounded-2xl border border-gray-100 shadow-sm p-6 hover:shadow-md hover:-translate-y-0.5 transition-all"
               >
-                <div className="text-3xl mb-3">{c.emoji}</div>
                 <h2 className="font-display font-bold text-[#1C3220] text-base leading-snug mb-2 group-hover:text-[#2E6B3E] transition-colors">
                   {c.title}
                 </h2>
@@ -140,7 +139,6 @@ export default async function CollectionsIndexPage() {
                     key={c.slug}
                     className="bg-white/60 rounded-xl border border-gray-100 border-dashed p-4 opacity-60"
                   >
-                    <span className="text-2xl mb-2 block">{c.emoji}</span>
                     <p className="font-semibold text-[#1C3220] text-sm leading-snug">
                       {c.title}
                     </p>

@@ -75,10 +75,10 @@ export default function PostContent() {
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Parking in July: The Honest Version</h2>
           <p>
-            The National Trust car park on Victoria Road (L37 1YH) is the main access point for the beach and pinewoods. In July, on any day with decent weather, it fills before 10am. I mean that. Not 11am or noon. Before 10am on a warm Sunday in July, that car park is full and there are cars turning around in the lane.
+            The National Trust car park on Victoria Road (L37 1LJ) is the main access point for the beach and pinewoods. In July, on any day with decent weather, it fills before 10am. I mean that. Not 11am or noon. Before 10am on a warm Sunday in July, that car park is full and there are cars turning around in the lane.
           </p>
           <p>
-            Your options: arrive before 9:30am, or accept that you are parking on a residential street further away and walking. There is no overflow arrangement that makes a late Saturday arrival easy. Book via the National Trust app before you leave the house. It costs around £7 for the day and booking in advance means you know you have a space.
+            Your options: arrive before 9:30am, or accept that you are parking on a residential street further away and walking. There is no overflow arrangement that makes a late Saturday arrival easy. There is no booking, so you cannot reserve a space. Set up a JustPark account before you leave the house if you want to pay by app, or pay at the machine. National Trust members and Blue Badge holders park free. If you can, come by train instead (Merseyrail, every 15 minutes).
           </p>
           <p>
             Weekday mornings in July are noticeably better than weekends. If you can go on a Tuesday rather than a Saturday, the difference in parking and beach space is significant.
@@ -106,18 +106,18 @@ export default function PostContent() {
           <div className="bg-[#F0F7F2] border border-[#2E6B3E]/20 rounded-lg p-5 my-8">
             <h3 className="font-semibold text-[#2E6B3E] mb-2">July checklist for Formby beach</h3>
             <ul className="space-y-1 text-sm text-gray-700 list-disc list-inside">
-              <li>Book the NT car park via the app before you leave (L37 1YH)</li>
+              <li>Set up JustPark before you leave if you want to pay by app (NT car park L37 1LJ, no booking)</li>
               <li>Arrive before 9:30am on weekends if you want a space</li>
               <li>Check tide times if swimming is the plan</li>
               <li>Bring suncream: the dune exposure means more sun than you expect</li>
               <li>Dogs are allowed on the beach year round at Formby</li>
-              <li>The NT cafe is the most reliable food option; Left Bank and The Sparrowhawk are best for dinner</li>
+              <li>Pack a picnic and check for a mobile food concession in the car parks; Left Bank and The Sparrowhawk are best for dinner</li>
             </ul>
           </div>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Eating and Drinking Nearby</h2>
           <p>
-            The National Trust cafe at the car park end is good for coffee and lunch. It is not cheap but you are paying for the location and convenience. There is usually a queue in July by midday. Worth getting in before noon.
+            In spring and summer there are mobile food concessions in the car parks, so you can get a coffee or a bite without leaving the beach. Expect a queue by midday in July, so get in before noon.
           </p>
           <p>
             For a proper sit-down meal, Formby village is ten minutes by car from the beach. Left Bank Brasserie on Brows Lane is the best option in the village and worth booking ahead in July. The Sparrowhawk on Sparrowhawk Way is good for lunch without a reservation if you are willing to arrive early.

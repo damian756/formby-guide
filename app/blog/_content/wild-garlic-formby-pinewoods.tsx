@@ -105,9 +105,9 @@ export default function PostContent() {
             <div className="not-prose my-10 bg-[#E8EDE6] rounded-2xl p-8">
               <p className="font-display font-bold text-[#1C3220] text-lg mb-2">Practical info</p>
               <ul className="space-y-2 text-sm text-[#1C3220]/80">
-                <li><strong>Postcode:</strong> L37 1YH (NT car park, Formby)</li>
+                <li><strong>Postcode:</strong> L37 1LJ (NT car park, Formby)</li>
                 <li><strong>Best timing:</strong> late April to mid-May, early morning</li>
-                <li><strong>Parking:</strong> NT car park, book via the NT app</li>
+                <li><strong>Parking:</strong> NT car park, pay at the machine or with JustPark</li>
                 <li><strong>Dogs:</strong> welcome on leads through the pinewoods</li>
               </ul>
             </div>
@@ -115,7 +115,7 @@ export default function PostContent() {
             <div className="prose prose-lg prose-headings:font-display prose-headings:text-[#1C3220] prose-p:text-gray-700 max-w-none">
               <h2>While You&apos;re There</h2>
               <p>
-                If you&apos;re walking the pinewoods in May anyway, this is also peak red squirrel season. Early morning on a weekday is your best chance of seeing them. Keep dogs on leads throughout the squirrel trail. The NT café is open from 10am.
+                If you&apos;re walking the pinewoods in May anyway, this is also peak red squirrel season. Early morning on a weekday is your best chance of seeing them. Keep dogs on leads throughout the squirrel trail. Mobile food concessions in the car parks run in spring and summer only.
               </p>
             </div>
 

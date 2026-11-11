@@ -23,11 +23,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
 
   title: {
-    default: "FormbyGuide.co.uk: Your Complete Guide to Formby",
+    default: "FormbyGuide.co.uk: Your Local Guide to Formby",
     template: "%s | FormbyGuide.co.uk",
   },
   description:
-    "Discover the best restaurants, beaches, walks and things to do in Formby. Your local guide to the National Trust pinewoods, red squirrels and the Sefton Coast.",
+    "Restaurants, beaches, walks and things to do in Formby. A local guide to the National Trust pinewoods, red squirrels and the Sefton Coast.",
   keywords:
     "Formby, things to do Formby, Formby beach, red squirrels Formby, National Trust Formby, Formby pinewoods, restaurants Formby, Formby guide",
   authors: [{ name: "Churchtown Media", url: "https://churchtownmedia.co.uk" }],
@@ -46,9 +46,9 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: BASE_URL,
     siteName: "FormbyGuide.co.uk",
-    title: "FormbyGuide.co.uk: Your Complete Guide to Formby",
+    title: "FormbyGuide.co.uk: Your Local Guide to Formby",
     description:
-      "Discover the best restaurants, beaches, walks and things to do in Formby. Red squirrels, pinewoods and the Sefton Coast.",
+      "Restaurants, beaches, walks and things to do in Formby. Red squirrels, pinewoods and the Sefton Coast.",
     images: [
       {
         url: `${BASE_URL}/og-default.png`,
@@ -61,8 +61,8 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "FormbyGuide.co.uk: Your Complete Guide to Formby",
-    description: "Discover the best restaurants, beaches, walks and things to do in Formby.",
+    title: "FormbyGuide.co.uk: Your Local Guide to Formby",
+    description: "Restaurants, beaches, walks and things to do in Formby.",
     images: [`${BASE_URL}/og-default.png`],
   },
 
@@ -205,7 +205,6 @@ function Footer() {
                 ["About this site", "/about"],
                 ["List Your Business", "/claim-listing"],
                 ["Advertise With Us", "/advertise"],
-                ["Claim Listing", "/claim-listing"],
                 ["Contact", "/contact"],
                 ["Privacy", "/privacy"],
                 ["Terms", "/terms"],
@@ -214,11 +213,6 @@ function Footer() {
                   <Link href={href} className="text-white/60 hover:text-[#C9A96E] transition">{label}</Link>
                 </li>
               ))}
-              <li>
-                <a href="https://www.southportguide.co.uk/the-open-2026" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-[#C9A96E] transition">
-                  The Open 2026 ↗
-                </a>
-              </li>
             </ul>
           </div>
         </div>

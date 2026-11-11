@@ -10,14 +10,14 @@ const BASE_URL = "https://www.formbyguide.co.uk";
 export const metadata: Metadata = {
   title: "Parking at Formby Beach | NT Car Park, Postcode & Tips | FormbyGuide",
   description:
-    "Parking at Formby Beach: postcode L37 1YH, National Trust app booking (download before you leave: signal in the car park is terrible), prices, peak times, and alternative parking nearby.",
+    "Parking at Formby Beach: postcodes L37 1LJ (Victoria Road) and L37 2EB (Lifeboat Road), how to pay at the machine or with JustPark (signal in the car park is terrible), peak times, and getting there by train.",
   keywords:
     "parking formby beach, formby beach car park, formby beach postcode, national trust formby parking, parking near formby beach",
   alternates: { canonical: `${BASE_URL}/guides/parking-formby-beach` },
   openGraph: {
     title: "Parking at Formby Beach | NT Car Park, Postcode & Tips",
     description:
-      "Postcode L37 1YH, NT app booking, prices, and what to know before you leave home. The complete parking guide for Formby Beach.",
+      "Postcodes L37 1LJ and L37 2EB, how to pay, peak times, and what to know before you leave home. The complete parking guide for Formby Beach.",
     url: `${BASE_URL}/guides/parking-formby-beach`,
     type: "website",
     siteName: "FormbyGuide.co.uk",
@@ -29,7 +29,7 @@ const pageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   name: "Parking at Formby Beach: Guide",
-  description: "Complete guide to parking at Formby Beach: postcode, NT app booking, prices, and tips.",
+  description: "Complete guide to parking at Formby Beach: postcodes, how to pay (machine or JustPark), and tips.",
   url: `${BASE_URL}/guides/parking-formby-beach`,
   breadcrumb: {
     "@type": "BreadcrumbList",
@@ -50,15 +50,15 @@ const faqSchema = {
       name: "What is the postcode for Formby Beach car park?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The postcode for Formby Beach National Trust car park is L37 1YH. Use this for your sat nav: it takes you directly to the Victoria Road entrance.",
+        text: "The postcode for Formby Beach National Trust car park is L37 1LJ. Use this for your sat nav: it takes you directly to the Victoria Road entrance. The other National Trust car park, on Lifeboat Road, is L37 2EB.",
       },
     },
     {
       "@type": "Question",
-      name: "How much does parking cost at Formby Beach?",
+      name: "How do I pay for parking at Formby Beach?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "National Trust members park free. Non-members pay approximately £6–£8 depending on the day. Prices are set by the National Trust and may change: check the NT app before you visit.",
+        text: "National Trust members and Blue Badge holders park free (members scan their card or check in with JustPark; Blue Badge holders tell the welcome team on arrival). Everyone else pays at the machines (coins or card) or with the JustPark app. Both car parks are ticketless, with number-plate cameras. A payment covers either car park but cannot be moved between them.",
       },
     },
     {
@@ -66,7 +66,7 @@ const faqSchema = {
       name: "Do I need to book parking at Formby Beach in advance?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "On busy summer weekends it fills up and you won't get in without a pre-booked slot. Download the National Trust app at home: signal in the car park is very poor and you can't reliably book on arrival.",
+        text: "No, there is no booking. Both car parks are small and fill quickly on sunny days, so the National Trust asks people to come by train if they can (Merseyrail, trains every 15 minutes). Signal in the car park is very poor, so set up a JustPark account at home if you want to pay by app.",
       },
     },
     {
@@ -74,7 +74,7 @@ const faqSchema = {
       name: "What time does the Formby Beach car park open and close?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The NT car park typically opens around 8am and closes at dusk. Times vary seasonally: check the NT website for the current schedule.",
+        text: "Opening hours change with the season, so check the National Trust Formby page for the current schedule before you go.",
       },
     },
     {
@@ -82,7 +82,7 @@ const faqSchema = {
       name: "Is there alternative parking near Formby Beach?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Street parking is available on Victoria Road and surrounding streets but fills quickly on busy days. There is no official alternative car park. The train to Formby station followed by a 20-minute walk is a practical alternative on summer weekends.",
+        text: "Do not plan on street parking: Sefton Council enforces parking restrictions and fines on the residential roads. The other National Trust car park is on Lifeboat Road (L37 2EB), but it is small too, and a payment cannot be moved between the two. The train is a practical alternative on summer weekends: Freshfield station for Victoria Road, Formby station for Lifeboat Road.",
       },
     },
   ],
@@ -120,14 +120,14 @@ export default function ParkingFormbyBeachPage() {
                 Parking at Formby Beach
               </h1>
               <p className="text-xl text-white/85 leading-relaxed mb-8">
-                Postcode L37 1YH. Download the NT app before you leave: signal in the car park is terrible.
+                Postcode L37 1LJ. No booking: pay at the machine or with JustPark. Signal in the car park is terrible, so set up the app at home.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 {[
-                  { icon: MapPin, label: "Postcode", value: "L37 1YH" },
+                  { icon: MapPin, label: "Postcode", value: "L37 1LJ" },
                   { icon: Car, label: "NT Members", value: "Free" },
-                  { icon: Car, label: "Non-members", value: "From £6" },
-                  { icon: Clock, label: "Opens", value: "~8am" },
+                  { icon: Car, label: "Everyone else", value: "Machine or JustPark" },
+                  { icon: Clock, label: "Hours", value: "Change by season" },
                 ].map(({ icon: Icon, label, value }) => (
                   <div key={label} className="bg-black/30 backdrop-blur rounded-lg p-3 border border-white/20">
                     <div className="flex items-start gap-2 mb-1">
@@ -146,9 +146,9 @@ export default function ParkingFormbyBeachPage() {
 
           {/* The one thing you need to know */}
           <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-12">
-            <h2 className="font-semibold text-amber-900 text-lg mb-2">The one thing to do before you leave home</h2>
+            <h2 className="font-semibold text-amber-900 text-lg mb-2">If you want to pay by app, set it up before you leave home</h2>
             <p className="text-amber-800 leading-relaxed">
-              Download the <strong>National Trust app</strong> and set up an account. Mobile signal on Victoria Road near the car park is poor to non-existent. If you arrive without the app already installed, you can&apos;t book your parking slot. You then either wait for your signal to work (good luck with that) or leave. Sort it at home.
+              Set up an account with the <strong>JustPark</strong> app. Mobile signal on Victoria Road near the car park is poor to non-existent. If you arrive without the app set up, you can still pay at the machines with coins or card. National Trust members can scan their card or check in with JustPark.
             </p>
           </div>
 
@@ -163,11 +163,11 @@ export default function ParkingFormbyBeachPage() {
                     <MapPin className="w-4 h-4 text-[#2E6B3E] flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="font-semibold text-[#1C3220]">National Trust Formby</p>
-                      <p className="text-[#1C3220]/70">Victoria Road, Formby, L37 1YH</p>
+                      <p className="text-[#1C3220]/70">Victoria Road, Formby, L37 1LJ</p>
                     </div>
                   </div>
                   <p className="text-[#1C3220]/60 leading-relaxed pt-2">
-                    Follow Victoria Road west until you reach the NT barrier. The postcode takes you directly to the entrance. Don&apos;t follow Google Maps suggestions that put you on the wrong road: stick with L37 1YH.
+                    Follow Victoria Road west to the National Trust entrance. The postcode takes you directly to the entrance. Don&apos;t follow Google Maps suggestions that put you on the wrong road: stick with L37 1LJ.
                   </p>
                 </div>
               </div>
@@ -176,7 +176,8 @@ export default function ParkingFormbyBeachPage() {
                 <ul className="space-y-2 text-sm text-[#1C3220]/70">
                   <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold mt-0.5">•</span>From Liverpool: A565 north through Crosby, follow signs for Formby. Total 20–25 mins.</li>
                   <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold mt-0.5">•</span>From Southport: A565 south through Ainsdale. 10–15 mins.</li>
-                  <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold mt-0.5">•</span>By train: Formby station then 20-min walk west along Victoria Road.</li>
+                  <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold mt-0.5">•</span>Two National Trust car parks. Victoria Road (L37 1LJ): the beach is reached on uneven ground through the woodland and over the dunes. Lifeboat Road (L37 2EB): the beach is reached by a hard standing path and a boardwalk.</li>
+                  <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold mt-0.5">•</span>By train: Freshfield station for Victoria Road (turn right out of the station and walk west down Victoria Road). Formby station for Lifeboat Road.</li>
                 </ul>
               </div>
             </div>
@@ -184,22 +185,21 @@ export default function ParkingFormbyBeachPage() {
 
           {/* Pricing table */}
           <section className="mb-12">
-            <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-6">Parking Prices</h2>
+            <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-6">Who Pays</h2>
             <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden">
               <table className="w-full text-sm">
                 <thead className="bg-[#1C3220] text-white">
                   <tr>
                     <th className="text-left font-semibold py-3 px-5">Who</th>
-                    <th className="text-left font-semibold py-3 px-5">Price</th>
+                    <th className="text-left font-semibold py-3 px-5">Cost</th>
                     <th className="text-left font-semibold py-3 px-5">Notes</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-50">
                   {[
-                    { who: "National Trust members", price: "Free", notes: "Show membership card or NT app" },
-                    { who: "Non-members (standard)", price: "~£6", notes: "Book via NT app in advance" },
-                    { who: "Non-members (peak/summer weekends)", price: "~£8", notes: "Prices vary; confirm in app" },
-                    { who: "Season pass holders", price: "Varies", notes: "Check NT website for current offers" },
+                    { who: "National Trust members", price: "Free", notes: "Scan your card or check in with JustPark" },
+                    { who: "Blue Badge holders", price: "Free", notes: "Tell the welcome team on arrival so they can note your number plate" },
+                    { who: "Everyone else", price: "Pay on the day", notes: "At the machine (coins or card) or with JustPark" },
                   ].map(({ who, price, notes }) => (
                     <tr key={who} className="hover:bg-gray-50">
                       <td className="py-3 px-5 text-[#1C3220]">{who}</td>
@@ -211,33 +211,29 @@ export default function ParkingFormbyBeachPage() {
               </table>
             </div>
             <p className="text-xs text-[#1C3220]/50 mt-3">
-              Prices set by the National Trust and subject to change. Always confirm in the NT app before visiting.
+              Check the current price at the machine or in the JustPark app. A payment covers either car park but cannot be moved between them.
             </p>
           </section>
 
-          {/* NT App */}
+          {/* Paying */}
           <section className="mb-12">
-            <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-6">The National Trust App</h2>
+            <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-6">How to Pay</h2>
             <div className="grid md:grid-cols-3 gap-5">
               {[
                 {
-                  icon: "📱",
-                  step: "1. Download the app",
-                  desc: "Search 'National Trust' in the App Store or Google Play. Free to download. Create an account if you don't have one.",
+                  step: "1. Set up JustPark",
+                  desc: "Search 'JustPark' in the App Store or Google Play. Free to download. Set up an account before you visit, because the signal at the car park is poor.",
                 },
                 {
-                  icon: "🅿️",
-                  step: "2. Book your slot",
-                  desc: "Search for 'Formby' in the app. Select the date and time, confirm parking. You'll get a booking reference to show if asked.",
+                  step: "2. Park and pay",
+                  desc: "Both car parks are ticketless, with number-plate cameras, so there is no ticket to display. Pay at the machines (coins or card) or in the app. There is no booking.",
                 },
                 {
-                  icon: "🚗",
-                  step: "3. Arrive and park",
-                  desc: "The barrier is managed by the NT. Have your booking reference ready. Non-members pay via the app: not at a machine on site.",
+                  step: "3. Stick to one car park",
+                  desc: "A payment covers either National Trust car park (Victoria Road or Lifeboat Road) but cannot be moved between them.",
                 },
-              ].map(({ icon, step, desc }) => (
+              ].map(({ step, desc }) => (
                 <div key={step} className="bg-white rounded-2xl border border-gray-100 p-5">
-                  <div className="text-3xl mb-3">{icon}</div>
                   <h3 className="font-semibold text-[#1C3220] mb-2">{step}</h3>
                   <p className="text-sm text-[#1C3220]/70 leading-relaxed">{desc}</p>
                 </div>
@@ -252,25 +248,25 @@ export default function ParkingFormbyBeachPage() {
               {[
                 {
                   title: "Peak: Summer Weekends",
-                  desc: "Arrives at capacity by 10–10:30am on sunny summer Saturdays and Sundays. Arrive before 9am or pre-book. Seriously.",
-                  badge: "Book in advance",
+                  desc: "Arrives at capacity by 10–10:30am on sunny summer Saturdays and Sundays. Arrive before 9am or come by train. Seriously.",
+                  badge: "Arrive early",
                   badgeClass: "bg-red-100 text-red-700",
                 },
                 {
                   title: "Peak: School Holidays",
-                  desc: "Half term and summer holidays: any day can be busy, not just weekends. Pre-booking strongly recommended throughout July and August.",
-                  badge: "Book in advance",
+                  desc: "Half term and summer holidays: any day can be busy, not just weekends. There is no booking, so come early or by train throughout July and August.",
+                  badge: "Arrive early",
                   badgeClass: "bg-red-100 text-red-700",
                 },
                 {
                   title: "Moderate: Bank Holidays",
-                  desc: "Fills up on bank holidays and sunny Easter weekends. Same advice: aim early or book ahead.",
+                  desc: "Fills up on bank holidays and sunny Easter weekends. Same advice: aim early or come by train.",
                   badge: "Arrive early",
                   badgeClass: "bg-amber-100 text-amber-700",
                 },
                 {
                   title: "Quiet: Weekdays (not school holidays)",
-                  desc: "Tuesday or Wednesday morning off-season? You'll be fine. Plenty of space and you can often pay on the day via the app.",
+                  desc: "Tuesday or Wednesday morning off-season? You'll be fine. Plenty of space.",
                   badge: "Usually fine",
                   badgeClass: "bg-[#E8EDE6] text-[#2E6B3E]",
                 },
@@ -298,15 +294,15 @@ export default function ParkingFormbyBeachPage() {
               <ul className="space-y-3 text-sm text-[#1C3220]/70">
                 <li className="flex gap-2">
                   <span className="text-[#2E6B3E] font-bold mt-0.5">•</span>
-                  <span><strong className="text-[#1C3220]">Street parking on Victoria Road</strong>: limited, fills early on busy days. Walk from the road to the beach is about 20 minutes on the path.</span>
+                  <span><strong className="text-[#1C3220]">The other National Trust car park, on Lifeboat Road (L37 2EB)</strong>: also small, and a payment cannot be moved between the two.</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-[#2E6B3E] font-bold mt-0.5">•</span>
-                  <span><a href="https://www.southportguide.co.uk/parking/parking-formby-station-park-ride" target="_blank" rel="noopener" className="font-semibold text-[#1C3220] underline underline-offset-2 decoration-[#2E6B3E]/40 hover:text-[#2E6B3E] transition-colors">Formby station car park</a>: paid parking, then 20-minute walk west along Victoria Road. Fine for off-peak visits.</span>
+                  <span><a href="https://www.southportguide.co.uk/parking/parking-formby-station-park-ride" target="_blank" rel="noopener" className="font-semibold text-[#1C3220] underline underline-offset-2 decoration-[#2E6B3E]/40 hover:text-[#2E6B3E] transition-colors">Formby station car park</a>: then a short walk along Kirklake Road to the National Trust entrance at Lifeboat Road.</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-[#2E6B3E] font-bold mt-0.5">•</span>
-                  <span><strong className="text-[#1C3220]">Train to Formby station</strong>: park elsewhere and take the train. 20-minute walk from the station to the beach. Decent option for families who don&apos;t mind a walk.</span>
+                  <span><strong className="text-[#1C3220]">Train to Freshfield station</strong>: park elsewhere and take the train. Turn right out of the station and walk west down Victoria Road. Decent option for families who don&apos;t mind a walk.</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-[#2E6B3E] font-bold mt-0.5">•</span>
@@ -323,19 +319,19 @@ export default function ParkingFormbyBeachPage() {
               {[
                 {
                   q: "What's the postcode for Formby Beach?",
-                  a: "L37 1YH. This takes you to the National Trust car park on Victoria Road. Use this in your sat nav: don't rely on searching 'Formby Beach' as it may route you incorrectly.",
+                  a: "L37 1LJ. This takes you to the National Trust car park on Victoria Road. Use this in your sat nav: don't rely on searching 'Formby Beach' as it may route you incorrectly.",
                 },
                 {
                   q: "Can I pay on the day without booking?",
-                  a: "On quiet days, yes: open the NT app in the car park and pay via the app. On busy days the car park fills before you arrive. Don't risk it on summer weekends.",
+                  a: "Yes. There is no booking: pay at the machines (coins or card) or with the JustPark app. On busy days the car park fills before you arrive, so don't risk it on summer weekends.",
                 },
                 {
                   q: "Is there a physical pay machine?",
-                  a: "No physical machine: payment is via the National Trust app. This is why downloading the app before you leave home is essential.",
+                  a: "Yes. Both car parks are ticketless, with number-plate cameras, and you can pay at the machines with coins or card. You can also pay with the JustPark app, which is worth setting up at home because the signal is poor.",
                 },
                 {
                   q: "Can I park for free as an NT member?",
-                  a: "Yes: National Trust members park free at the Formby car park. Show your membership card or the NT app membership at the barrier.",
+                  a: "Yes: National Trust members park free at the Formby car parks. Scan your membership card or check in with JustPark. Blue Badge holders also park free: tell the welcome team on arrival.",
                 },
               ].map(({ q, a }) => (
                 <div key={q} className="bg-white rounded-xl p-5 border border-gray-100">
@@ -352,23 +348,14 @@ export default function ParkingFormbyBeachPage() {
               <Utensils className="w-5 h-5 text-[#2E6B3E] flex-shrink-0 mt-0.5" />
               <div>
                 <h3 className="font-display text-xl font-bold text-[#1C3220]">Where to Eat While You&apos;re Here</h3>
-                <p className="text-sm text-[#1C3220]/60 mt-1">NT café is at the car park. For a proper meal, the village is 10 minutes away.</p>
+                <p className="text-sm text-[#1C3220]/60 mt-1">There is no café on site, only mobile concessions in the car parks in spring and summer. For a proper meal, the village is 10 minutes away.</p>
               </div>
             </div>
-            <div className="grid sm:grid-cols-3 gap-4 mb-4">
+            <div className="grid sm:grid-cols-2 gap-4 mb-4">
               {[
-                {
-                  name: "NT Café",
-                  href: "/cafes",
-                  emoji: "☕",
-                  tag: "On site",
-                  tagColor: "bg-[#2E6B3E] text-white",
-                  desc: "Coffee, cake and hot food at the car park. Dogs outside. Good stop before or after the walk.",
-                },
                 {
                   name: "The Sparrowhawk",
                   href: "/restaurants/the-sparrowhawk-formby",
-                  emoji: "🍺",
                   tag: "Dog-friendly",
                   tagColor: "bg-amber-500 text-white",
                   desc: "Best post-beach option. Dog-friendly gastropub in the village, no booking needed most of the time.",
@@ -376,7 +363,6 @@ export default function ParkingFormbyBeachPage() {
                 {
                   name: "All Restaurants",
                   href: "/guides/best-restaurants-formby",
-                  emoji: "🍽️",
                   tag: "Guide",
                   tagColor: "bg-[#1C3220] text-white",
                   desc: "Emily's, Left Bank Brasserie, Don Luigi: the full honest guide to eating in Formby.",
@@ -389,7 +375,6 @@ export default function ParkingFormbyBeachPage() {
                 >
                   <div className="flex items-center justify-between gap-2 mb-1.5">
                     <div className="flex items-center gap-2">
-                      <span>{r.emoji}</span>
                       <h4 className="font-semibold text-[#1C3220] text-sm group-hover:text-[#2E6B3E] transition-colors">{r.name}</h4>
                     </div>
                     <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full flex-none ${r.tagColor}`}>{r.tag}</span>

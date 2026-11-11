@@ -263,13 +263,13 @@ export default function PostContent() {
                 </div>
                 <div>
                   <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">Parking</p>
-                  <p className="text-gray-700">L37 1YH: National Trust car park, Victoria Road</p>
+                  <p className="text-gray-700">L37 1LJ: National Trust car park, Victoria Road</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-[#E8EDE6] border border-[#2E6B3E]/20 rounded-2xl p-5">
-              <p className="font-bold text-[#1C3220] text-sm mb-2">🐿️ While you&apos;re in the pinewoods</p>
+              <p className="font-bold text-[#1C3220] text-sm mb-2">While you&apos;re in the pinewoods</p>
               <p className="text-[#1C3220]/70 text-xs leading-relaxed mb-3">
                 The same morning walk that takes you past the dune slack ponds is also your best chance of seeing red squirrels. Go before 9am and walk slowly.
               </p>

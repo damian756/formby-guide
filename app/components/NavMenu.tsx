@@ -163,9 +163,9 @@ export default function NavMenu() {
           <div className="border-t border-gray-100 pt-4 mb-4 space-y-1">
             <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-2">Near Southport too?</p>
             {[
-              { href: "https://www.southportguide.co.uk/collections/dog-friendly-pubs-southport",        label: "🐾 Dog-friendly pubs: Southport" },
-              { href: "https://www.southportguide.co.uk/collections/lord-street-restaurants-southport",  label: "🍽️ Lord Street restaurants" },
-              { href: "https://www.southportguide.co.uk/collections/hotels-near-royal-birkdale",         label: "⛳ Hotels near Royal Birkdale" },
+              { href: "https://www.southportguide.co.uk/collections/dog-friendly-pubs-southport",        label: "Dog-friendly pubs: Southport" },
+              { href: "https://www.southportguide.co.uk/collections/lord-street-restaurants-southport",  label: "Lord Street restaurants" },
+              { href: "https://www.southportguide.co.uk/collections/hotels-near-royal-birkdale",         label: "Hotels near Royal Birkdale" },
             ].map(({ href, label }) => (
               <a key={href} href={href} className="flex items-center gap-2.5 px-3 py-3 rounded-xl bg-[#F0F5EF] text-[#1C3220]/80 text-sm font-medium">
                 {label} <span className="ml-auto text-[10px] text-gray-400">↗</span>

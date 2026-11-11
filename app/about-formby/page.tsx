@@ -74,13 +74,13 @@ export default function AboutFormbyPage() {
             </div>
             <div className="flex flex-wrap gap-3 md:flex-none">
               {[
-                { icon: "📍", label: "Postcode",  val: "L37" },
-                { icon: "🚆", label: "From Liverpool", val: "~30 mins" },
-                { icon: "👥", label: "Population", val: "~25,000" },
-                { icon: "🐿️", label: "Known for",  val: "Red squirrels" },
-              ].map(({ icon, label, val }) => (
+                { label: "Postcode",  val: "L37" },
+                { label: "From Liverpool", val: "~30 mins" },
+                { label: "Population", val: "~25,000" },
+                { label: "Known for",  val: "Red squirrels" },
+              ].map(({ label, val }) => (
                 <div key={label} className="bg-white/8 rounded-xl px-4 py-3 border border-white/10 min-w-[110px]">
-                  <div className="text-[10px] text-white/40 uppercase tracking-wider mb-1">{icon} {label}</div>
+                  <div className="text-[10px] text-white/40 uppercase tracking-wider mb-1">{label}</div>
                   <div className="text-sm font-bold text-white">{val}</div>
                 </div>
               ))}
@@ -98,26 +98,26 @@ export default function AboutFormbyPage() {
             Formby is a village in the Metropolitan Borough of Sefton, Merseyside, on the north-west coast of England. It sits on the Sefton Coast between Southport (12 miles north) and Crosby (6 miles south), with Liverpool city centre about 12 miles to the south-east.
           </p>
           <p className="text-[#1C3220]/70 leading-relaxed mb-6">
-            If you&apos;re looking for it on a map: it&apos;s directly west of the A565, the main coastal road between Liverpool and Southport. The postcode for the village centre is roughly L37, and for the National Trust beach and pinewoods it&apos;s L37 1YH.
+            If you&apos;re looking for it on a map: it&apos;s directly west of the A565, the main coastal road between Liverpool and Southport. The postcode for the village centre is roughly L37, and for the National Trust beach and pinewoods it&apos;s L37 1LJ.
           </p>
 
           <div className="bg-[#E8EDE6] rounded-2xl p-6 grid sm:grid-cols-2 gap-4">
             <div>
               <h3 className="font-semibold text-[#1C3220] mb-3 text-sm uppercase tracking-wider">Distance from Formby</h3>
               <ul className="space-y-2 text-sm text-[#1C3220]/70">
-                <li>🚗 <strong className="text-[#1C3220]">Liverpool city centre:</strong> 12 miles, ~25 mins</li>
-                <li>🚗 <strong className="text-[#1C3220]">Southport:</strong> 12 miles, ~20 mins</li>
-                <li>🚗 <strong className="text-[#1C3220]">Manchester:</strong> 40 miles, ~55 mins via M62</li>
-                <li>🚗 <strong className="text-[#1C3220]">Wigan:</strong> 22 miles, ~35 mins via M58</li>
-                <li>🚗 <strong className="text-[#1C3220]">Preston:</strong> 27 miles, ~35 mins via M6</li>
+                <li><strong className="text-[#1C3220]">Liverpool city centre:</strong> 12 miles, ~25 mins</li>
+                <li><strong className="text-[#1C3220]">Southport:</strong> 12 miles, ~20 mins</li>
+                <li><strong className="text-[#1C3220]">Manchester:</strong> 40 miles, ~55 mins via M62</li>
+                <li><strong className="text-[#1C3220]">Wigan:</strong> 22 miles, ~35 mins via M58</li>
+                <li><strong className="text-[#1C3220]">Preston:</strong> 27 miles, ~35 mins via M6</li>
               </ul>
             </div>
             <div>
               <h3 className="font-semibold text-[#1C3220] mb-3 text-sm uppercase tracking-wider">By public transport</h3>
               <ul className="space-y-2 text-sm text-[#1C3220]/70">
-                <li>🚆 <strong className="text-[#1C3220]">From Liverpool Central:</strong> ~30 mins, Merseyrail Northern Line</li>
-                <li>🚆 <strong className="text-[#1C3220]">From Southport:</strong> ~15 mins, Merseyrail Northern Line</li>
-                <li>🚶 <strong className="text-[#1C3220]">Station to NT beach:</strong> ~20 min walk via Victoria Road</li>
+                <li><strong className="text-[#1C3220]">From Liverpool Central:</strong> ~30 mins, Merseyrail Northern Line</li>
+                <li><strong className="text-[#1C3220]">From Southport:</strong> ~15 mins, Merseyrail Northern Line</li>
+                <li><strong className="text-[#1C3220]">Freshfield station to NT beach:</strong> turn right out of the station and walk west down Victoria Road</li>
               </ul>
             </div>
           </div>
@@ -158,7 +158,7 @@ export default function AboutFormbyPage() {
               <tbody>
                 {[
                   { label: "Location",     value: "Sefton, Merseyside, north-west England" },
-                  { label: "Postcode",     value: <><Link href="/formby-beach#parking" className="text-[#2E6B3E] hover:underline">L37 (village), L37 1YH (National Trust beach)</Link></> },
+                  { label: "Postcode",     value: <><Link href="/formby-beach#parking" className="text-[#2E6B3E] hover:underline">L37 (village), L37 1LJ (National Trust beach)</Link></> },
                   { label: "County",       value: "Merseyside (Metropolitan Borough of Sefton)" },
                   { label: "Population",   value: "Approximately 25,000" },
                   { label: "Known for",    value: <><Link href="/red-squirrels-formby" className="text-[#2E6B3E] hover:underline">Red squirrels</Link>, <Link href="/formby-beach" className="text-[#2E6B3E] hover:underline">National Trust beach</Link>, <Link href="/formby-pinewoods" className="text-[#2E6B3E] hover:underline">pinewoods</Link>, affluent village</> },

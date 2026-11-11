@@ -86,9 +86,9 @@ export const COLLECTIONS: Collection[] = [
     slug: "cafes-near-formby-beach",
     title: "Cafés Near Formby Beach",
     metaDescription:
-      "Cafés near Formby Beach: where to get a coffee before or after a walk. NT café, local independents, and what to expect.",
+      "Cafés near Formby Beach: where to get a coffee before or after a walk. Local independents, spring and summer concessions, and what to expect.",
     intro:
-      "The coffee situation near Formby Beach is better than it used to be. The NT café is the obvious choice: convenient, decent, not cheap. But there are a few others worth knowing about if you want something a bit different before or after your walk. These are the closest options with your sandy boots still on.",
+      "The coffee situation near Formby Beach is better than it used to be. There is no café on site at Formby, only mobile concessions in the car parks in spring and summer, so the nearby options are worth knowing about if you want a proper coffee before or after your walk. These are the closest options with your sandy boots still on.",
     tags: ["near-beach"],
     categorySlugs: ["cafes"],
     emoji: "🌊",

@@ -50,7 +50,7 @@ export default function PostContent() {
       <section className="relative text-white overflow-hidden min-h-[480px] flex items-end">
         <Image
           src="/blog-left-bank-brasserie.jpg"
-          alt="Left Bank Brasserie Formby — restaurant interior with white tablecloths and fresh flowers"
+          alt="Left Bank Brasserie Formby: restaurant interior with white tablecloths and fresh flowers"
           fill
           priority
           className="object-cover object-center"
@@ -100,7 +100,7 @@ export default function PostContent() {
 
         <div className="bg-[#F0F5F1] border-l-4 border-[#2E6B3E] rounded-r-xl px-5 py-4 my-7">
           <p className="text-[#1C3220] font-medium leading-relaxed">
-            <span className="mr-2">📍</span>
+            
             Left Bank Brasserie, Duke Street, Formby, L37 4AN. Book ahead at weekends. Tuesday to Sunday lunch and dinner. Closed Monday.
           </p>
         </div>

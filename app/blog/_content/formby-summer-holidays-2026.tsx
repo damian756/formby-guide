@@ -71,7 +71,7 @@ export default function PostContent() {
               Formby Beach in August is brilliant. It is also one of the busiest beaches in the North West on hot weekends. The National Trust car park fills by 10am on warm Saturdays in July and August. I am not exaggerating. On the hottest days it fills by 9.30.
             </p>
             <p>
-              Go on weekday mornings. Arrive by 9am if you want a space and a quiet start. By 11am, even midweek in August, it gets busy. The parking is paid via the NT app (L37 1YH). Members park free. Book your space before you leave if you can.
+              Go on weekday mornings. Arrive by 9am if you want a space and a quiet start. By 11am, even midweek in August, it gets busy. The car park (L37 1LJ) is paid at the machine or with the JustPark app. Members and Blue Badge holders park free. There is no booking, so go early.
             </p>
             <p>
               Check the tide before you go. Low tide in the morning gives you the full flat beach. High tide on a busy afternoon squeezes everyone onto a narrow strip. The BBC weather page has the Formby tide times.
@@ -90,7 +90,7 @@ export default function PostContent() {
               The walk from the car park through the pinewoods to the beach is about 15 minutes each way. In summer the pinewoods are properly beautiful. Shaded, cool, the light coming through the canopy. Kids who would normally resist a walk tend to cope with this one because there is something to look at the whole way.
             </p>
             <p>
-              The return walk late afternoon, tired and sandy, is where the moaning starts. Warn them about the walk back before you set off. Or bribe them with ice cream from the NT café at the car park. Both strategies work.
+              The return walk late afternoon, tired and sandy, is where the moaning starts. Warn them about the walk back before you set off. Or bribe them with ice cream from a mobile food concession in the car park. Both strategies work.
             </p>
 
             <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">Rainy Days</h2>
@@ -114,7 +114,7 @@ export default function PostContent() {
 
             <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">What Works for Different Ages</h2>
             <ul className="space-y-2">
-              <li><strong>Under 5s:</strong> The beach with buckets and spades, the pinewoods walk (short version), ice cream from the NT café. The squirrels if they stay quiet for five minutes.</li>
+              <li><strong>Under 5s:</strong> The beach with buckets and spades, the pinewoods walk (short version), ice cream from a food concession in the car park. The squirrels if they stay quiet for five minutes.</li>
               <li><strong>5-10:</strong> Full beach day, squirrel spotting early morning, crabbing from the beach (bring a line and bait), cycling the coastal path.</li>
               <li><strong>Teens:</strong> The beach works if they have friends with them. Otherwise Southport has more: Splash World, the arcades, Southport Market for food. Formby village in the evening.</li>
             </ul>
@@ -122,12 +122,12 @@ export default function PostContent() {
             <div className="bg-[#EBF5EE] border-l-4 border-[#2E6B3E] rounded-r-lg p-5 my-8">
               <p className="font-semibold text-[#1C3220] mb-2">Summer Holiday Quick Guide</p>
               <ul className="text-sm text-gray-700 space-y-1 list-disc list-inside">
-                <li>Car park postcode: L37 1YH</li>
+                <li>Car park postcode: L37 1LJ</li>
                 <li>Arrive by 9am on warm weekend days</li>
                 <li>Check tides: low tide mornings are best</li>
                 <li>Squirrel spotting: before 9am, keep dogs on leads</li>
                 <li>Bank holiday weekend: expect it to be busy everywhere</li>
-                <li>NT café at car park for coffee and ice cream</li>
+                <li>Mobile food concessions in the car parks for coffee and ice cream (spring and summer)</li>
               </ul>
             </div>
 
@@ -145,10 +145,10 @@ export default function PostContent() {
             <div className="bg-white rounded-xl border border-gray-100 p-5 shadow-sm">
               <h3 className="font-bold text-[#1C3220] mb-3">Summer Essentials</h3>
               <dl className="text-sm space-y-2">
-                <div><dt className="font-semibold text-gray-500">Car park</dt><dd>L37 1YH, NT app</dd></div>
+                <div><dt className="font-semibold text-gray-500">Car park</dt><dd>L37 1LJ, pay at the machine or with JustPark</dd></div>
                 <div><dt className="font-semibold text-gray-500">Schools break up</dt><dd>Around 22 July</dd></div>
                 <div><dt className="font-semibold text-gray-500">Bank holiday</dt><dd>Last weekend August</dd></div>
-                <div><dt className="font-semibold text-gray-500">NT café</dt><dd>At car park</dd></div>
+                <div><dt className="font-semibold text-gray-500">Food</dt><dd>Mobile concessions in the car parks</dd></div>
               </dl>
             </div>
             <ClareBio />

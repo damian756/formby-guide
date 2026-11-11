@@ -157,7 +157,6 @@ export default function PostContent() {
                     "Talk in a whisper or stay silent",
                     "Sit on a bench and wait: let them come to you",
                     "Look up into the canopy as you walk",
-                    "Visit the areas near feeders if available",
                     "Bring binoculars: worth every penny",
                   ].map(tip => (
                     <li key={tip} className="flex items-start gap-2 text-sm text-[#1C3220]">
@@ -188,7 +187,6 @@ export default function PostContent() {
             {/* Why it matters */}
             <div className="not-prose bg-[#1C3220] text-white rounded-2xl p-7 mb-10">
               <div className="flex items-start gap-4">
-                <div className="text-4xl">🐿️</div>
                 <div>
                   <h3 className="font-display text-xl font-bold mb-3">Why Formby&apos;s Red Squirrels Matter</h3>
                   <p className="text-white/75 leading-relaxed mb-3">
@@ -220,7 +218,6 @@ export default function PostContent() {
                   { item: "Spring or autumn visit", critical: true },
                   { item: "Stay quiet and slow", critical: true },
                   { item: "Bring binoculars", critical: false },
-                  { item: "Check feeders first", critical: false },
                   { item: "Sit and wait: don't rush", critical: true },
                   { item: "Don't feed them", critical: false },
                 ].map(({ item, critical }) => (

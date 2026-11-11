@@ -169,7 +169,7 @@ export default function AdvertisePage() {
               {[
                 { icon: <Globe className="w-5 h-5 text-[#C9A96E]" />, title: "No competitor exists", body: "No other independent editorial network covers the Sefton Coast. The first advertiser in a category has it to themselves." },
                 { icon: <Shield className="w-5 h-5 text-[#C9A96E]" />, title: "Category exclusivity", body: "No direct competitor in your category will appear on the same site during your contract. A firm commitment." },
-                { icon: <TrendingUp className="w-5 h-5 text-[#C9A96E]" />, title: "Growing traffic", body: "All four sites are growing. The Open 2026 at Royal Birkdale is bringing the highest traffic the network has seen." },
+                { icon: <TrendingUp className="w-5 h-5 text-[#C9A96E]" />, title: "Growing traffic", body: "All four sites are growing." },
               ].map((item) => (
                 <div key={item.title} className="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
                   <div className="flex-shrink-0 mt-0.5">{item.icon}</div>

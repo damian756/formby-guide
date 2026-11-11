@@ -97,7 +97,7 @@ export default function PostContent() {
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Where to Go</h2>
           <p>
-            The main squirrel trail starts from the National Trust car park on Victoria Road (L37 1YH). Follow the wooden posts and keep left to enter the pinewoods. The highest concentration of squirrel activity is in the established pines in the middle section of the trail, away from the beach path and away from the busiest dog-walking routes.
+            The main squirrel trail starts from the National Trust car park on Victoria Road (L37 1LJ). Follow the wooden posts and keep left to enter the pinewoods. The highest concentration of squirrel activity is in the established pines in the middle section of the trail, away from the beach path and away from the busiest dog-walking routes.
           </p>
           <p>
             The feeding stations that the National Trust maintains in some years are worth noting. They attract squirrels reliably in periods of lower natural food availability. In September there is usually still enough natural pine cone food that the squirrels are spread more widely through the woods, so the whole trail is worth doing rather than just waiting at one point.
@@ -106,7 +106,7 @@ export default function PostContent() {
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Practical Information for September</h2>
           <ul className="space-y-3 list-none pl-0">
             {[
-              ["Car park", "Victoria Road, Formby, L37 1YH. Book via the NT app. In September weekday availability is much better than July or August. Weekend mornings still worth booking."],
+              ["Car park", "Victoria Road, Formby, L37 1LJ. No booking: pay at the machine or with the JustPark app. In September weekday availability is much better than July or August. Weekend mornings are still worth getting there early for."],
               ["Best timing", "Early morning, before 9am. September light in the pinewoods is genuinely beautiful."],
               ["What to wear", "Layers. September mornings can be cool. Wellies or proper walking shoes for the paths after rain."],
               ["Dogs", "Dogs allowed on a lead throughout the nature reserve. Keep them on the lead in the pinewoods: it matters for the squirrels."],
@@ -121,7 +121,7 @@ export default function PostContent() {
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">After the Walk</h2>
           <p>
-            The cafes in Formby village are a 10-minute drive from the National Trust car park. If you want something on site, there is a seasonal cafe at the NT visitor area near the car park. In September it is usually still open on weekends but check ahead. The village has better options for a proper lunch or coffee, and the drive through Formby takes you past the chapel lane shops if you want a browse.
+            The cafes in Formby village are a 10-minute drive from the National Trust car park. There is no year-round National Trust cafe, and mobile food concessions in the car parks run in spring and summer only, so bring a flask. The village has better options for a proper lunch or coffee, and the drive through Formby takes you past the chapel lane shops if you want a browse.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">The Season That Follows</h2>

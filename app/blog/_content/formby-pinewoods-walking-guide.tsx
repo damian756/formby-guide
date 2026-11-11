@@ -121,9 +121,9 @@ export default function PostContent() {
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
             {[
               { label: "Managed by", value: "National Trust" },
-              { label: "Parking", value: "L37 1YH" },
+              { label: "Parking", value: "L37 1LJ" },
               { label: "Shortest trail", value: "45 minutes" },
-              { label: "Entry", value: "Free (NT members) / £" },
+              { label: "Entry", value: "Free on foot or by bike" },
             ].map(({ label, value }) => (
               <div key={label} className="px-5 py-4 text-center">
                 <div className="text-[#C9A96E] font-bold text-sm">{value}</div>
@@ -151,7 +151,7 @@ export default function PostContent() {
             <div className="not-prose relative w-full h-56 overflow-hidden rounded-2xl mb-10">
               <Image src="/nt-sign.webp" alt="National Trust Formby sign at the car park entrance" fill className="object-cover object-center" sizes="(max-width: 1024px) 100vw, 66vw" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-              <p className="absolute bottom-3 left-4 text-white/80 text-xs drop-shadow">Victoria Road, L37 1YH: the main NT car park entrance</p>
+              <p className="absolute bottom-3 left-4 text-white/80 text-xs drop-shadow">Victoria Road, L37 1LJ: the main NT car park entrance</p>
             </div>
 
             {/* Terrain warning */}
@@ -291,7 +291,7 @@ export default function PostContent() {
                   <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">By car</p>
                   <p className="text-sm text-gray-700 flex items-start gap-1.5">
                     <MapPin className="w-3.5 h-3.5 text-[#2E6B3E] mt-0.5 shrink-0" />
-                    National Trust Car Park, Victoria Road, Formby, L37 1YH
+                    National Trust Car Park, Victoria Road, Formby, L37 1LJ
                   </p>
                 </div>
                 <div>
@@ -300,7 +300,7 @@ export default function PostContent() {
                 </div>
                 <div>
                   <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">Parking fee</p>
-                  <p className="text-sm text-gray-700">Free for NT members. Non-members pay at machine. Typically £3–5 per day.</p>
+                  <p className="text-sm text-gray-700">Free for NT members and Blue Badge holders. Everyone else pays at the machine or with JustPark.</p>
                 </div>
               </div>
               </div>
@@ -322,7 +322,7 @@ export default function PostContent() {
             </div>
 
             <div className="bg-[#E8EDE6] border border-[#2E6B3E]/20 rounded-2xl p-5">
-              <p className="font-bold text-[#1C3220] text-sm mb-2">🐿️ Squirrel spotting from the Pinewoods?</p>
+              <p className="font-bold text-[#1C3220] text-sm mb-2">Squirrel spotting from the Pinewoods?</p>
               <p className="text-[#1C3220]/70 text-xs leading-relaxed mb-3">
                 Read our separate guide on exactly when and where to spot red squirrels: including the timing mistakes most visitors make.
               </p>
@@ -332,9 +332,9 @@ export default function PostContent() {
             </div>
 
             <div className="bg-white rounded-2xl border border-gray-100 p-5">
-              <p className="font-bold text-[#1C3220] text-sm mb-2">🍽️ Where to eat after your walk</p>
+              <p className="font-bold text-[#1C3220] text-sm mb-2">Where to eat after your walk</p>
               <p className="text-[#1C3220]/70 text-xs leading-relaxed mb-3">
-                The NT café covers post-walk coffee and cake. For a proper meal, the village is 10 minutes by car. <Link href="/restaurants/the-sparrowhawk-formby" className="text-[#2E6B3E] font-medium hover:underline">The Sparrowhawk</Link> is dog-friendly and doesn&apos;t need a booking: ideal after a muddy walk.
+                There is no year-round café at the National Trust site, though mobile food concessions run in the car parks in spring and summer. For a proper meal, the village is 10 minutes by car. <Link href="/restaurants/the-sparrowhawk-formby" className="text-[#2E6B3E] font-medium hover:underline">The Sparrowhawk</Link> is dog-friendly and doesn&apos;t need a booking: ideal after a muddy walk.
               </p>
               <Link href="/guides/best-restaurants-formby" className="text-[#2E6B3E] font-bold text-xs hover:underline flex items-center gap-1">
                 Best restaurants in Formby <ArrowRight className="w-3 h-3" />

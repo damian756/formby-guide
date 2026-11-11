@@ -67,13 +67,13 @@ export default function FormbyBeachContent() {
             </div>
             <div className="flex flex-wrap gap-3 md:flex-none">
               {[
-                { icon: "📍", label: "Postcode", val: "L37 1YH" },
-                { icon: "🅿️", label: "Parking", val: "From £6" },
-                { icon: "🐕", label: "Dogs", val: "Year-round" },
-                { icon: "☕", label: "Café", val: "On site" },
-              ].map(({ icon, label, val }) => (
+                { label: "Postcode", val: "L37 1LJ" },
+                { label: "Parking", val: "Machine or app" },
+                { label: "Dogs", val: "Year-round" },
+                { label: "Snacks", val: "Spring & summer" },
+              ].map(({ label, val }) => (
                 <div key={label} className="bg-white/8 rounded-xl px-4 py-3 border border-white/10 min-w-[110px]">
-                  <div className="text-[10px] text-white/40 uppercase tracking-wider mb-1">{icon} {label}</div>
+                  <div className="text-[10px] text-white/40 uppercase tracking-wider mb-1">{label}</div>
                   <div className="text-sm font-bold text-white">{val}</div>
                 </div>
               ))}
@@ -90,10 +90,10 @@ export default function FormbyBeachContent() {
             Formby Beach is a National Trust managed beach on the Sefton Coast: west-facing, backed by significant sand dunes and Scots pine woodland, and genuinely one of the best beaches in the North West. No promenade. No amusements. Wide open sand, the Irish Sea in front of you, and pinewoods behind.
           </p>
           <p className="text-base text-[#1C3220]/70 leading-relaxed mb-4">
-            The postcode is <strong>L37 1YH</strong>. That's where you park: the National Trust car park on Victoria Road. From there it's a 15-minute walk through the pinewoods to the beach itself. On a sunny summer Saturday it fills fast; arrive by 9:30am or use the train. On a Tuesday in November you'll have the place to yourself, which is a very specific kind of brilliant.
+            The postcode is <strong>L37 1LJ</strong>. That's where you park: the National Trust car park on Victoria Road. From there it's a 15-minute walk through the pinewoods to the beach itself. On a sunny summer Saturday it fills fast; arrive by 9:30am or use the train. On a Tuesday in November you'll have the place to yourself, which is a very specific kind of brilliant.
           </p>
           <p className="text-base text-[#1C3220]/70 leading-relaxed">
-            Dogs are welcome year-round with no seasonal restrictions on the beach itself: one reason Formby is popular with dog walkers from across Merseyside. The walk from the train station at Formby takes about 20 minutes on a well-marked path. Worth doing if you want to skip the parking entirely.
+            Dogs are welcome year-round with no seasonal restrictions on the beach itself: one reason Formby is popular with dog walkers from across Merseyside. By train, Freshfield station is nearest to Victoria Road and Formby station to Lifeboat Road. Worth doing if you want to skip the parking entirely.
           </p>
         </div>
 
@@ -110,14 +110,14 @@ export default function FormbyBeachContent() {
                   <Car className="w-6 h-6 text-[#2E6B3E] flex-shrink-0 mt-0.5" />
                   <div>
                     <h3 className="font-semibold text-[#1C3220] text-lg">Parking & Getting There</h3>
-                    <p className="text-sm text-[#1C3220]/60">L37 1YH</p>
+                    <p className="text-sm text-[#1C3220]/60">L37 1LJ</p>
                   </div>
                 </div>
                 <ul className="space-y-2 text-sm">
-                  <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">•</span><span className="text-[#1C3220]/70"><strong>NT Members:</strong> Free parking, book via app</span></li>
-                  <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">•</span><span className="text-[#1C3220]/70"><strong>Non-members:</strong> From £6/day via NT app</span></li>
-                  <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">•</span><span className="text-[#1C3220]/70">Train from Formby station: 20-min walk</span></li>
-                  <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">•</span><span className="text-[#1C3220]/70">Book BEFORE you leave: no signal on site</span></li>
+                  <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">•</span><span className="text-[#1C3220]/70"><strong>NT members and Blue Badge holders:</strong> park free</span></li>
+                  <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">•</span><span className="text-[#1C3220]/70"><strong>Everyone else:</strong> pay at the machine (coins or card) or with the JustPark app</span></li>
+                  <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">•</span><span className="text-[#1C3220]/70">By train: Freshfield station for Victoria Road, Formby station for Lifeboat Road</span></li>
+                  <li className="flex gap-2"><span className="text-[#2E6B3E] font-bold">•</span><span className="text-[#1C3220]/70">No booking. Both car parks are small and fill early on sunny days</span></li>
                 </ul>
               </div>
             </div>
@@ -253,7 +253,7 @@ export default function FormbyBeachContent() {
                   <div className="flex items-center gap-2"><span className="font-bold text-green-600">✓</span> <span className="text-blue-800"><strong>On the beach:</strong> No restrictions</span></div>
                   <div className="flex items-center gap-2"><span className="font-bold text-green-600">✓</span> <span className="text-blue-800"><strong>In pinewoods:</strong> Welcome</span></div>
                   <div className="flex items-center gap-2"><span className="font-bold text-amber-600">!</span> <span className="text-blue-800"><strong>In squirrel reserve:</strong> Must be on leads</span></div>
-                  <div className="flex items-center gap-2"><span className="text-blue-600">💧</span> <span className="text-blue-800"><strong>Water:</strong> Bring your own</span></div>
+                  <div className="flex items-center gap-2"><span className="font-bold text-blue-600">•</span> <span className="text-blue-800"><strong>Water:</strong> Bring your own</span></div>
                 </div>
               </div>
             </div>
@@ -346,8 +346,8 @@ export default function FormbyBeachContent() {
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-8">Facilities</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { icon: Coffee, title: "Café", desc: "NT café at visitor point. Coffee, cake, soup, light bites. Outdoor seating. Not cheap but decent." },
-              { icon: MapPin, title: "Toilets", desc: "At the NT car park/visitor point. Clean and well-maintained. Baby changing available." },
+              { icon: Coffee, title: "Refreshments", desc: "Food and drink vans in the NT car parks in spring and summer only. Out of season, bring a flask or eat in the village." },
+              { icon: MapPin, title: "Toilets", desc: "At both NT car parks, with baby changing. Opening times change with the season." },
               { icon: Info, title: "Accessibility", desc: "Main paths manageable for pushchairs on dry days. Beach and dune paths are uneven. Check NT website for current details." },
             ].map(({ icon: Icon, title, desc }) => (
               <div key={title} className="bg-white rounded-2xl border border-gray-100 p-6">
@@ -370,11 +370,11 @@ export default function FormbyBeachContent() {
               <div className="flex-1">
                 <h3 className="font-semibold text-amber-900 text-lg mb-4">Important Information</h3>
                 <ul className="space-y-3 text-sm text-amber-900">
-                  <li className="flex gap-2"><span className="font-bold">⚠️</span><span><strong>No lifeguard service.</strong> Swim with care and be aware of the tide.</span></li>
-                  <li className="flex gap-2"><span className="font-bold">🌊</span><span><strong>Rip currents present at times.</strong> Don&apos;t go out far and don&apos;t swim alone.</span></li>
-                  <li className="flex gap-2"><span className="font-bold">📱</span><span><strong>Check tide times before you go.</strong> BBC Weather, Tide Times UK, or Met Office for Formby/Southport predictions.</span></li>
-                  <li className="flex gap-2"><span className="font-bold">⏱️</span><span><strong>Tide comes in quickly here.</strong> Be aware of where you are relative to the waterline.</span></li>
-                  <li className="flex gap-2"><span className="font-bold">✅</span><span><strong>Best for walking:</strong> Low to mid tide gives most beach and firmer sand.</span></li>
+                  <li className="flex gap-2"><span className="font-bold">•</span><span><strong>Lifeguards in season only.</strong> RNLI lifeguards are on duty at Lifeboat Road from 10am to 6pm in spring and summer during the school holidays. Swim with care and be aware of the tide.</span></li>
+                  <li className="flex gap-2"><span className="font-bold">•</span><span><strong>Rip currents present at times.</strong> Don&apos;t go out far and don&apos;t swim alone.</span></li>
+                  <li className="flex gap-2"><span className="font-bold">•</span><span><strong>Check tide times before you go.</strong> BBC Weather, Tide Times UK, or Met Office for Formby/Southport predictions.</span></li>
+                  <li className="flex gap-2"><span className="font-bold">•</span><span><strong>Tide comes in quickly here.</strong> Be aware of where you are relative to the waterline.</span></li>
+                  <li className="flex gap-2"><span className="font-bold">•</span><span><strong>Best for walking:</strong> Low to mid tide gives most beach and firmer sand.</span></li>
                 </ul>
               </div>
             </div>
@@ -482,7 +482,7 @@ export default function FormbyBeachContent() {
 
           {/* Natterjack toads callout */}
           <div className="bg-[#E8EDE6] rounded-2xl p-5 border border-[#1C3220]/10">
-            <p className="font-semibold text-[#1C3220] text-sm mb-1">🐸 What about those conservation ponds?</p>
+            <p className="font-semibold text-[#1C3220] text-sm mb-1">What about those conservation ponds?</p>
             <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-3">
               You&apos;ll pass small fenced ponds on the path to the beach. They&apos;re for natterjack toads: Britain&apos;s rarest amphibian. Most people walk straight past without knowing what they are.
             </p>
@@ -522,7 +522,7 @@ export default function FormbyBeachContent() {
             <div>
               <h2 className="font-display text-2xl font-bold text-[#1C3220]">Where to Eat After the Beach</h2>
               <p className="text-[#1C3220]/60 text-sm mt-1 leading-relaxed">
-                The NT café covers post-walk coffee and cake. For a proper meal, the village is 10 minutes by car.
+                Food and drink vans park up in the NT car parks in spring and summer. For a proper meal, the village is 10 minutes by car.
               </p>
             </div>
           </div>
@@ -530,20 +530,18 @@ export default function FormbyBeachContent() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
             {[
               {
-                name: "NT Café",
-                href: "/cafes",
-                tag: "On site",
+                name: "Car park food vans",
+                href: "/formby-beach#facilities",
+                tag: "Spring & summer",
                 tagColor: "bg-[#2E6B3E] text-white",
-                emoji: "☕",
-                desc: "At the Victoria Road car park. Coffee, cake, soup and hot bites. Outdoor seating. Dogs welcome outside. Not cheap but convenient.",
-                note: "Walk-ins only",
+                desc: "Mobile food and drink concessions in the NT car parks during spring and summer. Nothing in autumn and winter, so bring a flask.",
+                note: "Seasonal",
               },
               {
                 name: "The Sparrowhawk",
                 href: "/restaurants/the-sparrowhawk-formby",
                 tag: "Dog-friendly",
                 tagColor: "bg-amber-500 text-white",
-                emoji: "🍺",
                 desc: "Best post-walk option in the village. Gastropub food, beer garden in summer, and they genuinely welcome dogs. No booking needed most of the time.",
                 note: "10 min drive",
               },
@@ -552,7 +550,6 @@ export default function FormbyBeachContent() {
                 href: "/restaurants",
                 tag: "Local favourite",
                 tagColor: "bg-[#1C3220] text-white",
-                emoji: "🍽️",
                 desc: "The most-loved neighbourhood restaurant in Formby. Good food, reasonable prices. Worth booking ahead if you're coming on a Friday or Saturday.",
                 note: "10 min drive · Book ahead",
               },
@@ -561,7 +558,6 @@ export default function FormbyBeachContent() {
                 href: "/restaurants",
                 tag: "Best overall",
                 tagColor: "bg-[#C9A96E] text-[#1C3220]",
-                emoji: "🥂",
                 desc: "The best restaurant in Formby: proper brasserie food and a great wine list. Book at least a week ahead at weekends. Worth the effort.",
                 note: "10 min drive · Essential to book",
               },
@@ -570,7 +566,6 @@ export default function FormbyBeachContent() {
                 href: "/restaurants",
                 tag: "Italian",
                 tagColor: "bg-red-600 text-white",
-                emoji: "🍕",
                 desc: "Reliable Italian in the village. Good for groups and families. Decent pasta and pizza, friendly staff. No booking drama for most weekday visits.",
                 note: "10 min drive",
               },
@@ -579,7 +574,6 @@ export default function FormbyBeachContent() {
                 href: "/cafes",
                 tag: "Casual",
                 tagColor: "bg-gray-500 text-white",
-                emoji: "☕",
                 desc: "Several independent cafés near Chapel Lane: good for coffee, cake and a sandwich. Relaxed about kids and dogs. No booking, just walk in.",
                 note: "10 min drive",
               },
@@ -591,7 +585,6 @@ export default function FormbyBeachContent() {
               >
                 <div className="flex items-start justify-between gap-2 mb-2">
                   <div className="flex items-center gap-2">
-                    <span className="text-xl">{r.emoji}</span>
                     <h3 className="font-display font-bold text-[#1C3220] text-base group-hover:text-[#2E6B3E] transition-colors">{r.name}</h3>
                   </div>
                   <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full flex-none ${r.tagColor}`}>{r.tag}</span>
@@ -630,9 +623,9 @@ export default function FormbyBeachContent() {
           <div className="grid sm:grid-cols-2 gap-4">
             {[
               { label: "Red Squirrels", href: "/red-squirrels-formby", desc: "One of the best places in England to see them in the wild.", image: "/squirrels-hero.webp" },
-              { label: "Pinewoods Walks", href: "/formby-pinewoods", desc: "Ancient woodland and coastal paths.", image: "/ttd-card-coastal-path.webp" },
+              { label: "Pinewoods Walks", href: "/formby-pinewoods", desc: "Pinewoods and coastal paths.", image: "/ttd-card-coastal-path.webp" },
               { label: "Things To Do", href: "/things-to-do", desc: "The full guide to a day in Formby.", image: "/ttd-card-beach.webp" },
-              { label: "About Formby", href: "/about-formby", desc: "Where it is, what it&apos;s like, and why visit.", image: "/about-formby-hero.webp" },
+              { label: "About Formby", href: "/about-formby", desc: "Where it is, what it's like, and why visit.", image: "/about-formby-hero.webp" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="group relative h-40 rounded-2xl overflow-hidden block">
                 <Image src={l.image} alt={l.label} fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 50vw" />

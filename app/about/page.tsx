@@ -107,12 +107,7 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <p className="font-semibold text-[#1C3220] text-lg">Clare: Editor</p>
-                  <div className="flex flex-wrap gap-2 mt-1">
-                    <span className="bg-[#2E6B3E]/10 text-[#2E6B3E] text-xs font-semibold px-2.5 py-0.5 rounded-full border border-[#2E6B3E]/20">Formby Local</span>
-                    <span className="text-gray-400 text-xs flex items-center gap-1">📍 Formby, Merseyside</span>
-                    <span className="text-gray-400 text-xs flex items-center gap-1">👨‍👩‍👧‍👦 Mum of 4</span>
-                    <span className="text-gray-400 text-xs flex items-center gap-1">🌲 15+ years local</span>
-                  </div>
+                  <p className="text-gray-400 text-xs mt-1">Formby, Merseyside</p>
                 </div>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
@@ -132,7 +127,7 @@ export default function AboutPage() {
                   <span className="font-semibold text-[#1C3220]">A note on transparency:</span>{" "}
                   Clare is an editorial voice: a persona built from genuine local knowledge. The
                   real person behind FormbyGuide is Damian Roche of Churchtown Media. All content
-                  reflects real first-hand knowledge of the area. No sponsored editorial, no fluff.
+                  reflects real first-hand knowledge of the area. No sponsored editorial.
                 </p>
               </div>
             </div>

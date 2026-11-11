@@ -84,14 +84,15 @@ export default function PostContent() {
 
         <h2 className="text-2xl font-bold text-[#1C3220] mb-4 mt-10">The Basics: Postcode, Parking, Cost</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
-          The main National Trust car park is at <strong>L37 1YH</strong>. That&apos;s the postcode for your satnav. 
-          Parking is managed by the National Trust and costs around £5-7 depending on how long you stay. 
-          Members park free. Non-members: book through the NT app if you can. Signal in the car park is poor 
-          and queueing to pay on arrival on a busy day is its own special experience.
+          The main National Trust car park is at <strong>L37 1LJ</strong>. That&apos;s the postcode for your satnav. 
+          Parking is managed by the National Trust. Members and Blue Badge holders park free; 
+          everyone else pays at the machine or with the JustPark app. There is no booking. Signal in the car park is poor, 
+          so set up JustPark at home if you want to pay by app, because queueing to pay on arrival on a busy day is its own special experience.
         </p>
         <p className="text-gray-700 leading-relaxed mb-4">
-          There is overflow parking at Lifeboat Road and along Victoria Road in peak periods. Both are 
-          further from the beach but they exist if the main car park is showing as full on the app. 
+          There is a second National Trust car park at Lifeboat Road (L37 2EB), reached by a hard standing path and a boardwalk. 
+          Both car parks are small and fill quickly on sunny days, so the National Trust asks people to come by train if they can. 
+          A payment covers either car park but cannot be moved between them. 
           If you arrive at 9am you will find a space. If you arrive at 12 on a sunny Saturday in July, 
           you will not. This is not a theory, it&apos;s what actually happens.
         </p>
@@ -111,8 +112,8 @@ export default function PostContent() {
         <p className="text-gray-700 leading-relaxed mb-8">
           The other thing to know: rip currents are present at Formby Point. The beach is generally safe 
           for paddling and swimming but the dunes and Point area can have stronger currents. If you&apos;re 
-          not confident in the water, don&apos;t go further than knee depth. There&apos;s no lifeguard service 
-          at Formby. Formby Beach Rescue are volunteers. Swim parallel to shore if you get caught in a 
+          not confident in the water, don&apos;t go further than knee depth. RNLI lifeguards cover Lifeboat Road 
+          from 10am to 6pm in spring and summer during the school holidays. Swim parallel to shore if you get caught in a 
           rip, not against it.
         </p>
 
@@ -155,10 +156,10 @@ export default function PostContent() {
               {[
                 ["Car park", "Yes (National Trust, paid)"],
                 ["Toilets", "At the car park (not on the beach itself)"],
-                ["Cafe", "NT cafe near the car park"],
+                ["Food and drink", "Mobile concessions in the car parks (spring and summer)"],
                 ["Dog water", "Bowls near the entrance"],
                 ["Ice cream", "Seasonal van near car park"],
-                ["Lifeguards", "None (volunteer beach rescue only)"],
+                ["Lifeguards", "RNLI at Lifeboat Road, 10am to 6pm, spring and summer school holidays"],
                 ["Accessibility", "Boardwalk to dune ridge; beach itself is sandy"],
               ].map(([f, a]) => (
                 <tr key={f} className="border-b border-gray-100 even:bg-gray-50">
@@ -189,8 +190,8 @@ export default function PostContent() {
 
         <h2 className="text-2xl font-bold text-[#1C3220] mb-4 mt-10">After the Beach</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
-          The NT cafe does a decent coffee and sandwiches. It&apos;s not cheap but it&apos;s fine and 
-          it&apos;s genuinely convenient. For a proper sit-down lunch after the beach, Formby village 
+          In spring and summer there are mobile food concessions in the car parks, but there is no 
+          year-round National Trust cafe at Formby. For a proper sit-down lunch after the beach, Formby village 
           is about 10 minutes by car. The Sparrowhawk on Liverpool Road is good for a post-walk 
           meal. Left Bank Brasserie on Chapel Lane is the better restaurant option if you want 
           something proper. Book ahead at weekends.
@@ -199,12 +200,12 @@ export default function PostContent() {
         <div className="bg-[#1C3220] text-white rounded-xl p-6 my-10">
           <p className="font-semibold text-lg mb-2">Quick summary for a good day at Formby Beach</p>
           <ul className="space-y-1 text-gray-200 text-sm">
-            <li>Postcode: L37 1YH</li>
-            <li>Book parking on the NT app before you leave home (signal is poor)</li>
+            <li>Postcode: L37 1LJ</li>
+            <li>Set up JustPark at home if you want to pay by app (signal is poor)</li>
             <li>Check tide times. Arrive near low tide for the most beach.</li>
             <li>Walk north from the boardwalk for fewer crowds</li>
             <li>Dogs welcome. Lead through the squirrel section.</li>
-            <li>No lifeguards. Don&apos;t swim in strong currents at Formby Point.</li>
+            <li>Lifeguards only at Lifeboat Road in the school holidays. Don&apos;t swim in strong currents at Formby Point.</li>
           </ul>
         </div>
 

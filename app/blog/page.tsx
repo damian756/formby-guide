@@ -9,7 +9,7 @@ const BASE_URL = "https://www.formbyguide.co.uk";
 
 export const metadata: Metadata = {
   title: "Blog: Local Guides, Tips & Stories from Formby",
-  description: "Discover local stories, seasonal guides, and insider tips for making the most of Formby. Written by locals, for visitors and residents.",
+  description: "Seasonal guides, walks, wildlife and practical tips for visiting Formby, from the FormbyGuide blog.",
   alternates: { canonical: `${BASE_URL}/blog` },
   openGraph: {
     title: "Blog: Local Guides, Tips & Stories from Formby",
@@ -57,7 +57,7 @@ export default function BlogPage() {
             Formby stories.
           </h1>
           <p className="text-white/70 text-sm md:text-base max-w-md">
-            Written by locals who live here. Real tips, honest reviews, and things worth knowing about Formby.
+            Seasonal guides, walks, wildlife and practical tips for a day in Formby.
           </p>
         </div>
       </section>
@@ -73,10 +73,9 @@ export default function BlogPage() {
 
       {/* Coming soon footer */}
       <div className="max-w-6xl mx-auto px-4 pb-16 text-center border-t border-gray-100 pt-12">
-        <span className="text-3xl">✍️</span>
-        <h3 className="font-display text-xl font-bold text-[#1C3220] mt-3 mb-2">More posts coming soon</h3>
+        <h3 className="font-display text-xl font-bold text-[#1C3220] mb-2">Planning a visit?</h3>
         <p className="text-gray-500 text-sm max-w-sm mx-auto">
-          We&rsquo;re adding new local guides every week. From the best spots for families to seasonal tips and honest restaurant reviews.
+          The main guides cover the beach, the pinewoods, parking and where to eat.
         </p>
         <div className="flex justify-center gap-4 mt-5">
           <a

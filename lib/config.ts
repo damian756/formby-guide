@@ -24,5 +24,5 @@ export const SITE = {
   domain: "formbyguide.co.uk",
   url: "https://www.formbyguide.co.uk",
   tagline: "Your complete guide to Formby: beach, pinewoods and village life",
-  description: "Discover the best restaurants, beaches, walks and things to do in Formby. Your local guide to the National Trust pinewoods, red squirrels and the Sefton Coast.",
+  description: "Restaurants, beaches, walks and things to do in Formby. A local guide to the National Trust pinewoods, red squirrels and the Sefton Coast.",
 } as const;

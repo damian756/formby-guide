@@ -79,7 +79,7 @@ export default function PostContent() {
             {[
               { label: "From Liverpool", value: "25 mins" },
               { label: "From Manchester", value: "60–70 mins" },
-              { label: "Parking postcode", value: "L37 1YH" },
+              { label: "Parking postcode", value: "L37 1LJ" },
               { label: "Ideal duration", value: "5–6 hours" },
             ].map(({ label, value }) => (
               <div key={label} className="px-5 py-4 text-center">
@@ -140,9 +140,9 @@ export default function PostContent() {
                   <ul className="space-y-1.5 text-sm text-gray-700">
                     <li className="flex items-start gap-2"><CheckCircle className="w-3.5 h-3.5 text-[#2E6B3E] mt-0.5 shrink-0" /><span>Liverpool → Formby: <strong>30–40 minutes</strong></span></li>
                     <li className="flex items-start gap-2"><CheckCircle className="w-3.5 h-3.5 text-[#2E6B3E] mt-0.5 shrink-0" /><span>Manchester → Formby: <strong>60–70 minutes</strong></span></li>
-                    <li className="flex items-start gap-2"><AlertCircle className="w-3.5 h-3.5 text-amber-500 mt-0.5 shrink-0" /><span>NT car park (L37 1YH): <strong>book via NT app</strong> before leaving</span></li>
+                    <li className="flex items-start gap-2"><AlertCircle className="w-3.5 h-3.5 text-amber-500 mt-0.5 shrink-0" /><span>NT car park (L37 1LJ): <strong>no booking</strong>, pay at the machine or with JustPark</span></li>
                   </ul>
-                  <p className="text-xs text-gray-400 mt-3">Signal at the car park is poor. Download the National Trust app at home.</p>
+                  <p className="text-xs text-gray-400 mt-3">Signal at the car park is poor. Set up JustPark at home if you want to pay by app.</p>
                 </div>
               </div>
             </div>
@@ -153,7 +153,7 @@ export default function PostContent() {
                 <div>
                   <p className="font-bold text-amber-900 text-sm mb-1">If you&apos;re driving from Manchester</p>
                   <p className="text-amber-800 text-sm leading-relaxed">
-                    The M58/A59 via Maghull is usually faster than the M57. Park at the National Trust car park (L37 1YH): about £6–9 via the app. Don&apos;t wait until you arrive to book; the car park can fill by 10am on a sunny weekend.
+                    The M58/A59 via Maghull is usually faster than the M57. Park at the National Trust car park (L37 1LJ): pay at the machine or with the JustPark app (members and Blue Badge holders park free). You cannot book a space, so get there early; the car park can fill by 10am on a sunny weekend.
                   </p>
                 </div>
               </div>
@@ -169,35 +169,30 @@ export default function PostContent() {
                 {
                   time: "9:30–10:00am",
                   title: "Arrive at the National Trust car park",
-                  desc: "Victoria Road, L37 1YH. From the car park, you're already in the pinewoods. Toilets at the car park: use them before you head off.",
+                  desc: "Victoria Road, L37 1LJ. From the car park, you're already in the pinewoods. Toilets at the car park: use them before you head off.",
                   tip: "Arrive early if you can. By 11am on a good day the car park is at capacity.",
-                  emoji: "🅿️",
                 },
                 {
                   time: "10:00am–12:00pm",
                   title: "Walk the red squirrel trail and pinewoods",
                   desc: "The marked trail takes about an hour. Go slow, go quiet, keep noise down. The squirrels are most active in the morning. The walk through the pinewoods to the beach is 15–20 minutes.",
                   tip: "Best squirrel sightings: September to February, early morning.",
-                  emoji: "🌲",
                 },
                 {
                   time: "12:00–2:00pm",
                   title: "Formby Beach",
                   desc: "Wide open sand, massive dunes, Irish Sea views. Bring something to sit on. The beach is enormous: find a quiet spot away from the main path even on busy days.",
                   tip: "Check the tide before you go. High tide at Formby means less beach. Low tide is best.",
-                  emoji: "🏖️",
                 },
                 {
                   time: "2:30–4:00pm",
                   title: "Lunch in the village",
-                  desc: "Drive or taxi from the beach to Formby village: about 10 minutes. Left Bank Brasserie for a proper lunch, Emily's for something more relaxed, NT café if you don't want to move far.",
-                  tip: "If you're on the train and don't want to drive to the village, the NT café at the car park does coffee and hot food.",
-                  emoji: "🍽️",
+                  desc: "Drive or taxi from the beach to Formby village: about 10 minutes. Left Bank Brasserie for a proper lunch, Emily's for something more relaxed, or a mobile food concession in the car park (spring and summer only) if you don't want to move far.",
+                  tip: "If you're on the train and don't want to drive to the village, there are mobile food concessions in the car parks in spring and summer only, so bring a flask and snacks the rest of the year.",
                 },
               ].map((s) => (
                 <div key={s.title} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
                   <div className="flex items-start gap-4">
-                    <div className="text-2xl">{s.emoji}</div>
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
                         <span className="text-[10px] font-bold bg-[#E8EDE6] text-[#2E6B3E] px-2 py-0.5 rounded-full">{s.time}</span>
@@ -232,8 +227,8 @@ export default function PostContent() {
               {[
                 { item: "Layers", note: "Wind off the Irish Sea is real, even in summer." },
                 { item: "Proper shoes", note: "Sandy paths and dune grass: trainers get full of sand." },
-                { item: "NT app downloaded", note: "Book the car park before you leave home. No signal at the gate." },
-                { item: "Flask", note: "Non-negotiable in autumn and winter. The café isn&apos;t always open." },
+                { item: "JustPark set up", note: "Pay at the machine or with the app. There is no booking, and little signal at the gate, so set up the app at home." },
+                { item: "Flask", note: "Non-negotiable in autumn and winter. There is no year-round café at Formby." },
                 { item: "Binoculars", note: "Brilliant for red squirrels and the birdlife on the coastal path." },
                 { item: "Check tide times", note: "Low tide = more beach. High tide = dunes only." },
               ].map(({ item, note }) => (
@@ -249,7 +244,6 @@ export default function PostContent() {
 
             <div className="not-prose bg-[#1C3220] rounded-2xl p-7 text-white my-10">
               <div className="flex items-start gap-4">
-                <div className="text-4xl">🐿️</div>
                 <div>
                   <h3 className="font-display text-xl font-bold mb-2">The Red Squirrels Are the Real Reason to Come</h3>
                   <p className="text-white/70 text-sm leading-relaxed mb-4">

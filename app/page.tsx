@@ -1,12 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
-import { TreePine, Waves, Utensils, Coffee, Beer, ShoppingBag, Bed, Bike, ChevronRight } from "lucide-react";
+import { TreePine, Waves, Utensils, Coffee, Beer, ShoppingBag, Bed, Bike, ChevronRight, Squirrel } from "lucide-react";
 import type { Metadata } from "next";
+import { BLOG_POSTS, getBlogCategory } from "@/lib/blog-posts";
+
+// Newest three posts by date, so the home page never shows last season's posts.
+const LATEST_POSTS = [...BLOG_POSTS]
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  .slice(0, 3);
 
 export const metadata: Metadata = {
   title: "FormbyGuide.co.uk: Your Local Guide to Formby",
   description:
-    "Your definitive guide to Formby: beach, pinewoods, red squirrels, restaurants and things to do on the Sefton Coast. Written by locals, for visitors and residents.",
+    "A local guide to Formby: the beach, the pinewoods, red squirrels, where to eat and things to do on the Sefton Coast.",
   keywords: "Formby, Formby Beach, Formby pinewoods, red squirrels Formby, things to do Formby, restaurants Formby, Sefton Coast",
   alternates: { canonical: "https://www.formbyguide.co.uk" },
   openGraph: {
@@ -27,14 +33,14 @@ export const metadata: Metadata = {
 };
 
 const CATEGORIES = [
-  { slug: "nature-walks",  label: "Nature & Walks",  icon: TreePine,   emoji: "🌲", gradient: "from-[#1C3220] to-[#2E6B3E]", light: "#E8EDE6" },
-  { slug: "beaches",       label: "Beaches",          icon: Waves,      emoji: "🏖️", gradient: "from-[#1C4A5A] to-[#2E7A9A]", light: "#E6EFF5" },
-  { slug: "restaurants",   label: "Restaurants",      icon: Utensils,   emoji: "🍽️", gradient: "from-[#5C1A1A] to-[#8B3A3A]", light: "#F5E8E8" },
-  { slug: "cafes",         label: "Cafes",            icon: Coffee,     emoji: "☕", gradient: "from-[#5C3A1A] to-[#8B6040]", light: "#F5EEE8" },
-  { slug: "pubs",          label: "Pubs & Bars",      icon: Beer,       emoji: "🍺", gradient: "from-[#1A2E5C] to-[#2A4A8B]", light: "#E8EEF5" },
-  { slug: "activities",    label: "Activities",       icon: Bike,       emoji: "🚴", gradient: "from-[#1A5C3A] to-[#2E8B5A]", light: "#E8F5EE" },
-  { slug: "accommodation", label: "Places to Stay",   icon: Bed,        emoji: "🛏️", gradient: "from-[#3A1A5C] to-[#5A2E8B]", light: "#EEE8F5" },
-  { slug: "shopping",      label: "Shopping",         icon: ShoppingBag,emoji: "🛍️", gradient: "from-[#5C1A3A] to-[#8B3A6A]", light: "#F5E8EE" },
+  { slug: "nature-walks",  label: "Nature & Walks",  icon: TreePine,   gradient: "from-[#1C3220] to-[#2E6B3E]", light: "#E8EDE6" },
+  { slug: "beaches",       label: "Beaches",          icon: Waves,      gradient: "from-[#1C4A5A] to-[#2E7A9A]", light: "#E6EFF5" },
+  { slug: "restaurants",   label: "Restaurants",      icon: Utensils,   gradient: "from-[#5C1A1A] to-[#8B3A3A]", light: "#F5E8E8" },
+  { slug: "cafes",         label: "Cafes",            icon: Coffee,     gradient: "from-[#5C3A1A] to-[#8B6040]", light: "#F5EEE8" },
+  { slug: "pubs",          label: "Pubs & Bars",      icon: Beer,       gradient: "from-[#1A2E5C] to-[#2A4A8B]", light: "#E8EEF5" },
+  { slug: "activities",    label: "Activities",       icon: Bike,       gradient: "from-[#1A5C3A] to-[#2E8B5A]", light: "#E8F5EE" },
+  { slug: "accommodation", label: "Places to Stay",   icon: Bed,        gradient: "from-[#3A1A5C] to-[#5A2E8B]", light: "#EEE8F5" },
+  { slug: "shopping",      label: "Shopping",         icon: ShoppingBag,gradient: "from-[#5C1A3A] to-[#8B3A6A]", light: "#F5E8EE" },
 ];
 
 export default function HomePage() {
@@ -108,10 +114,9 @@ export default function HomePage() {
           {/* RIGHT: Content panel */}
           <div className="flex-1 flex flex-col justify-center px-6 py-10 md:px-10 md:py-12">
 
-            <div className="inline-flex items-center gap-2 bg-[#2E6B3E]/40 text-green-300 text-xs font-semibold px-3 py-1.5 rounded-full border border-green-400/25 mb-5 self-start">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse inline-block" />
+            <p className="text-[#C9A96E]/80 text-xs font-semibold uppercase tracking-widest mb-4">
               Formby, Merseyside
-            </div>
+            </p>
 
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 leading-tight">
               Welcome to<br />
@@ -128,12 +133,12 @@ export default function HomePage() {
               className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#C9A96E]/40 rounded-2xl p-4 mb-5 flex items-center gap-4 transition-all self-start w-full max-w-xs"
             >
               <div className="text-center flex-none">
-                <div className="text-4xl leading-none">🐿️</div>
+                <Squirrel className="w-8 h-8 text-[#C9A96E]" aria-hidden="true" />
               </div>
               <div className="w-px h-10 bg-white/10 flex-none" />
               <div className="min-w-0">
                 <div className="text-white font-bold text-sm group-hover:text-[#C9A96E] transition-colors">Red Squirrel Reserve</div>
-                <div className="text-white/50 text-xs mt-0.5">🌲 National Trust · Victoria Road</div>
+                <div className="text-white/50 text-xs mt-0.5">National Trust · Victoria Road</div>
                 <div className="text-[#C9A96E] text-xs mt-1.5">Plan your visit →</div>
               </div>
             </Link>
@@ -143,9 +148,9 @@ export default function HomePage() {
               <p className="text-white/35 text-[10px] uppercase tracking-widest mb-2">Quick links</p>
               <div className="space-y-2">
                 {[
-                  { href: "/formby-beach", label: "Formby Beach", sub: "🏖️ Parking · L37 1YH · Dogs welcome" },
-                  { href: "/formby-pinewoods", label: "Formby Pinewoods", sub: "🌲 Walks · Ancient coastal woodland" },
-                  { href: "/things-to-do", label: "Things To Do", sub: "✅ Full guide to a day in Formby" },
+                  { href: "/formby-beach", label: "Formby Beach", sub: "Parking · L37 1LJ · Dogs welcome" },
+                  { href: "/formby-pinewoods", label: "Formby Pinewoods", sub: "Walks · Pinewoods on the dunes" },
+                  { href: "/things-to-do", label: "Things To Do", sub: "A day in Formby, planned" },
                 ].map((link) => (
                   <Link
                     key={link.href}
@@ -171,7 +176,7 @@ export default function HomePage() {
                   className="group flex flex-col items-center gap-1 bg-white/5 hover:bg-white/10 rounded-xl p-2 transition-all border border-white/5 hover:border-[#C9A96E]/30"
                   title={cat.label}
                 >
-                  <span className="text-lg">{cat.emoji}</span>
+                  <cat.icon className="w-4 h-4 text-white/70 group-hover:text-[#C9A96E] transition-colors" aria-hidden="true" />
                   <span className="text-[9px] text-white/50 group-hover:text-white/80 transition-colors text-center leading-tight">{cat.label.split(" ")[0]}</span>
                 </Link>
               ))}
@@ -186,11 +191,11 @@ export default function HomePage() {
       <section className="bg-[#2E6B3E] text-white">
         <div className="container mx-auto px-4 max-w-7xl py-3">
           <div className="flex flex-wrap gap-x-8 gap-y-1.5 text-sm text-white/80 justify-center md:justify-start">
-            <Link href="/formby-beach#parking" className="hover:text-white hover:underline transition">📍 L37 1YH: NT car park postcode</Link>
-            <Link href="/guides/parking-formby-beach" className="hover:text-white hover:underline transition">🅿️ Parking from £6 via NT app</Link>
-            <span>🐕 Dogs welcome on the beach year-round</span>
-            <Link href="/red-squirrels-formby" className="hover:text-white hover:underline transition">🐿️ Red squirrels: best Sept to Feb</Link>
-            <span>🚆 30 mins from Liverpool Central (Merseyrail)</span>
+            <Link href="/formby-beach#parking" className="hover:text-white hover:underline transition">Victoria Road car park: L37 1LJ</Link>
+            <Link href="/guides/parking-formby-beach" className="hover:text-white hover:underline transition">Pay at the machine or with JustPark</Link>
+            <span>Dogs welcome on the beach year-round</span>
+            <Link href="/red-squirrels-formby" className="hover:text-white hover:underline transition">Red squirrels: best Sept to Feb</Link>
+            <span>Merseyrail trains every 15 minutes</span>
           </div>
         </div>
       </section>
@@ -201,7 +206,7 @@ export default function HomePage() {
       <section className="container mx-auto px-4 max-w-7xl py-14">
         <div className="mb-8">
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-1">Explore Formby</h2>
-          <p className="text-[#1C3220]/50 text-sm">Skip the tourist traps. Here is what you actually need to know.</p>
+          <p className="text-[#1C3220]/50 text-sm">Walks, beaches, places to eat and places to stay.</p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           {CATEGORIES.map((cat) => (
@@ -211,7 +216,7 @@ export default function HomePage() {
               className="group rounded-xl p-5 border border-[#1C3220]/8 card-hover hover:border-[#2E6B3E]/30 transition-all"
               style={{ backgroundColor: cat.light }}
             >
-              <div className="text-3xl mb-3">{cat.emoji}</div>
+              <cat.icon className="w-7 h-7 mb-3 text-[#2E6B3E]" aria-hidden="true" />
               <div className="font-display font-bold text-[#1C3220] text-sm group-hover:text-[#2E6B3E] transition-colors">
                 {cat.label}
               </div>
@@ -227,7 +232,6 @@ export default function HomePage() {
         <div className="container mx-auto px-4 max-w-7xl py-14">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div>
-              <div className="text-4xl mb-3">🐿️</div>
               <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-3">
                 See red squirrels in the wild
               </h2>
@@ -248,15 +252,14 @@ export default function HomePage() {
               <h3 className="font-display font-bold text-[#1C3220] text-lg mb-4">Planning your visit</h3>
               <ul className="space-y-3 text-sm">
                 {[
-                  { icon: "📍", label: "Postcode", val: "L37 1YH (NT Victoria Road car park)" },
-                  { icon: "🅿️", label: "Parking", val: "From £6: book via NT app before you leave. No signal on site." },
-                  { icon: "⏰", label: "Best time", val: "Early morning, September to February" },
-                  { icon: "🐕", label: "Dogs", val: "Welcome: on leads in the squirrel reserve" },
-                  { icon: "🚆", label: "By train", val: "Formby station (Merseyrail) → 20 min walk" },
+                  { label: "Postcode", val: "L37 1LJ (NT Victoria Road car park)" },
+                  { label: "Parking", val: "Pay at the machine or with the JustPark app. National Trust members park free." },
+                  { label: "Best time", val: "Early morning, September to February" },
+                  { label: "Dogs", val: "Welcome. On a lead where signs ask, under close control everywhere." },
+                  { label: "By train", val: "Freshfield station, then west along Victoria Road" },
                 ].map((r) => (
-                  <li key={r.label} className="flex gap-3">
-                    <span className="shrink-0">{r.icon}</span>
-                    <span><strong className="text-[#1C3220]">{r.label}:</strong> <span className="text-[#1C3220]/60">{r.val}</span></span>
+                  <li key={r.label}>
+                    <strong className="text-[#1C3220]">{r.label}:</strong> <span className="text-[#1C3220]/60">{r.val}</span>
                   </li>
                 ))}
               </ul>
@@ -291,7 +294,7 @@ export default function HomePage() {
               className="group bg-white rounded-xl p-5 border border-[#1C3220]/8 card-hover hover:border-[#2E6B3E]/30 transition-all"
             >
               <div className="flex items-start justify-between mb-3">
-                <span className="text-2xl">🍽️</span>
+                <Utensils className="w-5 h-5 text-[#8B3A3A]" aria-hidden="true" />
                 <span className="text-xs font-medium text-[#1C3220]/50 bg-[#E8EDE6] px-2 py-1 rounded">{r.price}</span>
               </div>
               <h3 className="font-display font-bold text-[#1C3220] mb-1 text-sm group-hover:text-[#2E6B3E] transition-colors">
@@ -314,16 +317,16 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
-                emoji: "🏖️",
+                icon: Waves,
                 title: "Formby Beach",
-                desc: "Wide, wild and brilliant. Sand dunes, sea, and dogs welcome year-round. The postcode is L37 1YH: book NT parking before you leave.",
+                desc: "Flat sand below high dunes, and dogs welcome all year. Park at Victoria Road (L37 1LJ) or Lifeboat Road (L37 2EB), or come by train on a sunny day.",
                 href: "/formby-beach",
                 cta: "Beach guide →",
               },
               {
-                emoji: "🌲",
+                icon: TreePine,
                 title: "Formby Pinewoods",
-                desc: "Ancient pinewoods running down to the coast. Walk through them to the beach, or just do the squirrel trail loop: 30 minutes, flat all the way.",
+                desc: "Pinewoods running down to the coast. Walk through them to the beach, or just do the squirrel trail loop: 30 minutes, flat all the way.",
                 href: "/formby-pinewoods",
                 cta: "Pinewoods guide →",
               },
@@ -333,7 +336,7 @@ export default function HomePage() {
                 href={card.href}
                 className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#C9A96E]/30 rounded-2xl p-7 transition-all"
               >
-                <div className="text-4xl mb-3">{card.emoji}</div>
+                <card.icon className="w-8 h-8 mb-3 text-[#C9A96E]" aria-hidden="true" />
                 <h3 className="font-display text-xl font-bold text-white mb-2 group-hover:text-[#C9A96E] transition-colors">{card.title}</h3>
                 <p className="text-white/60 text-sm leading-relaxed mb-4">{card.desc}</p>
                 <span className="text-[#C9A96E] text-sm font-medium">{card.cta}</span>
@@ -350,36 +353,20 @@ export default function HomePage() {
         <div className="flex items-end justify-between mb-8">
           <div>
             <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-1">Local guides & stories</h2>
-            <p className="text-[#1C3220]/50 text-sm">Written by locals, for visitors and residents.</p>
+            <p className="text-[#1C3220]/50 text-sm">The newest posts from the blog.</p>
           </div>
           <Link href="/blog" className="text-sm font-medium text-[#2E6B3E] hover:text-[#1C3220] transition-colors hidden sm:block">
             All posts →
           </Link>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {[
-            {
-              title: "Easter at Formby Beach 2026",
-              excerpt: "How to do Easter weekend at Formby without spending half of it stuck in traffic on Victoria Road.",
-              cat: "Seasonal",
-              image: "/blog-easter-formby.jpg",
-              slug: "easter-at-formby-beach-2026",
-            },
-            {
-              title: "Why Formby Makes a Better Open 2026 Base",
-              excerpt: "Southport is sold out. Formby is 7 minutes by train from Birkdale station. Here's why it works.",
-              cat: "The Open 2026",
-              image: "/blog-formby-open-base.jpg",
-              slug: "formby-open-2026-base",
-            },
-            {
-              title: "Wild Garlic in the Pinewoods. April.",
-              excerpt: "The pinewoods smell different in April. Here's where to find the wild garlic and what to do with it.",
-              cat: "Wildlife",
-              image: "/blog-wild-garlic-pinewoods.jpg",
-              slug: "wild-garlic-formby-pinewoods",
-            },
-          ].map((post) => (
+          {LATEST_POSTS.map((p) => ({
+            title: p.title,
+            excerpt: p.excerpt,
+            cat: getBlogCategory(p.categorySlug)?.label ?? "Blog",
+            image: p.image,
+            slug: p.slug,
+          })).map((post) => (
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}

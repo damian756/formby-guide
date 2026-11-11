@@ -11,29 +11,22 @@ export default function ClareBio() {
         </div>
 
         <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2 flex-wrap mb-1">
+          <div className="mb-1">
             <span className="font-display font-bold text-[#1C3220] text-lg">Clare</span>
-            <span className="bg-[#2E6B3E]/10 text-[#2E6B3E] text-xs font-semibold px-2.5 py-0.5 rounded-full border border-[#2E6B3E]/20">
-              Formby Local
-            </span>
           </div>
-          <p className="text-sm text-gray-600 leading-relaxed mb-3">
+          <p className="text-sm text-gray-600 leading-relaxed">
             Clare has lived in Formby for over fifteen years. Mum of four, she knows every trail,
             tide time, and family-friendly spot on the Sefton Coast: and isn&apos;t shy about telling you
             which ones aren&apos;t worth the bother. She writes for FormbyGuide to share the kind of
             honest, practical tips you&apos;d only get from someone who actually lives here.
           </p>
-          <div className="flex flex-wrap gap-3 text-xs text-gray-500">
-            <span className="flex items-center gap-1">📍 Formby, Merseyside</span>
-            <span className="flex items-center gap-1">👨‍👩‍👧‍👦 Mum of 4</span>
-            <span className="flex items-center gap-1">🌲 15+ years local</span>
-          </div>
         </div>
       </div>
 
       <div className="border-t border-[#2E6B3E]/10 mt-5 pt-4 flex items-center justify-between flex-wrap gap-3">
-        <p className="text-xs text-gray-400 italic">
-          All tips are based on Clare&apos;s personal experience: no sponsored content, no fluff.
+        <p className="text-xs text-gray-400">
+          Clare is FormbyGuide&apos;s editorial voice.{" "}
+          <Link href="/about" className="underline hover:text-[#2E6B3E]">Who writes the site</Link>
         </p>
         <Link
           href="/blog"

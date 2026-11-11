@@ -38,7 +38,7 @@ export default function PostContent() {
       <section className="relative text-white overflow-hidden min-h-[480px] flex items-end">
         <Image
           src="/blog-blackpool-formby-family.jpg"
-          alt="Pine needles and sand on the Formby coastal path — the edge of the pinewoods and the beach"
+          alt="Pine needles and sand on the Formby coastal path: the edge of the pinewoods and the beach"
           fill
           priority
           className="object-cover object-center"
@@ -69,17 +69,17 @@ export default function PostContent() {
 
           <h2>What Blackpool Does Well</h2>
 
-          <p>Blackpool is built for family entertainment at scale. Pleasure Beach, the piers, the arcades, the shows, the trams, the Illuminations in autumn — it&apos;s all designed to keep people occupied for a full day and a full evening. If your kids are teenagers who want rides and something loud to happen, Blackpool is the right call. There&apos;s no equivalent in Formby.</p>
+          <p>Blackpool is built for family entertainment at scale. Pleasure Beach, the piers, the arcades, the shows, the trams, the Illuminations in autumn: it&apos;s all designed to keep people occupied for a full day and a full evening. If your kids are teenagers who want rides and something loud to happen, Blackpool is the right call. There&apos;s no equivalent in Formby.</p>
 
-          <p>Pleasure Beach in particular is genuinely excellent if rides are the point. I took mine when they were old enough to go on the big ones and it was brilliant — chaotic and expensive and exactly what they wanted. The Illuminations (September to November) are worth doing once: the drive or walk along the promenade with everything lit up is impressive in a way that&apos;s hard to replicate.</p>
+          <p>Pleasure Beach in particular is genuinely excellent if rides are the point. I took mine when they were old enough to go on the big ones and it was brilliant: chaotic and expensive and exactly what they wanted. The Illuminations (September to November) are worth doing once: the drive or walk along the promenade with everything lit up is impressive in a way that&apos;s hard to replicate.</p>
 
           <p>Blackpool also has a lot of cheap, cheerful food options that kids are actually happy with. It&apos;s not a food destination in the traditional sense, but if you&apos;re feeding four children after a day on the rides, you&apos;re not going to struggle to find something everyone will eat.</p>
 
           <h2>What Formby Does Well</h2>
 
-          <p>Formby is the opposite of Blackpool in almost every way and that&apos;s the point. The National Trust pinewoods are genuinely beautiful — tall Scots pines, soft sandy paths, and red squirrels if you time it right. The beach behind the dunes is wide, flat and backed by those dunes in a way that gives it a completely different feel from a typical promenade beach. It&apos;s proper outdoor space.</p>
+          <p>Formby is the opposite of Blackpool in almost every way and that&apos;s the point. The National Trust pinewoods are genuinely beautiful: tall Scots pines, soft sandy paths, and red squirrels if you time it right. The beach behind the dunes is wide, flat and backed by those dunes in a way that gives it a completely different feel from a typical promenade beach. It&apos;s proper outdoor space.</p>
 
-          <p>For younger children especially — the ones who are too small for rides but happy exploring — Formby is brilliant. They can roam the pinewoods, run on the beach, look for creatures in the tideline, and be generally outdoors all day without it costing a fortune at the entrance gate. The car park is £6. That&apos;s the main expense.</p>
+          <p>For younger children especially, the ones who are too small for rides but happy exploring, Formby is brilliant. They can roam the pinewoods, run on the beach, look for creatures in the tideline, and be generally outdoors all day without it costing a fortune at the entrance gate. Parking is the main expense, and National Trust members and Blue Badge holders park free.</p>
 
           <p>The red squirrels are a genuine draw. We&apos;ve been countless times and it doesn&apos;t get old. Go early (before 10am), go quietly, and the chances of seeing one close-up are actually pretty good. My kids were more excited about a squirrel appearing three feet away than they were about a lot of things that cost significantly more.</p>
 
@@ -95,14 +95,14 @@ export default function PostContent() {
                   <li>→ Younger children happy exploring</li>
                   <li>→ Red squirrels and wildlife</li>
                   <li>→ A calm day without crowds (outside summer)</li>
-                  <li>→ Cheaper — main cost is the car park</li>
+                  <li>→ Cheaper: main cost is the car park</li>
                   <li>→ Dogs welcome</li>
                 </ul>
               </div>
               <div>
                 <p className="font-semibold text-[#1C4A5A] mb-2">Blackpool is better if you want:</p>
                 <ul className="space-y-1 text-[#1C3220]">
-                  <li>→ Rides — Pleasure Beach is excellent</li>
+                  <li>→ Rides: Pleasure Beach is excellent</li>
                   <li>→ Older kids who want entertainment</li>
                   <li>→ Illuminations (Sept–Nov)</li>
                   <li>→ Full day of structured activity</li>
@@ -120,16 +120,16 @@ export default function PostContent() {
 
           <p>Blackpool to Formby is about 45 minutes by car. In theory you could do a morning at the beach and afternoon at Pleasure Beach, or vice versa, but honestly that&apos;s a very full day and I&apos;d probably just pick one. Each takes a full day to do properly.</p>
 
-          <p>What does make sense is using the two as separate trips in the same area if you&apos;re staying somewhere between them for a few days. Southport is roughly halfway — <Link href="/the-open-2026" className="text-[#2E6B3E] hover:underline">and has The Open Championship in July 2026</Link>, which makes the whole stretch of coast interesting that summer. But that&apos;s a different trip to planning a single day out.</p>
+          <p>What does make sense is using the two as separate trips in the same area if you&apos;re staying somewhere between them for a few days. Southport is roughly halfway, which makes the whole stretch of coast worth a few days. But that&apos;s a different trip to planning a single day out.</p>
 
           <h2>Practical Notes for Formby</h2>
           <ul>
-            <li>National Trust car park on Freshfield Road, L37 1YH. Download the NT app before you leave — the signal in the car park is awful. £6 to park.</li>
+            <li>National Trust car park on Victoria Road, L37 1LJ. Pay at the machines or with the JustPark app (set up an account at home, because the signal in the car park is awful). Members and Blue Badge holders park free.</li>
             <li>Car park fills before 10am on summer Saturdays and bank holidays. Go early or plan to walk from a side street near Freshfield station.</li>
             <li>Tide times: check before you go. Met Office has Formby predictions. Wide beach at low tide, narrow strip at high tide.</li>
             <li>Red squirrel trail: best before 10am, quiet, move slowly. Binoculars useful.</li>
             <li>Dogs welcome at Formby Beach, with seasonal restrictions May to September on certain sections.</li>
-            <li>National Trust cafe on site. Formby village (ten minutes away) has better lunch options if you&apos;re not in a rush.</li>
+            <li>There are mobile food concessions in the car parks in spring and summer only. Formby village (ten minutes away) has better lunch options if you&apos;re not in a rush.</li>
           </ul>
 
         </div>

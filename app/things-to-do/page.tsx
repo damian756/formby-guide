@@ -34,29 +34,26 @@ export const metadata: Metadata = {
 const FEATURED = [
   {
     id: "squirrels",
-    emoji: "🐿️",
     tag: "Nature · National Trust",
     title: "See the red squirrels",
     desc: "Formby is one of the last reliable places in England to see red squirrels in the wild. Go early morning: September to February is peak season, but you've got a decent chance year-round. Even my teenagers stop complaining the minute they spot one.",
     href: "/red-squirrels-formby",
     image: "/squirrels-hero.webp",
     imagePosition: "object-center",
-    practical: ["Postcode: L37 1YH", "Book parking via NT app before you leave", "Go early morning for best sightings", "Dogs welcome on leads"],
+    practical: ["Postcode: L37 1LJ", "No booking: pay at the machine or with JustPark", "Go early morning for best sightings", "Dogs welcome on leads"],
   },
   {
     id: "beach",
-    emoji: "🏖️",
     tag: "Beach · Sand dunes",
     title: "Formby Beach",
     desc: "A proper beach. Wide open sand, dramatic dunes, and the Irish Sea with no theme park attached. Walk through the pinewoods to get there: about 15 minutes from the car park. The moment you come over the dunes is genuinely great.",
     href: "/formby-beach",
     image: "/beach-dunes-new.webp",
     imagePosition: "object-center",
-    practical: ["Same car park as the squirrel reserve (L37 1YH)", "Dogs welcome year-round, no seasonal restrictions", "No lifeguard: check tides before you go", "Best at low to mid tide for walking"],
+    practical: ["Same car park as the squirrel reserve (L37 1LJ)", "Dogs welcome year-round, no seasonal restrictions", "Lifeguards only in spring and summer school holidays, at Lifeboat Road: check tides before you go", "Best at low to mid tide for walking"],
   },
   {
     id: "pinewoods",
-    emoji: "🌲",
     tag: "Walking · Nature",
     title: "Walk the pinewoods",
     desc: "Worth the visit even if you don't see a squirrel. Mature Scots and Corsican pines, quiet paths, the sound of the sea getting closer as you walk west. Short woodland loop (30 mins) or all the way to the beach and back (1.5–2 hrs). Flat the whole way.",
@@ -70,7 +67,6 @@ const FEATURED = [
 const SECONDARY = [
   {
     id: "eat",
-    emoji: "🍽️",
     tag: "Restaurants · Cafes",
     title: "Eat in the village",
     desc: "Formby has a genuinely good restaurant scene for a town this size. Emily's is popular and relaxed, Left Bank Brasserie is a proper treat (book ahead for weekends), Don Luigi does solid Italian, and The Sparrowhawk is reliable for a post-walk lunch.",
@@ -81,7 +77,6 @@ const SECONDARY = [
   },
   {
     id: "cycling",
-    emoji: "🚴",
     tag: "Cycling · Outdoor",
     title: "Cycle the Sefton Coast",
     desc: "The Trans Pennine Trail runs along the coast and is cycle-friendly. Southport to Formby without touching a main road: flat, largely traffic-free, and genuinely pretty. Good for families with older children who can manage a few miles.",
@@ -92,7 +87,6 @@ const SECONDARY = [
   },
   {
     id: "coastal-path",
-    emoji: "🥾",
     tag: "Walking · Coastal",
     title: "Walk the Sefton Coastal Path",
     desc: "The Sefton Coastal Path runs from Waterloo (Liverpool) to Southport: Formby sits roughly in the middle. The stretch between Formby and Ainsdale is particularly good. Flat, exposed, sea views the whole way.",
@@ -103,7 +97,6 @@ const SECONDARY = [
   },
   {
     id: "shopping",
-    emoji: "🛍️",
     tag: "Shopping · Independent",
     title: "Browse the village shops",
     desc: "A decent run of independent shops along Chapel Lane and the surrounding streets. Not a shopping destination in itself but a pleasant browse after lunch. There are good charity shops too if you're a bargain hunter.",
@@ -114,7 +107,6 @@ const SECONDARY = [
   },
   {
     id: "horse-riding",
-    emoji: "🐴",
     tag: "Activities · Outdoors",
     title: "Horse riding on the beach",
     desc: "Horses on Formby and Ainsdale beach are a proper sight: and you can join them. A couple of local stables offer beach and coastal rides, and the wide flat sands make it one of the better horse riding experiences on the north-west coast. You don't need previous experience for the shorter rides.",
@@ -155,8 +147,8 @@ export default function ThingsToDoPage() {
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {[
-                { label: "Postcode",       value: "L37 1YH" },
-                { label: "Parking",        value: "From £6" },
+                { label: "Postcode",       value: "L37 1LJ" },
+                { label: "Parking",        value: "Machine or JustPark" },
                 { label: "Dogs",           value: "Welcome" },
                 { label: "From Liverpool", value: "~25 mins" },
               ].map(({ label, value }) => (
@@ -185,13 +177,13 @@ export default function ThingsToDoPage() {
             </div>
             <div className="flex flex-wrap gap-3 md:flex-none">
               {[
-                { icon: "📍", label: "Postcode", val: "L37 1YH" },
-                { icon: "🅿️", label: "Parking", val: "From £6" },
-                { icon: "🐕", label: "Dogs", val: "Welcome" },
-                { icon: "🚗", label: "From Liverpool", val: "~25 mins" },
-              ].map(({ icon, label, val }) => (
+                { label: "Postcode", val: "L37 1LJ" },
+                { label: "Parking", val: "Machine or JustPark" },
+                { label: "Dogs", val: "Welcome" },
+                { label: "From Liverpool", val: "~25 mins" },
+              ].map(({ label, val }) => (
                 <div key={label} className="bg-white/8 rounded-xl px-4 py-3 border border-white/10 min-w-[110px]">
-                  <div className="text-[10px] text-white/40 uppercase tracking-wider mb-1">{icon} {label}</div>
+                  <div className="text-[10px] text-white/40 uppercase tracking-wider mb-1">{label}</div>
                   <div className="text-sm font-bold text-white">{val}</div>
                 </div>
               ))}
@@ -206,7 +198,7 @@ export default function ThingsToDoPage() {
           <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
             {[...FEATURED, ...SECONDARY].map((t) => (
               <a key={t.id} href={`#${t.id}`} className="text-[#1C3220]/70 hover:text-[#2E6B3E] transition-colors font-medium">
-                {t.emoji} {t.title}
+                {t.title}
               </a>
             ))}
           </div>
@@ -305,7 +297,6 @@ export default function ThingsToDoPage() {
 
         {/* Go Ape partner callout */}
         <div className="mb-16 bg-[#E8EDE6] border border-[#1C3220]/10 rounded-2xl p-7 flex flex-col sm:flex-row items-center gap-6">
-          <div className="text-5xl flex-none">🌳</div>
           <div className="flex-1 text-center sm:text-left">
             <p className="text-[#2E6B3E] text-xs font-bold uppercase tracking-widest mb-1">Activity Partner</p>
             <h3 className="font-display text-xl font-bold text-[#1C3220] mb-2">Go Ape: Treetop Adventure</h3>
@@ -330,10 +321,10 @@ export default function ThingsToDoPage() {
             {[
               { q: "Is Formby worth visiting for a day trip?", a: "Yes, easily. The National Trust site alone gives you the squirrels, the pinewoods and the beach: that's a solid half day. Add lunch in the village and you've got a full day without it feeling forced." },
               { q: "How far is Formby from Liverpool?", a: "About 20–25 minutes by car via the A565. On the Merseyrail Northern Line from Liverpool Central it's about 30 minutes to Formby station." },
-              { q: "Is Formby good for families with young kids?", a: "Yes. The squirrel trail is flat and manageable, the beach is wide and safe (no lifeguard, but the beach itself is calm), and the walk through the pines is short enough. The NT café is on site. Book parking via the NT app first." },
-              { q: "What's free at Formby?", a: "The pinewoods and beach are free to walk in. Parking is charged (free for NT members, from £6 for non-members). The NT café has a small entry fee in peak season: check the NT website." },
+              { q: "Is Formby good for families with young kids?", a: "Yes. The squirrel trail is flat and manageable, the beach is wide (RNLI lifeguards only cover Lifeboat Road in spring and summer school holidays), and the walk through the pines is short enough. There is no café on site, though mobile food concessions run in the car parks in spring and summer. Parking cannot be booked, so go early." },
+              { q: "What's free at Formby?", a: "The pinewoods and beach are free to walk in. Parking is free for NT members and Blue Badge holders; everyone else pays at the machine or with the JustPark app." },
               { q: "Is Formby good for dogs?", a: "Very. Dogs are welcome on the beach year-round, on the pinewood paths, and in the village. The only restriction is leads required in the red squirrel reserve section: it's well-signed. Most village pubs and cafes are dog-friendly too." },
-              { q: "Do you need to book the NT car park?", a: "Yes: and do it before you leave the house. There's no signal in the car park. Download the National Trust app, find Formby, and book ahead. It fills up fast on sunny weekends." },
+              { q: "Do you need to book the NT car park?", a: "No, there is no booking. Pay at the machines (coins or card) or with the JustPark app, and set up a JustPark account at home because there's little signal in the car park. Both car parks are small and fill fast on sunny weekends, so the National Trust asks people to come by train if they can." },
             ].map((faq) => (
               <div key={faq.q} className="bg-white rounded-xl p-5 border border-[#1C3220]/8">
                 <h3 className="font-semibold text-[#1C3220] mb-2 text-sm">{faq.q}</h3>

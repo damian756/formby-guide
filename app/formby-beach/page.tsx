@@ -11,14 +11,14 @@ const BASE_URL = "https://www.formbyguide.co.uk";
 export const metadata: Metadata = {
   title: "Formby Beach: Parking, Postcode, Dogs & Everything Else",
   description:
-    "Everything you need to know about Formby Beach: postcode (L37 1YH), parking prices, dog rules, tide times, facilities and the best times to visit. Written by a local.",
+    "Everything you need to know about Formby Beach: postcode (L37 1LJ), parking, dog rules, tide times, facilities and the best times to visit. Written by a local.",
   keywords:
     "Formby beach, formby beach postcode, parking at formby beach, formby beach car park, formby beach dogs, formby beach national trust, formby sand dunes, formby point",
   alternates: { canonical: `${BASE_URL}/formby-beach` },
   openGraph: {
     title: "Formby Beach: Parking, Postcode, Dogs & Everything Else",
     description:
-      "Postcode, parking prices, dog rules, tide info and what to actually expect. Everything for planning your visit to Formby Beach.",
+      "Postcode, parking, dog rules, tide info and what to actually expect. Everything for planning your visit to Formby Beach.",
     url: `${BASE_URL}/formby-beach`,
     type: "website",
     siteName: "FormbyGuide.co.uk",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Formby Beach: Parking, Postcode, Dogs & Everything Else",
     description:
-      "Postcode, parking prices, dog rules, tide info and what to actually expect. Everything for planning your visit to Formby Beach.",
+      "Postcode, parking, dog rules, tide info and what to actually expect. Everything for planning your visit to Formby Beach.",
   },
 };
 
@@ -40,12 +40,12 @@ const beachJsonLd = {
       "@type": "TouristAttraction",
       "@id": `${BASE_URL}/formby-beach#attraction`,
       name: "Formby Beach",
-      description: "A National Trust managed beach on the Sefton Coast: sand dunes, Formby Point, and the Irish Sea. Postcode L37 1YH.",
+      description: "A National Trust managed beach on the Sefton Coast: sand dunes, Formby Point, and the Irish Sea. Postcode L37 1LJ.",
       url: `${BASE_URL}/formby-beach`,
       geo: { "@type": "GeoCoordinates", latitude: 53.5553, longitude: -3.0886 },
       address: {
         "@type": "PostalAddress",
-        postalCode: "L37 1YH",
+        postalCode: "L37 1LJ",
         addressLocality: "Formby",
         addressRegion: "Merseyside",
         addressCountry: "GB",
@@ -54,7 +54,7 @@ const beachJsonLd = {
       amenityFeature: [
         { "@type": "LocationFeatureSpecification", name: "Car park", value: true },
         { "@type": "LocationFeatureSpecification", name: "Toilets", value: true },
-        { "@type": "LocationFeatureSpecification", name: "Café", value: true },
+        { "@type": "LocationFeatureSpecification", name: "Seasonal food concessions", value: true },
         { "@type": "LocationFeatureSpecification", name: "Dogs allowed", value: true },
       ],
     },
@@ -64,12 +64,12 @@ const beachJsonLd = {
         {
           "@type": "Question",
           name: "What is the postcode for Formby Beach?",
-          acceptedAnswer: { "@type": "Answer", text: "Formby Beach postcode is L37 1YH. Use this for the National Trust car park sat nav." },
+          acceptedAnswer: { "@type": "Answer", text: "Formby Beach postcode is L37 1LJ. Use this for the National Trust car park sat nav." },
         },
         {
           "@type": "Question",
-          name: "How much does parking cost at Formby Beach?",
-          acceptedAnswer: { "@type": "Answer", text: "National Trust car park. NT members park free; non-members pay approximately £6–£8 via the NT app. Download it before you arrive: signal in the car park is unreliable." },
+          name: "How do you pay for parking at Formby Beach?",
+          acceptedAnswer: { "@type": "Answer", text: "National Trust car park. NT members and Blue Badge holders park free. Everyone else pays at the machines (coins or card) or with the JustPark app. The car parks are ticketless, with number-plate cameras, and there is no booking. Signal in the car park is unreliable, so set up a JustPark account before you arrive if you want to pay by app." },
         },
         {
           "@type": "Question",
@@ -79,12 +79,12 @@ const beachJsonLd = {
         {
           "@type": "Question",
           name: "What time does the Formby Beach car park open?",
-          acceptedAnswer: { "@type": "Answer", text: "The National Trust car park opens from around 8am. It fills up quickly on sunny weekends: aim to arrive before 10am in summer." },
+          acceptedAnswer: { "@type": "Answer", text: "Opening hours change with the season, so check the National Trust Formby page before you go. The car park fills up quickly on sunny weekends: aim to arrive before 10am in summer, or come by train." },
         },
         {
           "@type": "Question",
           name: "Are there toilets at Formby Beach?",
-          acceptedAnswer: { "@type": "Answer", text: "Yes, there are public toilets at the National Trust car park. The NT café is also close by." },
+          acceptedAnswer: { "@type": "Answer", text: "Yes, there are public toilets at the National Trust car park. There is no café on site, but mobile food concessions run in the car parks in spring and summer." },
         },
       ],
     },
@@ -125,10 +125,10 @@ export default function FormbyBeachPage() {
             {/* Quick facts grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {[
-                { icon: MapPin, label: "Postcode", value: "L37 1YH" },
-                { icon: Car, label: "Parking", value: "From £6" },
+                { icon: MapPin, label: "Postcode", value: "L37 1LJ" },
+                { icon: Car, label: "Parking", value: "Machine or JustPark" },
                 { icon: Dog, label: "Dogs", value: "Welcome" },
-                { icon: Coffee, label: "Café", value: "On site" },
+                { icon: Coffee, label: "Food", value: "Spring and summer vans" },
               ].map(({ icon: Icon, label, value }) => (
                 <div key={label} className="bg-black/30 backdrop-blur rounded-lg p-3 border border-white/20">
                   <div className="flex items-start gap-2 mb-1">

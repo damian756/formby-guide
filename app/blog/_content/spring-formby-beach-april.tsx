@@ -77,10 +77,10 @@ export default function PostContent() {
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
             {[
-              { label: "Car park opens", value: "April" },
+              { label: "Car parks", value: "Victoria Rd & Lifeboat Rd" },
               { label: "Squirrel activity", value: "High" },
               { label: "Crowd level", value: "Low–Medium" },
-              { label: "Postcode", value: "L37 1YH" },
+              { label: "Postcode", value: "L37 1LJ" },
             ].map(({ label, value }) => (
               <div key={label} className="px-5 py-4 text-center">
                 <p className="text-[#C9A96E] font-bold text-lg">{value}</p>
@@ -100,7 +100,7 @@ export default function PostContent() {
 
           <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">The beach is back</h2>
           <p className="text-[#4A6B5A] leading-relaxed mb-4">
-            The main National Trust car park at Formby Beach (L37 1YH) reopens in April after the winter closure. That sounds like a small detail but it changes the experience significantly: you can park properly, walk through the pinewoods to the beach, and do the full Formby day out without having to figure out alternative parking on Shore Road.
+            Park at the National Trust car park on Victoria Road (L37 1LJ) or Lifeboat Road (L37 2EB), walk through the pinewoods to the beach, and you have the full Formby day out.
           </p>
           <p className="text-[#4A6B5A] leading-relaxed mb-4">
             April beach conditions: cool, often breezy, bright on a good day. The sand is wide and flat at low tide. You won&apos;t be paddling in April unless you&apos;re committed, but the beach is completely usable for walking, kite flying, or letting kids exhaust themselves in the dunes. Bring layers. The wind off the Irish Sea has a genuine edge before May.
@@ -109,7 +109,7 @@ export default function PostContent() {
           <div className="bg-[#F0F7F2] border-l-4 border-[#2E6B3E] rounded-r-lg px-6 py-5 my-8">
             <p className="text-sm font-bold text-[#2E6B3E] uppercase tracking-wide mb-2">Practical</p>
             <p className="text-[#1C3220] leading-relaxed">
-              <strong>National Trust car park:</strong> L37 1YH · Book in advance via the NT app at peak Easter weekend and Bank Holidays: it fills up · April 2026 daily charges apply (NT members free).
+              <strong>National Trust car park:</strong> L37 1LJ · No booking, so go early at peak Easter weekend and Bank Holidays: it fills up · NT members and Blue Badge holders park free; everyone else pays at the machine or with JustPark.
             </p>
           </div>
 
@@ -134,7 +134,7 @@ export default function PostContent() {
             Before Easter weekend, April at Formby is genuinely quiet. Weekday April visits are often just dog walkers and birders. Even at weekends it&apos;s manageable compared to June, July and August when the car park queues start before 10am and the beach is dense with families.
           </p>
           <p className="text-[#4A6B5A] leading-relaxed mb-4">
-            The exception is Easter weekend: that brings a proper crowd. If you&apos;re visiting over the Easter bank holiday, book your parking in advance and go early. An 8am start on Easter Monday is a completely different experience from arriving at noon.
+            The exception is Easter weekend: that brings a proper crowd. If you&apos;re visiting over the Easter bank holiday, go early, as parking cannot be booked, and think about coming by train. An 8am start on Easter Monday is a completely different experience from arriving at noon.
           </p>
 
           <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">What to bring</h2>
@@ -143,7 +143,7 @@ export default function PostContent() {
               "Waterproof layer: April weather on the Sefton Coast is unpredictable. Blue sky and sunshine can become horizontal drizzle in 20 minutes.",
               "Warm mid-layer: the wind off the Irish Sea is cold before May even on sunny days.",
               "Binoculars if you want to do the squirrels properly: they give you distance that doesn't frighten the animals.",
-              "The NT app downloaded and parking pre-booked over bank holidays.",
+              "A JustPark account set up at home if you want to pay by app (parking cannot be booked).",
               "Dogs are welcome on the beach and in the pinewoods: on leads near the squirrel reserve.",
             ].map((item) => (
               <li key={item} className="flex gap-3">

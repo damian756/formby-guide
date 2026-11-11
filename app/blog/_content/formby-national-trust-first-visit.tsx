@@ -13,7 +13,7 @@ export default function PostContent() {
             "@context": "https://schema.org",
             "@type": "Article",
             headline: "Your First Visit to the National Trust at Formby: What to Expect",
-            description: "Planning your first visit to the National Trust at Formby? Clare covers parking, booking, which trails to walk, red squirrel sighting odds in July, and what to bring.",
+            description: "Planning your first visit to the National Trust at Formby? Clare covers parking, which trails to walk, red squirrel sighting odds in July, and what to bring.",
             url: "https://www.formbyguide.co.uk/blog/formby-national-trust-first-visit",
             datePublished: "2026-07-01",
             author: { "@type": "Person", "@id": "https://www.formbyguide.co.uk/about#clare", name: "Clare", url: "https://www.formbyguide.co.uk/about" },
@@ -63,24 +63,24 @@ export default function PostContent() {
             But I have heard from people who drove up, could not work out the parking, left, and wrote it off. That is avoidable. Here is what you actually need to know.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Parking: Book Before You Leave</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Parking: Get There Early</h2>
           <p>
-            The car park is on Victoria Road, Formby (L37 1YH). In July on any day with reasonable weather, it fills before 10am on weekends and by late morning on weekdays. Do not assume you can turn up and find a space.
+            The car park is on Victoria Road, Formby (L37 1LJ). In July on any day with reasonable weather, it fills before 10am on weekends and by late morning on weekdays. Do not assume you can turn up and find a space.
           </p>
           <p>
-            Book via the National Trust app before you set off. It costs around £7 for the day for non-members. NT members park free. Download the app at home where the Wi-Fi works: the signal in the car park lane is not reliable and trying to book while queuing in your car is not the experience you want.
+            There is no booking. The car park is ticketless, with number-plate cameras, and you pay at the machines (coins or card) or with the JustPark app. NT members and Blue Badge holders park free: members scan their card or check in with JustPark, and Blue Badge holders tell the welcome team on arrival. If you want to pay by app, set up your JustPark account at home where the Wi-Fi works: the signal in the car park lane is not reliable. A payment covers either National Trust car park but cannot be moved between them.
           </p>
           <p>
-            If you arrive and the car park is full, there is no organised overflow. You are looking at parking on residential streets further away and walking. It is walkable but annoying. Go early or book ahead.
+            If you arrive and the car park is full, there is no organised overflow. You are looking at parking on residential streets further away and walking. It is walkable but annoying. Go early, or come by train (Merseyrail, every 15 minutes), which is what the National Trust asks people to do if they can.
           </p>
 
           <div className="bg-[#F0F7F2] border border-[#2E6B3E]/20 rounded-lg p-5 my-8">
             <h3 className="font-semibold text-[#2E6B3E] mb-2">The basics</h3>
             <ul className="space-y-1 text-sm text-gray-700 list-disc list-inside">
-              <li>Postcode: L37 1YH (Victoria Road, Formby)</li>
-              <li>Parking: book via the NT app, approx £7/day non-members</li>
-              <li>Booking: essential on summer weekends, strongly advised weekdays</li>
-              <li>Opening: the site is open year round, car park opens at 8am</li>
+              <li>Postcode: L37 1LJ (Victoria Road, Formby)</li>
+              <li>Parking: no booking, pay at the machine or with JustPark; members and Blue Badge holders park free</li>
+              <li>Arrival: early on summer weekends, as the car park fills quickly</li>
+              <li>Opening: hours change with the season, so check the National Trust Formby page before you go</li>
               <li>Dogs: allowed on all trails and the beach year round</li>
               <li>Red squirrel trail: dogs on leads throughout</li>
             </ul>
@@ -108,9 +108,9 @@ export default function PostContent() {
             Be honest with yourself if you are bringing children. If the main goal is a guaranteed squirrel sighting, September or October is the better bet. If the goal is a good day out with a squirrel sighting as a possible bonus, July is fine.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">The Cafe and Food</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Food and Drink</h2>
           <p>
-            The NT cafe is in the car park building. It does coffee, sandwiches, cake, and light lunches. It is not cheap but it is consistently decent and the outdoor seating area is pleasant on a good day. In peak July it has queues from about 11am. Get there before noon or after 2pm.
+            There is no year-round National Trust cafe at Formby. In spring and summer there are mobile food concessions in the car parks, and in peak July they have queues from about 11am. Get there before noon or after 2pm, or bring a picnic.
           </p>
           <p>
             For a proper sit-down meal, Formby village is a 10-minute drive. Left Bank Brasserie is the best option. Book ahead at weekends.

@@ -219,7 +219,7 @@ export default function TheOpen2026Page() {
                 </div>
                 <h3 className="font-semibold text-[#1C3220] text-lg mb-3">Park & Ride</h3>
                 <p className="text-sm text-[#1C3220]/70 leading-relaxed">
-                  Official park-and-ride sites are set up for The Open, confirmed closer to the event by The R&A. Some use the National Trust Formby car park (L37 1YH) as a staging point: check the official Open transportation guide.
+                  Official park-and-ride sites are set up for The Open, confirmed closer to the event by The R&A. Some use the National Trust Formby car park (L37 1LJ) as a staging point: check the official Open transportation guide.
                 </p>
               </div>
             </div>
@@ -265,14 +265,14 @@ export default function TheOpen2026Page() {
               {[
                 {
                   type: "B&Bs & Guesthouses",
-                  desc: "Several good guesthouses in the village, mainly family-run. Clean, comfortable, decent breakfasts. Perfect for early starts: you&apos;re a 5-minute walk from the station.",
-                  tip: "Search LateRooms and Airbnb for Formby specifically. Don&apos;t cast the net too wide or you&apos;ll end up in Liverpool.",
+                  desc: "Several good guesthouses in the village, mainly family-run. Clean, comfortable, decent breakfasts. Perfect for early starts: you're a 5-minute walk from the station.",
+                  tip: "Search LateRooms and Airbnb for Formby specifically. Don't cast the net too wide or you'll end up in Liverpool.",
                   icon: "🏡",
                 },
                 {
                   type: "Self-Catering Cottages",
                   desc: "Holiday lets are worth considering for groups or longer stays. Several properties within easy reach of Formby station. Space to spread out after a day on your feet.",
-                  tip: "Airbnb and VRBO have good Formby options. Whole-property lets let you cook for yourselves: useful if you&apos;re doing the full week.",
+                  tip: "Airbnb and VRBO have good Formby options. Whole-property lets let you cook for yourselves: useful if you're doing the full week.",
                   icon: "🏠",
                 },
               ].map(({ type, desc, tip, icon }) => (
@@ -340,7 +340,7 @@ export default function TheOpen2026Page() {
                 },
                 {
                   name: "The Sparrowhawk",
-                  desc: "Good pub food, decent beer, friendly atmosphere. Gets busy but usually finds space. Good option if you haven&apos;t booked: better odds than a restaurant.",
+                  desc: "Good pub food, decent beer, friendly atmosphere. Gets busy but usually finds space. Good option if you haven't booked: better odds than a restaurant.",
                   vibe: "Pub dinner",
                   book: false,
                 },
@@ -447,7 +447,7 @@ export default function TheOpen2026Page() {
                 },
                 {
                   q: "Is the NT car park used for park and ride during The Open?",
-                  a: "The Formby NT car park (L37 1YH) has been used for park-and-ride in previous Opens at Royal Birkdale. Check the official Open transportation guide for 2026 confirmation.",
+                  a: "The Formby NT car park (L37 1LJ) has been used for park-and-ride in previous Opens at Royal Birkdale. Check the official Open transportation guide for 2026 confirmation.",
                 },
               ].map(({ q, a }) => (
                 <div key={q} className="bg-white rounded-xl p-5 border border-gray-100">

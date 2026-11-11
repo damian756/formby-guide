@@ -93,19 +93,19 @@ export default function PostContent() {
               <p className="lead text-xl text-gray-600 leading-relaxed">
                 Formby Beach is genuinely beautiful. It&apos;s also unpredictable. Here&apos;s what every season actually looks like.
               </p>
-              <h3>🌱 Spring (March – May): windy but beautiful</h3>
+              <h3>Spring (March – May): windy but beautiful</h3>
               <p>Spring is underrated. The crowds haven&apos;t arrived yet, the light in the morning is genuinely gorgeous, and the sand is firm and walkable. Pack layers, go in the morning before it picks up, and you&apos;ll have a brilliant time.</p>
               <p>Afternoon visits in April in particular can be punishing. The wind peaks mid-day and the beach empties fast for a reason.</p>
 
-              <h3>☀️ Summer (June – August): best weather, biggest crowds</h3>
+              <h3>Summer (June – August): best weather, biggest crowds</h3>
               <p>This is peak Formby. The warmest temperatures, calmer wind, and long daylight hours make it genuinely lovely. But it&apos;s also at its busiest. The National Trust car park fills early on sunny weekends. If you&apos;re coming in summer, either arrive before 9:30am or after 2pm.</p>
               <p>Swimming is possible. Irish Sea temperatures in summer are cold but doable. Kids don&apos;t seem to notice.</p>
 
-              <h3>🍂 Autumn (September – November): the local&apos;s favourite</h3>
+              <h3>Autumn (September – November): the local&apos;s favourite</h3>
               <p>September is the best-kept secret on Formby Beach. School&apos;s back. The summer visitors are gone. The weather is still warm enough to not need a heavy coat. The light is extraordinary: low sun on the sand in September morning light is something else. This is when locals actually go.</p>
               <p>October is more unpredictable, and November usually grey. But a clear autumn day at Formby is hard to beat.</p>
 
-              <h3>🌊 Winter (December – February): dramatic but demanding</h3>
+              <h3>Winter (December – February): dramatic but demanding</h3>
               <p>There&apos;s something about a completely empty Formby Beach on a clear January morning that&apos;s genuinely special. If you like dramatic skies and having miles of beach entirely to yourself, winter delivers. Proper kit is non-negotiable. Check the forecast before you go and skip any day with wind over 20mph.</p>
             </div>
 
@@ -124,10 +124,10 @@ export default function PostContent() {
                   <thead>
                     <tr className="bg-[#1C3220] text-white">
                       <th className="text-left px-4 py-3 rounded-tl-xl font-semibold">Item</th>
-                      <th className="text-center px-3 py-3">Spring 🌱</th>
-                      <th className="text-center px-3 py-3">Summer ☀️</th>
-                      <th className="text-center px-3 py-3">Autumn 🍂</th>
-                      <th className="text-center px-3 py-3 rounded-tr-xl">Winter 🌊</th>
+                      <th className="text-center px-3 py-3">Spring</th>
+                      <th className="text-center px-3 py-3">Summer</th>
+                      <th className="text-center px-3 py-3">Autumn</th>
+                      <th className="text-center px-3 py-3 rounded-tr-xl">Winter</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-100 bg-white rounded-b-xl overflow-hidden">
@@ -142,7 +142,7 @@ export default function PostContent() {
                       <tr key={item} className="hover:bg-gray-50">
                         <td className="px-4 py-3 font-medium text-[#1C3220]">{item}</td>
                         {[spring, summer, autumn, winter].map((v, i) => (
-                          <td key={i} className="text-center px-3 py-3 text-lg">{v ? "✅" : "-"}</td>
+                          <td key={i} className="text-center px-3 py-3 text-lg">{v ? "✓" : "-"}</td>
                         ))}
                       </tr>
                     ))}
@@ -190,7 +190,7 @@ export default function PostContent() {
                 </div>
                 <div className="border-t border-gray-100 pt-4">
                   <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Parking</p>
-                  <p className="text-sm text-gray-700 flex items-start gap-1.5"><MapPin className="w-3.5 h-3.5 text-[#2E6B3E] mt-0.5 shrink-0" /><Link href="/guides/parking-formby-beach" className="text-[#2E6B3E] hover:underline">L37 1YH · National Trust parking guide</Link></p>
+                  <p className="text-sm text-gray-700 flex items-start gap-1.5"><MapPin className="w-3.5 h-3.5 text-[#2E6B3E] mt-0.5 shrink-0" /><Link href="/guides/parking-formby-beach" className="text-[#2E6B3E] hover:underline">L37 1LJ · National Trust parking guide</Link></p>
                 </div>
               </div>
             </div>

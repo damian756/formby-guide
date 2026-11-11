@@ -65,8 +65,8 @@ export default function PostContent() {
           <p>Good Friday. Four days. The beach is open, the pinewoods are green, and every family in a thirty-mile radius has had the same idea. Here&apos;s how to do Easter at Formby without spending half of it stuck in traffic on Victoria Road.</p>
 
           <h2>The Car Park Reality</h2>
-          <p>Let&apos;s start here because this is the thing that ruins Easter at Formby for people who don&apos;t plan for it. The National Trust car park at Freshfield Road fills early. On a sunny Easter Saturday I&apos;d say it&apos;s full by 9:30am. On Easter Sunday, possibly earlier. There&apos;s nothing to be done about this except either arrive early or accept you&apos;ll be parking on a side street and walking in.</p>
-          <p>Parking is £6 through the National Trust app. Download it before you leave the house. The signal in the car park is terrible and you will not get the app working in the queue. The app also lets you extend your stay remotely, which is worth knowing if you&apos;re planning a longer afternoon.</p>
+          <p>Let&apos;s start here because this is the thing that ruins Easter at Formby for people who don&apos;t plan for it. The National Trust car park on Victoria Road fills early. On a sunny Easter Saturday I&apos;d say it&apos;s full by 9:30am. On Easter Sunday, possibly earlier. There&apos;s nothing to be done about this except either arrive early or accept you&apos;ll be parking on a side street and walking in.</p>
+          <p>Both National Trust car parks are ticketless, with number-plate cameras. Pay at the machines (coins or card) or with the JustPark app. If you want the app, set up an account at home, because the signal in the car park is terrible. National Trust members and Blue Badge holders park free. There is no booking, and the car parks are small, so on a sunny Easter weekend come by train if you can.</p>
           <p>Side streets around Freshfield station are your backup. Fifteen-minute walk to the beach from there. It&apos;s not bad if you&apos;re prepared for it. Just don&apos;t block anyone&apos;s drive. The residents are reasonably patient on bank holidays but there&apos;s a limit.</p>
 
           <h2>Timing the Red Squirrel Trail</h2>
@@ -79,7 +79,7 @@ export default function PostContent() {
           <p>Tide times matter. Check before you go. Met Office has Formby tidal predictions. Low tide gives you the widest beach and the best conditions for kite flying, games, and generally being on the sand. High tide can push the beach down to a narrow strip near the dunes.</p>
 
           <h2>Eating After</h2>
-          <p>The National Trust cafe at Formby does a decent coffee and reasonable cake. It is not cheap and it will have a queue on Easter Saturday. Worth it if you&apos;re already there, but don&apos;t build your day around it.</p>
+          <p>There are mobile food concessions in the car parks in spring and summer. Bring a flask and a picnic as well, and expect a queue at any van on Easter Saturday.</p>
           <p>Formby village is a ten-minute drive or twenty-minute walk. Left Bank Brasserie on Freshfield Road is the proper sit-down option. Busy at Easter but good. Book if you can. The cafes on Chapel Lane are good for a lighter lunch. If you want something quick and the kids need feeding now, the village has a few options that won&apos;t involve a long wait.</p>
         </div>
 

@@ -50,7 +50,7 @@ export default function PostContent() {
       <section className="relative text-white overflow-hidden min-h-[480px] flex items-end">
         <Image
           src="/pinewoods-hero.webp"
-          alt="Formby pinewoods in late spring — sunlight through the pines, lush green understorey"
+          alt="Formby pinewoods in late spring: sunlight through the pines, lush green understorey"
           fill
           priority
           className="object-cover object-center"
@@ -81,15 +81,15 @@ export default function PostContent() {
 
         <h2 className="font-display text-2xl font-bold text-[#1C3220] mt-10 mb-4">The Beach in May</h2>
         <p className="text-gray-700 leading-relaxed mb-5">
-          May is post-Easter, pre-summer. The school holiday crowds haven&apos;t arrived yet. On a weekday in May, Formby Beach can feel like your own private beach — wide, flat, the dunes greenish-gold with new marram grass, the Irish Sea doing whatever it likes. I&apos;ve walked the full length of the beach in May and counted fewer than 30 people. In August that same walk would put you past several thousand.
+          May is post-Easter, pre-summer. The school holiday crowds haven&apos;t arrived yet. On a weekday in May, Formby Beach can feel like your own private beach: wide, flat, the dunes greenish-gold with new marram grass, the Irish Sea doing whatever it likes. I&apos;ve walked the full length of the beach in May and counted fewer than 30 people. In August that same walk would put you past several thousand.
         </p>
         <p className="text-gray-700 leading-relaxed mb-5">
-          The weather in May is genuinely better than August on average. That sounds counterintuitive. But May gets more sunshine hours and less rain than the summer months in the northwest, and the wind — always present on the coast — is warmer. You&apos;ll still need a layer, but you&apos;re not piling on waterproofs.
+          The weather in May is genuinely better than August on average. That sounds counterintuitive. But May gets more sunshine hours and less rain than the summer months in the northwest, and the wind, always present on the coast, is warmer. You&apos;ll still need a layer, but you&apos;re not piling on waterproofs.
         </p>
         <div className="bg-[#F0F5F1] border-l-4 border-[#2E6B3E] rounded-r-xl px-5 py-4 my-7">
           <p className="text-[#1C3220] font-medium leading-relaxed">
-            <span className="mr-2">📍</span>
-            Formby Beach postcode: L37 1YH (National Trust car park, Formby). Book parking through the NT app in advance at peak weekends.
+            
+            Formby Beach postcode: L37 1LJ (National Trust car park, Formby). Parking cannot be booked: pay at the machine or with the JustPark app, and arrive early at peak weekends.
           </p>
         </div>
 
@@ -104,7 +104,7 @@ export default function PostContent() {
         <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden my-8 border border-gray-100">
           <Image
             src="/pinewoods-deep-woodland.webp"
-            alt="Deep in Formby pinewoods in spring — tall scots pines with green fern understorey"
+            alt="Deep in Formby pinewoods in spring: tall scots pines with green fern understorey"
             fill
             sizes="(max-width: 768px) 100vw, 720px"
             quality={85}
@@ -118,12 +118,12 @@ export default function PostContent() {
           May is one of the most active months for the red squirrels. The breeding season has ended, the young of the year are beginning to emerge, and the adults are busy foraging ahead of summer. You&apos;ll see more movement in May than in mid-summer when the canopy closes and the squirrels move higher into the trees.
         </p>
         <p className="text-gray-700 leading-relaxed mb-5">
-          Early morning is always best — before 10am the squirrels are most active. Walk slowly. Don&apos;t let children run ahead. The squirrels at Formby are used to people but they&apos;re not tame. Stand still for a few minutes in the right area and they&apos;ll carry on as if you&apos;re not there.
+          Early morning is always best: before 10am the squirrels are most active. Walk slowly. Don&apos;t let children run ahead. The squirrels at Formby are used to people but they&apos;re not tame. Stand still for a few minutes in the right area and they&apos;ll carry on as if you&apos;re not there.
         </p>
 
         <h2 className="font-display text-2xl font-bold text-[#1C3220] mt-10 mb-4">The Natterjack Toads</h2>
         <p className="text-gray-700 leading-relaxed mb-5">
-          This is the thing most visitors don&apos;t know about. May is the peak of the natterjack toad calling season at Ainsdale NNR, just south of Formby. The males call at dusk on warm evenings from the dune slack pools — a loud, dry churring sound that carries for several hundred metres. It&apos;s completely unlike anything else you&apos;ll hear in the British countryside.
+          This is the thing most visitors don&apos;t know about. May is the peak of the natterjack toad calling season at Ainsdale NNR, just south of Formby. The males call at dusk on warm evenings from the dune slack pools: a loud, dry churring sound that carries for several hundred metres. It&apos;s completely unlike anything else you&apos;ll hear in the British countryside.
         </p>
         <p className="text-gray-700 leading-relaxed mb-5">
           You can sometimes hear them from the car park on Shore Road on a warm May evening. The Natterjack Toad is Britain&apos;s rarest amphibian, and the Sefton Coast is one of its last significant strongholds. Worth knowing about.
@@ -132,9 +132,9 @@ export default function PostContent() {
         <h2 className="font-display text-2xl font-bold text-[#1C3220] mt-10 mb-4">What to Do on a May Day in Formby</h2>
         <ul className="mb-6 space-y-3">
           {[
-            "Morning: early start at the National Trust red squirrel trail. Before 9am if possible. Car park at L37 1YH.",
+            "Morning: early start at the National Trust red squirrel trail. Before 9am if possible. Car park at L37 1LJ.",
             "Mid-morning: walk through the pinewoods to the beach. The transition from pine shade to open dune is one of the better short walks in the northwest.",
-            "Lunch: back to Formby village. Left Bank Brasserie if you want a proper meal. The NT cafe if you want something quick and don't mind the queue.",
+            "Lunch: back to Formby village. Left Bank Brasserie if you want a proper meal. A mobile food concession in the car park if you want something quick and don't mind the queue (spring and summer only).",
             "Afternoon: beach. Low tide is the time to walk the full length. Check tide tables before you go.",
             "Evening (warm nights): head toward Ainsdale NNR after 8pm and listen for the natterjack toads. You don't need to go far from the road.",
           ].map((item, i) => (
@@ -147,11 +147,11 @@ export default function PostContent() {
 
         <h2 className="font-display text-2xl font-bold text-[#1C3220] mt-10 mb-4">Parking in May</h2>
         <p className="text-gray-700 leading-relaxed mb-5">
-          The National Trust car park gets busy at weekends in May but is rarely at full capacity before 10am. During the week it&apos;s easy. Book through the NT app if you&apos;re coming on a bank holiday weekend to be safe. There&apos;s also parking on Shore Road for Ainsdale if you&apos;re combining both.
+          The National Trust car park gets busy at weekends in May but is rarely at full capacity before 10am. During the week it&apos;s easy. There is no booking, so come early or by train if you&apos;re visiting on a bank holiday weekend. There&apos;s also parking on Shore Road for Ainsdale if you&apos;re combining both.
         </p>
 
         <div className="bg-[#1C3220] text-white rounded-2xl px-6 py-5 my-8">
-          <p className="text-white/80 text-sm mb-3 leading-relaxed">Full guide to visiting Formby Beach — postcode, parking costs, dog rules and what to bring:</p>
+          <p className="text-white/80 text-sm mb-3 leading-relaxed">Full guide to visiting Formby Beach: postcode, parking, dog rules and what to bring:</p>
           <Link href="/formby-beach" className="inline-flex items-center font-bold text-[#C9A96E] hover:text-[#e0ba66] transition-colors text-sm">
             Formby Beach Complete Guide →
           </Link>

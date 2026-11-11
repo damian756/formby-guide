@@ -81,7 +81,7 @@ export default function PostContent() {
             The dunes behind the beach are still green. The marram grass is at its most established in August before the autumn winds start to reshape things. Walking along the top of the dunes gives you views over both the beach and the inland pinewoods that are genuinely worth stopping for.
           </p>
           <p>
-            Parking: still book ahead. The National Trust car park on Victoria Road (L37 1YH) fills before 10am on warm weekends. The NT app is the way to do it. Weekdays in August are noticeably easier than Saturdays. If you have flexibility, a Tuesday morning in August is a very different experience from a Saturday afternoon.
+            Parking: there is no booking, so get there early. The National Trust car park on Victoria Road (L37 1LJ) fills before 10am on warm weekends, and the National Trust asks people to come by train if they can. Pay at the machine or with the JustPark app. Weekdays in August are noticeably easier than Saturdays. If you have flexibility, a Tuesday morning in August is a very different experience from a Saturday afternoon.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Red Squirrels in August</h2>

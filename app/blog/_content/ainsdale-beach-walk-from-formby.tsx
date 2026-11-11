@@ -75,7 +75,7 @@ export default function PostContent() {
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">The Route</h2>
           <p>
-            Start from the National Trust car park on Victoria Road (L37 1YH). Walk the main path through the pinewoods to the beach. Once you hit the open sand, turn left (south) and keep the dunes on your right and the sea on your left.
+            Start from the National Trust car park on Victoria Road (L37 1LJ). Walk the main path through the pinewoods to the beach. Once you hit the open sand, turn left (south) and keep the dunes on your right and the sea on your left.
           </p>
           <p>
             From Formby Point to the southern edge of Ainsdale beach is roughly three miles. The walking is straightforward: flat, open, and firm sand unless you are walking at high tide, in which case the soft sand at the top of the beach is less comfortable. Aim to walk within two hours either side of low tide for the best surface.
@@ -98,7 +98,7 @@ export default function PostContent() {
           <div className="bg-[#F0F7F2] border border-[#2E6B3E]/20 rounded-lg p-5 my-8">
             <h3 className="font-semibold text-[#2E6B3E] mb-2">Walk basics</h3>
             <ul className="space-y-1 text-sm text-gray-700 list-disc list-inside">
-              <li>Start: NT car park, Victoria Road, Formby (L37 1YH)</li>
+              <li>Start: NT car park, Victoria Road, Formby (L37 1LJ)</li>
               <li>End: Ainsdale beach car park, Shore Road (PR8 2QB)</li>
               <li>Distance: approximately 3 miles one way</li>
               <li>Time: 60 to 90 minutes at a steady pace one way</li>

@@ -90,7 +90,7 @@ export default function PostContent() {
               The red squirrel reserve managed by the National Trust is the obvious starting point. The pine trees along the main path from the car park to the beach are productive. Squirrels tend to use the lower branches of pines to forage, which makes them visible at eye level rather than high in the canopy.
             </p>
             <p>
-              The feeder areas set up by the NT give you the best odds of a sighting if you are prepared to stand still and wait for five to ten minutes. Look for movement in the lower canopy and listen: squirrels make a distinctive chattering noise when they are alert to something.
+              Stand still and wait for five to ten minutes. Look for movement in the lower canopy and listen: squirrels make a distinctive chattering noise when they are alert to something.
             </p>
             <p>
               The quieter paths away from the main route to the beach can be productive. If the main path is busy, take a side trail and go slowly.
@@ -114,10 +114,10 @@ export default function PostContent() {
               <ul className="text-sm text-gray-700 space-y-1 list-disc list-inside">
                 <li>Arrive before 9am for the best chance</li>
                 <li>Go slowly and quietly on the forest paths</li>
-                <li>Look at feeder areas and low pine branches first</li>
+                <li>Look at low pine branches first</li>
                 <li>Dogs on leads throughout the reserve</li>
                 <li>Young squirrels are less cautious than adults</li>
-                <li>Car park postcode: L37 1YH</li>
+                <li>Car park postcode: L37 1LJ</li>
               </ul>
             </div>
 
@@ -136,7 +136,7 @@ export default function PostContent() {
               <h3 className="font-bold text-[#1C3220] mb-3">Quick Facts</h3>
               <dl className="text-sm space-y-2">
                 <div><dt className="font-semibold text-gray-500">Best time</dt><dd>Before 9am</dd></div>
-                <div><dt className="font-semibold text-gray-500">Postcode</dt><dd>L37 1YH</dd></div>
+                <div><dt className="font-semibold text-gray-500">Postcode</dt><dd>L37 1LJ</dd></div>
                 <div><dt className="font-semibold text-gray-500">Dogs</dt><dd>On leads in reserve</dd></div>
                 <div><dt className="font-semibold text-gray-500">June advantage</dt><dd>Young squirrels, lower crowds</dd></div>
               </dl>

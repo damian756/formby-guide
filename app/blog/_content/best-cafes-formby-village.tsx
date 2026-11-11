@@ -13,7 +13,7 @@ export default function PostContent() {
             "@context": "https://schema.org",
             "@type": "Article",
             headline: "Best Cafes in Formby Village: Where to Eat, Drink and Sit Down",
-            description: "The honest guide to cafes in Formby village: which ones are worth it, what to order, and where to go after the beach. From the NT cafe to village independents.",
+            description: "The honest guide to cafes in Formby village: which ones are worth it, what to order, and where to go after the beach. From village independents to what to expect at the beach.",
             url: "https://www.formbyguide.co.uk/blog/best-cafes-formby-village",
             author: { "@type": "Person", "@id": "https://www.formbyguide.co.uk/about#clare", name: "Clare", url: "https://www.formbyguide.co.uk/about" },
             publisher: { "@type": "Organization", "@id": "https://www.churchtownmedia.co.uk/#organization", name: "Churchtown Media", url: "https://www.churchtownmedia.co.uk" },
@@ -77,21 +77,21 @@ export default function PostContent() {
         <div className="prose prose-lg prose-slate max-w-none">
 
           <p className="text-xl text-[#1C3220] font-medium leading-relaxed mb-8">
-            Formby village isn&apos;t exactly overflowing with cafes: but what it has is worth knowing about. A handful of independents that do a decent job, the National Trust cafe if you&apos;re already at the beach, and enough options that you won&apos;t be stuck with a petrol station coffee after a morning walk. Here&apos;s the honest breakdown.
+            Formby village isn&apos;t exactly overflowing with cafes: but what it has is worth knowing about. A handful of independents that do a decent job, a mobile food concession at the beach car parks in spring and summer, and enough options that you won&apos;t be stuck with a petrol station coffee after a morning walk. Here&apos;s the honest breakdown.
           </p>
 
-          <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">The National Trust Cafe at Formby Beach</h2>
+          <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">Food and Drink at Formby Beach</h2>
           <p className="text-[#4A6B5A] leading-relaxed mb-4">
-            If you&apos;re visiting the beach and pinewoods, the NT cafe is the obvious choice. It&apos;s at the end of the car park, right at the start of the squirrel trail. The coffee is decent, the cake is good (the cake changes but it&apos;s reliably proper home-baked rather than packaged), and it&apos;s open from when the car park opens in April through to the end of the season.
+            There is no year-round National Trust cafe at Formby. In spring and summer there are mobile food concessions in the car parks, so you can get a hot drink or a snack at the start of the squirrel trail. Outside those seasons, bring a flask.
           </p>
           <p className="text-[#4A6B5A] leading-relaxed mb-4">
-            It&apos;s not cheap: NT catering never is: but you&apos;re paying for a cup of coffee with a view of the pinewoods and the knowledge that the money goes back into the estate. Worth it. Dogs are welcome outside.
+            If you want a proper sit-down coffee or lunch, the village is the better bet.
           </p>
 
           <div className="bg-[#F0F7F2] border-l-4 border-[#2E6B3E] rounded-r-lg px-6 py-5 my-8">
             <p className="text-sm font-bold text-[#2E6B3E] uppercase tracking-wide mb-2">Practical</p>
             <p className="text-[#1C3220] leading-relaxed">
-              <strong>NT Cafe:</strong> L37 1YH · Open April–October during car park hours · Hot drinks, cakes, light lunches · Outside seating, dogs welcome.
+              <strong>Beach food:</strong> L37 1LJ · Mobile concessions in the car parks, spring and summer only · No year-round National Trust cafe.
             </p>
           </div>
 
@@ -113,12 +113,12 @@ export default function PostContent() {
 
           <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">After the beach: what actually works</h2>
           <p className="text-[#4A6B5A] leading-relaxed mb-4">
-            The pattern that works well: arrive early, beach first, then drive to the village for lunch rather than trying to eat at the NT cafe when it&apos;s busy at 1pm. The village is five minutes by car and has more options. It also separates the sandy, soggy post-beach phase from the clean, warm lunch phase, which is better for everyone.
+            The pattern that works well: arrive early, beach first, then drive to the village for lunch rather than queuing at a food van in the car park at 1pm. The village is five minutes by car and has more options. It also separates the sandy, soggy post-beach phase from the clean, warm lunch phase, which is better for everyone.
           </p>
 
           <ul className="space-y-2 text-[#4A6B5A] my-4">
             {[
-              "NT Cafe: best for coffee and cake while you're at the beach estate.",
+              "Beach car park concessions: spring and summer only, so bring a flask the rest of the year.",
               "Village cafes: best for a sit-down coffee, mid-morning, before or after the beach.",
               "Village restaurants (Left Bank, Emily's): best for a proper brunch or lunch, with a booking.",
               "Most cafes close by 4–5pm. Don't plan a late afternoon coffee stop without checking first.",

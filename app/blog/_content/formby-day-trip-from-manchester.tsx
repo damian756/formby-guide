@@ -101,7 +101,7 @@ export default function PostContent() {
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">From Formby Station</h2>
           <p>
-            Formby station is in Formby village, about 15 minutes walk from the National Trust car park on Victoria Road, or a short taxi ride. Taxis are available outside the station. The walk through the village is pleasant and gives you a sense of the place before you reach the reserve.
+            Formby station is the nearest station to the National Trust&apos;s Lifeboat Road car park (L37 2EB), from which a hard standing path and a boardwalk lead to the beach. Freshfield station is nearest to the Victoria Road car park (L37 1LJ). A short taxi ride also works, and taxis are available outside Formby station. The walk through the village is pleasant and gives you a sense of the place before you reach the reserve.
           </p>
           <p>
             If you are planning to spend the day at the NT reserve and beach, the taxi is the practical choice. If you want to include the village for lunch on the way back, the walk works well in both directions.
@@ -120,7 +120,7 @@ export default function PostContent() {
             The village has several good options. Left Bank Brasserie is the special occasion choice: proper cooking, worth booking ahead at weekends. The Sparrowhawk is a reliable pub with good food and a beer garden that works on a September afternoon. For something more casual, the cafes on Chapel Lane cover coffee and lunch well.
           </p>
           <p>
-            There is a seasonal cafe at the NT car park for a post-walk coffee, but it is not always open in September. Do not rely on it without checking ahead.
+            Mobile food concessions in the car parks run in spring and summer only, so do not rely on one for a post-walk coffee in September. Bring a flask.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Is It Worth It?</h2>
@@ -135,10 +135,10 @@ export default function PostContent() {
           <ul className="space-y-3 list-none pl-0">
             {[
               ["Journey time", "75-90 minutes from central Manchester. One change at Liverpool."],
-              ["NT car park", "Victoria Road, Formby, L37 1YH. Book via NT app. Taxi from station: 5 minutes, around £5-7."],
+              ["NT car park", "Victoria Road, Formby, L37 1LJ. No booking: pay at the machine or with JustPark. Taxi from station: 5 minutes, around £5-7."],
               ["Best time to arrive", "Before 10am to walk the squirrel trail while it is quiet."],
               ["Return train", "Check Merseyrail timetable. Trains from Formby to Liverpool Central run every 15-20 minutes."],
-              ["October half term note", "Half term week (26-30 Oct) is busier. The car park fills earlier on days with good weather. Go early or book parking in advance."],
+              ["October half term note", "Half term week (26-30 Oct) is busier. The car park fills earlier on days with good weather. Go early or come by train, as parking cannot be booked."],
             ].map(([item, detail]) => (
               <li key={item} className="flex gap-3">
                 <span className="text-[#2E6B3E] font-bold flex-none">→</span>

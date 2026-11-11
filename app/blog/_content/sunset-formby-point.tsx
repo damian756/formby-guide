@@ -79,7 +79,7 @@ export default function PostContent() {
 
             <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">Where to Stand</h2>
             <p>
-              Walk through the pinewoods from the National Trust car park (L37 1YH) and head for the dune crest rather than going straight down to the waterline. The view from the top of the dunes looking west across the beach is where you want to be.
+              Walk through the pinewoods from the National Trust car park (L37 1LJ) and head for the dune crest rather than going straight down to the waterline. The view from the top of the dunes looking west across the beach is where you want to be.
             </p>
             <p>
               The dune crest to the south of the main beach access path gives you a wider view with the sand stretching away in both directions. This is the best position for photography and for just watching. The dunes shelter you from any easterly wind and the drop down to the beach means you have unobstructed horizon.
@@ -98,7 +98,7 @@ export default function PostContent() {
 
             <h2 className="text-2xl font-bold text-[#1C3220] mt-10 mb-4">Practical Notes</h2>
             <p>
-              The National Trust car park closes at a set time in the evening. Check the current closing time on the NT website before you go. In summer it tends to be 9pm or 9.30pm. If you want to stay for the full sunset you need to time your arrival and departure accordingly or the gate will be locked.
+              The National Trust car park closes at a set time in the evening. Opening hours change with the season, so check the current closing time on the NT website before you go. If you want to stay for the full sunset you need to time your arrival and departure accordingly or the gate will be locked.
             </p>
             <p>
               Bring a layer. Even on warm days the dune crest gets a breeze in the evening and it cools quickly once the sun drops below the horizon. Sandflies can be active around dusk near the vegetation. Move slightly away from the dune base if they are a problem.
@@ -110,7 +110,7 @@ export default function PostContent() {
                 <li>Sunset: around 9.20-9.35pm through June</li>
                 <li>Golden hour starts: around 8.15-8.30pm</li>
                 <li>Best arrival: 7.30-8pm for the full evening light</li>
-                <li>Car park postcode: L37 1YH</li>
+                <li>Car park postcode: L37 1LJ</li>
                 <li>Check NT car park closing time before you go</li>
               </ul>
             </div>
@@ -137,7 +137,7 @@ export default function PostContent() {
             <div className="bg-white rounded-xl border border-gray-100 p-5 shadow-sm">
               <h3 className="font-bold text-[#1C3220] mb-3">Quick Reference</h3>
               <dl className="text-sm space-y-2">
-                <div><dt className="font-semibold text-gray-500">Postcode</dt><dd>L37 1YH</dd></div>
+                <div><dt className="font-semibold text-gray-500">Postcode</dt><dd>L37 1LJ</dd></div>
                 <div><dt className="font-semibold text-gray-500">Best time</dt><dd>7.30-8pm in June</dd></div>
                 <div><dt className="font-semibold text-gray-500">Sunset (June)</dt><dd>9.20-9.35pm</dd></div>
                 <div><dt className="font-semibold text-gray-500">Dogs</dt><dd>Welcome, leads in pinewoods</dd></div>

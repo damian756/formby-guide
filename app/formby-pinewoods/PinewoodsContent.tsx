@@ -8,7 +8,7 @@ import "yet-another-react-lightbox/styles.css";
 
 const GALLERY = [
   // Existing photo break images (used by labeled buttons)
-  { src: "/pinewoods-deep-woodland.webp",  alt: "Deep inside Formby pinewoods: ancient coastal pine woodland" },
+  { src: "/pinewoods-deep-woodland.webp",  alt: "Deep inside Formby pinewoods: tall coastal pines" },
   { src: "/pinewoods-trail-sign.webp",     alt: "No horses signpost on Formby pinewoods trail" },
   { src: "/pinewoods-tall-tree.webp",      alt: "Tall Scots pine in Formby pinewoods" },
   { src: "/pinewoods-sandfield-farm.webp", alt: "Sandfield Farm heritage sign in the Formby pinewoods" },
@@ -40,7 +40,6 @@ const WHY_VISIT = [
 
 const TRAILS = [
   {
-    emoji: "🚶",
     name: "Squirrel Trail (short)",
     time: "30–45 minutes",
     level: "Easy",
@@ -51,7 +50,6 @@ const TRAILS = [
     galleryIdx: 11,
   },
   {
-    emoji: "🏖️",
     name: "Pinewoods to Beach",
     time: "1.5–2 hours return",
     level: "Easy",
@@ -62,7 +60,6 @@ const TRAILS = [
     galleryIdx: 12,
   },
   {
-    emoji: "🌊",
     name: "Full Sefton Coastal Path",
     time: "2.5–3.5 hours",
     level: "Easy–Moderate",
@@ -153,7 +150,7 @@ export default function PinewoodsContent() {
         >
           <Image
             src="/pinewoods-deep-woodland.webp"
-            alt="Deep inside Formby pinewoods: ancient coastal pine woodland"
+            alt="Deep inside Formby pinewoods: tall coastal pines"
             fill
             className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
             sizes="100vw"
@@ -188,9 +185,9 @@ export default function PinewoodsContent() {
                     <h3 className="font-semibold text-[#1C3220] text-lg">{name}</h3>
                     <span className="text-xs font-medium text-[#2E6B3E] bg-[#E8EDE6] px-2.5 py-1 rounded-full ml-2 whitespace-nowrap">{level}</span>
                   </div>
-                  <p className="text-sm text-[#1C3220]/60 mb-2">⏱️ {time}</p>
+                  <p className="text-sm text-[#1C3220]/60 mb-2">{time}</p>
                   <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-3 flex-1">{desc}</p>
-                  <p className="text-xs text-[#2E6B3E] font-medium">💡 {tip}</p>
+                  <p className="text-xs text-[#2E6B3E] font-medium">Tip: {tip}</p>
                 </div>
               </div>
             ))}
@@ -226,7 +223,7 @@ export default function PinewoodsContent() {
               >
                 <Image src="/blog-card-wildlife.webp" alt="Red squirrel in Formby pinewoods" fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                <p className="absolute bottom-3 left-4 text-white font-bold drop-shadow">🐿️ Red Squirrels</p>
+                <p className="absolute bottom-3 left-4 text-white font-bold drop-shadow">Red Squirrels</p>
                 <span className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition bg-black/70 text-white text-xs font-medium px-2 py-1 rounded-lg">Enlarge</span>
               </button>
               <div className="p-5">
@@ -245,7 +242,7 @@ export default function PinewoodsContent() {
               >
                 <Image src="/pinewoods-card-birds.webp" alt="Crossbill birds in Formby pinewoods" fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                <p className="absolute bottom-3 left-4 text-white font-bold drop-shadow">🦅 Birdlife</p>
+                <p className="absolute bottom-3 left-4 text-white font-bold drop-shadow">Birdlife</p>
                 <span className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition bg-black/70 text-white text-xs font-medium px-2 py-1 rounded-lg">Enlarge</span>
               </button>
               <div className="p-5">
@@ -269,11 +266,11 @@ export default function PinewoodsContent() {
                 >
                   <Image src="/pinewoods-fungus-moss.webp" alt="Fungi and moss growing on a fallen log in Formby pinewoods" fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent md:bg-none" />
-                  <p className="absolute bottom-3 left-4 text-white font-bold drop-shadow md:hidden">🍄 Fungi & Lichen</p>
+                  <p className="absolute bottom-3 left-4 text-white font-bold drop-shadow md:hidden">Fungi & Lichen</p>
                   <span className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition bg-black/70 text-white text-xs font-medium px-2 py-1 rounded-lg">Enlarge</span>
                 </button>
                 <div className="p-5 flex flex-col justify-center">
-                  <p className="font-bold text-[#1C3220] mb-2">🍄 Fungi & Lichen</p>
+                  <p className="font-bold text-[#1C3220] mb-2">Fungi & Lichen</p>
                   <p className="text-sm text-[#1C3220]/70 leading-relaxed mb-2">Ancient woodland indicator species: the variety of fungi and lichen here tells you something about how long this woodland has been established. Best seen in autumn after rain, on fallen logs and the pine floor. Completely underrated.</p>
                   <p className="text-xs text-[#1C3220]/50 italic">October and November are peak fungus season.</p>
                 </div>
@@ -348,12 +345,12 @@ export default function PinewoodsContent() {
           </button>
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { label: "Address",        value: "Victoria Road, Formby, L37 1YH" },
-              { label: "Opening",        value: "Year-round, dawn to dusk" },
-              { label: "Parking",        value: "NT car park. Book via app before leaving. £6 non-members." },
+              { label: "Address",        value: "Victoria Road, Formby, L37 1LJ" },
+              { label: "Opening",        value: "Car park and toilet hours change with the season. Check the National Trust page before you go." },
+              { label: "Parking",        value: "NT car park, no booking. Pay at the machine or with JustPark. Members and Blue Badge holders park free." },
               { label: "Dogs",           value: "Welcome throughout. Leads required in squirrel reserve (signed)." },
               { label: "Pushchairs",     value: "Main paths manageable on dry days. Sandy sections near dunes are difficult." },
-              { label: "Café & Toilets", value: "NT café at visitor point. Toilets & baby changing available." },
+              { label: "Food & Toilets", value: "Food and drink vans in spring and summer only. Toilets and baby changing at the car park." },
             ].map(({ label, value }) => (
               <div key={label} className="bg-[#E8EDE6] rounded-xl p-4 border border-[#1C3220]/10">
                 <p className="text-xs font-semibold text-[#1C3220]/60 uppercase tracking-wider mb-1">{label}</p>
@@ -367,24 +364,22 @@ export default function PinewoodsContent() {
         <section className="mt-16 pt-12 border-t border-[#1C3220]/10 mb-16">
           <h3 className="font-display text-2xl font-bold text-[#1C3220] mb-2">Where to Eat After Your Walk</h3>
           <p className="text-[#1C3220]/60 text-sm mb-6 leading-relaxed">
-            The NT café is right at the car park. For something more substantial, the village is 10 minutes away: and The Sparrowhawk is perfect for a post-walk meal with dogs.
+            In spring and summer there are food and drink vans in the car park. For something more substantial, the village is 10 minutes away by car.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-5">
             {[
               {
-                name: "NT Café",
-                href: "/cafes",
-                tag: "On site",
+                name: "Car park food vans",
+                href: "/formby-beach#facilities",
+                tag: "Spring & summer",
                 tagColor: "bg-[#2E6B3E] text-white",
-                emoji: "☕",
-                desc: "At the car park entrance. Coffee, cake, soup. Dogs welcome in the outdoor seating area. Good post-walk pit stop.",
+                desc: "Mobile food and drink concessions in the NT car park during spring and summer. Nothing in autumn and winter, so bring a flask.",
               },
               {
                 name: "The Sparrowhawk",
                 href: "/restaurants/the-sparrowhawk-formby",
                 tag: "Dog-friendly",
                 tagColor: "bg-amber-500 text-white",
-                emoji: "🍺",
                 desc: "Gastropub in the village, 10 minutes by car. Dog-friendly, beer garden in summer. The obvious choice if you haven't booked anywhere.",
               },
               {
@@ -392,7 +387,6 @@ export default function PinewoodsContent() {
                 href: "/restaurants",
                 tag: "Local favourite",
                 tagColor: "bg-[#1C3220] text-white",
-                emoji: "🍽️",
                 desc: "Formby's most-loved neighbourhood restaurant. Good food, relaxed, reasonable prices. Book ahead at weekends.",
               },
               {
@@ -400,7 +394,6 @@ export default function PinewoodsContent() {
                 href: "/restaurants",
                 tag: "Best overall",
                 tagColor: "bg-[#C9A96E] text-[#1C3220]",
-                emoji: "🥂",
                 desc: "If the walk is the occasion, make the meal match it. The best restaurant in Formby: book at least a week ahead at weekends.",
               },
             ].map((r) => (
@@ -411,7 +404,6 @@ export default function PinewoodsContent() {
               >
                 <div className="flex items-start justify-between gap-2 mb-2">
                   <div className="flex items-center gap-2">
-                    <span className="text-xl">{r.emoji}</span>
                     <h4 className="font-display font-bold text-[#1C3220] text-base group-hover:text-[#2E6B3E] transition-colors">{r.name}</h4>
                   </div>
                   <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full flex-none ${r.tagColor}`}>{r.tag}</span>

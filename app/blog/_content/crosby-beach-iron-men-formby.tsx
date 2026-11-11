@@ -109,7 +109,6 @@ export default function PostContent() {
             {/* What are the Iron Men */}
             <div className="not-prose my-10 bg-[#1C3220] rounded-2xl p-7 text-white">
               <div className="flex items-start gap-4">
-                <div className="text-4xl">🗿</div>
                 <div>
                   <h3 className="font-display text-xl font-bold mb-2">What are the Iron Men?</h3>
                   <p className="text-white/70 text-sm leading-relaxed mb-3">
@@ -164,7 +163,7 @@ export default function PostContent() {
             <div className="not-prose my-8 bg-[#E8EDE6] rounded-2xl p-6 border-l-4 border-[#2E6B3E]">
               <p className="font-bold text-[#1C3220] mb-2">Parking is free</p>
               <p className="text-[#1C3220]/70 text-sm leading-relaxed">
-                Parking at Crosby Beach is free: unlike Formby where you&apos;re paying for the NT car park. Street parking on Mariners Road, or the dedicated car park off Hall Road. Neither is especially large so arrive before 10am on a sunny weekend.
+                Parking at Crosby Beach is free: unlike Formby, where the NT car parks are free only for members and Blue Badge holders. Street parking on Mariners Road, or the dedicated car park off Hall Road. Neither is especially large so arrive before 10am on a sunny weekend.
               </p>
             </div>
 
@@ -181,30 +180,25 @@ export default function PostContent() {
                   time: "9:00–10:00am",
                   title: "Formby Pinewoods: red squirrel trail",
                   desc: "Start here while the light is good and before the car park fills. Walk the squirrel trail, then through the dunes to the beach.",
-                  emoji: "🌲",
                 },
                 {
                   time: "10:00am–12:30pm",
                   title: "Formby Beach",
                   desc: "Wide sand, sea, dunes. Bring a flask. Kids can be here for hours. Find a quiet spot away from the main path access.",
-                  emoji: "🏖️",
                 },
                 {
                   time: "1:00–1:30pm",
-                  title: "Lunch: village or NT café",
-                  desc: "Drive into Formby village for a proper lunch at Emily's or The Sparrowhawk, or grab something at the NT café if you want to keep moving.",
-                  emoji: "🍽️",
+                  title: "Lunch: village or car park food van",
+                  desc: "Drive into Formby village for a proper lunch at Emily's or The Sparrowhawk, or grab something from a mobile food concession in the car park (spring and summer only) if you want to keep moving.",
                 },
                 {
                   time: "2:30–4:30pm",
                   title: "Crosby Beach: the Iron Men",
                   desc: "Aim to arrive 1–2 hours before low tide. Walk south from the car park to find the first figures: then keep walking. The ones further out are covered in barnacles and far more dramatic.",
-                  emoji: "🗿",
                 },
               ].map((s) => (
                 <div key={s.title} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
                   <div className="flex items-start gap-4">
-                    <div className="text-2xl">{s.emoji}</div>
                     <div className="flex-1">
                       <div className="mb-1">
                         <span className="text-[10px] font-bold bg-[#E8EDE6] text-[#2E6B3E] px-2 py-0.5 rounded-full">{s.time}</span>
@@ -228,7 +222,7 @@ export default function PostContent() {
                 { item: "Camera", note: "The figures are genuinely photogenic in interesting light. Go for it." },
                 { item: "Dogs welcome", note: "Dogs are allowed on Crosby Beach year-round. No seasonal restrictions." },
                 { item: "No café on the beach", note: "Bring a flask. The nearest café is back in Crosby village." },
-                { item: "Allow 1–1.5 hours", note: "Walk out, find figures in the water at low tide, walk back. Don&apos;t rush it." },
+                { item: "Allow 1–1.5 hours", note: "Walk out, find figures in the water at low tide, walk back. Don't rush it." },
               ].map(({ item, note }) => (
                 <div key={item} className="flex items-start gap-3 bg-white rounded-xl border border-gray-100 p-3.5">
                   <CheckCircle className="w-4 h-4 text-[#2E6B3E] mt-0.5 shrink-0" />

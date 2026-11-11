@@ -164,13 +164,6 @@ export default function PostContent() {
                     desc: "The marked trails through the pinewoods from the NT car park. Beautiful walk. Dogs must be on leads throughout: not optional, and NT wardens do patrol.",
                     lead: "On leads required",
                   },
-                  {
-                    zone: "NT Café outdoor area",
-                    access: "Year-round · On leads",
-                    accessColor: "bg-green-100 text-green-800",
-                    desc: "Dogs are welcome in the outdoor seating area of the National Trust café at the car park. Water bowls often available. Good post-walk coffee stop.",
-                    lead: "On leads, outdoor only",
-                  },
                 ].map((z) => (
                   <div key={z.zone} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
                     <div className="flex items-start justify-between gap-3 mb-3">
@@ -197,12 +190,6 @@ export default function PostContent() {
             <div className="not-prose my-6 space-y-4">
               {[
                 {
-                  name: "NT Café, Victoria Road",
-                  tag: "Dogs welcome outside",
-                  desc: "Right at the car park. Coffee, cake, hot food. Dogs welcome in the outdoor area. Convenient if you don&apos;t want to drive to the village.",
-                  href: "/cafes",
-                },
-                {
                   name: "The Freshfield pub",
                   tag: "Dog-friendly",
                   desc: "On Massams Lane, Freshfield. Good beer garden, genuinely dog-friendly. Solid pub food. Post-walk pint sorted.",
@@ -211,12 +198,11 @@ export default function PostContent() {
                 {
                   name: "The Sparrowhawk",
                   tag: "Dog-friendly garden",
-                  desc: "Village centre. Good food, dog-friendly outdoor area. Worth booking if you&apos;re going at a weekend.",
+                  desc: "Village centre. Good food, dog-friendly outdoor area. Worth booking if you're going at a weekend.",
                   href: "/restaurants/the-sparrowhawk-formby",
                 },
               ].map((v) => (
                 <div key={v.name} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#E8EDE6] flex items-center justify-center text-lg shrink-0">🐾</div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">
                       <Link href={v.href} className="font-bold text-[#1C3220] hover:text-[#2E6B3E] transition-colors">{v.name}</Link>
@@ -260,7 +246,6 @@ export default function PostContent() {
                   { season: "Oct – Apr", access: "Full beach: no restrictions", ok: true },
                   { season: "May – Sep", access: "Main section restricted (nesting birds)", ok: false },
                   { season: "Pinewoods", access: "Year-round: on leads required", ok: true },
-                  { season: "NT Café", access: "Dogs outside year-round", ok: true },
                 ].map(({ season, access, ok }) => (
                   <div key={season} className="flex items-start gap-3 pb-3 border-b border-gray-50 last:border-0 last:pb-0">
                     <span className={`mt-0.5 w-4 h-4 shrink-0 rounded-full flex items-center justify-center text-[10px] font-bold ${ok ? "bg-green-100 text-green-700" : "bg-amber-100 text-amber-700"}`}>

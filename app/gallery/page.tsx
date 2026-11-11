@@ -63,8 +63,8 @@ const CATEGORIES: GalleryCategory[] = [
     label: "Signs & Practical",
     images: [
       { src: "/nt-formby-sign.webp",          alt: "National Trust Formby sign at the entrance",                         caption: "The main National Trust Formby entrance" },
-      { src: "/nt-sign.webp",                 alt: "National Trust sign at Formby",                                      caption: "Victoria Road, L37 1YH: the start of it all" },
-      { src: "/beach-car-park-sign.webp",     alt: "Formby Beach National Trust car park sign",                          caption: "Book via the NT app before you leave: no signal here" },
+      { src: "/nt-sign.webp",                 alt: "National Trust sign at Formby",                                      caption: "Victoria Road, L37 1LJ: the start of it all" },
+      { src: "/beach-car-park-sign.webp",     alt: "Wooden finger post pointing to the beach via the sand dunes and to Lifeboat Road car park", caption: "The finger post to the beach and the Lifeboat Road car park" },
       { src: "/pinewoods-map-sign.webp",      alt: "National Trust Formby site map and information board",               caption: "The site map at the main visitor point" },
       { src: "/pinewoods-trail-sign.webp",    alt: "Trail signpost in Formby pinewoods: no horses",                    caption: "The trails are well signed" },
       { src: "/pinewoods-no-parking.webp",    alt: "No parking sign in Formby pinewoods",                               caption: "Use the NT car park: don't park on Victoria Road" },

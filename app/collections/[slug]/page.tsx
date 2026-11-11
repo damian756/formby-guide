@@ -207,7 +207,6 @@ export default async function CollectionPage({ params }: Props) {
               <span className="text-white/70">{collection.title}</span>
             </nav>
 
-            <div className="text-5xl mb-4">{collection.emoji}</div>
             <h1 className="font-display text-3xl md:text-5xl font-bold text-white mb-3 leading-tight">
               {collection.title}
             </h1>
@@ -244,7 +243,6 @@ export default async function CollectionPage({ params }: Props) {
 
           {count === 0 ? (
             <div className="text-center py-20">
-              <p className="text-5xl mb-4">🔍</p>
               <h2 className="font-display text-2xl font-bold text-[#1C3220] mb-2">
                 Building this list
               </h2>
