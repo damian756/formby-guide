@@ -227,3 +227,13 @@ model PageView {
   @@index([path])
   @@index([createdAt])
 }
+
+// Daily page counts: the page, the day and a number, nothing about the visitor.
+// Written by app/api/count/route.ts. Table created by prisma/sql/2026-11-page-count.sql.
+model PageCount {
+  path  String
+  day   DateTime @db.Date
+  count Int      @default(0)
+
+  @@id([path, day])
+}
