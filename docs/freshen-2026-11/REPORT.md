@@ -244,3 +244,122 @@ Done 11 Nov 2026. Commits: `bb9477b` on main (maps); `db3a248` on branch `privac
 - Restrict the Google key in Google Cloud (HTTP referrer `www.formbyguide.co.uk`, Maps Embed API only), or give the embed its own key. Adding coordinates to the 5 listings (business data, not touched here) would end the need for the key in page code.
 - Listing descriptions in the database still contain em dashes (seen on The Lunch Hour and Formby Beach). These are business data and were not touched.
 - Optional: add a "Report a map issue" link (OSMF recommendation).
+
+## 10. Review findings and fixes
+
+Done 11 Nov 2026 from the second independent review (`formby-review-2.md`, 32 findings). Not pushed.
+
+**Commits on main.**
+- `1964c17` Listing JSON-LD: `aggregateRating` removed (it was Google's rating; Google's review snippet rules do not allow third-party ratings). Schema only; the visible rating is unchanged. This is the commit the coordinating chat asked for.
+- `7d1eb4f` About page: Clare is real, not a persona.
+- `686df91` Maps: the Google click-to-load fallback removed; the map tests catch all 10 breakages.
+- `6f0da7e` Facts: Father's Day, Royal Birkdale booking, walk times, Emily's evenings, Splash World, chains.
+- `aa2ff4e` Business wording: no verdicts on named businesses, no invented figures, alphabetical cards, Sparrowhawk hero.
+- `ec357d1` Stock phrases: "honest" and "genuinely" dropped.
+- `a257306` Titles without a doubled brand, no Google Fonts preconnect, decorative related-guide images, map toggle labels.
+- Branch `privacy-wording`: a third commit after `db3a248`, privacy and terms pages only (findings 2, 3, 9, 11, part of 21 and 28). Waiting for Damian.
+
+**Applied: 20 on main and 5 on the branch (28 on both). Skipped: 6. No longer applies: 1 (19).**
+- Wrong facts:
+  - 1 Father's Day 2026 was Sunday 21 June (third Sunday; 15 June was a Monday): standfirst, JSON-LD, excerpt and listing entry.
+  - 2 Terms 5.2 (branch): paid by invoice, no checkout, notice as the advertise page states it.
+  - 3 Vercel (branch): server code runs in iad1, Washington, D.C.
+- Rules:
+  - 4 Rainy-day guide: The Atkinson described from its visit page; "excellent", "worth the visit", "relaxed atmosphere" and "none of them require planning" gone; the Southport Market paragraph replaced as the review set out (before the rule on the six was refined).
+  - 5 Blackpool post: Pleasure Beach described from its own site; "excellent" and "adds up quickly" gone; titles without "Clare's Honest Answer" and "Honest Comparison".
+  - 6 Family and free collections: no "worth the trip" or "Honest local list".
+  - 7 Kids post: the "Years experience", "Kids tested" and "Average budget" tiles and the £70 to 90 figures removed.
+  - 8 Google key: the click-to-load fallback is removed, so no page code reads `GOOGLE_PLACES_API_KEY`. The 5 listings without coordinates show no map box, only "Get directions" and "View on Google Maps" (place id links, no key). Rendered `/restaurants/emilys-formby`: 0 "maps/embed", 0 `?key=` or `&key=`; the only "key=" strings are Ahrefs' `data-key` and React's dev runtime.
+- Misleading:
+  - 9 Cookie table (branch): the site sets no cookies; the "Essential" row removed.
+  - 11 Listings legal basis (branch): legitimate interest; a contract only for a paid placement.
+  - 13 Royal Birkdale: "fully booked throughout 2026 and 2027, including its Birkdale Open Experience Package" (its booking page today).
+  - 14 Village to beach: "a short drive from the beach car parks; on foot, allow at least half an hour". Emily's gives 5 minutes by car and 30 on foot, so "ten minutes" was not kept.
+  - 17 Restaurants guide: "Being listed here is not a recommendation." Cards are alphabetical on home, beach, pinewoods and red squirrel pages.
+- Minor:
+  - 18 Map tests: 13 of 13 breakages caught on a scratch copy (the review's 10, plus 3 on the lazy loader).
+  - 20 Google Fonts preconnects removed (`next/font` self-hosts the fonts).
+  - 21 "Churchtown Media Ltd" (branch).
+  - 22 Emily's: "an à la carte menu on Monday to Saturday evenings", in 6 places, from its menus today.
+  - 23 "two places to eat in Formby". 24 "Dunes Splash World on the Esplanade". 25 "Most of the shops are independents."
+  - 26 96 removals of "honest" and "genuinely" in 27 files, title hooks included ("The Honest Guide" x4, "Six Weeks with Kids, Honestly"). First-person sentences were left exactly as they were.
+  - 27 Sparrowhawk profile: the photo of a pasta dish replaced by the site's painted illustration; alt "A painted illustration of a glass of red wine and a candle on a table" (the review's "A plate of food" does not describe that picture).
+  - 28 11 page title definitions no longer double the brand (privacy and terms on the branch).
+  - 30 Related-guide card images are decorative (`alt=""`). 31 Map toggle: `aria-label` and `aria-pressed`.
+
+**Skipped, with reasons.**
+- 10 Ahrefs description: wording agreed across the five sites (instruction).
+- 12 `ClareBio.tsx` and 15 home "I'm Clare. I live here": Clare text stays as it is (coordinating chat). No other Clare text was edited.
+- 16 Nav link to Southport Guide's Royal Birkdale page: stays (decision).
+- 19 Dead button with JavaScript off: the component no longer exists.
+- 29 Golf collection emoji: the collection `emoji` field is never rendered.
+- 32 Stripe packages: for the dependency job.
+- 21, rest: no Ahrefs privacy link (Ahrefs wording); invoice details and the database host are Damian's to state.
+
+**Clare (about page, `7d1eb4f`).**
+- Before: "Clare is an editorial voice: a persona built from genuine local knowledge. The real person behind FormbyGuide is Damian Roche of Churchtown Media. All content reflects real first-hand knowledge of the area."
+- After: "Clare is real, and part of the family business that publishes FormbyGuide: Churchtown Media Ltd. All content reflects real first-hand knowledge of the area."
+- Person schema, before: "Editorial voice of FormbyGuide.co.uk: written from the perspective of a Formby local of 15+ years." After: "Editor of FormbyGuide.co.uk and part of Churchtown Media Ltd, the family business that publishes it. A Formby local of 15+ years." The rest is unchanged.
+
+**The six organisations (rule as refined: names stay, links go).** No link to any of the 18 listed domains, or to their social pages, was found in `app/`, `lib/`, `components/` or `public/`: 0 removed for every organisation (the database rows were cleared by the coordinating chat). `a0a528a` adds `lib/blocked-domains.ts` with `isBlockedUrl()`; the listing page never renders a stored website on the list (link, sidebar, JSON-LD `url` or claim prompt). Test: `tests/no-blocked-links.test.mjs`. Rendered check of all 433 sitemap pages on the dev server: 433 returned 200, 0 matches. FC2 to FC5 were not applied, and FK1 stays.
+
+**Sources (read 11 Nov 2026, in `sources/`).**
+- `rb-visitorbooking.txt` (members.royalbirkdale.com/visitorbooking/), `rb-visitors-nov11.txt`: fully booked 2026 and 2027 (booking page), 2027 (visitors page); Birkdale Open Experience Package; 2028 later; Open Events.
+- `atkinson-visit.txt`, `atkinson-home.txt` (theatkinson.co.uk): Lord Street, PR8 1DB; museum, gallery and shop; café; box office for shows; Monday to Saturday 10am to 4pm; closed Sundays and bank holidays.
+- `emilys-c.txt` (emilysformby.com): breakfast from 9am daily; main menu from 12:30pm Monday to Saturday; evening menu Monday to Saturday from 5pm; Sunday menu from 2pm; 5 minutes' drive or 30 minutes' walk from Formby Beach.
+- `splashworld.txt`: Dunes Splash World, The Esplanade, PR8 1RX. `pleasurebeach.txt`: rides; Nickelodeon Land for younger visitors.
+- `vercel-regions.txt` (vercel.com/docs/regions): iad1 is Washington, D.C., USA, and the default function region.
+- Live headers: `x-vercel-id: lhr1::iad1` on `/`, `/restaurants`, `/contact`, `/advertise`; no `Set-Cookie` there or on `/privacy`. Headless Edge on 4 live pages (Ahrefs and `/api/count` blocked): no cookies, empty localStorage and sessionStorage.
+- Father's Day: calendar check only, as decided.
+
+**Checks.** tsc 0 (baseline 0). eslint 16 errors and 6 warnings in the same 12 files (baseline 16 and 6). Tests 46/46 (baseline 37/37). No em dashes in changed files.
+
+**Left for Damian.**
+- Merge `privacy-wording` (three commits).
+- Clare: two first-person sentences judge a named business and were kept under the Clare rule: the Blackpool post's "I took mine ... chaotic and expensive" (Pleasure Beach) and the rainy-day "I have been in there with all four of my kids" (The Atkinson). The about page and `ClareBio.tsx` still promise to say which places "aren't worth the bother".
+- The Blackpool title lost "Clare's Honest Answer" under the business-wording decision; restore it if the Clare rule covers titles.
+- Google key: now used only by `scripts/`; restricting it in Google Cloud is still worth doing.
+- Privacy: say what invoice details are kept, name the database host (Neon) and its region, consider a line on transfers to the USA (iad1), and decide the Ahrefs privacy link across the five sites.
+
+## 11. Improvements and modernising
+
+Measured 11 Nov 2026 on a production build (`next build`, then `next start -p 3101`), headless Edge, Ahrefs and `/api/count` blocked. 436 pages crawled (433 sitemap URLs plus extras); 24 page types audited at 1440, 768 and 390. Visitors are mostly day-trippers to the beach, pinewoods and squirrels, so getting there, parking, tides and dogs come first.
+
+**What was measured.**
+- Weight (full scroll, 1440): home 939 KB, `/formby-beach` 1.4 MB, `/formby-pinewoods` 2.6 MB, `/restaurants` 4.8 MB (51 listing photos at 150 to 180 KB each, plain `<img>`, none lazy), `/blog` 2.2 MB. JavaScript about 210 to 265 KB per page. `public/` is 116 MB; 13 files (7.7 MB) are referenced nowhere.
+- Layout shift: 0 on 23 of 24 pages; `/blog` 0.22 (a spinner replaced by the list).
+- Mobile: no sideways overflow at 768 or 390. 7 to 24 tap targets under 24px per page at 390 (nav, breadcrumb and footer links, 15 to 20px tall). Text under 12px: 6 to 82 elements per page (10px nav labels, 11px blog dates).
+- Accessibility: one h1 per page, no heading skips, no image without alt, visible focus on every tab stop checked. Contrast: 696 of 2,646 text elements on 15 pages (26%) are below AA: grey-400 small text (2.6:1), gold #C9A96E on white (2.2:1), faded greens at /50 to /60 (2.9 to 3.9:1). `lang` was "en".
+- Links: 410 internal link targets, 0 broken; about 25 outside links (Google Maps links not checked), 0 broken (LinkedIn answers bots with 999; theopen.com redirected). Cross-network links already sit where they help (Sefton Coast Wildlife red squirrel, birds, mermaid's purse, jellyfish; Southport Guide parking pages); none added.
+- Search: all 432 sitemap URLs 200, none redirected. `robots.txt` disallowed `/_next/`. 24 of 39 posts were linked from no page's HTML (the blog index list was client-only). `/gallery` had the home page's title and canonical, and was missing from the sitemap with `/disclosure`. One noindex collection was in the sitemap. 6 pages had no Open Graph image. `article:published_time` was "June 10, 2026". 129 titles over 65 characters (listing names), 32 descriptions over 160 (blog excerpts). Article JSON-LD: 27 of 39 without `image`, 37 without `dateModified`. Post `metaTitle` and `metaDescription` fields are never read.
+- Em dashes (section 1a): rendered title, meta, Open Graph, JSON-LD and text of all 436 pages, and the source. From templates and code: 1 (the PWA manifest description). From stored listing descriptions: 68 in meta descriptions, 295 in JSON-LD and 332 in visible text on 236 pages (database text, not touched or masked). One code comment in `next.config.ts` left.
+
+**Ranked list.**
+1. Google could not fetch `/_next/` (CSS, JS, images). 5 min. **Done** `5d2010a`.
+2. Blog index list only in the browser: 24 orphan posts, layout shift 0.22. 30 min. **Done** `5d2010a`: category read with `useSyncExternalStore`, all 39 links in the server HTML, shift 0; category buttons, Back and `?category=` checked.
+3. Em dash sweep and test. 30 min. **Done** `ad3905f`: manifest fixed; `tests/no-em-dash.test.mjs` (planted em dashes in a title, a data file and JSX text were caught; comments were not).
+4. No links to the six organisations, with a render guard. 40 min. **Done** `a0a528a`, `tests/no-blocked-links.test.mjs`.
+5. `/gallery` title and canonical; gallery and disclosure in the sitemap; noindex collections out of it. 20 min. **Done** `5d2010a` (sitemap 432 to 433 URLs).
+6. Listing photos on category and collection cards load lazily. 5 min. **Done** `a675b6c`.
+7. Open Graph image on 7 pages; ISO publish date; `lang="en-GB"`. 15 min. **Done** `5d2010a`.
+8. Full-width band photos at 1200px, not 1920px. 10 min. **Done** `a675b6c` (pinewoods 2.6 to 2.1 MB).
+9. Emoji used as icons (FSA badge, no-photo placeholders; 41 on `/restaurants`) replaced with lucide icons; "Curated" dropped. 15 min. **Done** `a675b6c`, `5d2010a`.
+10. Contrast and small text, site-wide. 1.5 to 2 h. **Proposed** (P1).
+11. Listing photos through `next/image`. 45 min. **Proposed** (P2).
+12. Cache listing and category pages. 30 min. **Proposed** (P3).
+13. Blog search fields and Article schema. 1.5 h. **Proposed** (P4).
+14. Tap targets under 24px. 45 min. **Proposed** (P5).
+15. Titles over 65 characters: listing names from the database. **Left.**
+16. Em dashes and verdicts in stored listing descriptions; "Store" schema type on about 200 "shopping" rows that are churches, surgeries and services. Database. **Left.**
+17. 13 unreferenced images in `public/` (7.7 MB, including the old Sparrowhawk and Left Bank photos): no cost to visitors. Damian to decide. **Left.**
+
+**Proposals.**
+- P1 Contrast: darken text that fails AA (grey-400 to grey-500 or 600, gold on white to #8A6A2F at 5.0:1, faded greens to /75) and lift 10 to 11px labels to 12px, page by page. 26% of text fails AA today; 1.5 to 2 h. Mock-up: `screens/idea-blog-cards-contrast-compare-1440.jpg` (top now, bottom mock), `screens/idea-blog-cards-contrast-mock-390.jpg`.
+- P2 Photos: serve the 150 to 180 KB listing photos through `next/image` at card size (about 30 KB) and the listing hero with priority. `/restaurants` fetches 4.3 MB of photos on a full scroll and the listing hero is the LCP; 45 min, and it uses Vercel image optimisation quota. Now: `screens/idea-restaurants-cards-now-1440.jpg`.
+- P3 Caching: `revalidate = 3600` on `/[category]` and `/[category]/[slug]`, so a listing view is not a Neon round trip from iad1 every time; a featured placement would then show within the hour. 30 min plus a check after deploy. Now: `screens/imp-restaurants-emilys-formby-1440.jpg`.
+- P4 Blog search fields: use each post's `metaTitle` and `metaDescription` after a fact check (they have never rendered, and one carried the wrong Father's Day date), and add `image` and `dateModified` to Article JSON-LD. 32 descriptions run over 160 characters; 1.5 h. Now: `screens/imp-blog-1440.jpg`.
+- P5 Tap targets: give footer, breadcrumb and nav dropdown links at least 24px of height on phones. 7 to 24 targets per page are smaller (most pass on spacing, not all); 45 min. Now: `screens/idea-footer-links-now-390.jpg`.
+
+**Screenshots.** Every changed page (41) at 1440, 1024, 768 and 390 was shot on the dev server and checked; 164 files, 77 MB as JPEG, kept in the scratch folder (`scratchpad\imp\shots-jpg\`). Committed (9 MB, `b38d363`): `imp-restaurants-emilys-formby`, `imp-blog-where-to-eat-formby-with-kids` and `imp-blog-the-sparrowhawk-formby-review` at all four widths; `imp-about`, `imp-blog`, `imp-home`, `imp-the-open-2026`, `imp-blog-formby-rainy-day-guide`, `imp-blog-blackpool-or-formby-family-day-out` and `imp-guides-best-restaurants-formby` at 1440 and 390; the `idea-*` files above. Pages taller than 16,000px were cut at that height (`/shopping`, and `/blog`, `/restaurants`, `/formby-beach` at 390).
+
+**Checks.** tsc 0; eslint 16 errors and 6 warnings (baseline); tests 46/46: `maps` 7, `no-em-dash` 3 and `no-blocked-links` 4 new or rewritten. Production build passes. No dependency changed.
