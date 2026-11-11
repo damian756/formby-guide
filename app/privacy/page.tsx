@@ -6,7 +6,7 @@ import { DISPLAY_EMAIL } from "@/lib/contact";
 const BASE_URL = "https://www.formbyguide.co.uk";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | FormbyGuide.co.uk",
+  title: "Privacy Policy",
   description: "Privacy Policy for FormbyGuide.co.uk: how we collect, use and protect your personal data in accordance with UK GDPR.",
   alternates: { canonical: `${BASE_URL}/privacy` },
   openGraph: {
@@ -39,7 +39,7 @@ export default function PrivacyPage() {
             <p className="text-[#C9A96E] text-xs font-bold uppercase tracking-widest">Legal</p>
           </div>
           <h1 className="font-display text-4xl font-bold text-white mb-2">Privacy Policy</h1>
-          <p className="text-white/50 text-sm">Last updated: 20 February 2026</p>
+          <p className="text-white/50 text-sm">Last updated: 11 November 2026</p>
         </div>
       </section>
 
@@ -49,7 +49,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="font-display text-xl font-bold text-[#1C3220] mb-4">1. Who we are</h2>
             <p className="text-gray-600 leading-relaxed mb-3">
-              FormbyGuide.co.uk is operated by <strong>Churchtown Media</strong>, a digital media company based in Merseyside, England.
+              FormbyGuide.co.uk is operated by <strong>Churchtown Media Ltd</strong>, a digital media company based in Merseyside, England.
             </p>
             <p className="text-gray-600 leading-relaxed mb-3">
               We are committed to protecting your personal data in accordance with the <strong>UK General Data Protection Regulation (UK GDPR)</strong> and the Data Protection Act 2018.
@@ -76,11 +76,15 @@ export default function PrivacyPage() {
                 },
                 {
                   title: "Billing information",
-                  desc: "Handled entirely by Stripe, our payment processor. We do not store or have access to card details.",
+                  desc: "Advertising and featured listings are paid by invoice. There is no checkout on this site and we do not take card payments here.",
                 },
                 {
                   title: "Usage data",
-                  desc: "Privacy-friendly, cookieless page view analytics via Plausible. No personal data or IP addresses are collected or stored.",
+                  desc: "Ahrefs Web Analytics: page view statistics without cookies. It records the page address (including any query string), the referring page, your browser, operating system and device, screen size and language, and when a link is clicked or a form is sent. It uses your IP address to work out your approximate location (city level) and a daily visitor ID that cannot be linked across days; the IP address itself is discarded, not stored.",
+                },
+                {
+                  title: "Page view counts",
+                  desc: "We keep a daily count of views for each page in our own database: the page address, the date and a number. Nothing about you is stored: no IP address, cookie or device details.",
                 },
               ].map(({ title, desc }) => (
                 <div key={title} className="flex gap-4">
@@ -107,9 +111,9 @@ export default function PrivacyPage() {
                 <tbody>
                   {[
                     ["Contact enquiries", "Legitimate interest and your consent"],
-                    ["Business listings", "Performance of a contract (your listing agreement)"],
-                    ["Payment processing", "Performance of a contract"],
-                    ["Analytics", "Legitimate interest in understanding site usage"],
+                    ["Business listings", "Legitimate interest in publishing public information about local businesses; a contract where a business pays for a placement"],
+                    ["Invoicing for advertising", "Performance of a contract"],
+                    ["Analytics and page view counts", "Legitimate interest in understanding site usage"],
                   ].map(([purpose, basis]) => (
                     <tr key={purpose}>
                       <td className="p-3 border border-gray-100 text-gray-700">{purpose}</td>
@@ -126,7 +130,8 @@ export default function PrivacyPage() {
             <ul className="space-y-2 text-gray-600 text-sm">
               <li className="flex gap-3"><span className="text-[#C9A96E]">→</span> Contact form submissions: <strong>12 months</strong></li>
               <li className="flex gap-3"><span className="text-[#C9A96E]">→</span> Business listing data: <strong>for the duration of your listing plus 6 months</strong></li>
-              <li className="flex gap-3"><span className="text-[#C9A96E]">→</span> Analytics data: <strong>aggregated, no personal data retained</strong> (Plausible Analytics)</li>
+              <li className="flex gap-3"><span className="text-[#C9A96E]">→</span> Page view counts: <strong>daily totals per page, kept in our own database</strong></li>
+              <li className="flex gap-3"><span className="text-[#C9A96E]">→</span> Ahrefs Web Analytics data: <strong>held by Ahrefs</strong> (see Ahrefs&apos; privacy information)</li>
             </ul>
           </section>
 
@@ -134,10 +139,10 @@ export default function PrivacyPage() {
             <h2 className="font-display text-xl font-bold text-[#1C3220] mb-4">5. Third parties we share data with</h2>
             <div className="space-y-3">
               {[
-                { name: "Plausible (Analytics)", detail: "Privacy-friendly, cookieless analytics. All data is aggregated and processed in the EU. No personal data is collected." },
-                { name: "Stripe", detail: "Payment processing for paid business listings. Subject to Stripe's own privacy policy." },
-                { name: "Vercel", detail: "Website hosting infrastructure. Data is processed in UK/EU-region data centres where possible." },
+                { name: "Ahrefs (Web Analytics)", detail: "Ahrefs Web Analytics: page view statistics without cookies. It records the page address (including any query string), the referring page, your browser, operating system and device, screen size and language, and when a link is clicked or a form is sent. It uses your IP address to work out your approximate location (city level) and a daily visitor ID that cannot be linked across days; the IP address itself is discarded, not stored." },
+                { name: "Vercel", detail: "Hosts the website. Pages are served from Vercel's network, and the site's server code, including the contact form, runs in Vercel's lhr1 region in London, UK." },
                 { name: "Resend", detail: "Transactional email delivery for contact form submissions. Emails are processed and delivered via Resend's infrastructure." },
+                { name: "OpenStreetMap (maps)", detail: "Maps are drawn with OpenStreetMap tiles, which your browser loads from the OpenStreetMap Foundation's servers; they receive your IP address, browser type, our site's address and the map area you view." },
               ].map(({ name, detail }) => (
                 <div key={name} className="bg-[#F7F9F6] rounded-xl p-4">
                   <p className="font-semibold text-[#1C3220] text-sm mb-1">{name}</p>
@@ -145,11 +150,18 @@ export default function PrivacyPage() {
                 </div>
               ))}
             </div>
+            <p className="text-gray-500 text-sm mt-4">
+              Ahrefs describes its analytics on its own page:{" "}
+              <a href="https://help.ahrefs.com/en/articles/10247870-about-ahrefs-web-analytics" target="_blank" rel="noopener noreferrer" className="text-[#2E6B3E] hover:underline">
+                About Ahrefs Web Analytics
+              </a>.
+            </p>
             <p className="text-gray-500 text-sm mt-4 font-medium">We do not sell your personal data to any third party.</p>
           </section>
 
           <section>
             <h2 className="font-display text-xl font-bold text-[#1C3220] mb-4">6. Cookies</h2>
+            <p className="text-gray-600 text-sm leading-relaxed mb-4">This site sets no cookies of its own and stores nothing in your browser.</p>
             <div className="overflow-x-auto rounded-xl border border-gray-100">
               <table className="w-full text-sm">
                 <thead className="bg-[#F7F9F6]">
@@ -161,8 +173,7 @@ export default function PrivacyPage() {
                 </thead>
                 <tbody className="divide-y divide-gray-50">
                   {[
-                    ["Essential", "Site functionality (session, security)", "No: always active"],
-                    ["Analytics (Plausible)", "Understanding how visitors use the site: cookieless, no consent needed", "No"],
+                    ["Analytics (Ahrefs Web Analytics)", "Understanding how visitors use the site: Ahrefs Web Analytics sets no cookies", "No"],
                   ].map(([type, purpose, required]) => (
                     <tr key={type}>
                       <td className="px-4 py-3 font-semibold text-[#1C3220] align-top whitespace-nowrap">{type}</td>
