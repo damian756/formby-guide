@@ -16,6 +16,34 @@ Read this, then read only the files the map below points to. Search with grep; n
 - **Scope of freshen-up**: small and safe. Machine-written copy (triads, slogans, filler adjectives, empty claims), emoji used as icons, pill badges, stale years and dates, wrong practical facts, generic sections that say nothing, and design details removable without a redesign. Anything bigger is a written suggestion with a screenshot.
 - **Git**: commit by naming files (never `git add .`), no Co-Authored-By line, on the current branch. Do not push.
 - **Dev server ports**: 3101 to 3104 only (3000 belongs to another project). Formby used 3101.
+- **Organisations we stay away from**: see section 1a. It applies to all five Sefton Coast sites, from 11 Nov 2026.
+
+---
+
+## 1a. Standing rule: organisations we do not list or promote (Damian, 11 Nov 2026)
+
+Damian's words, 11 Nov 2026: "as a standing rule for sefton coast network, we do not list or promote southportbid, any mikhail properties, southport market or sefton council, or yoursouthport or visitsouthport - they have not been very nice to us and we prefer to stay away from them in all of our affairs".
+
+It applies to all five sites: Southport Guide, Formby Guide, Sefton Links, Sefton Coast Wildlife and seftoncoast.network. The six:
+1. Southport BID.
+2. Any Mikhail property, meaning the Mikhail hotel and leisure group's venues. Take the list from the group's own website or Companies House, never from memory.
+3. Southport Market.
+4. Sefton Council.
+5. YourSouthport.
+6. VisitSouthport.
+
+**What it means:**
+- **Nothing listed, linked, featured or recommended.** This covers database listings, guides, posts, event entries, home page sections, links, schema and images.
+- **Events:** events run by any of the six are not listed. An event whose details came from VisitSouthport or the BID is re-sourced from the organiser's own site, or dropped.
+- **Copy stays neutral.** We stay away from them. We never criticise them on a page, and nobody contacts any of them.
+- **Advertising:** none of the six is approached or offered a product, and no advertise page names them.
+
+**Sefton Council, as Damian clarified on 11 Nov:** "no, thats fine, council owns a lot fo places".
+- Places the council owns stay listed and written about as places: the pier, The Atkinson, parks, beaches, council car parks.
+- The rule covers the council itself: no listing or promotion of it as an organisation, no links to its website, and no promoting its campaigns, its services pages or events run under its name.
+- **Facts that only a council page gives** (a closure, a charge, a rule): state the fact in the visible text, without the council's name or a link, and hold the source in the report.
+
+**Before anything is pushed:** new copy is checked against this rule. Removals from older copy wait for the inventory to be approved by the coordinating chat.
 
 ---
 
