@@ -5,7 +5,8 @@ import Image from "next/image";
 const BASE_URL = "https://www.formbyguide.co.uk";
 
 export const metadata: Metadata = {
-  title: "About FormbyGuide | Your Independent Guide to Formby",
+  // Absolute, so the layout's "| FormbyGuide.co.uk" is not added to a title that already names the site.
+  title: { absolute: "About FormbyGuide.co.uk: Your Independent Guide to Formby" },
   description:
     "FormbyGuide.co.uk is an independent local guide to Formby: red squirrels, the beach, pinewoods, village dining and everything visitors need. Published by Churchtown Media.",
   alternates: { canonical: `${BASE_URL}/about` },
@@ -22,10 +23,12 @@ export const metadata: Metadata = {
 const schemaData = [
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": `${BASE_URL}/#website`,
-    name: "FormbyGuide.co.uk",
-    url: BASE_URL,
+    // The WebSite itself is described once, on the home page; this block is the about page.
+    "@type": "AboutPage",
+    "@id": `${BASE_URL}/about#page`,
+    name: "About FormbyGuide.co.uk",
+    url: `${BASE_URL}/about`,
+    isPartOf: { "@id": `${BASE_URL}/#website` },
     description:
       "Independent local guide to Formby: red squirrels, the beach, pinewoods, village dining and everything visitors need.",
     publisher: {

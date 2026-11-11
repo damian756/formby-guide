@@ -14,8 +14,21 @@ export default function GuideLayout({ guide, children }: GuideLayoutProps) {
 
   const categoryLabel = GUIDE_CATEGORIES[guide.category].label;
 
+  // The trail below for search engines. The category step links to a filtered view of
+  // /guides (canonical: /guides), so it is not a page of its own and is left out here.
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.formbyguide.co.uk" },
+      { "@type": "ListItem", position: 2, name: "Guides", item: "https://www.formbyguide.co.uk/guides" },
+      { "@type": "ListItem", position: 3, name: guide.title, item: `https://www.formbyguide.co.uk${getGuideUrl(guide)}` },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-[#F7FAF7]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
 
       {/* ── Breadcrumb strip ── */}
       <nav

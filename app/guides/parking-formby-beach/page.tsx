@@ -14,7 +14,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Parking at Formby Beach | NT Car Park, Postcode & Tips",
   description:
-    "Parking at Formby Beach: postcodes L37 1LJ (Victoria Road) and L37 2EB (Lifeboat Road), how to pay at the machine or with JustPark (signal in the car park is terrible), peak times, and getting there by train.",
+    "Parking at Formby Beach: postcodes L37 1LJ (Victoria Road) and L37 2EB (Lifeboat Road), how to pay at the machine or with JustPark, peak times, and getting there by train.",
   keywords:
     "parking formby beach, formby beach car park, formby beach postcode, national trust formby parking, parking near formby beach",
   alternates: { canonical: `${BASE_URL}/guides/parking-formby-beach` },
@@ -36,14 +36,7 @@ const pageSchema = {
   name: "Parking at Formby Beach: Guide",
   description: "Complete guide to parking at Formby Beach: postcodes, how to pay (machine or JustPark), and tips.",
   url: `${BASE_URL}/guides/parking-formby-beach`,
-  breadcrumb: {
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
-      { "@type": "ListItem", position: 2, name: "Guides", item: `${BASE_URL}/guides` },
-      { "@type": "ListItem", position: 3, name: "Parking at Formby Beach", item: `${BASE_URL}/guides/parking-formby-beach` },
-    ],
-  },
+  // The BreadcrumbList comes from GuideLayout, as on every guide.
 };
 
 const faqSchema = {

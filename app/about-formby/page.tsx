@@ -8,7 +8,7 @@ const BASE_URL = "https://www.formbyguide.co.uk";
 export const metadata: Metadata = {
   title: "About Formby: Where Is It, What's There & Why Visit",
   description:
-    "Where is Formby? It's a village on the Sefton Coast in Merseyside, about 12 miles south of Southport and 12 miles north of Liverpool. Here's everything worth knowing about the place.",
+    "Where is Formby? It's a village on the Sefton Coast in Merseyside, about 12 miles south of Southport and 12 miles north of Liverpool.",
   keywords:
     "where is Formby, Formby village, Formby town, Formby Merseyside, Formby Liverpool, Formby Sefton, about Formby, Formby UK",
   alternates: { canonical: `${BASE_URL}/about-formby` },

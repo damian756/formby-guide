@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: collection.title,
     description: collection.metaDescription,
     alternates: { canonical: url },
-    ...(!isIndexable ? { robots: { index: false, follow: false } } : {}),
+    ...(!isIndexable ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
       title: collection.title,
       description: collection.metaDescription,

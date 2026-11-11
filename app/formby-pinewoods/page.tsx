@@ -15,7 +15,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Formby Pinewoods: Walks, Wildlife & What to Expect",
   description:
-    "Complete guide to Formby pinewoods: walks, trails, birdwatching, and everything you need to plan your visit. Ancient coastal woodland managed by the National Trust. Postcode L37 1LJ.",
+    "Formby pinewoods: walks, trails, birdwatching, and everything you need to plan your visit. Ancient coastal woodland managed by the National Trust. Postcode L37 1LJ.",
   keywords:
     "formby pinewoods, national trust formby, formby walks, coastal walks, pinewoods trails, birdwatching formby, woodland walks formby",
   alternates: { canonical: `${BASE_URL}/formby-pinewoods` },

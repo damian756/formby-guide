@@ -64,16 +64,16 @@ const nextConfig: NextConfig = {
       { source: "/the-open-2026/restaurants",   destination: "/restaurants",   permanent: true },
       // Review of a restaurant that could not be confirmed as trading (FSA register, 11 Nov 2026)
       { source: "/blog/left-bank-brasserie-formby", destination: "/guides/best-restaurants-formby", permanent: true },
-      // Force www — redirect bare domain to canonical www
+      // Force www: redirect the bare domain to the same path on www ("/:path*", so the path is kept)
       {
-        source: "/(.*)",
+        source: "/:path*",
         has: [{ type: "host", value: "formbyguide.co.uk" }],
         destination: "https://www.formbyguide.co.uk/:path*",
         permanent: true,
       },
       // Redirect Vercel preview domain
       {
-        source: "/(.*)",
+        source: "/:path*",
         has: [{ type: "host", value: "formby-guide.vercel.app" }],
         destination: "https://www.formbyguide.co.uk/:path*",
         permanent: true,

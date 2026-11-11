@@ -75,11 +75,14 @@ const CATEGORY_GUIDES: Record<string, { href: string; label: string }[]> = {
     { href: "/guides/best-restaurants-formby",      label: "Restaurants in Formby: A Guide" },
     { href: "/guides/formby-village",               label: "Formby Village Guide" },
     { href: "/guides/dog-friendly-formby",          label: "Dog-Friendly Formby" },
+    { href: "/collections/restaurants-formby-village",       label: "Restaurants in Formby Village" },
+    { href: "/collections/dog-friendly-restaurants-formby",  label: "Dog-Friendly Restaurants" },
   ],
   cafes: [
     { href: "/guides/dog-friendly-formby",              label: "Dog-Friendly Formby" },
     { href: "/collections/cafes-near-formby-beach",     label: "Cafes Near Formby Beach" },
     { href: "/guides/formby-village",                   label: "Formby Village Guide" },
+    { href: "/collections/dog-friendly-cafes-formby",   label: "Dog-Friendly Cafés" },
   ],
   pubs: [
     { href: "/guides/dog-friendly-formby",          label: "Dog-Friendly Formby" },
@@ -89,11 +92,14 @@ const CATEGORY_GUIDES: Record<string, { href: string; label: string }[]> = {
     { href: "/red-squirrels-formby",   label: "Red Squirrel Reserve Guide" },
     { href: "/formby-pinewoods",       label: "Formby Pinewoods Guide" },
     { href: "/formby-beach",           label: "Formby Beach Guide" },
+    { href: "/collections/free-things-to-do-formby", label: "Free Things to Do" },
   ],
   activities: [
     { href: "/red-squirrels-formby",   label: "Red Squirrel Reserve" },
     { href: "/formby-beach",           label: "Formby Beach Guide" },
     { href: "/formby-pinewoods",       label: "Formby Pinewoods" },
+    { href: "/collections/family-friendly-things-to-do-formby", label: "Family-Friendly Things to Do" },
+    { href: "/collections/free-things-to-do-formby",            label: "Free Things to Do" },
   ],
   accommodation: [
     { href: "/collections/stay-near-royal-birkdale", label: "Places Near Royal Birkdale" },
@@ -105,6 +111,7 @@ const CATEGORY_GUIDES: Record<string, { href: string; label: string }[]> = {
     { href: "/formby-beach",                label: "Formby Beach Guide" },
     { href: "/guides/parking-formby-beach", label: "Parking at Formby Beach" },
     { href: "/guides/dog-friendly-formby",  label: "Dog-Friendly Beach Rules" },
+    { href: "/collections/free-things-to-do-formby", label: "Free Things to Do" },
   ],
 };
 
@@ -245,8 +252,18 @@ export default async function CategoryPage({ params, searchParams }: Props) {
     ...(isFoodCat ? [{ key: "hygiene", label: "Food Safety Rating" }] : []),
   ];
 
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+      { "@type": "ListItem", position: 2, name: cat.name, item: `${BASE_URL}/${category}` },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-[#F7F9F6]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
 
       {/* Hero */}
       <div className={`relative overflow-hidden bg-gradient-to-br ${theme.gradient}`}>

@@ -74,7 +74,7 @@ export const GUIDES: Guide[] = [
     url: "/formby-beach",
     seoPriority: 0.95,
     datePublished: "2026-02-27",
-    dateUpdated: "2026-02-27",
+    dateUpdated: "2026-11-11",
     tags: ["beach", "national-trust", "dog-friendly", "parking", "dunes"],
     status: "published",
     listingFilter: {
@@ -96,7 +96,7 @@ export const GUIDES: Guide[] = [
     url: "/red-squirrels-formby",
     seoPriority: 0.92,
     datePublished: "2026-02-27",
-    dateUpdated: "2026-02-27",
+    dateUpdated: "2026-11-11",
     tags: ["red-squirrels", "national-trust", "wildlife", "walking"],
     status: "published",
     listingFilter: {
@@ -118,7 +118,7 @@ export const GUIDES: Guide[] = [
     url: "/formby-pinewoods",
     seoPriority: 0.90,
     datePublished: "2026-02-27",
-    dateUpdated: "2026-02-27",
+    dateUpdated: "2026-11-11",
     tags: ["pinewoods", "national-trust", "walking", "wildlife", "trails"],
     status: "published",
     listingFilter: {
@@ -141,7 +141,7 @@ export const GUIDES: Guide[] = [
     heroImage: "/beach-car-park-sign.webp",
     seoPriority: 0.88,
     datePublished: "2026-02-27",
-    dateUpdated: "2026-02-27",
+    dateUpdated: "2026-11-11",
     tags: ["parking", "practical", "national-trust", "beach"],
     status: "published",
     metaTitle: "Parking at Formby Beach | NT Car Park, Postcode & Tips | FormbyGuide",
@@ -158,7 +158,7 @@ export const GUIDES: Guide[] = [
     heroImage: "/dog-on-formby-beach.jpg",
     seoPriority: 0.85,
     datePublished: "2026-02-27",
-    dateUpdated: "2026-02-27",
+    dateUpdated: "2026-11-11",
     tags: ["dog-friendly", "practical", "beach", "pubs", "walks"],
     status: "published",
     listingFilter: {
@@ -181,7 +181,7 @@ export const GUIDES: Guide[] = [
     heroImage: "/about-village-street.webp",
     seoPriority: 0.85,
     datePublished: "2026-02-27",
-    dateUpdated: "2026-02-27",
+    dateUpdated: "2026-11-11",
     tags: ["village", "shopping", "restaurants", "chapel-lane", "independent"],
     status: "published",
     listingFilter: {
