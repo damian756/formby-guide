@@ -45,7 +45,7 @@ test("STATIC_PATHS lists exactly the site's fixed pages", () => {
 });
 
 test("known pages are counted", () => {
-  for (const p of ["/", "/about", "/blog", "/guides/parking-formby-beach", "/the-open-2026/restaurants"]) {
+  for (const p of ["/", "/about", "/blog", "/guides/parking-formby-beach", "/the-open-2026"]) {
     assert.equal(isKnownPath(p, KNOWN), true, p);
   }
   assert.equal(isKnownPath(`/blog/${BLOG_POSTS[0].slug}`, KNOWN), true, "a blog post");

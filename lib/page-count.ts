@@ -53,8 +53,6 @@ export const STATIC_PATHS: readonly string[] = [
   "/red-squirrels-formby",
   "/terms",
   "/the-open-2026",
-  "/the-open-2026/accommodation",
-  "/the-open-2026/restaurants",
   "/things-to-do",
 ];
 

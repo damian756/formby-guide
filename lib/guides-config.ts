@@ -57,7 +57,7 @@ export const GUIDE_CATEGORIES: Record<GuideCategory, { label: string; descriptio
   },
   events: {
     label: "Events",
-    description: "The Open Championship, seasonal events, and what's on.",
+    description: "The Open at Royal Birkdale in 2026, seasonal events and what's on.",
   },
 };
 
@@ -218,25 +218,21 @@ export const GUIDES: Guide[] = [
   // ── Events ───────────────────────────────────────────────────────────────
   {
     slug: "the-open-2026",
-    title: "The Open Championship 2026: Stay in Formby",
-    description: "Royal Birkdale is 2 miles from Formby. Where to stay, how to get there, where to eat.",
+    title: "The Open at Royal Birkdale, 2026",
+    description: "Ryan Fox won the 154th Open with 270. Visitor golf at Royal Birkdale and getting there from Formby.",
     excerpt:
-      "The Open Championship 2026 is at Royal Birkdale: two miles from Formby. Where to stay in Formby, how to get to the course, and where to eat during Open week.",
+      "The 154th Open was played at Royal Birkdale in July 2026 and won by Ryan Fox with 270. What the club says about visitor tee times now, and getting there from Formby.",
     category: "events",
     heroImage: "/about-formby-railway.webp",
     url: "/the-open-2026",
-    seoPriority: 0.90,
+    seoPriority: 0.70,
     datePublished: "2026-02-27",
-    dateUpdated: "2026-02-27",
-    tags: ["open-2026", "golf", "royal-birkdale", "accommodation", "events"],
+    dateUpdated: "2026-11-11",
+    tags: ["open-2026", "golf", "royal-birkdale", "events"],
     status: "published",
-    listingFilter: {
-      categorySlugs: ["accommodation", "restaurants"],
-      tags: ["open-2026"],
-    },
-    metaTitle: "Stay in Formby for The Open 2026 | Royal Birkdale Guide | FormbyGuide",
+    metaTitle: "The Open at Royal Birkdale 2026: The Result, and Golf Visits from Formby | FormbyGuide",
     metaDescription:
-      "The Open Championship 2026 is at Royal Birkdale: 2 miles from Formby. Where to stay, how to get to the course, where to eat during Open week.",
+      "Ryan Fox won the 154th Open at Royal Birkdale in July 2026 with a total of 270. What the club says about visitor tee times now, and getting there from Formby.",
   },
 ];
 

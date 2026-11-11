@@ -109,14 +109,14 @@ export const COLLECTIONS: Collection[] = [
     priority: 0.82,
   },
 
-  // ── Open 2026 ─────────────────────────────────────────────────────────────
+  // ── Golf: Royal Birkdale ──────────────────────────────────────────────────
   {
     slug: "stay-near-royal-birkdale",
     title: "Places to Stay Near Royal Birkdale",
     metaDescription:
-      "Accommodation near Royal Birkdale Golf Club: where to stay in Formby for The Open 2026. B&Bs, holiday lets, and what's available.",
+      "Places to stay in and around Formby for a golf visit to Royal Birkdale Golf Club in Southport, with addresses and contact details.",
     intro:
-      "Royal Birkdale is two miles up the road from Formby. If you're coming for The Open 2026 and the obvious Birkdale and Southport options are already full, Formby is the sensible alternative: one stop on the train, decent accommodation, and noticeably less chaos. Book as early as you can; July 2026 availability across the whole area is tight.",
+      "Royal Birkdale Golf Club is on Waterloo Road, Southport, and hosted The 154th Open in July 2026. These are places to stay in and around Formby, which is on the Merseyrail line to Southport. Check the club's visitors page for tee time availability before you book.",
     tags: ["near-birkdale"],
     categorySlugs: ["accommodation"],
     emoji: "⛳",
