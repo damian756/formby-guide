@@ -135,3 +135,29 @@ Built on 11 Nov 2026 from the approved stage A proposal and Damian's picks. Ever
 **Checks:** `npx tsc --noEmit` 0 errors (15 before, all from a stale generated Prisma client); `npx eslint .` 43 errors and 6 warnings, the same as before; no em dashes in changed files. Screenshots `ads-*` at 1440 and 390, empty and filled.
 
 **For Damian:** set `RESEND_FROM_EMAIL` on Vercel to "FormbyGuide <noreply@formbyguide.co.uk>" or remove it; the privacy page still names Plausible while the site loads Ahrefs Web Analytics, and needs a line for the page counts; listing pages still say "from £29/month" without "plus VAT"; the Open 2026 pages are out of date.
+
+### 7b. Advertising build: independent review and fixes
+
+An independent reviewer read commits `d6fdce3`, `c89b0f2` and `a40ff44` cold against the build spec: 5 MUST FIX, 7 SHOULD FIX, plus two items carried over from the Wildlife review. All fixed in `6bb7899`:
+
+1. The "Relevant Listings" block in `GuideLayout` showed featured and premium listings unlabelled on guide pages, including the "best of" restaurants guide, and would have put a second paid unit beside the sponsor card. Removed, with its audience-claim copy.
+2. Spam risk once the contact form sends from a verified domain: name, subject and business name capped at 100 characters, message at 3,000; the auto-reply is fixed text with no enquirer input; hidden honeypot field `website` on the contact and claim forms (filled means ok and nothing sent). Tests added.
+3. About and disclosure claimed the guide is already funded by featured listings and adverts. Now: "Churchtown Media Ltd pays for the guide. Businesses can pay for a Featured place or a labelled advert."
+4. Paid tiers no longer sort first unlabelled on collections and the Open 2026 pages; a listing is Featured only on its primary category.
+5. Listing-page upsell now reads "from £29 a month plus VAT", linking to `/advertise#featured`.
+6. `/api/count` counts only known routes and drops cross-site requests (`Sec-Fetch-Site` not same-origin).
+7. Rules line now reads "Adverts never appear inside a review, and paying for a space does not change what we write."
+8. Featured slots on category pages can never show a sponsor card.
+9. A post with `sponsor` set always renders in the sponsored layout (no Clare bio, sponsor as author); the build fails if a sponsored post has no sponsored body.
+10. "1 to 2 working days" (UK English).
+11. End-of-post cards say "post", not "guide".
+12. A dangling sentence on the Open page fixed; internal command-centre price set to £29.
+13. Slot pages already revalidate hourly (home, guides, posts) or are dynamic (categories).
+14. Advert, Featured and Paid placement labels at 11px in full colour.
+
+Checks after the fixes: tests 32 of 32; tsc 0 errors; eslint 43 errors and 6 warnings (unchanged baseline); no em dash in changed files. Screenshots `adsfix-*`. Left for Damian: some listing descriptions (database data, not touched) contain em dashes.
+
+### Forms (for live testing after the push)
+
+- https://www.formbyguide.co.uk/contact : POST `/api/contact`. Required `name` (max 100), `email` (one plain address, max 254), `message` (max 3,000). Optional `subject` (max 100; "Claim my listing", "Advertise / Featured listing", "Report an issue", "General enquiry") and `businessName` (max 100). Honeypot `website` must be empty. Delivers to damian@churchtownmedia.co.uk from noreply@formbyguide.co.uk (unless `RESEND_FROM_EMAIL` is set on Vercel).
+- https://www.formbyguide.co.uk/claim-listing : same route and fields; `subject` fixed to "Claim my listing".
