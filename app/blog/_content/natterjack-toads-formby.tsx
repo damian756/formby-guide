@@ -28,6 +28,7 @@ export default function PostContent() {
               url: "https://www.churchtownmedia.co.uk",
             },
             datePublished: "2026-02-22",
+            dateModified: "2026-11-11",
             inLanguage: "en-GB",
           }),
         }}

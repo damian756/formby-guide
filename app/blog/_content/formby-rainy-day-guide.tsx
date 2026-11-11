@@ -16,6 +16,7 @@ export default function PostContent() {
             description: "Rainy day in Formby? Here is what Clare actually recommends: where to eat, where to shelter, and what is worth doing even in the wet.",
             url: "https://www.formbyguide.co.uk/blog/formby-rainy-day-guide",
             datePublished: "2026-07-01",
+            dateModified: "2026-11-11",
             author: { "@type": "Person", "@id": "https://www.formbyguide.co.uk/about#clare", name: "Clare", url: "https://www.formbyguide.co.uk/about" },
             publisher: { "@type": "Organization", "@id": "https://www.churchtownmedia.co.uk/#organization", name: "Churchtown Media", url: "https://www.churchtownmedia.co.uk" },
             image: "https://www.formbyguide.co.uk/blog-formby-rainy-day.webp",

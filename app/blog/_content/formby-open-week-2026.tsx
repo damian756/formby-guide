@@ -12,6 +12,7 @@ export default function PostContent() {
         description: "Written during Open week in July 2026: Formby as a quieter alternative to Southport while The 154th Open was on at Royal Birkdale. Ryan Fox won with 270.",
         url: "https://www.formbyguide.co.uk/blog/formby-open-week-2026",
         datePublished: "2026-07-14",
+        dateModified: "2026-11-11",
         author: { "@type": "Person", "@id": "https://www.formbyguide.co.uk/about#clare", name: "Clare" },
         publisher: { "@type": "Organization", name: "Churchtown Media", url: "https://www.churchtownmedia.co.uk" },
         image: "https://www.formbyguide.co.uk/blog-formby-open-week.webp",

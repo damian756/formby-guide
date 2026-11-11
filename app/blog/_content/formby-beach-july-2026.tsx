@@ -17,6 +17,7 @@ export default function PostContent() {
               "July is peak season at Formby Beach. Parking fills by 10am on good weather days. Here is a guide to visiting in July, including timing, what to bring, and when to avoid the worst of the crowds.",
             url: "https://www.formbyguide.co.uk/blog/formby-beach-july-2026",
             datePublished: "2026-06-22",
+            dateModified: "2026-11-11",
             author: {
               "@type": "Person",
               "@id": "https://www.formbyguide.co.uk/about#clare",

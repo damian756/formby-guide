@@ -16,6 +16,7 @@ export default function PostContent() {
             description: "Planning your first visit to the National Trust at Formby? Clare covers parking, which trails to walk, red squirrel sighting odds in July, and what to bring.",
             url: "https://www.formbyguide.co.uk/blog/formby-national-trust-first-visit",
             datePublished: "2026-07-01",
+            dateModified: "2026-11-11",
             author: { "@type": "Person", "@id": "https://www.formbyguide.co.uk/about#clare", name: "Clare", url: "https://www.formbyguide.co.uk/about" },
             publisher: { "@type": "Organization", "@id": "https://www.churchtownmedia.co.uk/#organization", name: "Churchtown Media", url: "https://www.churchtownmedia.co.uk" },
             image: "https://www.formbyguide.co.uk/blog-formby-nt-first-visit.webp",

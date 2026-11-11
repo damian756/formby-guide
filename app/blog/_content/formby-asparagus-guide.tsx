@@ -12,7 +12,7 @@ export default function PostContent() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            headline: "Formby Asparagus: The Local Delicacy You Should Be Eating Right Now",
+            headline: "Formby Asparagus: The Local Delicacy You Should Be Eating in Season",
             description:
               "Formby asparagus grows in the same sandy soil as the red squirrel pinewoods. The season runs to mid-June. Where to buy it locally, how to cook it, and why the Formby variety has its own flavour.",
             url: "https://www.formbyguide.co.uk/blog/formby-asparagus-guide",
@@ -58,7 +58,7 @@ export default function PostContent() {
         <div className="relative container mx-auto px-4 max-w-5xl pb-10 pt-16">
           <span className="inline-block bg-[#2E6B3E] text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">Food</span>
           <h1 className="font-display text-3xl md:text-5xl font-bold leading-tight max-w-3xl">
-            Formby Asparagus: The Local Delicacy You Should Be Eating Right Now
+            Formby Asparagus: The Local Delicacy You Should Be Eating in Season
           </h1>
           <p className="text-white/80 mt-3 text-lg max-w-2xl">
             The asparagus season ends in June. Formby&apos;s sandy soil grows some of the best in the country. If you haven&apos;t bought it yet this year, this week is your last chance.

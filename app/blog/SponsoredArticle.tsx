@@ -52,6 +52,7 @@ export default function SponsoredArticle({ slug, children }: { slug: string; chi
             description: post.excerpt,
             url,
             datePublished: isoDate(post.date),
+            ...(post.dateModified ? { dateModified: post.dateModified } : {}),
             author: { "@type": "Organization", name: sponsor.name, url: sponsor.url },
             publisher: {
               "@type": "Organization",

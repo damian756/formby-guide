@@ -18,6 +18,7 @@ export default function PostContent() {
               "The coastal walk from Formby Point south to Ainsdale beach covers about three miles of open sand and dune path. What to expect, how long it takes, and practical information for the route.",
             url: "https://www.formbyguide.co.uk/blog/ainsdale-beach-walk-from-formby",
             datePublished: "2026-06-22",
+            dateModified: "2026-11-11",
             author: {
               "@type": "Person",
               "@id": "https://www.formbyguide.co.uk/about#clare",

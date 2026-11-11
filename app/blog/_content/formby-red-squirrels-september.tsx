@@ -17,6 +17,7 @@ export default function PostContent() {
               "September is when the red squirrel sighting odds at Formby start to climb. The summer crowds are mostly gone, the squirrels are busier ahead of winter, and the pinewoods feel different.",
             url: "https://www.formbyguide.co.uk/blog/formby-red-squirrels-september",
             datePublished: "2026-08-21",
+            dateModified: "2026-11-11",
             author: {
               "@type": "Person",
               "@id": "https://www.formbyguide.co.uk/about#clare",

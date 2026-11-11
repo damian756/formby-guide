@@ -17,6 +17,7 @@ export default function PostContent() {
               "August at Formby is brilliant if you time it right. The beach is at its widest, the squirrels are active, and the evenings in the village are everything a late summer evening should be.",
             url: "https://www.formbyguide.co.uk/blog/formby-august-guide",
             datePublished: "2026-08-21",
+            dateModified: "2026-11-11",
             author: {
               "@type": "Person",
               "@id": "https://www.formbyguide.co.uk/about#clare",

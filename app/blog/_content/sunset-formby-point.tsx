@@ -19,6 +19,7 @@ export default function PostContent() {
             author: { "@type": "Person", "@id": "https://www.formbyguide.co.uk/about#clare", name: "Clare", url: "https://www.formbyguide.co.uk/about" },
             publisher: { "@type": "Organization", "@id": "https://www.churchtownmedia.co.uk/#organization", name: "Churchtown Media", url: "https://www.churchtownmedia.co.uk" },
             datePublished: "2026-06-01",
+            dateModified: "2026-11-11",
             inLanguage: "en-GB",
           }),
         }}

@@ -18,6 +18,7 @@ export default function PostContent() {
               "September and October are the best months to visit the National Trust at Formby. The squirrels are busier, the pinewoods look different, and the car park is manageable before 10am.",
             url: "https://www.formbyguide.co.uk/blog/formby-nt-autumn-visit",
             datePublished: "2026-09-09",
+            dateModified: "2026-11-11",
             author: {
               "@type": "Person",
               "@id": "https://www.formbyguide.co.uk/about#clare",

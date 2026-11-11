@@ -12,12 +12,13 @@ export default function PostContent() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            headline: "Formby Beach Right Now: Late May Conditions, Parking and What to Expect",
+            headline: "Formby Beach in Late May: Conditions, Parking and What to Expect",
             description: "Late May at Formby Beach: what conditions are like, when the car park fills, tide timing, dog rules and where to go for lunch after.",
             url: "https://www.formbyguide.co.uk/blog/formby-beach-late-may-2026",
             author: { "@type": "Person", "@id": "https://www.formbyguide.co.uk/about#clare", name: "Clare", url: "https://www.formbyguide.co.uk/about" },
             publisher: { "@type": "Organization", "@id": "https://www.churchtownmedia.co.uk/#organization", name: "Churchtown Media", url: "https://www.churchtownmedia.co.uk" },
             datePublished: "2026-05-28",
+            dateModified: "2026-11-11",
             inLanguage: "en-GB",
           }),
         }}
@@ -51,7 +52,7 @@ export default function PostContent() {
               Seasonal
             </div>
             <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-4">
-              Formby Beach Right Now: Late May Conditions, Parking and What to Expect
+              Formby Beach in Late May: Conditions, Parking and What to Expect
             </h1>
             <p className="text-lg text-white/80">28 May 2026 · 5 min read · Written by Clare</p>
           </div>

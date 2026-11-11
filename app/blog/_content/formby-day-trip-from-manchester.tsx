@@ -17,6 +17,7 @@ export default function PostContent() {
               "Manchester to Formby by train is under 90 minutes. Most people from Manchester have never been. Here is a guide to how to get there, what to do, and whether it is worth the journey.",
             url: "https://www.formbyguide.co.uk/blog/formby-day-trip-from-manchester",
             datePublished: "2026-09-09",
+            dateModified: "2026-11-11",
             author: {
               "@type": "Person",
               "@id": "https://www.formbyguide.co.uk/about#clare",

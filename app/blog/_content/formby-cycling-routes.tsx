@@ -13,6 +13,7 @@ export default function PostContent() {
         description: "Cycling routes in Formby: the coastal path, NT access tracks and village lanes. What is rideable, where to park a bike, and the honest assessment of what works for families.",
         url: "https://www.formbyguide.co.uk/blog/formby-cycling-routes",
         datePublished: "2026-07-14",
+        dateModified: "2026-11-11",
         author: { "@type": "Person", "@id": "https://www.formbyguide.co.uk/about#clare", name: "Clare" },
         publisher: { "@type": "Organization", name: "Churchtown Media", url: "https://www.churchtownmedia.co.uk" },
         image: "https://www.formbyguide.co.uk/blog-formby-cycling.webp",

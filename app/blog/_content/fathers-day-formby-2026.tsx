@@ -17,6 +17,7 @@ export default function PostContent() {
               "Father's Day in Formby on 21 June: where to book a meal, things to do with the family, and what makes a good day out in Formby with a dad in tow.",
             url: "https://www.formbyguide.co.uk/blog/fathers-day-formby-2026",
             datePublished: "2026-06-10",
+            dateModified: "2026-11-11",
             author: {
               "@type": "Person",
               "@id": "https://www.formbyguide.co.uk/about#clare",
