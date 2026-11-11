@@ -33,6 +33,8 @@ type AreaDef = { key: string; label: string };
 
 type Props = {
   businesses: BrowserBusiness[];
+  /** Paid Featured places shown on this page (at most two, already first in `businesses`). */
+  featuredSlugs?: string[];
   mapPins: MapPinType[];
   accentColor: string;
   themeGradient: string;
@@ -64,6 +66,7 @@ function getAreaLabel(address: string, postcode: string): string {
 
 export default function CategoryBrowser({
   businesses,
+  featuredSlugs = [],
   mapPins,
   accentColor,
   themeGradient,
@@ -249,7 +252,7 @@ export default function CategoryBrowser({
       ) : (
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {filtered.map((b) => {
-            const isFeatured = b.listingTier === "featured" || b.listingTier === "premium";
+            const isFeatured = featuredSlugs.includes(b.slug);
             const areaLabel = getAreaLabel(b.address, b.postcode);
             const snippet = getSnippet(b);
 
@@ -283,8 +286,13 @@ export default function CategoryBrowser({
                   )}
 
                   {isFeatured && (
-                    <span className="absolute top-3 left-3 text-[10px] font-black bg-[#C9A96E] text-[#1C3220] px-2.5 py-1 rounded-full uppercase tracking-wider shadow-sm">
-                      ✦ Featured
+                    <span className="absolute top-3 left-3 flex flex-col items-start gap-1">
+                      <span className="text-[10px] font-black bg-[#C9A96E] text-[#1C3220] px-2.5 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                        ✦ Featured
+                      </span>
+                      <span className="text-[10px] font-semibold bg-white/90 text-[#1C3220]/75 px-2 py-0.5 rounded-full shadow-sm">
+                        Paid placement
+                      </span>
                     </span>
                   )}
                 </div>

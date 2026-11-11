@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import ClareBio from "../ClareBio";
+import AdSlot from "@/components/AdSlot";
 
 export default function PostContent() {
   return (
@@ -79,6 +80,11 @@ export default function PostContent() {
             <Link href="/formby-beach" className="inline-flex items-center justify-center border-2 border-[#2E6B3E] text-[#2E6B3E] px-6 py-3 rounded-lg font-semibold hover:bg-[#2E6B3E] hover:text-white transition-colors">Formby Beach Guide</Link>
           </div>
         </div>
+        {/* End-of-post sponsor (lib/ad-slots.ts) */}
+        <div className="mt-10">
+          <AdSlot id="post-formby-cycling-routes" />
+        </div>
+
         <ClareBio />
       </article>
     </div>

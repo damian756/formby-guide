@@ -35,7 +35,7 @@ export default function DisclosurePage() {
             <p className="text-[#C9A96E] text-xs font-bold uppercase tracking-widest">Transparency</p>
           </div>
           <h1 className="font-display text-4xl font-bold text-white mb-2">Disclosure</h1>
-          <p className="text-white/50 text-sm">Last updated: 5 October 2026</p>
+          <p className="text-white/50 text-sm">Last updated: 11 November 2026</p>
         </div>
       </section>
 
@@ -52,10 +52,18 @@ export default function DisclosurePage() {
           <section>
             <h2 className={h2}>How it is paid for</h2>
             <p className={`${p} mb-3`}>
-              The guide is paid for by Churchtown Media Ltd and by featured listings from local businesses. Some external links earn us a small affiliate commission, and these are marked where they appear.
+              The guide is paid for by Churchtown Media Ltd and by featured listings and advertising from local businesses. We do not use affiliate links.
             </p>
             <p className={p}>
               A paid listing gives a business more visibility in the directory. It does not change what we write about that business.
+            </p>
+          </section>
+
+          <section id="advertising" className="scroll-mt-24">
+            <h2 className={h2}>Advertising</h2>
+            <p className={p}>
+              Adverts and sponsors are labelled on the card itself: Advertisement, Sponsor, or Sponsored for a sponsored article. Featured places at the top of a category page are paid for, and are marked Featured and Paid placement. Links to advertisers are marked as sponsored for search engines. Paying for any of these does not change what we write. Prices and rules are on our{" "}
+              <Link href="/advertise" className="text-[#2E6B3E] hover:underline font-medium">advertising page</Link>.
             </p>
           </section>
 

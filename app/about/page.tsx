@@ -127,7 +127,8 @@ export default function AboutPage() {
                   <span className="font-semibold text-[#1C3220]">A note on transparency:</span>{" "}
                   Clare is an editorial voice: a persona built from genuine local knowledge. The
                   real person behind FormbyGuide is Damian Roche of Churchtown Media. All content
-                  reflects real first-hand knowledge of the area. No sponsored editorial.
+                  reflects real first-hand knowledge of the area. Nothing under Clare&apos;s name is paid for: a
+                  sponsored article is labelled Sponsored and carries the name of the business that paid.
                 </p>
               </div>
             </div>
@@ -214,12 +215,11 @@ export default function AboutPage() {
             <h2 className="font-display text-2xl font-bold text-[#1C3220] mb-5">How it&apos;s funded</h2>
             <div className="bg-white rounded-2xl border border-gray-100 p-8">
               <p className="text-gray-700 leading-relaxed mb-4">
-                FormbyGuide is free to use. It&apos;s funded by featured placement: businesses can
-                pay for premium positioning in listings. This is disclosed clearly on the site.
+                FormbyGuide is free to use. It&apos;s funded by featured placement and advertising:
+                businesses can pay to appear first in their category, or for a clearly labelled advert.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Featured placement has no influence on what gets written. We may also earn affiliate
-                commissions from some external links. These are disclosed where they appear.
+                Featured placement and advertising have no influence on what gets written.
               </p>
               <p className="text-gray-700 leading-relaxed mt-4">
                 Our publisher&apos;s interests are listed on the{" "}

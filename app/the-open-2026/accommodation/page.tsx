@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight, Star, MapPin, ArrowRight, Hotel } from "lucide-react";
 import { prisma } from "@/lib/prisma";
-import { LATEROOMS, COTTAGES, SYKES } from "@/lib/affiliate-links";
 
 export const revalidate = 3600;
 
@@ -151,17 +150,14 @@ export default async function OpenAccommodationPage() {
               Accommodation listings coming soon
             </h2>
             <p className="text-gray-500 max-w-sm mx-auto text-sm mb-6">
-              We&apos;re adding accommodation listings. In the meantime, search LateRooms for Formby 
-              to compare prices and availability.
+              We&apos;re adding accommodation listings. In the meantime, see our places to stay in Formby.
             </p>
-            <a
-              href={LATEROOMS.formbyOpen2026}
-              target="_blank"
-              rel="noopener noreferrer sponsored"
+            <Link
+              href="/accommodation"
               className="inline-flex items-center gap-2 bg-[#1C3220] text-white px-6 py-3 rounded-full font-semibold text-sm hover:bg-[#2E6B3E] transition-colors"
             >
-              Search Formby on LateRooms →
-            </a>
+              Places to stay in Formby →
+            </Link>
           </div>
         ) : (
           <>
@@ -231,63 +227,6 @@ export default async function OpenAccommodationPage() {
             </div>
           </>
         )}
-
-        {/* ── LateRooms CTA ──────────────────────────────────────────── */}
-        <div className="mt-10 bg-gradient-to-r from-[#1C3220] to-[#2E6B3E] rounded-2xl p-7 flex flex-col sm:flex-row items-center gap-6">
-          <div className="flex-1 text-center sm:text-left">
-            <p className="text-[#C9A96E] text-xs font-bold uppercase tracking-widest mb-1">Partner</p>
-            <h3 className="font-display text-xl font-bold text-white mb-2">Compare Formby Hotels for Open Week</h3>
-            <p className="text-white/70 text-sm leading-relaxed">
-              Search availability for 12-19 July 2026 across Formby hotels, B&Bs and guest houses. Free cancellation on most rooms.
-            </p>
-          </div>
-          <a
-            href={LATEROOMS.formbyOpen2026}
-            target="_blank"
-            rel="noopener noreferrer sponsored"
-            className="flex-none bg-[#C9A96E] hover:bg-[#E8C87A] text-[#1C3220] font-bold text-sm px-6 py-3.5 rounded-full transition-colors whitespace-nowrap"
-          >
-            Search on LateRooms →
-          </a>
-        </div>
-
-        {/* ── Sykes Cottages CTA ────────────────────────────────────── */}
-        <div className="mt-6 bg-white border border-gray-200 rounded-2xl p-7 flex flex-col sm:flex-row items-center gap-6">
-          <div className="flex-1 text-center sm:text-left">
-            <p className="text-[#C9A96E] text-xs font-bold uppercase tracking-widest mb-1">Self-Catering Partner</p>
-            <h3 className="font-display text-xl font-bold text-[#1C3220] mb-2">Cottages Near Formby for Open Week</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Sykes Cottages have self-catering properties in Formby for Open week. A group in a cottage costs less per head than hotel rooms, you have a kitchen and a proper base. Formby is two miles from Royal Birkdale, one stop on the train.
-            </p>
-          </div>
-          <a
-            href={SYKES.formbyOpen2026}
-            target="_blank"
-            rel="noopener noreferrer sponsored"
-            className="flex-none bg-[#1C3220] hover:bg-[#C9A96E] hover:text-[#1C3220] text-white font-bold text-sm px-6 py-3.5 rounded-full transition-colors whitespace-nowrap"
-          >
-            Search Sykes Cottages →
-          </a>
-        </div>
-
-        {/* ── Cottages.com CTA ──────────────────────────────────────── */}
-        <div className="mt-6 bg-white border border-gray-200 rounded-2xl p-7 flex flex-col sm:flex-row items-center gap-6">
-          <div className="flex-1 text-center sm:text-left">
-            <p className="text-[#C9A96E] text-xs font-bold uppercase tracking-widest mb-1">Self-Catering Partner</p>
-            <h3 className="font-display text-xl font-bold text-[#1C3220] mb-2">More Holiday Lets Near Formby</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Cottages.com also cover properties across Formby and the wider Sefton Coast. Worth checking if Sykes doesn&apos;t have availability for your dates.
-            </p>
-          </div>
-          <a
-            href={COTTAGES.summerSale}
-            target="_blank"
-            rel="noopener noreferrer sponsored"
-            className="flex-none bg-[#1C3220] hover:bg-[#C9A96E] hover:text-[#1C3220] text-white font-bold text-sm px-6 py-3.5 rounded-full transition-colors whitespace-nowrap"
-          >
-            Browse on Cottages.com →
-          </a>
-        </div>
 
         {/* ── Getting there ─────────────────────────────────────────── */}
         <div className="mt-14 bg-[#1C3220] rounded-2xl p-6 md:p-8 text-white">

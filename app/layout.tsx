@@ -3,6 +3,8 @@ import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import NavMenu from "./components/NavMenu";
+import { DISPLAY_EMAIL } from "@/lib/contact";
+import PageCountBeacon from "@/components/PageCountBeacon";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -97,6 +99,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Navigation />
         <main>{children}</main>
         <Footer />
+        <PageCountBeacon />
       </body>
     </html>
   );
@@ -232,8 +235,8 @@ function Footer() {
             Run a business in Formby?{" "}
             <span className="text-[#C9A96E] font-semibold">Partner with the Sefton Coast Network</span>
           </p>
-          <a href="mailto:hello@seftoncoast.network" className="text-[#C9A96E] hover:text-white transition font-medium text-sm">
-            hello@seftoncoast.network →
+          <a href={`mailto:${DISPLAY_EMAIL}`} className="text-[#C9A96E] hover:text-white transition font-medium text-sm">
+            {DISPLAY_EMAIL} →
           </a>
         </div>
 

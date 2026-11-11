@@ -3,20 +3,29 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Send, CheckCircle, AlertCircle, MapPin, Clock } from "lucide-react";
+import { ADVERTISING_SUBJECT } from "@/lib/contact-form";
 
 const SUBJECTS = [
   "Claim my listing",
-  "Advertise / Featured listing",
+  ADVERTISING_SUBJECT,
   "Report an issue",
   "General enquiry",
 ];
 
-export default function ContactClient() {
-  const [form, setForm] = useState({ name: "", email: "", subject: SUBJECTS[0], businessName: "", message: "" });
+type Props = {
+  /** Preselected enquiry type, e.g. from /contact?topic=advertise. */
+  initialSubject?: string;
+  /** Prefilled message, e.g. "I'm interested in: Home page card". */
+  initialMessage?: string;
+};
+
+export default function ContactClient({ initialSubject, initialMessage }: Props) {
+  const startSubject = initialSubject && SUBJECTS.includes(initialSubject) ? initialSubject : SUBJECTS[0];
+  const [form, setForm] = useState({ name: "", email: "", subject: startSubject, businessName: "", message: initialMessage ?? "" });
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
-  const isBusiness = form.subject === "Claim my listing" || form.subject === "Advertise / Featured listing";
+  const isBusiness = form.subject === "Claim my listing" || form.subject === ADVERTISING_SUBJECT;
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();

@@ -1,328 +1,171 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { BarChart2, Star, TrendingUp, Users, CheckCircle, ArrowRight, Mail, Shield, Globe } from "lucide-react";
+import { Check } from "lucide-react";
+import { AD_OPTIONS, AD_SLOTS, NETWORK_BUNDLE, describeSpace, enquiryHref, getAdOption, type AdOption } from "@/lib/ad-slots";
+import { DISPLAY_EMAIL } from "@/lib/contact";
 
 const BASE_URL = "https://www.formbyguide.co.uk";
+const TITLE = "Advertise on FormbyGuide | Sefton Coast Network";
+const DESCRIPTION =
+  "Advertise on FormbyGuide.co.uk: Featured places in a category, guide sponsors, a home page card and sponsored articles. Fixed prices, clearly labelled adverts, payment by invoice.";
 
 export const metadata: Metadata = {
-  title: "Advertise on FormbyGuide | Sefton Coast Network",
-  description: "Reach Formby visitors and local residents. Featured business listings and display advertising across the Sefton Coast Network.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: `${BASE_URL}/advertise` },
   openGraph: {
-    title: "Advertise on FormbyGuide | Sefton Coast Network",
-    description: "Reach Formby visitors and local residents. Featured listings and display advertising across the Sefton Coast Network.",
+    title: TITLE,
+    description: DESCRIPTION,
     url: `${BASE_URL}/advertise`,
     type: "website",
     siteName: "FormbyGuide.co.uk",
     locale: "en_GB",
     images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "FormbyGuide.co.uk" }],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Advertise on FormbyGuide | Sefton Coast Network",
-    description: "Reach Formby visitors and local residents. Featured listings and display advertising across the Sefton Coast Network.",
-  },
+  twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION },
 };
 
-const NETWORK_PACKAGES = [
-  {
-    name: "Core",
-    sites: "FormbyGuide + SouthportGuide",
-    price: "£450",
-    total: "£2,700",
-    featured: false,
-    features: [
-      "Display placement on FormbyGuide category and guide pages, by arrangement",
-      "Home page placement on SouthportGuide, by arrangement",
-      "Category exclusivity on both sites",
-      "Monthly performance reporting",
-    ],
-  },
-  {
-    name: "Premium",
-    sites: "FormbyGuide + SouthportGuide + SeftonLinks",
-    price: "£650",
-    total: "£3,900",
-    featured: true,
-    features: [
-      "All Core placements",
-      "Display placement on SeftonLinks, by arrangement",
-      "Category exclusivity across all three sites",
-      "Up to 2 creative updates per month",
-      "Monthly performance reporting",
-    ],
-  },
-  {
-    name: "Full Network",
-    sites: "All four Sefton Coast Network sites",
-    price: "£800",
-    total: "£4,800",
-    featured: false,
-    features: [
-      "All Premium placements",
-      "SeftonCoastWildlife included",
-      "All four sites on one invoice",
-      "Quarterly review call",
-      "Monthly performance reporting",
-    ],
-  },
-];
+type Props = { searchParams: Promise<{ space?: string | string[] }> };
 
-const PACKAGES = [
-  {
-    name: "Free",
-    price: "£0",
-    period: "forever",
-    highlight: false,
-    description: "Get found by visitors searching for things to do in Formby.",
-    features: [
-      "Listed in your category",
-      "Business name, address & description",
-      "Website & phone number",
-      "Opening hours",
-    ],
-    cta: "Claim free listing",
-    href: "/claim-listing",
-  },
-  {
-    name: "Featured",
-    price: "Coming soon",
-    period: "",
-    highlight: true,
-    description: "Stand out at the top of your category and on the homepage.",
-    features: [
-      "Everything in Free",
-      "Top placement in category",
-      "Featured badge",
-      "Homepage rotation",
-      "Monthly analytics report",
-      "Priority support",
-    ],
-    cta: "Register your interest",
-    href: "/contact",
-  },
-];
+export default async function AdvertisePage({ searchParams }: Props) {
+  const raw = (await searchParams).space;
+  const requested = typeof raw === "string" ? raw : undefined;
+  // Only known space or option ids are used; anything else is ignored.
+  const spaceTitle = describeSpace(requested);
+  const space = spaceTitle ? requested : undefined;
+  const askedOption = space ? (AD_SLOTS[space]?.option ?? getAdOption(space)?.id) : undefined;
 
-const STATS = [
-  { icon: Users, label: "Target audience", value: "Day visitors & locals", sub: "People actively planning a Formby visit" },
-  { icon: BarChart2, label: "Local directory", value: "350+ business listings", sub: "Restaurants, cafés, pubs, places to stay and shops" },
-  { icon: TrendingUp, label: "Visitor guides", value: "Beach, pinewoods, squirrels", sub: "Plus parking, things to do and a seasonal blog" },
-  { icon: Star, label: "Local authority", value: "Built by Churchtown Media", sub: "Also behind SouthportGuide.co.uk" },
-];
+  // "Ask about" carries the exact space when it belongs to this option.
+  const askHref = (o: AdOption) => enquiryHref(space && askedOption === o.id ? space : o.id);
 
-export default function AdvertisePage() {
   return (
     <div className="min-h-screen bg-[#F7F9F6]">
       {/* Hero */}
       <section className="bg-[#1C3220] relative overflow-hidden">
         <div className="h-1 bg-gradient-to-r from-transparent via-[#C9A96E] to-transparent" />
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-[#C9A96E]/5 rounded-full -translate-y-24 translate-x-24 blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#2E6B3E]/20 rounded-full translate-y-16 -translate-x-16 blur-3xl" />
-        </div>
-        <div className="relative container mx-auto px-4 max-w-6xl py-16 md:py-24">
+        <div className="relative container mx-auto px-4 max-w-6xl py-14 md:py-20">
           <div className="max-w-3xl">
-            <p className="text-[#C9A96E] text-xs font-bold uppercase tracking-widest mb-4">Advertising and Partnerships</p>
+            <p className="text-[#C9A96E] text-xs font-bold uppercase tracking-widest mb-4">Advertising</p>
             <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-              Reach the Formby audience.<br />And the whole Sefton Coast.
+              Advertise to people planning a day in Formby
             </h1>
             <p className="text-lg text-white/70 leading-relaxed mb-8">
-              FormbyGuide is part of the Sefton Coast Network: four independent editorial sites covering Southport, Formby, and the links golf corridor. List your Formby business, or advertise across the network.
+              Simple local options at fixed prices. Every advert is clearly labelled, and there are no ad networks and no advertising cookies.
             </p>
             <div className="flex flex-wrap gap-3">
-              <a href="mailto:partnerships@seftoncoast.network" className="inline-flex items-center gap-2 bg-[#C9A96E] hover:bg-[#b8944f] text-white font-bold px-6 py-3 rounded-full transition-colors">
-                <Mail className="w-4 h-4" />
-                partnerships@seftoncoast.network
-              </a>
+              <Link href={enquiryHref(space)} className="inline-flex items-center gap-2 bg-[#C9A96E] hover:bg-[#b8944f] text-white font-bold px-6 py-3 rounded-full transition-colors">
+                Ask about a space
+              </Link>
               <Link href="/claim-listing" className="border border-white/30 text-white hover:bg-white/10 font-semibold px-6 py-3 rounded-full transition-colors">
-                Claim free listing
+                Claim your free listing
               </Link>
             </div>
           </div>
         </div>
-        <div className="relative h-8 overflow-hidden">
-          <svg viewBox="0 0 1440 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute bottom-0 w-full" preserveAspectRatio="none">
-            <path d="M0 32L720 12L1440 32V32H0Z" fill="#F7F9F6"/>
-          </svg>
-        </div>
       </section>
 
-      {/* Network display advertising section */}
-      <section className="bg-[#0d1b2a] text-white px-4 py-14">
-        <div className="container mx-auto max-w-6xl">
-          <div className="flex flex-col md:flex-row items-start gap-10">
-            <div className="md:w-1/2">
-              <p className="text-[#C9A96E] text-xs font-bold uppercase tracking-widest mb-3">Sefton Coast Network</p>
-              <h2 className="text-2xl font-bold mb-4 leading-tight">Display advertising across the network</h2>
-              <p className="text-white/65 text-sm leading-relaxed mb-4">
-                Display advertising on FormbyGuide can be combined with SouthportGuide, SeftonLinks and Sefton Coast Wildlife in a single package, with placements agreed with you.
-              </p>
-              <p className="text-white/65 text-sm leading-relaxed">
-                Six-month minimum contract. Email us to request the full media kit.
-              </p>
-              <a href="mailto:partnerships@seftoncoast.network" className="inline-flex items-center gap-2 mt-6 bg-[#C9A96E] hover:bg-[#b8944f] text-white font-semibold px-5 py-2.5 rounded-lg text-sm transition-colors">
-                <Mail className="w-4 h-4" />
-                Request media kit
-              </a>
-            </div>
-            <div className="md:w-1/2 grid gap-4">
-              {[
-                { icon: <Globe className="w-5 h-5 text-[#C9A96E]" />, title: "One invoice", body: "One relationship and one invoice for every site in your package." },
-                { icon: <Shield className="w-5 h-5 text-[#C9A96E]" />, title: "Category exclusivity", body: "No direct competitor in your category will appear on the same site during your contract. A firm commitment." },
-              ].map((item) => (
-                <div key={item.title} className="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
-                  <div className="flex-shrink-0 mt-0.5">{item.icon}</div>
-                  <div>
-                    <h3 className="font-semibold text-sm text-white mb-1">{item.title}</h3>
-                    <p className="text-white/55 text-xs leading-relaxed">{item.body}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Options */}
+      <section className="container mx-auto px-4 max-w-6xl py-14">
+        <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-2">Ways to advertise</h2>
+        <p className="text-[#1C3220]/60 text-sm mb-8 max-w-2xl">
+          All prices are plus VAT. Every listing in the directory stays free; these options add visibility on top.
+        </p>
 
-      {/* Network packages */}
-      <section className="bg-[#E8EDE6] px-4 py-14">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-8">
-            <p className="text-[#C9A96E] text-xs font-bold uppercase tracking-widest mb-2">Display advertising</p>
-            <h2 className="font-display text-2xl font-bold text-[#1C3220]">Network packages</h2>
-            <p className="text-[#1C3220]/55 text-sm mt-2">Six-month minimum contract. Category exclusivity included on all packages.</p>
+        {spaceTitle && (
+          <div className="mb-8 rounded-xl border border-[#2E6B3E]/30 bg-[#2E6B3E]/5 px-5 py-4 text-sm text-[#1C3220]">
+            <span className="font-semibold">You asked about: {spaceTitle}.</span>{" "}
+            {askedOption && <>It is part of the {getAdOption(askedOption)?.name} option, marked below.</>}
           </div>
-          <div className="grid md:grid-cols-3 gap-5">
-            {NETWORK_PACKAGES.map((pkg) => (
-              <div key={pkg.name} className={`rounded-2xl overflow-hidden border-2 ${pkg.featured ? "border-[#C9A96E]" : "border-[#1C3220]/10"}`}>
-                <div className={`px-5 py-4 ${pkg.featured ? "bg-[#1C3220]" : "bg-white"}`}>
-                  {pkg.featured && <span className="inline-block bg-[#C9A96E] text-white text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded mb-2">Recommended</span>}
-                  <h3 className={`font-bold text-lg ${pkg.featured ? "text-white" : "text-[#1C3220]"}`}>{pkg.name}</h3>
-                  <p className={`text-xs mt-0.5 ${pkg.featured ? "text-white/55" : "text-[#1C3220]/40"}`}>{pkg.sites}</p>
-                </div>
-                <div className="p-5 bg-white">
-                  <div className="text-2xl font-extrabold text-[#1C3220] mb-0.5">{pkg.price}<span className="text-sm font-normal text-[#1C3220]/40"> / month</span></div>
-                  <p className="text-xs text-[#1C3220]/40 mb-4">{pkg.total} · 6-month minimum contract</p>
-                  <ul className="space-y-2 mb-5">
-                    {pkg.features.map((f) => (
-                      <li key={f} className="flex items-start gap-2 text-xs text-[#1C3220]/70">
-                        <CheckCircle className="w-3.5 h-3.5 text-[#2E6B3E] flex-shrink-0 mt-0.5" />
-                        {f}
-                      </li>
-                    ))}
-                  </ul>
-                  <a href="mailto:partnerships@seftoncoast.network" className={`block text-center font-semibold py-2 rounded-lg text-sm transition-colors ${pkg.featured ? "bg-[#C9A96E] hover:bg-[#b8944f] text-white" : "border border-[#1C3220] text-[#1C3220] hover:bg-[#1C3220] hover:text-white"}`}>
-                    Enquire
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        )}
 
-      {/* Stats */}
-      <section className="container mx-auto px-4 max-w-6xl py-16">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {STATS.map(({ icon: Icon, label, value, sub }) => (
-            <div key={label} className="bg-white rounded-2xl border border-[#1C3220]/8 p-6">
-              <Icon className="w-8 h-8 text-[#2E6B3E] mb-3" />
-              <p className="text-xs text-[#1C3220]/40 uppercase tracking-wider mb-1">{label}</p>
-              <p className="font-display font-bold text-[#1C3220] text-lg leading-tight mb-1">{value}</p>
-              <p className="text-xs text-[#1C3220]/50">{sub}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Why advertise */}
-      <section className="bg-[#E8EDE6] py-16">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="max-w-2xl mb-10">
-            <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-3">Why FormbyGuide?</h2>
-            <p className="text-[#1C3220]/60 leading-relaxed">
-              The National Trust site, the red squirrels and the beach bring day visitors to Formby. FormbyGuide is written for them while they are still planning, before they decide where to eat or what to do.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-5">
-            {[
-              {
-                title: "Visitors who are planning",
-                desc: "Most pages answer a planning question: where to park, where to eat, what to do on the day.",
-              },
-              {
-                title: "Guides people use",
-                desc: "The site is built around guides to the beach, the pinewoods, the red squirrels and parking.",
-              },
-              {
-                title: "Local knowledge",
-                desc: "Built by the same team behind SouthportGuide.co.uk. We understand the Sefton Coast audience and what drives them to visit.",
-              },
-            ].map(({ title, desc }) => (
-              <div key={title} className="bg-white rounded-2xl p-6 border border-[#1C3220]/8">
-                <h3 className="font-display font-bold text-[#1C3220] mb-2">{title}</h3>
-                <p className="text-sm text-[#1C3220]/60 leading-relaxed">{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing */}
-      <section className="container mx-auto px-4 max-w-6xl py-16">
-        <div className="max-w-xl mb-10">
-          <p className="text-[#C9A96E] text-xs font-bold uppercase tracking-widest mb-2">For Formby businesses</p>
-          <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-3">Business listing options</h2>
-          <p className="text-[#1C3220]/60">Get your Formby business listed in the directory. Start free, upgrade when ready.</p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
-          {PACKAGES.map((pkg) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {AD_OPTIONS.map((o) => (
             <div
-              key={pkg.name}
-              className={`rounded-2xl border p-7 flex flex-col ${pkg.highlight ? "bg-[#1C3220] border-[#1C3220]" : "bg-white border-[#1C3220]/8"}`}
+              key={o.id}
+              id={o.id}
+              className={`bg-white rounded-2xl border p-6 flex flex-col scroll-mt-24 ${
+                askedOption === o.id ? "border-[#2E6B3E] ring-2 ring-[#2E6B3E]/30" : "border-[#1C3220]/10"
+              }`}
             >
-              <div className="mb-6">
-                {pkg.highlight && (
-                  <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#C9A96E] mb-3">Most popular</span>
-                )}
-                <h3 className={`font-display text-2xl font-bold mb-1 ${pkg.highlight ? "text-white" : "text-[#1C3220]"}`}>{pkg.name}</h3>
-                <div className="flex items-baseline gap-1 mb-2">
-                  <span className={`text-3xl font-bold ${pkg.highlight ? "text-[#C9A96E]" : "text-[#1C3220]"}`}>{pkg.price}</span>
-                  {pkg.period && <span className={`text-sm ${pkg.highlight ? "text-white/50" : "text-[#1C3220]/40"}`}>/{pkg.period}</span>}
-                </div>
-                <p className={`text-sm leading-relaxed ${pkg.highlight ? "text-white/60" : "text-[#1C3220]/60"}`}>{pkg.description}</p>
-              </div>
-              <ul className="space-y-2.5 mb-8 flex-1">
-                {pkg.features.map((f) => (
-                  <li key={f} className="flex items-start gap-2.5 text-sm">
-                    <CheckCircle className={`w-4 h-4 flex-shrink-0 mt-0.5 ${pkg.highlight ? "text-[#C9A96E]" : "text-[#2E6B3E]"}`} />
-                    <span className={pkg.highlight ? "text-white/80" : "text-[#1C3220]/70"}>{f}</span>
-                  </li>
+              <h3 className="font-display text-xl font-bold text-[#1C3220] mb-3">{o.name}</h3>
+              <p className="mb-1">
+                <span className="text-3xl font-bold text-[#1C3220]">{o.price}</span>{" "}
+                <span className="text-sm text-[#1C3220]/60">{o.per} plus VAT</span>
+              </p>
+              <p className="text-xs text-[#1C3220]/50 mb-4">{o.note}</p>
+              <ul className="space-y-2 text-sm text-[#1C3220]/75 mb-5 flex-1">
+                {o.points.map((p) => (
+                  <li key={p} className="flex gap-2"><Check className="w-4 h-4 text-[#2E6B3E] flex-none mt-0.5" aria-hidden="true" />{p}</li>
                 ))}
               </ul>
-              <Link
-                href={pkg.href}
-                className={`flex items-center justify-center gap-2 py-3 rounded-full font-bold text-sm transition-colors ${
-                  pkg.highlight
-                    ? "bg-[#C9A96E] hover:bg-[#b8944f] text-white"
-                    : "bg-[#1C3220] hover:bg-[#2E6B3E] text-white"
-                }`}
-              >
-                {pkg.cta} <ArrowRight className="w-4 h-4" />
+              <p className="text-xs font-semibold text-[#2E6B3E] mb-4">{o.term}</p>
+              <Link href={askHref(o)} className="text-center bg-[#2E6B3E] hover:bg-[#1C3220] text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors">
+                Ask about this space
               </Link>
             </div>
           ))}
+
+          <div
+            id={NETWORK_BUNDLE.id}
+            className={`bg-[#1C3220] text-white rounded-2xl p-6 flex flex-col scroll-mt-24 ${
+              askedOption === NETWORK_BUNDLE.id ? "ring-2 ring-[#C9A96E]" : ""
+            }`}
+          >
+            <p className="text-[#C9A96E] text-[10px] font-bold uppercase tracking-widest mb-2">All four sites</p>
+            <h3 className="font-display text-xl font-bold mb-3">{NETWORK_BUNDLE.name}</h3>
+            <p className="mb-1">
+              <span className="text-3xl font-bold">{NETWORK_BUNDLE.price}</span>{" "}
+              <span className="text-sm text-white/60">{NETWORK_BUNDLE.per} plus VAT</span>
+            </p>
+            <p className="text-xs text-white/50 mb-4">{NETWORK_BUNDLE.note}</p>
+            <ul className="space-y-2 text-sm text-white/80 mb-5 flex-1">
+              {NETWORK_BUNDLE.points.map((p) => (
+                <li key={p} className="flex gap-2"><Check className="w-4 h-4 text-[#C9A96E] flex-none mt-0.5" aria-hidden="true" />{p}</li>
+              ))}
+            </ul>
+            <Link href={askHref(NETWORK_BUNDLE)} className="text-center bg-[#C9A96E] hover:bg-[#b8944f] text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors">
+              Ask about the bundle
+            </Link>
+          </div>
         </div>
 
-        {/* CTA */}
-        <div className="bg-[#E8EDE6] rounded-2xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="mt-8 rounded-2xl border border-[#C9A96E]/40 bg-[#C9A96E]/10 p-6">
+          <h3 className="font-display text-lg font-bold text-[#1C3220] mb-1">Founding advertisers</h3>
+          <p className="text-sm text-[#1C3220]/75">
+            Half price for your first three months, and your monthly price held for twelve months, for the first ten advertisers across the Sefton Coast sites.
+          </p>
+        </div>
+      </section>
+
+      {/* How it works + rules */}
+      <section className="bg-white border-y border-[#1C3220]/8">
+        <div className="container mx-auto px-4 max-w-6xl py-14 grid md:grid-cols-2 gap-10">
           <div>
-            <h3 className="font-display text-xl font-bold text-[#1C3220] mb-1">Not sure where to start?</h3>
-            <p className="text-[#1C3220]/60 text-sm">Claim a free listing first: it takes about 2 minutes and costs nothing.</p>
+            <h2 className="font-display text-2xl font-bold text-[#1C3220] mb-4">How it works</h2>
+            <ol className="space-y-3 text-sm text-[#1C3220]/75 list-decimal pl-5">
+              <li>
+                Tell us which space you would like through the{" "}
+                <Link href={enquiryHref(space)} className="text-[#2E6B3E] font-semibold hover:underline">contact form</Link>, or email{" "}
+                <a href={`mailto:${DISPLAY_EMAIL}`} className="text-[#2E6B3E] font-semibold hover:underline">{DISPLAY_EMAIL}</a>.
+              </li>
+              <li>We confirm the space is available and send an invoice. There is no online checkout.</li>
+              <li>Send a photo and up to 30 words. Your advert goes live within two working days.</li>
+              <li>After any minimum term, stop with a month&apos;s notice.</li>
+            </ol>
           </div>
-          <Link href="/claim-listing" className="flex-shrink-0 bg-[#2E6B3E] hover:bg-[#1C3220] text-white font-bold px-6 py-3 rounded-full transition-colors whitespace-nowrap">
-            Claim free listing →
-          </Link>
+          <div>
+            <h2 className="font-display text-2xl font-bold text-[#1C3220] mb-4">Our rules</h2>
+            <ul className="space-y-3 text-sm text-[#1C3220]/75">
+              <li className="flex gap-2"><Check className="w-4 h-4 text-[#2E6B3E] flex-none mt-0.5" aria-hidden="true" />Every advert is labelled Advertisement, Featured, Sponsor or Sponsored.</li>
+              <li className="flex gap-2"><Check className="w-4 h-4 text-[#2E6B3E] flex-none mt-0.5" aria-hidden="true" />Paid links are marked as sponsored for search engines.</li>
+              <li className="flex gap-2"><Check className="w-4 h-4 text-[#2E6B3E] flex-none mt-0.5" aria-hidden="true" />Adverts never appear inside reviews or beside the businesses we write about.</li>
+              <li className="flex gap-2"><Check className="w-4 h-4 text-[#2E6B3E] flex-none mt-0.5" aria-hidden="true" />Paying for a space does not change what we write.</li>
+            </ul>
+            <p className="text-sm text-[#1C3220]/60 mt-4">
+              More on our{" "}
+              <Link href="/disclosure#advertising" className="text-[#2E6B3E] font-semibold hover:underline">disclosure page</Link>.
+            </p>
+          </div>
         </div>
       </section>
     </div>

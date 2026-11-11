@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import ClareBio from "../ClareBio";
+import AdSlot from "@/components/AdSlot";
 
 export default function PostContent() {
   return (
@@ -172,6 +173,11 @@ export default function PostContent() {
               Walking to Ainsdale
             </Link>
           </div>
+        </div>
+
+        {/* End-of-post sponsor (lib/ad-slots.ts) */}
+        <div className="mt-10">
+          <AdSlot id="post-prehistoric-footprints-formby-point" />
         </div>
 
         <ClareBio />

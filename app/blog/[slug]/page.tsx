@@ -7,6 +7,9 @@ const BASE_URL = "https://www.formbyguide.co.uk";
 
 type Props = { params: Promise<{ slug: string }> };
 
+// Re-render hourly so an end-of-post sponsor drops off when its end date passes.
+export const revalidate = 3600;
+
 export function generateStaticParams() {
   return BLOG_POSTS.map((p) => ({ slug: p.slug }));
 }
@@ -31,7 +34,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: "FormbyGuide.co.uk",
       locale: "en_GB",
       publishedTime: post.date,
-      authors: [post.author],
+      // A sponsored article is bylined by its sponsor, never a persona.
+      authors: [post.sponsor ? post.sponsor.name : post.author],
       tags: category ? [category.label] : undefined,
       images: [{ url: `${BASE_URL}/og-default.png`, width: 1200, height: 630, alt: "FormbyGuide.co.uk" }],
     },

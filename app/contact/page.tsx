@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import ContactClient from "./ContactClient";
+import { ADVERTISING_SUBJECT } from "@/lib/contact-form";
+import { describeSpace } from "@/lib/ad-slots";
 
 const BASE_URL = "https://www.formbyguide.co.uk";
 
@@ -23,6 +25,18 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ContactPage() {
-  return <ContactClient />;
+type Props = { searchParams: Promise<{ topic?: string | string[]; space?: string | string[] }> };
+
+// Links from the advertise page arrive as /contact?topic=advertise&space=<id>:
+// preselect the advertising subject and name the space in the message.
+export default async function ContactPage({ searchParams }: Props) {
+  const { topic, space } = await searchParams;
+  const spaceTitle = describeSpace(typeof space === "string" ? space : undefined);
+  const isAdvertising = topic === "advertise" || spaceTitle !== null;
+  return (
+    <ContactClient
+      initialSubject={isAdvertising ? ADVERTISING_SUBJECT : undefined}
+      initialMessage={spaceTitle ? `I'm interested in: ${spaceTitle}\n\n` : undefined}
+    />
+  );
 }

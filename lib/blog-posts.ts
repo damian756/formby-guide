@@ -22,6 +22,14 @@ export interface BlogPost {
   /** Metadata for the individual post page */
   metaTitle?: string;
   metaDescription?: string;
+  /**
+   * Set only on a paid, sponsored article. The post is labelled Sponsored in
+   * listings and the feed, its byline is "Sponsored by <name>" (never Clare),
+   * and its content component wraps the body in <SponsoredArticle> from
+   * app/blog/SponsoredArticle.tsx (no ClareBio). Set `author` to the sponsor's
+   * name as well. Links to the sponsor carry rel="sponsored noopener".
+   */
+  sponsor?: { name: string; url: string };
 }
 
 export const BLOG_CATEGORIES: BlogCategory[] = [

@@ -3,9 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Car, Clock, Smartphone, ChevronRight, Utensils } from "lucide-react";
 import GuideLayout from "@/app/components/GuideLayout";
+import AdSlot from "@/components/AdSlot";
 import { getGuide } from "@/lib/guides-config";
 
 const BASE_URL = "https://www.formbyguide.co.uk";
+
+// Re-render hourly so a sponsor card drops off when its end date passes.
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Parking at Formby Beach | NT Car Park, Postcode & Tips | FormbyGuide",
@@ -414,6 +418,11 @@ export default function ParkingFormbyBeachPage() {
               </a>
             </div>
           </section>
+
+          {/* Guide sponsor (lib/ad-slots.ts): after the guide, away from "Where to eat". */}
+          <div className="mt-12">
+            <AdSlot id="guide-parking-formby-beach" />
+          </div>
 
         </div>
       </>

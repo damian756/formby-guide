@@ -16,6 +16,7 @@ export type BlogPost = {
   categorySlug: string;
   gradient: string;
   image?: string;
+  sponsor?: { name: string; url: string };
 };
 
 export type BlogCategory = {
@@ -205,6 +206,11 @@ export default function BlogClient({ posts, categories }: Props) {
                         style={{ backgroundColor: cat.color }}
                       >
                         {cat.label}
+                      </span>
+                    )}
+                    {post.sponsor && (
+                      <span className="absolute top-3 right-3 bg-[#C9A96E] text-[#1C3220] text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow">
+                        Sponsored
                       </span>
                     )}
                   </div>

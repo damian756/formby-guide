@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronRight, ExternalLink } from "lucide-react";
-import { GO_APE } from "@/lib/affiliate-links";
+import { ChevronRight } from "lucide-react";
+import AdSlot from "@/components/AdSlot";
 
 const BASE_URL = "https://www.formbyguide.co.uk";
+
+// Re-render hourly so a sponsor card drops off when its end date passes.
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Things To Do in Formby | Local Guide to Beaches, Walks & More",
@@ -295,25 +298,6 @@ export default function ThingsToDoPage() {
           ))}
         </div>
 
-        {/* Go Ape partner callout */}
-        <div className="mb-16 bg-[#E8EDE6] border border-[#1C3220]/10 rounded-2xl p-7 flex flex-col sm:flex-row items-center gap-6">
-          <div className="flex-1 text-center sm:text-left">
-            <p className="text-[#2E6B3E] text-xs font-bold uppercase tracking-widest mb-1">Activity Partner</p>
-            <h3 className="font-display text-xl font-bold text-[#1C3220] mb-2">Go Ape: Treetop Adventure</h3>
-            <p className="text-[#1C3220]/65 text-sm leading-relaxed">
-              The pinewoods put the idea in your head: Go Ape take it further. Treetop assault courses and zip wires at woodland sites across the UK. The nearest sites to Formby are Rivington in Lancashire (under 40 minutes) and Delamere Forest in Cheshire (around 50 minutes). Good for families who want something more physical after a morning walk.
-            </p>
-          </div>
-          <a
-            href={GO_APE.homepage}
-            target="_blank"
-            rel="noopener noreferrer sponsored"
-            className="flex-none inline-flex items-center gap-2 bg-[#1C3220] hover:bg-[#2E6B3E] text-white font-bold text-sm px-6 py-3.5 rounded-full transition-colors whitespace-nowrap"
-          >
-            Find a location <ExternalLink className="w-4 h-4" />
-          </a>
-        </div>
-
         {/* FAQ: 2 col on desktop */}
         <section className="mb-16">
           <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-6">Common questions</h2>
@@ -334,8 +318,13 @@ export default function ThingsToDoPage() {
           </div>
         </section>
 
+        {/* Guide sponsor (lib/ad-slots.ts): after the guide's main content. */}
+        <div className="mb-16">
+          <AdSlot id="guide-things-to-do" />
+        </div>
+
         {/* Explore More */}
-        <section className="mt-16 pt-12 border-t border-[#1C3220]/10 mb-16">
+        <section className="pt-12 border-t border-[#1C3220]/10 mb-16">
           <h3 className="font-display text-2xl font-bold text-[#1C3220] mb-6">Explore More Formby</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[

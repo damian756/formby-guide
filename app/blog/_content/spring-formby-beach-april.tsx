@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Calendar, Clock } from "lucide-react";
 import ClareBio from "../ClareBio";
+import AdSlot from "@/components/AdSlot";
 
 export default function PostContent() {
   return (
@@ -175,6 +176,11 @@ export default function PostContent() {
           >
             Red Squirrel Spotting Guide →
           </Link>
+        </div>
+
+        {/* End-of-post sponsor (lib/ad-slots.ts) */}
+        <div className="mt-10">
+          <AdSlot id="post-spring-formby-beach-april" />
         </div>
 
         <ClareBio />

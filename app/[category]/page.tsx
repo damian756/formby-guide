@@ -5,8 +5,9 @@ import type { Metadata } from "next";
 import { ChevronRight } from "lucide-react";
 import { getCategoryBySlug, isValidCategory } from "@/lib/config";
 import { prisma } from "@/lib/prisma";
-import { LATEROOMS } from "@/lib/affiliate-links";
 import CategoryBrowser, { type BrowserBusiness } from "@/components/CategoryBrowser";
+import AdSlot from "@/components/AdSlot";
+import { FEATURED_CATEGORIES, FEATURED_TIERS } from "@/lib/ad-slots";
 import type { MapPin } from "@/components/CategoryMapTypes";
 
 type Props = {
@@ -191,7 +192,6 @@ export default async function CategoryPage({ params, searchParams }: Props) {
           FROM "Business"
           WHERE "categoryId" = ${catId} OR ${catId} = ANY("secondaryCategoryIds")
           ORDER BY
-            CASE "listingTier" WHEN 'premium' THEN 1 WHEN 'featured' THEN 2 WHEN 'standard' THEN 3 ELSE 4 END ASC,
             COALESCE(rating, 0) DESC, COALESCE("reviewCount", 0) DESC, name ASC
         `;
       } else {
@@ -202,23 +202,39 @@ export default async function CategoryPage({ params, searchParams }: Props) {
           FROM "Business"
           WHERE "categoryId" = ${catId} OR ${catId} = ANY("secondaryCategoryIds")
           ORDER BY
-            CASE "listingTier" WHEN 'premium' THEN 1 WHEN 'featured' THEN 2 WHEN 'standard' THEN 3 ELSE 4 END ASC,
             (COALESCE(rating, 0) * LOG(COALESCE("reviewCount", 0) + 1)) DESC, name ASC
         `;
       }
     }
   } catch { /* DB unavailable */ }
 
-  const filteredBusinesses = area
+  const areaBusinesses = area
     ? businesses.filter((b) => matchesArea(b.address ?? "", b.postcode ?? "", area))
     : businesses;
+
+  // Featured places (paid, labelled): at most two, shown above the normal order,
+  // which itself does not change. Premium before featured, then the page's order.
+  const canFeature = FEATURED_CATEGORIES.includes(category);
+  const featuredPlaces = canFeature
+    ? areaBusinesses
+        .filter((b) => FEATURED_TIERS.includes(b.listingTier))
+        .sort((a, b) => FEATURED_TIERS.indexOf(b.listingTier) - FEATURED_TIERS.indexOf(a.listingTier))
+        .slice(0, 2)
+    : [];
+  const featuredSlugs = featuredPlaces.map((b) => b.slug);
+  const filteredBusinesses = [
+    ...featuredPlaces,
+    ...areaBusinesses.filter((b) => !featuredSlugs.includes(b.slug)),
+  ];
 
   const mapPins: MapPin[] = filteredBusinesses
     .filter((b) => b.lat != null && b.lng != null)
     .map((b) => ({
       slug: b.slug, name: b.name, lat: b.lat!, lng: b.lng!,
       rating: b.rating, reviewCount: b.reviewCount, priceRange: b.priceRange,
-      listingTier: b.listingTier, address: b.address, category,
+      // The map marks only the Featured places shown on this page.
+      listingTier: featuredSlugs.includes(b.slug) ? b.listingTier : "free",
+      address: b.address, category,
     }));
 
   const activeSort = sort || "default";
@@ -304,28 +320,16 @@ export default async function CategoryPage({ params, searchParams }: Props) {
           </div>
         )}
 
-        {category === "accommodation" && (
-          <div className="bg-gradient-to-r from-[#3A1A5C] to-[#5A2E8B] rounded-2xl p-6 mb-5 flex flex-col sm:flex-row items-center gap-5">
-            <div className="flex-1 text-center sm:text-left">
-              <p className="text-[#C9A96E] text-xs font-bold uppercase tracking-widest mb-1">Partner</p>
-              <p className="text-white font-semibold mb-1">Compare Formby accommodation on LateRooms</p>
-              <p className="text-white/60 text-xs leading-relaxed">
-                Over 100,000 UK properties. Free cancellation and pay-later flexibility.
-              </p>
-            </div>
-            <a
-              href={LATEROOMS.formby}
-              target="_blank"
-              rel="noopener noreferrer sponsored"
-              className="flex-none bg-[#C9A96E] hover:bg-[#E8C87A] text-[#1C3220] font-bold text-sm px-5 py-3 rounded-full transition-colors whitespace-nowrap"
-            >
-              Search Formby →
-            </a>
+        {/* Empty Featured card: only while fewer than two places are Featured. */}
+        {canFeature && featuredPlaces.length < 2 && (
+          <div className="mb-5">
+            <AdSlot id={`featured-${category}`} />
           </div>
         )}
 
         <CategoryBrowser
           businesses={filteredBusinesses}
+          featuredSlugs={featuredSlugs}
           mapPins={mapPins}
           accentColor={theme.accent}
           themeGradient={theme.gradient}

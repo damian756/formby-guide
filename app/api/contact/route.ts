@@ -1,11 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
+import { DELIVERY_EMAIL } from "@/lib/contact";
+import { buildAutoReply, buildEnquiryEmail, logSendError, plainAddress } from "@/lib/enquiry-email";
 
-const TO_EMAIL = "damian@churchtownmedia.co.uk";
-const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || "FormbyGuide <onboarding@resend.dev>";
+// Every enquiry (contact form, advertising, claim a listing) goes to one inbox.
+const TO_EMAIL = DELIVERY_EMAIL;
+// Sent from the site's own Resend-verified domain. RESEND_FROM_EMAIL (Vercel) overrides it.
+const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || "FormbyGuide <noreply@formbyguide.co.uk>";
 
 export async function POST(req: NextRequest) {
-  const resend = new Resend(process.env.RESEND_API_KEY);
   try {
     const body = await req.json();
     const { name, email, subject, message, businessName } = body as {
@@ -20,91 +23,39 @@ export async function POST(req: NextRequest) {
     if (!name?.trim() || !email?.trim() || !message?.trim()) {
       return NextResponse.json({ error: "Name, email and message are required." }, { status: 400 });
     }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    const replyTo = plainAddress(email);
+    if (!replyTo || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: "Invalid email address." }, { status: 400 });
     }
     if (message.length > 3000) {
       return NextResponse.json({ error: "Message is too long (max 3000 characters)." }, { status: 400 });
     }
 
-    const { error } = await resend.emails.send({
-      from: FROM_EMAIL,
-      to: TO_EMAIL,
-      replyTo: `${name} <${email}>`,
-      subject: `[FormbyGuide] ${subject}${businessName ? `: ${businessName}` : ""}`,
-      html: `
-        <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; background: #F7F9F6; padding: 32px; border-radius: 8px;">
-          <div style="border-bottom: 3px solid #C9A96E; padding-bottom: 16px; margin-bottom: 24px;">
-            <h1 style="font-size: 24px; color: #1C3220; margin: 0;">
-              Formby<span style="color: #2E6B3E;">Guide</span><span style="color: #999; font-size: 14px;">.co.uk</span>
-            </h1>
-            <p style="color: #666; font-size: 13px; margin: 4px 0 0;">New contact form submission</p>
-          </div>
+    const enquiry = { name, email: replyTo, subject, message, businessName };
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
-          <table style="width: 100%; border-collapse: collapse; margin-bottom: 24px;">
-            <tr>
-              <td style="padding: 8px 0; color: #888; font-size: 13px; width: 110px; vertical-align: top;">Subject</td>
-              <td style="padding: 8px 0; color: #1C3220; font-weight: bold;">${subject}${businessName ? `: ${businessName}` : ""}</td>
-            </tr>
-            <tr>
-              <td style="padding: 8px 0; color: #888; font-size: 13px; vertical-align: top;">From</td>
-              <td style="padding: 8px 0; color: #1C3220;">${name}</td>
-            </tr>
-            <tr>
-              <td style="padding: 8px 0; color: #888; font-size: 13px; vertical-align: top;">Email</td>
-              <td style="padding: 8px 0;"><a href="mailto:${email}" style="color: #2E6B3E;">${email}</a></td>
-            </tr>
-          </table>
-
-          <div style="background: white; border: 1px solid #e5e7eb; border-radius: 6px; padding: 20px; margin-bottom: 24px;">
-            <p style="color: #888; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 12px;">Message</p>
-            <p style="color: #1C3220; line-height: 1.7; margin: 0; white-space: pre-wrap;">${message.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</p>
-          </div>
-
-          <p style="color: #999; font-size: 12px; text-align: center;">
-            Reply directly to this email to respond to ${name}.<br/>
-            FormbyGuide.co.uk: Built by <a href="https://churchtownmedia.co.uk" style="color: #2E6B3E;">Churchtown Media</a>
-          </p>
-        </div>
-      `,
-    });
-
-    if (error) {
-      console.error("Resend send error:", JSON.stringify(error));
-      return NextResponse.json({ error: "Failed to send email. Please try again." }, { status: 500 });
+    try {
+      const { error } = await resend.emails.send(buildEnquiryEmail(enquiry, { from: FROM_EMAIL, to: TO_EMAIL, replyTo }));
+      if (error) {
+        logSendError("enquiry", error);
+        return NextResponse.json({ error: "Failed to send email. Please try again." }, { status: 500 });
+      }
+    } catch (err) {
+      logSendError("enquiry", err);
+      return NextResponse.json({ error: "Something went wrong. Please try again." }, { status: 500 });
     }
 
-    // Auto-reply to sender
-    await resend.emails.send({
-      from: FROM_EMAIL,
-      to: email,
-      subject: "Thanks for getting in touch: FormbyGuide.co.uk",
-      html: `
-        <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; background: #F7F9F6; padding: 32px; border-radius: 8px;">
-          <div style="border-bottom: 3px solid #C9A96E; padding-bottom: 16px; margin-bottom: 24px;">
-            <h1 style="font-size: 24px; color: #1C3220; margin: 0;">
-              Formby<span style="color: #2E6B3E;">Guide</span><span style="color: #999; font-size: 14px;">.co.uk</span>
-            </h1>
-          </div>
-          <p style="color: #1C3220; font-size: 16px;">Hi ${name},</p>
-          <p style="color: #555; line-height: 1.7;">
-            Thanks for getting in touch! We've received your message and will get back to you within 1–2 business days.
-          </p>
-          <p style="color: #555; line-height: 1.7;">
-            In the meantime, feel free to explore the guide at
-            <a href="https://www.formbyguide.co.uk" style="color: #2E6B3E;">formbyguide.co.uk</a>.
-          </p>
-          <p style="color: #1C3220; margin-top: 24px;">The FormbyGuide Team</p>
-          <p style="color: #999; font-size: 12px; margin-top: 24px;">
-            Built by <a href="https://churchtownmedia.co.uk" style="color: #2E6B3E;">Churchtown Media</a>
-          </p>
-        </div>
-      `,
-    });
+    // Auto-reply to sender. The enquiry has arrived either way, so a failure is logged only.
+    try {
+      const { error } = await resend.emails.send(buildAutoReply(enquiry, { from: FROM_EMAIL, to: replyTo }));
+      if (error) logSendError("auto-reply", error);
+    } catch (err) {
+      logSendError("auto-reply", err);
+    }
 
     return NextResponse.json({ success: true });
   } catch (err) {
-    console.error("Contact route error:", err);
+    console.error("[contact] route error:", err instanceof Error ? err.name : "Error");
     return NextResponse.json({ error: "Something went wrong. Please try again." }, { status: 500 });
   }
 }

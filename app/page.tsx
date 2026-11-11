@@ -3,6 +3,10 @@ import Image from "next/image";
 import { TreePine, Waves, Utensils, Coffee, Beer, ShoppingBag, Bed, Bike, ChevronRight, Squirrel } from "lucide-react";
 import type { Metadata } from "next";
 import { BLOG_POSTS, getBlogCategory } from "@/lib/blog-posts";
+import AdSlot from "@/components/AdSlot";
+
+// Re-render hourly so a home page advert drops off when its end date passes.
+export const revalidate = 3600;
 
 // Newest three posts by date, so the home page never shows last season's posts.
 const LATEST_POSTS = [...BLOG_POSTS]
@@ -363,7 +367,7 @@ export default function HomePage() {
           {LATEST_POSTS.map((p) => ({
             title: p.title,
             excerpt: p.excerpt,
-            cat: getBlogCategory(p.categorySlug)?.label ?? "Blog",
+            cat: p.sponsor ? "Sponsored" : getBlogCategory(p.categorySlug)?.label ?? "Blog",
             image: p.image,
             slug: p.slug,
           })).map((post) => (
@@ -395,6 +399,13 @@ export default function HomePage() {
           <Link href="/blog" className="text-sm text-[#2E6B3E] font-medium">Read all posts →</Link>
         </div>
       </section>
+
+      {/* ══════════════════════════════════════════
+          HOME PAGE ADVERT (lib/ad-slots.ts)
+      ══════════════════════════════════════════ */}
+      <div className="container mx-auto px-4 max-w-5xl pb-14">
+        <AdSlot id="home-card" />
+      </div>
 
       {/* ══════════════════════════════════════════
           GALLERY STRIP

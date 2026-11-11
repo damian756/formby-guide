@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Calendar, Clock, ArrowRight, Sun, CloudRain, Wind, Thermometer, MapPin } from "lucide-react";
 import ClareBio from "../ClareBio";
+import AdSlot from "@/components/AdSlot";
 
 export default function PostContent() {
   return (
@@ -200,6 +201,11 @@ export default function PostContent() {
             </div>
           </aside>
         </div>
+        {/* End-of-post sponsor (lib/ad-slots.ts) */}
+        <div className="mt-10">
+          <AdSlot id="post-formby-beach-weather-guide" />
+        </div>
+
         <ClareBio />
       </div>
 
