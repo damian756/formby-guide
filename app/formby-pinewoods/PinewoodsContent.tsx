@@ -153,7 +153,7 @@ export default function PinewoodsContent() {
             alt="Deep inside Formby pinewoods: tall coastal pines"
             fill
             className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-            sizes="100vw"
+            sizes="(min-width: 1280px) 1200px, 100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
         </button>
@@ -339,7 +339,7 @@ export default function PinewoodsContent() {
               alt="National Trust Formby site map and information board"
               fill
               className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-              sizes="100vw"
+              sizes="(min-width: 1280px) 1200px, 100vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
           </button>

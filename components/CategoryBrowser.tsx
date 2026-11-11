@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { Star, MapPin, Search, X, LayoutGrid, Map, SlidersHorizontal } from "lucide-react";
+import { Star, MapPin, Search, X, LayoutGrid, Map, SlidersHorizontal, ShieldCheck } from "lucide-react";
 import { MapSkeleton, type MapPin as MapPinType } from "./CategoryMapTypes";
 
 const CategoryMap = dynamic(() => import("./CategoryMap"), {
@@ -278,6 +278,8 @@ export default function CategoryBrowser({
                       <img
                         src={b.firstImage}
                         alt={b.name}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
@@ -285,7 +287,7 @@ export default function CategoryBrowser({
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="absolute top-3 right-3 w-20 h-20 bg-white/5 rounded-full blur-2xl" />
-                      <span className="text-5xl opacity-30 select-none">{emoji}</span>
+                      <MapPin className="w-12 h-12 text-white opacity-30" aria-hidden="true" />
                     </div>
                   )}
 
@@ -332,7 +334,7 @@ export default function CategoryBrowser({
 
                     {b.hygieneRating ? (
                       <span className="flex items-center gap-1 bg-green-50 border border-green-200 text-green-700 text-xs font-bold px-2.5 py-1 rounded-full">
-                        🛡️ FSA {b.hygieneRating}
+                        <ShieldCheck className="w-3.5 h-3.5" aria-hidden="true" /> FSA {b.hygieneRating}
                       </span>
                     ) : null}
 

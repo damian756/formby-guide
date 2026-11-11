@@ -317,6 +317,8 @@ function BusinessCard({ business: b }: { business: CollectionBusiness }) {
             <img
               src={b.photoUrl}
               alt={b.name}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
@@ -324,7 +326,7 @@ function BusinessCard({ business: b }: { business: CollectionBusiness }) {
         ) : (
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="absolute top-3 right-3 w-20 h-20 bg-[#C9A96E]/10 rounded-full blur-2xl" />
-            <span className="text-5xl opacity-30 select-none">📍</span>
+            <MapPin className="w-12 h-12 text-white opacity-30" aria-hidden="true" />
           </div>
         )}
 

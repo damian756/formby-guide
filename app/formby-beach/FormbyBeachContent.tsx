@@ -155,7 +155,7 @@ export default function FormbyBeachContent() {
             alt="Formby Beach: shell and sand dunes with the Irish Sea behind"
             fill
             className="object-cover object-bottom transition-transform duration-500 group-hover:scale-105"
-            sizes="100vw"
+            sizes="(min-width: 1280px) 1200px, 100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
           <p className="absolute bottom-4 left-4 text-white/80 text-sm drop-shadow">Formby Beach at low tide: plenty of space</p>

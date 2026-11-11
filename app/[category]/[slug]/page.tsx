@@ -297,7 +297,7 @@ export default async function BusinessPage({ params }: Props) {
                     <>
                       <div className="absolute inset-0 bg-gradient-to-br from-[#1C3220] to-[#2E6B3E]" />
                       <div className="absolute top-4 right-4 w-32 h-32 bg-[#C9A96E]/10 rounded-full blur-2xl" />
-                      <span className="relative text-6xl select-none opacity-30">📍</span>
+                      <MapPin className="relative w-16 h-16 text-white opacity-30" aria-hidden="true" />
                     </>
                   )}
                 </div>
