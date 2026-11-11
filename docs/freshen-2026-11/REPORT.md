@@ -190,3 +190,57 @@ Done 11 Nov 2026. Commits: `5d6e493` (Open 2026), `2c3fabb` (business wording) o
 - Merge `privacy-wording`.
 - The Left Bank and Coffee Carriage listing rows, ranking phrases in listing descriptions, and star ratings on listings.
 - The terms page still says Stripe billing.
+
+## 9. Maps: OpenStreetMap instead of Google embeds
+
+Done 11 Nov 2026. Commits: `bb9477b` on main (maps); `db3a248` on branch `privacy-wording` (one privacy line), waiting for Damian's approval. Not pushed. Screenshots `map-*`.
+
+**What a visitor sees.**
+- Listings with stored coordinates (352 of 357) show a Leaflet map on OpenStreetMap tiles straight away, no click, pin on the stored lat/lng, in a fixed-height box (320px, 256px on phones), so nothing moves when it loads. "© OpenStreetMap contributors" shows in the map's corner.
+- "Get directions" and "View on Google Maps" are plain links under the map. With JavaScript off they still work, and the box says "The map needs JavaScript. The links below open Google Maps."
+- The 5 listings with no coordinates (all have a Google place id) show a "Show map (Google Maps)" button. Nothing is requested from Google until it is clicked; then the Google embed loads in the same box. No location is guessed. They are: `/beaches/national-trust-formby-beach`, `/nature-walks/formby-red-squirrel-reserve`, `/restaurants/the-sparrowhawk-formby`, `/restaurants/emilys-formby`, `/restaurants/left-bank-brasserie-formby`.
+- The category map view now uses the same tile settings.
+
+**How it is built.**
+- `components/ListingMap.tsx` (Leaflet, one pin) is loaded by `components/ListingMapLazy.tsx` with a dynamic import and no SSR, and is mounted only when the box comes within 300px of the screen. Leaflet and its CSS are fetched only on listing pages with coordinates, and only when needed.
+- `components/GoogleMapClickToLoad.tsx` is the only file that builds a Google embed URL.
+- `lib/osm-tiles.ts` holds the tile URL, attribution and max zoom for both maps.
+- Keyboard: the map is one tab stop (arrow keys pan, + and - zoom), then Zoom in, Zoom out, the attribution links, Get directions, View on Google Maps. No trap; Shift+Tab goes back. The marker is not a tab stop. On phones one finger scrolls the page and two fingers zoom the map. The "Show map" button is reached by Tab; Enter loads the map and moves focus to it.
+
+**OpenStreetMap Foundation pages (read 11 Nov 2026).**
+- Tile Usage Policy (operations.osmfoundation.org/policies/tiles/). What applies to a site this size, and what was done:
+  - Use exactly `https://tile.openstreetmap.org/{z}/{x}/{y}.png`. The category map used the old `{s}.` subdomains; fixed.
+  - Show visible attribution. Done.
+  - The browser's own User-Agent and a valid Referer are sent: `next.config.ts` sets `strict-origin-when-cross-origin`, so tiles get our origin.
+  - No prefetching or bulk download. Only the tiles in view are requested, and none until the map is near the screen.
+  - Not done (recommended, not required): a "Report a map issue" link to openstreetmap.org/fixthemap. A contact email is already published.
+- Privacy Policy (osmfoundation.org/wiki/Privacy_Policy).
+  - It lists data "associated with a tile request (for instance, IP addresses and request details)". Records of browser use include IP address, browser and device type, operating system, referring page and date and time.
+  - It says nothing either way about cookies on tile requests. Its cookie paragraph is about login and navigation on OSMF's own services.
+  - In headless Edge, 15 tile responses carried no Set-Cookie, and the browser held no openstreetmap.org cookies afterwards.
+
+**Google key.** `GOOGLE_PLACES_API_KEY` is still read on the server in `app/[category]/[slug]/page.tsx`, now only for the click-to-load embed. It reaches the HTML of the 5 listings without coordinates (before, it was in the iframe src of every listing with a map). The same variable serves the scrape scripts' Places API calls. The embed also loaded from `http://localhost:3101`, so any referrer restriction on the key allows localhost.
+
+**Privacy line (branch `privacy-wording`, `db3a248`).**
+- Before: no line about maps (section 5 ended with the Resend entry).
+- After, a new "OpenStreetMap (maps)" entry in section 5: "Maps are drawn with OpenStreetMap tiles, which your browser loads from the OpenStreetMap Foundation's servers; they receive your IP address, browser type, our site's address and the map area you view. On the few listings without a map pin, Google Maps loads only if you click “Show map (Google Maps)”."
+- It makes no cookie claim, because the OSMF pages do not confirm one.
+
+**Checks.**
+- Tests: 37/37 pass, including 5 new in `tests/maps.test.mjs`. They fail if a Google embed URL appears outside the click-to-load component, or if that component renders an iframe before a click. Three deliberate breakages were each caught.
+- tsc: 0 errors before and after.
+- eslint: 16 errors and 6 warnings before and after, same files; the changed files are clean.
+- No em dashes in changed files.
+- Console: clean on both listing pages and the category map view. The only errors came from the two requests the test blocked on purpose (Ahrefs script, `/api/count`).
+- No Google request was made before the click. Google was contacted once, by one keyboard click at 1440.
+- The after-click screenshot came out blank: headless full-page capture leaves the cross-origin iframe empty. The iframe and its map requests were confirmed, so the shot was not kept or retried.
+- Screenshots:
+  - `map-with-coords-restaurants-the-lunch-hour-1440.jpg`, `-390.jpg` and `-nojs-390.jpg`.
+  - `map-no-coords-beaches-national-trust-formby-beach-before-click-1440.jpg` and `-390.jpg`.
+
+**Left for Damian.**
+- Merge `privacy-wording` (now two commits).
+- If you want "set no cookies" in the privacy line: the OSMF pages do not say so. Our test saw none.
+- Restrict the Google key in Google Cloud (HTTP referrer `www.formbyguide.co.uk`, Maps Embed API only), or give the embed its own key. Adding coordinates to the 5 listings (business data, not touched here) would end the need for the key in page code.
+- Listing descriptions in the database still contain em dashes (seen on The Lunch Hour and Formby Beach). These are business data and were not touched.
+- Optional: add a "Report a map issue" link (OSMF recommendation).
