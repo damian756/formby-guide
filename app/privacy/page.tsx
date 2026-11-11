@@ -80,7 +80,7 @@ export default function PrivacyPage() {
                 },
                 {
                   title: "Usage data",
-                  desc: "Ahrefs Web Analytics: page view statistics without cookies. It records the page, referrer, browser, device, language, screen size and approximate location (city level), and counts visitors with a daily pseudonymous identifier that is not kept across days.",
+                  desc: "Ahrefs Web Analytics: page view statistics without cookies. It records the page address (including any query string), the referring page, your browser, operating system and device, screen size and language, and when a link is clicked or a form is sent. It uses your IP address to work out your approximate location (city level) and a daily visitor ID that cannot be linked across days; the IP address itself is discarded, not stored.",
                 },
                 {
                   title: "Page view counts",
@@ -139,7 +139,7 @@ export default function PrivacyPage() {
             <h2 className="font-display text-xl font-bold text-[#1C3220] mb-4">5. Third parties we share data with</h2>
             <div className="space-y-3">
               {[
-                { name: "Ahrefs (Web Analytics)", detail: "Ahrefs Web Analytics: page view statistics without cookies. It records the page, referrer, browser, device, language, screen size and approximate location (city level), and counts visitors with a daily pseudonymous identifier that is not kept across days." },
+                { name: "Ahrefs (Web Analytics)", detail: "Ahrefs Web Analytics: page view statistics without cookies. It records the page address (including any query string), the referring page, your browser, operating system and device, screen size and language, and when a link is clicked or a form is sent. It uses your IP address to work out your approximate location (city level) and a daily visitor ID that cannot be linked across days; the IP address itself is discarded, not stored." },
                 { name: "Vercel", detail: "Hosts the website. Pages are served from Vercel's network, and the site's server code, including the contact form, runs in Vercel's iad1 region in Washington, D.C., USA." },
                 { name: "Resend", detail: "Transactional email delivery for contact form submissions. Emails are processed and delivered via Resend's infrastructure." },
                 { name: "OpenStreetMap (maps)", detail: "Maps are drawn with OpenStreetMap tiles, which your browser loads from the OpenStreetMap Foundation's servers; they receive your IP address, browser type, our site's address and the map area you view." },
