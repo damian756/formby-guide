@@ -646,10 +646,12 @@ function OpeningHoursDisplay({ data }: { data: unknown }) {
   const hours = data as { weekdayText?: string[]; periods?: Array<{ open: { day: number; time: string }; close?: { day: number; time: string } }> };
 
   if (hours.weekdayText?.length) {
-    const today = new Date().getDay();
-    // Google returns Mon-Sun order; reorder to Mon-Sun (Mon = index 0)
-    const reordered = [...hours.weekdayText.slice(1), hours.weekdayText[0]];
-    const todayIndex = today === 0 ? 6 : today - 1;
+    // Show Monday to Sunday whatever order the stored lines are in, and mark today in UK time
+    // (the server runs in UTC). The old code shifted Google's Monday-first list by a day.
+    const DAY_ORDER = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    const dayOf = (l: string) => l.slice(0, l.indexOf(":"));
+    const reordered = [...hours.weekdayText].sort((a, b) => DAY_ORDER.indexOf(dayOf(a)) - DAY_ORDER.indexOf(dayOf(b)));
+    const todayIndex = DAY_ORDER.indexOf(new Intl.DateTimeFormat("en-GB", { weekday: "long", timeZone: "Europe/London" }).format(new Date()));
     return (
       <ul className="space-y-0.5">
         {reordered.map((line, i) => {

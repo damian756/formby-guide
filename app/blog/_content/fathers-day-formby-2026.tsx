@@ -82,7 +82,7 @@ export default function PostContent() {
 
           <h2>The Beach and Pinewoods</h2>
 
-          <p>Formby Beach on a sunny June day is excellent. The car park at the National Trust site (L37 1LJ) fills up by late morning. If you are going, go early or accept you will be parking on the road and walking further than planned.</p>
+          <p>Formby Beach on a sunny June day is excellent. The car park at the National Trust site (L37 1LJ) fills up by late morning. If you are going, go early: the residential roads nearby have parking restrictions, so do not plan on parking there.</p>
 
           <p>The red squirrel trail through the pinewoods is worth doing if your dad has never been. It takes about an hour at a relaxed pace and the squirrels are still active in June. Young squirrels born earlier in the year are out and about. It is not guaranteed, but in June you have a reasonable chance.</p>
 
