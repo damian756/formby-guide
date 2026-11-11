@@ -6,7 +6,7 @@ const BASE_URL = "https://www.formbyguide.co.uk";
 
 export const metadata: Metadata = {
   title: "Advertise on FormbyGuide | Sefton Coast Network",
-  description: "Reach Formby visitors, local residents, and the affluent Sefton Coast audience. Featured business listings and display advertising across the Sefton Coast Network.",
+  description: "Reach Formby visitors and local residents. Featured business listings and display advertising across the Sefton Coast Network.",
   alternates: { canonical: `${BASE_URL}/advertise` },
   openGraph: {
     title: "Advertise on FormbyGuide | Sefton Coast Network",
@@ -32,8 +32,8 @@ const NETWORK_PACKAGES = [
     total: "£2,700",
     featured: false,
     features: [
-      "Sidebar on category and guide pages",
-      "Homepage sponsored panel on SouthportGuide",
+      "Display placement on FormbyGuide category and guide pages, by arrangement",
+      "Home page placement on SouthportGuide, by arrangement",
       "Category exclusivity on both sites",
       "Monthly performance reporting",
     ],
@@ -46,7 +46,7 @@ const NETWORK_PACKAGES = [
     featured: true,
     features: [
       "All Core placements",
-      "SeftonLinks sidebar and in-feed placement",
+      "Display placement on SeftonLinks, by arrangement",
       "Category exclusivity across all three sites",
       "Up to 2 creative updates per month",
       "Monthly performance reporting",
@@ -61,7 +61,7 @@ const NETWORK_PACKAGES = [
     features: [
       "All Premium placements",
       "SeftonCoastWildlife included",
-      "Maximum Sefton Coast reach",
+      "All four sites on one invoice",
       "Quarterly review call",
       "Monthly performance reporting",
     ],
@@ -105,8 +105,8 @@ const PACKAGES = [
 
 const STATS = [
   { icon: Users, label: "Target audience", value: "Day visitors & locals", sub: "People actively planning a Formby visit" },
-  { icon: TrendingUp, label: "Growing traffic", value: "New site: rising fast", sub: "Targeting high-intent searches for Formby" },
-  { icon: BarChart2, label: "Content-first SEO", value: "Pages ranking for key terms", sub: "Red squirrels, Formby beach, things to do" },
+  { icon: BarChart2, label: "Local directory", value: "350+ business listings", sub: "Restaurants, cafés, pubs, places to stay and shops" },
+  { icon: TrendingUp, label: "Visitor guides", value: "Beach, pinewoods, squirrels", sub: "Plus parking, things to do and a seasonal blog" },
   { icon: Star, label: "Local authority", value: "Built by Churchtown Media", sub: "Also behind SouthportGuide.co.uk" },
 ];
 
@@ -155,10 +155,10 @@ export default function AdvertisePage() {
               <p className="text-[#C9A96E] text-xs font-bold uppercase tracking-widest mb-3">Sefton Coast Network</p>
               <h2 className="text-2xl font-bold mb-4 leading-tight">Display advertising across the network</h2>
               <p className="text-white/65 text-sm leading-relaxed mb-4">
-                Formby is an affluent village with a strong professional residential base. The audience here responds to premium brands. Display advertising on FormbyGuide, combined with SouthportGuide and SeftonLinks, reaches the full Sefton Coast professional and visitor demographic from a single package.
+                Display advertising on FormbyGuide can be combined with SouthportGuide, SeftonLinks and Sefton Coast Wildlife in a single package, with placements agreed with you.
               </p>
               <p className="text-white/65 text-sm leading-relaxed">
-                One relationship. One invoice. Category exclusivity included. Six-month minimum contract. Email us to request the full media kit.
+                Six-month minimum contract. Email us to request the full media kit.
               </p>
               <a href="mailto:partnerships@seftoncoast.network" className="inline-flex items-center gap-2 mt-6 bg-[#C9A96E] hover:bg-[#b8944f] text-white font-semibold px-5 py-2.5 rounded-lg text-sm transition-colors">
                 <Mail className="w-4 h-4" />
@@ -167,9 +167,8 @@ export default function AdvertisePage() {
             </div>
             <div className="md:w-1/2 grid gap-4">
               {[
-                { icon: <Globe className="w-5 h-5 text-[#C9A96E]" />, title: "No competitor exists", body: "No other independent editorial network covers the Sefton Coast. The first advertiser in a category has it to themselves." },
+                { icon: <Globe className="w-5 h-5 text-[#C9A96E]" />, title: "One invoice", body: "One relationship and one invoice for every site in your package." },
                 { icon: <Shield className="w-5 h-5 text-[#C9A96E]" />, title: "Category exclusivity", body: "No direct competitor in your category will appear on the same site during your contract. A firm commitment." },
-                { icon: <TrendingUp className="w-5 h-5 text-[#C9A96E]" />, title: "Growing traffic", body: "All four sites are growing." },
               ].map((item) => (
                 <div key={item.title} className="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
                   <div className="flex-shrink-0 mt-0.5">{item.icon}</div>
@@ -241,18 +240,18 @@ export default function AdvertisePage() {
           <div className="max-w-2xl mb-10">
             <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-3">Why FormbyGuide?</h2>
             <p className="text-[#1C3220]/60 leading-relaxed">
-              Formby punches above its weight for day visitors: the National Trust site, red squirrels, and beach draw people from across the North West. FormbyGuide is built to catch them at the research stage, before they decide where to eat or what to do.
+              The National Trust site, the red squirrels and the beach bring day visitors to Formby. FormbyGuide is written for them while they are still planning, before they decide where to eat or what to do.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-5">
             {[
               {
-                title: "High-intent traffic",
-                desc: "People searching 'things to do Formby' or 'restaurants Formby' are actively planning. They're not browsing: they're deciding.",
+                title: "Visitors who are planning",
+                desc: "Most pages answer a planning question: where to park, where to eat, what to do on the day.",
               },
               {
-                title: "Content that ranks",
-                desc: "The site is built around editorial content covering the beach, pinewoods, and red squirrels: pages that attract and convert visitor traffic.",
+                title: "Guides people use",
+                desc: "The site is built around guides to the beach, the pinewoods, the red squirrels and parking.",
               },
               {
                 title: "Local knowledge",

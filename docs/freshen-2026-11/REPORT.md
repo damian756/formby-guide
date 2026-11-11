@@ -29,6 +29,7 @@ What works and was left alone: the overall layout, the photography in the galler
 | Slogans rewritten; "ancient" removed; blog footer "coming soon" replaced with a plain "Planning a visit?" block | `app/page.tsx`, `app/layout.tsx`, `lib/config.ts`, `app/blog/page.tsx`, `app/formby-pinewoods/*` | `after-blog-1440` |
 | Em dashes removed from every changed file | 5 files | |
 | Sitemap reference date moved to 2026-11-11 | `app/sitemap.ts` | |
+| Advertise page: unsupported claims removed ("affluent audience", "New site: rising fast", "Pages ranking for key terms", "No competitor exists", "Growing traffic", "responds to premium brands"); positions no component renders ("Sidebar", "Homepage sponsored panel", "SeftonLinks sidebar and in-feed") now say "by arrangement". Packages and prices unchanged pending Damian's pick | `app/advertise/page.tsx` | `before-advertise-*`, `after-advertise-*` |
 
 ## 3. The two new posts
 
