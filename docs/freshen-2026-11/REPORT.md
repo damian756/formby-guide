@@ -363,3 +363,66 @@ Measured 11 Nov 2026 on a production build (`next build`, then `next start -p 31
 **Screenshots.** Every changed page (41) at 1440, 1024, 768 and 390 was shot on the dev server and checked; 164 files, 77 MB as JPEG, kept in the scratch folder (`scratchpad\imp\shots-jpg\`). Committed (9 MB, `b38d363`): `imp-restaurants-emilys-formby`, `imp-blog-where-to-eat-formby-with-kids` and `imp-blog-the-sparrowhawk-formby-review` at all four widths; `imp-about`, `imp-blog`, `imp-home`, `imp-the-open-2026`, `imp-blog-formby-rainy-day-guide`, `imp-blog-blackpool-or-formby-family-day-out` and `imp-guides-best-restaurants-formby` at 1440 and 390; the `idea-*` files above. Pages taller than 16,000px were cut at that height (`/shopping`, and `/blog`, `/restaurants`, `/formby-beach` at 390).
 
 **Checks.** tsc 0; eslint 16 errors and 6 warnings (baseline); tests 46/46: `maps` 7, `no-em-dash` 3 and `no-blocked-links` 4 new or rewritten. Production build passes. No dependency changed.
+
+## 12. SEO
+
+Checked 11 Nov 2026: the live site (`main` at `bc29690`) and the dev server (port 3101) after the fixes. Every sitemap URL fetched without following redirects; title, description, canonical, robots and every JSON-LD block parsed and checked by page type. Commits `8d45a2d`, `10e0474`, `33b02e3`, `f34a3b2`. Not pushed.
+
+**Sitemap** `https://www.formbyguide.co.uk/sitemap.xml`: 433 URLs (13 fixed pages, 8 categories, 39 posts, 8 guides, 8 collection pages, 357 listings).
+
+| | URLs | 200 | Redirect | 404 | Noindex |
+|---|---|---|---|---|---|
+| Before (live) | 433 | 433 | 0 | 0 | 0 |
+| After (dev) | 433 | 433 | 0 | 0 | 0 |
+
+**robots.txt**: `Sitemap: https://www.formbyguide.co.uk/sitemap.xml`; `Allow: /`, only `/dashboard/` and `/api/` disallowed, so CSS, JS and images can be fetched.
+
+**Canonicals.** All 433 pages have one canonical: absolute, https, www, pointing at themselves. Query versions point at the clean URL and stay indexable: `/advertise?space=`, `/[category]?sort=&area=`, `/blog?category=`, `/guides?category=`. There is no pagination. The one collection under four listings (`/collections/dog-friendly-pubs-formby`, 3) is noindex and not in the sitemap; it is now "noindex, follow". Removed pages redirect once, 308: `/the-open-2026/accommodation`, `/the-open-2026/restaurants`, `/blog/left-bank-brasserie-formby`. Fixed: the bare-domain and `formby-guide.vercel.app` rules in `next.config.ts` sent every path to the home page; they now keep the path.
+
+**Schema.**
+- Listing opening hours: before, 1,422 of 1,634 entries had no closing time, minutes were dropped and PM was not converted (Google's narrow and thin spaces defeated the parser). Now `lib/opening-hours.ts` reads the same stored hours the page prints: 1,658 entries on 268 listings (split days count twice), all with opens and closes, 0 malformed. Text and Google `periods` agree on 263 of 268; the other 5 are 24-hour days, where the page and the schema follow the text. Unreadable times are left out.
+- Listings: `url` is the listing page unless the page shows the business's website (no listing is claimed today, so none does); `image` added; the beach is `Beach`, not `Park`; no `priceRange` on `Beach` or `TouristAttraction`; empty address fields left out (`/shopping/hightown` has no address in the database).
+- Posts: `BreadcrumbList` added; `dateModified` 2026-11-11 on the 36 posts whose words changed after publication; two `datePublished` values corrected to the date shown.
+- Categories and guides: `BreadcrumbList` added (the parking guide had its own; now one trail). `/about`: `AboutPage` instead of a second `WebSite`. Organization and WebSite now appear once, on the home page.
+- After: 433 pages, 837 blocks, 0 parse errors, no rating or review markup anywhere, every breadcrumb trail ends at its own page.
+- No Event markup: there are no coming events, and the Open page is a record that gives only "July 2026".
+
+**Titles and descriptions.** Fixed: `/about` (brand doubled); two posts that said "Right Now" in November (late May beach, asparagus). Post meta descriptions use the excerpt's whole sentences up to 160 characters where that leaves at least 120 (12 posts); three page descriptions over 175 were shortened (About Formby, Pinewoods, Parking). No duplicate titles or descriptions among sitemap URLs. Left as they are under the traffic-first rule: 127 titles over 65 characters (" | FormbyGuide.co.uk" after long listing names and post titles) and 18 descriptions over 165 (post excerpts that do not split well, About, Things to Do, Advertise). The unused `metaTitle` and `metaDescription` fields on posts were not switched on: that would change every ranking post title.
+
+**Sitemap lastmod.** Before: February dates for most fixed pages whose words changed on 11 Nov, post dates read in the server's time zone (BST dates a day early), a made-up fallback date, and a file fixed at build time. Now: posts use `dateModified` or their date (UTC); fixed pages the date their words last changed (git); categories and collections the later of that and their newest listing; listings their `updatedAt`; regenerated hourly.
+
+**Advertise page** (coordinator's brief). URL, canonical (`/advertise`), sitemap entry and "index, follow" checked. Title and og:title are the pre-build ones, "Advertise on FormbyGuide | Sefton Coast Network", so nothing was restored. H1 and description kept.
+
+| Pre-build page (`c89b0f2^`): "advertis" with Formby or Sefton Coast | Now |
+|---|---|
+| Title: "Advertise on FormbyGuide \| Sefton Coast Network" | Same |
+| Description: "Featured business listings and display advertising across the Sefton Coast Network." | New description kept, as decided; the body now says it (next rows) |
+| Hero: "List your Formby business, or advertise across the network." | Hero opens: "Featured listings and display advertising for Formby businesses, on FormbyGuide.co.uk or across all four Sefton Coast Network sites." Options intro: "Listing your Formby business in the directory stays free" |
+| "Display advertising on FormbyGuide can be combined with SouthportGuide, SeftonLinks and Sefton Coast Wildlife in a single package" | The same hero sentence, and the Sefton Coast bundle card ("Home page card on FormbyGuide, SouthportGuide, SeftonLinks and Sefton Coast Wildlife") |
+
+Already on the new page: H1 "Advertise to people planning a day in Formby"; "the first ten advertisers across the Sefton Coast sites". Site links to `/advertise`: footer "Advertise With Us" and the guide band "Advertising Options →" are as before the build; the listing sidebar "View pricing →" keeps its words and now goes to `/advertise#featured` (the same URL to search engines). New since the build: "See advertising options →" on claim-listing (was "Enquire about advertising →" to `/contact`), "advertising page" on the disclosure page, and the empty advert cards (`/advertise?space=…`, canonical `/advertise`).
+
+**Internal links.** 24 posts and 5 collections were linked only from the blog or collections index. Each post now ends with three related posts (same category, nearest date), and category pages link to their collections. Nine older posts also keep their own "More local guides" box, so those show two short rows of links.
+
+**Found, not changed.** The bare domain answers 307, then www (`http://formbyguide.co.uk` takes two hops); set the Vercel domain redirect to 308. At 390 wide the body of `/blog/formby-beach-weather-guide` is 423px and clipped on the right (the page itself does not scroll sideways). The six-organisations checks were not run: the rule is parked (playbook 1a).
+
+**Checks.** tsc 0. eslint 17 errors, 6 warnings, none new: every changed file has the same messages as at `bc29690`. Tests 52/52, 6 new (`opening-hours` 5, `post-dates` 1). `next build` passes.
+
+## Traffic: what to do next
+
+Ranked by the visits each is likely to bring. No keyword tool data (Semrush expired); the terms are the plain phrasing people use. Every fact from an official or primary page, as the playbook says.
+
+1. **Search terms not covered yet**
+   1. "formby beach tide times", "is formby beach safe": a tides and safety page. The beach guide has two lines. Publish before Easter; link it from the beach, parking and dog guides.
+   2. "christmas in formby", "formby christmas events": time-sensitive; publish by late November or leave it to next year.
+   3. "freshfield station to formby beach", "formby beach by train": the walk from Freshfield station. The Liverpool and Manchester day-trip posts mention it in passing.
+   4. "formby coastal erosion", "formby point erosion": one line on the beach page today.
+   5. "ravenmeols", "formby dunes walk": nothing on the site.
+   6. "free things to do in formby": the collection exists (`/collections/free-things-to-do-formby`); give it an intro of a few paragraphs rather than a separate post (the draft's item 2).
+2. **Pages one edit away**
+   1. `/collections/dog-friendly-pubs-formby`: noindex with 3 pubs. One more pub that really is dog-friendly, tagged, makes it indexable for "dog friendly pubs formby".
+   2. `/beaches`: one listing, competing with `/formby-beach`. Add the nearby beaches (Ainsdale, Crosby, Hightown) as listings or an intro, or it stays thin.
+   3. Guides to posts: `/formby-beach` and `/red-squirrels-formby` link to no seasonal post. Add "by month" links (July, August, winter; June and September squirrels).
+   4. Watch in Search Console: two post titles lost their search phrase on 11 Nov under the no-rankings rule ("Best Restaurants in Formby for Families", "Best Cafes in Formby Village"). If they drop, "Family-Friendly Restaurants in Formby: Eating Out with Kids" and "Cafés in Formby Village" keep the phrase without ranking anyone.
+   5. The bare-domain redirect to 308 in Vercel (above).
+3. **Posts a month**: four a month from March to August, when most beach and squirrel trips are planned, and two a month from September to February (one seasonal, published two to three weeks ahead; one evergreen). A quarterly check of parking, National Trust charges and anything dated.
