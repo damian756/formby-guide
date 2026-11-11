@@ -22,6 +22,8 @@ Read this, then read only the files the map below points to. Search with grep; n
 
 ## 1a. Standing rule: no links to six organisations (Damian, 11 Nov 2026)
 
+**PARKED by Damian on 11 Nov 2026, pending his return to it.** His words, later that evening: "ok ignore that rule i made we will come back to it". Start no new work for this rule: no further unlinking, rewording, renaming, test changes or inventory. Do not undo what was already done (links removed stay removed; the existing tests and guards stay). Accuracy still applies on its own terms: a fact is credited to the body it comes from.
+
 **As it stands (Damian, 11 Nov 2026, settled the same evening):** "keep them, i dont want to link to any of them".
 
 It applies to all five sites: Southport Guide, Formby Guide, Sefton Links, Sefton Coast Wildlife and seftoncoast.network. The six:
