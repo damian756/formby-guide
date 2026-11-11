@@ -108,7 +108,7 @@ export default function TermsPage() {
                     "Featured places, adverts and sponsorships are paid by invoice. There is no online checkout.",
                     "Some options have a minimum term, shown on the advertise page. After it, a placement can be stopped with one month's notice.",
                     "No refund is given for the unused part of a period already invoiced.",
-                    "We give 30 days' written notice of any price change. A founding-offer price is held for the twelve months promised on the advertise page.",
+                    "We give 30 days' written notice of any price change. Founding advertisers (the first ten across the Sefton Coast sites) pay half price for their first three months, and their monthly price is held for twelve months.",
                     "If an invoice is not paid, the placement is paused and, after 14 days, removed.",
                   ].map((item) => (
                     <li key={item} className="flex gap-3 text-sm text-gray-600">
