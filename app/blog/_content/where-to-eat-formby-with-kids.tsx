@@ -42,7 +42,7 @@ export default function PostContent() {
             "@context": "https://schema.org",
             "@type": "Article",
             headline: "Eating Out in Formby with Kids",
-            description: "Where to eat in Formby with children: kids menus, times, dogs and booking at two village restaurants, from their own websites, plus the cafés.",
+            description: "Where to eat in Formby with children: kids menus, times, dogs and booking at two places to eat in Formby, from their own websites, plus the cafés.",
             dateModified: "2026-11-11",
             url: "https://www.formbyguide.co.uk/blog/where-to-eat-formby-with-kids",
             author: { "@type": "Person", "@id": "https://www.formbyguide.co.uk/about#clare", name: "Clare", url: "https://www.formbyguide.co.uk/about" },
@@ -99,11 +99,8 @@ export default function PostContent() {
 
       <div className="bg-[#5C1A1A] border-b border-white/10">
         <div className="container mx-auto px-4 max-w-5xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
+          <div className="flex justify-center">
             {[
-              { label: "Years experience", value: "6+" },
-              { label: "Kids tested", value: "4" },
-              { label: "Average budget", value: "£15–25pp" },
               { label: "Checked", value: "Nov 2026" },
             ].map(({ label, value }) => (
               <div key={label} className="px-5 py-4 text-center">
@@ -122,7 +119,7 @@ export default function PostContent() {
               <p className="lead text-xl text-gray-600 leading-relaxed">
                 Eating out with kids isn&apos;t what it was before kids. You&apos;re looking for places where someone spills a drink and nobody gives you a death stare.
               </p>
-              <p>Here is what two village restaurants say on their own websites about children, times, dogs and booking, listed alphabetically. Check with them before you go, as menus and times change.</p>
+              <p>Here is what two places to eat in Formby say on their own websites about children, times, dogs and booking, listed alphabetically. Check with them before you go, as menus and times change.</p>
             </div>
 
             <div className="not-prose space-y-6 mb-12">
@@ -173,9 +170,8 @@ export default function PostContent() {
             </div>
 
             <div className="not-prose bg-[#1C3220] text-white rounded-2xl p-7 mb-10">
-              <h3 className="font-display text-xl font-bold mb-4">The Money Reality</h3>
-              <p className="text-white/75 leading-relaxed mb-3">Four kids eating out is expensive. Two mains, four kids&apos; meals, four drinks: you&apos;re easily at £70–90 for a sit-down meal.</p>
-              <p className="text-white/75 leading-relaxed"><strong className="text-white">To save money:</strong> Go for lunch not dinner.</p>
+              <h3 className="font-display text-xl font-bold mb-4">Prices</h3>
+              <p className="text-white/75 leading-relaxed">Menus with prices are on each restaurant&apos;s website.</p>
             </div>
 
             <div className="not-prose bg-[#E8EDE6] rounded-2xl p-8">
@@ -197,7 +193,7 @@ export default function PostContent() {
               <div className="space-y-4">
                 <div><p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Kids menu</p><p className="text-sm text-gray-700">Emily&apos;s has a kids menu for under-12s.</p></div>
                 <div><p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Gluten-free</p><p className="text-sm text-gray-700">Emily&apos;s has a gluten-free brunch menu; The Sparrowhawk is Coeliac UK accredited.</p></div>
-                <div><p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Budget tip</p><p className="text-sm text-gray-700">Go for lunch over dinner. Same quality, lower price, quieter.</p></div>
+                <div><p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Prices</p><p className="text-sm text-gray-700">Menus with prices are on each restaurant&apos;s website.</p></div>
               </div>
             </div>
             <div className="bg-amber-50 border border-amber-200 rounded-2xl p-5">

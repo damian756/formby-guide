@@ -73,7 +73,7 @@ export default function PostContent() {
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Lunch in the Village</h2>
           <p>
-            A rainy lunchtime in Formby village is genuinely pleasant. The main street has a handful of good options and none of them require planning if you arrive by noon.
+            Two places to eat in or near the village:
           </p>
           <p>
             Emily&apos;s on Brows Lane serves breakfast and brunch from 9am every day and lunch from 12:30pm Monday to Saturday. It takes walk-ins but advises booking, especially at weekends.
@@ -84,10 +84,10 @@ export default function PostContent() {
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Drive to Southport</h2>
           <p>
-            If it is properly miserable and you want a change of scene, Southport is 15 minutes by car. The Atkinson on Lord Street is an excellent rainy afternoon option: art gallery, theatre space, and a cafe on the ground floor. It is free to enter the gallery and the building itself is worth the visit. I have been in there with all four of my kids on a wet school holiday afternoon and come out with everyone still speaking to each other, which says something.
+            If it is properly miserable and you want a change of scene, Southport is about 15 minutes by car. The Atkinson on Lord Street has a museum, a gallery, a box office for its shows and a café. It is open Monday to Saturday, 10am to 4pm, and closed on Sundays and bank holidays. I have been in there with all four of my kids on a wet school holiday afternoon and come out with everyone still speaking to each other, which says something.
           </p>
           <p>
-            Southport Market on Market Street is another option for a rainy hour: covered, independent food stalls, relaxed atmosphere. Southport town centre generally handles a rainy day better than Formby does because there is simply more of it.
+            Southport town centre has more indoor places to go than Formby.
           </p>
 
           <div className="bg-[#F0F7F2] border border-[#2E6B3E]/20 rounded-lg p-5 my-8">
@@ -97,7 +97,7 @@ export default function PostContent() {
               <li>No year-round NT cafe: head to the village for a warm drink</li>
               <li>Emily&apos;s, Brows Lane: brunch from 9am, book at weekends</li>
               <li>The Sparrowhawk, Southport Old Road: food from noon, some tables kept for walk-ins</li>
-              <li>Southport: The Atkinson and Southport Market, 15 minutes away</li>
+              <li>Southport: The Atkinson, about 15 minutes by car, Monday to Saturday</li>
               <li>The Formby village charity shops on Chapel Lane if you want a browse</li>
             </ul>
           </div>

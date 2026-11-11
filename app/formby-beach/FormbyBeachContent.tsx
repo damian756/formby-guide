@@ -538,11 +538,11 @@ export default function FormbyBeachContent() {
                 note: "Seasonal",
               },
               {
-                name: "The Sparrowhawk",
-                href: "/restaurants/the-sparrowhawk-formby",
-                tag: "Dogs in the bar",
-                tagColor: "bg-amber-500 text-white",
-                desc: "A Brunning & Price pub on Southport Old Road, with food from noon every day and a terrace and gardens. Well-behaved dogs on leads are welcome in the bar area.",
+                name: "Don Luigi",
+                href: "/restaurants/don-luigi-formby",
+                tag: "Italian",
+                tagColor: "bg-red-600 text-white",
+                desc: "An Italian restaurant on Church Road, with pizza, a grill menu and small plates.",
                 note: "10 min drive",
               },
               {
@@ -562,11 +562,11 @@ export default function FormbyBeachContent() {
                 note: "10 min drive",
               },
               {
-                name: "Don Luigi",
-                href: "/restaurants/don-luigi-formby",
-                tag: "Italian",
-                tagColor: "bg-red-600 text-white",
-                desc: "An Italian restaurant on Church Road, with pizza, a grill menu and small plates.",
+                name: "The Sparrowhawk",
+                href: "/restaurants/the-sparrowhawk-formby",
+                tag: "Dogs in the bar",
+                tagColor: "bg-amber-500 text-white",
+                desc: "A Brunning & Price pub on Southport Old Road, with food from noon every day and a terrace and gardens. Well-behaved dogs on leads are welcome in the bar area.",
                 note: "10 min drive",
               },
               {

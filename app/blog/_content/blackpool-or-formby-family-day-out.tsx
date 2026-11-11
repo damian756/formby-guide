@@ -12,7 +12,7 @@ export default function PostContent() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            headline: "Blackpool or Formby for a Family Day Out? Clare's Honest Answer",
+            headline: "Blackpool or Formby for a Family Day Out?",
             description: "I've done both with four kids. Here's the straight comparison: what Blackpool does well, what Formby does well, and how to decide which one is right for your family.",
             url: "https://www.formbyguide.co.uk/blog/blackpool-or-formby-family-day-out",
             author: { "@type": "Person", "@id": "https://www.formbyguide.co.uk/about#clare", name: "Clare", url: "https://www.formbyguide.co.uk/about" },
@@ -48,7 +48,7 @@ export default function PostContent() {
         <div className="relative z-10 container mx-auto px-4 max-w-5xl pb-10 pt-24">
           <span className="inline-block bg-[#2E6B3E] text-white text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">Family</span>
           <h1 className="font-display text-3xl md:text-5xl font-bold leading-tight mb-4 max-w-3xl">
-            Blackpool or Formby for a Family Day Out? Clare&apos;s Honest Answer
+            Blackpool or Formby for a Family Day Out?
           </h1>
           <div className="flex items-center gap-3 text-white/70 text-sm">
             <span>Clare</span>
@@ -71,7 +71,7 @@ export default function PostContent() {
 
           <p>Blackpool is built for family entertainment at scale. Pleasure Beach, the piers, the arcades, the shows, the trams, the Illuminations in autumn: it&apos;s all designed to keep people occupied for a full day and a full evening. If your kids are teenagers who want rides and something loud to happen, Blackpool is the right call. There&apos;s no equivalent in Formby.</p>
 
-          <p>Pleasure Beach in particular is genuinely excellent if rides are the point. I took mine when they were old enough to go on the big ones and it was brilliant: chaotic and expensive and exactly what they wanted. The Illuminations (September to November) are worth doing once: the drive or walk along the promenade with everything lit up is impressive in a way that&apos;s hard to replicate.</p>
+          <p>Blackpool Pleasure Beach is a theme park with rides, and its Nickelodeon Land area is aimed at younger children. I took mine when they were old enough to go on the big ones and it was brilliant: chaotic and expensive and exactly what they wanted. The Illuminations (September to November) are worth doing once: the drive or walk along the promenade with everything lit up is impressive in a way that&apos;s hard to replicate.</p>
 
           <p>Blackpool also has a lot of cheap, cheerful food options that kids are actually happy with. It&apos;s not a food destination in the traditional sense, but if you&apos;re feeding four children after a day on the rides, you&apos;re not going to struggle to find something everyone will eat.</p>
 
@@ -83,7 +83,7 @@ export default function PostContent() {
 
           <p>The red squirrels are a genuine draw. We&apos;ve been countless times and it doesn&apos;t get old. Go early (before 10am), go quietly, and the chances of seeing one close-up are actually pretty good. My kids were more excited about a squirrel appearing three feet away than they were about a lot of things that cost significantly more.</p>
 
-          <h2>The Honest Comparison for Families</h2>
+          <h2>Comparing the Two for Families</h2>
 
           <div className="bg-[#F0F5EF] border border-[#2E6B3E]/20 rounded-2xl p-5 not-prose mb-6">
             <p className="text-sm font-bold text-[#1C3220] mb-3">At a glance</p>
@@ -102,7 +102,7 @@ export default function PostContent() {
               <div>
                 <p className="font-semibold text-[#1C4A5A] mb-2">Blackpool is better if you want:</p>
                 <ul className="space-y-1 text-[#1C3220]">
-                  <li>→ Rides: Pleasure Beach is excellent</li>
+                  <li>→ Rides: Blackpool Pleasure Beach</li>
                   <li>→ Older kids who want entertainment</li>
                   <li>→ Illuminations (Sept–Nov)</li>
                   <li>→ Full day of structured activity</li>
@@ -112,7 +112,7 @@ export default function PostContent() {
             </div>
           </div>
 
-          <p>The thing that catches people out with Blackpool is the cost. Once you&apos;re through the gates at Pleasure Beach and buying food and drinks throughout the day, it adds up quickly with multiple children. Formby is significantly cheaper for a day out, and the kids find their own entertainment rather than needing to pay for each individual thing.</p>
+          <p>A day at Blackpool&apos;s paid attractions costs more than a day at Formby, where the beach and pinewoods are free to walk (the National Trust car parks charge).</p>
 
           <p>With younger children (mine were best here at ages five to eleven), Formby wins easily. With teenagers who want stimulation and wouldn&apos;t find a pine forest sufficient entertainment, Blackpool is the better choice.</p>
 

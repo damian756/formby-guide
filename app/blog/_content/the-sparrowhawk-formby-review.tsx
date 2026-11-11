@@ -69,8 +69,8 @@ export default function PostContent() {
       {/* Hero */}
       <section className="relative text-white overflow-hidden min-h-[420px] flex items-end">
         <Image
-          src="/blog-sparrowhawk-formby-review.jpg"
-          alt="A bowl of pappardelle ragu with Parmesan in warm candlelit restaurant lighting"
+          src="/blog-card-food.webp"
+          alt="A painted illustration of a glass of red wine and a candle on a table"
           fill
           priority
           className="object-cover object-center"

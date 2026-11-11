@@ -60,9 +60,9 @@ export const COLLECTIONS: Collection[] = [
     slug: "family-friendly-things-to-do-formby",
     title: "Family-Friendly Things to Do in Formby",
     metaDescription:
-      "Family-friendly things to do in Formby: activities, attractions and days out that actually work with kids. Honest local list.",
+      "Family-friendly things to do in Formby: activities and attractions listed as suitable for children, with addresses and contact details.",
     intro:
-      "Formby is genuinely good for families: the beach, the red squirrels, the pinewoods, and enough to keep kids busy for a full day without spending a fortune. These are the activities and attractions worth the trip with children in tow, from toddlers to teenagers who claim they're bored of everything.",
+      "The beach, the pinewoods and the red squirrel trail are free to walk. These are activities and attractions in our directory listed as suitable for children. Check ages, prices and opening times with each one before you go.",
     tags: ["family-friendly"],
     categorySlugs: ["activities"],
     emoji: "👨‍👩‍👧‍👦",
@@ -100,9 +100,9 @@ export const COLLECTIONS: Collection[] = [
     slug: "free-things-to-do-formby",
     title: "Free Things to Do in Formby",
     metaDescription:
-      "Free things to do in Formby: the beach, pinewoods, nature reserves and more that cost nothing. Honest local list.",
+      "Free things to do in Formby: the beach, the pinewoods, nature reserves and other places in our directory listed as free.",
     intro:
-      "Formby's best things are mostly free: the beach is free to walk (NT car park isn't, but the beach itself is), the pinewoods paths are open, and the red squirrel trails cost nothing to walk. These are the attractions, outdoor spaces, and things worth doing in Formby that genuinely don't cost a penny.",
+      "The beach and the pinewood paths are free to walk; the National Trust car parks charge. These are the places in our directory listed as free.",
     tags: ["free"],
     categorySlugs: ["activities", "nature-walks", "beaches"],
     emoji: "🎟️",

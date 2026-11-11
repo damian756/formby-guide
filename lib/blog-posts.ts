@@ -216,7 +216,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "blackpool-or-formby-family-day-out",
-    title: "Blackpool or Formby for a Family Day Out? Clare's Honest Answer",
+    title: "Blackpool or Formby for a Family Day Out?",
     excerpt: "I've done both with four kids. Here's the straight comparison: what Blackpool does well, what Formby does well, and how to decide which one is actually right for your family.",
     author: "Clare",
     date: "April 2, 2026",
@@ -224,8 +224,8 @@ export const BLOG_POSTS: BlogPost[] = [
     categorySlug: "family",
     gradient: "linear-gradient(135deg, #1C3220 0%, #2E6B3E 100%)",
     image: "/blog-blackpool-formby-family.jpg",
-    metaTitle: "Blackpool or Formby for a Family Day Out? Honest Comparison",
-    metaDescription: "Blackpool has the rides and the Illuminations. Formby has the pinewoods, red squirrels and a quiet beach. Which one is right depends on your family. Here's the honest answer from a Formby local.",
+    metaTitle: "Blackpool or Formby for a Family Day Out? A Comparison",
+    metaDescription: "Blackpool has the rides and the Illuminations. Formby has the pinewoods, red squirrels and a quiet beach. Which one is right depends on your family. Here is a comparison from a Formby local.",
   },
   {
     slug: "formby-day-trip-from-blackpool",
@@ -262,7 +262,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "5 min read",
     categorySlug: "restaurants",
     gradient: "linear-gradient(135deg, #2C1810 0%, #8B4513 100%)",
-    image: "/blog-sparrowhawk-formby-review.jpg",
+    image: "/blog-card-food.webp",
     metaTitle: "The Sparrowhawk, Formby: Opening Times, Dogs and Booking",
     metaDescription: "The Sparrowhawk is a Brunning & Price pub on Southport Old Road, Formby. Opening and food times, menus, dogs, access and booking, from the pub's own website.",
   },

@@ -376,11 +376,11 @@ export default function PinewoodsContent() {
                 desc: "Mobile food and drink concessions in the NT car park during spring and summer. Nothing in autumn and winter, so bring a flask.",
               },
               {
-                name: "The Sparrowhawk",
-                href: "/restaurants/the-sparrowhawk-formby",
-                tag: "Dogs in the bar",
-                tagColor: "bg-amber-500 text-white",
-                desc: "A Brunning & Price pub on Southport Old Road, with food from noon every day and a terrace and gardens. Well-behaved dogs on leads are welcome in the bar area.",
+                name: "Don Luigi",
+                href: "/restaurants/don-luigi-formby",
+                tag: "Italian",
+                tagColor: "bg-[#C9A96E] text-[#1C3220]",
+                desc: "An Italian restaurant on Church Road, with pizza, a grill menu and small plates.",
               },
               {
                 name: "Emily's",
@@ -390,11 +390,11 @@ export default function PinewoodsContent() {
                 desc: "A restaurant on Brows Lane serving breakfast and brunch from 9am every day and an à la carte menu on Monday to Saturday evenings. Well-behaved dogs are welcome until 5pm.",
               },
               {
-                name: "Don Luigi",
-                href: "/restaurants/don-luigi-formby",
-                tag: "Italian",
-                tagColor: "bg-[#C9A96E] text-[#1C3220]",
-                desc: "An Italian restaurant on Church Road, with pizza, a grill menu and small plates.",
+                name: "The Sparrowhawk",
+                href: "/restaurants/the-sparrowhawk-formby",
+                tag: "Dogs in the bar",
+                tagColor: "bg-amber-500 text-white",
+                desc: "A Brunning & Price pub on Southport Old Road, with food from noon every day and a terrace and gardens. Well-behaved dogs on leads are welcome in the bar area.",
               },
             ].map((r) => (
               <Link

@@ -179,7 +179,7 @@ export default function RestaurantsFormbyPage() {
           <p className="text-[#1C3220]/75 leading-relaxed mb-10 max-w-3xl">
             They are listed in alphabetical order. Menus and opening times change, so check with the restaurant before you go. The{" "}
             <Link href="/restaurants" className="text-[#2E6B3E] underline underline-offset-2">restaurants directory</Link>{" "}
-            lists every restaurant we know of in and around Formby.
+            lists every restaurant we know of in and around Formby. Being listed here is not a recommendation.
           </p>
 
           {/* At a glance */}
