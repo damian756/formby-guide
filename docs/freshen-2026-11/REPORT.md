@@ -106,3 +106,32 @@ Also found while re-checking: 25 data strings showed a literal `&apos;` on scree
 - Browser console on home, blog index and both new posts: no errors (the two duplicate-key errors are gone).
 - Screenshots at 1440 and 390 through headless Microsoft Edge (Playwright, `msedge` channel) of every changed page type and both posts.
 - Em dash scan of `app/`, `lib/`, `components/`: none left in customer-facing strings (a few remain in code comments in `app/globals.css` and `lib/affiliate-links.ts`).
+
+## 7. Advertising (stage B)
+
+Built on 11 Nov 2026 from the approved stage A proposal and Damian's picks. Every sponsor is empty at commit; Damian fills one by hand in `lib/ad-slots.ts` once its invoice is paid (a sponsor with a past `until` date shows as empty again, within the hour).
+
+**Existing advertisers:** none. All 357 listings are `listingTier = "free"` with `featured = false`, the `Subscription` table is empty, and no business has a Stripe customer or subscription ID. Nothing in code ever recorded a network package. The £450/£650/£800 packages are gone.
+
+**Spaces (at most one advert per page):**
+- Home page card, after "Local guides & stories" (£59 a month, labelled Advertisement).
+- Featured places on Restaurants, Cafés, Pubs, Places to Stay, Activities and Shopping: at most two, taken from the listing's `listingTier` (featured or premium), shown first and marked "Featured" and "Paid placement". While fewer than two are featured, one empty card sits above the search bar. The normal order no longer gives any tier an unlabelled boost (£29 a month or £290 a year).
+- Guide sponsor (£49 a month, labelled Sponsor) at the end of /formby-beach, /formby-pinewoods, /red-squirrels-formby, /guides/parking-formby-beach and /things-to-do, below the guide and away from the "Where to eat" sections.
+- End-of-post sponsor on eight seasonal and walks posts that name no business: formby-beach-weather-guide, spring-formby-beach-april, sunset-formby-point, formby-in-winter, formby-cycling-routes, ainsdale-beach-walk-from-formby, formby-nt-autumn-visit, prehistoric-footprints-formby-point. Left off every post that names or rates a business.
+- None on listing pages, reviews, best-of guides, about, privacy, terms, disclosure, contact, claim-listing, advertise or 404.
+
+**Advertise page** rebuilt from the mock: five options and the Sefton Coast bundle, all "plus VAT"; the founding offer; how it works; our rules. `/advertise?space=<id>` names the space and highlights its option; every "Ask about" button opens the contact form with the advertising subject chosen and "I'm interested in: <space>" filled in. No traffic or audience claims.
+
+**Sponsored articles:** support only, none published. A post's metadata takes `sponsor: { name, url }`, and `app/blog/SponsoredArticle.tsx` gives it a Sponsored label, a "Sponsored by X" byline, the sponsor as JSON-LD author, sponsored links and no Clare bio; it is labelled Sponsored in the blog index, home strip and feed.
+
+**Disclosure and about:** new "Advertising" section on /disclosure; the about page's funding lines now say featured placement and advertising, and that nothing under Clare's name is paid for.
+
+**Enquiries:** forms deliver to `DELIVERY_EMAIL` (Damian's inbox) and every address a visitor sees is `DISPLAY_EMAIL` (hello@seftoncoast.network), both in `lib/contact.ts`. The contact route sends from noreply@formbyguide.co.uk unless `RESEND_FROM_EMAIL` is set, replies to the enquirer, escapes every value and logs send errors. `npm run test:enquiry`: 18 tests, all pass. Nothing was sent.
+
+**Affiliate links removed:** the LateRooms box on Places to Stay, the Go Ape box on Things to Do, the Sykes and LateRooms buttons on /the-open-2026, the three partner boxes on /the-open-2026/accommodation, `lib/affiliate-links.ts`, and the affiliate lines on the about and disclosure pages.
+
+**Visit counts:** a `PageCount` table (path, day, count) on Neon, created by `prisma/sql/2026-11-page-count.sql`. `/api/count` adds one per page view on the live site only, leaves out bots, and stores nothing about the visitor.
+
+**Checks:** `npx tsc --noEmit` 0 errors (15 before, all from a stale generated Prisma client); `npx eslint .` 43 errors and 6 warnings, the same as before; no em dashes in changed files. Screenshots `ads-*` at 1440 and 390, empty and filled.
+
+**For Damian:** set `RESEND_FROM_EMAIL` on Vercel to "FormbyGuide <noreply@formbyguide.co.uk>" or remove it; the privacy page still names Plausible while the site loads Ahrefs Web Analytics, and needs a line for the page counts; listing pages still say "from £29/month" without "plus VAT"; the Open 2026 pages are out of date.
