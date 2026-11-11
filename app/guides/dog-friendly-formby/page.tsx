@@ -8,7 +8,7 @@ import { getGuide } from "@/lib/guides-config";
 const BASE_URL = "https://www.formbyguide.co.uk";
 
 export const metadata: Metadata = {
-  title: "Dog-Friendly Formby | Beach Rules, Walks, Pubs & Cafés | FormbyGuide",
+  title: "Dog-Friendly Formby | Beach Rules, Walks, Pubs & Cafés",
   description:
     "Formby is good for dogs: NT beach (with seasonal rules), the pinewoods, and dog-welcoming pubs and cafés in the village. The complete dog-friendly guide.",
   keywords:

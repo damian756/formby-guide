@@ -7,7 +7,7 @@ import { GUIDES, GUIDE_CATEGORIES, getGuideUrl, type GuideCategory } from "@/lib
 const BASE_URL = "https://www.formbyguide.co.uk";
 
 export const metadata: Metadata = {
-  title: "Formby Guides: Practical Local Guides for Visitors | FormbyGuide",
+  title: "Formby Guides: Practical Local Guides for Visitors",
   description:
     "Local guides to Formby: written by someone who actually lives here. Formby Beach, red squirrels, parking, dog-friendly spots, restaurants, and more.",
   alternates: { canonical: `${BASE_URL}/guides` },

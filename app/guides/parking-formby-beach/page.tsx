@@ -12,7 +12,7 @@ const BASE_URL = "https://www.formbyguide.co.uk";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Parking at Formby Beach | NT Car Park, Postcode & Tips | FormbyGuide",
+  title: "Parking at Formby Beach | NT Car Park, Postcode & Tips",
   description:
     "Parking at Formby Beach: postcodes L37 1LJ (Victoria Road) and L37 2EB (Lifeboat Road), how to pay at the machine or with JustPark (signal in the car park is terrible), peak times, and getting there by train.",
   keywords:

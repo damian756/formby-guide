@@ -13,7 +13,7 @@ const BASE_URL = "https://www.formbyguide.co.uk";
 // Food Standards Agency register. No rankings, verdicts or price ratings.
 
 export const metadata: Metadata = {
-  title: "Restaurants in Formby: Where They Are and What They Offer | FormbyGuide",
+  title: "Restaurants in Formby: Where They Are and What They Offer",
   description:
     "Restaurants in Formby: Emily's, The Sparrowhawk, Don Luigi and Sorrento. Addresses, menus and dog policies, taken from each restaurant's own website.",
   keywords:

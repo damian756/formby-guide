@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const url = `${BASE_URL}/blog/${slug}`;
 
   return {
-    title: `${post.title} | FormbyGuide.co.uk`,
+    title: post.title,
     description: post.excerpt,
     alternates: { canonical: url },
     openGraph: {

@@ -90,8 +90,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* eslint-disable-next-line @next/next/no-before-interactive-script-outside-document */}
         <script src="https://analytics.ahrefs.com/analytics.js" data-key="3bpGxV8z6gq6dFWHAjf6Zg" async></script>
       </head>

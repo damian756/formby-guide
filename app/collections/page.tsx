@@ -9,7 +9,7 @@ export const revalidate = 3600;
 const BASE_URL = "https://www.formbyguide.co.uk";
 
 export const metadata: Metadata = {
-  title: "Collections | Curated Lists for Formby | FormbyGuide",
+  title: "Collections: Formby Lists by Theme",
   description:
     "Curated collections of Formby businesses: dog-friendly restaurants, cafés near the beach, family-friendly activities, and more. Filtered, local, and honest.",
   alternates: { canonical: `${BASE_URL}/collections` },

@@ -14,7 +14,7 @@ const BASE_URL = "https://www.formbyguide.co.uk";
 // royalbirkdale.com/visitors/, merseyrail.org station pages, nationaltrust.org.uk Formby page.
 
 export const metadata: Metadata = {
-  title: "The Open at Royal Birkdale 2026: The Result, and Golf Visits from Formby | FormbyGuide",
+  title: "The Open at Royal Birkdale 2026: The Result, and Golf Visits from Formby",
   description:
     "Ryan Fox won the 154th Open at Royal Birkdale in July 2026 with a total of 270. What the club says about visitor tee times now, and getting there from Formby.",
   alternates: { canonical: `${BASE_URL}/the-open-2026` },

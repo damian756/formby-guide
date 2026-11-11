@@ -200,6 +200,8 @@ export default function CategoryBrowser({
         <div className="ml-auto flex items-center gap-1 bg-white border border-gray-200 rounded-xl shadow-sm p-1">
           <button
             onClick={() => setView("list")}
+            aria-label="List view"
+            aria-pressed={view === "list"}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
               view === "list" ? "bg-gray-100 text-gray-800 shadow-sm" : "text-gray-400 hover:text-gray-600"
             }`}
@@ -209,6 +211,8 @@ export default function CategoryBrowser({
           </button>
           <button
             onClick={() => setView("map")}
+            aria-label="Map view"
+            aria-pressed={view === "map"}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
               view === "map" ? "bg-gray-100 text-gray-800 shadow-sm" : "text-gray-400 hover:text-gray-600"
             }`}

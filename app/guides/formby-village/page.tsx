@@ -8,7 +8,7 @@ import { getGuide } from "@/lib/guides-config";
 const BASE_URL = "https://www.formbyguide.co.uk";
 
 export const metadata: Metadata = {
-  title: "Formby Village | Chapel Lane, Shops & Restaurants Guide | FormbyGuide",
+  title: "Formby Village | Chapel Lane, Shops & Restaurants Guide",
   description:
     "Formby village guide: Chapel Lane, independent shops, restaurants, and the part of Formby most visitors never see. Ten minutes from the beach.",
   keywords:
