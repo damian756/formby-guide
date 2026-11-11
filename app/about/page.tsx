@@ -215,8 +215,8 @@ export default function AboutPage() {
             <h2 className="font-display text-2xl font-bold text-[#1C3220] mb-5">How it&apos;s funded</h2>
             <div className="bg-white rounded-2xl border border-gray-100 p-8">
               <p className="text-gray-700 leading-relaxed mb-4">
-                FormbyGuide is free to use. It&apos;s funded by featured placement and advertising:
-                businesses can pay to appear first in their category, or for a clearly labelled advert.
+                FormbyGuide is free to use. Churchtown Media Ltd pays for the guide.
+                Businesses can pay for a Featured place or a labelled advert.
               </p>
               <p className="text-gray-700 leading-relaxed">
                 Featured placement and advertising have no influence on what gets written.

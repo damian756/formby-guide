@@ -30,7 +30,6 @@ type AccomBusiness = {
   name: string;
   shortDescription: string | null;
   description: string | null;
-  listingTier: string;
   address: string;
   rating: number | null;
   reviewCount: number | null;
@@ -54,23 +53,18 @@ export default async function OpenAccommodationPage() {
         name: true,
         shortDescription: true,
         description: true,
-        listingTier: true,
         address: true,
         rating: true,
         reviewCount: true,
         priceRange: true,
         images: true,
       },
-      orderBy: [{ listingTier: "asc" }, { rating: "desc" }],
+      orderBy: [{ rating: "desc" }],
     });
 
-    const tierOrder: Record<string, number> = { premium: 1, featured: 2, standard: 3 };
     businesses = raw
       .map((b) => ({ ...b, images: b.images ?? [] }))
       .sort((a, b) => {
-        const ta = tierOrder[a.listingTier] ?? 4;
-        const tb = tierOrder[b.listingTier] ?? 4;
-        if (ta !== tb) return ta - tb;
         const scoreA = (a.rating ?? 0) * Math.log((a.reviewCount ?? 0) + 1);
         const scoreB = (b.rating ?? 0) * Math.log((b.reviewCount ?? 0) + 1);
         return scoreB - scoreA;
@@ -186,11 +180,6 @@ export default async function OpenAccommodationPage() {
                       <div className="absolute inset-0 flex items-center justify-center">
                         <span className="text-5xl opacity-30 select-none">🏡</span>
                       </div>
-                    )}
-                    {b.listingTier === "premium" && (
-                      <span className="absolute top-3 left-3 text-[10px] font-black bg-[#C9A96E] text-[#1C3220] px-2.5 py-1 rounded-full uppercase tracking-wider shadow-sm">
-                        ✦ Featured
-                      </span>
                     )}
                   </div>
 

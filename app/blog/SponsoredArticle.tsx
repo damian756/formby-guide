@@ -5,12 +5,9 @@ import { ChevronRight } from "lucide-react";
 import { getBlogPost, getBlogCategory } from "@/lib/blog-posts";
 
 // Layout for a paid, sponsored article (the "Sponsored article" option on
-// /advertise). A sponsored post's content component wraps its body in this
-// instead of the usual Clare template:
-//
-//   export default function PostContent() {
-//     return <SponsoredArticle slug="the-post-slug">...body...</SponsoredArticle>;
-//   }
+// /advertise). app/blog/[slug]/page.tsx wraps the post in this whenever the
+// post has a `sponsor`: register a body-only component (no Clare template) in
+// SPONSORED_POST_BODIES in app/blog/_content/index.ts.
 //
 // It reads the title, standfirst, image, date and `sponsor` from BLOG_POSTS.
 // It labels the post Sponsored, bylines it "Sponsored by <name>", names the

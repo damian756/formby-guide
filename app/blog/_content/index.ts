@@ -87,3 +87,9 @@ export const POST_COMPONENTS: Record<string, ComponentType> = {
   "formby-in-winter": FormbyInWinter,
   "prehistoric-footprints-formby-point": PrehistoricFootprints,
 };
+
+// Sponsored articles: body only (paragraphs, headings, SponsorLink), no page
+// template and no ClareBio. app/blog/[slug]/page.tsx wraps the body in
+// <SponsoredArticle> whenever the post has a `sponsor` in lib/blog-posts.ts.
+// None exist yet.
+export const SPONSORED_POST_BODIES: Record<string, ComponentType> = {};

@@ -63,7 +63,6 @@ type CollectionBusiness = {
   categorySlug: string;
   shortDescription: string | null;
   description: string | null;
-  listingTier: string;
   address: string;
   postcode: string;
   rating: number | null;
@@ -107,7 +106,6 @@ export default async function CollectionPage({ params }: Props) {
         name: true,
         shortDescription: true,
         description: true,
-        listingTier: true,
         address: true,
         postcode: true,
         rating: true,
@@ -118,8 +116,6 @@ export default async function CollectionPage({ params }: Props) {
       },
     });
 
-    const tierOrder: Record<string, number> = { premium: 1, featured: 2, standard: 3 };
-
     businesses = rawResults
       .map((b) => ({
         id: b.id,
@@ -128,7 +124,6 @@ export default async function CollectionPage({ params }: Props) {
         categorySlug: b.category.slug,
         shortDescription: b.shortDescription,
         description: b.description,
-        listingTier: b.listingTier,
         address: b.address,
         postcode: b.postcode,
         rating: b.rating,
@@ -138,9 +133,6 @@ export default async function CollectionPage({ params }: Props) {
         photoUrl: b.images?.[0] ?? null,
       }))
       .sort((a, b) => {
-        const ta = tierOrder[a.listingTier] ?? 4;
-        const tb = tierOrder[b.listingTier] ?? 4;
-        if (ta !== tb) return ta - tb;
         const scoreA = (a.rating ?? 0) * Math.log((a.reviewCount ?? 0) + 1);
         const scoreB = (b.rating ?? 0) * Math.log((b.reviewCount ?? 0) + 1);
         if (scoreB !== scoreA) return scoreB - scoreA;
@@ -289,7 +281,7 @@ export default async function CollectionPage({ params }: Props) {
               Own a business that belongs here?
             </h3>
             <p className="text-white/60 text-sm mb-5 max-w-sm mx-auto">
-              List your business and get featured in relevant collections across FormbyGuide.
+              List your business on FormbyGuide. A basic listing is free.
             </p>
             <Link
               href="/claim-listing"
@@ -336,11 +328,6 @@ function BusinessCard({ business: b }: { business: CollectionBusiness }) {
           </div>
         )}
 
-        {b.listingTier === "premium" && (
-          <span className="absolute top-3 left-3 text-[10px] font-black bg-[#C9A96E] text-[#1C3220] px-2.5 py-1 rounded-full uppercase tracking-wider shadow-sm">
-            ✦ Featured
-          </span>
-        )}
       </div>
 
       {/* Card body */}

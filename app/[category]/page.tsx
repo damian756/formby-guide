@@ -157,7 +157,9 @@ export default async function CategoryPage({ params, searchParams }: Props) {
   const cat = getCategoryBySlug(category)!;
   const theme = THEMES[category] || THEMES.restaurants;
 
-  let businesses: BrowserBusiness[] = [];
+  // isPrimary: this page's category is the listing's main one (not a secondary).
+  type CategoryRow = BrowserBusiness & { isPrimary: boolean };
+  let businesses: CategoryRow[] = [];
 
   try {
     const categoryRecord = await prisma.category.findFirst({ where: { slug: category } });
@@ -165,19 +167,19 @@ export default async function CategoryPage({ params, searchParams }: Props) {
       const catId = categoryRecord.id;
 
       if (sort === "alpha") {
-        businesses = await prisma.$queryRaw<BrowserBusiness[]>`
+        businesses = await prisma.$queryRaw<CategoryRow[]>`
           SELECT slug, name, "shortDescription", description, "listingTier", address, postcode,
                  rating, "reviewCount", "priceRange", lat, lng, "hygieneRating",
-                 images[1] AS "firstImage"
+                 images[1] AS "firstImage", ("categoryId" = ${catId}) AS "isPrimary"
           FROM "Business"
           WHERE "categoryId" = ${catId} OR ${catId} = ANY("secondaryCategoryIds")
           ORDER BY name ASC
         `;
       } else if (sort === "hygiene") {
-        businesses = await prisma.$queryRaw<BrowserBusiness[]>`
+        businesses = await prisma.$queryRaw<CategoryRow[]>`
           SELECT slug, name, "shortDescription", description, "listingTier", address, postcode,
                  rating, "reviewCount", "priceRange", lat, lng, "hygieneRating",
-                 images[1] AS "firstImage"
+                 images[1] AS "firstImage", ("categoryId" = ${catId}) AS "isPrimary"
           FROM "Business"
           WHERE "categoryId" = ${catId} OR ${catId} = ANY("secondaryCategoryIds")
           ORDER BY
@@ -185,20 +187,20 @@ export default async function CategoryPage({ params, searchParams }: Props) {
             (COALESCE(rating, 0) * LOG(COALESCE("reviewCount", 0) + 1)) DESC, name ASC
         `;
       } else if (sort === "google") {
-        businesses = await prisma.$queryRaw<BrowserBusiness[]>`
+        businesses = await prisma.$queryRaw<CategoryRow[]>`
           SELECT slug, name, "shortDescription", description, "listingTier", address, postcode,
                  rating, "reviewCount", "priceRange", lat, lng, "hygieneRating",
-                 images[1] AS "firstImage"
+                 images[1] AS "firstImage", ("categoryId" = ${catId}) AS "isPrimary"
           FROM "Business"
           WHERE "categoryId" = ${catId} OR ${catId} = ANY("secondaryCategoryIds")
           ORDER BY
             COALESCE(rating, 0) DESC, COALESCE("reviewCount", 0) DESC, name ASC
         `;
       } else {
-        businesses = await prisma.$queryRaw<BrowserBusiness[]>`
+        businesses = await prisma.$queryRaw<CategoryRow[]>`
           SELECT slug, name, "shortDescription", description, "listingTier", address, postcode,
                  rating, "reviewCount", "priceRange", lat, lng, "hygieneRating",
-                 images[1] AS "firstImage"
+                 images[1] AS "firstImage", ("categoryId" = ${catId}) AS "isPrimary"
           FROM "Business"
           WHERE "categoryId" = ${catId} OR ${catId} = ANY("secondaryCategoryIds")
           ORDER BY
@@ -214,10 +216,11 @@ export default async function CategoryPage({ params, searchParams }: Props) {
 
   // Featured places (paid, labelled): at most two, shown above the normal order,
   // which itself does not change. Premium before featured, then the page's order.
+  // A listing is Featured only on its primary category, never on a secondary one.
   const canFeature = FEATURED_CATEGORIES.includes(category);
   const featuredPlaces = canFeature
     ? areaBusinesses
-        .filter((b) => FEATURED_TIERS.includes(b.listingTier))
+        .filter((b) => b.isPrimary && FEATURED_TIERS.includes(b.listingTier))
         .sort((a, b) => FEATURED_TIERS.indexOf(b.listingTier) - FEATURED_TIERS.indexOf(a.listingTier))
         .slice(0, 2)
     : [];

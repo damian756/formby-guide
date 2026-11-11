@@ -4,64 +4,13 @@ import { ChevronRight, ArrowRight, MapPin } from "lucide-react";
 import type { Guide } from "@/lib/guides-config";
 import { getRelatedGuides, getGuideUrl, GUIDE_CATEGORIES } from "@/lib/guides-config";
 
-interface BusinessCard {
-  id: string;
-  slug: string;
-  name: string;
-  shortDescription: string | null;
-  category: { slug: string; name: string };
-  images: string[];
-  listingTier: string;
-  rating: number | null;
-}
-
 interface GuideLayoutProps {
   guide: Guide;
   children: React.ReactNode;
 }
 
-async function fetchRelatedListings(guide: Guide): Promise<BusinessCard[]> {
-  if (!guide.listingFilter) return [];
-  try {
-    const { prisma } = await import("@/lib/prisma");
-    const { categorySlugs, tags } = guide.listingFilter;
-
-    const businesses = await prisma.business.findMany({
-      where: {
-        OR: [
-          categorySlugs && categorySlugs.length > 0
-            ? { category: { slug: { in: categorySlugs } } }
-            : undefined,
-          tags && tags.length > 0
-            ? { tags: { hasSome: tags } }
-            : undefined,
-        ].filter(Boolean) as object[],
-        listingTier: { in: ["featured", "premium"] },
-      },
-      select: {
-        id: true,
-        slug: true,
-        name: true,
-        shortDescription: true,
-        category: { select: { slug: true, name: true } },
-        images: true,
-        listingTier: true,
-        rating: true,
-      },
-      orderBy: [{ listingTier: "desc" }, { rating: "desc" }],
-      take: 6,
-    });
-    return businesses as BusinessCard[];
-  } catch {
-    return [];
-  }
-}
-
-export default async function GuideLayout({ guide, children }: GuideLayoutProps) {
-  const [relatedGuides, listings] = await Promise.all([
-    Promise.resolve(getRelatedGuides(guide.slug)),
-    fetchRelatedListings(guide),
-  ]);
+export default function GuideLayout({ guide, children }: GuideLayoutProps) {
+  const relatedGuides = getRelatedGuides(guide.slug);
 
   const categoryLabel = GUIDE_CATEGORIES[guide.category].label;
 
@@ -103,89 +52,6 @@ export default async function GuideLayout({ guide, children }: GuideLayoutProps)
 
       {/* ── Bespoke page content ── */}
       {children}
-
-      {/* ── Related Listings ── */}
-      {listings.length > 0 && (
-        <section className="bg-white border-t border-gray-100">
-          <div className="container mx-auto px-4 max-w-7xl py-16">
-            <div className="mb-8">
-              <p className="text-xs uppercase tracking-widest text-[#C9A96E] font-bold mb-2">
-                Formby Businesses
-              </p>
-              <h2 className="font-display text-2xl md:text-3xl font-bold text-[#1C3220]">
-                Relevant Listings
-              </h2>
-              <p className="text-gray-600 mt-2 text-base">
-                Featured businesses relevant to this guide.
-              </p>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {listings.map((biz) => (
-                <Link
-                  key={biz.id}
-                  href={`/${biz.category.slug}/${biz.slug}`}
-                  className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-[#2E6B3E]/30 transition-all group overflow-hidden"
-                >
-                  <div className="relative h-36 overflow-hidden">
-                    {biz.images[0] ? (
-                      <Image
-                        src={biz.images[0]}
-                        alt={biz.name}
-                        fill
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                    ) : (
-                      <div className="absolute inset-0 bg-gradient-to-br from-[#1C3220] to-[#2E6B3E] flex items-center justify-center">
-                        <span className="text-white/20 font-display font-bold text-4xl select-none">
-                          {biz.name.charAt(0)}
-                        </span>
-                      </div>
-                    )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                    <div className="absolute bottom-2 left-3">
-                      <p className="text-[#C9A96E] text-[10px] font-bold uppercase tracking-wider">
-                        {biz.category.name}
-                      </p>
-                    </div>
-                    {biz.listingTier === "featured" && (
-                      <div className="absolute top-2 right-2">
-                        <span className="bg-[#C9A96E] text-[#1C3220] text-[9px] font-black px-2 py-0.5 rounded-full uppercase tracking-wider">
-                          Featured
-                        </span>
-                      </div>
-                    )}
-                  </div>
-                  <div className="p-5">
-                    <h3 className="font-display font-bold text-[#1C3220] text-base mb-1.5 group-hover:text-[#2E6B3E] transition-colors">
-                      {biz.name}
-                    </h3>
-                    {biz.shortDescription && (
-                      <p className="text-gray-600 text-xs leading-relaxed line-clamp-2">
-                        {biz.shortDescription}
-                      </p>
-                    )}
-                    {biz.rating && (
-                      <div className="mt-2 flex items-center gap-1">
-                        <span className="text-amber-500 text-sm">★</span>
-                        <span className="text-xs font-semibold text-gray-700">{biz.rating.toFixed(1)}</span>
-                      </div>
-                    )}
-                  </div>
-                </Link>
-              ))}
-            </div>
-            <div className="mt-6">
-              <Link
-                href={`/${guide.listingFilter?.categorySlugs?.[0] ?? "restaurants"}`}
-                className="inline-flex items-center gap-2 text-[#2E6B3E] font-semibold text-sm hover:text-[#1C3220] transition-colors"
-              >
-                Browse all listings <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* ── Related Guides ── */}
       {relatedGuides.length > 0 && (
@@ -252,11 +118,10 @@ export default async function GuideLayout({ guide, children }: GuideLayoutProps)
             Formby Business?
           </p>
           <h2 className="font-display text-2xl md:text-3xl font-bold mb-3">
-            Get Your Business in These Guides
+            List Your Business on Formby Guide
           </h2>
           <p className="text-white/60 text-base max-w-xl mx-auto mb-8 leading-relaxed">
-            FormbyGuide.co.uk reaches visitors actively planning a trip to Formby.
-            List your business and appear in relevant guides automatically.
+            A basic listing is free. Claim yours or add your business.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link

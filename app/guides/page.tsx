@@ -146,11 +146,10 @@ export default function GuidesIndexPage() {
         <div className="container mx-auto px-4 max-w-7xl text-center text-white">
           <p className="text-[#C9A96E] text-xs font-bold uppercase tracking-widest mb-3">Formby Business?</p>
           <h2 className="font-display text-2xl md:text-3xl font-bold mb-3">
-            Get Your Business Into These Guides
+            List Your Business on Formby Guide
           </h2>
           <p className="text-white/60 text-base max-w-xl mx-auto mb-8 leading-relaxed">
-            FormbyGuide.co.uk reaches visitors actively planning a trip to Formby.
-            List your business and appear in relevant guides automatically.
+            A basic listing is free. Claim yours or add your business.
           </p>
           <Link
             href="/claim-listing"

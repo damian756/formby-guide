@@ -3,7 +3,7 @@ import { prisma } from "@/lib/prisma";
 
 const TIER_MRR: Record<string, number> = {
   standard: 29,
-  featured: 49,
+  featured: 29,
   premium: 99,
 };
 

@@ -265,7 +265,7 @@ export default function TheOpen2026Page() {
                 {
                   type: "B&Bs & Guesthouses",
                   desc: "Several good guesthouses in the village, mainly family-run. Clean, comfortable, decent breakfasts. Perfect for early starts: you're a 5-minute walk from the station.",
-                  tip: "Search for Formby specifically. Don't cast the net too wide or you'll end up in Liverpool.",
+                  tip: "On booking sites, search for Formby specifically. Don't cast the net too wide or you'll end up in Liverpool.",
                   icon: "🏡",
                 },
                 {

@@ -1,9 +1,18 @@
 import type { NextRequest } from "next/server";
 import { prisma } from "@/lib/prisma";
-import { cleanCountPath, isBotUserAgent } from "@/lib/page-count";
+import { cleanCountPath, isBotUserAgent, isCrossSiteRequest, isKnownPath, type KnownRoutes } from "@/lib/page-count";
+import { BLOG_POSTS } from "@/lib/blog-posts";
+import { CATEGORIES } from "@/lib/config";
+import { COLLECTIONS } from "@/lib/collections-config";
 
 // Adds one to today's count for a page. Sent by components/PageCountBeacon.tsx.
 // Stores the path, the day and the number only. No cookies, no visitor data.
+
+const KNOWN: KnownRoutes = {
+  blogSlugs: new Set(BLOG_POSTS.map((p) => p.slug)),
+  categorySlugs: new Set(CATEGORIES.map((c) => c.slug)),
+  collectionSlugs: new Set(COLLECTIONS.map((c) => c.slug)),
+};
 
 function done() {
   return new Response(null, { status: 204 });
@@ -12,6 +21,9 @@ function done() {
 export async function POST(req: NextRequest) {
   // Only the live site counts: local dev and preview deployments never write.
   if (process.env.VERCEL_ENV !== "production") return done();
+
+  // The beacon is same-origin; a request another site makes is dropped.
+  if (isCrossSiteRequest(req.headers.get("sec-fetch-site"))) return done();
 
   // Read to leave out bots; never stored.
   if (isBotUserAgent(req.headers.get("user-agent"))) return done();
@@ -24,8 +36,9 @@ export async function POST(req: NextRequest) {
   }
   if (body.length > 600) return done();
 
+  // Only pages the site actually has.
   const path = cleanCountPath(body);
-  if (!path) return done();
+  if (!path || !isKnownPath(path, KNOWN)) return done();
 
   try {
     await prisma.$executeRaw`

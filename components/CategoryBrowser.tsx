@@ -287,10 +287,10 @@ export default function CategoryBrowser({
 
                   {isFeatured && (
                     <span className="absolute top-3 left-3 flex flex-col items-start gap-1">
-                      <span className="text-[10px] font-black bg-[#C9A96E] text-[#1C3220] px-2.5 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                      <span className="text-[11px] font-black bg-[#C9A96E] text-[#1C3220] px-2.5 py-1 rounded-full uppercase tracking-wider shadow-sm">
                         ✦ Featured
                       </span>
-                      <span className="text-[10px] font-semibold bg-white/90 text-[#1C3220]/75 px-2 py-0.5 rounded-full shadow-sm">
+                      <span className="text-[11px] font-semibold bg-white text-[#1C3220] px-2 py-0.5 rounded-full shadow-sm">
                         Paid placement
                       </span>
                     </span>

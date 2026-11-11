@@ -25,8 +25,9 @@ export interface BlogPost {
   /**
    * Set only on a paid, sponsored article. The post is labelled Sponsored in
    * listings and the feed, its byline is "Sponsored by <name>" (never Clare),
-   * and its content component wraps the body in <SponsoredArticle> from
-   * app/blog/SponsoredArticle.tsx (no ClareBio). Set `author` to the sponsor's
+   * and app/blog/[slug]/page.tsx always renders it in <SponsoredArticle> (no
+   * ClareBio), with a body-only component from SPONSORED_POST_BODIES in
+   * app/blog/_content/index.ts. Set `author` to the sponsor's
    * name as well. Links to the sponsor carry rel="sponsored noopener".
    */
   sponsor?: { name: string; url: string };

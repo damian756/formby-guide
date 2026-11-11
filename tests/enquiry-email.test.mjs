@@ -9,11 +9,14 @@ import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join, relative, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import {
+  HONEYPOT_FIELD,
+  LIMITS,
   buildAutoReply,
   buildEnquiryEmail,
   cleanSubject,
   escapeHtml,
   logSendError,
+  parseEnquiry,
   plainAddress,
 } from "../lib/enquiry-email.ts";
 import { DELIVERY_EMAIL, DISPLAY_EMAIL } from "../lib/contact.ts";
@@ -146,9 +149,6 @@ test("the enquiry email goes to DELIVERY_EMAIL, escapes every user value and has
   assert.match(mail.html, /Jo &lt;script&gt;alert\(&quot;x&quot;\)&lt;\/script&gt;/);
   assert.match(mail.html, /Hello &lt;b&gt;there&lt;\/b&gt; &amp; &quot;friends&quot; &#39;all&#39;/);
   assert.match(mail.html, /Jo&#39;s &lt;Café&gt; Ltd/);
-  const reply = buildAutoReply(HOSTILE, { from: "F <f@example.com>", to: "jo@example.com" });
-  assert.doesNotMatch(reply.html, /<script>/);
-  assert.equal(reply.to, "jo@example.com", "the auto-reply goes to the enquirer");
 });
 
 test("the reply-to is the enquirer's address, as one plain address", () => {
@@ -175,4 +175,81 @@ test("a returned send error is logged with its name and message only", () => {
   lines.length = 0;
   logSendError("auto-reply", new TypeError("fetch failed"), (l) => lines.push(l));
   assert.deepEqual(lines, ["[contact] auto-reply email failed: TypeError: fetch failed"]);
+});
+
+// Limits, honeypot and the auto-reply (added after the advertising review).
+
+const GOOD = { name: "Jo Bloggs", email: "jo@example.com", subject: "General enquiry", message: "Hello there", businessName: "" };
+
+test("the field limits are 100 for name, subject and business name, 3000 for the message", () => {
+  assert.deepEqual({ ...LIMITS }, { name: 100, subject: 100, businessName: 100, message: 3000 });
+});
+
+test("parseEnquiry accepts values at the limits and refuses one character over", () => {
+  const atLimit = { ...GOOD, name: "n".repeat(100), subject: "s".repeat(100), businessName: "b".repeat(100), message: "m".repeat(3000) };
+  const ok = parseEnquiry(atLimit);
+  assert.equal(ok.kind, "ok");
+  assert.equal(ok.replyTo, "jo@example.com");
+  for (const [field, label] of [["name", "Name"], ["subject", "Subject"], ["businessName", "Business name"], ["message", "Message"]]) {
+    const over = parseEnquiry({ ...GOOD, [field]: "x".repeat(LIMITS[field] + 1) });
+    assert.equal(over.kind, "error", field);
+    assert.equal(over.error, `${label} is too long (max ${LIMITS[field]} characters).`);
+  }
+});
+
+test("parseEnquiry still requires name, email and message, and one plain address", () => {
+  for (const field of ["name", "email", "message"]) {
+    assert.deepEqual(parseEnquiry({ ...GOOD, [field]: "  " }), { kind: "error", error: "Name, email and message are required." }, field);
+  }
+  assert.deepEqual(parseEnquiry({ ...GOOD, email: "a@b.com, c@d.com" }), { kind: "error", error: "Invalid email address." });
+  assert.deepEqual(parseEnquiry({ ...GOOD, name: ["x"] }), { kind: "error", error: "Invalid request." });
+  assert.equal(parseEnquiry(null).kind, "error");
+});
+
+test("a filled honeypot is answered as ok and nothing is built to send", () => {
+  assert.equal(HONEYPOT_FIELD, "website");
+  assert.deepEqual(parseEnquiry({ ...GOOD, [HONEYPOT_FIELD]: "http://spam.example" }), { kind: "honeypot" });
+  // Even an otherwise invalid request with the honeypot filled gets the quiet ok.
+  assert.deepEqual(parseEnquiry({ [HONEYPOT_FIELD]: "x" }), { kind: "honeypot" });
+  // Empty or blank honeypot: a person, so the enquiry goes ahead.
+  assert.equal(parseEnquiry({ ...GOOD, [HONEYPOT_FIELD]: "" }).kind, "ok");
+  assert.equal(parseEnquiry({ ...GOOD, [HONEYPOT_FIELD]: "   " }).kind, "ok");
+});
+
+test("the contact route returns ok and sends nothing when the honeypot is filled", () => {
+  const src = read("app/api/contact/route.ts");
+  const honeypotAt = src.indexOf('if (parsed.kind === "honeypot") return NextResponse.json({ success: true });');
+  assert.ok(honeypotAt > 0, "honeypot check present");
+  assert.ok(honeypotAt < src.indexOf("new Resend("), "checked before any mail client is made");
+  assert.ok(honeypotAt < src.indexOf("resend.emails.send("), "checked before any send");
+  assert.match(src, /parseEnquiry\(await req\.json\(\)\)/);
+});
+
+test("both forms carry the hidden honeypot field and the limits", () => {
+  for (const file of ["app/contact/ContactClient.tsx", "app/claim-listing/ClaimListingClient.tsx"]) {
+    const src = read(file);
+    assert.match(src, /import \{ HONEYPOT_FIELD, LIMITS \} from "@\/lib\/enquiry-email";/, file);
+    assert.match(src, /name=\{HONEYPOT_FIELD\}/, `${file}: field named`);
+    assert.match(src, /aria-hidden="true" className="absolute -left-\[10000px\]/, `${file}: hidden`);
+    assert.match(src, /tabIndex=\{-1\}/, `${file}: out of the tab order`);
+    assert.match(src, /\[HONEYPOT_FIELD\]: /, `${file}: sent to the route`);
+    assert.match(src, /maxLength=\{LIMITS\.name\}/, file);
+    assert.match(src, /maxLength=\{LIMITS\.businessName\}/, file);
+    assert.match(src, /maxLength=\{LIMITS\.message\}/, file);
+  }
+});
+
+test("the auto-reply is fixed text: no name, nothing the enquirer typed", () => {
+  const reply = buildAutoReply({ from: "F <f@example.com>", to: "jo@example.com" });
+  assert.equal(reply.to, "jo@example.com", "the auto-reply goes to the enquirer");
+  assert.equal(reply.replyTo, undefined);
+  assert.match(reply.html, /Hello,/);
+  assert.match(reply.html, /1 to 2 working days/);
+  assert.doesNotMatch(reply.html, /business days|\u2013|\u2014/);
+  assert.equal(buildAutoReply.length, 1, "takes only from and to: no enquiry text can reach it");
+  for (const v of Object.values(HOSTILE)) {
+    if (v !== HOSTILE.email) assert.ok(!reply.html.includes(v) && !reply.subject.includes(v), v);
+  }
+  assert.ok(!reply.html.includes("Jo"), "no name");
+  assert.match(read("app/api/contact/route.ts"), /buildAutoReply\(\{ from: FROM_EMAIL, to: replyTo \}\)/);
 });

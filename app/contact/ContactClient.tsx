@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Send, CheckCircle, AlertCircle, MapPin, Clock } from "lucide-react";
 import { ADVERTISING_SUBJECT } from "@/lib/contact-form";
+import { HONEYPOT_FIELD, LIMITS } from "@/lib/enquiry-email";
 
 const SUBJECTS = [
   "Claim my listing",
@@ -21,7 +22,7 @@ type Props = {
 
 export default function ContactClient({ initialSubject, initialMessage }: Props) {
   const startSubject = initialSubject && SUBJECTS.includes(initialSubject) ? initialSubject : SUBJECTS[0];
-  const [form, setForm] = useState({ name: "", email: "", subject: startSubject, businessName: "", message: initialMessage ?? "" });
+  const [form, setForm] = useState({ name: "", email: "", subject: startSubject, businessName: "", message: initialMessage ?? "", website: "" });
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
@@ -32,10 +33,11 @@ export default function ContactClient({ initialSubject, initialMessage }: Props)
     setStatus("sending");
     setErrorMsg("");
     try {
+      const { website, ...fields } = form;
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...fields, [HONEYPOT_FIELD]: website }),
       });
       const data = await res.json();
       if (!res.ok) { setErrorMsg(data.error || "Something went wrong."); setStatus("error"); return; }
@@ -88,7 +90,7 @@ export default function ContactClient({ initialSubject, initialMessage }: Props)
                   </div>
                   <div>
                     <p className="text-xs text-[#1C3220]/40 uppercase tracking-wider mb-0.5">Response time</p>
-                    <p className="text-[#1C3220] text-sm font-medium">1–2 business days</p>
+                    <p className="text-[#1C3220] text-sm font-medium">1 to 2 working days</p>
                   </div>
                 </div>
               </div>
@@ -122,10 +124,10 @@ export default function ContactClient({ initialSubject, initialMessage }: Props)
                   <CheckCircle className="w-8 h-8 text-green-500" />
                 </div>
                 <h2 className="font-display text-2xl font-bold text-[#1C3220] mb-2">Message sent!</h2>
-                <p className="text-[#1C3220]/60 mb-6">We&apos;ll be in touch within 1–2 business days. Check your inbox for a confirmation.</p>
+                <p className="text-[#1C3220]/60 mb-6">We&apos;ll be in touch within 1 to 2 working days. Check your inbox for a confirmation.</p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <button
-                    onClick={() => { setForm({ name: "", email: "", subject: SUBJECTS[0], businessName: "", message: "" }); setStatus("idle"); }}
+                    onClick={() => { setForm({ name: "", email: "", subject: SUBJECTS[0], businessName: "", message: "", website: "" }); setStatus("idle"); }}
                     className="px-6 py-2.5 border border-[#1C3220]/20 rounded-full text-sm font-medium text-[#1C3220]/70 hover:bg-[#E8EDE6] transition"
                   >
                     Send another message
@@ -136,7 +138,7 @@ export default function ContactClient({ initialSubject, initialMessage }: Props)
                 </div>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="bg-white rounded-2xl border border-[#1C3220]/8 p-7 space-y-5">
+              <form onSubmit={handleSubmit} className="relative bg-white rounded-2xl border border-[#1C3220]/8 p-7 space-y-5">
                 <h2 className="font-display text-xl font-bold text-[#1C3220]">Send a message</h2>
 
                 {status === "error" && (
@@ -154,6 +156,7 @@ export default function ContactClient({ initialSubject, initialMessage }: Props)
                     <input
                       type="text"
                       required
+                      maxLength={LIMITS.name}
                       value={form.name}
                       onChange={(e) => setForm({ ...form, name: e.target.value })}
                       placeholder="John Smith"
@@ -195,6 +198,7 @@ export default function ContactClient({ initialSubject, initialMessage }: Props)
                     </label>
                     <input
                       type="text"
+                      maxLength={LIMITS.businessName}
                       value={form.businessName}
                       onChange={(e) => setForm({ ...form, businessName: e.target.value })}
                       placeholder="e.g. Emily's Restaurant"
@@ -210,12 +214,28 @@ export default function ContactClient({ initialSubject, initialMessage }: Props)
                   <textarea
                     required
                     rows={6}
+                    maxLength={LIMITS.message}
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                     placeholder="Tell us what you need..."
                     className="w-full px-4 py-3 border border-[#1C3220]/15 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2E6B3E]/40 focus:border-[#2E6B3E] transition bg-[#F7F9F6] resize-none"
                   />
-                  <p className="text-xs text-[#1C3220]/40 mt-1 text-right">{form.message.length}/3000</p>
+                  <p className="text-xs text-[#1C3220]/40 mt-1 text-right">{form.message.length}/{LIMITS.message}</p>
+                </div>
+
+                {/* Honeypot: hidden from people and screen readers; bots that fill it get an ok and nothing is sent. */}
+                <div aria-hidden="true" className="absolute -left-[10000px] top-auto w-px h-px overflow-hidden">
+                  <label>
+                    Leave this field empty
+                    <input
+                      type="text"
+                      name={HONEYPOT_FIELD}
+                      tabIndex={-1}
+                      autoComplete="off"
+                      value={form.website}
+                      onChange={(e) => setForm({ ...form, website: e.target.value })}
+                    />
+                  </label>
                 </div>
 
                 <button

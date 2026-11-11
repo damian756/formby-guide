@@ -52,7 +52,7 @@ export default function DisclosurePage() {
           <section>
             <h2 className={h2}>How it is paid for</h2>
             <p className={`${p} mb-3`}>
-              The guide is paid for by Churchtown Media Ltd and by featured listings and advertising from local businesses. We do not use affiliate links.
+              Churchtown Media Ltd pays for the guide. Businesses can pay for a Featured place or a labelled advert. We do not use affiliate links.
             </p>
             <p className={p}>
               A paid listing gives a business more visibility in the directory. It does not change what we write about that business.

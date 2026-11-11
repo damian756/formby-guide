@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { BLOG_POSTS, getBlogPost, getBlogCategory } from "@/lib/blog-posts";
-import { POST_COMPONENTS } from "@/app/blog/_content/index";
+import { POST_COMPONENTS, SPONSORED_POST_BODIES } from "@/app/blog/_content/index";
+import SponsoredArticle from "@/app/blog/SponsoredArticle";
 
 const BASE_URL = "https://www.formbyguide.co.uk";
 
@@ -51,6 +52,22 @@ export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
   const post = getBlogPost(slug);
   if (!post) notFound();
+
+  // A sponsored post always uses the sponsored layout ("Sponsored by X", the
+  // sponsor as JSON-LD author, no persona bio), whatever else is registered for
+  // the slug. Its body comes from SPONSORED_POST_BODIES, never from a Clare
+  // template in POST_COMPONENTS; a sponsored post without a body fails the build.
+  if (post.sponsor) {
+    const Body = SPONSORED_POST_BODIES[slug];
+    if (!Body) {
+      throw new Error(`Sponsored post "${slug}" needs a body-only component in SPONSORED_POST_BODIES (app/blog/_content/index.ts)`);
+    }
+    return (
+      <SponsoredArticle slug={slug}>
+        <Body />
+      </SponsoredArticle>
+    );
+  }
 
   const PostContent = POST_COMPONENTS[slug];
   if (!PostContent) notFound();

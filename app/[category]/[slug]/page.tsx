@@ -594,8 +594,8 @@ export default async function BusinessPage({ params }: Props) {
               {/* Upgrade */}
               <div className="bg-white border border-gray-100 rounded-2xl p-5 text-center">
                 <p className="text-[10px] text-gray-400 uppercase tracking-widest font-semibold mb-2">Upgrade this listing</p>
-                <p className="text-gray-600 text-sm mb-3">Get more visibility with a featured listing from £29/month</p>
-                <Link href="/advertise" className="text-[#2E6B3E] text-sm font-bold hover:underline">View pricing →</Link>
+                <p className="text-gray-600 text-sm mb-3">Get more visibility with a featured listing from £29 a month plus VAT</p>
+                <Link href="/advertise#featured" className="text-[#2E6B3E] text-sm font-bold hover:underline">View pricing →</Link>
               </div>
             </div>
           </div>

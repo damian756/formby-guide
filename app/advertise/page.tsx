@@ -158,8 +158,7 @@ export default async function AdvertisePage({ searchParams }: Props) {
             <ul className="space-y-3 text-sm text-[#1C3220]/75">
               <li className="flex gap-2"><Check className="w-4 h-4 text-[#2E6B3E] flex-none mt-0.5" aria-hidden="true" />Every advert is labelled Advertisement, Featured, Sponsor or Sponsored.</li>
               <li className="flex gap-2"><Check className="w-4 h-4 text-[#2E6B3E] flex-none mt-0.5" aria-hidden="true" />Paid links are marked as sponsored for search engines.</li>
-              <li className="flex gap-2"><Check className="w-4 h-4 text-[#2E6B3E] flex-none mt-0.5" aria-hidden="true" />Adverts never appear inside reviews or beside the businesses we write about.</li>
-              <li className="flex gap-2"><Check className="w-4 h-4 text-[#2E6B3E] flex-none mt-0.5" aria-hidden="true" />Paying for a space does not change what we write.</li>
+              <li className="flex gap-2"><Check className="w-4 h-4 text-[#2E6B3E] flex-none mt-0.5" aria-hidden="true" />Adverts never appear inside a review, and paying for a space does not change what we write.</li>
             </ul>
             <p className="text-sm text-[#1C3220]/60 mt-4">
               More on our{" "}

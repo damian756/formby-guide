@@ -84,7 +84,7 @@ export const AD_OPTIONS: AdOption[] = [
     points: [
       "The Formby Beach, Pinewoods, Red Squirrels, Parking or Things to Do guide, or one of our seasonal and walking posts",
       "Your card shown once at the end of the guide, labelled Sponsor",
-      "Never inside a review or beside a business we write about",
+      "Adverts never appear inside a review, and paying for a space does not change what we write.",
     ],
   },
   {
@@ -163,7 +163,7 @@ function guide(id: string, label: string): AdSlotDef {
 }
 
 function post(slug: string, label: string): AdSlotDef {
-  return { id: `post-${slug}`, kind: "post", option: "guide-sponsor", title: `Sponsor of the ${label} guide`, label, sponsor: null };
+  return { id: `post-${slug}`, kind: "post", option: "guide-sponsor", title: `Sponsor of the ${label} post`, label, sponsor: null };
 }
 
 function featured(category: string, label: string): AdSlotDef {

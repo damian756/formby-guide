@@ -17,6 +17,9 @@ const FEATURED_NOUN: Record<string, string> = {
   "featured-shopping": "shop",
 };
 
+// The rule as the advertise page states it.
+const RULE = "Adverts never appear inside a review, and paying for a space does not change what we write.";
+
 function emptyCopy(slot: AdSlotDef): { kicker: string; heading: string; body: string } {
   switch (slot.kind) {
     case "home":
@@ -31,12 +34,14 @@ function emptyCopy(slot: AdSlotDef): { kicker: string; heading: string; body: st
         heading: `Put your ${FEATURED_NOUN[slot.id] ?? "business"} at the top of this page`,
         body: "Up to two featured places per category, marked Featured so visitors know it is a paid placement. Listings below stay in their normal order.",
       };
-    default:
+    default: {
+      const noun = slot.kind === "post" ? "post" : "guide";
       return {
-        kicker: "Sponsor this guide",
-        heading: `Sponsor the ${slot.label} guide`,
-        body: "Your business shown once at the end of this guide, labelled as a sponsor. Sponsors never appear inside reviews or beside the businesses we write about.",
+        kicker: `Sponsor this ${noun}`,
+        heading: `Sponsor the ${slot.label} ${noun}`,
+        body: `Your business shown once at the end of this ${noun}, labelled as a sponsor. ${RULE}`,
       };
+    }
   }
 }
 
@@ -44,7 +49,9 @@ export default function AdSlot({ id }: { id: string }) {
   const slot = AD_SLOTS[id];
   if (!slot) return null;
 
-  const sponsor = activeSponsor(slot);
+  // Featured spaces are filled only by Featured places from the listings data,
+  // never by a sponsor card, so a category page shows no other advert.
+  const sponsor = slot.kind === "featured" || slot.id.startsWith("featured-") ? null : activeSponsor(slot);
 
   if (sponsor) {
     if (process.env.NODE_ENV !== "production" && sponsor.text.trim().split(/\s+/).length > 30) {
@@ -63,7 +70,7 @@ export default function AdSlot({ id }: { id: string }) {
           </div>
         )}
         <div className="flex-1 min-w-0">
-          <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#1C3220]/55 mb-1.5">{label}</p>
+          <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#1C3220] mb-1.5">{label}</p>
           <p className="font-display text-lg font-bold text-[#1C3220] leading-snug mb-1">
             <a href={sponsor.url} target="_blank" rel="sponsored noopener" className="hover:text-[#2E6B3E] transition-colors">
               {sponsor.name}

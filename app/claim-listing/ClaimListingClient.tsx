@@ -3,9 +3,10 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Send, CheckCircle, AlertCircle, Building2, Mail, MessageSquare } from "lucide-react";
+import { HONEYPOT_FIELD, LIMITS } from "@/lib/enquiry-email";
 
 export default function ClaimListingClient() {
-  const [form, setForm] = useState({ name: "", email: "", businessName: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", businessName: "", message: "", website: "" });
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
@@ -23,6 +24,7 @@ export default function ClaimListingClient() {
           subject: "Claim my listing",
           businessName: form.businessName,
           message: form.message || `${form.name} is requesting to claim the listing for ${form.businessName}.`,
+          [HONEYPOT_FIELD]: form.website,
         }),
       });
       const data = await res.json();
@@ -107,11 +109,11 @@ export default function ClaimListingClient() {
                 </div>
                 <h2 className="font-display text-2xl font-bold text-[#1C3220] mb-2">Request sent!</h2>
                 <p className="text-[#1C3220]/60 mb-6">
-                  We&apos;ve received your claim request for <strong>{form.businessName}</strong>. We&apos;ll be in touch within 1–2 business days to verify ownership.
+                  We&apos;ve received your claim request for <strong>{form.businessName}</strong>. We&apos;ll be in touch within 1 to 2 working days to verify ownership.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <button
-                    onClick={() => { setForm({ name: "", email: "", businessName: "", message: "" }); setStatus("idle"); }}
+                    onClick={() => { setForm({ name: "", email: "", businessName: "", message: "", website: "" }); setStatus("idle"); }}
                     className="px-6 py-2.5 border border-[#1C3220]/20 rounded-full text-sm font-medium text-[#1C3220]/70 hover:bg-[#E8EDE6] transition"
                   >
                     Submit another
@@ -122,7 +124,7 @@ export default function ClaimListingClient() {
                 </div>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="bg-white rounded-2xl border border-[#1C3220]/8 p-7 space-y-5">
+              <form onSubmit={handleSubmit} className="relative bg-white rounded-2xl border border-[#1C3220]/8 p-7 space-y-5">
                 <h2 className="font-display text-xl font-bold text-[#1C3220]">Request to claim a listing</h2>
 
                 {status === "error" && (
@@ -141,6 +143,7 @@ export default function ClaimListingClient() {
                   <input
                     type="text"
                     required
+                    maxLength={LIMITS.businessName}
                     value={form.businessName}
                     onChange={(e) => setForm({ ...form, businessName: e.target.value })}
                     placeholder="e.g. Emily's Restaurant"
@@ -156,6 +159,7 @@ export default function ClaimListingClient() {
                     <input
                       type="text"
                       required
+                      maxLength={LIMITS.name}
                       value={form.name}
                       onChange={(e) => setForm({ ...form, name: e.target.value })}
                       placeholder="Jane Smith"
@@ -187,11 +191,27 @@ export default function ClaimListingClient() {
                   </label>
                   <textarea
                     rows={4}
+                    maxLength={LIMITS.message}
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                     placeholder="e.g. our phone number has changed, we'd like to add opening hours..."
                     className="w-full px-4 py-3 border border-[#1C3220]/15 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2E6B3E]/40 focus:border-[#2E6B3E] transition bg-[#F7F9F6] resize-none"
                   />
+                </div>
+
+                {/* Honeypot: hidden from people and screen readers; bots that fill it get an ok and nothing is sent. */}
+                <div aria-hidden="true" className="absolute -left-[10000px] top-auto w-px h-px overflow-hidden">
+                  <label>
+                    Leave this field empty
+                    <input
+                      type="text"
+                      name={HONEYPOT_FIELD}
+                      tabIndex={-1}
+                      autoComplete="off"
+                      value={form.website}
+                      onChange={(e) => setForm({ ...form, website: e.target.value })}
+                    />
+                  </label>
                 </div>
 
                 <button
@@ -207,7 +227,7 @@ export default function ClaimListingClient() {
                 </button>
 
                 <p className="text-xs text-[#1C3220]/40 text-center">
-                  We&apos;ll email you within 1–2 business days to verify ownership.
+                  We&apos;ll email you within 1 to 2 working days to verify ownership.
                 </p>
               </form>
             )}
