@@ -50,7 +50,7 @@ export default async function AdvertisePage({ searchParams }: Props) {
               Advertise to people planning a day in Formby
             </h1>
             <p className="text-lg text-white/70 leading-relaxed mb-8">
-              Simple local options at fixed prices. Every advert is clearly labelled, and there are no ad networks and no advertising cookies.
+              Featured listings and display advertising for Formby businesses, on FormbyGuide.co.uk or across all four Sefton Coast Network sites. Simple local options at fixed prices. Every advert is clearly labelled, and there are no ad networks and no advertising cookies.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href={enquiryHref(space)} className="inline-flex items-center gap-2 bg-[#C9A96E] hover:bg-[#b8944f] text-white font-bold px-6 py-3 rounded-full transition-colors">
@@ -68,7 +68,7 @@ export default async function AdvertisePage({ searchParams }: Props) {
       <section className="container mx-auto px-4 max-w-6xl py-14">
         <h2 className="font-display text-3xl font-bold text-[#1C3220] mb-2">Ways to advertise</h2>
         <p className="text-[#1C3220]/60 text-sm mb-8 max-w-2xl">
-          All prices are plus VAT. Every listing in the directory stays free; these options add visibility on top.
+          All prices are plus VAT. Listing your Formby business in the directory stays free; these options add visibility on top.
         </p>
 
         {spaceTitle && (
