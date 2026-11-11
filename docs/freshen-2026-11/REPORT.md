@@ -161,3 +161,32 @@ Checks after the fixes: tests 32 of 32; tsc 0 errors; eslint 43 errors and 6 war
 
 - https://www.formbyguide.co.uk/contact : POST `/api/contact`. Required `name` (max 100), `email` (one plain address, max 254), `message` (max 3,000). Optional `subject` (max 100; "Claim my listing", "Advertise / Featured listing", "Report an issue", "General enquiry") and `businessName` (max 100). Honeypot `website` must be empty. Delivers to damian@churchtownmedia.co.uk from noreply@formbyguide.co.uk (unless `RESEND_FROM_EMAIL` is set on Vercel).
 - https://www.formbyguide.co.uk/claim-listing : same route and fields; `subject` fixed to "Claim my listing".
+
+## 8. Follow-up: Open pages, business wording, privacy
+
+Done 11 Nov 2026. Commits: `5d6e493` (Open 2026), `2c3fabb` (business wording) on main; `725e2a8` (privacy) on branch `privacy-wording`, waiting for Damian's approval. Not pushed. Screenshots `fu-*`; sources in `sources/` (theopen-*, rb-*, mr-*, emilys-b, donluigi-home, sorrento-*, sparrowhawk-*, fsa-formby-businesses, ahrefs-web-analytics-help).
+
+**The Open 2026.**
+- `/the-open-2026` is reframed as a record of The 154th Open: Ryan Fox 72-68-62-68 = 270, one shot ahead of Cameron Young, more than 300,000 spectators (theopen.com). It also covers what still helps a golf visit: Royal Birkdale's visitors page (visitor tee times fully booked for 2027), Merseyrail stations, and links to places to stay, restaurants and pubs.
+- `/the-open-2026/accommodation` and `/the-open-2026/restaurants` redirect permanently to `/accommodation` and `/restaurants`. They are removed from the sitemap, the category links and the page-count list (that list's test requires it).
+- The two dated Open posts carry a note dated 11 Nov 2026 and no longer tell readers to book.
+- The guide entry, the Royal Birkdale collection and the events label no longer present the Open as upcoming.
+
+**Business wording.**
+- No editorial line ranks or criticises a named business. Named places are described only from their own sites (Emily's, The Sparrowhawk, Don Luigi, Sorrento) or the FSA register.
+- `/guides/best-restaurants-formby` is now "Restaurants in Formby", alphabetical, with no "best" or "no sponsored results" claims.
+- The Sparrowhawk review is a factual profile. The site had placed it on four different wrong streets; it is on Southport Old Road.
+- The Left Bank Brasserie review is removed and redirects to the restaurants guide. The FSA register lists The Olive Grove at 1a The Beacons (inspected 27 Oct 2026), and the restaurant's old domain now serves a gambling site.
+- Verdicts are also removed from the home page cards, the three landing pages, the village, dog and parking guides, things-to-do, the category intros, four collection intros and 20 posts.
+
+**Privacy (branch).**
+- Plausible is replaced with Ahrefs Web Analytics, described from Ahrefs' help page, plus a line for the site's own daily page counts.
+- The Stripe lines are replaced with invoice-only billing.
+- Last updated 11 November 2026.
+
+**Checks.** Tests 32/32; tsc 0; eslint 16 errors and 6 warnings, none new (baseline 43/6); no em dashes in changed files; console clean on changed pages.
+
+**Left for Damian.**
+- Merge `privacy-wording`.
+- The Left Bank and Coffee Carriage listing rows, ranking phrases in listing descriptions, and star ratings on listings.
+- The terms page still says Stripe billing.
